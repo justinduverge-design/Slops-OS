@@ -1,0 +1,4 @@
+interface:
+  display_name: "SLOPS Onboarding Agent"
+  short_description: "Onboard imported SLOPS agent divisions before doctrine wrapping."
+  default_prompt: "Use slops-onboarding-agent to review an imported SLOPS agent division, classify candidates, flag RBAC risks, and prepare outputs for slops-agent-author."

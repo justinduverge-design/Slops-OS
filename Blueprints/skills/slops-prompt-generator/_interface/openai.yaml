@@ -1,0 +1,4 @@
+interface:
+  display_name: "Slops Prompt Generator"
+  short_description: "Generate implementation-ready Slops prompts"
+  default_prompt: "Use $slops-prompt-generator to turn a Slops contract or audit into a concrete next development prompt."

@@ -1,0 +1,17 @@
+# DBS quarantine / secrets safety
+Archive/quarantine/
+
+# Secret-like local files
+**/.env
+**/.env.*
+**/*.key
+
+# Local tool state
+.claude/
+**/.claude/
+
+# ssffmvp is a separate git repo - do not track from SLOPS root
+ssffmvp/
+
+# Codex-generated artifact backups - do not track
+Solutions/.codex-artifacts/

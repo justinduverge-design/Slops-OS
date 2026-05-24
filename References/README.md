@@ -1,0 +1,5 @@
+# References
+
+Use this folder for ssffmvp supporting material: research, examples, copied historical docs, comparison notes, and context that informs work without being the current plan.
+
+Active app repo docs now live under `ssffmvp/Blueprints/specs/docs/` after DBS cleanup. Any old `docs/` references should be reviewed before changing app source or config.

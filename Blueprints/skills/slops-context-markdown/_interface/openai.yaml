@@ -1,0 +1,4 @@
+interface:
+  display_name: "Slops Context Markdown"
+  short_description: "Maintain DBS context markdown in Justin's voice"
+  default_prompt: "Use $slops-context-markdown to create or update DBS context docs for Slops Saloon."

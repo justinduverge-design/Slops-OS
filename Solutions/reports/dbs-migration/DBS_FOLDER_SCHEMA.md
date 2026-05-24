@@ -1,0 +1,258 @@
+# DBS Folder Schema
+
+Created: 2026-05-21
+
+DBS means Direction, Blueprints, and Solutions.
+
+The goal is to make every file answer one question:
+
+- Direction: where are we going and why?
+- Blueprints: how do we work and what should be built?
+- Solutions: what did we produce?
+
+## 1. Direction
+
+Direction is durable context and decision-making material.
+
+Use Direction for:
+
+- context
+- roadmap
+- manifesto
+- decision logs
+- current sprint
+- priorities
+- product boundaries
+- approved strategy
+
+Good examples:
+
+- `context.md`
+- `roadmap.md`
+- `manifesto.md`
+- `decision_log.md`
+- `current_sprint.md`
+
+Direction should be readable before work begins.
+
+## 2. Blueprints
+
+Blueprints are reusable instructions, specs, workflows, templates, prompts, and skills.
+
+Use Blueprints for:
+
+- specs
+- prompts
+- skills
+- workflows
+- playbooks
+- templates
+- agent rules
+- handoff formats
+- implementation plans
+
+Good examples:
+
+- `Blueprints\specs\omen-contract.md`
+- `Blueprints\prompts\codex_prompt_format.md`
+- `Blueprints\skills\pre-build-research.skill`
+- `Blueprints\playbooks\runbook_ai_workflow.md`
+
+Blueprints tell agents and humans how to produce good work repeatedly.
+
+## 3. Solutions
+
+Solutions are working outputs, deliverables, implementation artifacts, reports, and shipped or near-shipped work products.
+
+Use Solutions for:
+
+- deliverables
+- generated reports
+- app/product notes
+- website templates
+- backend contract outputs
+- QA outputs
+- screenshots tied to completed work
+- implementation summaries
+
+Do not put active app source code into Solutions unless it is explicitly an exported/template copy. The live app source remains where the app repo expects it.
+
+## 4. SLOPS OS Vs ssffmvp
+
+SLOPS OS is the company/personal operating system layer.
+
+It owns:
+
+- operating doctrine
+- agent workflows
+- reusable prompts
+- reusable skills
+- root roadmap/context
+- collaboration patterns
+- archive/reference structure
+
+`ssffmvp` is the active app/repo/codebase layer.
+
+It owns:
+
+- backend APIs
+- frontend app code
+- app docs
+- repo-local specs
+- repo-local handoffs
+- tests
+- source files
+- deployment-sensitive config
+
+Rule: SLOPS OS can describe how work should happen. `ssffmvp` contains the app that actually runs.
+
+## 5. ssffmvp Vs Corvus
+
+`ssffmvp` is the repo and engineering layer.
+
+Corvus is the product/brand layer inside the repo.
+
+Use `ssffmvp` for:
+
+- implementation source
+- app-level architecture
+- API contracts
+- app-local handoffs
+- app-local specs
+- repo health and release readiness
+
+Use `ssffmvp\Corvus` for:
+
+- Corvus brand
+- Corvus product strategy
+- Corvus product specs
+- Corvus website templates
+- Corvus logos/images/screenshots
+- product deliverables and product notes
+
+Rule: app mechanics belong to `ssffmvp`; product identity and product-facing docs belong to `Corvus`.
+
+## 6. Brand Assets
+
+Brand assets should go under the product brand layer:
+
+```text
+ssffmvp\Corvus\Brand
+ssffmvp\Corvus\Assets
+```
+
+Use:
+
+- `Brand\brand.md` for identity, promise, product vocabulary, colors, and usage rules.
+- `Brand\voice.md` for writing style and copy rules.
+- `Brand\positioning.md` for audience, product promise, market stance, and naming doctrine.
+- `Assets\logos` for logo files.
+- `Assets\images` for product imagery and design source exports.
+- `Assets\screenshots` for app and landing screenshots.
+
+Active implementation assets that the app imports from `frontend\public` or `client\public` should stay there. Copy them into `Corvus\Assets` only as reference/canonical brand assets.
+
+## 7. Skills
+
+OS-level skills go under:
+
+```text
+SLOPS\Blueprints\skills
+```
+
+App/repo-specific skills go under:
+
+```text
+ssffmvp\Blueprints\skills
+```
+
+Corvus product-specific skills may go under:
+
+```text
+ssffmvp\Corvus\Blueprints\skills
+```
+
+Before moving any existing skill folder, check whether Codex, Claude, or local tooling expects the current path.
+
+## 8. Handoffs
+
+App engineering handoffs should remain canonical in:
+
+```text
+ssffmvp\handoffs
+```
+
+Current canonical files:
+
+- `ssffmvp\handoffs\frontend-to-backend.md`
+- `ssffmvp\handoffs\backend-to-frontend.md`
+- `ssffmvp\handoffs\decisions.md`
+
+SLOPS OS can keep handoff templates or meta-workflow docs in:
+
+```text
+SLOPS\Blueprints\handoffs
+```
+
+Do not move active app handoffs until every agent and workflow is updated to the new path.
+
+## 9. Specs
+
+OS-level specs go under:
+
+```text
+SLOPS\Blueprints\specs
+```
+
+App implementation specs go under:
+
+```text
+ssffmvp\Blueprints\specs
+```
+
+Corvus product specs go under:
+
+```text
+ssffmvp\Corvus\Blueprints\specs
+```
+
+If a spec is both product and implementation relevant, keep the app repo copy canonical and add a reference/copy in Corvus only after approval.
+
+## 10. Archive Instead Of Delete
+
+Archive instead of delete when a file is:
+
+- old but may contain decisions
+- duplicated but not fully compared
+- generated by an agent
+- a screenshot or report from a prior QA pass
+- a parked experiment
+- a previous workspace copy
+- a deprecated redirect
+- a superseded plan
+
+Never delete:
+
+- `.env*`
+- keys
+- credentials
+- Git metadata
+- production config
+- deployment config
+- active source code
+- package files
+- database or SQL migration files
+- anything that may be the only copy of a decision
+
+Suggested archive areas:
+
+```text
+SLOPS\Archive\old-workspaces
+SLOPS\Archive\parked
+SLOPS\Archive\codex-artifacts
+SLOPS\Archive\superseded-docs
+ssffmvp\Archive\old-handoffs
+ssffmvp\Corvus\Archive
+```
+
+Archiving should happen only after approval and only by moving or copying known-safe files. Active app source and secrets should not be part of a DBS archive pass.
