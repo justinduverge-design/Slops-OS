@@ -73,3 +73,7 @@ Use `corvus/` for all current app and product work.
 6. `Direction/decision_log.md`
 7. `Blueprints/README.md`
 8. `corvus/DBS_INDEX.md` when moving into product work
+
+## Safety Boundary
+
+Do not modify Corvus source, tests, deploy config, package files, SQL, Docker, Stripe, or Supabase from this division layer. Do not perform deploy, DNS, SSL, Nginx, or VPS work without explicit Justin approval. Route all product execution to `corvus/`.
