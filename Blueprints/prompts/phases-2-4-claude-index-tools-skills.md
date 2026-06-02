@@ -24,7 +24,7 @@ This ensures all outputs follow SLOPS DBS structure, frontmatter, and routing co
 ## Context You Need
 
 **SLOPS root:** `C:\Users\JDuve\OneDrive\Desktop\SLOPS`
-**Three layers:** 0-OS SLOPS · 1-ssffmvp · 2-Corvus
+**Three layers:** 0-OS SLOPS · 1-slops-saloon · 2-Corvus
 **DBS model:** Direction / Blueprints / Solutions / References / Archive
 
 **What changed before this operation:**
@@ -142,8 +142,8 @@ It is the authority map — the single file any agent reads to understand who ha
 **Section 3 — Project-Specific Agents (not global)**
 | Agent | File | Layer | Status | Note |
 |---|---|---|---|---|
-| Manager Agent | `ssffmvp\Blueprints\prompts\manager_agent.md` | 1-ssffmvp | active (runtime) | Corvus fantasy football runtime prompt. Not a global SLOPS agent. |
-| Sub-Agents (6) | `ssffmvp\Blueprints\prompts\sub_agents.md` | 1-ssffmvp | active (runtime) | Corvus sub-agent prompts. Not global. |
+| Manager Agent | `slops-saloon\corvus\Blueprints\prompts\manager_agent.md` | 1-slops-saloon | active (runtime) | Corvus fantasy football runtime prompt. Not a global SLOPS agent. |
+| Sub-Agents (6) | `slops-saloon\corvus\Blueprints\prompts\sub_agents.md` | 1-slops-saloon | active (runtime) | Corvus sub-agent prompts. Not global. |
 
 **Section 4 — Imported Agent Library**
 All entries default to `reference-only`. None are callable until promoted through `slops-agent-author`.
@@ -230,7 +230,7 @@ Read the file. Update any references to:
 Read the file. Update any references to:
 - `Blueprints\Agents\` → `Blueprints\agents\`
 - `Blueprints\Skills\` → `Blueprints\skills\`
-- `ssffmvp\Blueprints\agents` → `ssffmvp\Blueprints\prompts` (this is the correct runtime path)
+- `slops-saloon\Blueprints\agents` → `slops-saloon\corvus\Blueprints\prompts` (this is the correct runtime path)
 - Old `skills.md` → `SKILL_ROUTING.md`
 - Old `tools.md` → `Blueprints\tools\tool-permissions.md`
 
@@ -263,11 +263,11 @@ Preserve all other content exactly.
 
 ---
 
-### 4B — Document skill package convention at ssffmvp layer
+### 4B — Document skill package convention at slops-saloon layer
 
-**Path:** `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Blueprints\skills\README.md`
+**Path:** `C:\Users\JDuve\OneDrive\Desktop\SLOPS\slops-saloon\Blueprints\skills\README.md`
 
-Create this file. The `ssffmvp\Blueprints\skills\` folder is currently empty.
+Create this file. The `slops-saloon\Blueprints\skills\` folder is currently empty.
 This README establishes the convention so future skill packages at this layer
 follow the same pattern.
 
@@ -276,7 +276,7 @@ follow the same pattern.
 - Do not duplicate SLOPS global skills here — use `Blueprints\skills\` at SLOPS root instead
 - Canonical structure for any skill package added here:
   ```
-  ssffmvp\Blueprints\skills\
+  slops-saloon\Blueprints\skills\
     [skill-name]\
       SKILL.md          ← required
       _interface\       ← optional: provider/launcher metadata (e.g., openai.yaml)
@@ -300,7 +300,7 @@ Read the existing `DBS_INDEX.md`. Add or replace the naming convention section w
 ```
 ## SLOPS OS Canonical Naming Convention
 
-This convention applies at all three layers (0-OS SLOPS, 1-ssffmvp, 2-Corvus)
+This convention applies at all three layers (0-OS SLOPS, 1-slops-saloon, 2-Corvus)
 on all paths and all markdown files. It is the rule when creating any folder or
 file in the future at any layer.
 
@@ -330,7 +330,7 @@ Read the file. Add a "Naming Convention" section that:
 - Reminds that DBS pillar names (Direction, Blueprints, etc.) are always Title Case
 - States that skill packages under `skills/` use kebab-case at all three layers
 
-**File 3 — Add convention note to `ssffmvp/Blueprints/skills/README.md`** (being created in 4B)
+**File 3 — Add convention note to `slops-saloon/Blueprints/skills/README.md`** (being created in 4B)
 
 When writing that README, include a section:
 "All skill packages at this layer follow kebab-case naming. See SLOPS root
@@ -340,11 +340,11 @@ When writing that README, include a section:
 
 ### 4C — Note Corvus skills convention
 
-**Path:** Check if `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Corvus\Blueprints\` has a `skills\` folder.
+**Path:** Check if `C:\Users\JDuve\OneDrive\Desktop\SLOPS\slops-saloon\corvus\Blueprints\` has a `skills\` folder.
 
-If not present: add a note to `ssffmvp\Corvus\Blueprints\README.md` (create if needed):
+If not present: add a note to `slops-saloon\corvus\Blueprints\README.md` (create if needed):
 - "A `skills\` folder will be created here when Corvus-specific skills are needed."
-- "Until then, use ssffmvp or SLOPS root skills."
+- "Until then, use slops-saloon or SLOPS root skills."
 - "When created, follow the `_interface\` / `_references\` subfolder naming convention."
 
 ---
@@ -378,30 +378,30 @@ dir "C:\Users\JDuve\OneDrive\Desktop\SLOPS\Blueprints\skills\slops-prompt-genera
 ```
 Expected: `_interface` present, `__interface` absent.
 
-**Step 5:** Git status at both SLOPS root and ssffmvp — confirm no app source was touched.
+**Step 5:** Git status at both SLOPS root and slops-saloon — confirm no app source was touched.
 
 ---
 
 ## Do Not Touch — Absolute
 
 ```
-ssffmvp\src\
-ssffmvp\frontend\
-ssffmvp\client\
-ssffmvp\scripts\
-ssffmvp\sql\
-ssffmvp\test\
-ssffmvp\evals\
-ssffmvp\Blueprints\prompts\manager_agent.md    ← runtime prompt — do not change content
-ssffmvp\Blueprints\prompts\sub_agents.md       ← runtime prompt — do not change content
-ssffmvp\.env
-ssffmvp\.env.cloud
-ssffmvp\oraclepu.key
-ssffmvp\.github\
-ssffmvp\Dockerfile*
-ssffmvp\package.json
-ssffmvp\node_modules\
-ssffmvp\.git\
+slops-saloon\corvus\src\
+slops-saloon\corvus\frontend\
+slops-saloon\corvus\client\
+slops-saloon\corvus\scripts\
+slops-saloon\corvus\sql\
+slops-saloon\corvus\test\
+slops-saloon\evals\
+slops-saloon\corvus\Blueprints\prompts\manager_agent.md    ← runtime prompt — do not change content
+slops-saloon\corvus\Blueprints\prompts\sub_agents.md       ← runtime prompt — do not change content
+slops-saloon\.env
+slops-saloon\.env.cloud
+slops-saloon\oraclepu.key
+slops-saloon\.github\
+slops-saloon\Dockerfile*
+slops-saloon\package.json
+slops-saloon\node_modules\
+slops-saloon\.git\
 SLOPS\.git\
 SLOPS\Archive\
 ```
@@ -444,5 +444,5 @@ Include:
 
 ### Phase 4 — Normalize skill conventions
 - [ ] `Blueprints\skills\slops-prompt-generator\SKILL.md` (update `_interface` ref)
-- [ ] `ssffmvp\Blueprints\skills\README.md` (create)
-- [ ] `ssffmvp\Corvus\Blueprints\README.md` (create or update with skills convention note)
+- [ ] `slops-saloon\Blueprints\skills\README.md` (create)
+- [ ] `slops-saloon\corvus\Blueprints\README.md` (create or update with skills convention note)

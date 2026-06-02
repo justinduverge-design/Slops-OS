@@ -59,8 +59,8 @@ Tier 2 - read, analyze, draft, and recommend only.
 
 ## Must Not Write To
 
-- `ssffmvp\src\`
-- `ssffmvp\sql\`
+- `slops-saloon\corvus\src\`
+- `slops-saloon\corvus\sql\`
 - `.env`, `.key`, credentials, secrets, tokens, cookies
 - AI provider configs, auth, payment, database, production, deployment, or infrastructure files
 

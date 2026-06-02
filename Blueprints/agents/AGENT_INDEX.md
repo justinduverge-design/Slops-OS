@@ -61,12 +61,12 @@ These are the canonical reusable skills built into the SLOPS OS.
 
 ## Section 3: Project-Specific Agents (Not Global SLOPS)
 
-These are agents defined at layer 1-ssffmvp or layer 2-Corvus. They are not reusable at 0-OS level.
+These are agents defined at layer 1-Slops Saloon or layer 2-Corvus. They are not reusable at 0-OS level.
 
 | Agent | File | Layer | Status | Scope | Tool Access |
 |---|---|---|---|---|---|
-| **Manager Agent** | `ssffmvp\Blueprints\prompts\manager_agent.md` | 1-ssffmvp | active (runtime) | Corvus fantasy football runtime orchestration | Per prompt definition |
-| **Sub-Agents (6)** | `ssffmvp\Blueprints\prompts\sub_agents.md` | 1-ssffmvp | active (runtime) | Corvus sub-agent prompts (fantasy engine) | Per prompt definition |
+| **Manager Agent** | `slops-saloon\corvus\Blueprints\prompts\manager_agent.md` | 1-Slops Saloon | active (runtime) | Corvus fantasy football runtime orchestration | Per prompt definition |
+| **Sub-Agents (6)** | `slops-saloon\corvus\Blueprints\prompts\sub_agents.md` | 1-Slops Saloon | active (runtime) | Corvus sub-agent prompts (fantasy engine) | Per prompt definition |
 
 **Note:** These are runtime prompts, not SLOPS-level agents. They do not inherit 0-OS authority model. Each is defined in its own prompt file.
 

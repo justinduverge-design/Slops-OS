@@ -70,28 +70,28 @@ Rename:
 ## Do Not Touch — Absolute
 
 ```
-ssffmvp\src\
-ssffmvp\frontend\
-ssffmvp\client\
-ssffmvp\scripts\
-ssffmvp\sql\
-ssffmvp\test\
-ssffmvp\evals\
-ssffmvp\.env
-ssffmvp\.env.cloud
-ssffmvp\.env.local-backup-20260502
-ssffmvp\oraclepu.key
-ssffmvp\.github\
-ssffmvp\Dockerfile
-ssffmvp\Dockerfile.cron
-ssffmvp\docker-compose.yml
-ssffmvp\package.json
-ssffmvp\package-lock.json
-ssffmvp\node_modules\
-ssffmvp\.git\
+slops-saloon\corvus\src\
+slops-saloon\corvus\frontend\
+slops-saloon\corvus\client\
+slops-saloon\corvus\scripts\
+slops-saloon\corvus\sql\
+slops-saloon\corvus\test\
+slops-saloon\evals\
+slops-saloon\.env
+slops-saloon\.env.cloud
+slops-saloon\.env.local-backup-20260502
+slops-saloon\oraclepu.key
+slops-saloon\.github\
+slops-saloon\Dockerfile
+slops-saloon\Dockerfile.cron
+slops-saloon\docker-compose.yml
+slops-saloon\package.json
+slops-saloon\package-lock.json
+slops-saloon\node_modules\
+slops-saloon\.git\
 SLOPS\.git\
 SLOPS\Archive\
-SLOPS\ssffmvp\Archive\
+SLOPS\slops-saloon\Archive\
 ```
 
 Do not read, print, or open any `.env`, `.key`, `.pem`, `.cert`, token, or credential file.
@@ -119,9 +119,9 @@ cd "C:\Users\JDuve\OneDrive\Desktop\SLOPS" && git status --short
 ```
 Expected: Only rename entries (`R`). No unexpected modifications or deletions.
 
-**Step 4:** Git status inside ssffmvp.
+**Step 4:** Git status inside slops-saloon.
 ```
-cd "C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp" && git status --short
+cd "C:\Users\JDuve\OneDrive\Desktop\SLOPS\slops-saloon" && git status --short
 ```
 Expected: No changes from this operation (we only touched SLOPS root layer).
 
@@ -136,7 +136,7 @@ After verification, write this file:
 **Contents to include:**
 - Date and time completed
 - Full list of folders renamed (old name → new name)
-- Git status output from both locations (SLOPS root and ssffmvp)
+- Git status output from both locations (SLOPS root and slops-saloon)
 - Any issues encountered or deviations from the plan
 - Confirmation that no file contents were changed
 

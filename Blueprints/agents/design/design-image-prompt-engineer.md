@@ -60,9 +60,9 @@ Tier 2 - read, analyze, draft, and recommend only.
 
 ## Must Not Write To
 
-- `ssffmvp\src\`
-- `ssffmvp\frontend\`
-- `ssffmvp\client\`
+- `slops-saloon\corvus\src\`
+- `slops-saloon\corvus\frontend\`
+- `slops-saloon\corvus\client\`
 - `Archive\`
 - `.env`, `.key`, credentials, secrets, tokens, cookies
 - production, deployment, payment, auth, database, or infrastructure files

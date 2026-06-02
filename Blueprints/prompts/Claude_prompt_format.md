@@ -1,6 +1,6 @@
 # Claude Code Prompt Template
 
-Use this when starting a Claude Code session inside `SLOPS/ssffmvp`.
+Use this when starting a Claude Code session inside `SLOPS/slops-saloon`.
 
 ```text
 Read CLAUDE.md first.

@@ -1,6 +1,6 @@
 # Solutions
 
-Use this folder for ssffmvp outputs: cleanup reports, QA reports, quality reports, completed deliverables, and implementation-adjacent results that are not active source code.
+Use this folder for slops-saloon outputs: cleanup reports, QA reports, quality reports, completed deliverables, and implementation-adjacent results that are not active source code.
 
 Future reports should go under `reports/` with a practical subfolder name.
 

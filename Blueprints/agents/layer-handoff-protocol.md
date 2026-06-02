@@ -17,17 +17,17 @@ boundary must follow this protocol.
 
 ## The Three Layers
 
-| Layer | Name | Root | Scope |
-|-------|------|------|-------|
-| `0-OS` | SLOPS Saloon | `SLOPS\` | Founder OS — reusable doctrine, global skills, global agents, cross-product rules |
-| `1-ssffmvp` | Fantasy Football MVP | `SLOPS\ssffmvp\` | Subsidiary/app — product strategy, app-wide prompts, runtime agents, implementation context |
-| `2-Corvus` | Corvus Project | `SLOPS\ssffmvp\Corvus\` | Project runtime — Corvus feature logic, fantasy engine, project-specific implementation |
+| Layer | Name | Org Role | Root | Scope |
+|-------|------|----------|------|-------|
+| Layer 0 (`0-OS`) | SLOPS | Parent company / OS | `SLOPS\` | Founder OS — reusable doctrine, global skills, global agents, cross-product rules |
+| Layer 1 (`1-slops-saloon`) | Slops Saloon | Subsidiary | `SLOPS\slops-saloon\` | Subsidiary — fantasy sports product strategy, division naming/brand, future product slots. No app implementation. |
+| Layer 2 (`2-corvus`) | Corvus | First app | `SLOPS\slops-saloon\corvus\` | App runtime — Corvus feature logic, fantasy engine, app-specific implementation |
 
 ---
 
 ## What Each Layer Owns
 
-### 0-OS — SLOPS Saloon (Global)
+### Layer 0 (0-OS) — SLOPS (Parent Company / Global)
 
 **Owns:**
 - Naming conventions and DBS folder schema
@@ -43,7 +43,7 @@ boundary must follow this protocol.
 - Runtime prompts for any one product
 - Project-specific code, configs, or environment files
 
-**Passes down to 1-ssffmvp:**
+**Passes down to 1-slops-saloon:**
 - Naming conventions (all sub-layers must follow DBS schema)
 - Tool tier caps and RBAC guardrails
 - Canonical skill definitions (sub-layers may invoke but not redefine)
@@ -53,21 +53,21 @@ boundary must follow this protocol.
 
 ---
 
-### 1-ssffmvp — Fantasy Football MVP (Subsidiary)
+### Layer 1 (1-slops-saloon) — Slops Saloon (Subsidiary)
 
 **Owns:**
-- Product strategy documents (`ssffmvp\Direction\`)
-- App-level Blueprints (`ssffmvp\Blueprints\`)
-- Runtime agent prompts (`ssffmvp\Blueprints\prompts\`)
-- App-wide solutions and reports (`ssffmvp\Solutions\`)
-- Implementation context for the ssffmvp product
+- Product strategy documents (`slops-saloon\Direction\`)
+- App-level Blueprints (`slops-saloon\Blueprints\`)
+- Runtime agent prompts (`slops-saloon\corvus\Blueprints\prompts\`)
+- App-wide solutions and reports (`slops-saloon\Solutions\`)
+- Implementation context for the slops-saloon product
 
 **Does NOT own:**
 - Global naming conventions (inherits from 0-OS)
 - Tool tier grants beyond what 0-OS authorizes
 - Cross-product rules that affect the SLOPS OS
 
-**Passes down to 2-Corvus:**
+**Passes down to 2-corvus:**
 - Product context (roadmap, feature scope, launch criteria)
 - Data contracts and API boundaries
 - Sub-agent prompt definitions
@@ -76,7 +76,7 @@ boundary must follow this protocol.
 
 ---
 
-### 2-Corvus — Corvus Project (Runtime)
+### Layer 2 (2-corvus) — Corvus (First App / Runtime)
 
 **Owns:**
 - Feature-specific runtime logic
@@ -85,10 +85,10 @@ boundary must follow this protocol.
 
 **Does NOT own:**
 - Authority to change app-level product decisions
-- Tool grants beyond what 1-ssffmvp authorizes
-- Runtime prompt definitions (those live at 1-ssffmvp)
+- Tool grants beyond what 1-slops-saloon authorizes
+- Runtime prompt definitions (those live at 1-slops-saloon)
 
-**Escalates up to:** 1-ssffmvp layer → 0-OS Claude → Justin
+**Escalates up to:** 1-slops-saloon layer → 0-OS Claude → Justin
 
 ---
 
@@ -97,8 +97,8 @@ boundary must follow this protocol.
 | Layer | Who Has Authority | Scope |
 |-------|------------------|-------|
 | `0-OS` | Justin, Claude, Codex | Global — any file in `SLOPS\` with correct approval |
-| `1-ssffmvp` | Product agents, Claude (scoped), Codex (scoped) | App files only — cannot touch 0-OS doctrine without Justin |
-| `2-Corvus` | Project agents, Claude (scoped), Codex (scoped) | Project files only — cannot touch ssffmvp product strategy without ssffmvp approval |
+| `1-slops-saloon` | Product agents, Claude (scoped), Codex (scoped) | App files only — cannot touch 0-OS doctrine without Justin |
+| `2-corvus` | Project agents, Claude (scoped), Codex (scoped) | Project files only — cannot touch slops-saloon product strategy without slops-saloon approval |
 
 **Key rule**: No agent at a lower layer may modify files at a higher layer without
 explicit Justin approval and a logged decision.
@@ -110,8 +110,8 @@ explicit Justin approval and a logged decision.
 When work crosses a layer boundary, the chain is:
 
 ```
-2-Corvus runtime request
-  → escalate to 1-ssffmvp product layer
+2-corvus runtime request
+  → escalate to 1-slops-saloon product layer
   → escalate to 0-OS Claude for planning/review
   → escalate to Justin for approval (if risk threshold exceeded)
   → decision flows back down the chain
@@ -128,8 +128,8 @@ Runtime prompts (agent system prompts that run in production) belong at the
 
 | Artifact | Correct Location | Reason |
 |----------|-----------------|--------|
-| `manager_agent.md` | `ssffmvp\Blueprints\prompts\` | Product-specific runtime logic |
-| `sub_agents.md` | `ssffmvp\Blueprints\prompts\` | Product-specific runtime logic |
+| `manager_agent.md` | `slops-saloon\corvus\Blueprints\prompts\` | Product-specific runtime logic |
+| `sub_agents.md` | `slops-saloon\corvus\Blueprints\prompts\` | Product-specific runtime logic |
 | Global skill files | `Blueprints\skills\` (0-OS) | Reusable across all products |
 | Global agent roster | `Blueprints\agents\` (0-OS) | Authority index, not runtime content |
 
@@ -165,7 +165,7 @@ SLOPS\                          ← 0-OS: Global OS doctrine
   Solutions\                    ← Reports, audits, research
   References\                   ← External reference material
 
-SLOPS\ssffmvp\                  ← 1-ssffmvp: App layer
+SLOPS\slops-saloon\                  ← 1-slops-saloon: App layer
   Blueprints\
     prompts\
       manager_agent.md          ← Runtime prompt (canonical here)
@@ -173,7 +173,7 @@ SLOPS\ssffmvp\                  ← 1-ssffmvp: App layer
   Direction\                    ← Product strategy
   Solutions\                    ← App reports and analysis
 
-SLOPS\ssffmvp\Corvus\           ← 2-Corvus: Project layer
+SLOPS\slops-saloon\corvus\           ← Layer 2 (corvus): App layer
   (project-specific runtime)
 ```
 
@@ -184,5 +184,5 @@ SLOPS\ssffmvp\Corvus\           ← 2-Corvus: Project layer
 - `Blueprints\agents\AGENT_INDEX.md` — canonical agent authority matrix
 - `Blueprints\tools\tool-permissions.md` — tool tier definitions
 - `Blueprints\skills\SKILL_ROUTING.md` — when to use Claude vs. Codex vs. skills
-- `Blueprints\agents\manager_agent.md` — redirect stub (points to ssffmvp layer)
-- `Blueprints\agents\sub_agents.md` — redirect stub (points to ssffmvp layer)
+- `Blueprints\agents\manager_agent.md` — redirect stub (points to slops-saloon layer)
+- `Blueprints\agents\sub_agents.md` — redirect stub (points to slops-saloon layer)

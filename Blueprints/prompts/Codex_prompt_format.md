@@ -1,6 +1,6 @@
 # Codex Prompt Template
 
-Use this when starting a Codex session inside `SLOPS/ssffmvp`.
+Use this when starting a Codex session inside `SLOPS/slops-saloon`.
 
 ```text
 Read AGENT.md first.
@@ -27,7 +27,7 @@ Inspect the project and report:
 7. Which platform adapter files exist for Yahoo, Sleeper, and ESPN.
 8. Whether `.env` and secret files are safely ignored by git.
 9. What tests exist and how to run them.
-10. What backend task should come next based on `ssffmvp/Blueprints/handoffs/frontend-to-backend.md`.
+10. What backend task should come next based on `slops-saloon/Blueprints/handoffs/frontend-to-backend.md`.
 
 Do not touch `.env`, Docker, deployment, database, auth, Stripe, DNS, SSL, or VPS configuration.
 ```
@@ -42,7 +42,7 @@ Do not touch `.env`, Docker, deployment, database, auth, Stripe, DNS, SSL, or VP
   <mode>implementation</mode>
   <objective>Implement the smallest safe backend change described below.</objective>
   <context>
-    Read `DBS_INDEX.md`, `Direction/context.md`, `Direction/roadmap.md`, `Direction/TODO.md`, and `ssffmvp/Blueprints/handoffs/frontend-to-backend.md` first.
+    Read `DBS_INDEX.md`, `Direction/context.md`, `Direction/roadmap.md`, `Direction/TODO.md`, and `slops-saloon/Blueprints/handoffs/frontend-to-backend.md` first.
   </context>
   <constraints>
     Do not touch secrets, .env, Docker, deployment, auth, Stripe, Supabase migrations, DNS, SSL, or VPS settings.
@@ -53,7 +53,7 @@ Do not touch `.env`, Docker, deployment, database, auth, Stripe, DNS, SSL, or VP
     1. Inspect relevant files.
     2. Implement the smallest safe change.
     3. Add or update tests if appropriate.
-    4. Update `ssffmvp/Blueprints/handoffs/backend-to-frontend.md`.
+    4. Update `slops-saloon/Blueprints/handoffs/backend-to-frontend.md`.
   </steps>
   <final_report>
     Return files changed, tests run, endpoint contract, limitations, and next recommended step.

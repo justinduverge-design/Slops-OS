@@ -52,13 +52,13 @@ You do not own frontend design unless Justin explicitly asks.
 Read frontend requests from:
 
 ```text
-ssffmvp/Blueprints/handoffs/frontend-to-backend.md
+slops-saloon/Blueprints/handoffs/frontend-to-backend.md
 ```
 
 Write completed backend contracts to:
 
 ```text
-ssffmvp/Blueprints/handoffs/backend-to-frontend.md
+slops-saloon/Blueprints/handoffs/backend-to-frontend.md
 ```
 
 ---

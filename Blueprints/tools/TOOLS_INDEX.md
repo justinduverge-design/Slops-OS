@@ -56,10 +56,10 @@ Skills may use agents as part of their workflow. When a skill invokes an agent, 
 - Claude and Codex may recommend.
 - Agent status changes, tier promotions, and destructive-tier grants require Justin approval.
 
-**At 1-ssffmvp and 2-Corvus levels:**
-- Follow 0-OS policy unless explicitly overridden by ssffmvp/Corvus context files.
+**At 1-slops-saloon and 2-Corvus levels:**
+- Follow 0-OS policy unless explicitly overridden by slops-saloon/corvus context files.
 - Project-specific agents may be granted tools per their `AGENT.md` or equivalent.
-- Check `ssffmvp\Blueprints\agents\AGENT_INDEX.md` (if it exists) for subsidiary-level grants.
+- Check `slops-saloon\Blueprints\agents\AGENT_INDEX.md` (if it exists) for subsidiary-level grants.
 
 ## Activation Rule
 

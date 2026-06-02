@@ -59,10 +59,10 @@ Blueprints\agents\_imported
 
 Project-specific app agents should live closer to the project.
 
-For Corvus / ssffmvp-specific agents, prefer:
+For Corvus / slops-saloon-specific agents, prefer:
 
 ```text
-C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Blueprints\agents
+C:\Users\JDuve\OneDrive\Desktop\SLOPS\slops-saloon\Blueprints\agents
 ```
 
 unless Justin explicitly decides they should be reusable global agents.
@@ -304,7 +304,7 @@ If `manager_agent.md` or `sub_agents.md` describe Corvus runtime behavior, fanta
 Likely project path:
 
 ```text
-ssffmvp\Blueprints\agents
+slops-saloon\Blueprints\agents
 ```
 
 Do not promote them to global `Blueprints\agents` unless Justin approves.

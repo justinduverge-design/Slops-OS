@@ -1,16 +1,30 @@
 # SLOPS Handoffs
 
-This folder is for SLOPS OS-level handoffs, redirects, and cross-agent coordination notes.
+This folder is for SLOPS OS-level handoffs and cross-agent coordination notes.
 
-Use app engineering handoffs at:
+## Layer Routing
+
+Use these paths:
+
+- OS handoffs: `Blueprints/handoffs/`
+- Slops Saloon division context: `slops-saloon/`
+- Corvus product handoffs: `slops-saloon/corvus/Blueprints/handoffs/`
+
+## Corvus Handoffs
+
+Active frontend/backend contracts live in:
 
 ```text
-ssffmvp\Blueprints\handoffs
+slops-saloon/corvus/Blueprints/handoffs/
 ```
 
-Current OS-level handoff files:
+Do not put active Corvus endpoint contracts in the root OS handoff folder.
 
-- `claude-context-handoff.md` for Claude documentation/context continuation.
-- `decisions.md` for root decision redirect notes.
+## Current OS Handoff Files
 
-Do not use this folder for active app implementation contracts unless Justin explicitly scopes the handoff to SLOPS OS rather than `ssffmvp`.
+- `claude-context-handoff.md` - OS documentation/context continuation.
+- `decisions.md` - OS-level decision routing note.
+
+## Boundary
+
+Root handoffs should not edit app source, deployment config, secrets, SQL, package files, or production infrastructure.

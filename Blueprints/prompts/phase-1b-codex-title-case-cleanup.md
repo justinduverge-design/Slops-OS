@@ -45,7 +45,7 @@ This is a content subfolder of the Direction DBS pillar, not a DBS pillar itself
 
 ## Task 2 — Rename `Corvus/Assets` and `Corvus/Brand`
 
-**Location:** `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Corvus`
+**Location:** `C:\Users\JDuve\OneDrive\Desktop\SLOPS\slops-saloon\corvus`
 
 | Current Name | New Name |
 |---|---|
@@ -66,17 +66,17 @@ Solutions\          ← DBS pillar — do NOT rename
 References\         ← DBS pillar — do NOT rename
 Archive\            ← DBS pillar — do NOT rename, contents — do NOT touch
 Corvus\Archive\     ← DBS pillar subfolder — do NOT rename
-ssffmvp\src\
-ssffmvp\frontend\
-ssffmvp\client\
-ssffmvp\scripts\
-ssffmvp\sql\
-ssffmvp\test\
-ssffmvp\.env
-ssffmvp\.env.cloud
-ssffmvp\oraclepu.key
-ssffmvp\.github\
-ssffmvp\.git\
+slops-saloon\corvus\src\
+slops-saloon\corvus\frontend\
+slops-saloon\corvus\client\
+slops-saloon\corvus\scripts\
+slops-saloon\corvus\sql\
+slops-saloon\corvus\test\
+slops-saloon\.env
+slops-saloon\.env.cloud
+slops-saloon\oraclepu.key
+slops-saloon\.github\
+slops-saloon\.git\
 SLOPS\.git\
 ```
 
@@ -96,14 +96,14 @@ Expected: `reviews` present (lowercase), `Reviews` absent.
 
 **Step 2:** Confirm `Corvus` subfolders.
 ```
-dir "C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Corvus"
+dir "C:\Users\JDuve\OneDrive\Desktop\SLOPS\slops-saloon\corvus"
 ```
 Expected: `assets` and `brand` present (lowercase), `Assets` and `Brand` absent.
 DBS pillars `Archive`, `Blueprints`, `Direction`, `References`, `Solutions` still Title Case ✅.
 
-**Step 3:** Git status at ssffmvp.
+**Step 3:** Git status at slops-saloon.
 ```
-cd "C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp" && git status --short
+cd "C:\Users\JDuve\OneDrive\Desktop\SLOPS\slops-saloon" && git status --short
 ```
 Expected: No unexpected changes to app source files.
 
@@ -118,7 +118,7 @@ Write this file:
 **Contents:**
 - Date and time completed
 - List of folders renamed (old → new)
-- Git status output from ssffmvp
+- Git status output from slops-saloon
 - Confirmation that no file contents were changed
 - Confirmation that DBS pillar names remain Title Case
 

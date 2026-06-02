@@ -15,7 +15,7 @@ SLOPS/
   Solutions/     reports, outputs, audits, and completed artifacts
   References/    source material and supporting research
   Archive/       superseded, parked, historical, and quarantined material
-  ssffmvp/       nested app repo, ignored from root git
+  slops-saloon/       nested app repo, ignored from root git
 ```
 
 ## Canonical Files

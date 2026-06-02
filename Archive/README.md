@@ -1,7 +1,15 @@
 # Archive
 
-Use this folder for ssffmvp material that is superseded, retired, duplicate, or parked after review.
+Use this folder for SLOPS material that is superseded, retired, duplicate, or parked after review.
+
+Historical files may still mention the old `ssffmvp` path. Current active routing is:
+
+```text
+SLOPS/
+  slops-saloon/
+    corvus/
+```
 
 Archive is preservation, not deletion.
 
-Do not archive `.env` files, key-like files, secrets, package files, deploy config, active source, SQL, scripts, tests, `.git`, `node_modules`, or active implementation assets without explicit approval.
+Do not inspect, move, stage, or edit `Archive/quarantine`, `.env` files, key-like files, secrets, package files, deploy config, active source, SQL, scripts, tests, `.git`, `node_modules`, or active implementation assets without explicit approval.

@@ -1,14 +1,14 @@
 ---
 name: sub_agents
 status: active (runtime)
-layer: 1-ssffmvp
-canonical-location: ssffmvp\Blueprints\prompts\sub_agents.md
+layer: 1-slops-saloon
+canonical-location: slops-saloon\corvus\Blueprints\prompts\sub_agents.md
 ---
 
 # Sub-Agents — Redirect Stub
 
 > **This file is a redirect stub.** The Sub-Agent prompts are runtime prompts
-> defined at the `1-ssffmvp` project layer. They are not global SLOPS OS agents
+> defined at the `1-slops-saloon` project layer. They are not global SLOPS OS agents
 > and do not inherit the 0-OS authority model.
 
 ---
@@ -16,7 +16,7 @@ canonical-location: ssffmvp\Blueprints\prompts\sub_agents.md
 ## Canonical Location
 
 ```text
-ssffmvp\Blueprints\prompts\sub_agents.md
+slops-saloon\corvus\Blueprints\prompts\sub_agents.md
 ```
 
 ## Status
@@ -37,16 +37,16 @@ Each sub-agent output becomes part of the `signals` object passed to the Manager
 
 ## Related Files
 
-- `ssffmvp\Blueprints\prompts\manager_agent.md` — the orchestrating Manager Agent
-- `ssffmvp\Blueprints\prompts\PROMPTS_CHANGELOG.md` — tuning history
+- `slops-saloon\corvus\Blueprints\prompts\manager_agent.md` — the orchestrating Manager Agent
+- `slops-saloon\corvus\Blueprints\prompts\PROMPTS_CHANGELOG.md` — tuning history
 - `Blueprints\agents\AGENT_INDEX.md` — Section 3 (Project-Specific Agents)
 - `Blueprints\agents\layer-handoff-protocol.md` — cross-layer communication rules
 
 ## Why This Stub Exists
 
 `Blueprints\agents\` is the global SLOPS OS agent roster. These sub-agents live
-one layer down at `1-ssffmvp` because they are product-specific runtime logic for
+one layer down at `1-slops-saloon` because they are product-specific runtime logic for
 the Corvus fantasy football engine. This stub prevents confusion when browsing the
 global agent directory.
 
-See `layer-handoff-protocol.md` for the full 0-OS → 1-ssffmvp → 2-Corvus authority chain.
+See `layer-handoff-protocol.md` for the full 0-OS → 1-slops-saloon → 2-Corvus authority chain.

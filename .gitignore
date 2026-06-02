@@ -9,9 +9,15 @@ Archive/quarantine/
 # Local tool state
 .claude/
 **/.claude/
+.codex/
+worktree-backups/
+*.lnk
 
-# ssffmvp is a separate git repo - do not track from SLOPS root
+# Legacy app repo path - do not track from SLOPS root if it reappears
 ssffmvp/
+
+# Corvus is a separate git repo - do not track app source from SLOPS root
+slops-saloon/corvus/
 
 # Codex-generated artifact backups - do not track
 Solutions/.codex-artifacts/

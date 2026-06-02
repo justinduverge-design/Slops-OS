@@ -64,7 +64,7 @@ Workflow specs usually belong under:
 Blueprints\specs
 Direction\reviews
 Direction\roadmaps
-ssffmvp\Blueprints\handoffs
+slops-saloon\Blueprints\handoffs
 ```
 
 Use the highest reusable DBS layer that is safe. Do not place project-specific runtime instructions in global `Blueprints` unless Justin explicitly promotes them.
@@ -167,7 +167,7 @@ When using this skill, produce:
 - Reusable workflow templates: `Blueprints\specs`
 - Product or planning reviews: `Direction\reviews`
 - Roadmap sequencing: `Direction\roadmaps`
-- App-specific frontend/backend handoffs: `ssffmvp\Blueprints\handoffs`
+- App-specific frontend/backend handoffs: `slops-saloon\Blueprints\handoffs`
 - Do not write runtime code, secrets, production configs, or database migrations from this skill alone.
 
 ## RBAC Boundaries

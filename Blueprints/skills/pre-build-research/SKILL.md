@@ -71,22 +71,22 @@ References\patterns
 Direction\reviews
 Blueprints\prompts
 
-1-ssffmvp:
-ssffmvp\References\research
-ssffmvp\Direction\reviews
-ssffmvp\Blueprints\prompts
+1-slops-saloon:
+slops-saloon\References\research
+slops-saloon\Direction\reviews
+slops-saloon\corvus\Blueprints\prompts
 
-2-Corvus:
-ssffmvp\Corvus\References\research
-ssffmvp\Corvus\Direction\reviews
-ssffmvp\Corvus\Blueprints\prompts
+Layer 2 (corvus):
+slops-saloon\corvus\References\research
+slops-saloon\corvus\Direction\reviews
+slops-saloon\corvus\Blueprints\prompts
 ```
 
 Use the lowest layer that safely contains the research.
 
 If the research is reusable across future Slops Saloon products, route it to `0-OS`.
 
-If it is specific to ssffmvp, route it to `1-ssffmvp`.
+If it is specific to slops-saloon, route it to `1-slops-saloon`.
 
 If it is specific to Corvus runtime behavior, route it to `2-Corvus`.
 
@@ -119,7 +119,7 @@ Evaluate every candidate through this lens, in order:
 Extract or ask for:
 
 - Exact data or capability needed.
-- App/project layer: `0-OS`, `1-ssffmvp`, or `2-Corvus`.
+- App/project layer: `0-OS`, `1-slops-saloon`, or `2-Corvus`.
 - Current stack.
 - Existing integrations that can be reused.
 - Usage volume expectations.
@@ -213,7 +213,7 @@ Use this report structure:
 
 ## Layer
 
-0-OS | 1-ssffmvp | 2-Corvus
+0-OS | 1-slops-saloon | 2-Corvus
 
 ## Constraints
 

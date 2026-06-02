@@ -54,7 +54,7 @@ Do not use this skill to:
 - Write final agent wrapper files without also applying `slops-agent-author`.
 - Grant tool authority, production authority, secrets access, app source access, database access, payment authority, auth authority, or user-data access.
 - Review multiple imported divisions in one pass unless Justin explicitly asks.
-- Touch `ssffmvp` source, SQL, frontend, client, scripts, tests, evals, package files, `node_modules`, `.git`, secrets, production, deployment, DNS, SSL, Nginx, VPS, Docker, GitHub Actions, payments, auth, databases, or `Archive\quarantine`.
+- Touch `slops-saloon` source, SQL, frontend, client, scripts, tests, evals, package files, `node_modules`, `.git`, secrets, production, deployment, DNS, SSL, Nginx, VPS, Docker, GitHub Actions, payments, auth, databases, or `Archive\quarantine`.
 
 ## Required Inputs
 
@@ -98,7 +98,7 @@ For each imported agent, assign exactly one recommended status:
 
 Evaluate each agent on:
 
-- Relevance: Is this directly useful for SLOPS OS, ssffmvp MVP, Corvus launch, or the next 90 days?
+- Relevance: Is this directly useful for SLOPS OS, slops-saloon MVP, Corvus launch, or the next 90 days?
 - Risk: Does it imply production, secrets, payments, auth, databases, app source, external tool mutation, outbound messaging, user data, customer data, or paid systems?
 - Overlap: Does Claude, Codex, an existing SLOPS skill, or an existing SLOPS agent already cover this work well enough?
 - Wrapper feasibility: Can `slops-agent-author` write a clear least-privilege wrapper without ambiguity?

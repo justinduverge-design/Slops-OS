@@ -6,7 +6,7 @@ Date: 2026-05-24
 
 Layer 1 only: SLOPS OS at `C:\Users\JDuve\OneDrive\Desktop\SLOPS`.
 
-Do not modify `ssffmvp/` from this handoff. It is a nested app repo and should be handled by a dedicated repo pass.
+Do not modify `slops-saloon/` from this handoff. It is a nested app repo and should be handled by a dedicated repo pass.
 
 ## Completed
 
@@ -43,7 +43,7 @@ Do not modify `ssffmvp/` from this handoff. It is a nested app repo and should b
    - root `.gitignore`
 
 4. Confirm the root repo does not stage or track nested app repo material:
-   - `ssffmvp/`
+   - `slops-saloon/`
    - `Archive/quarantine/`
    - secret-like files
 
@@ -52,7 +52,7 @@ Do not modify `ssffmvp/` from this handoff. It is a nested app repo and should b
 - Do not open or print `.env`, `.key`, credential, token, cookie, or secret files.
 - Do not deploy, push, or commit without explicit approval.
 - Do not touch `Archive/quarantine/`.
-- Do not modify `ssffmvp/`; it is out of scope for this Layer 1 handoff.
+- Do not modify `slops-saloon/`; it is out of scope for this Layer 1 handoff.
 
 ## Suggested Next Action
 

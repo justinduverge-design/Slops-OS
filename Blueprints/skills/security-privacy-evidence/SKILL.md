@@ -61,7 +61,7 @@ References\research
 Blueprints\specs
 ```
 
-Use app-specific handoff paths only when Justin explicitly scopes the evidence to `ssffmvp`.
+Use app-specific handoff paths only when Justin explicitly scopes the evidence to `slops-saloon`.
 
 ## Read-First Procedure
 

@@ -70,7 +70,7 @@ Archive means reviewed superseded, parked, stale, or quarantined material. Archi
 
 ## Slops Product Rules
 
-For Corvus and `ssffmvp`, preserve these rules unless Justin changes them:
+For Corvus and `slops-saloon`, preserve these rules unless Justin changes them:
 
 - Corvus is the active Fantasy Football MVP product.
 - Trade Analyzer is the front door.

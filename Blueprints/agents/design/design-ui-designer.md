@@ -31,7 +31,7 @@ The Design UI Designer reviews UI systems, design tokens, accessibility expectat
 
 ## Denied Work
 
-- No direct edits to `ssffmvp\frontend`, app source, assets, or generated UI.
+- No direct edits to `slops-saloon\corvus\frontend`, app source, assets, or generated UI.
 - No final UX direction, visual identity decisions, production changes, or deployment authority.
 - No external design tool, asset export, analytics, customer-data, or paid-service mutation.
 
@@ -59,12 +59,12 @@ Tier 2 - read, analyze, draft, and recommend only.
 
 ## Must Not Write To
 
-- `ssffmvp\frontend\`
-- `ssffmvp\src\`
-- `ssffmvp\client\`
-- `ssffmvp\sql\`
-- `ssffmvp\scripts\`
-- `ssffmvp\test\`
+- `slops-saloon\corvus\frontend\`
+- `slops-saloon\corvus\src\`
+- `slops-saloon\corvus\client\`
+- `slops-saloon\corvus\sql\`
+- `slops-saloon\corvus\scripts\`
+- `slops-saloon\corvus\test\`
 - `.env`, `.key`, credentials, secrets, tokens, cookies
 - production, deployment, Docker, GitHub Actions, auth, payment, database, or infrastructure files
 

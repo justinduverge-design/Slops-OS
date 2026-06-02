@@ -25,8 +25,8 @@ Do not create SLOPS-authored skills in:
 
 - `.codex\skills`
 - `Blueprints\prompts`
-- `ssffmvp\Blueprints`
-- `ssffmvp\Corvus\Blueprints`
+- `slops-saloon\Blueprints`
+- `slops-saloon\corvus\Blueprints`
 - old project copies
 
 Tool-installed external skills may still live where their installer expects them. Treat those as external runtime dependencies, not canonical SLOPS skills.

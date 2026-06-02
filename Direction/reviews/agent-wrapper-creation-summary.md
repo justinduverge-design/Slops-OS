@@ -157,7 +157,7 @@ Suggested new section:
 
 - `Blueprints\agents\AGENT_INDEX.md`
 - Imported agent files under `Blueprints\agents\_imported\`
-- App source under `ssffmvp\`
+- App source under `slops-saloon\`
 - Production, secrets, auth, payment, database, deployment, and infrastructure files
 
 ## Next Safe Step

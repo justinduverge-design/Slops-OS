@@ -1,6 +1,6 @@
 # Blueprints
 
-Use this folder for ssffmvp blueprints: agent rules, workflow instructions, playbooks, templates, and reference snapshots.
+Use this folder for SLOPS OS blueprints: reusable agent rules, workflow instructions, playbooks, templates, specs, prompts, skills, and reference snapshots.
 
 After DBS cleanup, root SLOPS workflow folders live here:
 
@@ -15,7 +15,9 @@ Tool permissions policy lives at `Blueprints/tools/tool-permissions.md`. See `Bl
 
 Agent authority matrix lives at `Blueprints/agents/AGENT_INDEX.md`. See `Blueprints/agents/README.md` for agent lookup rules.
 
-Inside `ssffmvp`, app-specific handoffs, prompts, docs, and specs now live under `ssffmvp/Blueprints/`.
+Inside `slops-saloon`, division-specific handoffs, prompts, docs, and specs live under `slops-saloon/Blueprints/`.
+
+Corvus app-specific handoffs, prompts, docs, and specs live under `slops-saloon/corvus/Blueprints/`.
 
 ## Naming Conventions
 

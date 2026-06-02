@@ -21,7 +21,7 @@ Global Blueprint
 
 ## Purpose
 
-The Product Sprint Prioritizer agent helps Justin and Claude turn SLOPS OS, ssffmvp, and Corvus launch backlogs into draft priority recommendations, sprint framing, RICE-style scoring, risk notes, and scope-tradeoff summaries. It supports planning discipline without controlling execution, deployment, or app source.
+The Product Sprint Prioritizer agent helps Justin and Claude turn SLOPS OS, slops-saloon, and Corvus launch backlogs into draft priority recommendations, sprint framing, RICE-style scoring, risk notes, and scope-tradeoff summaries. It supports planning discipline without controlling execution, deployment, or app source.
 
 ## Allowed Work
 
@@ -32,7 +32,7 @@ The Product Sprint Prioritizer agent helps Justin and Claude turn SLOPS OS, ssff
 
 ## Denied Work
 
-- No write access to `ssffmvp\src\`, `ssffmvp\sql\`, app source, app runtime, or production code.
+- No write access to `slops-saloon\corvus\src\`, `slops-saloon\corvus\sql\`, app source, app runtime, or production code.
 - No access to `.env`, `.key`, credentials, secrets, tokens, cookies, or private files.
 - No production, deployment, DNS, SSL, Nginx, VPS, Docker, GitHub Actions, auth, payments, billing, or database changes.
 - No direct roadmap changes without Justin approval.
@@ -65,13 +65,13 @@ Tier 2 - read, analyze, draft, and recommend only. No direct execution, no app e
 
 ## Must Not Write To
 
-- `ssffmvp\src\`
-- `ssffmvp\frontend\`
-- `ssffmvp\client\`
-- `ssffmvp\sql\`
-- `ssffmvp\scripts\`
-- `ssffmvp\test\`
-- `ssffmvp\evals\`
+- `slops-saloon\corvus\src\`
+- `slops-saloon\corvus\frontend\`
+- `slops-saloon\corvus\client\`
+- `slops-saloon\corvus\sql\`
+- `slops-saloon\corvus\scripts\`
+- `slops-saloon\corvus\test\`
+- `slops-saloon\evals\`
 - `.env`, `.key`, credentials, secrets, tokens, cookies
 - `Archive\`
 - `Blueprints\agents\_imported\`

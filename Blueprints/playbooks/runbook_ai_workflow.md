@@ -71,7 +71,7 @@ Front-End Engineer
         │
         │ writes backend needs
         ▼
-ssffmvp/Blueprints/handoffs/frontend-to-backend.md
+slops-saloon/Blueprints/handoffs/frontend-to-backend.md
         │
         │ Codex reads
         ▼
@@ -80,7 +80,7 @@ Back-End Engineer
         │
         │ writes completed contracts
         ▼
-ssffmvp/Blueprints/handoffs/backend-to-frontend.md
+slops-saloon/Blueprints/handoffs/backend-to-frontend.md
         │
         │ Claude Code reads
         ▼

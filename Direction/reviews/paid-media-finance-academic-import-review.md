@@ -101,7 +101,7 @@ All wrappers from this pass should start as `candidate`, Tier 2 max:
 - Read, analyze, draft, and recommend only.
 - May write draft markdown only when explicitly assigned.
 - May write to `Blueprints\prompts\`, `Direction\reviews\`, and `Solutions\reports\`.
-- Must not write to `ssffmvp\src\`, `ssffmvp\frontend\`, `ssffmvp\client\`, `ssffmvp\sql\`, `ssffmvp\scripts\`, `ssffmvp\test\`, `Archive\`, `.env`, `.key`, credentials, secrets, tokens, cookies, production, deployment, Docker, GitHub Actions, auth, payment, database, ad-platform, analytics-platform, accounting, payroll, or tax files.
+- Must not write to `slops-saloon\src\`, `slops-saloon\frontend\`, `slops-saloon\client\`, `slops-saloon\sql\`, `slops-saloon\scripts\`, `slops-saloon\test\`, `Archive\`, `.env`, `.key`, credentials, secrets, tokens, cookies, production, deployment, Docker, GitHub Actions, auth, payment, database, ad-platform, analytics-platform, accounting, payroll, or tax files.
 - Must not access or mutate Google Ads, Microsoft Ads, Meta, LinkedIn, TikTok, Amazon Ads, DV360, DSPs, GTM, GA4, CRMs, accounting systems, bank accounts, payroll systems, tax software, portfolio tools, or customer-data systems.
 - Must not launch ads, change budgets, change bids, deploy keywords, deploy pixels, upload audiences, submit tax filings, approve budgets, issue forecasts, recommend trades, send financial reports externally, or make final legal/tax/financial decisions.
 - Escalates to Justin for spend, budget, financial, tax, legal, investment, regulated-claims, customer-data, public-communication, and platform-access decisions.

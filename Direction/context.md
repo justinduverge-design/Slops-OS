@@ -2,73 +2,73 @@
 
 ## Layer Purpose
 
-SLOPS OS is Justin's company and personal operating system layer. It organizes how decisions are made, how projects are framed, how agents collaborate, and how reusable work becomes repeatable infrastructure.
+SLOPS OS is Justin's operating system layer.
 
-This level is broader than any single repository or product. It is the operating surface for Slops Saloon as a company, product studio, and working system.
+It organizes decisions, context, agent routing, reusable skills, and cross-project handoffs.
 
-## Justin and Operating Style
+This layer is broader than any single repo or product.
 
-Justin uses SLOPS OS to turn active ideas into durable direction, reusable blueprints, and working solutions. The system should preserve context, reduce repeated explanation, and make it easier for Codex, Claude, and future agents to work from the same facts.
+## Current Structure
 
-The operating style is:
+```text
+SLOPS/                 Layer 0 - operating system
+slops-saloon/          Layer 1 - Slops Saloon division
+slops-saloon/corvus/   Layer 2 - Corvus product repo
+```
 
-- Direction before churn.
-- Clear decisions before broad execution.
-- Copy or archive before deletion.
-- Handoffs over assumptions.
-- Practical outputs over performative documentation.
-- User approval before deployment, infrastructure, secrets, production, or repo-risking changes.
+## Current Truth
 
-## How DBS Works Here
+- Slops Saloon is the sports, music, and arts division.
+- Corvus is the only active product.
+- Corvus is the Fantasy Football MVP.
+- Corvus is the active git repo for app work.
+- GitHub repo: `justinduverge-design/corvus`.
+- Oracle checkout: `~/corvus`.
 
-Direction contains context, roadmap, vision, priorities, decision logs, and current sprint thinking.
+## Current Product Signal — 2026-05-27
 
-Blueprints contains specs, prompts, skills, workflows, templates, and playbooks that can be reused across projects.
+- Corvus backend contract work advanced through frontend handoff Requests 13-18.
+- Local backend test baseline is now 216/216 passing.
+- New local contracts: `GET /api/system/current-week` and `GET /api/stripe/prices`.
+- Prepared, but did not apply, Supabase launch SQL for `waitlist_signups`, `subscriptions.trial_ends_at`, and `subscriptions.current_period_end`.
+- Legacy Corvus compatibility routes now fail closed with `410 legacy_route_retired`.
+- Any Supabase migration, Stripe live validation, deploy, DNS, SSL, Nginx, or production infrastructure action still requires explicit Justin approval.
 
-Solutions contains working outputs, deliverables, assets, and implementation-adjacent artifacts that are not active source code unless explicitly approved.
+## DBS Meaning
 
-References contains supporting material, research, historical copies, and source material that informs work but is not itself the current operating plan.
+- `Direction/` holds current context, roadmap, decisions, risks, and sprint notes.
+- `Blueprints/` holds reusable skills, agents, prompts, specs, templates, playbooks, and handoffs.
+- `Solutions/` holds finished outputs and reports.
+- `References/` holds supporting research and source captures.
+- `Archive/` preserves superseded or parked material.
 
-Archive preserves superseded or parked material after review. Archive does not mean delete.
+## Decision Routing
 
-## Decisions, Skills, Handoffs, and Projects
+- Company-wide or reusable operating decisions belong at the SLOPS OS layer.
+- Slops Saloon division decisions belong in `slops-saloon/Direction/`.
+- Corvus product decisions belong in `slops-saloon/corvus/Direction/`.
+- Corvus frontend/backend handoffs belong in `slops-saloon/corvus/Blueprints/handoffs/`.
 
-Decisions should be recorded where future agents can find them. Company-wide decisions belong at the SLOPS OS layer. Repo-level decisions belong inside `ssffmvp`. Product decisions belong inside `ssffmvp/Corvus`.
+## Skill Routing
 
-SLOPS-authored skills live in one canonical place: `Blueprints\skills\`. Agents should look there first, read `Blueprints\skills\README.md`, then `Blueprints\skills\SKILL_ROUTING.md`, then the named skill folder's `SKILL.md`. Do not create SLOPS skills in `.codex\skills`, `Blueprints\prompts`, app prompt folders, or product folders.
+SLOPS-authored skills live in one canonical place:
 
-Tool-installed external skills may still live where their installer expects them. Those are runtime dependencies, not canonical SLOPS-authored skills.
+```text
+Blueprints/skills/
+```
 
-Handoffs are working coordination artifacts. Active app handoffs should remain where Codex, Claude, or repo tooling expects them. DBS can hold indexes, summaries, or archived handoff material after review.
+Agents should read:
 
-Projects are active systems under the Slops Saloon umbrella. They should not be moved or archived until their app, repo, source, secret, and deployment risks have been reviewed.
+1. `Blueprints/skills/README.md`
+2. `Blueprints/skills/SKILL_ROUTING.md`
+3. The named skill folder's `SKILL.md`
 
-## Slops Saloon and ssffmvp
-
-Slops Saloon is the umbrella: the company, mission, product ecosystem, and parent identity.
-
-`ssffmvp` is the first department/project system under Slops Saloon. It is the Fantasy Sports MVP Builder layer where fantasy sports tools can be designed, tested, and operated.
-
-Corvus is the first product inside `ssffmvp`. It is focused on fantasy football decision intelligence.
+Tool-installed external skills may live elsewhere. Treat them as runtime dependencies, not SLOPS-authored source.
 
 ## Safety Boundary
 
-SLOPS OS work can reorganize documents and planning layers, but it should not change app behavior, deployment posture, secrets, infrastructure, package files, source code, tests, SQL, scripts, `.git`, or active implementation assets without explicit approval.
+SLOPS OS work can update documentation and routing context.
 
-## Universal AI Rules
+Do not change app behavior, deployment posture, secrets, infrastructure, package files, source code, tests, SQL, scripts, `.git`, or active implementation assets without explicit approval.
 
-These rules apply to all agents working at the SLOPS OS layer.
-
-1. **Human-in-the-Loop** - Do not make final business or architecture decisions. Recommend, explain tradeoffs, and identify the strongest option.
-
-2. **Conflict Resolution** - If instructions conflict and affect the outcome, pause and ask for clarification. If minor, make the safest practical assumption and explicitly label it.
-
-3. **Fact vs. Guess** - Clearly label assumptions or inferences as **[Guess]** when data is missing or uncertain.
-
-4. **Session Re-Anchoring** - At the end of major work sessions, update handoff files to maintain continuity across tool boundaries.
-
-5. **Now vs. Later** - Ruthlessly separate what must be executed immediately from what should be deferred.
-
-6. **Practical Output** - Do not just summarize the conversation. Conclude every response with the single next concrete action.
-
-7. **Context Preservation** - Before initiating a large change, verify the proposal aligns with constraints in `Direction/` and does not break existing structures in `Solutions/`.
+Do not treat archive, imported agents, or old project copies as current authority unless Justin explicitly says so.

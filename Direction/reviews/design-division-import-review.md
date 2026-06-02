@@ -18,7 +18,7 @@ Root `AGENTS.md` required files checked from `C:\Users\JDuve\OneDrive\Desktop\SL
 - `handoffs\backend-to-frontend.md` missing
 - `CLAUDE.md` missing
 
-Canonical app handoff files were found and reviewed under `ssffmvp\Blueprints\handoffs`.
+Canonical app handoff files were found and reviewed under `slops-saloon\Blueprints\handoffs`.
 
 ## Classification Summary
 
@@ -63,7 +63,7 @@ All Design Division wrappers should start as `candidate`, Tier 2 max:
 - Read, analyze, draft, and recommend only.
 - May write draft markdown only when explicitly assigned.
 - May write to `Blueprints\prompts\`, `Direction\reviews\`, and `Solutions\reports\`.
-- Must not write to `ssffmvp\src\`, `ssffmvp\frontend\`, `ssffmvp\client\`, `ssffmvp\sql\`, `ssffmvp\scripts\`, `ssffmvp\test\`, `Archive\`, `.env`, `.key`, credentials, secrets, tokens, cookies, production, deployment, Docker, GitHub Actions, auth, payment, or database files.
+- Must not write to `slops-saloon\src\`, `slops-saloon\frontend\`, `slops-saloon\client\`, `slops-saloon\sql\`, `slops-saloon\scripts\`, `slops-saloon\test\`, `Archive\`, `.env`, `.key`, credentials, secrets, tokens, cookies, production, deployment, Docker, GitHub Actions, auth, payment, or database files.
 - Must not make final decisions on brand direction, launch scope, monetization, UX direction, frontend implementation, or backend contracts.
 - Escalates to Justin for brand/product decisions, Claude for frontend/design planning, and Codex only for separately approved implementation.
 

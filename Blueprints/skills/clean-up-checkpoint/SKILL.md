@@ -30,7 +30,7 @@ The output should let Justin or the next agent resume without guessing what happ
 
 Read only what is needed for the current repo or product layer.
 
-For `ssffmvp`, prefer:
+For `slops-saloon`, prefer:
 
 - `README.md`
 - `DBS_INDEX.md`
@@ -100,7 +100,7 @@ The final response should include:
 
 ## Where To Store Outputs
 
-For `ssffmvp` app checkpoints:
+For `slops-saloon` app checkpoints:
 
 - `Blueprints/handoffs/rate-limit-shutdown-checkpoint.md`
 

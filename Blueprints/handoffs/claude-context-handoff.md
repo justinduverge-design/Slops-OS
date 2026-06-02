@@ -2,68 +2,58 @@
 
 ## Objective
 
-Prepare Claude to continue SLOPS documentation, skill, agent, and DBS cleanup work from the current workspace truth.
+Prepare Claude to continue SLOPS documentation, skill, agent, and DBS cleanup work from the current route.
+
+## Current Route
+
+```text
+SLOPS/
+  slops-saloon/
+    corvus/
+```
 
 ## Read First
 
+For SLOPS OS work:
+
 1. `context.md`
 2. `DBS_INDEX.md`
-3. `Direction\context.md`
-4. `Direction\roadmap.md`
-5. `Blueprints\skills\README.md`
-6. `Blueprints\skills\SKILL_ROUTING.md`
-7. `Blueprints\agents\AGENT_INDEX.md`
-8. `Blueprints\tools\tool-permissions.md`
+3. `Direction/context.md`
+4. `Direction/roadmap.md`
+5. `Blueprints/skills/README.md`
+6. `Blueprints/skills/SKILL_ROUTING.md`
+7. `Blueprints/agents/AGENT_INDEX.md`
 
-For app-specific work, also read:
+For Slops Saloon division work:
 
-1. `ssffmvp\Direction\context.md`
-2. `ssffmvp\Blueprints\handoffs\frontend-to-backend.md`
-3. `ssffmvp\Blueprints\handoffs\backend-to-frontend.md`
-4. `ssffmvp\Blueprints\handoffs\decisions.md`
+1. `slops-saloon/context.md`
+2. `slops-saloon/DBS_INDEX.md`
+3. `slops-saloon/Direction/context.md`
+4. `slops-saloon/Direction/roadmap.md`
+
+For Corvus product work:
+
+1. `slops-saloon/corvus/DBS_INDEX.md`
+2. `slops-saloon/corvus/Direction/context.md`
+3. `slops-saloon/corvus/Direction/current_sprint.md`
+4. `slops-saloon/corvus/Blueprints/handoffs/frontend-to-backend.md`
+5. `slops-saloon/corvus/Blueprints/handoffs/backend-to-frontend.md`
 
 ## Current State
 
 - SLOPS OS is the root operating layer.
-- `ssffmvp` is the active app repo.
-- Corvus is the fantasy football product inside `ssffmvp`.
-- SLOPS-authored skills live under `Blueprints\skills`.
-- Agent authority lives in `Blueprints\agents\AGENT_INDEX.md`.
+- Slops Saloon is the division layer.
+- Corvus is the active Fantasy Football MVP product repo.
+- The old nested `Corvus/` product subfolder is retired.
+- SLOPS-authored skills live under `Blueprints/skills/`.
 - Imported agents remain reference-only unless reviewed, wrapped, indexed, and approved.
-
-## Recently Added Skills
-
-The following skills were created and added to routing/index files:
-
-- `agent-wrapper-generator`
-- `agent-index-diff-builder`
-- `rbac-risk-review`
-- `workflow-tree-spec`
-- `security-privacy-evidence`
 
 ## Scope For Claude
 
-Claude should help with:
+Claude should help with documentation cleanup, DBS routing, agent review, prompt shaping, and handoff preparation.
 
-- Documentation cleanup.
-- DBS routing decisions.
-- Agent/skill review.
-- Handoff preparation.
-- Risk and scope review.
-- Founder-context preservation.
-
-Claude should not:
-
-- Edit app source directly.
-- Touch secrets, cookies, auth, payments, SQL, production, deployment, or infrastructure.
-- Treat archive/imported material as current authority.
-- Activate agents without Justin approval and `AGENT_INDEX.md` review.
+Claude should not touch app source, secrets, cookies, auth, payments, SQL, production, deployment, or infrastructure unless Justin explicitly asks for that exact work.
 
 ## Open Follow-Up
 
-Recommended next documentation pass:
-
-1. Review root and Direction markdown for stale path references.
-2. Decide whether root compatibility files should be redirects or full context files.
-3. Review `Blueprints\handoffs` and decide whether root-level handoffs are redirects, OS handoffs, or both.
-4. Add prior-use notes to new skills after they are used once.
+Justin plans to rewrite the active agent files after this context route is in place.

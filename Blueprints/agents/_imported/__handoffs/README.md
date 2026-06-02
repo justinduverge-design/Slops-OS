@@ -1,11 +1,16 @@
 # Handoff References
 
-This folder holds DBS reference snapshots and workflow notes for handoffs.
+This folder holds imported DBS reference snapshots and workflow notes for handoffs.
 
-Active engineering handoffs remain at repo root:
+This imported note was written before the Corvus repo rename. It is reference-only.
 
-- `ssffmvp/Blueprints/handoffs/frontend-to-backend.md`
-- `ssffmvp/Blueprints/handoffs/backend-to-frontend.md`
-- `ssffmvp/Blueprints/handoffs/decisions.md`
+Current active Corvus engineering handoffs live at:
 
-The app-level `agent_handoff.md` and `agent_inbox.md` were moved to `ssffmvp/Blueprints/agent_handoff.md` and `ssffmvp/Direction/agent_inbox.md`.
+- `slops-saloon/corvus/Blueprints/handoffs/frontend-to-backend.md`
+- `slops-saloon/corvus/Blueprints/handoffs/backend-to-frontend.md`
+- `slops-saloon/corvus/Blueprints/handoffs/decisions.md`
+
+The app-level coordination files now live in the Corvus product repo when present:
+
+- `slops-saloon/corvus/Blueprints/agent_handoff.md`
+- `slops-saloon/corvus/Direction/agent_inbox.md`

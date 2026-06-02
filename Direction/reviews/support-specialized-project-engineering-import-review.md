@@ -147,7 +147,7 @@ All wrappers from this pass should start as `candidate`, Tier 2 max:
 - Read, analyze, draft, and recommend only.
 - May write draft markdown only when explicitly assigned.
 - May write to `Blueprints\prompts\`, `Direction\reviews\`, and `Solutions\reports\`.
-- Must not write to `ssffmvp\src\`, `ssffmvp\frontend\`, `ssffmvp\client\`, `ssffmvp\sql\`, `ssffmvp\scripts\`, `ssffmvp\test\`, `Archive\`, `.env`, `.key`, credentials, secrets, tokens, cookies, production, deployment, Docker, GitHub Actions, auth, payment, or database files.
+- Must not write to `slops-saloon\src\`, `slops-saloon\frontend\`, `slops-saloon\client\`, `slops-saloon\sql\`, `slops-saloon\scripts\`, `slops-saloon\test\`, `Archive\`, `.env`, `.key`, credentials, secrets, tokens, cookies, production, deployment, Docker, GitHub Actions, auth, payment, or database files.
 - Must not access or mutate external systems, CRMs, help desks, analytics dashboards, legal/compliance portals, HR systems, app stores, CI/CD providers, cloud accounts, SIEMs, databases, payment systems, or customer-data systems.
 - Must not deploy, migrate, delete, restore, rotate secrets, alter infrastructure, send customer communications, publish public docs, approve legal/compliance status, or make final commercial/product decisions.
 - Escalates to Justin for commercial, legal, compliance, brand, spend, customer-data, production, infrastructure, and public-communication decisions.

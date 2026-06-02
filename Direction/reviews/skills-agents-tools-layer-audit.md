@@ -6,7 +6,7 @@ Scope:
 
 - Root: `C:\Users\JDuve\OneDrive\Desktop\SLOPS`
 - 0-OS layer: SLOPS operating system
-- 1-ssffmvp layer: Fantasy Sports MVP Builder app/subsidiary
+- 1-slops-saloon layer: Fantasy Sports MVP Builder app/subsidiary
 - 2-Corvus layer: Fantasy Football MVP product/project
 
 This was an audit and recommendation pass only. No files were moved, renamed, deleted, activated, or rewritten. The only file written was this report. `Direction\Reviews\` was created because the requested report folder did not already exist.
@@ -15,7 +15,7 @@ This was an audit and recommendation pass only. No files were moved, renamed, de
 
 The SLOPS skills layer is mostly coherent. `Blueprints\skills` is already the right 0-OS home for reusable SLOPS-authored workflows, and the active skill files mostly follow a useful frontmatter, purpose, workflow, output, and safety pattern.
 
-The agents layer is not yet deterministic. `Blueprints\agents\agents.md` is a useful global agent manifesto, but there is no `AGENT_INDEX.md`, the `README.md` is only a redirect, and `manager_agent.md` plus `sub_agents.md` are not global agent role files. They are Corvus/ssffmvp runtime prompt artifacts and should stay project-specific unless Justin explicitly promotes a generalized version.
+The agents layer is not yet deterministic. `Blueprints\agents\agents.md` is a useful global agent manifesto, but there is no `AGENT_INDEX.md`, the `README.md` is only a redirect, and `manager_agent.md` plus `sub_agents.md` are not global agent role files. They are Corvus/slops-saloon runtime prompt artifacts and should stay project-specific unless Justin explicitly promotes a generalized version.
 
 The imported agent library under `Blueprints\agents\_imported` should remain candidate/reference-only. It contains many useful role examples, but several imported files include broad `Write`, `Edit`, `Bash`, deployment, database, credential, paid-media, and infrastructure instructions that do not fit SLOPS least-privilege rules without review and wrapping.
 
@@ -30,8 +30,8 @@ Primary folders inspected:
 - `C:\Users\JDuve\OneDrive\Desktop\SLOPS\Blueprints\skills`
 - `C:\Users\JDuve\OneDrive\Desktop\SLOPS\Blueprints\agents`
 - `C:\Users\JDuve\OneDrive\Desktop\SLOPS\Blueprints\agents\_imported`
-- `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp`
-- `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Corvus`
+- `C:\Users\JDuve\OneDrive\Desktop\SLOPS\slops-saloon`
+- `C:\Users\JDuve\OneDrive\Desktop\SLOPS\slops-saloon\corvus`
 
 Read-first files inspected:
 
@@ -53,10 +53,10 @@ Read-first files inspected:
 
 Additional inspection:
 
-- Folder trees for `Blueprints\skills`, `Blueprints\agents`, `ssffmvp\Blueprints`, and `ssffmvp\Corvus`
+- Folder trees for `Blueprints\skills`, `Blueprints\agents`, `slops-saloon\Blueprints`, and `slops-saloon\corvus`
 - Markdown references to `SKILL_INDEX`, `AGENT_INDEX`, `tools.md`, `skills.md`, `manager_agent.md`, `sub_agents.md`, `_imported`, and current prompt/agent paths
 - Imported-agent risk terms including tools, write, delete, deploy, production, secret, credential, database, migration, git, Docker, VPS, API key, and env
-- Git status at root and inside `ssffmvp`
+- Git status at root and inside `slops-saloon`
 
 ## Current Map
 
@@ -75,19 +75,19 @@ Additional inspection:
 | `Blueprints\skills\pre-build-research\SKILL.md` | True skill | External API/vendor/data source due diligence | Low | Good 0-OS skill, with route-down rules for project-specific research. |
 | `Blueprints\skills\slops-prompt-generator\SKILL.md` | True skill | Creates runnable implementation prompts | Low/medium | Useful. Its `agents\openai.yaml` support folder has same naming ambiguity as above. |
 | `Blueprints\skills\slops-prompt-generator\references\audit-reference.md` | Skill reference | Source material for audit-to-prompt generation | Low | Correct support file. |
-| `Blueprints\skills\clean-up-checkpoint\SKILL.md` | True skill | Rate-limit/session checkpoint workflow | Low/medium | Useful. It routes ssffmvp output to `Blueprints\handoffs`, so it is global but heavily app-aware. |
+| `Blueprints\skills\clean-up-checkpoint\SKILL.md` | True skill | Rate-limit/session checkpoint workflow | Low/medium | Useful. It routes slops-saloon output to `Blueprints\handoffs`, so it is global but heavily app-aware. |
 | `Blueprints\agents\README.md` | Readme/redirect | Says canonical agents live at `Blueprints\agents` | Medium | Too thin and self-referential. Needs real agent lookup, status, and imported-agent warnings. |
 | `Blueprints\agents\AGENT_INDEX.md` | Missing index | Deterministic agent authority map | High | Not present. Without it, imported agents and active roles are ambiguous. |
 | `Blueprints\agents\agents.md` | Global agent manifesto | Defines Justin, Claude, Codex roles and authority | Low/medium | Useful 0-OS doctrine, but not a deterministic index. Consider `AGENT_MANIFEST.md` or keep with clear README. |
-| `Blueprints\agents\manager_agent.md` | Prompt artifact, not global agent role | Corvus/ssffmvp Manager Agent system prompt copy | High if treated as global agent | Header says file belongs to `ssffmvp/Blueprints/prompts/manager_agent.md`. This is Corvus runtime prompt material, not a reusable SLOPS agent role. |
-| `Blueprints\agents\sub_agents.md` | Prompt artifact, not global agent role | Corvus/ssffmvp sub-agent prompt copy | High if treated as global agent | Header says file belongs to `ssffmvp/Blueprints/prompts/sub_agents.md`. Corvus-specific. |
+| `Blueprints\agents\manager_agent.md` | Prompt artifact, not global agent role | Corvus/slops-saloon Manager Agent system prompt copy | High if treated as global agent | Header says file belongs to `slops-saloon/Blueprints/prompts/manager_agent.md`. This is Corvus runtime prompt material, not a reusable SLOPS agent role. |
+| `Blueprints\agents\sub_agents.md` | Prompt artifact, not global agent role | Corvus/slops-saloon sub-agent prompt copy | High if treated as global agent | Header says file belongs to `slops-saloon/Blueprints/prompts/sub_agents.md`. Corvus-specific. |
 | `Blueprints\agents\_imported\*` | Imported agent examples | External candidate/reference agent library | High if activated | Many files include broad tool or execution language. Keep candidate/reference-only until reviewed. |
 | `Blueprints\agents\_imported\handoffs\*` | Imported/legacy handoff docs | Reference-only handoff notes | Medium | Could confuse with active handoffs. Keep non-authoritative. |
-| `ssffmvp\Blueprints\prompts\manager_agent.md` | Runtime prompt artifact | Current app prompt loaded by source | Medium | App runtime now reads from this path. Treat as 1-ssffmvp canonical until a Corvus-specific runtime path is approved. |
-| `ssffmvp\Blueprints\prompts\sub_agents.md` | Runtime prompt artifact | Current app sub-agent prompt source | Medium | Same as above. Corvus-specific in content, but app-runtime canonical today. |
-| `ssffmvp\Blueprints\skills` | Empty folder | Potential app-specific skill folder | Low | Keep empty unless app-specific skills are needed. Do not duplicate global skills. |
-| `ssffmvp\Corvus\Blueprints\playbooks\espn-recovery.md` | Corvus playbook | Product-specific recovery playbook | Low/medium | Correct 2-Corvus placement. |
-| `ssffmvp\Corvus\Blueprints\specs\omen-mvp-move.md` | Corvus spec | Product-specific spec | Low | Correct 2-Corvus placement. |
+| `slops-saloon\Blueprints\prompts\manager_agent.md` | Runtime prompt artifact | Current app prompt loaded by source | Medium | App runtime now reads from this path. Treat as 1-slops-saloon canonical until a Corvus-specific runtime path is approved. |
+| `slops-saloon\Blueprints\prompts\sub_agents.md` | Runtime prompt artifact | Current app sub-agent prompt source | Medium | Same as above. Corvus-specific in content, but app-runtime canonical today. |
+| `slops-saloon\Blueprints\skills` | Empty folder | Potential app-specific skill folder | Low | Keep empty unless app-specific skills are needed. Do not duplicate global skills. |
+| `slops-saloon\corvus\Blueprints\playbooks\espn-recovery.md` | Corvus playbook | Product-specific recovery playbook | Low/medium | Correct 2-Corvus placement. |
+| `slops-saloon\corvus\Blueprints\specs\omen-mvp-move.md` | Corvus spec | Product-specific spec | Low | Correct 2-Corvus placement. |
 
 Imported agent library map:
 
@@ -127,15 +127,15 @@ Imported agent library map:
 | `Blueprints\agents\README.md` | 0-OS | `Blueprints\agents\README.md` | index | Replace redirect with real lookup rules, status model, and import warnings. |
 | `Blueprints\agents\AGENT_INDEX.md` | 0-OS | `Blueprints\agents\AGENT_INDEX.md` | index | Create later. This is the missing authority map. |
 | `Blueprints\agents\agents.md` | 0-OS | `Blueprints\agents\AGENT_MANIFEST.md` or keep `agents.md` with index links | rename | It is a global manifesto, not a folder index. |
-| `Blueprints\agents\manager_agent.md` | 2-Corvus | `ssffmvp\Blueprints\prompts\manager_agent.md` now; later consider `ssffmvp\Corvus\Blueprints\prompts\manager_agent.md` | review only | It is Corvus runtime prompt material. Do not keep as global agent authority. Moving later requires source path review. |
-| `Blueprints\agents\sub_agents.md` | 2-Corvus | `ssffmvp\Blueprints\prompts\sub_agents.md` now; later consider `ssffmvp\Corvus\Blueprints\prompts\sub_agents.md` | review only | Same as manager prompt. |
+| `Blueprints\agents\manager_agent.md` | 2-Corvus | `slops-saloon\Blueprints\prompts\manager_agent.md` now; later consider `slops-saloon\corvus\Blueprints\prompts\manager_agent.md` | review only | It is Corvus runtime prompt material. Do not keep as global agent authority. Moving later requires source path review. |
+| `Blueprints\agents\sub_agents.md` | 2-Corvus | `slops-saloon\Blueprints\prompts\sub_agents.md` now; later consider `slops-saloon\corvus\Blueprints\prompts\sub_agents.md` | review only | Same as manager prompt. |
 | `Blueprints\agents\_imported\**\*.md` | 0-OS Reference | `Blueprints\agents\_imported\<Division>\<file>.md` | keep | Keep candidate/reference-only until reviewed. |
 | `Blueprints\agents\_imported\handoffs\*` | 0-OS Reference | `Blueprints\agents\_imported\handoffs\*` or `Archive\imports\agents-handoffs\*` | review only | Non-authoritative; do not mix with active handoffs. |
-| `ssffmvp\Blueprints\prompts\manager_agent.md` | 1-ssffmvp now, 2-Corvus long-term | Keep current path until runtime path strategy is decided | keep | Current runtime source reads here after dependency repair. |
-| `ssffmvp\Blueprints\prompts\sub_agents.md` | 1-ssffmvp now, 2-Corvus long-term | Keep current path until runtime path strategy is decided | keep | Current runtime source reads here after dependency repair. |
-| `ssffmvp\Blueprints\skills` | 1-ssffmvp | `ssffmvp\Blueprints\skills` | no action | Empty app-specific skill bucket. Use only if a skill is not reusable at 0-OS. |
-| `ssffmvp\Corvus\Blueprints\playbooks\espn-recovery.md` | 2-Corvus | `ssffmvp\Corvus\Blueprints\playbooks\espn-recovery.md` | keep | Product-specific playbook. |
-| `ssffmvp\Corvus\Blueprints\specs\omen-mvp-move.md` | 2-Corvus | `ssffmvp\Corvus\Blueprints\specs\omen-mvp-move.md` | keep | Product-specific spec. |
+| `slops-saloon\Blueprints\prompts\manager_agent.md` | 1-slops-saloon now, 2-Corvus long-term | Keep current path until runtime path strategy is decided | keep | Current runtime source reads here after dependency repair. |
+| `slops-saloon\Blueprints\prompts\sub_agents.md` | 1-slops-saloon now, 2-Corvus long-term | Keep current path until runtime path strategy is decided | keep | Current runtime source reads here after dependency repair. |
+| `slops-saloon\Blueprints\skills` | 1-slops-saloon | `slops-saloon\Blueprints\skills` | no action | Empty app-specific skill bucket. Use only if a skill is not reusable at 0-OS. |
+| `slops-saloon\corvus\Blueprints\playbooks\espn-recovery.md` | 2-Corvus | `slops-saloon\corvus\Blueprints\playbooks\espn-recovery.md` | keep | Product-specific playbook. |
+| `slops-saloon\corvus\Blueprints\specs\omen-mvp-move.md` | 2-Corvus | `slops-saloon\corvus\Blueprints\specs\omen-mvp-move.md` | keep | Product-specific spec. |
 
 ## Skills Recommendations
 
@@ -158,13 +158,13 @@ Imported agent library map:
 | Justin / CEO | Founder authority | active | 0-OS | Approved as global authority in `agents.md`. | Global |
 | Claude / Architect | Planning/review | active | 0-OS | Approved as global planning role, subject to current tool permissions. | Global |
 | Codex / Engineer | Execution/verification | active | 0-OS with repo-specific constraints | Approved as global execution role, but repo-specific instructions still control each task. | Global |
-| Manager Agent prompt | Corvus fantasy football runtime | active prompt, not active global agent | 1-ssffmvp now, 2-Corvus long-term | Keep canonical runtime prompt under `ssffmvp\Blueprints\prompts` for now. Do not treat root copy as global agent. | Project-specific |
-| Weather Agent prompt | Corvus sub-agent | active prompt, not active global agent | 1-ssffmvp now, 2-Corvus long-term | Part of `sub_agents.md`; project-specific runtime prompt. | Project-specific |
-| Travel Agent prompt | Corvus sub-agent | active prompt, not active global agent | 1-ssffmvp now, 2-Corvus long-term | Part of `sub_agents.md`; project-specific runtime prompt. | Project-specific |
-| Game Time Agent prompt | Corvus sub-agent | active prompt, not active global agent | 1-ssffmvp now, 2-Corvus long-term | Part of `sub_agents.md`; project-specific runtime prompt. | Project-specific |
-| Roster Agent prompt | Corvus sub-agent | active prompt, not active global agent | 1-ssffmvp now, 2-Corvus long-term | Part of `sub_agents.md`; project-specific runtime prompt. | Project-specific |
-| Performance Agent prompt | Corvus sub-agent | active prompt, not active global agent | 1-ssffmvp now, 2-Corvus long-term | Part of `sub_agents.md`; project-specific runtime prompt. | Project-specific |
-| Matchup Agent prompt | Corvus sub-agent | active prompt, not active global agent | 1-ssffmvp now, 2-Corvus long-term | Part of `sub_agents.md`; project-specific runtime prompt. | Project-specific |
+| Manager Agent prompt | Corvus fantasy football runtime | active prompt, not active global agent | 1-slops-saloon now, 2-Corvus long-term | Keep canonical runtime prompt under `slops-saloon\Blueprints\prompts` for now. Do not treat root copy as global agent. | Project-specific |
+| Weather Agent prompt | Corvus sub-agent | active prompt, not active global agent | 1-slops-saloon now, 2-Corvus long-term | Part of `sub_agents.md`; project-specific runtime prompt. | Project-specific |
+| Travel Agent prompt | Corvus sub-agent | active prompt, not active global agent | 1-slops-saloon now, 2-Corvus long-term | Part of `sub_agents.md`; project-specific runtime prompt. | Project-specific |
+| Game Time Agent prompt | Corvus sub-agent | active prompt, not active global agent | 1-slops-saloon now, 2-Corvus long-term | Part of `sub_agents.md`; project-specific runtime prompt. | Project-specific |
+| Roster Agent prompt | Corvus sub-agent | active prompt, not active global agent | 1-slops-saloon now, 2-Corvus long-term | Part of `sub_agents.md`; project-specific runtime prompt. | Project-specific |
+| Performance Agent prompt | Corvus sub-agent | active prompt, not active global agent | 1-slops-saloon now, 2-Corvus long-term | Part of `sub_agents.md`; project-specific runtime prompt. | Project-specific |
+| Matchup Agent prompt | Corvus sub-agent | active prompt, not active global agent | 1-slops-saloon now, 2-Corvus long-term | Part of `sub_agents.md`; project-specific runtime prompt. | Project-specific |
 | Academic Division imported agents | Academic Division | reference-only by default | 0-OS Reference | Keep candidate/reference-only. | Global candidates only after review |
 | Design Division imported agents | Design Division | candidate/reference-only | 0-OS Reference | Potential future design/brand reviewers, but no active authority yet. | Global candidates only after review |
 | Engineering Division imported agents | Engineering Division | reference-only until strict RBAC | 0-OS Reference | High-risk because of implementation, security, infrastructure, and deployment language. | Global candidates only after review |
@@ -233,14 +233,14 @@ If the recommendations are approved, these references need updates:
 | `Blueprints\skills\skills.md` | `Blueprints\Skills\tools.md` | `Blueprints\tools\tool-permissions.md` after approval. |
 | `Blueprints\skills\skills.md` | `Blueprints\Agents\AGENT_INDEX.md` | Keep concept, but create actual `Blueprints\agents\AGENT_INDEX.md` first and normalize casing. |
 | `Blueprints\skills\slops-skill-author\SKILL.md` | `Blueprints\Skills\...`, `Blueprints\Agents\...` | Normalize to actual lowercase path style if Justin wants deterministic path casing. |
-| `Blueprints\skills\slops-agent-author\SKILL.md` | `Blueprints\Agents`, `Blueprints\Skills`, `ssffmvp\Blueprints\agents` | Normalize casing; confirm whether project agents should be `ssffmvp\Blueprints\agents` or prompts remain under `ssffmvp\Blueprints\prompts`. |
+| `Blueprints\skills\slops-agent-author\SKILL.md` | `Blueprints\Agents`, `Blueprints\Skills`, `slops-saloon\Blueprints\agents` | Normalize casing; confirm whether project agents should be `slops-saloon\Blueprints\agents` or prompts remain under `slops-saloon\Blueprints\prompts`. |
 | `Blueprints\skills\pre-build-research\SKILL.md` | `Blueprints\Skills\pre-build-research\SKILL.md` | Normalize to `Blueprints\skills\pre-build-research\SKILL.md` if standardizing lowercase. |
 | `Blueprints\agents\agents.md` | `skills.md` and `tools.md` | Update to `Blueprints\skills\SKILL_ROUTING.md` and `Blueprints\tools\tool-permissions.md` if renamed/moved. |
-| `Blueprints\agents\manager_agent.md` | Header says `ssffmvp/Blueprints/prompts/manager_agent.md` | If keeping root copy, replace with redirect note. If archiving, update indexes to point to `ssffmvp\Blueprints\prompts\manager_agent.md`. |
-| `Blueprints\agents\sub_agents.md` | Header says `ssffmvp/Blueprints/prompts/sub_agents.md` | Same as manager prompt. |
-| `ssffmvp\Blueprints\prompts\PROMPTS_CHANGELOG.md` | `Blueprints/prompts/manager_agent.md`, `Blueprints/prompts/sub_agents.md` | Current relative path is okay inside `ssffmvp`; update only if moving to Corvus. |
-| `ssffmvp\src\services\agents.js` | Runtime path to `Blueprints\prompts\manager_agent.md` | Do not change unless prompt files move again. |
-| `ssffmvp\src\ssffmvp_prompt_loader.js` | Runtime path to `Blueprints\prompts` | Do not change unless prompt files move again. |
+| `Blueprints\agents\manager_agent.md` | Header says `slops-saloon/Blueprints/prompts/manager_agent.md` | If keeping root copy, replace with redirect note. If archiving, update indexes to point to `slops-saloon\Blueprints\prompts\manager_agent.md`. |
+| `Blueprints\agents\sub_agents.md` | Header says `slops-saloon/Blueprints/prompts/sub_agents.md` | Same as manager prompt. |
+| `slops-saloon\Blueprints\prompts\PROMPTS_CHANGELOG.md` | `Blueprints/prompts/manager_agent.md`, `Blueprints/prompts/sub_agents.md` | Current relative path is okay inside `slops-saloon`; update only if moving to Corvus. |
+| `slops-saloon\src\services\agents.js` | Runtime path to `Blueprints\prompts\manager_agent.md` | Do not change unless prompt files move again. |
+| `slops-saloon\src\slops-saloon_prompt_loader.js` | Runtime path to `Blueprints\prompts` | Do not change unless prompt files move again. |
 | `Blueprints\skills\tools.md` | `agents from github` | Replace with current `Blueprints\agents\_imported` wording. |
 
 ## Risk Notes
@@ -278,7 +278,7 @@ Database risks:
 
 File-move risks:
 
-- Moving `ssffmvp\Blueprints\prompts\manager_agent.md` or `sub_agents.md` will affect runtime prompt loading.
+- Moving `slops-saloon\Blueprints\prompts\manager_agent.md` or `sub_agents.md` will affect runtime prompt loading.
 - Moving `tools.md` requires dependency updates in `skills.md`, `agents.md`, and future agent README/index files.
 - Renaming `skills.md` requires link updates.
 - Archiving root `Blueprints\agents\manager_agent.md` and `sub_agents.md` is safe only after confirming no root workflows still use those paths.
@@ -316,7 +316,7 @@ Do not execute this plan until Justin approves it.
 1. Run `rg` for old paths.
 2. Run `git status`.
 3. Run `git diff`.
-4. If runtime prompt paths are touched, run targeted Node syntax checks and `npm test` inside `ssffmvp`.
+4. If runtime prompt paths are touched, run targeted Node syntax checks and `npm test` inside `slops-saloon`.
 5. Confirm no secrets, production, deploy, package, SQL, scripts, tests, `.git`, `node_modules`, or quarantine files were touched.
 
 ### Phase 5: Cleanup/Archive
@@ -332,7 +332,7 @@ Do not execute this plan until Justin approves it.
 2. Should `tools.md` move to a new `Blueprints\tools\tool-permissions.md` folder, or should it stay in `Blueprints\skills` until the agent index exists?
 3. Should `skills.md` be renamed to `SKILL_ROUTING.md`, or do you prefer keeping the simpler current filename?
 4. Should root `Blueprints\agents\manager_agent.md` and `sub_agents.md` become redirect notes, archive copies, or be deleted later after confirmation?
-5. Should Corvus runtime prompts eventually move from `ssffmvp\Blueprints\prompts` to `ssffmvp\Corvus\Blueprints\prompts`, knowing that source paths must change too?
+5. Should Corvus runtime prompts eventually move from `slops-saloon\Blueprints\prompts` to `slops-saloon\corvus\Blueprints\prompts`, knowing that source paths must change too?
 6. Which imported-agent divisions are worth reviewing first: Engineering, Product, Design, Marketing, or Support?
 7. Do you want imported agents to default to `reference-only` or `candidate` in the future `AGENT_INDEX.md`?
 
@@ -346,18 +346,18 @@ Commands run:
 - `dir Blueprints\skills`
 - `dir Blueprints\agents`
 - `dir Blueprints\agents\_imported`
-- `dir ssffmvp`
-- `dir ssffmvp\Corvus`
+- `dir slops-saloon`
+- `dir slops-saloon\corvus`
 - `dir Direction\Reviews`
 - `tree Blueprints\skills /F`
 - `tree Blueprints\agents /F`
-- `tree ssffmvp\Blueprints /F`
-- `tree ssffmvp\Corvus /F`
+- `tree slops-saloon\Blueprints /F`
+- `tree slops-saloon\corvus /F`
 - `rg --files Blueprints\skills Blueprints\agents`
-- `rg --files ssffmvp\Blueprints ssffmvp\Corvus\Blueprints ssffmvp\Corvus\Direction ssffmvp\Corvus\Brand`
+- `rg --files slops-saloon\Blueprints slops-saloon\corvus\Blueprints slops-saloon\corvus\Direction slops-saloon\corvus\Brand`
 - `rg` searches for path dependencies and imported-agent risk terms
 - `git status --short` at SLOPS root
-- `git status --short` inside `ssffmvp`
+- `git status --short` inside `slops-saloon`
 - A PowerShell conditional read check was used once for optional `Blueprints\agents\AGENT_INDEX.md`; it produced no content because the file was not present.
 - `mkdir Direction\Reviews` was run only because the requested report folder did not exist.
 

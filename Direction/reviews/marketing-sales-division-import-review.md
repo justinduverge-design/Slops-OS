@@ -98,7 +98,7 @@ All Marketing and Sales wrappers should start as `candidate`, Tier 2 max:
 - Read, analyze, draft, and recommend only.
 - May write draft markdown only when explicitly assigned.
 - May write to `Blueprints\prompts\`, `Direction\reviews\`, and `Solutions\reports\`.
-- Must not write to `ssffmvp\src\`, `ssffmvp\frontend\`, `ssffmvp\client\`, `ssffmvp\sql\`, `ssffmvp\scripts\`, `ssffmvp\test\`, `Archive\`, `.env`, `.key`, credentials, secrets, tokens, cookies, production, deployment, Docker, GitHub Actions, auth, payment, or database files.
+- Must not write to `slops-saloon\src\`, `slops-saloon\frontend\`, `slops-saloon\client\`, `slops-saloon\sql\`, `slops-saloon\scripts\`, `slops-saloon\test\`, `Archive\`, `.env`, `.key`, credentials, secrets, tokens, cookies, production, deployment, Docker, GitHub Actions, auth, payment, or database files.
 - Must not access or mutate external accounts, CRMs, ad platforms, social accounts, app stores, analytics dashboards, email tools, contact databases, call recordings, payment systems, or customer-data systems.
 - Must not send emails, DMs, comments, posts, ads, proposals, contracts, invoices, or public statements.
 - Must not make final decisions on brand voice, launch scope, pricing, discounts, revenue forecasts, customer commitments, legal terms, compliance claims, or platform strategy.

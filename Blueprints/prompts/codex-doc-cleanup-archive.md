@@ -2,7 +2,7 @@
 ## Prompt for: Codex
 ## Operation type: File archiving + markdown edit
 ## Date: 2026-05-24
-## Repo: SLOPS root (not ssffmvp)
+## Repo: SLOPS root (not slops-saloon)
 
 ---
 
@@ -12,7 +12,7 @@
 - Do NOT modify app source (src/, frontend/, scripts/, test/)
 - Do NOT deploy or push
 - Do NOT touch Archive/quarantine contents
-- Do NOT modify `ssffmvp/` — it is a separate git repo
+- Do NOT modify `slops-saloon/` — it is a separate git repo
 - Stop and report if anything is ambiguous before proceeding
 
 ---
@@ -66,31 +66,31 @@ If `Archive/` does not exist, create it. If the file already exists in Archive, 
 
 ---
 
-## Step 3: Archive root ssffmvp/handoffs/ folder
+## Step 3: Archive root slops-saloon/handoffs/ folder
 
-The old handoffs location is `ssffmvp/handoffs/`. The canonical location is `ssffmvp/Blueprints/handoffs/`.
+The old handoffs location is `slops-saloon/handoffs/`. The canonical location is `slops-saloon/Blueprints/handoffs/`.
 
-Create `ssffmvp/Archive/handoffs-pre-dbs/` (create the Archive folder inside ssffmvp if needed).
+Create `slops-saloon/Archive/handoffs-pre-dbs/` (create the Archive folder inside slops-saloon if needed).
 
-Move these files from `ssffmvp/handoffs/` into `ssffmvp/Archive/handoffs-pre-dbs/`:
+Move these files from `slops-saloon/handoffs/` into `slops-saloon/Archive/handoffs-pre-dbs/`:
 - `decisions.md`
 - `decision_log.md`
 - `backend-to-frontend.md`
 - `frontend-to-backend.md`
 
-After moving, remove the now-empty `ssffmvp/handoffs/` folder.
+After moving, remove the now-empty `slops-saloon/handoffs/` folder.
 
 ---
 
-## Step 4: Archive root ssffmvp/specs/ folder
+## Step 4: Archive root slops-saloon/specs/ folder
 
-The old specs location is `ssffmvp/specs/`. The canonical location is `ssffmvp/Blueprints/specs/`.
+The old specs location is `slops-saloon/specs/`. The canonical location is `slops-saloon/Blueprints/specs/`.
 
-Create `ssffmvp/Archive/specs-pre-dbs/` (create folder if needed).
+Create `slops-saloon/Archive/specs-pre-dbs/` (create folder if needed).
 
-Move the entire `ssffmvp/specs/` directory tree into `ssffmvp/Archive/specs-pre-dbs/`. This includes all numbered spec folders (000–005) and their contents.
+Move the entire `slops-saloon/specs/` directory tree into `slops-saloon/Archive/specs-pre-dbs/`. This includes all numbered spec folders (000–005) and their contents.
 
-After moving, remove the now-empty `ssffmvp/specs/` folder.
+After moving, remove the now-empty `slops-saloon/specs/` folder.
 
 ---
 
@@ -99,10 +99,10 @@ After moving, remove the now-empty `ssffmvp/specs/` folder.
 Confirm:
 - [ ] `Direction/context.md` now contains "Universal AI Rules" section
 - [ ] `Direction/global-context.md` no longer exists (moved to Archive)
-- [ ] `ssffmvp/handoffs/` folder no longer exists (contents in Archive)
-- [ ] `ssffmvp/specs/` folder no longer exists (contents in Archive)
-- [ ] `ssffmvp/Blueprints/handoffs/` is untouched
-- [ ] `ssffmvp/Blueprints/specs/` is untouched
+- [ ] `slops-saloon/handoffs/` folder no longer exists (contents in Archive)
+- [ ] `slops-saloon/specs/` folder no longer exists (contents in Archive)
+- [ ] `slops-saloon/Blueprints/handoffs/` is untouched
+- [ ] `slops-saloon/Blueprints/specs/` is untouched
 
 Report all files moved or modified.
 
@@ -111,7 +111,7 @@ Report all files moved or modified.
 ## Do NOT
 
 - Do not delete files — move them to Archive only
-- Do not touch `ssffmvp/Blueprints/handoffs/` or `ssffmvp/Blueprints/specs/`
+- Do not touch `slops-saloon/Blueprints/handoffs/` or `slops-saloon/Blueprints/specs/`
 - Do not push or deploy
 - Do not touch `.env`, secrets, app source, or production config
 - Do not modify `Archive/quarantine/`

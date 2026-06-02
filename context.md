@@ -2,110 +2,85 @@
 
 ## Purpose
 
-This is the compatibility entry point for agents working in the SLOPS workspace.
+This is the root context entry point for agents working anywhere inside the SLOPS workspace.
 
-The fuller live operating context lives at:
+Use this file to choose the correct layer before opening project files.
+
+## Canonical Layer Route
 
 ```text
-Direction\context.md
+C:\Users\JDuve\OneDrive\Desktop\SLOPS
+  slops-saloon
+    corvus
 ```
 
-Use this root file first when a tool or agent expects `context.md` at the workspace root, then follow the read-first list below.
+## Layers
 
-## Current Workspace
+- Layer 0 - SLOPS OS: `C:\Users\JDuve\OneDrive\Desktop\SLOPS`
+- Layer 1 - Slops Saloon division: `C:\Users\JDuve\OneDrive\Desktop\SLOPS\slops-saloon`
+- Layer 2 - Corvus product repo: `C:\Users\JDuve\OneDrive\Desktop\SLOPS\slops-saloon\corvus`
 
-SLOPS is Justin's company operating system for Slops Saloon, `ssffmvp`, and Corvus.
+## Current Truth
 
-- `C:\Users\JDuve\OneDrive\Desktop\SLOPS` is the SLOPS OS layer.
-- `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp` is the active app repo.
-- Corvus is the fantasy football product inside `ssffmvp`.
+- SLOPS is the company operating system.
+- Slops Saloon is the sports, music, and arts division.
+- Corvus is the active Fantasy Football MVP product.
+- Corvus is the active git repo for app/product work.
+- The old `Corvus/` subfolder inside the product repo is retired.
+- The Oracle checkout path is `~/corvus`.
+- The GitHub repo is `justinduverge-design/corvus`.
 
-## Read First
+## Latest Corvus Resume Point — 2026-05-27
+
+- Backend-safe frontend handoff requests 13-18 were worked locally in `slops-saloon/corvus/`.
+- `npm test` passes locally with 216/216 backend tests.
+- Live Omen now gates subscribed users with usable Yahoo, Sleeper, or ESPN league context as ready.
+- `GET /api/system/current-week` and read-only `GET /api/stripe/prices` exist locally.
+- Legacy compat routes listed by frontend now return explicit `410 legacy_route_retired` responses with canonical hints where available.
+- Supabase waitlist and subscription date-column SQL is prepared in the Corvus SQL file, but no Supabase staging/prod migration has been applied.
+- Next production-sensitive step requires Justin approval: apply prepared Supabase SQL to staging, verify, then production.
+
+## Read First By Task
 
 For SLOPS OS work:
 
 1. `DBS_INDEX.md`
-2. `Direction\context.md`
-3. `Direction\roadmap.md`
-4. `Blueprints\skills\README.md`
-5. `Blueprints\skills\SKILL_ROUTING.md`
-6. `Blueprints\agents\AGENT_INDEX.md`
+2. `AGENTS.md`
+3. `CLAUDE.md`
+4. `Direction/context.md`
+5. `Direction/roadmap.md`
+6. `Blueprints/skills/README.md`
+7. `Blueprints/skills/SKILL_ROUTING.md`
 
-For app/backend work:
+For Slops Saloon division work:
 
-1. `ssffmvp\Direction\context.md`
-2. `ssffmvp\Blueprints\handoffs\frontend-to-backend.md`
-3. `ssffmvp\Blueprints\handoffs\backend-to-frontend.md`
-4. `ssffmvp\Blueprints\handoffs\decisions.md`
+1. `slops-saloon/context.md`
+2. `slops-saloon/DBS_INDEX.md`
+3. `slops-saloon/AGENTS.md`
+4. `slops-saloon/CLAUDE.md`
+5. `slops-saloon/Direction/context.md`
+6. `slops-saloon/Direction/roadmap.md`
 
-## Live Context vs Reference Material
+For Corvus product work:
 
-Current operating truth belongs in:
+1. `slops-saloon/corvus/DBS_INDEX.md`
+2. `slops-saloon/corvus/AGENTS.md`
+3. `slops-saloon/corvus/CLAUDE.md`
+4. `slops-saloon/corvus/Direction/context.md`
+5. `slops-saloon/corvus/Direction/current_sprint.md`
+6. `slops-saloon/corvus/Blueprints/handoffs/frontend-to-backend.md`
+7. `slops-saloon/corvus/Blueprints/handoffs/backend-to-frontend.md`
 
-- `Direction\`
-- `Blueprints\`
-- `ssffmvp\Direction\`
-- `ssffmvp\Blueprints\`
-- `ssffmvp\Corvus\`
+## Routing Rule
 
-Reference, imported, stale, or parked material is not authoritative by default:
+If the task touches app code, backend, frontend, tests, SQL, Docker, deployment, package files, product handoffs, product prompts, or Corvus product decisions, work in `slops-saloon/corvus/`.
 
-- `_imported`
-- `_archive`
-- `_drafts`
-- `Archive\`
-- `Archive\quarantine`
-- `References\`
+If the task is about the Slops Saloon division or future sibling products, work in `slops-saloon/`.
 
-Do not treat imported agents, archived notes, or old project copies as active authority unless Justin explicitly says so.
+If the task is about reusable skills, agents, operating doctrine, or cross-division context, work at the SLOPS root.
 
 ## Safety Boundary
 
-Documentation cleanup may update markdown files.
+Do not touch secrets, `.env`, credentials, cookies, production infrastructure, DNS, SSL, Nginx, databases, package files, app source, or deployment config unless Justin explicitly approves that exact work.
 
-Do not modify app source, package files, SQL, migrations, tests, deployment config, `.env`, secrets, cookies, credentials, production settings, `.git`, `node_modules`, or active implementation assets without explicit approval.
-
-## Active Skills and Agents
-
-SLOPS-authored skills live at:
-
-```text
-Blueprints\skills
-```
-
-Resolve skills through:
-
-```text
-Blueprints\skills\README.md
-Blueprints\skills\SKILL_ROUTING.md
-```
-
-Agent authority lives at:
-
-```text
-Blueprints\agents\AGENT_INDEX.md
-```
-
-Division folders, imported files, and wrapper files do not grant authority by themselves.
-
-## Current Documentation Task Notes
-
-Recent work created and routed these active SLOPS skills:
-
-- `agent-wrapper-generator`
-- `agent-index-diff-builder`
-- `rbac-risk-review`
-- `workflow-tree-spec`
-- `security-privacy-evidence`
-
-Recent work also created candidate agent wrappers under `Blueprints\agents\<division>\`. Those wrappers are not active unless indexed and approved through `AGENT_INDEX.md`.
-
-## Next Safe Step
-
-For future documentation cleanup, start by deciding the DBS layer:
-
-- Direction for current decisions, context, roadmap, and reviews.
-- Blueprints for reusable skills, agents, prompts, specs, templates, and handoffs.
-- References for source material and research.
-- Solutions for finished outputs and reports.
-- Archive for superseded, parked, or quarantined material.
+Do not treat archive, imported agents, old project copies, or historical handoffs as active authority unless Justin explicitly says so.

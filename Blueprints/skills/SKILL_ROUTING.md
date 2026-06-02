@@ -38,21 +38,21 @@ Prompts are runnable task instructions.
 
 ## DBS Layer Model
 
-SLOPS uses three operating layers.
+SLOPS uses three operating layers. This matches the company structure: a parent company, a subsidiary, and the subsidiary's first app. The layer numbers here are canonical and match `context.md` and the root `DBS_INDEX.md`.
 
-Layer alias note: `0-OS`, `1-ssffmvp`, and `2-Corvus` are the skill-routing aliases for the same layers named `Layer 1`, `Layer 2`, and `Layer 3` in the root `DBS_INDEX.md`.
-
-| Layer | Name | Meaning | Typical Root |
-|---|---|---|---|
-| `0-OS` | Slops Saloon | Startup-level operating system, reusable doctrine, global skills, global agents, founder context. | `C:\Users\JDuve\OneDrive\Desktop\SLOPS` |
-| `1-ssffmvp` | First Subsidiary | Subsidiary/app-level strategy, product docs, app-wide prompts, app agents, and implementation context. | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp` |
-| `2-Corvus` | First Project | Corvus-specific runtime logic, fantasy football agent architecture, project implementation details. | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Corvus` or the current Corvus project folder |
+| Layer | Name | Org Role | Meaning | Typical Root |
+|---|---|---|---|---|
+| Layer 0 | SLOPS | Parent company / operating system | Company-level operating doctrine, reusable skills, reusable agents, cross-division handoffs, founder context. Everything below inherits from here. | `C:\Users\JDuve\OneDrive\Desktop\SLOPS` |
+| Layer 1 | Slops Saloon | Subsidiary | The subsidiary that builds fantasy sports apps. Division strategy, product portfolio, brand/naming standards, future product slots. No app implementation. | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\slops-saloon` |
+| Layer 2 | Corvus | First app | The first app shipped by Slops Saloon. App source, backend, frontend, tests, Docker/deploy, product specs, handoffs, prompts, and product runtime logic. | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\slops-saloon\corvus` |
 
 Use the highest reusable layer that is safe.
 
-Do not place project-specific runtime instructions in `0-OS` unless Justin explicitly promotes them.
+Do not place app-specific runtime instructions in Layer 0 (SLOPS) unless Justin explicitly promotes them.
 
-Do not place reusable startup doctrine inside a project folder unless it is only an implementation copy.
+Do not place reusable company doctrine inside a subsidiary or app folder unless it is only an implementation copy.
+
+Do not place app implementation work in Layer 1 (Slops Saloon). The division layer stays lean.
 
 ## Skill / Agent / Prompt Split
 
@@ -68,19 +68,22 @@ Do not place reusable startup doctrine inside a project folder unless it is only
 
 | Skill | Default Agent | Layer | Purpose |
 |---|---|---|---|
-| `slops-context-markdown` | Claude first, Codex if writing files | `0-OS` | Create, update, normalize, and route DBS markdown context files. |
-| `slops-prompt-generator` | Claude first, Codex if writing files | `0-OS` | Convert audits, handoffs, specs, contracts, and context into concrete runnable prompts. |
-| `slops-skill-author` | Claude first, Codex if writing files | `0-OS` | Create, critique, normalize, and improve SLOPS-authored skill markdown files. |
-| `slops-agent-author` | Claude first, Codex if writing files | `0-OS` | Create, critique, normalize, and improve SLOPS agent role files using RBAC and least privilege. |
-| `slops-onboarding-agent` | Claude first, Codex if writing files | `0-OS` | Review imported agent divisions before promotion, classify candidates, flag RBAC risk, and prepare wrapper handoffs for `slops-agent-author`. |
-| `agent-wrapper-generator` | Claude first, Codex if writing files | `0-OS` | Generate least-privilege SLOPS agent wrapper files from approved review memos or explicit candidate selections. |
-| `agent-index-diff-builder` | Claude first, Codex if writing files | `0-OS` | Build proposed `AGENT_INDEX.md` additions or diffs from wrapper files without applying them. |
-| `rbac-risk-review` | Claude first, Codex if writing files | `0-OS` | Review agents, skills, prompts, plans, and proposed changes for RBAC, overlap, tool-tier, and high-risk authority concerns. |
-| `workflow-tree-spec` | Claude first, Codex if writing files | `0-OS` or project layer when scoped | Produce workflow-tree specs with happy paths, branches, failure states, recovery paths, and observable state contracts. |
-| `security-privacy-evidence` | Claude first, Codex if writing files | `0-OS` or project layer when scoped | Maintain security/privacy evidence notes, control mappings, data classification, consent boundaries, and approval records. |
-| `command-bridge-generator` | Claude first, Codex if writing files | `0-OS` | Generate approved Claude and Codex command-bridge shim files from `SKILL_ROUTING.md` and `AGENT_INDEX.md`. |
-| `pre-build-research` | Claude / ChatGPT research first, Codex later | `0-OS` or project layer when scoped | Research external APIs, data sources, and integrations before any build prompt. |
-| `clean-up-checkpoint` | Claude first, Codex if writing files | `0-OS` | Stop new work and create a rate-limit-safe checkpoint with next prompt. |
+| `slops-context-markdown` | Claude first, Codex if writing files | `Layer 0` | Create, update, normalize, and route DBS markdown context files. |
+| `design-md-author` | Claude first, Codex if writing files | `Layer 0` | Create, critique, normalize, and improve SLOPS `design.md` files from the canonical design template without editing app source or granting design-agent authority. |
+| `slops-prompt-generator` | Claude first, Codex if writing files | `Layer 0` | Convert audits, handoffs, specs, contracts, and context into concrete runnable prompts. |
+| `slops-skill-author` | Claude first, Codex if writing files | `Layer 0` | Create, critique, normalize, and improve SLOPS-authored skill markdown files. |
+| `slops-agent-author` | Claude first, Codex if writing files | `Layer 0` | Create, critique, normalize, and improve SLOPS agent role files using RBAC and least privilege. |
+| `slops-onboarding-agent` | Claude first, Codex if writing files | `Layer 0` | Review imported agent divisions before promotion, classify candidates, flag RBAC risk, and prepare wrapper handoffs for `slops-agent-author`. |
+| `agent-wrapper-generator` | Claude first, Codex if writing files | `Layer 0` | Generate least-privilege SLOPS agent wrapper files from approved review memos or explicit candidate selections. |
+| `agent-index-diff-builder` | Claude first, Codex if writing files | `Layer 0` | Build proposed `AGENT_INDEX.md` additions or diffs from wrapper files without applying them. |
+| `rbac-risk-review` | Claude first, Codex if writing files | `Layer 0` | Review agents, skills, prompts, plans, and proposed changes for RBAC, overlap, tool-tier, and high-risk authority concerns. |
+| `workflow-tree-spec` | Claude first, Codex if writing files | `Layer 0` or project layer when scoped | Produce workflow-tree specs with happy paths, branches, failure states, recovery paths, and observable state contracts. |
+| `security-privacy-evidence` | Claude first, Codex if writing files | `Layer 0` or project layer when scoped | Maintain security/privacy evidence notes, control mappings, data classification, consent boundaries, and approval records. |
+| `command-bridge-generator` | Claude first, Codex if writing files | `Layer 0` | Generate approved Claude and Codex command-bridge shim files from `SKILL_ROUTING.md` and `AGENT_INDEX.md`. |
+| `pre-build-research` | Claude / ChatGPT research first, Codex later | `Layer 0` or project layer when scoped | Research external APIs, data sources, and integrations before any build prompt. |
+| `clean-up-checkpoint` | Claude first, Codex if writing files | `Layer 0` | Stop new work and create a rate-limit-safe checkpoint with next prompt. |
+| `dbs-research-to-architecture-router` | Claude first, Codex if writing files | `Layer 0` | Convert research packets and critic reviews into modular DBS outputs: reference patterns, reviews, decisions, specs, skill drafts, and handoff prompts. |
+| `slops-markdown-authoring` | Claude first, Codex if writing files | `Layer 0` | Create, route, prune, and validate SLOPS Markdown files across DBS — operating packages, decisions, reviews, specs, prompts, patterns, handoffs, and lightweight skills. |
 
 ## Analytical Skills
 
@@ -228,7 +231,7 @@ Claude should be used when the task requires reasoning, planning, review, docume
   - deciding what gets cut
   - challenging drift
   - turning instinct into rules
-  - deciding whether a file belongs at `0-OS`, `1-ssffmvp`, or `2-Corvus`
+  - deciding whether a file belongs at `Layer 0` (SLOPS), `Layer 1` (Slops Saloon), or `Layer 2` (Corvus)
 
 ## Execution Skills
 
@@ -536,3 +539,11 @@ Use Codex for implementation and verification.
 Start with Claude.
 
 Do not let rebrand exploration interrupt launch execution.
+
+### Design Documentation
+
+Start with `design-md-author` when creating or reviewing `design.md` files.
+
+Use `slops-context-markdown` for general DBS cleanup.
+
+Use `slops-prompt-generator` only after the design direction is approved and a runnable implementation prompt is needed.

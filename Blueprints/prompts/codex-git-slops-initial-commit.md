@@ -13,14 +13,14 @@ The SLOPS root repo is on branch `master` with no commits. All DBS OS files are
 untracked. This prompt stages the full DBS OS foundation and creates the first
 commit.
 
-`ssffmvp/` is a nested git repo and must be excluded from SLOPS root tracking.
+`slops-saloon/` is a nested git repo and must be excluded from SLOPS root tracking.
 It is not yet in `.gitignore` — that must be fixed first.
 
 ---
 
 ## Scope Constraints
 
-- Do NOT touch any files inside `ssffmvp/`
+- Do NOT touch any files inside `slops-saloon/`
 - Do NOT open or print any `.env`, `.key`, secrets, or credential files
 - Do NOT run `git push` — commit only
 - Do NOT stage `Archive/quarantine/` (already gitignored — verify this is working)
@@ -39,17 +39,17 @@ git log --oneline -5
 Confirm:
 - Branch is `master`
 - No commits yet
-- `ssffmvp/` appears as untracked
+- `slops-saloon/` appears as untracked
 
 ---
 
-## Step 2: Add `ssffmvp/` to `.gitignore`
+## Step 2: Add `slops-saloon/` to `.gitignore`
 
 Edit `.gitignore`. Add the following block at the bottom:
 
 ```
-# ssffmvp is a separate git repo — do not track from SLOPS root
-ssffmvp/
+# slops-saloon is a separate git repo — do not track from SLOPS root
+slops-saloon/
 
 # Codex-generated artifact backups — do not track
 Solutions/.codex-artifacts/
@@ -70,7 +70,7 @@ git add -n -A
 ```
 
 Review the output. Confirm:
-- `ssffmvp/` is NOT listed
+- `slops-saloon/` is NOT listed
 - `Archive/quarantine/` is NOT listed
 - `Solutions/.codex-artifacts/` is NOT listed
 - `context_rec.md` is NOT listed
@@ -102,7 +102,7 @@ git add context.md
 git status
 ```
 
-Confirm `ssffmvp/` is not staged. Confirm no secrets.
+Confirm `slops-saloon/` is not staged. Confirm no secrets.
 
 ---
 
@@ -134,13 +134,13 @@ git status
 
 Expected:
 - One commit on master
-- Working tree clean (except `ssffmvp/` which is now gitignored)
+- Working tree clean (except `slops-saloon/` which is now gitignored)
 
 ---
 
 ## Completion Checklist
 
-- [ ] `ssffmvp/` added to `.gitignore`
+- [ ] `slops-saloon/` added to `.gitignore`
 - [ ] Dry-run confirmed no secrets or excluded folders staged
 - [ ] All DBS OS files staged
 - [ ] Commit created on `master`
@@ -152,6 +152,6 @@ Expected:
 ## Do NOT
 
 - Do not `git push`
-- Do not stage anything inside `ssffmvp/`
+- Do not stage anything inside `slops-saloon/`
 - Do not stage `Archive/quarantine/`
 - Do not run any commands outside of git and file editing
