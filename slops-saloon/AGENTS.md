@@ -50,6 +50,23 @@ If the task is about Corvus execution, start in:
 SLOPS/slops-saloon/corvus/
 ```
 
+### Build loop route
+
+```text
+For Corvus execution, use the Corvus loop:
+corvus/Direction/agent_inbox.md
+corvus/Blueprints/prompts/HOW-TO-RUN-THE-LOOP.md
+corvus/Blueprints/prompts/kickoff-backend-codex.md
+corvus/Blueprints/prompts/kickoff-frontend-claude.md
+corvus/Blueprints/definition-of-done.md
+```
+
+For future Slops Saloon products, copy the reusable pattern from:
+
+```text
+Blueprints/prompts/agent-build-loop-template.md
+```
+
 ### Division rule
 
 ```text

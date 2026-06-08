@@ -65,3 +65,15 @@ See:
 - `corvus/Direction/current_sprint.md`
 - `corvus/Direction/roadmap.md`
 - `corvus/Blueprints/handoffs/`
+
+## Pivot — 2026-06-06
+
+Corvus go-to-market and the division's near-term shape are now decided.
+
+- **Year 1: Corvus is free for everyone, all platforms** (incl. draft assistant). Goal is adoption + feedback, not revenue.
+- **Year 2: monetize the draft assistant** as the paid anchor — **Sleeper-first** (Yahoo only if Yahoo grants written commercial permission; ESPN stays free/best-effort). Yahoo/ESPN cannot be charged on under current API terms.
+- **Billing: web-only** (Stripe on the website; the mobile app is a companion).
+- **Entity: a Connecticut LLC** is being formed; required before Stripe live + payouts.
+- **A second Slops-sibling business (local web/app services)** is acknowledged at Layer 0 as a *future* division — not built here, not now.
+
+Full business foundation (entity, Stripe/tax, ToS/Privacy, platform terms, pricing): `Direction/business-launch-foundation.md`.

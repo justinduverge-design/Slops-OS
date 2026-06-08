@@ -170,7 +170,7 @@ Read the file first. Append a new section at the end:
 
 ## Layer 2 — Corvus
 
-### File 4: `Corvus/Direction/current_sprint.md`
+### File 4: `slops-saloon/corvus/Direction/current_sprint.md`
 
 Rewrite the entire file. Replace with:
 
@@ -233,7 +233,7 @@ Post-deploy tasks: Stripe webhook registration and load test.
 
 ---
 
-### File 5: `Corvus/Direction/roadmap.md`
+### File 5: `slops-saloon/corvus/Direction/roadmap.md`
 
 Rewrite the entire file. Replace with:
 
@@ -290,7 +290,7 @@ Platform breadth and feature depth after post-launch polish is stable.
 
 ---
 
-### File 6: `Corvus/Direction/decision_log.md`
+### File 6: `slops-saloon/corvus/Direction/decision_log.md`
 
 Read the file first. Append a new section at the end:
 
@@ -324,9 +324,9 @@ Read the file first. Append a new section at the end:
 - [ ] `slops-saloon/Direction/current_sprint.md` — rewritten as "Slops Saloon Current Sprint", deploy complete reflected
 - [ ] `slops-saloon/Direction/roadmap.md` — rewritten as "Slops Saloon Roadmap", post-deploy framing
 - [ ] `slops-saloon/Direction/decision_log.md` — deploy decisions appended
-- [ ] `Corvus/Direction/current_sprint.md` — rewritten, all items updated
-- [ ] `Corvus/Direction/roadmap.md` — rewritten, Now/Next/Later updated
-- [ ] `Corvus/Direction/decision_log.md` — deploy decisions appended
+- [ ] `slops-saloon/corvus/Direction/current_sprint.md` — rewritten, all items updated
+- [ ] `slops-saloon/corvus/Direction/roadmap.md` — rewritten, Now/Next/Later updated
+- [ ] `slops-saloon/corvus/Direction/decision_log.md` — deploy decisions appended
 - [ ] No source code, secrets, or deployment files touched
 - [ ] Report all files modified
 
