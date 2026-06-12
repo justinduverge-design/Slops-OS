@@ -97,6 +97,7 @@ Do not place app implementation work in Layer 1 (Slops Saloon). The division lay
 | `slops-retro` | Claude writes doctrine | `Layer 0` (writes lessons + proposes artifacts) | Turn a cycle's lessons into decision_log entries, doctrine updates, and proposed new skills. The compounding step. Replaces learn + retro. |
 | `slops-investigate` | Claude diagnoses; fix via loop | `Layer 0` (read-only on prod) | Reproduce -> isolate -> diagnose -> propose fix (as a loop item) -> verification plan. No hot-patches. Replaces investigate. |
 | `slops-verify` | Claude verifies via driver | `Layer 0` (runs against the app) | Functional/real-account QA via the run-slops-saloon driver; states, mock/live, no cookie logging. Replaces browse/qa/qa-only. |
+| `slops-graphify` | Claude orchestrates; Justin runs install/runs | `Layer 0` (graphs across L0↔L2) | Wrapper around the external graphify tool: build one cross-layer knowledge graph so SLOPS OS (L0) and Corvus (L2) see each other. Detects-not-installs; output routed to `References/graphify/`. Net-new capability, not a replacement. |
 
 ## Analytical Skills
 
@@ -552,6 +553,12 @@ Use Codex for implementation and verification.
 Start with Claude.
 
 Do not let rebrand exploration interrupt launch execution.
+
+### Knowledge Graph / Cross-Layer Map
+
+Start with `slops-graphify` when the request is to map how things connect, build a knowledge graph, see Corvus from SLOPS OS (or vice versa), or cut re-anchoring cost with a persistent map.
+
+graphify is an external tool: detect-not-install. Justin runs the install; output routes to `References/graphify/`.
 
 ### Design Documentation
 

@@ -35,6 +35,14 @@ When you ask "what skill or playbook handles X?" or "what should we build next?"
 | 12 | **Learn** — retro → memory/decision_log | `slops-retro` | skill | have |
 | 13 | **Scale** — scaffold the next product | `app-scaffold` template, `provider-adapter-template` | template | have |
 
+## Auxiliary OS capabilities
+
+These are net-new SLOPS utilities that support the lifecycle but do not replace a specific build phase.
+
+| Capability | Process artifact | Type | Status | Notes |
+|---|---|---|---|---|
+| **Knowledge graph / cross-layer map** | `slops-graphify` | wrapper skill | have | Wraps external `graphifyy@0.8.36`; builds one L0↔L2 graph, output routed to `References/graphify/`. Two-pass: L0 doctrine, then `--update` on `slops-saloon/corvus` (166 code files a root scan misses). Smoke test passed 2026-06-09. Not a gstack replacement. |
+
 ## Keep / Replace / Drop — gstack migration record
 
 This is the decision record Codex uses to finish its skill migration (its Step 1 inventory feeds here).
@@ -93,8 +101,18 @@ Rules:
   install into both dirs and is governed by the Keep/Replace/Drop record above.
 
 **Shared set (install to both agents now):** `planning-pass`, `slops-git-flow`,
-`slops-quality-baseline`, `slops-ui-ux-audit`, `slops-ux-copy`, `clean-up-checkpoint`, `slops-code-review`, `slops-canary`, `slops-ship`, `slops-retro`, `slops-investigate`, `slops-verify`. Wave 1–3
+`slops-quality-baseline`, `slops-ui-ux-audit`, `slops-ux-copy`, `clean-up-checkpoint`, `slops-code-review`, `slops-canary`, `slops-ship`, `slops-retro`, `slops-investigate`, `slops-verify`, `slops-graphify`. Wave 1–3
 skills join the shared set as each is authored.
+
+## Open follow-ups (2026-06-08)
+
+Tracked here so they survive context switches:
+
+- Commit + re-sync the `slops-git-flow` lessons edit (branch placement, untracked companions, branch repair) to both agent dirs.
+- Verify the kept `codex` skill loads post-quarantine; quarantine `devex-review` + gstack root `SKILL.md` (per the decision above).
+- One-line fix to Codex's repo-inspector **read-list** so it stops reporting missing pre-DBS root `roadmap.md` / `manifesto.md` / `handoffs/` — point it at `Direction/*` + `Blueprints/handoffs/*`.
+- Push/merge the accumulated local branches (Justin's gate) in both the SLOPS and Corvus repos.
+- Product: Corvus **P1 Sleeper full-swap** proof when the test league drafts — see `slops-saloon/corvus/Direction/current_sprint.md` → "Waiting on external".
 
 ## Maintenance
 

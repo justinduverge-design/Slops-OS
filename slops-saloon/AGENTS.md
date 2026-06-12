@@ -4,6 +4,8 @@
 
 Slops Saloon is the sports, music, and arts division of SLOPS OS; Corvus is its only active product.
 
+Slops Saloon and all its division standards — including the Slops OS App Template Spec and the business-launch foundation — are governed by SLOPS OS (Layer 0) doctrine and inherit its layer-discipline and safety boundaries.
+
 ## 2. Tech Stack
 
 - **Primary format:** Markdown DBS files.

@@ -35,7 +35,9 @@ that keeps a known-dirty worktree from leaking unrelated files into a commit.
 ## Steps
 
 1. **Branch per item.** From `main`: `git switch -c {lane}/{p#}-{slug}` (e.g.
-   `backend/p1-sleeper-live`, `frontend/fp1-signal-labels`). One item per branch.
+   `backend/p1-sleeper-live`, `frontend/fp1-signal-labels`). One item per branch — and a feature
+   branch holds **only** its own item; unrelated or non-feature work never accumulates on it (that
+   belongs on `main` or its own branch).
 2. **Build to the bar.** Implement until every applicable `definition-of-done.md` box is true.
 3. **Scoped commit — the core rule.** Stage **explicit paths only**. Never `git add -A`, `git add .`,
    or `git commit -a`. Then hard-verify before committing:
@@ -54,8 +56,11 @@ that keeps a known-dirty worktree from leaking unrelated files into a commit.
    `decision_log.md` entry, and the handoff — go in a **separate, explicitly-staged docs commit**,
    never bundled with code. Sprint / handoff / decision files are often already dirty with unrelated
    in-flight doctrine edits; bundling the whole file sweeps those in. If a doc file can't be cleanly
-   isolated, leave it uncommitted and flag it rather than contaminate the code commit. (Learned on the
-   P1 trial, 2026-06-08.)
+   isolated, leave it uncommitted and flag it rather than contaminate the code commit. A docs commit
+   must also stage the **untracked companion files** its edits reference (new skills/specs/templates) —
+   a doc edit pointing at an uncommitted file is a dangling reference. Each repo commits its own
+   files; a doc that lives in two repos gets one commit per repo. (Learned on the P1 trial +
+   worktree untangle, 2026-06-08.)
 
 ## Output
 
@@ -66,6 +71,8 @@ A scoped commit and a ready PR description — never an executed push or merge.
 - Never `git add -A`/`.`/`-a`. Stage explicit paths and verify the staged set.
 - Never push to `main`, merge, or deploy without Justin's explicit approval.
 - Never force-push or rewrite shared history.
+- Repair a polluted feature branch only via a **verified backup ref** taken *before* any `git reset`,
+  and only while the branch is unpushed — never force-push to fix it.
 - Leave unrelated dirty files in the worktree untouched.
 - Never stage secrets, `.env`, keys, or build artifacts.
 

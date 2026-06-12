@@ -34,10 +34,14 @@ The first provider's adapter defines the de-facto contract; document it so the r
 
 ## 2. Adapter interface
 
-Every provider implements the same function signature:
+Every provider produces the **same normalized output shape**. A uniform entry signature
+(`adapter.fetchAndNormalize(connection, ...)`) is the recommended convention, but the **binding
+contract is the output shape, not the function name** — provider builders may keep their own
+signatures (one takes a `connection`, another takes `leagueId` / `username` / `week`). Keep the shape
+identical; the entry signature can vary.
 
 ```text
-adapter.fetchAndNormalize(connection, ...context) -> NormalizedShape
+buildNormalized(...provider-specific args) -> NormalizedShape   // identical shape for every provider
 ```
 
 - Pure transform + fetch; no engine logic, no product decisions inside the adapter.
