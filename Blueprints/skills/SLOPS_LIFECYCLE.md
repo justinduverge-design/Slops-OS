@@ -45,6 +45,7 @@ These are net-new SLOPS utilities that support the lifecycle but do not replace 
 | **Observability** | `self-hosted-observability-runbook` | package skill | have | Wires self-hosted Sentry, Umami, and log shipping for Slops products; closes the reusable errors/analytics/logging gap without adopting hosted SaaS. |
 | **Legal** | `compliance-by-template` | wrapper skill | have | Drafts launch-required legal documents from approved open-agreements templates; pairs with `slops-legal-spot-check` for triage and still requires Justin/counsel review where flagged. |
 | **Context discipline** | `slops-headroom` | wrapper skill | have | Compresses large tool outputs before they enter model context; install remains Justin-side and local-only network behavior must be audited on first use. |
+| **Ingest** | `slops-markitdown` | wrapper skill | have | Converts local documents and media into Markdown for research/build-loop intake; Azure and paid API passes stay forbidden unless explicitly approved. |
 
 Notes:
 - `slops-legal-spot-check` is active as pre-counsel triage support. It flags legal/compliance risk before publication but does not replace counsel or claim a lifecycle phase.

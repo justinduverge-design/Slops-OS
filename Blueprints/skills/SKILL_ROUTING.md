@@ -104,6 +104,7 @@ Do not place app implementation work in Layer 1 (Slops Saloon). The division lay
 | `compliance-by-template` | Claude (draft), Justin (review), Codex (file writes) | `Layer 0` | Draft launch-required legal docs (ToS, Privacy Policy, DPA, NDA, GDPR/CCPA pages) using open-agreements templates + AI-drafted custom paragraphs. Self-hosted, signable DOCX output. Replaces Termly for the Slops sovereignty rule. |
 | `demo-mode-pre-empty-state` | Claude (pattern review), Codex (fixture generation) | `Layer 0` | Pattern + doctrine for what every Slops product shows before a user has connected real data. Sample dataset, mock/live badge, swap contract, and the "never silently mix demo + real" rule. |
 | `slops-headroom` | Claude (governs invocation), Justin (runs install) | `Layer 0` | Compress tool outputs, logs, RAG chunks, and large file reads before they hit the LLM. 60-95% token reduction, local-only, MCP-native. Wraps chopratejas/headroom. |
+| `slops-markitdown` | Claude (plans), Codex (runs conversion) | `Layer 0` | Convert PDF/PPTX/DOCX/XLSX/HTML/audio/images/EPUB → Markdown for LLM consumption. Wraps microsoft/markitdown. Local-only by default; Azure CU and Doc Intelligence forbidden by sovereignty rule. |
 
 ## Analytical Skills
 
