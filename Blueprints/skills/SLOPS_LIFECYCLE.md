@@ -42,6 +42,7 @@ These are net-new SLOPS utilities that support the lifecycle but do not replace 
 | Capability | Process artifact | Type | Status | Notes |
 |---|---|---|---|---|
 | **Knowledge graph / cross-layer map** | `slops-graphify` | wrapper skill | have | Wraps external `graphifyy@0.8.36`; builds one L0↔L2 graph, output routed to `References/graphify/`. Two-pass: L0 doctrine, then `--update` on `slops-saloon/corvus` (166 code files a root scan misses). Smoke test passed 2026-06-09. Not a gstack replacement. |
+| **Observability** | `self-hosted-observability-runbook` | package skill | have | Wires self-hosted Sentry, Umami, and log shipping for Slops products; closes the reusable errors/analytics/logging gap without adopting hosted SaaS. |
 
 Notes:
 - `slops-legal-spot-check` is active as pre-counsel triage support. It flags legal/compliance risk before publication but does not replace counsel or claim a lifecycle phase.

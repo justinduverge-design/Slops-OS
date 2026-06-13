@@ -100,6 +100,7 @@ Do not place app implementation work in Layer 1 (Slops Saloon). The division lay
 | `slops-graphify` | Claude orchestrates; Justin runs install/runs | `Layer 0` (graphs across L0↔L2) | Wrapper around the external graphify tool: build one cross-layer knowledge graph so SLOPS OS (L0) and Corvus (L2) see each other. Detects-not-installs; output routed to `References/graphify/`. Net-new capability, not a replacement. |
 | `slops-legal-spot-check` | Claude | `Layer 0` | Pre-counsel triage on a draft document, copy, or product behavior — flag compliance risk before it ships. Converted from agent support-legal-compliance-checker. |
 | `mobile-first-qa-playbook` | Claude (audit), Codex (fixes via the loop) | `Layer 0` | Phone-first QA sweep — iOS Safari + Android Chrome viewport matrix, touch targets, safe-area insets, keyboard avoidance, scroll lock, share sheet, motion-reduce. Severity-ranked findings. Closes Corvus launch gap #8 (mobile blocker). |
+| `self-hosted-observability-runbook` | Claude first, Codex if writing files or running install commands | `Layer 0` | Wire self-hosted observability (sentry-self-hosted + Umami + Vector log shipping) on KVM1 for any Slops product. Replaces SaaS Sentry/Plausible/Datadog. Closes Corvus launch gaps #10 (no error monitoring) and #14 (no analytics). |
 
 ## Analytical Skills
 
