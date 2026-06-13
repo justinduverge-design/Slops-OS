@@ -496,6 +496,7 @@ When unsure, start with Claude.
 |---|---|---|
 | `baseline math \| nflverse \| proprietary math \| ADP math \| Omen math` | `Blueprints/playbooks/proprietary-math-stack-playbook.md` | Approved doctrine: nflverse owns baseline math; Slops owns the opinion layer. |
 | `STRATEGY.md \| product strategy anchor` | `Blueprints/patterns/STRATEGY-md-pattern.md` | Reusable product strategy anchor pattern; not an active skill. |
+| `slops-graphify v2 \| Understand-Anything \| graphify smoke test` | `Blueprints/skills/_proposals/slops-graphify-v2-smoke-test.md` | upstream swap candidate; do not act on without Justin running the side-by-side smoke test first. |
 
 ### Auth, Payment, Secrets, Cookies, or User Data
 
