@@ -492,6 +492,10 @@ When unsure, start with Claude.
 
 ## Special Routing Rules
 
+| Trigger phrase | Route | Note |
+|---|---|---|
+| `baseline math \| nflverse \| proprietary math \| ADP math \| Omen math` | `Blueprints/playbooks/proprietary-math-stack-playbook.md` | Approved doctrine: nflverse owns baseline math; Slops owns the opinion layer. |
+
 ### Auth, Payment, Secrets, Cookies, or User Data
 
 Start with Claude.
