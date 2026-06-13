@@ -27,7 +27,7 @@ When you ask "what skill or playbook handles X?" or "what should we build next?"
 | 4 | **Version** — scoped branch/commit/PR | `slops-git-flow` | skill | have |
 | 5 | **Review** — code + security before merge | `slops-code-review` | skill | have |
 | 6 | **Quality** — health gate that ratchets | `slops-quality-baseline` | skill | have |
-| 7 | **Design QA** — UI/UX + copy + mobile fit | `slops-ui-ux-audit`, `slops-ux-copy`, `mobile-first-qa-playbook` | skill | have |
+| 7 | **Design QA** — UI/UX + copy + mobile fit + taste | `slops-ui-ux-audit`, `slops-ux-copy`, `mobile-first-qa-playbook`, `slops-taste` | skill | have |
 | 8 | **Verify** — functional / web / real-account QA | `slops-verify` (wraps `run-slops-saloon`) | skill | have |
 | 9 | **Ship** — land → deploy → cutover | `slops-ship` orchestrator + `app-cutover-playbook`, `vps-hardening-plan`, hostinger runbook | playbook+skill | have |
 | 10 | **Monitor** — post-deploy canary | `slops-canary` | skill | have |

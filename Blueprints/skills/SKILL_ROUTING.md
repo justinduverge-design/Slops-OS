@@ -105,6 +105,7 @@ Do not place app implementation work in Layer 1 (Slops Saloon). The division lay
 | `demo-mode-pre-empty-state` | Claude (pattern review), Codex (fixture generation) | `Layer 0` | Pattern + doctrine for what every Slops product shows before a user has connected real data. Sample dataset, mock/live badge, swap contract, and the "never silently mix demo + real" rule. |
 | `slops-headroom` | Claude (governs invocation), Justin (runs install) | `Layer 0` | Compress tool outputs, logs, RAG chunks, and large file reads before they hit the LLM. 60-95% token reduction, local-only, MCP-native. Wraps chopratejas/headroom. |
 | `slops-markitdown` | Claude (plans), Codex (runs conversion) | `Layer 0` | Convert PDF/PPTX/DOCX/XLSX/HTML/audio/images/EPUB → Markdown for LLM consumption. Wraps microsoft/markitdown. Local-only by default; Azure CU and Doc Intelligence forbidden by sovereignty rule. |
+| `slops-taste` | Claude (selects variant + dials), Codex (applies to frontend) | `Layer 0` | Anti-slop frontend skill. Wraps Leonxlnx/taste-skill — tunable layout/motion/density dials, plus minimalist + soft + brutalist variants. Pairs with slops-design-system-pack and slops-image-prompt. |
 
 ## Analytical Skills
 
