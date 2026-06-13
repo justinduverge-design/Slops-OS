@@ -495,6 +495,7 @@ When unsure, start with Claude.
 | Trigger phrase | Route | Note |
 |---|---|---|
 | `baseline math \| nflverse \| proprietary math \| ADP math \| Omen math` | `Blueprints/playbooks/proprietary-math-stack-playbook.md` | Approved doctrine: nflverse owns baseline math; Slops owns the opinion layer. |
+| `STRATEGY.md \| product strategy anchor` | `Blueprints/patterns/STRATEGY-md-pattern.md` | Reusable product strategy anchor pattern; not an active skill. |
 
 ### Auth, Payment, Secrets, Cookies, or User Data
 
