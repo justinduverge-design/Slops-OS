@@ -10,7 +10,7 @@ version: 0.1.0
 owner: Justin
 ---
 
-# Self-Hosted Observability Runbook (PROPOSAL)
+# Self-Hosted Observability Runbook
 
 ## When to Use
 Wiring observability into a new Slops product, or filling in a missing observability axis (errors, analytics, logs) on an existing one. Default target host is KVM1.
@@ -48,3 +48,4 @@ Stand up and wire three self-hosted services on KVM1 — `sentry-self-hosted` fo
 
 ## Changelog
 - 0.1.0 — initial proposal scaffold (2026-06-11).
+- 0.1.1 — promoted to active 2026-06-12 (commit c5b7af5).

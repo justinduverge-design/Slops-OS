@@ -10,7 +10,7 @@ version: 0.1.0
 owner: Justin
 ---
 
-# SLOPS Legal Spot Check (PROPOSAL)
+# SLOPS Legal Spot Check
 
 ## When to Use
 Before sending a draft to counsel, before publishing copy that makes claims, before shipping a feature that touches user data, payments, gambling, or third-party data rights.
@@ -39,3 +39,4 @@ Triage-only pass over a draft. Flags claims that need substantiation, missing di
 
 ## Changelog
 - 0.1.0 — initial proposal scaffold (2026-06-11), converted from support-legal-compliance-checker agent.
+- 0.1.1 — promoted to active 2026-06-12 (commit fa0223b).

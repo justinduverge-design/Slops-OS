@@ -10,7 +10,7 @@ version: 0.1.0
 owner: Justin
 ---
 
-# Demo Mode Pre-Empty-State (PROPOSAL)
+# Demo Mode Pre-Empty-State
 
 ## When to Use
 Designing any user-facing surface that has a "you haven't connected anything yet" state. Standard at Slops Saloon — every product must declare its demo mode before launch.
@@ -46,3 +46,4 @@ Define a reusable cold-start pattern: a clearly labeled sample dataset that lets
 
 ## Changelog
 - 0.1.0 — initial proposal scaffold (2026-06-11).
+- 0.1.1 — promoted to active 2026-06-12 (commit 8053756).

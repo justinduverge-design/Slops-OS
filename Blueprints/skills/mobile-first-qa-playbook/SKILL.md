@@ -10,7 +10,7 @@ version: 0.1.0
 owner: Justin
 ---
 
-# Mobile-First QA Playbook (PROPOSAL)
+# Mobile-First QA Playbook
 
 ## When to Use
 Before launch, after any layout-touching change, and as a recurring pre-deploy gate for any consumer Slops product. Fantasy sports is phone-first; this audit is non-optional for Slops Saloon products.
@@ -59,3 +59,4 @@ Walk a fixed device matrix (iPhone SE / Pro / Pro Max + a mid-tier Android) thro
 
 ## Changelog
 - 0.1.0 — initial proposal scaffold (2026-06-11).
+- 0.1.1 — promoted to active 2026-06-12 (commit 23574dd).

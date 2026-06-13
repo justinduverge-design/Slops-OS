@@ -11,7 +11,7 @@ version: 0.1.0
 owner: Justin
 ---
 
-# Slops Taste (PROPOSAL)
+# Slops Taste
 
 ## When to Use
 - Generating new frontend UI from scratch (variant: `design-taste-frontend`).
@@ -20,7 +20,7 @@ owner: Justin
 - When `slops-ui-ux-audit` flags "looks AI-generated" findings.
 
 ## Scope
-Wrap taste-skill's portable Agent Skills via the upstream installer. The Slops wrapper picks which variant fits the request and locks the three dials (VARIANCE / MOTION / DENSITY) per-product. Default Slops Saloon dials are documented in `slops-saloon/Brand/brand-system.md` (not edited here).
+Wrap taste-skill's portable Agent Skills via the upstream installer. The Slops wrapper picks which variant fits the request and locks the three dials (VARIANCE / MOTION / DENSITY) per-product. Default Slops Saloon dials live inline in this file under § Default Dials (to be added when the brand-system.md doctrine lands).
 
 ## Preconditions
 - Justin runs: `npx skills add https://github.com/Leonxlnx/taste-skill --skill "design-taste-frontend"` (install boundary).
@@ -48,5 +48,12 @@ Wrap taste-skill's portable Agent Skills via the upstream installer. The Slops w
 - Smoke test: run `design-taste-frontend` against the Corvus dashboard hero; confirm output respects brand palette and passes `slops-ui-ux-audit` baseline.
 - Watch for hard em-dash bans and pre-flight check rules from taste-skill v2.
 
+## Default Dials
+```text
+VARIANCE: medium | MOTION: low | DENSITY: medium
+# placeholder until slops-saloon/Brand/brand-system.md is authored
+```
+
 ## Changelog
 - 0.1.0 — initial proposal (2026-06-11), approved by Justin.
+- 0.1.1 — promoted to active 2026-06-12 (commit 3f421eb).

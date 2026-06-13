@@ -11,7 +11,7 @@ version: 0.1.0
 owner: Justin
 ---
 
-# Slops Headroom (PROPOSAL)
+# Slops Headroom
 
 ## When to Use
 Any time a tool/file/log/RAG result exceeds ~2k tokens before it lands in Claude or Codex context. Especially: graphify outputs, large diff reviews, multi-file Read passes, persisted web-fetch dumps.
@@ -44,3 +44,4 @@ Front the headroom library/proxy/MCP server. Headroom does the work; the wrapper
 
 ## Changelog
 - 0.1.0 — initial proposal (2026-06-11), approved by Justin.
+- 0.1.1 — promoted to active 2026-06-12 (commit 1221894).

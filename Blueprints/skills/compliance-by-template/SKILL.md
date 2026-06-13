@@ -11,7 +11,7 @@ version: 0.1.0
 owner: Justin
 ---
 
-# Compliance-by-Template (PROPOSAL)
+# Compliance-by-Template
 
 ## When to Use
 A Slops product needs launch-required legal documents and does NOT yet warrant paid counsel. Pairs with `slops-legal-spot-check` (triage) and the `legal:*` plugin skills (review-contract, triage-nda).
@@ -50,3 +50,4 @@ Wrap the `open-agreements/open-agreements` repo (MIT, GitHub) as the canonical S
 
 ## Changelog
 - 0.1.0 — initial proposal scaffold (2026-06-11), open-agreements approved as Termly replacement.
+- 0.1.1 — promoted to active 2026-06-12 (commit 52f10e3).
