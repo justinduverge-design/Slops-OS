@@ -33,6 +33,9 @@ Corvus is the only active product right now.
 - Product handoffs: `corvus/Blueprints/handoffs/`
 - Product prompts: `corvus/Blueprints/prompts/`
 - Product specs: `corvus/Blueprints/specs/`
+- Active task slot: `corvus/Direction/agent_inbox.md`
+- Build loop guide: `corvus/Blueprints/prompts/HOW-TO-RUN-THE-LOOP.md`
+- Definition of Done: `corvus/Blueprints/definition-of-done.md`
 
 ## Division Folders
 
@@ -73,17 +76,25 @@ For division-level work:
 6. `Direction/roadmap.md`
 7. `Direction/decision_log.md`
 8. `Blueprints/README.md`
+9. `Blueprints/prompts/agent-build-loop-template.md` when setting up a future product loop
 
 For Corvus product work:
 
 1. `corvus/DBS_INDEX.md`
 2. `corvus/Direction/context.md`
 3. `corvus/Direction/current_sprint.md`
-4. `corvus/Blueprints/handoffs/frontend-to-backend.md`
-5. `corvus/Blueprints/handoffs/backend-to-frontend.md`
+4. `corvus/Direction/agent_inbox.md`
+5. `corvus/Blueprints/prompts/HOW-TO-RUN-THE-LOOP.md`
+6. `corvus/Blueprints/definition-of-done.md`
+7. `corvus/Blueprints/handoffs/frontend-to-backend.md`
+8. `corvus/Blueprints/handoffs/backend-to-frontend.md`
 
 ## Routing Rule
 
 If the work touches backend, frontend, tests, Docker, deploy, package files, SQL, source code, or product handoffs, route to `corvus/`.
 
 If the work is about Slops Saloon as a division or future products under the division, stay in this folder.
+
+If Justin starts a second Slops Saloon product, copy the build loop pattern from
+`Blueprints/prompts/agent-build-loop-template.md` into that product rather than
+sharing Corvus task files.

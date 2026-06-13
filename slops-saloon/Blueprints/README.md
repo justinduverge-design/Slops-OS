@@ -11,6 +11,17 @@ It is intentionally light right now because Corvus is the only active product.
 - Reusable patterns that apply to more than one Slops Saloon product.
 - Future product setup templates.
 
+## Reusable Agent Loop
+
+Use this template when a second Slops Saloon product needs the same Claude/Codex
+task routing pattern:
+
+```text
+Blueprints/prompts/agent-build-loop-template.md
+```
+
+Corvus already has its product-specific loop under `corvus/Blueprints/`.
+
 ## Do Not Use This Folder For
 
 - Corvus product prompts.

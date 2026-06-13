@@ -15,6 +15,8 @@ These are company/OS specs. App-implementation and product specs for Corvus live
 | `design-md.spec.md` | The canonical `design.md` structure and the `design-md-author` workflow. |
 | `app-strategy.spec.md` | App/distribution strategy scope and constraints. |
 | `ux-ui-execution.spec.md` | UX/UI execution standards (spec layer only — no components, no design system, no app code). |
+| `hermes-split.spec.md` | The Local/Cloud Hermes two-agent split: scope, permissions, readiness gates, and the v2 expansion gate. |
+| `kvm2-model-decision-matrix.md` | KVM2 (AI office) hardware budget, model options, Corvus use cases, concurrency strategy, and model change protocol. |
 
 ## Related
 

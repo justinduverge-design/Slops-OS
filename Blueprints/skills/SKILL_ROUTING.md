@@ -24,6 +24,8 @@ Blueprints\agents\agents.md
 
 ## Core Rule
 
+> **Lifecycle map:** `Blueprints/skills/SLOPS_LIFECYCLE.md` maps every build phase to its skill/playbook and status, and holds the gstack keep/replace/drop record. Consult it when choosing what to build or retire.
+
 When unsure, start with Claude.
 
 Claude plans, critiques, structures, and reviews.
@@ -84,6 +86,18 @@ Do not place app implementation work in Layer 1 (Slops Saloon). The division lay
 | `clean-up-checkpoint` | Claude first, Codex if writing files | `Layer 0` | Stop new work and create a rate-limit-safe checkpoint with next prompt. |
 | `dbs-research-to-architecture-router` | Claude first, Codex if writing files | `Layer 0` | Convert research packets and critic reviews into modular DBS outputs: reference patterns, reviews, decisions, specs, skill drafts, and handoff prompts. |
 | `slops-markdown-authoring` | Claude first, Codex if writing files | `Layer 0` | Create, route, prune, and validate SLOPS Markdown files across DBS — operating packages, decisions, reviews, specs, prompts, patterns, handoffs, and lightweight skills. |
+| `planning-pass` | Claude first, Codex if writing files | `Layer 0` (writes into target product queue) | Turn a goal into ordered, buildable backlog items (P#/FP#) in a product's `current_sprint.md`, each with a spec link and explicit done-when; respects dependencies. Plans only — never builds. |
+| `slops-git-flow` | Claude plans, Codex/Justin execute | `Layer 0` (operates on product repo) | One scoped branch + PR per sprint item, explicit-path commits (never `git add -A`), light stacking for blocked items; push/merge gated to Justin. Replaces external stacking tools. |
+| `slops-quality-baseline` | Claude plans, Codex runs checks | `Layer 0` (operates on product repo) | Record code-health signals (tests, audit, build, diff --check) as a ratcheting baseline and gate merges/deploys against it. Replaces external baseline tooling. |
+| `slops-ui-ux-audit` | Claude (frontend) reviews | `Layer 0` (audits product frontend) | Audit screens/components against the AAA framework, `brand-system.md`, and design-system v1 — states, 44px, motion-reduce, ARIA, contrast, token consistency, voice, mock/live. Severity-ranked findings; fixes route through the loop. Replaces `ui-ux-pro-max`. |
+| `slops-ux-copy` | Claude (frontend) writes/reviews | `Layer 0` (product frontend) | Write/review Corvus UX copy (CTAs, states, onboarding) in the brand voice and copy anchors; honest about mock/live. Replaces external ux-copy skills. |
+| `slops-code-review` | Claude reviews; Codex/Justin act | `Layer 0` (reviews product repo) | Pre-merge code + security review (authz, secrets, SY0-701, errors, perf, tests, scope) with P0/P1/P2 verdict. Replaces review + cso. |
+| `slops-canary` | Claude measures; Justin rolls back | `Layer 0` (watches deployed product) | Post-deploy health watch (health/ready, route smoke, error/latency vs baseline) -> pass/hold/rollback tied to the cutover playbook. Replaces canary + landing-report. |
+| `slops-ship` | Claude orchestrates; Justin merges/deploys | `Layer 0` (releases product) | Sequence review -> quality gate -> merge -> deploy -> canary -> close-out; reuses the other skills + cutover playbook. Replaces land-and-deploy/ship/setup-deploy. |
+| `slops-retro` | Claude writes doctrine | `Layer 0` (writes lessons + proposes artifacts) | Turn a cycle's lessons into decision_log entries, doctrine updates, and proposed new skills. The compounding step. Replaces learn + retro. |
+| `slops-investigate` | Claude diagnoses; fix via loop | `Layer 0` (read-only on prod) | Reproduce -> isolate -> diagnose -> propose fix (as a loop item) -> verification plan. No hot-patches. Replaces investigate. |
+| `slops-verify` | Claude verifies via driver | `Layer 0` (runs against the app) | Functional/real-account QA via the run-slops-saloon driver; states, mock/live, no cookie logging. Replaces browse/qa/qa-only. |
+| `slops-graphify` | Claude orchestrates; Justin runs install/runs | `Layer 0` (graphs across L0↔L2) | Wrapper around the external graphify tool: build one cross-layer knowledge graph so SLOPS OS (L0) and Corvus (L2) see each other. Detects-not-installs; output routed to `References/graphify/`. Net-new capability, not a replacement. |
 
 ## Analytical Skills
 
@@ -539,6 +553,12 @@ Use Codex for implementation and verification.
 Start with Claude.
 
 Do not let rebrand exploration interrupt launch execution.
+
+### Knowledge Graph / Cross-Layer Map
+
+Start with `slops-graphify` when the request is to map how things connect, build a knowledge graph, see Corvus from SLOPS OS (or vice versa), or cut re-anchoring cost with a persistent map.
+
+graphify is an external tool: detect-not-install. Justin runs the install; output routes to `References/graphify/`.
 
 ### Design Documentation
 

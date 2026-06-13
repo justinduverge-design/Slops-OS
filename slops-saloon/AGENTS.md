@@ -4,6 +4,8 @@
 
 Slops Saloon is the sports, music, and arts division of SLOPS OS; Corvus is its only active product.
 
+Slops Saloon and all its division standards — including the Slops OS App Template Spec and the business-launch foundation — are governed by SLOPS OS (Layer 0) doctrine and inherit its layer-discipline and safety boundaries.
+
 ## 2. Tech Stack
 
 - **Primary format:** Markdown DBS files.
@@ -48,6 +50,23 @@ Do not run product builds, tests, deploys, migrations, Docker commands, or packa
 ```text
 If the task is about Corvus execution, start in:
 SLOPS/slops-saloon/corvus/
+```
+
+### Build loop route
+
+```text
+For Corvus execution, use the Corvus loop:
+corvus/Direction/agent_inbox.md
+corvus/Blueprints/prompts/HOW-TO-RUN-THE-LOOP.md
+corvus/Blueprints/prompts/kickoff-backend-codex.md
+corvus/Blueprints/prompts/kickoff-frontend-claude.md
+corvus/Blueprints/definition-of-done.md
+```
+
+For future Slops Saloon products, copy the reusable pattern from:
+
+```text
+Blueprints/prompts/agent-build-loop-template.md
 ```
 
 ### Division rule

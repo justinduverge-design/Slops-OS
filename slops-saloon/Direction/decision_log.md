@@ -55,3 +55,13 @@
 - Decide whether Slops Saloon needs division-level brand standards before the second product.
 - **Paid tier name (final):** Pending brand/naming workshop before launch. "Pro" is placeholder only — do not use in user-facing copy.
 - **Manual Omen feasibility:** Pending Codex audit. Codex evaluates data quality ceiling; Justin decides whether Manual Omen ships, ships with limitations, or is deferred.
+
+## Decisions Added 2026-06-06 (Go-to-market + business pivot)
+
+- Corvus is **free for all users on all platforms in Year 1** (adoption/feedback over revenue); the **draft assistant becomes the paid anchor in Year 2**, Sleeper-first.
+- **Yahoo/ESPN cannot be charged on** under current API terms (Yahoo needs prior written commercial permission; ESPN is unofficial/fragile). Paid features gate to Sleeper; Yahoo/ESPN stay free "connect and view."
+- **Billing is web-only** (Stripe), no Apple IAP — avoids the App Store cut and keeps billing in one place.
+- **Entity:** forming a **Connecticut LLC**; CT taxes consumer SaaS at 6.35% (CPA to confirm registration timing).
+- **ToS + Privacy Policy** drafted as attorney-review drafts grounded in the real data model: `corvus/References/docs/legal/`.
+- A **future local web/app services division** is planned at Layer 0, sequenced after Corvus traction. Not a Slops Saloon product.
+- Full record: `Direction/business-launch-foundation.md`.

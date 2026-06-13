@@ -54,6 +54,23 @@ Use this layer for division-level naming, product portfolio decisions, and futur
 
 Use `corvus/` for all current app and product work.
 
+New Claude or Codex chats for Corvus execution should route into:
+
+```text
+corvus/
+```
+
+Then use the Corvus build loop:
+
+```text
+corvus/Direction/agent_inbox.md
+corvus/Blueprints/prompts/HOW-TO-RUN-THE-LOOP.md
+corvus/Blueprints/definition-of-done.md
+```
+
+For future Slops Saloon products, copy the reusable pattern from
+`Blueprints/prompts/agent-build-loop-template.md` into that product.
+
 ## Latest Corvus Status — 2026-05-27
 
 - Corvus remains the only active Slops Saloon product.
@@ -72,7 +89,8 @@ Use `corvus/` for all current app and product work.
 5. `Direction/roadmap.md`
 6. `Direction/decision_log.md`
 7. `Blueprints/README.md`
-8. `corvus/DBS_INDEX.md` when moving into product work
+8. `Blueprints/prompts/agent-build-loop-template.md` when setting up a future product loop
+9. `corvus/DBS_INDEX.md` when moving into product work
 
 ## Safety Boundary
 

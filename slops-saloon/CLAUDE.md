@@ -10,6 +10,7 @@
 - **Routing first:** Decide whether a request is division-level or Corvus-specific before drafting any file change.
 - **Future products:** Park future sports/music/arts product ideas at the division layer unless Justin starts a new product.
 - **Corvus boundary:** Route Corvus product work to `corvus/`; do not duplicate Corvus implementation guidance here.
+- **Build loop routing:** For Corvus execution, send the new chat into `corvus/` and use `corvus/Direction/agent_inbox.md` plus the Corvus kickoff prompts. For future products, reuse `Blueprints/prompts/agent-build-loop-template.md`.
 - **Blueprint restraint:** Do not expand division `Blueprints/` unless the pattern applies across more than one Slops Saloon product.
 - **Permissions:** Ask Justin before recommending cross-layer moves, product edits, deploys, installs, migrations, or production tasks.
 

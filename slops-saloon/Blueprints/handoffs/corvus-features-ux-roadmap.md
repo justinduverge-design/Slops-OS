@@ -20,7 +20,7 @@ Now we build on a polished foundation, not a rough one.
 
 ## Three Features from the Original Prototype to Build Into Corvus
 
-These exist in `client/App.jsx` (the original SSFFMVP app). They are proven in design.
+These exist in `client/App.jsx` (the original Corvus app, formerly named SSFFMVP). They are proven in design.
 They need to be rebuilt in the Corvus frontend (`frontend/src/`) with real backend wiring,
 not mock data.
 

@@ -41,10 +41,10 @@ For `slops-saloon`, prefer:
 - `Blueprints/handoffs/frontend-to-backend.md`
 - `Blueprints/handoffs/decisions.md`
 - `Blueprints/security-privacy.md`
-- `Corvus/README.md`
-- `Corvus/Direction/context.md`
-- `Corvus/Direction/current_sprint.md`
-- `Corvus/Direction/decision_log.md`
+- `slops-saloon/corvus/README.md`
+- `slops-saloon/corvus/Direction/context.md`
+- `slops-saloon/corvus/Direction/current_sprint.md`
+- `slops-saloon/corvus/Direction/decision_log.md`
 - Relevant active specs, playbooks, prompts, and handoffs
 - `probo.yaml` only when security/privacy tracking changed
 
@@ -112,6 +112,17 @@ For security/privacy tracking:
 
 - `Blueprints/security-privacy.md`
 - `probo.yaml` only when adding or updating compliance evidence pointers
+
+## Context Save / Restore
+
+This skill is also the home for saving and restoring working context (it absorbs the former
+`context-save` / `context-restore`).
+
+- **Save:** the checkpoint file *is* the saved context — current state, work completed, files
+  changed, open questions, recommended next step, and the exact next prompt.
+- **Restore:** to resume, read the latest checkpoint
+  (`Blueprints/handoffs/rate-limit-shutdown-checkpoint.md`), then the files it references, then
+  paste its "Exact Next Prompt". Do not start new work before restoring context.
 
 ## Change Log
 
