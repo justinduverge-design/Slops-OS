@@ -1,7 +1,7 @@
 ---
 name: compliance-by-template
 description: Draft launch-required legal docs (ToS, Privacy Policy, DPA, NDA, GDPR/CCPA pages) using open-agreements templates + AI-drafted custom paragraphs. Self-hosted, signable DOCX output. Replaces Termly for the Slops sovereignty rule.
-status: draft
+status: active
 skill_type: wrapper
 layer: 0
 default_agent: Claude (draft), Justin (review), Codex (file writes)
