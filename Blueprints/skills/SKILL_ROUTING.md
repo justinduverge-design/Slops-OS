@@ -98,6 +98,7 @@ Do not place app implementation work in Layer 1 (Slops Saloon). The division lay
 | `slops-investigate` | Claude diagnoses; fix via loop | `Layer 0` (read-only on prod) | Reproduce -> isolate -> diagnose -> propose fix (as a loop item) -> verification plan. No hot-patches. Replaces investigate. |
 | `slops-verify` | Claude verifies via driver | `Layer 0` (runs against the app) | Functional/real-account QA via the run-slops-saloon driver; states, mock/live, no cookie logging. Replaces browse/qa/qa-only. |
 | `slops-graphify` | Claude orchestrates; Justin runs install/runs | `Layer 0` (graphs across L0↔L2) | Wrapper around the external graphify tool: build one cross-layer knowledge graph so SLOPS OS (L0) and Corvus (L2) see each other. Detects-not-installs; output routed to `References/graphify/`. Net-new capability, not a replacement. |
+| `slops-legal-spot-check` | Claude | `Layer 0` | Pre-counsel triage on a draft document, copy, or product behavior — flag compliance risk before it ships. Converted from agent support-legal-compliance-checker. |
 
 ## Analytical Skills
 

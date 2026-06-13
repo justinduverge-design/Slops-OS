@@ -43,6 +43,9 @@ These are net-new SLOPS utilities that support the lifecycle but do not replace 
 |---|---|---|---|---|
 | **Knowledge graph / cross-layer map** | `slops-graphify` | wrapper skill | have | Wraps external `graphifyy@0.8.36`; builds one L0↔L2 graph, output routed to `References/graphify/`. Two-pass: L0 doctrine, then `--update` on `slops-saloon/corvus` (166 code files a root scan misses). Smoke test passed 2026-06-09. Not a gstack replacement. |
 
+Notes:
+- `slops-legal-spot-check` is active as pre-counsel triage support. It flags legal/compliance risk before publication but does not replace counsel or claim a lifecycle phase.
+
 ## Keep / Replace / Drop — gstack migration record
 
 This is the decision record Codex uses to finish its skill migration (its Step 1 inventory feeds here).

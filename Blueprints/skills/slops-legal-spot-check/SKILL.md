@@ -1,7 +1,7 @@
 ---
 name: slops-legal-spot-check
 description: Pre-counsel triage on a draft document, copy, or product behavior — flag compliance risk before it ships. Converted from agent support-legal-compliance-checker.
-status: draft
+status: active
 skill_type: simple
 layer: 0
 default_agent: Claude
