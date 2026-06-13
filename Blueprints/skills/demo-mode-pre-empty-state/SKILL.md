@@ -1,7 +1,7 @@
 ---
 name: demo-mode-pre-empty-state
 description: Pattern + doctrine for what every Slops product shows before a user has connected real data. Sample dataset, mock/live badge, swap contract, and the "never silently mix demo + real" rule.
-status: draft
+status: active
 skill_type: simple
 layer: 0
 default_agent: Claude (pattern review), Codex (fixture generation)

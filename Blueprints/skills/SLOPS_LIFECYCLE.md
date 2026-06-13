@@ -47,6 +47,7 @@ These are net-new SLOPS utilities that support the lifecycle but do not replace 
 
 Notes:
 - `slops-legal-spot-check` is active as pre-counsel triage support. It flags legal/compliance risk before publication but does not replace counsel or claim a lifecycle phase.
+- `demo-mode-pre-empty-state` is active cold-start pattern doctrine. It supports first-run product design and mock/live honesty, but does not replace a lifecycle phase.
 
 ## Keep / Replace / Drop — gstack migration record
 
