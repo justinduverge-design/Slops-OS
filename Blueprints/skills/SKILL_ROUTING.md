@@ -103,6 +103,7 @@ Do not place app implementation work in Layer 1 (Slops Saloon). The division lay
 | `self-hosted-observability-runbook` | Claude first, Codex if writing files or running install commands | `Layer 0` | Wire self-hosted observability (sentry-self-hosted + Umami + Vector log shipping) on KVM1 for any Slops product. Replaces SaaS Sentry/Plausible/Datadog. Closes Corvus launch gaps #10 (no error monitoring) and #14 (no analytics). |
 | `compliance-by-template` | Claude (draft), Justin (review), Codex (file writes) | `Layer 0` | Draft launch-required legal docs (ToS, Privacy Policy, DPA, NDA, GDPR/CCPA pages) using open-agreements templates + AI-drafted custom paragraphs. Self-hosted, signable DOCX output. Replaces Termly for the Slops sovereignty rule. |
 | `demo-mode-pre-empty-state` | Claude (pattern review), Codex (fixture generation) | `Layer 0` | Pattern + doctrine for what every Slops product shows before a user has connected real data. Sample dataset, mock/live badge, swap contract, and the "never silently mix demo + real" rule. |
+| `slops-headroom` | Claude (governs invocation), Justin (runs install) | `Layer 0` | Compress tool outputs, logs, RAG chunks, and large file reads before they hit the LLM. 60-95% token reduction, local-only, MCP-native. Wraps chopratejas/headroom. |
 
 ## Analytical Skills
 
