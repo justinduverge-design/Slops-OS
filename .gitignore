@@ -11,7 +11,11 @@ Archive/quarantine/
 **/.claude/
 .codex/
 worktree-backups/
+graphify-out/
 *.lnk
+
+# OneDrive conflict copies
+*-DESKTOP-*.md
 
 # Legacy app repo path - do not track from SLOPS root if it reappears
 ssffmvp/

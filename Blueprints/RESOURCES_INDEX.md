@@ -41,6 +41,7 @@ Only Justin, Claude, and Codex are first-class agents. Other "agents" in the ind
 ## MCPs / Plugins / Connectors (runtime-discovered)
 
 **Discovery mechanic:** call `ToolSearch` with a keyword. Example: `ToolSearch { query: "slack", max_results: 5 }` returns Slack-related tools across all connected MCP servers. Use `select:` for direct fetch.
+**Runtime caveat:** exact ToolSearch syntax may vary by runtime; use the available tool schema in-session.
 
 **Known plugin namespaces seen in active sessions:**
 

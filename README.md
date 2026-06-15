@@ -1,73 +1,47 @@
-# SLOPS
+# Slops OS
 
-SLOPS is Justin's company operating system.
+## Overview
 
-It holds the context, routing, skills, agents, handoffs, and reusable operating structure for Slops Saloon and its products.
+Slops OS is a modular, zero-budget, AI-orchestrated system designed to build scalable sports platforms, beginning with Slops Saloon.
 
-## Current Layer Route
+The system operates through a structured C-Suite of AI agents governed by a central manifesto and a live execution context.
 
-```text
-C:\Users\JDuve\OneDrive\Desktop\SLOPS
-  slops-saloon
-    corvus
-```
+---
 
-## Start Here
+## Core Layers
 
-- `context.md` - fastest root context entry point.
-- `DBS_INDEX.md` - full layer and folder routing map.
-- `AGENTS.md` - root agent entry point.
-- `CLAUDE.md` - root Claude entry point.
-- `Direction/context.md` - SLOPS OS operating context.
-- `Direction/roadmap.md` - OS-layer priorities.
-- `Blueprints/skills/README.md` - canonical SLOPS-authored skills.
-- `Blueprints/skills/SKILL_ROUTING.md` - skill lookup and routing.
-- `Blueprints/agents/AGENT_INDEX.md` - agent authority index.
+### 1. Manifesto (`manifesto.md`)
 
-## Baseline DBS Entry Files
+Defines the philosophy, standards, and long-term vision of the system.
 
-Each SLOPS layer should expose the same baseline entry files:
+### 2. Context (`context.md`)
 
-- `context.md`
-- `DBS_INDEX.md`
-- `README.md`
-- `AGENTS.md`
-- `CLAUDE.md`
+Defines current priorities, tasks, and execution protocols.
 
-On this Windows workspace, lowercase `agents.md` / `claude.md` references resolve to the canonical `AGENTS.md` / `CLAUDE.md` files.
+### 3. Executive Office (`00_Executive_Office/`)
 
-The third layer is the Corvus app repo, so it may have extra app folders and source files, but it still needs these baseline context entry points.
+* `agents.md` → Defines all C-Suite roles
+* `ceo_operator.md` → Translates CEO intent into structured directives
 
-## Active Product
+### 4. Departments
 
-Corvus is the active product.
+* Operations (COO)
+* Engineering (CTO)
+* Security (CISO)
+* Brand (CMO)
 
-Path:
+### 5. Projects (`/Projects`)
 
-```text
-C:\Users\JDuve\OneDrive\Desktop\SLOPS\slops-saloon\corvus
-```
+Contains all active product builds.
 
-GitHub:
+---
 
-```text
-https://github.com/justinduverge-design/corvus
-```
+## Execution Model
 
-Oracle checkout:
+CEO Idea → CEO Operator → Context → C-Suite → Product Output
 
-```text
-~/corvus
-```
+---
 
-## Layer Boundaries
+## Active Project
 
-- `SLOPS/` is the operating system layer.
-- `slops-saloon/` is the Slops Saloon division layer.
-- `slops-saloon/corvus/` is the Corvus product repo.
-
-Do not use old `Projects` copies or the retired `Corvus/` subfolder as active source.
-
-## Safety
-
-During documentation cleanup, do not touch source code, secrets, deployment config, package files, SQL, tests, `.git`, `node_modules`, `.env`, keys, credentials, or production infrastructure unless Justin explicitly approves that exact work.
+* Slops Saloon (Phase 0 → Phase 1)
