@@ -55,3 +55,12 @@ Shared decisions:     Blueprints/handoffs/decisions.md
 ## 6. Current Product Priority
 
 (Replace with the current top product priority — e.g. stable contracts, a named milestone, or the active sprint goal.)
+
+## 7. Cross-Layer Knowledge Graph
+
+For multi-layer / cross-cutting tasks, consult the SLOPS OS cross-layer graph at the repo root — two levels up from this Layer-2 product:
+
+- **Hook doctrine:** `../../Blueprints/agent-modules/graphify-hook.md`
+- **Curated graph:** `../../References/graphify/graphify-out/graph.json`
+
+Skip for single-layer product work. Paths assume the canonical `SLOPS/<division>/<app>/` location; adjust depth if relocated.

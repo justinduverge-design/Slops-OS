@@ -9,9 +9,8 @@ You are Claude working in the Slops Saloon division layer. Read these modules in
 5. **Files to read first** — see `../Blueprints/agent-modules/files-to-read-first-L1.md`
 6. **Hard prohibitions** — see `../Blueprints/agent-modules/hard-prohibitions.md`
 7. **Session handoff** — see `../Blueprints/agent-modules/session-handoff.md`
+8. **Cross-layer graph** (multi-layer tasks only) — see `../Blueprints/agent-modules/graphify-hook.md`
 
 **L1-specific routing:**
 
-- Division strategy, brand custody, content + marketing → stay here
-- Corvus app work → descend into `corvus/`
-- Reusable cross-layer patterns → ascend to L0 (`../`)
+- Division strategy, brand custody, content + marketing → stay he

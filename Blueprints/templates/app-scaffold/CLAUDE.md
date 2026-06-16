@@ -22,28 +22,16 @@
 7. `Blueprints/handoffs/frontend-to-backend.md`
 8. `Blueprints/handoffs/backend-to-frontend.md`
 
+## Cross-Layer Knowledge Graph
+
+For multi-layer / cross-cutting work (how this product ties into division and OS doctrine), consult the SLOPS OS cross-layer graph at the repo root — two levels up from this Layer-2 product:
+
+- **Hook doctrine:** `../../Blueprints/agent-modules/graphify-hook.md`
+- **Curated graph:** `../../References/graphify/graphify-out/graph.json`
+
+Skip for single-layer product work. (Paths assume the canonical `SLOPS/<division>/<app>/` location; adjust depth if relocated.)
+
 ## Handoff Rule
 
 Frontend requests to backend go in `Blueprints/handoffs/frontend-to-backend.md`.
-Backend responses go in `Blueprints/handoffs/backend-to-frontend.md`.
-Shared decisions go in `Blueprints/handoffs/decisions.md`.
-
-## Session Re-Anchoring
-
-When a product planning session ends, produce a short handoff with:
-
-- decisions made
-- files discussed
-- unresolved questions
-- recommended next prompt
-- safest next step
-
-## Compaction Priorities
-
-When context is tight, preserve:
-
-1. Current layer route.
-2. Justin's latest explicit instruction.
-3. DBS naming convention.
-4. Safety boundaries.
-5. Next approved Codex prompt.
+Backend responses go in `Bluepri

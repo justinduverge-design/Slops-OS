@@ -7,3 +7,5 @@
 5. `../Blueprints/RESOURCES_INDEX.md` — what's in your toolbox (parent-level)
 
 Read L0's facts-of-record too if there's any L0-level decision in play.
+
+**Multi-layer / cross-cutting tasks:** also consult the cross-layer knowledge graph — see `graphify-hook.md`.

@@ -9,9 +9,9 @@ You are Codex working in the SLOPS OS root layer. Read these modules in order be
 5. **Files to read first** — see `Blueprints/agent-modules/files-to-read-first-L0.md`
 6. **Hard prohibitions** — see `Blueprints/agent-modules/hard-prohibitions.md`
 7. **Session handoff** — see `Blueprints/agent-modules/session-handoff.md`
+8. **Cross-layer graph** (multi-layer tasks only) — see `Blueprints/agent-modules/graphify-hook.md`
 
 **L0-specific routing:**
 
 - Cross-cutting doctrine → stay here
-- Slops Saloon division strategy, content + marketing, future products → `slops-saloon/`
-- Corvus app code (frontend, backend, deploy, tests) → `slops-saloon/corvus/`
+- Slops Saloon division strategy, content + marketing, future product

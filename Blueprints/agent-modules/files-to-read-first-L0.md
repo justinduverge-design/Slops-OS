@@ -7,3 +7,5 @@
 5. `Blueprints/skills/SKILL_ROUTING.md` — Status column first, legend at top
 
 Everything else is read-when-relevant or search-before-reading. Do not pre-load handoffs, archives, or old specs unless the task names them.
+
+**Multi-layer / cross-cutting tasks:** also consult the cross-layer knowledge graph — see `graphify-hook.md`.

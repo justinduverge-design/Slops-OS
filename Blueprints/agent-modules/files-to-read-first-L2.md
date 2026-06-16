@@ -7,3 +7,5 @@
 5. `Blueprints/definition-of-done.md` — the gates you must pass
 
 Read-when-relevant: `Brand/brand-system.md`, `Blueprints/specs/page-system.md`, `Blueprints/specs/corvus-ux-ui-design-system-v1.md`, `Blueprints/handoffs/backend-to-frontend.md`, `Blueprints/handoffs/frontend-to-backend.md`, `Direction/known_issues.md`.
+
+**Multi-layer / cross-cutting tasks:** also consult the cross-layer knowledge graph — see `graphify-hook.md`.
