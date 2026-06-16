@@ -13,4 +13,6 @@ You are Codex working in the Slops Saloon division layer. Read these modules in 
 
 **L1-specific routing:**
 
-- Division strategy, brand custody, content + marketing → stay he
+- Division strategy, brand custody, content + marketing → stay here
+- Corvus app work → descend into `corvus/`
+- Reusable cross-layer patterns → ascend to L0 (`../`)

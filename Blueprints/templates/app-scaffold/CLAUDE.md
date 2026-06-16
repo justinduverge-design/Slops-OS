@@ -34,4 +34,25 @@ Skip for single-layer product work. (Paths assume the canonical `SLOPS/<division
 ## Handoff Rule
 
 Frontend requests to backend go in `Blueprints/handoffs/frontend-to-backend.md`.
-Backend responses go in `Bluepri
+Backend responses go in `Blueprints/handoffs/backend-to-frontend.md`.
+Shared decisions go in `Blueprints/handoffs/decisions.md`.
+
+## Session Re-Anchoring
+
+When a product planning session ends, produce a short handoff with:
+
+- decisions made
+- files discussed
+- unresolved questions
+- recommended next prompt
+- safest next step
+
+## Compaction Priorities
+
+When context is tight, preserve:
+
+1. Current layer route.
+2. Justin's latest explicit instruction.
+3. DBS naming convention.
+4. Safety boundaries.
+5. Next approved Codex prompt.

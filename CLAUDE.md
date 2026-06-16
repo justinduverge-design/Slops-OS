@@ -14,4 +14,13 @@ You are Claude working in the SLOPS OS root layer. Read these modules in order b
 **L0-specific routing:**
 
 - Cross-cutting doctrine → stay here
-- Slops Saloon division strategy, content + marketing, future product
+- Slops Saloon division strategy, content + marketing, future products → `slops-saloon/`
+- Corvus app code (frontend, backend, deploy, tests) → `slops-saloon/corvus/`
+
+## Graphify: Cross-Layer Knowledge Graph
+
+Canonical hook doctrine lives in `Blueprints/agent-modules/graphify-hook.md` (referenced as module 8 by every layer's `CLAUDE.md`/`AGENTS.md`). Quick reference:
+
+- **Read for multi-layer tasks:** `References/graphify/graphify-out/graph.json` (curated L0↔L1↔L2). Full extraction at repo-root `graphify-out/graph.json`.
+- **Freshness:** last full build 2026-06-13; rebuild pending until `graphifyy` is reinstalled — see latest `References/graphify/REFRESH_REPORT_*.md`.
+- **Query:** start at god nodes (Corvus → SLOPS OS → Skill system → Slops Saloon), follow cross-layer edges, trace shortest paths. Single-layer tasks skip it.

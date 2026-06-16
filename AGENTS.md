@@ -14,4 +14,5 @@ You are Codex working in the SLOPS OS root layer. Read these modules in order be
 **L0-specific routing:**
 
 - Cross-cutting doctrine → stay here
-- Slops Saloon division strategy, content + marketing, future product
+- Slops Saloon division strategy, content + marketing, future products → `slops-saloon/`
+- Corvus app code (frontend, backend, deploy, tests) → `slops-saloon/corvus/`
