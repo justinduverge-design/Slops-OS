@@ -1,5 +1,11 @@
 # Slops OS — Context Layer
 
+> Status: legacy orientation snapshot. Current L0 startup truth lives in
+> `Direction/facts-of-record.md` and `Blueprints/agent-modules/files-to-read-first-L0.md`.
+> Corvus work queues live in `slops-saloon/corvus/Direction/current_sprint.md`
+> and `slops-saloon/corvus/Direction/agent_inbox.md`. If this file conflicts
+> with those sources, the newer Direction/module files win.
+
 ## Current Focus
 
 Project: Slops Saloon (Phase 0 → Phase 1 Transition)
