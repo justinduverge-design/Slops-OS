@@ -1,0 +1,25 @@
+# Normalize all text files to LF in the repo; check out native on each OS.
+# Prevents CRLF/LF churn when editing across Mac, Windows, and OneDrive.
+* text=auto eol=lf
+
+# Explicit: docs and code are text
+*.md   text eol=lf
+*.txt  text eol=lf
+*.json text eol=lf
+*.js   text eol=lf
+*.ts   text eol=lf
+*.tsx  text eol=lf
+*.jsx  text eol=lf
+*.yml  text eol=lf
+*.yaml text eol=lf
+*.sh   text eol=lf
+
+# Binary files git should never touch
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.pdf  binary
+*.ico  binary
+*.woff binary
+*.woff2 binary
