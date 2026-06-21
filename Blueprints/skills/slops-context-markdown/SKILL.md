@@ -1,6 +1,6 @@
 ---
 name: slops-context-markdown
-description: Create, update, normalize, and route SLOPS DBS markdown context files in Justin's style. Use for context.md, README files, decision logs, handoffs, roadmap notes, specs, indexes, and documentation cleanup. Do not use for app code, secrets, SQL, package files, deployment, or feature implementation.
+description: Create, update, normalize, route, and prune SLOPS DBS markdown across all layers in Justin's style. Use for context.md, README files, decision logs, reviews, handoffs, roadmap notes, specs, prompts, reference patterns, indexes, lightweight SKILL.md files, and documentation cleanup. Do not use for app code, secrets, SQL, package files, deployment, full automation, multi-agent orchestration, or feature implementation. (Canonical markdown skill; absorbed the retired slops-markdown-authoring.)
 ---
 
 # Slops Context Markdown
@@ -212,6 +212,34 @@ Avoid:
 - Producing a summary when Justin asked for a file.
 - Producing a file when Justin asked for analysis only.
 - Forgetting to name the target path.
+
+## Work Classification
+
+Before authoring, classify the work so scope stays honest:
+
+- `BUILD NOW` — create or update the file now.
+- `SPEC ONLY` — define the standard/validation criteria, do not implement.
+- `REVIEW ONLY` — critique and surface risks, produce no new canonical file.
+- `REFERENCE ONLY` — capture research-derived pattern, no procedure.
+- `DEFER` — not enough locked input; name what's missing and stop.
+
+## Source Integrity Principle
+
+Repeated corrections should update the source Markdown, not just the generated output.
+
+When a mistake repeats:
+
+1. Identify which source file led to the mistake.
+2. Confirm that file is current authority.
+3. Recommend a precise source update.
+4. Apply the update only when Justin explicitly asks.
+5. Check nearby context for contradictions.
+
+Do not auto-edit this skill from its own prior-use findings.
+
+## Pruning Rules
+
+Recommend pruning when a file repeats a newer source, points to retired paths, mixes layers, carries broad background agents don't need, hides implementation inside reference, or slows real product work. Prefer shortening or rerouting before deletion. Archive only when replacing or superseding files, with approval. Never treat Markdown polish as product progress.
 
 ## Completion Checklist
 
