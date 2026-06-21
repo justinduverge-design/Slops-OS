@@ -1,7 +1,7 @@
 ---
 name: slops-ai-integration-review
 description: Review an AI integration plan — model choice, cost-cap, fallback behavior, data flow, sovereignty fit. Converted from engineering-ai-integration-advisor agent.
-status: draft
+status: active
 skill_type: simple
 layer: 0
 default_agent: Claude

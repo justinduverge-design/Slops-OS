@@ -1,4 +1,6 @@
-# pm-skills Harvest Plan (PROPOSAL)
+# pm-skills Harvest Plan (EXECUTED 2026-06-20)
+
+> **DONE 2026-06-20:** 5 patterns harvested to `References/patterns/pm-skills/` (pre-mortem, north-star-metric, competitive-battlecard, gtm-strategy, and prioritization-and-wwa). `strategy-red-team` no longer exists in the source repo; per Justin, combined `prioritization-frameworks` + `wwas` into one file as the substitute. Still pending: `pm-ai-shipping` standalone-plugin install.
 
 **Source:** [`phuryn/pm-skills`](https://github.com/phuryn/pm-skills) — MIT, 12.2k★, 9 plugins.
 **Approved by Justin:** 2026-06-11 (harvest, not adopt).

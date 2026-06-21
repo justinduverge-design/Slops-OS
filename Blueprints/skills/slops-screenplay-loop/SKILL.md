@@ -1,7 +1,7 @@
 ---
 name: slops-screenplay-loop
 description: Script + beat sheet for animated explainer content. Director → screenwriter → storyboard handoff. Harvested from HKUDS/ViMax agent chain (concepts only, no inference).
-status: draft
+status: active
 skill_type: simple
 layer: 0
 default_agent: Claude

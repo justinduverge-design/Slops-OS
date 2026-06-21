@@ -1,7 +1,7 @@
 ---
 name: slops-design-system-pack
 description: Vetted DESIGN.md files (Linear, Stripe, Vercel, Anthropic, etc.) harvested from open-design + awesome-claude-design. Lets slops-ui-ux-audit compare against a target system.
-status: draft
+status: active
 skill_type: package
 layer: 0
 default_agent: Claude (curate), Codex (file writes)

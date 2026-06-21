@@ -1,7 +1,7 @@
 ---
 name: slops-data-ingest-plan
 description: Plan a data-ingest / ETL sketch before Codex builds. Converted from engineering-data-engineer-advisor agent. Pairs with future live-data-adapter-template.
-status: draft
+status: active
 skill_type: simple
 layer: 0
 default_agent: Claude

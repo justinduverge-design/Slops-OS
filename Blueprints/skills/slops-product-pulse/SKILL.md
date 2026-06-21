@@ -1,7 +1,7 @@
 ---
 name: slops-product-pulse
 description: Time-windowed product report (24h / 7d / 30d) on usage, performance, errors, and user followups. Harvested from EveryInc/compound-engineering's /ce-product-pulse. Pairs with self-hosted-observability-runbook once it ships data.
-status: draft
+status: active
 skill_type: simple
 layer: 0
 default_agent: Claude
