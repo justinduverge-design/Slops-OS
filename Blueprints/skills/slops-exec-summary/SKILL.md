@@ -1,7 +1,7 @@
 ---
 name: slops-exec-summary
 description: Convert raw progress/data into a 1-pager exec summary in the internal-comms house style. Converted from support-executive-summary-generator agent.
-status: draft
+status: active
 skill_type: simple
 layer: 0
 default_agent: Claude

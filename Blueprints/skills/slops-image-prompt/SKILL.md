@@ -1,7 +1,7 @@
 ---
 name: slops-image-prompt
 description: Draft image-generation prompts for OG cards, logos, illustration, and trade-share assets. Converted from design-image-prompt-engineer agent.
-status: draft
+status: active
 skill_type: simple
 layer: 0
 default_agent: Claude

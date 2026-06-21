@@ -1,7 +1,7 @@
 ---
 name: slops-financial-sketch
 description: Sanitized financial scenario planning — unit economics, runway, monetization sensitivity. Never touches live books. Converted from finance-financial-analyst + finance-fpa-analyst agents.
-status: draft
+status: active
 skill_type: simple
 layer: 0
 default_agent: Claude

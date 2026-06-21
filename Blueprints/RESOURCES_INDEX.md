@@ -9,7 +9,7 @@ This index is the *aggregator*. Each section points to its authoritative source.
 
 ## Skills
 
-**Authoritative:** `Blueprints/skills/SKILL_ROUTING.md` — 37 skills, **Status column first** (legend at top of file). Skill lifecycle: `Blueprints/skills/SLOPS_LIFECYCLE.md`. Skill template: `Blueprints/skills/_template/SKILL.md`.
+**Authoritative:** `Blueprints/skills/SKILL_ROUTING.md` — 48 skills, **Status column first** (legend at top of file). Skill lifecycle: `Blueprints/skills/SLOPS_LIFECYCLE.md`. Skill template: `Blueprints/skills/_template/SKILL.md`.
 
 **Index for browsing:** `Blueprints/skills/SKILL_INDEX.md` (short list of skill names).
 

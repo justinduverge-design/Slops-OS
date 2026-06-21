@@ -1,7 +1,7 @@
 ---
 name: slops-mobile-smoke
 description: Automated phone-shape smoke. Drives the run-slops-saloon driver at iPhone viewports (SE / 15 Pro / 15 Pro Max) and reports machine-checkable violations from mobile-first-qa-playbook — touch targets <44px, horizontal overflow at 375/390/430px, missing safe-area-inset on fixed elements, viewport meta missing viewport-fit=cover, inputs with computed font-size <16px, JS errors, missing routes. Severity-ranked output (P0/P1/P2). Audit only; never replaces real-device QA.
-status: draft
+status: active
 skill_type: wrapper
 layer: 0
 default_agent: Claude (review findings), Codex (extend driver + fixes via loop)

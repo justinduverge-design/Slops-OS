@@ -111,6 +111,17 @@ Do not place app implementation work in Layer 1 (Slops Saloon). The division lay
 | `slops-headroom` | Claude (governs invocation), Justin (runs install) | `Layer 0` | `active` | Compress tool outputs, logs, RAG chunks, and large file reads before they hit the LLM. 60-95% token reduction, local-only, MCP-native. Wraps chopratejas/headroom. |
 | `slops-markitdown` | Claude (plans), Codex (runs conversion) | `Layer 0` | `active` | Convert PDF/PPTX/DOCX/XLSX/HTML/audio/images/EPUB → Markdown for LLM consumption. Wraps microsoft/markitdown. Local-only by default; Azure CU and Doc Intelligence forbidden by sovereignty rule. |
 | `slops-taste` | Claude (selects variant + dials), Codex (applies to frontend) | `Layer 0` | `active` | Anti-slop frontend skill. Wraps Leonxlnx/taste-skill — tunable layout/motion/density dials, plus minimalist + soft + brutalist variants. Pairs with slops-design-system-pack and slops-image-prompt. |
+| `slops-screenplay-loop` | Claude | `Layer 0` | `active` | Script + beat sheet for animated/explainer content (director → screenwriter → storyboard). Runs before slops-explainer-cut. Harvested from HKUDS/ViMax (concepts). |
+| `slops-explainer-cut` | Claude (plan), Codex (render) | `Layer 0` | `active` | 30-90s Manim "show your work" math videos (Omen/Trade/MVP/ADP); powers the weekly Omen of the Week — "The Almost-Missed". Upstream HarleyCoops/Math-To-Manim + manimce. |
+| `slops-animation-render` | Claude (plan), Codex (render) | `Layer 0` | `active` | Remotion render pipeline (self-hosted KVM1) for brand/social/onboarding motion cuts — not math explainers. Brand palette + sonic spec locked. Upstream calesthio/OpenMontage + remotion. |
+| `slops-image-prompt` | Claude | `Layer 0` | `active` | Draft image-gen prompts for OG cards, logos, illustration, trade-share assets. Converted from design-image-prompt-engineer. |
+| `slops-design-system-pack` | Claude | `Layer 0` | `active` | Vetted DESIGN.md reference systems (Linear/Stripe/Vercel/Anthropic) for slops-ui-ux-audit to compare against. Harvested from open-design + awesome-claude-design. |
+| `slops-exec-summary` | Claude | `Layer 0` | `active` | Turn raw progress/data into a 1-page exec summary in the internal-comms house style. Converted from support-executive-summary-generator. |
+| `slops-financial-sketch` | Claude | `Layer 0` | `active` | Sanitized financial scenario sketches — unit economics, runway, monetization sensitivity. Never touches live books. Converted from finance-financial-analyst + finance-fpa-analyst. |
+| `slops-ai-integration-review` | Claude | `Layer 0` | `active` | Review an AI integration plan — model choice, cost-cap, fallback behavior, data flow, sovereignty fit. Converted from engineering-ai-integration-advisor. |
+| `slops-data-ingest-plan` | Claude | `Layer 0` | `active` | Plan a data-ingest / ETL sketch before Codex builds. Converted from engineering-data-engineer-advisor. |
+| `slops-mobile-smoke` | Claude (plan), Codex (run) | `Layer 0` | `active` | Automated phone-viewport smoke (SE/15 Pro/15 Pro Max) vs mobile-first-qa-playbook — touch targets, overflow, safe-area, font-size, JS errors; P0/P1/P2. Audit only; never replaces real-device QA. |
+| `slops-product-pulse` | Claude | `Layer 0` | `active` | Time-windowed product report (24h/7d/30d) on usage, performance, errors, and user followups. Pairs with self-hosted-observability-runbook. Harvested from EveryInc/compound-engineering. |
 
 ## Analytical Skills
 

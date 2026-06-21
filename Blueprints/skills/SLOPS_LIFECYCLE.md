@@ -123,6 +123,17 @@ Tracked here so they survive context switches:
 - Push/merge the accumulated local branches (Justin's gate) in both the SLOPS and Corvus repos.
 - Product: Corvus **P1 Sleeper full-swap** proof when the test league drafts — see `slops-saloon/corvus/Direction/current_sprint.md` → "Waiting on external".
 
+## Promotions — 2026-06-20
+
+Batch-promoted 11 proposals from `_proposals/` to active skills (registered in `SKILL_ROUTING.md`). These are auxiliary OS/content capabilities, not lifecycle phases:
+
+- **Content/animation:** `slops-screenplay-loop` → `slops-explainer-cut` (Manim math cuts; powers weekly "Omen of the Week — The Almost-Missed") → `slops-animation-render` (Remotion brand/social cuts). Note: a hand-drawn Ghibli-style series would need a future `slops-toon-render` (OpenToonz), not animation-render.
+- **Design/asset:** `slops-image-prompt`, `slops-design-system-pack`.
+- **Comms/finance:** `slops-exec-summary`, `slops-financial-sketch`.
+- **Eng planning/QA:** `slops-ai-integration-review`, `slops-data-ingest-plan`, `slops-mobile-smoke`, `slops-product-pulse`.
+
+Still parked in `_proposals/`: `slops-lore-review` (needs animated-series concept; seed in `series-seed.md`). Plan docs retained: `pm-skills-harvest-plan.md` (executed), `slops-graphify-v2-smoke-test.md`.
+
 ## Maintenance
 
 - Add / rename / retire a skill → update **both** this map and `SKILL_ROUTING.md` in the same pass.
