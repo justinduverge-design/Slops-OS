@@ -2,15 +2,15 @@
 
 This is the canonical folder for all SLOPS-authored skills.
 
-Canonical path:
+Canonical path, resolved from the active Git root:
 
-`C:\Users\JDuve\OneDrive\Desktop\SLOPS\Blueprints\skills`
+`Blueprints/skills/`
 
 ## Lookup Rule
 
 When Justin calls on a skill, agents should resolve it in this order:
 
-1. Start in `C:\Users\JDuve\OneDrive\Desktop\SLOPS\Blueprints\skills`.
+1. Resolve the active repository root with `git rev-parse --show-toplevel`, then start in `Blueprints/skills/`.
 2. Read this `README.md`.
 3. Read `SKILL_ROUTING.md`.
 4. Open the named skill folder.

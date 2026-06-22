@@ -1,275 +1,126 @@
 ---
 name: slops-skill-author
-description: Create, critique, normalize, and improve SLOPS-authored Claude/Codex skill markdown files under Blueprints\skills. Use when Justin asks to create a skill, edit a skill, audit a skill folder, convert a workflow into a SKILL.md, or apply the SLOPS skill template. Do not use for agent role files; use slops-agent-author for Blueprints\agents.
+description: Create, critique, normalize, or improve SLOPS-owned skills under Blueprints/skills. Use for a new SKILL.md, a skill-package audit, or a workflow-to-skill conversion; do not use for agent roles or to run the workflow being authored.
+status: active
+skill_type: simple
+layer: Layer 0
+default_agent: Claude plans; Codex writes and verifies approved files
+trigger: create a skill, improve this skill, audit a skill, convert this workflow into a skill
+version: 1.0.0
+upstream: Adapted from mattpocock/skills writing-great-skills (MIT), inspected 2026-06-21
+owner: SLOPS
 ---
 
 # Slops Skill Author
 
 ## Purpose
 
-Use this skill to create and improve SLOPS-authored skill files.
-
-A skill is a reusable workflow. It tells Claude, Codex, or another agent how to perform a repeatable type of work with clear inputs, process, outputs, DBS routing, and guardrails.
-
-This skill creates or edits skill markdown files. It does not perform the underlying work of the skill it creates.
+Create narrow, discoverable, checkable SLOPS workflows without turning the skill library into a second application or a pile of overlapping prompts. This skill authors the workflow; it does not execute that workflow.
 
 ## When to Use
 
-Use this skill when Justin asks to:
-
-- Create a new skill.
-- Edit an existing `SKILL.md`.
-- Audit a skill folder.
-- Convert a workflow into a skill.
-- Normalize a skill to the master template.
-- Split a broad skill into smaller modular skills.
-- Add failure modes, output contracts, prior-use review, or DBS routing.
-- Decide whether a skill should be simple or a skill package.
-- Create a Codex-ready prompt to place a skill file.
+- Create or materially revise a SLOPS `SKILL.md`.
+- Convert a repeated procedure into a governed skill.
+- Audit a skill for trigger quality, context cost, routing, verification, or overlap.
+- Decide whether a skill should remain simple or become a package.
 
 ## Do Not Use
 
-Do not use this skill to:
+- Agent roles or RBAC: use `slops-agent-author`.
+- One-time runnable instructions: use `slops-prompt-generator`.
+- External installation or promotion without Justin's approval.
+- Executing the workflow described by the target skill.
 
-- Create or approve reusable agent roles.
-- Assign RBAC authority to agents.
-- Edit `Blueprints\agents` role files.
-- Modify app code.
-- Run terminal commands.
-- Update production, secrets, auth, payments, databases, or deployment files.
-- Treat imported examples as active SLOPS skills.
-- Execute the workflow the new skill describes.
+## Required Inputs
 
-For agent roles, use `slops-agent-author`.
+- The repeated job and its intended user outcome.
+- Existing overlapping skills, routing rows, and prior-use notes.
+- The target DBS layer and authorized write scope.
+- Any approved upstream source and its license.
 
-## Canonical Location
+## Preconditions and Dependencies
 
-SLOPS-authored skills live under:
-
-```text
-C:\Users\JDuve\OneDrive\Desktop\SLOPS\Blueprints\skills
-```
-
-Each active skill should eventually use:
-
-```text
-<skill-name>\SKILL.md
-```
-
-The master template lives at:
-
-```text
-Blueprints\skills\_template\SKILL.md
-```
-
-The deterministic skill lookup file should be:
-
-```text
-Blueprints\skills\SKILL_ROUTING.md
-```
-
-## Skill Folder Types
-
-### Simple Skill
-
-Use for focused skills that do not need support files.
-
-```text
-<skill-name>\
-  SKILL.md
-```
-
-### Skill Package
-
-Use when the skill needs references, examples, tests, prior-use notes, or interface metadata.
-
-```text
-<skill-name>\
-  SKILL.md
-  references\
-  examples\
-  tests\
-  notes\
-  interface\
-```
-
-Allowed support folders:
-
-- `references\`: skill-specific source material.
-- `examples\`: sample inputs and outputs.
-- `tests\`: behavior checks and expected outputs.
-- `notes\`: prior-use reviews and improvement notes.
-- `interface\`: launcher/provider metadata.
-
-Do not put global agent authority inside a skill support folder.
+- Runtime dependencies: none.
+- Canonical root: `Blueprints/skills/`, resolved from the current repository root.
+- Template: `Blueprints/skills/_template/SKILL.md`.
+- External sources remain references until their license, overlap, risk, and maintenance posture are reviewed.
+- Installation and distribution are separate approval-gated actions; authoring alone does not copy files into runtime skill folders.
 
 ## Read-First Procedure
 
-Use least privilege.
+1. Read the user's request, `Blueprints/skills/README.md`, and `Blueprints/skills/SKILL_ROUTING.md`.
+2. Read the target `SKILL.md`, `notes/prior-use-review.md`, tests, or examples when present.
+3. Read `Blueprints/skills/_template/SKILL.md` for a new or normalized skill.
+4. Search names, descriptions, and routing for overlap before creating another skill.
+5. Load only the upstream sections needed for the approved adaptation.
 
-1. Read Justin's request.
-2. Identify whether this is:
-   - new skill creation
-   - existing skill edit
-   - skill audit
-   - folder normalization
-   - prompt creation for Codex placement
-3. Read only named files first.
-4. If no files are named, read:
-   - `Blueprints\skills\README.md`
-   - `Blueprints\skills\SKILL_ROUTING.md`
-   - the target skill's `SKILL.md`, if it exists
-   - `_template\SKILL.md`, if normalizing structure
-5. If editing an existing skill, check for:
-   - `notes\prior-use-review.md`
-   - `examples\`
-   - `tests\`
-6. Treat external or imported files as reference-only unless indexed as active.
+## Invocation Economics Gate
 
-## Skill Design Recipe
+Before authoring, answer four questions:
 
-When creating or improving a skill:
+1. **Who invokes it?** The model should infer it from the description, or the user must name it. Make that boundary explicit.
+2. **Why a skill?** It must encode a repeated, non-obvious procedure that benefits from consistent execution. If a short prompt is enough, stop and recommend a prompt.
+3. **What context does it cost?** Keep the main file sufficient for normal runs; move optional depth into clearly routed support files.
+4. **How is completion checked?** Name an observable signal. “Analyze thoroughly” and “looks good” are not completion criteria.
 
-1. Name the skill with a clear kebab-case name.
-2. Write frontmatter with:
-   - `name`
-   - `description`
-3. Make the description trigger-specific.
-4. Define the skill's purpose.
-5. Define when to use it.
-6. Define when not to use it.
-7. Define canonical paths.
-8. Define required inputs.
-9. Define a least-privilege read-first procedure.
-10. Define the process recipe.
-11. Define the output contract.
-12. Define DBS routing.
-13. Define RBAC boundaries.
-14. Define failure modes.
-15. Define the prior-use review loop.
-16. Add a completion checklist.
+## Process Recipe
 
-## Frontmatter Standard
+1. Define one job, one primary output, and explicit exclusions.
+2. Choose a clear kebab-case name and a trigger-rich description using likely user language.
+3. Classify it as `simple`, `package`, or `wrapper`; wrappers must pin their upstream and detect rather than install dependencies.
+4. Write complete frontmatter: `name`, `description`, `status`, `skill_type`, `layer`, `default_agent`, `trigger`, `version`, `upstream`, and `owner`.
+5. Define required inputs, dependencies, least-privilege reads, deterministic steps, output, verification, routing, boundaries, failure modes, prior-use review, and changelog.
+6. Use progressive disclosure: keep the critical path in `SKILL.md`; add `references/`, `examples/`, `tests/`, `notes/`, or `interface/` only when each folder has a concrete consumer.
+7. Run the pruning pass:
+   - **No-op:** remove instructions the agent would reliably do without help.
+   - **Sediment:** remove stale history and paths that no longer affect execution.
+   - **Sprawl:** split unrelated jobs or delete unused support files.
+8. Register every active, renamed, or retired skill in both `SKILL_ROUTING.md` and `SLOPS_LIFECYCLE.md`.
+9. Validate frontmatter, routing uniqueness, links/paths, and the skill's own completion check.
+10. Distribute only when explicitly approved, with backup and canonical-to-runtime hash verification.
 
-Use:
+## Output Contract
 
-```yaml
----
-name: skill-name
-description: One sentence explaining exactly when to use this skill and what it produces. Include important exclusions when needed.
----
-```
+Produce the canonical target path, full skill content or patch, package shape, routing/lifecycle changes, sources and license, verification evidence, intentional exclusions, and next safe step.
 
-The description should answer:
+## Verification
 
-- What work does this skill do?
-- What user wording should trigger it?
-- What files or layer does it affect?
-- What should it not do?
+- The frontmatter contains every required field and its `name` matches the folder.
+- Exactly one active routing row resolves the skill.
+- The procedure has an observable success signal and clear failure/escalation behavior.
+- A search finds no stale absolute workspace paths in the changed package.
+- `git diff --check` passes.
+- If distributed, every canonical package file has the same SHA-256 hash in both runtime copies.
 
-## Output Contract for Skill Creation
+## DBS Routing
 
-When producing a skill file, include:
+- Canonical skills: `Blueprints/skills/<skill-name>/`.
+- Acquisition/review evidence: `Direction/reviews/`.
+- Raw external material: `References/research/` or `Archive/imports/`; never active by placement alone.
+- One-time execution prompts: `Blueprints/prompts/`.
 
-- Target path.
-- Full `SKILL.md` content.
-- Folder structure recommendation.
-- Optional support folders needed.
-- Required `SKILL_ROUTING.md` update.
-- Assumptions.
-- What was intentionally excluded.
+## Boundaries
 
-When producing a downloadable folder, include the folder structure exactly as it should be copied into SLOPS.
+- Skills are workflows, not actors, permissions, or personas.
+- Do not grant destructive, production, payment, auth, secret, user-data, database, DNS, or deployment authority.
+- Do not auto-install external dependencies or silently promote imported instructions.
+- Do not distribute, overwrite runtime copies, or change global hooks without explicit approval and a backup.
 
-## Skill vs Agent Rule
+## Failure Modes
 
-A skill is a workflow.
+- Creating a skill for a one-off task or capability the model already performs reliably.
+- A vague description that cannot be routed deterministically.
+- One skill covering unrelated jobs.
+- Mandatory ceremony with no observable value.
+- Support folders with no consumer, copied upstream prose, or duplicated doctrine.
+- Missing failure states, approval gates, prior-use review, or verification.
+- Editing runtime copies as the source of truth.
 
-An agent is an actor with a role and authority.
+## Prior-Use Review Loop
 
-Do not merge them.
+Before revision, read `<skill-name>/notes/prior-use-review.md` when present. Convert repeated corrections into the smallest durable change: a trigger clarification, step, test, failure mode, or split. Preserve the skill's identity unless the user approves a changed contract.
 
-Use:
+## Changelog
 
-```text
-Blueprints\skills
-```
-
-for repeatable procedures.
-
-Use:
-
-```text
-Blueprints\agents
-```
-
-for reusable roles, divisions, RBAC, and personas.
-
-Use:
-
-```text
-Blueprints\Prompts
-```
-
-for runnable one-time task prompts.
-
-## Least Privilege and RBAC Boundaries
-
-This skill may create skill instructions.
-
-It may not:
-
-- Activate imported agents.
-- Grant new write permissions to agents.
-- Approve destructive actions.
-- Modify production systems.
-- Override `tools.md`, `agents.md`, or explicit Justin instructions.
-- Move skills into runtime folders like `.codex\skills` unless Justin explicitly asks.
-
-When a skill requires a powerful action, the skill must say approval is required.
-
-## Prior Use Review Loop
-
-Before editing a skill, look for:
-
-```text
-<skill-name>\notes\prior-use-review.md
-```
-
-Use it to answer:
-
-- What failed last time?
-- What did Justin correct?
-- Did the skill overreach?
-- Did it produce the wrong artifact?
-- Did it read too much?
-- Did it route files incorrectly?
-- Does the skill need references, examples, tests, or a split?
-
-If the same correction appears repeatedly, add it to failure modes.
-
-## Common Failure Modes
-
-Avoid:
-
-- Making a skill too broad.
-- Creating a meta-skill that performs every job.
-- Confusing skill support files with agent authority.
-- Putting active SLOPS skills in imported or external runtime folders.
-- Forgetting the output contract.
-- Forgetting the prior-use loop.
-- Forgetting DBS routing.
-- Creating support folders with no purpose.
-- Updating index files without user approval.
-- Treating a template as an active skill.
-
-## Recommended Completion Report
-
-When done, report:
-
-- Files created or recommended.
-- Target paths.
-- Whether the skill is simple or a package.
-- Index updates needed.
-- Risks or assumptions.
-- Next safe step.
+- 1.0.0 — Added invocation economics, progressive disclosure, checkable completion, pruning, complete metadata, and canonical distribution verification.
+- 0.1.0 — Initial SLOPS skill-authoring workflow.

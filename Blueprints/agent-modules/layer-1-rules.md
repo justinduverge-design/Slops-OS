@@ -1,6 +1,6 @@
 # Layer 1 — Slops Saloon (division)
 
-**Path:** `C:\Users\JDuve\OneDrive\Desktop\SLOPS\slops-saloon\`
+**Path:** `<git-root>/slops-saloon/`
 
 **In scope:**
 

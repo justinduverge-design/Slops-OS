@@ -2,7 +2,7 @@
 
 **Source:** [`phuryn/pm-skills`](https://github.com/phuryn/pm-skills) — MIT licensed, harvested 2026-06-20.
 **Status:** `reference-only`. These are research-derived patterns, NOT active SLOPS skills. Do not promote to `Blueprints/skills/` without a per-skill review (see `Blueprints/skills/_proposals/pm-skills-harvest-plan.md`).
-**Why harvest, not adopt:** Justin already runs the `product-management:*` plugin. These 4 patterns are kept as reference because they name or structure things the installed plugin doesn't. Pair them with the plugin's skills; don't fork PM doctrine.
+**Why harvest, not adopt:** Justin already runs the `product-management:*` plugin. These patterns are kept as references because they name or structure things the installed plugin does not. Pair them with active SLOPS/plugin skills; do not fork PM doctrine.
 
 ## Contents
 
@@ -13,10 +13,11 @@
 | `competitive-battlecard.md` | `product-management:competitive-brief` | Sales-ready format with objection handling + "landmines to plant" + win/loss patterns. |
 | `gtm-strategy.md` | Corvus launch comms (Phase 4) | Channel / messaging / metrics / phased-launch matrix. |
 | `prioritization-and-wwa.md` | `product-management:write-spec`, `planning-pass` | Combined: 9 prioritization frameworks (Opportunity Score / ICE / RICE) + Why-What-Acceptance backlog format. |
+| `strategy-red-team.md` | the relevant planning/review skill | Load-bearing assumptions, steelman/attack, `fails if`, evidence-this-week, kill criteria, and the cheapest disconfirming test. |
 
-## Substitute for the removed strategy-red-team slot
+## Strategy-red-team reconciliation
 
-The original 2026-06-11 plan listed `strategy-red-team`, which **no longer exists** in the source repo. Per Justin (2026-06-20), harvested `prioritization-frameworks` + `wwas` (Why-What-Acceptance) combined into `prioritization-and-wwa.md` instead. (`wwas` is a backlog-item format, not adversarial framing — note for future red-team needs.)
+The upstream `strategy-red-team` file was present again when checked on 2026-06-21. It is now represented by `strategy-red-team.md`. The earlier `prioritization-and-wwa.md` remains because prioritization/backlog formatting and adversarial strategy testing are different procedures; it is no longer labeled as a substitute.
 
 ## Source $ARGUMENTS note
 

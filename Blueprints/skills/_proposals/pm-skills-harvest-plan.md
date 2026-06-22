@@ -1,6 +1,6 @@
-# pm-skills Harvest Plan (EXECUTED 2026-06-20)
+# pm-skills Harvest Plan (EXECUTED 2026-06-20; RECONCILED 2026-06-21)
 
-> **DONE 2026-06-20:** 5 patterns harvested to `References/patterns/pm-skills/` (pre-mortem, north-star-metric, competitive-battlecard, gtm-strategy, and prioritization-and-wwa). `strategy-red-team` no longer exists in the source repo; per Justin, combined `prioritization-frameworks` + `wwas` into one file as the substitute. Still pending: `pm-ai-shipping` standalone-plugin install.
+> **RECONCILED 2026-06-21:** Six patterns are now retained under `References/patterns/pm-skills/`. The upstream `strategy-red-team` file exists again and has its own adapted reference. `prioritization-and-wwa` remains as a distinct prioritization/backlog pattern, not a substitute. `pm-ai-shipping` is not installed; only its intended-versus-implemented review method remains a future harvest candidate because the full plugin overlaps SLOPS review and quality gates.
 
 **Source:** [`phuryn/pm-skills`](https://github.com/phuryn/pm-skills) — MIT, 12.2k★, 9 plugins.
 **Approved by Justin:** 2026-06-11 (harvest, not adopt).
@@ -9,9 +9,9 @@
 
 Installing all 9 plugins duplicates the `product-management:*` plugin Justin already has. Two competing PM doctrines fragments operator brain. Harvest the 5 skills clearly better than what's installed; install one plugin standalone for its unique scope.
 
-## The 5 Harvested Patterns
+## The 6 Harvested Patterns
 
-Copied into `References/patterns/pm-skills/` as `reference-only` (do not promote to active skills without a per-skill review).
+Adapted into `References/patterns/pm-skills/` as `reference-only` (do not promote to active skills without a per-skill review).
 
 | Source skill | Target path | Why |
 |---|---|---|
@@ -21,13 +21,13 @@ Copied into `References/patterns/pm-skills/` as `reference-only` (do not promote
 | `pm-go-to-market/competitive-battlecard` | `References/patterns/pm-skills/competitive-battlecard.md` | Sales-ready format with objection handling. No equivalent in the plugin. |
 | `pm-go-to-market/gtm-strategy` | `References/patterns/pm-skills/gtm-strategy.md` | Channel/messaging/launch matrix. Will inform Corvus launch comms when Phase 4 arrives. |
 
-## The 1 Plugin Installed Standalone
+## Plugin decision
 
-**`pm-ai-shipping`** (2 skills + 5 commands: `/ship-check`, `/document-app`, `/derive-tests`, `/security-audit-static`, `/performance-audit-static`).
+**`pm-ai-shipping` is not installed.**
 
-- Install path: as a Claude/Codex plugin alongside the existing `product-management:*` plugin. No conflicts (`pm-ai-shipping` has its own slash-command namespace).
-- Use case: pre-launch documentation pass for Corvus when Phase 1.x is far enough along to ship — produces architecture/permission/test-coverage docs that auditors and reviewers expect.
-- Pairs with `compliance-by-template` (legal docs) for the full pre-launch package.
+- Its intended-versus-implemented review idea may be harvested later into existing SLOPS review/definition-of-done procedures.
+- The full plugin overlaps `slops-code-review`, `slops-quality-baseline`, Codex Security, and existing Corvus done gates.
+- Any future installation requires a new explicit approval and overlap review.
 
 ## What to Skip
 
@@ -37,8 +37,9 @@ The other 7 pm-skills plugins (product-discovery, product-strategy, execution, m
 
 1. `git clone --depth 1 https://github.com/phuryn/pm-skills.git References/_imported/pm-skills/` (read-only reference).
 2. Copy the 5 SKILL.md files from `pm-skills/pm-execution/skills/` and `pm-skills/pm-marketing-growth/skills/` and `pm-skills/pm-go-to-market/skills/` to `References/patterns/pm-skills/` with status frontmatter set to `reference-only`.
-3. Install `pm-ai-shipping` per its README install instructions on Justin's machine (not via Codex).
-4. Add a one-line note to `SKILL_ROUTING.md` § "Special Routing Rules" pointing at `References/patterns/pm-skills/` for PM workflow patterns not covered by the installed plugin.
+3. Do not install `pm-ai-shipping`; harvest a bounded method only if a verified gap remains.
+4. Keep a one-line note in `SKILL_ROUTING.md` § "Special Routing Rules" pointing at the strategy red-team reference.
 
 ## Changelog
+- 2026-06-21 — restored the upstream strategy-red-team reference, retained prioritization/WWA separately, and recorded the no-install decision for pm-ai-shipping.
 - 2026-06-11 — plan approved by Justin.

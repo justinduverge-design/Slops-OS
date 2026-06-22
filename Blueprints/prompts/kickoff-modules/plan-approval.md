@@ -7,7 +7,8 @@ Before writing code, tell Justin:
 3. Files you expect to touch (full paths)
 4. Files you will avoid (and why if non-obvious)
 5. What the user-visible change will look like (one paragraph)
-6. Which guardrail skill(s) you'll invoke, and at what step
-7. Verification you'll run before declaring done (test command, build command, screenshot)
+6. Which build/guardrail skill(s) you'll invoke, and at what step; behavior-changing code defaults to `slops-tdd`
+7. The tight deterministic command that can show the intended RED, plus broader verification before declaring done (test command, build command, screenshot)
+8. The planned skill receipt: skills invoked, conditional skills considered but not applicable, and where evidence will be recorded
 
 Wait for confirmation. Do not start editing until Justin approves the plan.

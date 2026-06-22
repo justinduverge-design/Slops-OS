@@ -10,6 +10,6 @@ Stop and wait for Justin before:
 - Any cross-layer file move
 - Any new dependency (flag it first; don't add silently)
 
-**If a test or build fails after your change:** STOP. Do not modify the test to make it pass. Report the failure.
+**An intended `slops-tdd` RED before implementation is expected.** If the failure is for the wrong reason, or if any test/build fails after implementation or during the broader verification pass: STOP. Do not weaken the test to make it pass. Report the failure.
 
 **If a guardrail skill (`slops-ui-ux-audit`, `slops-code-review`) returns P0 findings:** STOP. Do not commit. Surface the findings.

@@ -1,85 +1,112 @@
 ---
 name: slops-code-review
-description: Slops-native pre-merge code and security review. Reviews a branch, PR, or diff for correctness, security (authz on new routes, input validation, secrets/cookie leakage, the SY0-701 control mappings the codebase already uses, preserved webhook signature verification), error handling, performance (N+1, hot/LLM paths), test coverage, and scope/boundary against the definition-of-done. Use to "review this PR", "is this safe to merge", "security review", before landing a branch, or when replacing external review/cso skills. Produces severity-ranked findings (P0/P1/P2) with concrete fixes and a merge verdict. Reviews only — never edits code; Justin/Codex act on the findings.
+description: Review a branch, PR, commit, or diff before merge for correctness, security, simplicity, reliability, performance, tests, and scope. Use for merge readiness or security review; produces P0/P1/P2 findings and never edits the code.
+status: active
+skill_type: simple
+layer: Layer 0
+default_agent: Claude reviews; Codex or Justin acts on findings
+trigger: review this PR, review this diff, is this safe to merge, security review
+version: 1.0.0
+upstream: Simplicity lens adapted from DietrichGebert/ponytail (MIT), inspected 2026-06-21
+owner: SLOPS
 ---
 
-# Slops Code Review Skill
+# Slops Code Review
 
 ## Purpose
 
-A pre-merge gate grounded in Corvus's own standards. Replaces external `review` + `cso` with one
-review that checks correctness, security, and quality against `Blueprints/definition-of-done.md`
-and the security-control comments the codebase already carries (SY0-701 mappings). Pairs with
-`slops-git-flow` (the PR) and `slops-quality-baseline` (the measured gate).
+Provide one pre-merge verdict grounded in the task contract and target repository standards. The review protects user trust and also removes avoidable machinery.
 
-## When To Use
+## When to Use
 
-- Reviewing a branch/PR/diff before merge.
-- A "is this safe to merge" / "security review" request.
-- Final check before `slops-ship`.
+- Review a branch, PR, commit, or working-tree diff before merge.
+- Check merge readiness, security posture, or intended-versus-implemented behavior.
+- Final review before `slops-ship`.
 
-## When Not To Use
+## Do Not Use
 
-- To edit or fix code — this reviews and recommends; fixes are a separate build step.
-- To deploy, or to approve secrets/migrations (Justin gates).
+- To edit or fix code in place.
+- To approve secrets, migrations, production changes, or deployment.
 
-## Required Inputs To Review
+## Required Inputs
 
-- The diff / PR / branch and the task it implements.
-- `Blueprints/definition-of-done.md` and any relevant `Blueprints/handoffs/*` contract.
-- The touched files in context.
+- Resolved change set and base.
+- Task/specification, acceptance criteria, and relevant definition of done.
+- Touched files in enough context to trace behavior and trust boundaries.
+- Available test/build/security evidence.
+
+## Preconditions and Dependencies
+
+- Uses existing repository tools only; do not install dependencies.
+- If the review scope or base is ambiguous, resolve it before giving a verdict.
 
 ## Review Lenses
 
-**Correctness**
-- Implements the task; edge cases handled; no partial feature shipped as done.
-- No stub/mock presented as live; mock vs. live labeled.
+1. **Contract and correctness:** intended behavior is implemented, edge cases are handled, and mock/live status is truthful.
+2. **Security and privacy:** authorization, validation, injection/SSRF/SQL boundaries, webhook verification, secrets/cookies, personal data, least privilege, and existing controls are preserved.
+3. **Reliability and errors:** failure envelopes are safe, recovery is explicit, and partial failure does not corrupt state.
+4. **Performance:** no avoidable N+1, unbounded work, or expensive hot/LLM path; stable results are cached appropriately.
+5. **Tests:** changed public behavior and important failure paths are covered; evidence is current.
+6. **Scope:** the diff is task-focused, respects layer/agent ownership, and contains no unrelated sweep.
+7. **Simplicity:** apply the ladder below without weakening trust boundaries.
 
-**Security**
-- Every new/changed route has the right auth (`requireAuth` / `requireSubscription` where due).
-- Input validated; output safe (no injection / SSRF / unsafe SQL).
-- No secrets, tokens, `.env`, or cookie values in code or logs (ESPN cookie rule).
-- Webhook signature verification and other existing controls preserved.
-- Honors the SY0-701 control comments already in the module; least privilege.
+## Simplicity Ladder
 
-**Error handling**
-- Failures return clean envelopes, not crashes; truthful degradation; no internal leakage.
+For each meaningful addition, ask in order:
 
-**Performance**
-- No N+1; hot and LLM paths watched (Omen latency); cache where the result is weekly/stable.
+1. **YAGNI:** Can this code, abstraction, configuration, or feature be deleted because the accepted behavior does not require it?
+2. **Standard library:** Can maintained platform/library functionality replace custom code?
+3. **Native framework/platform:** Can an existing framework primitive replace a bespoke layer?
+4. **Existing dependency:** Can an already-installed, appropriate dependency do it without adding another package?
+5. **Minimum custom code:** If code is necessary, is it the smallest clear implementation with the fewest states and indirections?
 
-**Tests**
-- New/changed logic is covered; `npm test` green (confirm with `slops-quality-baseline`).
+Never simplify away authentication, authorization, input validation, accessibility, observability needed for safe operation, data-loss prevention, or explicit acceptance criteria. Deletion is a recommendation only when behavior and safeguards remain intact.
 
-**Scope / boundary**
-- Stayed in lane (Codex backend / Claude frontend); no secrets/deploy/migration.
-- Diff is scoped — no unrelated files swept in (`slops-git-flow`).
+## Process Recipe
 
-## Steps
+1. Resolve scope/base and read the task before the diff.
+2. Trace changed behavior from entry point through storage/external effects and back.
+3. Apply every review lens, inspecting surrounding code where needed.
+4. Compare implementation with tests and current command evidence.
+5. Rank findings: **P0** blocks for broken/insecure/misleading changes; **P1** fixes before merge; **P2** follow-up.
+6. For each finding, cite file/line, impact, evidence, and the smallest safe correction.
+7. Separate optional simplification from correctness/security blockers.
+8. Return **merge**, **fix-then-merge**, or **block** with the exact P0/P1 list.
 
-1. Read the diff and the task it claims to implement.
-2. Run every lens above against the change.
-3. Rank findings: **P0** (block — broken, insecure, or misleading), **P1** (fix before merge),
-   **P2** (follow-up).
-4. Give a concrete fix for each finding.
-5. Verdict: **merge** / **fix-then-merge** / **block**, with the P0/P1 list.
+## Output Contract
 
-## Output
+Produce scope/base, verdict, severity-ranked findings, positive verification evidence, test gaps, simplicity opportunities, assumptions, and actions intentionally not taken. No code changes.
 
-A severity-ranked findings report and a merge verdict. No code changes.
+## Verification
 
-## Safety Rules
+- Every P0/P1 cites a concrete location and reproducible or logically complete impact path.
+- The task's acceptance criteria and every changed trust boundary were reviewed.
+- Current test/build evidence is distinguished from unrun recommendations.
+- The verdict follows mechanically from unresolved P0/P1 findings.
 
-- Review only; never edit app code, secrets, or deploy.
-- Flag issues; do not fix them in place.
-- Treat any unscoped diff or secret exposure as an automatic P0.
+## DBS Routing
 
-## Where This Operates
+Operate on the target product repository. Pair with `slops-git-flow`, `slops-quality-baseline`, and `slops-tdd`; route fixes back through the build loop.
 
-On the target product repo. `Layer 0` doctrine; pairs with `slops-git-flow` and
-`slops-quality-baseline`.
+## Boundaries
 
-## Change Log
+- Review only; never edit, commit, push, merge, deploy, or change secrets.
+- Treat exposed secrets and unscoped destructive changes as P0.
+- Do not trade security, accessibility, or data integrity for fewer lines.
 
-- 2026-06-08: Created (Wave 1) as the Slops-native replacement for external `review` + `cso`,
-  grounded in `definition-of-done.md` and the codebase's SY0-701 control mappings.
+## Failure Modes
+
+- Reviewing style while missing behavior or trust boundaries.
+- Suggesting deletion without proving preserved behavior.
+- Treating passing tests as sufficient security evidence.
+- Reporting speculative findings without an impact path.
+- Hiding uncertainty or approving an ambiguous diff.
+
+## Prior-Use Review Loop
+
+Read `notes/prior-use-review.md` when present. Add repeated misses as a narrow lens, test, or failure mode; do not expand this review into implementation.
+
+## Changelog
+
+- 1.0.0 — Added the Ponytail-derived simplicity ladder, safeguard exceptions, complete metadata, and checkable verdict rules.
+- 0.1.0 — Initial SLOPS pre-merge code and security review.

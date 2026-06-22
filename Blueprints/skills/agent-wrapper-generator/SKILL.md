@@ -58,7 +58,7 @@ If the review memo is missing, create only from Justin's explicit selections and
 Wrapper files live under:
 
 ```text
-C:\Users\JDuve\OneDrive\Desktop\SLOPS\Blueprints\agents
+Blueprints/agents/
 ```
 
 Imported source files remain quarantined under:

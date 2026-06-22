@@ -34,6 +34,13 @@ Patterns intended to fire more than once. Edit carefully — the rest of the sys
 | `codex-post-deploy-context-update.md` | Update context files after a deploy. |
 | `codex_trade_analyzer_embed.md` | Embed the trade-analyzer work. |
 
+## Capability sessions
+
+| File | Task |
+|---|---|
+| `skills-acquisition-distribution-session.md` | Acquire approved capabilities, normalize canonical skills, distribute to Claude and Codex, then audit usage evidence, procedures, and gaps. |
+| `claude-skills-playbooks-acquisition-session.md` | Superseded 2026-06-11 acquisition record; do not reuse for current paths or distribution. |
+
 ## Migration phase prompts (historical run records)
 
 These record past DBS-migration runs. Keep for history; do not re-run blindly.

@@ -6,8 +6,8 @@ skill_type: wrapper
 layer: 0
 default_agent: Claude (selects variant + dials), Codex (applies to frontend)
 trigger: "taste check | anti-slop | layout polish | typography pass | premium UI | minimalist UI | soft UI"
-upstream: Leonxlnx/taste-skill@latest (install names: design-taste-frontend, high-end-visual-design, minimalist-ui, imagegen-frontend-web)
-version: 0.1.0
+upstream: "Leonxlnx/taste-skill@latest (install names: design-taste-frontend, high-end-visual-design, minimalist-ui, imagegen-frontend-web)"
+version: 0.1.2
 owner: Justin
 ---
 
@@ -55,5 +55,6 @@ VARIANCE: medium | MOTION: low | DENSITY: medium
 ```
 
 ## Changelog
+- 0.1.2 — quoted the upstream metadata so the active skill frontmatter parses as valid YAML.
 - 0.1.0 — initial proposal (2026-06-11), approved by Justin.
 - 0.1.1 — promoted to active 2026-06-12 (commit 3f421eb).

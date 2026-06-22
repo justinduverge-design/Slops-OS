@@ -1,6 +1,6 @@
 # Layer 2 — Corvus (active product)
 
-**Path:** `C:\Users\JDuve\OneDrive\Desktop\SLOPS\slops-saloon\corvus\`
+**Path:** `<git-root>/slops-saloon/corvus/`
 
 **In scope:**
 

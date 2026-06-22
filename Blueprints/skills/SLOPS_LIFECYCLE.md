@@ -12,7 +12,7 @@ When you ask "what skill or playbook handles X?" or "what should we build next?"
 - **Type:** `skill` = reusable workflow (`Blueprints/skills/<name>/SKILL.md`); `playbook`/`runbook`
   = procedural how-to (`Blueprints/playbooks/`); `template` = reusable shell (`Blueprints/templates/`);
   `doctrine` = a rule doc agents read.
-- **Status:** `have` / `partial` / `gap`.
+- **Status:** `have` / `partial` / `gap` / `parked`.
 - All Slops-authored skills live **flat** under `Blueprints/skills/` and are indexed in
   `SKILL_ROUTING.md`. This map groups them by phase for reasoning; the folder stays flat for lookup.
 - Every skill keeps the Slops contract: **Claude plans / Codex executes / Justin gates.**
@@ -23,7 +23,7 @@ When you ask "what skill or playbook handles X?" or "what should we build next?"
 |---|-------|------------------|------|--------|
 | 1 | **Frame** — research + decide | `pre-build-research`, `dbs-research-to-architecture-router` | skill | have |
 | 2 | **Plan** — goal → spec + ordered backlog | `planning-pass` (+ `Blueprints/specs/*`) | skill | have |
-| 3 | **Build** — pull item → build → done | kickoff prompts + `definition-of-done.md` + `HOW-TO-RUN-THE-LOOP.md` | doctrine | have |
+| 3 | **Build** — pull item → vertical red/green slices → done | `slops-tdd` + kickoff prompts + `definition-of-done.md` + `HOW-TO-RUN-THE-LOOP.md` | skill+doctrine | have |
 | 4 | **Version** — scoped branch/commit/PR | `slops-git-flow` | skill | have |
 | 5 | **Review** — code + security before merge | `slops-code-review` | skill | have |
 | 6 | **Quality** — health gate that ratchets | `slops-quality-baseline` | skill | have |
@@ -47,6 +47,9 @@ These are net-new SLOPS utilities that support the lifecycle but do not replace 
 | **Legal** | `compliance-by-template` | wrapper skill | have | Drafts launch-required legal documents from approved open-agreements templates; pairs with `slops-legal-spot-check` for triage and still requires Justin/counsel review where flagged. |
 | **Context discipline** | `slops-headroom` | wrapper skill | have | Compresses large tool outputs before they enter model context; install remains Justin-side and local-only network behavior must be audited on first use. |
 | **Ingest** | `slops-markitdown` | wrapper skill | have | Converts local documents and media into Markdown for research/build-loop intake; Azure and paid API passes stay forbidden unless explicitly approved. |
+| **Personal learning loop** | `slops-learning-loop` | simple skill | parked | Reactivate after Corvus passes Release Done and has a stable seven-day product pulse; first use is a technology-choice learning and in-season improvement cycle. |
+| **Community needs and resource research** | `slops-community-needs-research` | simple skill | parked | Far-future product discovery only; Justin must explicitly name the community, geography, need, and decision before reactivation. |
+| **Product readiness / gap analysis** | `product-gap-analysis-session` | simple skill | have | Verifies current code and facts, then separates Have/Need/Gap and routes a phased plan; registered 2026-06-21 after an index-drift audit. |
 
 Notes:
 - `slops-legal-spot-check` is active as pre-counsel triage support. It flags legal/compliance risk before publication but does not replace counsel or claim a lifecycle phase.
@@ -85,12 +88,13 @@ This is the decision record Codex uses to finish its skill migration (its Step 1
 1. **Authored** with `slops-skill-author` against `Blueprints/skills/_template/SKILL.md` (Claude drafts).
 2. **Registered** as a row in `SKILL_ROUTING.md`.
 3. **Recorded** by flipping its status in this map.
-4. **Installed** into Codex's skill dir via the Codex migration pass when Codex needs it.
+4. **Distributed** to both runtime skill dirs after approval, backup, and canonical-to-runtime hash verification.
 
 **Order (waves):**
 - **Wave 1 — strengthen the live app:** `slops-code-review`, `slops-canary` — **DONE 2026-06-08.**
 - **Wave 2 — compound + release flow:** `slops-ship`, `slops-retro` — **DONE 2026-06-08.**
 - **Wave 3 — depth:** `slops-investigate`, `slops-verify`, and context-save/restore folded into `clean-up-checkpoint` — **DONE 2026-06-08.**
+- **Wave 4 — evidence quality:** `slops-tdd` and targeted author/investigate/review upgrades — **DONE 2026-06-21.** `slops-learning-loop` and `slops-community-needs-research` were authored, then parked by Justin on 2026-06-21.
 
 Each new skill keeps plan-only / measure-only boundaries where applicable and never deploys, edits secrets, or touches production without Justin.
 
@@ -109,9 +113,10 @@ Rules:
 - The Codex migration pass (`Blueprints/prompts/codex-skill-migration.md`) performs the initial
   install into both dirs and is governed by the Keep/Replace/Drop record above.
 
-**Shared set (install to both agents now):** `planning-pass`, `slops-git-flow`,
-`slops-quality-baseline`, `slops-ui-ux-audit`, `slops-ux-copy`, `clean-up-checkpoint`, `slops-repo-inspector`, `slops-code-review`, `slops-canary`, `slops-ship`, `slops-retro`, `slops-investigate`, `slops-verify`, `slops-graphify`. Wave 1–3
-skills join the shared set as each is authored.
+**Shared set:** every canonical package whose routing status is `active` or `paired-with`, unless its
+own contract records an explicit runtime exception. Retired rows are never installed. This rule keeps
+the two runtimes deterministic as the skill set grows and replaces the stale hand-maintained list.
+Parked skills remain canonical but are removed from runtime skill directories until their gate opens.
 
 ## Open follow-ups (2026-06-08)
 
@@ -133,6 +138,16 @@ Batch-promoted 11 proposals from `_proposals/` to active skills (registered in `
 - **Eng planning/QA:** `slops-ai-integration-review`, `slops-data-ingest-plan`, `slops-mobile-smoke`, `slops-product-pulse`.
 
 Still parked in `_proposals/`: `slops-lore-review` (needs animated-series concept; seed in `series-seed.md`). Plan docs retained: `pm-skills-harvest-plan.md` (executed), `slops-graphify-v2-smoke-test.md`.
+
+## Acquisition and distribution — 2026-06-21
+
+- Added `slops-learning-loop`, adapted from `mattpocock/skills` `teach`.
+- Added `slops-community-needs-research`, adapted from `coreyhaines31/marketingskills` customer/community research patterns.
+- Added `slops-tdd`, adapted from `mattpocock/skills` TDD doctrine.
+- Upgraded `slops-skill-author`, `slops-investigate`, and `slops-code-review` with invocation economics, red-capable feedback loops, and a safeguarded simplicity pass.
+- Registered the existing `product-gap-analysis-session` skill, which was active in frontmatter but absent from both indexes.
+- Reconciled the restored upstream `strategy-red-team` as a reference pattern only; no source repository, plugin, hooks, or dependency was installed.
+- Later the same day, Justin parked `slops-learning-loop` until Corvus is live plus seven stable days and parked `slops-community-needs-research` until explicit far-future product discovery.
 
 ## Maintenance
 

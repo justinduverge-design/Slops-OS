@@ -1,6 +1,6 @@
 # Layer 0 — SLOPS OS root
 
-**Path:** `C:\Users\JDuve\OneDrive\Desktop\SLOPS\`
+**Path:** active Git root (`git rev-parse --show-toplevel`)
 
 **In scope:**
 

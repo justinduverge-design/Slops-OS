@@ -1,4 +1,4 @@
-<!-- reference-only | source: phuryn/pm-skills (MIT) pm-execution/skills/{prioritization-frameworks,wwas} | harvested 2026-06-20 | combined per Justin 2026-06-20 (substitute for removed strategy-red-team slot) -->
+<!-- reference-only | source: phuryn/pm-skills (MIT) pm-execution/skills/{prioritization-frameworks,wwas} | harvested 2026-06-20 | combined per Justin 2026-06-20 | distinct from the restored strategy-red-team reference -->
 
 # Prioritization Frameworks + Why-What-Acceptance (WWA)
 

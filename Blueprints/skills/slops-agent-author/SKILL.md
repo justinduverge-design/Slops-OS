@@ -48,7 +48,7 @@ For skill files, use `slops-skill-author`.
 Reusable SLOPS agent roles live under:
 
 ```text
-C:\Users\JDuve\OneDrive\Desktop\SLOPS\Blueprints\agents
+Blueprints/agents/
 ```
 
 Imported third-party agents should be quarantined or marked as candidate/reference material under:
@@ -62,7 +62,7 @@ Project-specific app agents should live closer to the project.
 For Corvus / slops-saloon-specific agents, prefer:
 
 ```text
-C:\Users\JDuve\OneDrive\Desktop\SLOPS\slops-saloon\Blueprints\agents
+slops-saloon/Blueprints/agents/
 ```
 
 unless Justin explicitly decides they should be reusable global agents.

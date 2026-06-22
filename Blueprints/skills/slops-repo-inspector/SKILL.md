@@ -6,7 +6,7 @@ skill_type: simple
 layer: 0
 default_agent: Codex
 trigger: none
-version: 0.2.0
+version: 0.2.1
 upstream: none
 owner: Justin
 ---
@@ -21,11 +21,12 @@ Use this skill to prevent stale-path drift, especially old pre-DBS instructions 
 
 ## Canonical Paths
 
-- L0 workspace: `C:\Users\JDuve\OneDrive\Desktop\SLOPS`
-- L1 Slops Saloon division: `C:\Users\JDuve\OneDrive\Desktop\SLOPS\slops-saloon`
-- L2 Corvus app repo: `C:\Users\JDuve\OneDrive\Desktop\SLOPS\slops-saloon\corvus`
-- Canonical SLOPS skills: `C:\Users\JDuve\OneDrive\Desktop\SLOPS\Blueprints\skills\<name>\SKILL.md`
-- Codex-installed skills: `C:\Users\JDuve\.codex\skills\<name>\SKILL.md`
+- L0 workspace: the path returned by `git rev-parse --show-toplevel`
+- L1 Slops Saloon division: `<git-root>/slops-saloon/`
+- L2 Corvus app repo: `<git-root>/slops-saloon/corvus/`
+- Canonical SLOPS skills: `<git-root>/Blueprints/skills/<name>/SKILL.md`
+- Codex-installed skills: `$HOME/.codex/skills/<name>/SKILL.md`
+- Claude-installed skills: `$HOME/.claude/skills/<name>/SKILL.md`
 
 Avoid archived, quarantined, imported, or old `ssffmvp` copies unless Justin explicitly asks to reconcile history.
 
@@ -72,9 +73,9 @@ Root `context.md` is a legacy orientation snapshot, not the active queue. Curren
    - `git branch --show-current`
    - `git rev-parse --show-toplevel`
 2. If the task touches Corvus, confirm the app repo separately:
-   - `git -C C:\Users\JDuve\OneDrive\Desktop\SLOPS\slops-saloon\corvus status --short`
-   - `git -C C:\Users\JDuve\OneDrive\Desktop\SLOPS\slops-saloon\corvus branch --show-current`
-   - `git -C C:\Users\JDuve\OneDrive\Desktop\SLOPS\slops-saloon\corvus rev-parse --show-toplevel`
+   - `git -C slops-saloon/corvus status --short`
+   - `git -C slops-saloon/corvus branch --show-current`
+   - `git -C slops-saloon/corvus rev-parse --show-toplevel`
 3. Classify the DBS layer before reading broadly:
    - L0: cross-cutting doctrine, skills, agents, prompts, tools, operating rules.
    - L1: Slops Saloon division strategy, brand/content/marketing, future products.
@@ -117,5 +118,6 @@ Report:
 
 ## Change Log
 
+- 0.2.1 - Replaced machine-specific workspace paths with Git-root-relative paths and added the Claude runtime mirror.
 - 0.2.0 - Canonicalized in `Blueprints/skills`, updated L0/L1/L2 routing, removed pre-DBS root roadmap/manifesto/handoff read-list assumptions, and defined the installed-skill sync rule.
 - 0.1.0 - Installed Codex-only repo inspection helper.

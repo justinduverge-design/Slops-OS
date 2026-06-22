@@ -106,7 +106,7 @@ For `slops-saloon` app checkpoints:
 
 For SLOPS-authored skills:
 
-- `C:\Users\JDuve\OneDrive\Desktop\SLOPS\Blueprints\skills`
+- `Blueprints/skills/`, resolved from the active Git root
 
 For security/privacy tracking:
 

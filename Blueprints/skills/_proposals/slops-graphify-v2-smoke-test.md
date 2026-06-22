@@ -19,7 +19,7 @@ Understand-Anything is a fuller engine than graphify:
 Run BOTH tools on the SAME two targets, compare outputs side-by-side.
 
 ### Targets
-- **Target A:** SLOPS root (`C:\Users\JDuve\OneDrive\Desktop\SLOPS\`) — L0 doctrine pass.
+- **Target A:** active Git root (`git rev-parse --show-toplevel`) — L0 doctrine pass.
 - **Target B:** `slops-saloon/corvus/` — L2 code pass (166 code files per the existing `slops-graphify` smoke test).
 
 ### Procedure

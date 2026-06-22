@@ -1,5 +1,7 @@
 # Claude Session — SLOPS Skills & Playbooks Acquisition
 
+> **Status: superseded.** This 2026-06-11 prompt preserves the earlier acquisition run and its old OneDrive paths. For the current acquisition, two-agent distribution, verification, and usage/gap audit workflow, use `Blueprints/prompts/skills-acquisition-distribution-session.md`.
+
 **Purpose:** Open a separate Claude chat dedicated to finding, evaluating, and onboarding new skills, playbooks, and patterns that make the Slops OS stronger. Run this in parallel with the Corvus Phase 1 build so capability expansion doesn't bottleneck on the build loop.
 
 **How to use:** Open a new Claude Code session in `C:\Users\JDuve\OneDrive\Desktop\SLOPS\`. Paste the block below as the first message. Keep this session running alongside the Corvus build session.

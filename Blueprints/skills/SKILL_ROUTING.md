@@ -4,10 +4,10 @@ This file categorizes SLOPS capabilities so Justin knows which agent, skill, and
 
 This is not a `SKILL.md` file. It is the routing matrix for Claude, Codex, SLOPS-authored skills, and SLOPS-authored agents.
 
-Canonical location:
+Canonical location, relative to the active Git root:
 
 ```text
-C:\Users\JDuve\OneDrive\Desktop\SLOPS\Blueprints\skills\SKILL_ROUTING.md
+Blueprints/skills/SKILL_ROUTING.md
 ```
 
 Related files:
@@ -44,9 +44,9 @@ SLOPS uses three operating layers. This matches the company structure: a parent 
 
 | Layer | Name | Org Role | Meaning | Typical Root |
 |---|---|---|---|---|
-| Layer 0 | SLOPS | Parent company / operating system | Company-level operating doctrine, reusable skills, reusable agents, cross-division handoffs, founder context. Everything below inherits from here. | `C:\Users\JDuve\OneDrive\Desktop\SLOPS` |
-| Layer 1 | Slops Saloon | Subsidiary | The subsidiary that builds fantasy sports apps. Division strategy, product portfolio, brand/naming standards, future product slots. No app implementation. | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\slops-saloon` |
-| Layer 2 | Corvus | First app | The first app shipped by Slops Saloon. App source, backend, frontend, tests, Docker/deploy, product specs, handoffs, prompts, and product runtime logic. | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\slops-saloon\corvus` |
+| Layer 0 | SLOPS | Parent company / operating system | Company-level operating doctrine, reusable skills, reusable agents, cross-division handoffs, founder context. Everything below inherits from here. | active Git root |
+| Layer 1 | Slops Saloon | Subsidiary | The subsidiary that builds fantasy sports apps. Division strategy, product portfolio, brand/naming standards, future product slots. No app implementation. | `slops-saloon/` |
+| Layer 2 | Corvus | First app | The first app shipped by Slops Saloon. App source, backend, frontend, tests, Docker/deploy, product specs, handoffs, prompts, and product runtime logic. | `slops-saloon/corvus/` |
 
 Use the highest reusable layer that is safe.
 
@@ -68,7 +68,7 @@ Do not place app implementation work in Layer 1 (Slops Saloon). The division lay
 
 ## Current SLOPS Skills
 
-> **Read the Status column first.** Values: `active` (default usable skill), `paired-with: <name>` (Slops skill is the default for its role, but the named external skill remains valid in another role — see Purpose cell for which role), `retired: YYYY-MM-DD` (do not use), `proposed` (not yet authored).
+> **Read the Status column first.** Values: `active` (default usable skill), `paired-with: <name>` (Slops skill is the default for its role, but the named external skill remains valid in another role — see Purpose cell for which role), `parked: <gate>` (authored and retained, but do not invoke or distribute until the named gate opens), `retired: YYYY-MM-DD` (do not use), `proposed` (not yet authored).
 >
 > **"Replaces" in the Purpose column** is descriptive history, not status — read Status to decide whether to use a skill, read Purpose for context. When the replaced item is an external SaaS or banned tool (Termly, SaaS Sentry/Plausible/Datadog), it is retired. When the replaced item is an external skill with utility in a different role (`ui-ux-pro-max`), Status carries `paired-with: <name>`.
 
@@ -87,11 +87,15 @@ Do not place app implementation work in Layer 1 (Slops Saloon). The division lay
 | `security-privacy-evidence` | Claude first, Codex if writing files | `Layer 0` or project layer when scoped | `active` | Maintain security/privacy evidence notes, control mappings, data classification, consent boundaries, and approval records. |
 | `command-bridge-generator` | Claude first, Codex if writing files | `Layer 0` | `active` | Generate approved Claude and Codex command-bridge shim files from `SKILL_ROUTING.md` and `AGENT_INDEX.md`. |
 | `pre-build-research` | Claude / ChatGPT research first, Codex later | `Layer 0` or project layer when scoped | `active` | Research external APIs, data sources, and integrations before any build prompt. |
+| `slops-community-needs-research` | Claude researches; Codex writes approved artifacts | `Layer 0` or division/project layer when scoped | `parked: future-community-product` | Retained for a far-future community-information/basic-needs product. Do not invoke until Justin explicitly opens discovery with a named community, geography, need, and decision. |
+| `slops-learning-loop` | Claude teaches; Codex verifies technical practice when requested | `Layer 0` | `parked: Corvus-live-plus-7-days` | After Corvus is live and stable, teach why its technology was chosen and use operating evidence to improve it before season end. |
 | `clean-up-checkpoint` | Claude first, Codex if writing files | `Layer 0` | `active` | Stop new work and create a rate-limit-safe checkpoint with next prompt. |
 | `dbs-research-to-architecture-router` | Claude first, Codex if writing files | `Layer 0` | `active` | Convert research packets and critic reviews into modular DBS outputs: reference patterns, reviews, decisions, specs, skill drafts, and handoff prompts. |
 | `slops-markdown-authoring` | — | `Layer 0` | `retired` | Merged into `slops-context-markdown` (2026-06-20): Source Integrity Principle, Pruning Rules, and work-classification doctrine folded into the canonical markdown skill. Use `slops-context-markdown`. |
 | `slops-repo-inspector` | Codex first, Claude if planning | `Layer 0` | `active` | Inspect SLOPS L0, Slops Saloon L1, and Corvus L2 repo truth before planning or editing: source-of-truth docs, DBS routing, git state, canonical skill authority, and stale path cleanup. |
 | `planning-pass` | Claude first, Codex if writing files | `Layer 0` (writes into target product queue) | `active` | Turn a goal into ordered, buildable backlog items (P#/FP#) in a product's `current_sprint.md`, each with a spec link and explicit done-when; respects dependencies. Plans only — never builds. |
+| `product-gap-analysis-session` | Claude analyzes; Codex writes only when approved | `Layer 0` (analyzes a target product or division) | `active` | Ground a product-readiness session in code and current facts, separate Have/Need/Gap, and produce a phased approval-gated plan without implementing it. |
+| `slops-tdd` | Codex implements; Claude may define acceptance behavior | `Layer 0` (writes in the approved target repo) | `active` | Build one vertical red-green-refactor behavior slice at a time through a fast deterministic test; no deploys, installs, or unrelated refactors. |
 | `slops-git-flow` | Claude plans, Codex/Justin execute | `Layer 0` (operates on product repo) | `active` | One scoped branch + PR per sprint item, explicit-path commits (never `git add -A`), light stacking for blocked items; push/merge gated to Justin. Replaces external stacking tools. |
 | `slops-quality-baseline` | Claude plans, Codex runs checks | `Layer 0` (operates on product repo) | `active` | Record code-health signals (tests, audit, build, diff --check) as a ratcheting baseline and gate merges/deploys against it. Replaces external baseline tooling. |
 | `slops-ui-ux-audit` | Claude (frontend) reviews | `Layer 0` (audits product frontend) | `paired-with: ui-ux-pro-max` | Audit screens/components against the AAA framework, `brand-system.md`, and design-system v1 — states, 44px, motion-reduce, ARIA, contrast, token consistency, voice, mock/live. Severity-ranked findings; fixes route through the loop. **Replaces `ui-ux-pro-max` in the audit/verdict role only.** `ui-ux-pro-max` remains the external design-intelligence library (palettes, font pairings, UX patterns) and is still the default while *creating* new design — use it for Phase 1.3-style spec work and palette/typography decisions. Pair with `design:design-system` when writing a design-system or page-system spec. |
@@ -513,6 +517,7 @@ When unsure, start with Claude.
 | `baseline math \| nflverse \| proprietary math \| ADP math \| Omen math` | `Blueprints/playbooks/proprietary-math-stack-playbook.md` | Approved doctrine: nflverse owns baseline math; Slops owns the opinion layer. |
 | `STRATEGY.md \| product strategy anchor` | `Blueprints/patterns/STRATEGY-md-pattern.md` | Reusable product strategy anchor pattern; not an active skill. |
 | `slops-graphify v2 \| Understand-Anything \| graphify smoke test` | `Blueprints/skills/_proposals/slops-graphify-v2-smoke-test.md` | upstream swap candidate; do not act on without Justin running the side-by-side smoke test first. |
+| `strategy red team \| challenge this strategy \| load-bearing assumptions` | `References/patterns/pm-skills/strategy-red-team.md` | Reference-only adversarial strategy pattern harvested from `phuryn/pm-skills`; pair with the relevant planning/review skill rather than installing the full PM suite. |
 
 ### Auth, Payment, Secrets, Cookies, or User Data
 

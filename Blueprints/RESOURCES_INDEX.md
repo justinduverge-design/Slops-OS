@@ -1,6 +1,6 @@
 # SLOPS Resources Index
 
-**valid-as-of:** 2026-06-15
+**valid-as-of:** 2026-06-21
 **Purpose:** the single "what's in the toolbox" file. Every wrapper's section 4 (Capabilities Available) points here. Before claiming a capability doesn't exist, **read this file**.
 
 ## How to read
@@ -9,7 +9,7 @@ This index is the *aggregator*. Each section points to its authoritative source.
 
 ## Skills
 
-**Authoritative:** `Blueprints/skills/SKILL_ROUTING.md` — 48 skills, **Status column first** (legend at top of file). Skill lifecycle: `Blueprints/skills/SLOPS_LIFECYCLE.md`. Skill template: `Blueprints/skills/_template/SKILL.md`.
+**Authoritative:** `Blueprints/skills/SKILL_ROUTING.md` — 52 registered entries: 48 active, 1 paired, 2 parked, and 1 retired. There are 51 canonical packages because the retired package is intentionally absent. **Read the Status column first.** Parked packages stay canonical but are not runtime-distributed until their gates open. Skill lifecycle: `Blueprints/skills/SLOPS_LIFECYCLE.md`. Skill template: `Blueprints/skills/_template/SKILL.md`.
 
 **Index for browsing:** `Blueprints/skills/SKILL_INDEX.md` (short list of skill names).
 
@@ -77,7 +77,7 @@ Only Justin, Claude, and Codex are first-class agents. Other "agents" in the ind
 1. Read `Direction/facts-of-record.md` first — overrides anything older.
 2. Read `Direction/decision_log.md` last 5 entries.
 3. Check `Blueprints/skills/SLOPS_LIFECYCLE.md` for recently added or retired skills.
-4. Scan `Blueprints/skills/SKILL_ROUTING.md` Status column for new `active` rows or `paired-with:` entries.
+4. Scan `Blueprints/skills/SKILL_ROUTING.md` Status column for `active`, `paired-with:`, `parked:`, and retired entries before invoking or distributing anything.
 5. Run `ToolSearch { query: "<task-keyword>", max_results: 10 }` to see what MCPs / plugins surface today.
 
 ## How to retire / add a resource
