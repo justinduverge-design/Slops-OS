@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Define the reduced MVP app strategy for Slops OS and Corvus planning.
+Define the reduced MVP app strategy for Slops OS and Omen planning.
 
 This is a flexible architecture spec. It is not an implementation plan, feature spec, production infrastructure plan, database migration plan, or app store submission plan.
 

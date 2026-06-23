@@ -59,8 +59,8 @@ Tier 2 - read, analyze, draft, and recommend only.
 
 ## Must Not Write To
 
-- `slops-saloon\corvus\src\`
-- `slops-saloon\corvus\sql\`
+- `slops-saloon\omen\src\`
+- `slops-saloon\omen\sql\`
 - `.env`, `.key`, credentials, secrets, tokens, cookies
 - AI provider configs, auth, payment, database, production, deployment, or infrastructure files
 

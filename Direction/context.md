@@ -13,25 +13,25 @@ This layer is broader than any single repo or product.
 ```text
 SLOPS/                 Layer 0 - operating system
 slops-saloon/          Layer 1 - Slops Saloon division
-slops-saloon/corvus/   Layer 2 - Corvus product repo
+slops-saloon/omen/   Layer 2 - Omen product repo
 ```
 
 ## Current Truth
 
 - Slops Saloon is the sports, music, and arts division.
-- Corvus is the only active product.
-- Corvus is the Fantasy Football MVP.
-- Corvus is the active git repo for app work.
-- GitHub repo: `justinduverge-design/corvus`.
-- Oracle checkout: `~/corvus`.
+- Omen is the only active product.
+- Omen is the Fantasy Football MVP.
+- Omen is the active git repo for app work.
+- GitHub repo: `justinduverge-design/omen`.
+- Oracle checkout: `~/omen`.
 
 ## Current Product Signal — 2026-05-27
 
-- Corvus backend contract work advanced through frontend handoff Requests 13-18.
+- Omen backend contract work advanced through frontend handoff Requests 13-18.
 - Local backend test baseline is now 216/216 passing.
 - New local contracts: `GET /api/system/current-week` and `GET /api/stripe/prices`.
 - Prepared, but did not apply, Supabase launch SQL for `waitlist_signups`, `subscriptions.trial_ends_at`, and `subscriptions.current_period_end`.
-- Legacy Corvus compatibility routes now fail closed with `410 legacy_route_retired`.
+- Legacy Omen compatibility routes now fail closed with `410 legacy_route_retired`.
 - Any Supabase migration, Stripe live validation, deploy, DNS, SSL, Nginx, or production infrastructure action still requires explicit Justin approval.
 
 ## DBS Meaning
@@ -46,8 +46,8 @@ slops-saloon/corvus/   Layer 2 - Corvus product repo
 
 - Company-wide or reusable operating decisions belong at the SLOPS OS layer.
 - Slops Saloon division decisions belong in `slops-saloon/Direction/`.
-- Corvus product decisions belong in `slops-saloon/corvus/Direction/`.
-- Corvus frontend/backend handoffs belong in `slops-saloon/corvus/Blueprints/handoffs/`.
+- Omen product decisions belong in `slops-saloon/omen/Direction/`.
+- Omen frontend/backend handoffs belong in `slops-saloon/omen/Blueprints/handoffs/`.
 
 ## Skill Routing
 
@@ -77,13 +77,13 @@ Do not treat archive, imported agents, or old project copies as current authorit
 
 SLOPS is now explicitly a **multi-division** operating system, not a single-product company.
 
-- **Division 1 — Slops Saloon:** sports/media products. Corvus is its first product.
-- **Division 2 (planned) — local web/app services:** a future Layer-1 division that helps local businesses build/improve sites and apps. Built from Corvus experience. **Not started.** Sequenced after Corvus gains traction to protect focus.
+- **Division 1 — Slops Saloon:** sports/media products. Omen is its first product.
+- **Division 2 (planned) — local web/app services:** a future Layer-1 division that helps local businesses build/improve sites and apps. Built from Omen experience. **Not started.** Sequenced after Omen gains traction to protect focus.
 
 Operating doctrine confirmed this pivot:
 
-- **Ship the first product free first.** Corvus is free for everyone in Year 1 to build trust, an audience, and bug feedback; monetize in Year 2. Don't charge for something still rough.
+- **Ship the first product free first.** Omen is free for everyone in Year 1 to build trust, an audience, and bug feedback; monetize in Year 2. Don't charge for something still rough.
 - **Sequence divisions, don't parallelize them solo.** A second business starts only after the first has traction.
 - **Infra doctrine — separate critical from non-critical.** The must-stay-up product runs on its own machine; models, agents, and experiments run on a different machine where wobble is harmless.
 
-Full decision record: `Direction/decisions/2026-06-06-slops-os-multi-division-pivot.md`. Product/business specifics live at Layer 1 (`slops-saloon/Direction/`) and Layer 2 (`slops-saloon/corvus/Direction/`).
+Full decision record: `Direction/decisions/2026-06-06-slops-os-multi-division-pivot.md`. Product/business specifics live at Layer 1 (`slops-saloon/Direction/`) and Layer 2 (`slops-saloon/omen/Direction/`).

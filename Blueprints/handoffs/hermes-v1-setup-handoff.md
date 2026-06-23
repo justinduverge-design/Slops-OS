@@ -12,7 +12,7 @@
 | Local Hermes model | **qwen3:14b** on Justin's desktop via local Ollama |
 | Local Hermes role | Folder caretaker + chief of staff. Phase 1: maintain and learn. Phase 2 (locked): help build departments. |
 | KVM2 models | Cleaned to `gemma3:4b` only. Removed `qwen2.5:7b-instruct-q4_K_M` and `qwen2.5-hermes:7b`. |
-| Corvus LLM | `gemma3:4b` on KVM2 for all four functions (`explainTrade`, `explainStartSit`, `explainOmenMvpMove`, `runAgent`). Fallback-to-numbers unchanged. |
+| Omen LLM | `gemma3:4b` on KVM2 for all four functions (`explainTrade`, `explainStartSit`, `explainOmenMvpMove`, `runAgent`). Fallback-to-numbers unchanged. |
 | Command model | `Me decides → Local Hermes directs → Claude designs → Codex builds` |
 
 ---
@@ -50,15 +50,15 @@
 - Department creation (Phase 2, locked)
 - Canon edits without approval
 - Any git operations
-- Touch Corvus source or Direction/decisions/
+- Touch Omen source or Direction/decisions/
 
 ---
 
 ## Unresolved Questions
 
-- **Cloud Hermes future:** Paused, not cancelled. If Justin wants outside intelligence for Corvus business strategy, the path is a direct free API (Google AI Studio / Groq) rather than Ollama `:cloud`. No files to pick up — would start fresh.
+- **Cloud Hermes future:** Paused, not cancelled. If Justin wants outside intelligence for Omen business strategy, the path is a direct free API (Google AI Studio / Groq) rather than Ollama `:cloud`. No files to pick up — would start fresh.
 - **Phase 2 gate:** No criteria defined yet for when Local Hermes graduates from Phase 1 (maintain) to Phase 2 (build departments). Justin opens it explicitly — no automatic trigger.
-- **Corvus LLM timeout test:** `gemma3:4b` is the selected model for Corvus but inference speed on KVM2's 2vCPU has not been tested against the 30s/60s timeout. Worth a quick test before relying on it.
+- **Omen LLM timeout test:** `gemma3:4b` is the selected model for Omen but inference speed on KVM2's 2vCPU has not been tested against the 30s/60s timeout. Worth a quick test before relying on it.
 - **Local Hermes first run:** Has not yet run a folder health scan. First session should be a full SLOPS tree scan to establish a baseline.
 
 ---

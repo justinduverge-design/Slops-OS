@@ -1,4 +1,4 @@
-# Corvus — Features & UX Roadmap Handoff
+# Omen — Features & UX Roadmap Handoff
 _Last updated: 2026-05-29 (session 4 — hamburger nav, team theme page, HITL feedback card, nflTeams.js)_
 
 ---
@@ -18,10 +18,10 @@ Now we build on a polished foundation, not a rough one.
 
 ---
 
-## Three Features from the Original Prototype to Build Into Corvus
+## Three Features from the Original Prototype to Build Into Omen
 
-These exist in `client/App.jsx` (the original Corvus app, formerly named SSFFMVP). They are proven in design.
-They need to be rebuilt in the Corvus frontend (`frontend/src/`) with real backend wiring,
+These exist in `client/App.jsx` (the original Omen app, formerly named SSFFMVP). They are proven in design.
+They need to be rebuilt in the Omen frontend (`frontend/src/`) with real backend wiring,
 not mock data.
 
 ### 1. HITL Feedback Loop (Human-in-the-Loop)
@@ -129,7 +129,7 @@ Full page at `/account/appearance` (ProtectedRoute). Data in `frontend/src/data/
 | Scheme | Teams | Reasoning |
 | :--- | :--- | :--- |
 | Color rush | LAC (powder blue), TEN (sky blue), CLE (orange), NE (red), NYJ (Kelly Green) | Fan-beloved alternative to standard uniform |
-| Secondary swap | PIT (gold), LV (silver), CHI (orange), HOU (red), SEA (neon green), GB (gold), WAS (gold), NYG (red), LAR (bone gold) | Standard primary too dark for Corvus dark UI |
+| Secondary swap | PIT (gold), LV (silver), CHI (orange), HOU (red), SEA (neon green), GB (gold), WAS (gold), NYG (red), LAR (bone gold) | Standard primary too dark for Omen dark UI |
 | Standard | All other 18 teams | Primary color is bright enough; textSafe lifts if needed |
 
 Backend needed: `PATCH /api/account/preferences` + `profiles.favorite_team` column (Justin approval required).
@@ -166,7 +166,7 @@ Surfaced by `/ui-ux-pro-max-skill` across Landing, Login, Account, and Omen page
 6. ✅ Plan card `purple-*` tokens → `var(--color-accent)` / `var(--color-accent-hover)`.
 
 ### OmenPage.jsx
-- ✅ "Corvus Pro" label: `text-purple-300` → `text-[var(--color-accent)]`.
+- ✅ "Omen Pro" label: `text-purple-300` → `text-[var(--color-accent)]`.
 - ✅ Back-link: inline-style color → Tailwind CSS-var class; hover + focus-visible ring added.
 
 ### All pages

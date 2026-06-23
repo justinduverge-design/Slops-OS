@@ -1,11 +1,11 @@
 ---
 name: slops-community-needs-research
-description: Future-product workflow for researching community needs, existing resources, and verified service or information gaps. Parked until Justin explicitly starts the post-Corvus community-product discovery phase; prioritizes consent, privacy, freshness, dissent, and measurable help.
+description: Future-product workflow for researching community needs, existing resources, and verified service or information gaps. Parked until Justin explicitly starts the post-Omen community-product discovery phase; prioritizes consent, privacy, freshness, dissent, and measurable help.
 status: parked
 skill_type: simple
 layer: Layer 0
 default_agent: Claude researches and synthesizes; Codex writes approved artifacts or validates data flows
-trigger: explicitly start future community-product discovery after Corvus baseline work
+trigger: explicitly start future community-product discovery after Omen baseline work
 version: 0.2.0
 upstream: Adapted from coreyhaines31/marketingskills customer-research and community-marketing (MIT), inspected 2026-06-21
 owner: SLOPS
@@ -19,14 +19,14 @@ Ground community-facing products in verified needs, current resources, and direc
 
 ## When to Use
 
-- Only when Justin explicitly opens the future community-product discovery phase after Corvus baseline work.
+- Only when Justin explicitly opens the future community-product discovery phase after Omen baseline work.
 - Before designing an app that informs a community or connects people to necessities.
 - Map existing services, eligibility, hours, language/accessibility support, and failure points.
 - Validate whether an information problem, coordination problem, or actual service-capacity gap exists.
 
 ## Do Not Use
 
-- During current Corvus delivery or post-live Corvus learning work.
+- During current Omen delivery or post-live Omen learning work.
 - Scrape, profile, rank, or target vulnerable people.
 - Promise aid, eligibility, availability, safety, or response times that providers have not verified.
 - Contact communities or providers, publish results, or collect personal data without approval and consent.

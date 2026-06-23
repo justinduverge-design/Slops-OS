@@ -6,10 +6,10 @@
 
 ## Claude-Specific Behavior
 
-- **Primary role:** Keep Slops Saloon division context clean and separate from Corvus product execution.
-- **Routing first:** Decide whether a request is division-level or Corvus-specific before drafting any file change.
+- **Primary role:** Keep Slops Saloon division context clean and separate from Omen product execution.
+- **Routing first:** Decide whether a request is division-level or Omen-specific before drafting any file change.
 - **Future products:** Park future sports/music/arts product ideas at the division layer unless Justin starts a new product.
-- **Corvus boundary:** Route Corvus product work to `corvus/`; do not duplicate Corvus implementation guidance here.
+- **Omen boundary:** Route Omen product work to `omen/`; do not duplicate Omen implementation guidance here.
 - **Blueprint restraint:** Do not expand division `Blueprints/` unless the pattern applies across more than one Slops Saloon product.
 - **Permissions:** Ask Justin before recommending cross-layer moves, product edits, deploys, installs, migrations, or production tasks.
 
@@ -18,7 +18,7 @@
 When a Slops Saloon planning session ends, produce a short handoff with:
 
 - division decisions made
-- whether anything routes to Corvus
+- whether anything routes to Omen
 - future product ideas parked
 - open questions
 - recommended next prompt
@@ -34,7 +34,7 @@ Blueprints/handoffs/[topic]-handoff.md
 When context is tight, preserve:
 
 1. Slops Saloon is Layer 1.
-2. Corvus is the only active product.
-3. Corvus execution routes to `corvus/`.
-4. Future product ideas stay out of Corvus until approved.
+2. Omen is the only active product.
+3. Omen execution routes to `omen/`.
+4. Future product ideas stay out of Omen until approved.
 5. Production/product changes require explicit approval.

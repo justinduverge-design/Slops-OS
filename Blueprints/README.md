@@ -17,7 +17,7 @@ Agent authority matrix lives at `Blueprints/agents/AGENT_INDEX.md`. See `Bluepri
 
 Inside `slops-saloon`, division-specific handoffs, prompts, docs, and specs live under `slops-saloon/Blueprints/`.
 
-Corvus app-specific handoffs, prompts, docs, and specs live under `slops-saloon/corvus/Blueprints/`.
+Omen app-specific handoffs, prompts, docs, and specs live under `slops-saloon/omen/Blueprints/`.
 
 ## Naming Conventions
 

@@ -12,9 +12,9 @@
 
 **Route elsewhere:**
 
-- Corvus code, deploy, tests, source → L2 (`corvus/`)
+- Omen code, deploy, tests, source → L2 (`omen/`)
 - OS-level skills / agents / doctrine → L0 (parent)
 
-**Do not** modify Corvus source, tests, deploy, package files, SQL, Docker, Stripe, or Supabase from L1. **Do not recreate** the retired nested `Corvus/` folder.
+**Do not** modify Omen source, tests, deploy, package files, SQL, Docker, Stripe, or Supabase from L1. **Do not recreate** the retired nested `Omen/` folder.
 
 **Content + marketing agent work** runs at this layer. The agents (Claude + Codex, lane-agnostic) produce; Justin directs.

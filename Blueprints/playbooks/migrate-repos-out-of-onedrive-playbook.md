@@ -7,9 +7,9 @@
 | Repo | Location now | GitHub remote | Covers |
 |------|--------------|---------------|--------|
 | SLOPS OS (L0) | `...\Desktop\SLOPS` | `https://github.com/justinduverge-design/Slops-OS.git` | Layer 0 + Layer 1 (slops-saloon) |
-| Corvus (L2) | `...\SLOPS\slops-saloon\corvus` | `https://github.com/justinduverge-design/corvus.git` | Layer 2 app |
+| Omen (L2) | `...\SLOPS\slops-saloon\omen` | `https://github.com/justinduverge-design/omen.git` | Layer 2 app |
 
-> Note: `slops-saloon/corvus` is gitignored inside the L0 repo, so the SLOPS-OS push does NOT include Corvus — that's correct, Corvus backs up to its own repo.
+> Note: `slops-saloon/omen` is gitignored inside the L0 repo, so the SLOPS-OS push does NOT include Omen — that's correct, Omen backs up to its own repo.
 
 ---
 
@@ -27,7 +27,7 @@ The repo already has commit `b7d7963` (the graphify hooks) waiting locally; it j
 
 **1a. Clear the stale locks + rebuild the corrupt index:**
 ```powershell
-cd "C:\Users\JDuve\OneDrive\Desktop\SLOPS"
+cd "C:\Users\JDuve\dev\SLOPS"
 Remove-Item .git\index.lock,.git\HEAD.lock,.git\objects\maintenance.lock,.git\index -Force -ErrorAction SilentlyContinue
 git reset            # rebuilds index from HEAD; working tree untouched
 git status           # no more "index file corrupt"
@@ -58,7 +58,7 @@ If the remote already has history that conflicts: `git pull --rebase origin mast
 ## 2. Relocate L0 out of OneDrive (after the push succeeds)
 
 ```powershell
-robocopy "C:\Users\JDuve\OneDrive\Desktop\SLOPS" "C:\Users\JDuve\dev\SLOPS" /MIR /R:1 /W:1
+robocopy "C:\Users\JDuve\dev\SLOPS" "C:\Users\JDuve\dev\SLOPS" /MIR /R:1 /W:1
 cd C:\Users\JDuve\dev\SLOPS
 git status        # same state, now living outside OneDrive
 git remote -v     # origin still points to Slops-OS.git
@@ -67,20 +67,20 @@ From now on work in `C:\Users\JDuve\dev\SLOPS`. GitHub is your real backup; demo
 
 ---
 
-## 3. Corvus (L2) — fresh clone
+## 3. Omen (L2) — fresh clone
 
-Corvus has uncommitted work on disk (graphify edits + Codex WIP). Preserve it, then clone clean.
+Omen has uncommitted work on disk (graphify edits + Codex WIP). Preserve it, then clone clean.
 ```powershell
-cd "C:\Users\JDuve\OneDrive\Desktop\SLOPS\slops-saloon\corvus"
+cd "C:\Users\JDuve\dev\SLOPS\slops-saloon\omen"
 Remove-Item .git\index.lock,.git\HEAD.lock,.git\objects\maintenance.lock -Force -ErrorAction SilentlyContinue
 git add -A
 git commit -m "wip: graphify hook + in-flight changes before relocation"
 git push origin codex/phase1-4-font-system
 
 cd C:\Users\JDuve\dev
-git clone https://github.com/justinduverge-design/corvus.git
+git clone https://github.com/justinduverge-design/omen.git
 ```
-Work in `C:\Users\JDuve\dev\corvus` going forward.
+Work in `C:\Users\JDuve\dev\omen` going forward.
 
 ---
 
@@ -89,4 +89,4 @@ Work in `C:\Users\JDuve\dev\corvus` going forward.
 - Never run git against a path under `OneDrive\` again — that's the whole point.
 - The `Archive/quarantine/...sensitive...\.git` is a quarantined repo — leave it alone.
 - Don't delete any OneDrive copy until the new repo is pushed AND `git status`/`git log` look right.
-- L0 edits → Slops-OS.git. Corvus edits → corvus.git. Separate repos.
+- L0 edits → Slops-OS.git. Omen edits → omen.git. Separate repos.

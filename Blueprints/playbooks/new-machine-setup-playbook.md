@@ -49,7 +49,7 @@ SlopsOS/
 ├── code/
 │   ├── slops-os/                 ← parent repo (github.com/justinduverge-design/Slops-OS)
 │   └── slops-saloon/
-│       └── corvus/               ← product repo (github.com/justinduverge-design/corvus)
+│       └── omen/               ← product repo (github.com/justinduverge-design/omen)
 └── docs/                         ← optional local notes
 ```
 
@@ -83,13 +83,13 @@ Both repos are **private** — you'll authenticate (PAT or `gh`/Desktop) on firs
 # from your chosen local home, e.g. ~/Developer/SlopsOS
 mkdir -p code/slops-saloon
 git clone https://github.com/justinduverge-design/Slops-OS.git code/slops-os
-git clone https://github.com/justinduverge-design/corvus.git   code/slops-saloon/corvus
+git clone https://github.com/justinduverge-design/omen.git   code/slops-saloon/omen
 ```
 
-Install corvus dependencies (root + frontend):
+Install Omen dependencies (root + frontend):
 
 ```
-cd code/slops-saloon/corvus
+cd code/slops-saloon/omen
 npm ci
 npm --prefix frontend ci
 ```
@@ -217,7 +217,7 @@ server (`sudo tailscale up --ssh`) plus an ACL rule allowing your user to SSH th
 
 ## 7. CI deploy-fallback secrets (GitHub-side, OS-agnostic)
 
-The manual Tailscale deploy fallback (`corvus/.github/workflows/deploy-kvm1-tailscale-fallback.yml`)
+The manual Tailscale deploy fallback (`omen/.github/workflows/deploy-kvm1-tailscale-fallback.yml`)
 needs these in **GitHub → repo → Settings → Secrets and variables → Actions**. These are
 account/repo settings, not per-machine.
 
@@ -245,14 +245,14 @@ Tailscale admin console:
 
 ## 9. Run the build loop
 
-Full operator guide: `corvus/Blueprints/prompts/HOW-TO-RUN-THE-LOOP.md`.
+Full operator guide: `omen/Blueprints/prompts/HOW-TO-RUN-THE-LOOP.md`.
 
-1. **(Optional) pin a task** — edit `corvus/Direction/agent_inbox.md` → Active Task. Leave it
+1. **(Optional) pin a task** — edit `omen/Direction/agent_inbox.md` → Active Task. Leave it
    empty to let each agent auto-pull the top item in its lane; fill it to override the queue
    (required if you want a specific task that isn't top of its lane).
 2. **Paste the kickoff** for the agent you want:
-   - Frontend → `corvus/Blueprints/prompts/kickoff-frontend-claude.md` (run in Claude Code)
-   - Backend → `corvus/Blueprints/prompts/kickoff-backend-codex.md` (run in Codex)
+   - Frontend → `omen/Blueprints/prompts/kickoff-frontend-claude.md` (run in Claude Code)
+   - Backend → `omen/Blueprints/prompts/kickoff-backend-codex.md` (run in Codex)
 3. The agent self-pulls, hits the **plan-approval gate**, and waits for your confirm before building.
 
 ---

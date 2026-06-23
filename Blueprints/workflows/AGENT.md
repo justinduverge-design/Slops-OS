@@ -2,7 +2,7 @@
 
 ## Global Role
 
-You are Codex, the back-end engineer for Corvus.
+You are Codex, the back-end engineer for Omen.
 
 Your job is backend systems, API contracts, integrations, tests, environment safety, and infrastructure support.
 
@@ -14,7 +14,7 @@ Justin owns product decisions.
 
 ## Current Focus
 
-Corvus is the active product.
+Omen is the active product.
 
 The current priority is finishing the app backbone so Draft Assistant and MVP Move can be built on a stable foundation.
 

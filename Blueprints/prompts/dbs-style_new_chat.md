@@ -1,36 +1,36 @@
-You are working on Corvus inside the new DBS-style Slops OS folder system.
+You are working on Omen inside the new DBS-style Slops OS folder system.
 
 Important paths:
 
 SLOPS root:
-C:\Users\JDuve\OneDrive\Desktop\SLOPS
+C:\Users\JDuve\dev\SLOPS
 
 Active app repo:
-C:\Users\JDuve\OneDrive\Desktop\SLOPS\slops-saloon
+C:\Users\JDuve\dev\SLOPS\slops-saloon
 
-Corvus product layer:
-C:\Users\JDuve\OneDrive\Desktop\SLOPS\slops-saloon\corvus
+Omen product layer:
+C:\Users\JDuve\dev\SLOPS\slops-saloon\omen
 
 Before doing any work, read the new DBS navigation/context files:
 
-1. C:\Users\JDuve\OneDrive\Desktop\SLOPS\DBS_INDEX.md
-2. C:\Users\JDuve\OneDrive\Desktop\SLOPS\README.md
-3. C:\Users\JDuve\OneDrive\Desktop\SLOPS\Direction\context.md
+1. C:\Users\JDuve\dev\SLOPS\DBS_INDEX.md
+2. C:\Users\JDuve\dev\SLOPS\README.md
+3. C:\Users\JDuve\dev\SLOPS\Direction\context.md
 
-4. C:\Users\JDuve\OneDrive\Desktop\SLOPS\slops-saloon\README.md
-5. C:\Users\JDuve\OneDrive\Desktop\SLOPS\slops-saloon\Direction\context.md
-6. C:\Users\JDuve\OneDrive\Desktop\SLOPS\slops-saloon\Direction\current_sprint.md
-7. C:\Users\JDuve\OneDrive\Desktop\SLOPS\slops-saloon\Direction\roadmap.md
-8. C:\Users\JDuve\OneDrive\Desktop\SLOPS\slops-saloon\Direction\decision_log.md
-9. C:\Users\JDuve\OneDrive\Desktop\SLOPS\slops-saloon\Blueprints\agent_handoff.md
-10. C:\Users\JDuve\OneDrive\Desktop\SLOPS\slops-saloon\Direction\agent_inbox.md
+4. C:\Users\JDuve\dev\SLOPS\slops-saloon\README.md
+5. C:\Users\JDuve\dev\SLOPS\slops-saloon\Direction\context.md
+6. C:\Users\JDuve\dev\SLOPS\slops-saloon\Direction\current_sprint.md
+7. C:\Users\JDuve\dev\SLOPS\slops-saloon\Direction\roadmap.md
+8. C:\Users\JDuve\dev\SLOPS\slops-saloon\Direction\decision_log.md
+9. C:\Users\JDuve\dev\SLOPS\slops-saloon\Blueprints\agent_handoff.md
+10. C:\Users\JDuve\dev\SLOPS\slops-saloon\Direction\agent_inbox.md
 
-11. C:\Users\JDuve\OneDrive\Desktop\SLOPS\slops-saloon\corvus\README.md
-12. C:\Users\JDuve\OneDrive\Desktop\SLOPS\slops-saloon\corvus\Direction\context.md
-13. C:\Users\JDuve\OneDrive\Desktop\SLOPS\slops-saloon\corvus\Direction\current_sprint.md
-14. C:\Users\JDuve\OneDrive\Desktop\SLOPS\slops-saloon\corvus\Brand\brand.md
-15. C:\Users\JDuve\OneDrive\Desktop\SLOPS\slops-saloon\corvus\Brand\positioning.md
-16. C:\Users\JDuve\OneDrive\Desktop\SLOPS\slops-saloon\corvus\Blueprints\specs\omen-mvp-move.md
+11. C:\Users\JDuve\dev\SLOPS\slops-saloon\omen\README.md
+12. C:\Users\JDuve\dev\SLOPS\slops-saloon\omen\Direction\context.md
+13. C:\Users\JDuve\dev\SLOPS\slops-saloon\omen\Direction\current_sprint.md
+14. C:\Users\JDuve\dev\SLOPS\slops-saloon\omen\Brand\brand.md
+15. C:\Users\JDuve\dev\SLOPS\slops-saloon\omen\Brand\positioning.md
+16. C:\Users\JDuve\dev\SLOPS\slops-saloon\omen\Blueprints\specs\omen-mvp-move.md
 
 If any file is missing:
 - Do not stop.
@@ -39,7 +39,7 @@ If any file is missing:
 - Do not recreate folders unless I explicitly ask.
 
 Important product rules:
-- Corvus is the Fantasy Football MVP product.
+- Omen is the Fantasy Football MVP product.
 - slops-saloon is the Fantasy Sports MVP Builder department.
 - Trade Analyzer is the front door.
 - Draft Assistant is the preparation/seasonal tool.
@@ -52,7 +52,7 @@ Important product rules:
 
 Important folder rules:
 - App development happens inside slops-saloon.
-- Corvus product/brand/spec context lives inside slops-saloon/corvus.
+- Omen product/brand/spec context lives inside slops-saloon/omen.
 - Do not work from old Projects/slops-saloon.
 - Do not touch Archive/quarantine.
 - Do not move DBS folders during app development.
@@ -63,7 +63,7 @@ After reading, summarize:
 1. What layer you are operating in
 2. What files you read
 3. What files were missing, if any
-4. What the current Corvus priority appears to be
+4. What the current Omen priority appears to be
 5. What you recommend working on next
 6. What files you expect to edit
 

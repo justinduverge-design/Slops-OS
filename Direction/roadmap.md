@@ -7,16 +7,16 @@ This roadmap tracks the operating-system layer only.
 Product and app work belongs in:
 
 ```text
-slops-saloon/corvus/
+slops-saloon/omen/
 ```
 
 ## Now
 
 - Keep `context.md`, `DBS_INDEX.md`, and `Direction/context.md` aligned with the current three-layer route.
-- Keep Slops Saloon division context separate from Corvus product context.
+- Keep Slops Saloon division context separate from Omen product context.
 - Keep SLOPS-authored skills canonical under `Blueprints/skills/`.
 - Keep imported agents reference-only unless Justin approves them through the agent index.
-- Treat Corvus backend handoff Requests 13-18 as locally advanced as of 2026-05-27; the next blocked item is approval to apply prepared Supabase SQL.
+- Treat Omen backend handoff Requests 13-18 as locally advanced as of 2026-05-27; the next blocked item is approval to apply prepared Supabase SQL.
 
 ## Next
 
@@ -24,7 +24,7 @@ slops-saloon/corvus/
 - Review root agent index status after the rewrite.
 - Add prior-use notes to high-use skills after real use.
 - Keep root handoffs focused on OS-level coordination.
-- Track the Corvus launch approval checkpoint without applying database, Stripe, deploy, or infrastructure changes from the OS layer.
+- Track the Omen launch approval checkpoint without applying database, Stripe, deploy, or infrastructure changes from the OS layer.
 
 ## Later
 
@@ -35,9 +35,9 @@ slops-saloon/corvus/
 
 ## Out Of Scope
 
-- Corvus app source edits.
+- Omen app source edits.
 - Secrets or credentials.
 - Deployment and infrastructure changes.
 - SQL, package files, tests, or Docker config.
-- Applying prepared Corvus Supabase SQL to staging or production without explicit Justin approval.
+- Applying prepared Omen Supabase SQL to staging or production without explicit Justin approval.
 - Archive or quarantine cleanup without a separate review.

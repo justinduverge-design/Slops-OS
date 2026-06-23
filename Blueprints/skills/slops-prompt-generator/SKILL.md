@@ -23,7 +23,7 @@ Use this skill to turn current Slops context into a prompt another agent can run
 4. Produce a concrete prompt artifact when the user asks for a next prompt. Do not stop at docs, contracts, or analysis.
 5. Put prompt artifacts in the relevant prompts folder:
    - Root reusable prompts: `Blueprints/prompts/`
-   - Active app prompts: `slops-saloon/corvus/Blueprints/prompts/`
+   - Active app prompts: `slops-saloon/omen/Blueprints/prompts/`
 6. Use a filename that names the feature and action, such as `omen-mvp-move-development.md`.
 7. Include the exact files to read first, the exact deliverable, constraints, test expectations, documentation expectations, and completion report.
 8. If the user wants old prompts preserved for later analysis, place them under `Blueprints/prompts/_old-prompts-for-analysis/` only after explicit move/copy approval.

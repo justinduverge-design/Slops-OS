@@ -7,7 +7,7 @@ description: Slops-native post-deploy health watch. After a deploy or cutover, p
 
 ## Purpose
 
-The watch after a ship. Corvus went live with no monitoring; this skill checks that a fresh deploy
+The watch after a ship. Omen went live with no monitoring; this skill checks that a fresh deploy
 is actually healthy before you trust it, and gives a clear rollback call when it is not. Replaces
 external `canary` + `landing-report`, grounded in the health/ready verification ladder and the
 rollback notes in `Blueprints/playbooks/app-cutover-playbook.md`.

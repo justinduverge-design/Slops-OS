@@ -14,7 +14,7 @@ This is the first division in the Phase 5 imported agent promotion pipeline.
 
 Your job is to:
 1. Read all 5 agent files in the Product Division
-2. Select the most relevant agents for current SLOPS/Corvus launch needs
+2. Select the most relevant agents for current SLOPS/Omen launch needs
 3. Create SLOPS doctrine wrapper files for selected agents
 4. Write a division review summary
 5. Propose AGENT_INDEX.md updates (do not apply them yet — present for Justin approval)
@@ -53,7 +53,7 @@ product-trend-researcher.md
 
 For each agent, answer:
 
-1. **Relevance**: Is this role directly useful for Corvus launch, slops-saloon MVP, or SLOPS OS build-out in the next 90 days?
+1. **Relevance**: Is this role directly useful for Omen launch, slops-saloon MVP, or SLOPS OS build-out in the next 90 days?
 2. **Risk**: Does this agent's role description imply write access to production, secrets, payments, auth, databases, or app source? If yes, flag it.
 3. **Overlap**: Does Claude or an existing SLOPS skill already cover this work? If yes, defer.
 4. **Wrapper feasibility**: Can a clear allowed/denied scope be written for this agent without ambiguity?
@@ -111,7 +111,7 @@ Global Blueprint
 - <task>
 
 ## Denied Work
-- No write access to slops-saloon\corvus\src\, sql\, .env, secrets, or credentials
+- No write access to slops-saloon\omen\src\, sql\, .env, secrets, or credentials
 - No production, deployment, auth, payments, or billing changes
 - <role-specific denials>
 
@@ -132,8 +132,8 @@ Tier 2 (read + draft — no direct file writes without Claude or Codex approval)
 - (drafts only — Codex applies approved changes)
 
 ## Must Not Write To
-- slops-saloon\corvus\src\
-- slops-saloon\corvus\sql\
+- slops-saloon\omen\src\
+- slops-saloon\omen\sql\
 - .env, .key, credentials
 - Archive\
 - Blueprints\agents\_imported\
@@ -175,7 +175,7 @@ Format:
 ## Scope Constraints
 
 - Read only the files named above
-- Do not open any `slops-saloon\corvus\src\`, `sql\`, `.env`, `.key`, or credential files
+- Do not open any `slops-saloon\omen\src\`, `sql\`, `.env`, `.key`, or credential files
 - Do not run any terminal commands
 - Do not edit `AGENT_INDEX.md` until Justin approves the proposed changes
 - Do not activate any agent — only promote to `candidate`

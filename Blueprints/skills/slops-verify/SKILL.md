@@ -26,7 +26,7 @@ skill. Replaces external `browse` / `qa` / `qa-only`.
 
 - The flow(s) in scope and the running app (local or the deployed target).
 - **Precondition:** a reachable running instance (local backend + frontend, or a deployed target). Without it the driver cannot exercise live flows — a passing *frontend build* alone is not verification.
-- The driver: `slops-saloon/corvus/.claude/skills/run-slops-saloon/` —
+- The driver: `slops-saloon/omen/.claude/skills/run-slops-saloon/` —
   `driver.cjs`, `driver_omen.cjs`, `driver_espn_recovery.cjs`, `espn-verify.cjs`.
 - `Blueprints/definition-of-done.md` (the behavior bar).
 

@@ -1,10 +1,10 @@
-# Codex Execution Prompt: Embed Trade Analyzer into Corvus Landing Page
+# Codex Execution Prompt: Embed Trade Analyzer into Omen Landing Page
 
 ## Assignee
 Codex (Back-End / Full-Stack AI Engineer)
 
 ## Repo
-`C:\Users\JDuve\OneDrive\Desktop\SLOPS\slops-saloon`
+`C:\Users\JDuve\dev\SLOPS\slops-saloon`
 
 ## Target File
 `frontend/src/pages/Landing.jsx`
@@ -13,7 +13,7 @@ Codex (Back-End / Full-Stack AI Engineer)
 
 ## Objective
 
-Embed a fully functional Trade Analyzer tool directly into the Corvus landing page (`Landing.jsx`). This is not a teaser, not a preview, and not behind a login wall. A visitor who has never created an account must be able to run a real trade analysis and get real results.
+Embed a fully functional Trade Analyzer tool directly into the Omen landing page (`Landing.jsx`). This is not a teaser, not a preview, and not behind a login wall. A visitor who has never created an account must be able to run a real trade analysis and get real results.
 
 ---
 
@@ -68,7 +68,7 @@ Also add a "Try the Trade Analyzer" anchor `<Button>` in the hero CTA group (aft
 
 ## Visual Treatment
 
-Match the existing Corvus design language exactly:
+Match the existing Omen design language exactly:
 
 | Token | Value |
 |---|---|
@@ -204,7 +204,7 @@ On mobile, stack these vertically.
 
 ## File Structure Impact
 
-All new components (`PlayerInput`, `TradeAnalyzerSection`) should be added as local component functions within `Landing.jsx` itself — the same pattern already used for `Button`, `ChevronRight`, `CorvusLogo`, `OmenCard`, and `Header`. Do not create new files for this feature unless the file exceeds 600 lines and readability becomes a serious concern, in which case split into `TradeAnalyzer.jsx` in the same `pages/` directory and import it.
+All new components (`PlayerInput`, `TradeAnalyzerSection`) should be added as local component functions within `Landing.jsx` itself — the same pattern already used for `Button`, `ChevronRight`, `OmenLogo`, `OmenCard`, and `Header`. Do not create new files for this feature unless the file exceeds 600 lines and readability becomes a serious concern, in which case split into `TradeAnalyzer.jsx` in the same `pages/` directory and import it.
 
 ---
 

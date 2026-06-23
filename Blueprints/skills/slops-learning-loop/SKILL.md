@@ -1,11 +1,11 @@
 ---
 name: slops-learning-loop
-description: Post-live learning workflow for understanding why Corvus uses its current technology and improving it before the season ends. Parked until Corvus is live and stable unless Justin explicitly invokes it; not for diagnosis or individualized medical or financial advice.
+description: Post-live learning workflow for understanding why Omen uses its current technology and improving it before the season ends. Parked until Omen is live and stable unless Justin explicitly invokes it; not for diagnosis or individualized medical or financial advice.
 status: parked
 skill_type: simple
 layer: Layer 0
 default_agent: Claude plans and teaches; Codex verifies technical practice when requested
-trigger: after Corvus is live teach me why we used this technology and how to improve it before season end
+trigger: after Omen is live teach me why we used this technology and how to improve it before season end
 version: 0.2.0
 upstream: Adapted from mattpocock/skills productivity/teach (MIT), inspected 2026-06-21
 owner: SLOPS
@@ -19,7 +19,7 @@ Turn a broad self-development goal into small demonstrated capabilities. The loo
 
 ## When to Use
 
-- Only after Corvus satisfies Release Done and has a stable seven-day operating baseline, or when Justin explicitly overrides that gate.
+- Only after Omen satisfies Release Done and has a stable seven-day operating baseline, or when Justin explicitly overrides that gate.
 - Learn or refresh a bounded capability.
 - Create a practice plan across technical, financial-literacy, physical-health, emotional-health, or mental-health topics.
 - Diagnose a knowledge gap through questions or a small task.
@@ -27,7 +27,7 @@ Turn a broad self-development goal into small demonstrated capabilities. The loo
 
 ## Do Not Use
 
-- During the current pre-live Corvus build unless Justin explicitly reactivates it.
+- During the current pre-live Omen build unless Justin explicitly reactivates it.
 - Medical or mental-health diagnosis, treatment, crisis response, exercise clearance, investment selection, tax advice, or promises of outcomes.
 - Collecting sensitive health or financial records that are not needed for the learning goal.
 - Replacing a qualified clinician, trainer, therapist, fiduciary, accountant, or attorney.
@@ -42,7 +42,7 @@ Turn a broad self-development goal into small demonstrated capabilities. The loo
 ## Preconditions and Dependencies
 
 - No runtime dependency; lessons may be plain Markdown. HTML or other assets are optional when they materially improve practice.
-- Activation gate: Corvus is live, Release Done evidence exists, and at least one seven-day `slops-product-pulse` report is available.
+- Activation gate: Omen is live, Release Done evidence exists, and at least one seven-day `slops-product-pulse` report is available.
 - Current, high-stakes health or financial claims require authoritative research before teaching.
 - Stop and direct urgent health or safety concerns to appropriate professional or emergency support.
 
@@ -96,5 +96,5 @@ Read `notes/prior-use-review.md` when present. Update the next session from rete
 
 ## Changelog
 
-- 0.2.0 — Parked until Corvus is live and stable; narrowed first use to understanding Corvus technology and improving it before season end.
+- 0.2.0 — Parked until Omen is live and stable; narrowed first use to understanding Omen technology and improving it before season end.
 - 0.1.0 — Initial SLOPS learning loop adapted from the upstream teach workflow with optional artifacts and health/financial safety boundaries.

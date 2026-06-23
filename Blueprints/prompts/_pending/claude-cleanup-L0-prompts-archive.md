@@ -56,7 +56,7 @@ The README already classifies most of these as "Claude→Codex handoffs (OS proj
 | `codex-doc-cleanup-archive.md` | Doc cleanup + archiving — already fired. |
 | `codex-git-slops-initial-commit.md` | Initial commit prompt — fires once per repo, already fired. |
 | `codex-skill-migration.md` | Skill migration prompt — one-shot. |
-| `codex_trade_analyzer_embed.md` | Trade-analyzer embed work — superseded by current Trade Analyzer in `slops-saloon/corvus`. |
+| `codex_trade_analyzer_embed.md` | Trade-analyzer embed work — superseded by current Trade Analyzer in `slops-saloon/omen`. |
 | `design-md-claude-codex-handoff.md` | `design.md` template authoring — fired. |
 | `phase-1-codex-nomenclature-rename.md` | DBS-migration Phase 1 — explicitly historical per README. |
 | `phase-1b-codex-title-case-cleanup.md` | DBS-migration Phase 1b — explicitly historical per README. |
@@ -87,7 +87,7 @@ Leave it where it is. Has its own README. Separate concern — fold-or-delete de
 
 5. **Update `Blueprints/prompts/README.md`:**
    - Add `_templates/dbs-style_new_chat.md` row to the templates table (it's currently a plain `dbs-style_new_chat.md` row).
-   - Replace the "Claude→Codex handoffs (OS projects)" section + "Codex operational prompts" section + "Migration phase prompts (historical run records)" section with a single **"Archived (`_archive/`)"** section that lists all moved files in a single table, with a one-line note: *"Historical run records. Kept for context; do not re-run blindly. Some are superseded by current work in `slops-saloon/corvus/`."*
+   - Replace the "Claude→Codex handoffs (OS projects)" section + "Codex operational prompts" section + "Migration phase prompts (historical run records)" section with a single **"Archived (`_archive/`)"** section that lists all moved files in a single table, with a one-line note: *"Historical run records. Kept for context; do not re-run blindly. Some are superseded by current work in `slops-saloon/omen/`."*
    - Update the `## Subfolders` section to add `_archive/` (already added `_templates/` and `_pending/` rows in the prior pass).
    - Resolve Justin's decision on `codex-post-deploy-context-update.md` before final README write — its row goes in either `_templates/` or `_archive/` depending on the call.
 
@@ -119,7 +119,7 @@ Leave it where it is. Has its own README. Separate concern — fold-or-delete de
 - File moves and one README edit only. No content edits to moved files.
 - No `git push`. Justin's gate.
 - Do not touch `_pending/`, `_templates/`, or `_old-prompts-for-analysis/` contents — only the L0 root files listed in the Triage tables.
-- Do not touch L1 (`slops-saloon/Blueprints/prompts/`) or L2 (`slops-saloon/corvus/Blueprints/prompts/`). Those have their own prompt at `_pending/claude-cleanup-L1-L2-prompts-shape.md`.
+- Do not touch L1 (`slops-saloon/Blueprints/prompts/`) or L2 (`slops-saloon/omen/Blueprints/prompts/`). Those have their own prompt at `_pending/claude-cleanup-L1-L2-prompts-shape.md`.
 - If `git mv` is available and clean, prefer it over `mv` so history follows the rename. If it errors on OneDrive (it sometimes does — `.git/index.lock` issue), fall back to `mv` + `git add`.
 - After firing, delete this prompt from `_pending/` (it's done its one job).
 

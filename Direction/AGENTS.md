@@ -10,7 +10,7 @@ SLOPS OS is Justin's operating system layer for decisions, context, agent routin
 - **Skill system:** `Blueprints/skills/`
 - **Agent system:** `Blueprints/agents/`
 - **Prompt system:** `Blueprints/prompts/`
-- **Active product repo:** `slops-saloon/corvus/`
+- **Active product repo:** `slops-saloon/omen/`
 
 ## 3. Key Commands
 
@@ -34,7 +34,7 @@ Do not run installs, builds, tests, deploys, migrations, or destructive commands
 - `Solutions/`: Finished outputs and reports.
 - `Archive/`: Superseded, parked, or historical material.
 - `slops-saloon/`: Layer 1 division.
-- `slops-saloon/corvus/`: Layer 2 active product repo.
+- `slops-saloon/omen/`: Layer 2 active product repo.
 
 ## 5. Decision Tables
 
@@ -42,7 +42,7 @@ Do not run installs, builds, tests, deploys, migrations, or destructive commands
 | :--- | :---: | :---: |
 | Reusable skill, agent, tool, prompt, DBS, or naming rule | ✅ | |
 | Slops Saloon division context or future product slot | | ✅ `slops-saloon/` |
-| Corvus fantasy football app, backend, frontend, deploy, Stripe, Supabase, Docker, tests, or source | | ✅ `slops-saloon/corvus/` |
+| Omen fantasy football app, backend, frontend, deploy, Stripe, Supabase, Docker, tests, or source | | ✅ `slops-saloon/omen/` |
 | Imported agent review or RBAC governance | ✅ | |
 | Product implementation or app behavior change | | ✅ product layer only after approval |
 
@@ -61,7 +61,7 @@ Do not run installs, builds, tests, deploys, migrations, or destructive commands
 ```text
 0-OS: SLOPS/
 1-Division: SLOPS/slops-saloon/
-2-Product: SLOPS/slops-saloon/corvus/
+2-Product: SLOPS/slops-saloon/omen/
 ```
 
 ## 7. Hard Constraints
@@ -70,7 +70,7 @@ Do: Preserve the DBS folder system.
 
 Do: Treat imported agents, Archive, and old project copies as non-authoritative unless Justin says otherwise.
 
-Do: Route Corvus execution to `slops-saloon/corvus/`.
+Do: Route Omen execution to `slops-saloon/omen/`.
 
 Don't: Do not change app behavior, deployment posture, secrets, infrastructure, package files, source code, tests, SQL, scripts, `.git`, or active implementation assets from this layer.
 

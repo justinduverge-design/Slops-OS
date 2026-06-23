@@ -41,13 +41,13 @@ These are net-new SLOPS utilities that support the lifecycle but do not replace 
 
 | Capability | Process artifact | Type | Status | Notes |
 |---|---|---|---|---|
-| **Knowledge graph / cross-layer map** | `slops-graphify` | wrapper skill | have | Wraps external `graphifyy@0.8.36`; builds one L0↔L2 graph, output routed to `References/graphify/`. Two-pass: L0 doctrine, then `--update` on `slops-saloon/corvus` (166 code files a root scan misses). Smoke test passed 2026-06-09. Not a gstack replacement. |
+| **Knowledge graph / cross-layer map** | `slops-graphify` | wrapper skill | have | Wraps external `graphifyy@0.8.36`; builds one L0↔L2 graph, output routed to `References/graphify/`. Two-pass: L0 doctrine, then `--update` on `slops-saloon/omen` (166 code files a root scan misses). Smoke test passed 2026-06-09. Not a gstack replacement. |
 | **Repo inspection / layer routing** | `slops-repo-inspector` | simple skill | have | Confirms L0/L1/L2 path truth, current source-of-truth docs, git state, and canonical-vs-installed skill authority before planning or editing. Prevents pre-DBS root roadmap/manifesto/handoff drift. |
 | **Observability** | `self-hosted-observability-runbook` | package skill | have | Wires self-hosted Sentry, Umami, and log shipping for Slops products; closes the reusable errors/analytics/logging gap without adopting hosted SaaS. |
 | **Legal** | `compliance-by-template` | wrapper skill | have | Drafts launch-required legal documents from approved open-agreements templates; pairs with `slops-legal-spot-check` for triage and still requires Justin/counsel review where flagged. |
 | **Context discipline** | `slops-headroom` | wrapper skill | have | Compresses large tool outputs before they enter model context; install remains Justin-side and local-only network behavior must be audited on first use. |
 | **Ingest** | `slops-markitdown` | wrapper skill | have | Converts local documents and media into Markdown for research/build-loop intake; Azure and paid API passes stay forbidden unless explicitly approved. |
-| **Personal learning loop** | `slops-learning-loop` | simple skill | parked | Reactivate after Corvus passes Release Done and has a stable seven-day product pulse; first use is a technology-choice learning and in-season improvement cycle. |
+| **Personal learning loop** | `slops-learning-loop` | simple skill | parked | Reactivate after Omen passes Release Done and has a stable seven-day product pulse; first use is a technology-choice learning and in-season improvement cycle. |
 | **Community needs and resource research** | `slops-community-needs-research` | simple skill | parked | Far-future product discovery only; Justin must explicitly name the community, geography, need, and decision before reactivation. |
 | **Product readiness / gap analysis** | `product-gap-analysis-session` | simple skill | have | Verifies current code and facts, then separates Have/Need/Gap and routes a phased plan; registered 2026-06-21 after an index-drift audit. |
 
@@ -125,8 +125,8 @@ Tracked here so they survive context switches:
 - Commit + re-sync the `slops-git-flow` lessons edit (branch placement, untracked companions, branch repair) to both agent dirs.
 - Verify the kept `codex` skill loads post-quarantine; quarantine `devex-review` + gstack root `SKILL.md` (per the decision above).
 - Re-sync installed skills whose canonical Blueprints copies now differ; start with routing-sensitive skills such as `clean-up-checkpoint`, then sync the rest in a scoped migration pass.
-- Push/merge the accumulated local branches (Justin's gate) in both the SLOPS and Corvus repos.
-- Product: Corvus **P1 Sleeper full-swap** proof when the test league drafts — see `slops-saloon/corvus/Direction/current_sprint.md` → "Waiting on external".
+- Push/merge the accumulated local branches (Justin's gate) in both the SLOPS and Omen repos.
+- Product: Omen **P1 Sleeper full-swap** proof when the test league drafts — see `slops-saloon/omen/Direction/current_sprint.md` → "Waiting on external".
 
 ## Promotions — 2026-06-20
 
@@ -147,7 +147,7 @@ Still parked in `_proposals/`: `slops-lore-review` (needs animated-series concep
 - Upgraded `slops-skill-author`, `slops-investigate`, and `slops-code-review` with invocation economics, red-capable feedback loops, and a safeguarded simplicity pass.
 - Registered the existing `product-gap-analysis-session` skill, which was active in frontmatter but absent from both indexes.
 - Reconciled the restored upstream `strategy-red-team` as a reference pattern only; no source repository, plugin, hooks, or dependency was installed.
-- Later the same day, Justin parked `slops-learning-loop` until Corvus is live plus seven stable days and parked `slops-community-needs-research` until explicit far-future product discovery.
+- Later the same day, Justin parked `slops-learning-loop` until Omen is live plus seven stable days and parked `slops-community-needs-research` until explicit far-future product discovery.
 
 ## Maintenance
 

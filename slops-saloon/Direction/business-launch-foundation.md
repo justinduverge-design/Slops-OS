@@ -1,7 +1,7 @@
-# Slops Saloon — Business Launch Foundation (Corvus go-live)
+# Slops Saloon — Business Launch Foundation (Omen go-live)
 
 Last updated: 2026-06-06
-Layer: 1 — Slops Saloon (the entity that commercializes Corvus)
+Layer: 1 — Slops Saloon (the entity that commercializes Omen)
 Owner: Justin (decides + executes) | Claude (drafts + reviews)
 Status: planning — decisions pending
 
@@ -91,7 +91,7 @@ Summarized from Section 0, as a compliance checklist:
 
 **A simple, defensible two-tier model (Sleeper-first):**
 - **Free:** connect one Sleeper league, basic start/sit (Omen lite), a limited number of trade analyses per week (math verdict only). Enough to prove value.
-- **Pro (paid):** unlimited trade analyses **with the narrated verdict (WS2)**, full Omen of the Week, the **auto-syncing draft assistant** (huge, seasonal), and Corvus's own projections (WS3). This bundles your three real differentiators behind the paywall.
+- **Pro (paid):** unlimited trade analyses **with the narrated verdict (WS2)**, full Omen of the Week, the **auto-syncing draft assistant** (huge, seasonal), and Omen's own projections (WS3). This bundles your three real differentiators behind the paywall.
 
 **Pricing shape to decide:**
 - **Monthly vs. season pass.** Fantasy is seasonal (~Aug–Jan). A monthly sub risks cancellations in February; a **season pass** (one price for the season) or an annual plan can fit user behavior better. Consider offering both.
@@ -132,7 +132,7 @@ All of this can complete during the off-season, so the business is ready the mom
 
 ## Decisions recorded — 2026-06-06
 
-- **State of formation: Connecticut.** CT taxes SaaS. Consumer (B2C) subscriptions are taxed at the full **6.35%** (the 1% reduced rate is for B2B computer/data-processing services — Corvus is consumer, so 6.35% applies). As a CT-based business you will likely need to register with **CT DRS** and collect 6.35% from CT customers **from launch**; other states only create an obligation once you cross economic nexus (**$100,000 AND 200 transactions** in that state). Confirm registration timing with a CPA. Stripe Tax can calculate/collect once you register.
+- **State of formation: Connecticut.** CT taxes SaaS. Consumer (B2C) subscriptions are taxed at the full **6.35%** (the 1% reduced rate is for B2B computer/data-processing services — Omen is consumer, so 6.35% applies). As a CT-based business you will likely need to register with **CT DRS** and collect 6.35% from CT customers **from launch**; other states only create an obligation once you cross economic nexus (**$100,000 AND 200 transactions** in that state). Confirm registration timing with a CPA. Stripe Tax can calculate/collect once you register.
 - **Pricing model: monthly subscription + season pass (both).** Create both as Stripe products. Keep all paid features gated to **Sleeper** (see platform terms). A season pass fits fantasy's Aug–Jan rhythm; monthly captures users who join mid-season or want to try before committing.
 - **Yahoo / ESPN monetization: confirmed posture.** Do not charge for Yahoo- or ESPN-powered features without proper rights — Yahoo has a written-permission path; ESPN has no clean path. Launch paid features Sleeper-only. Yahoo/ESPN stay free "connect and view" at most.
 - **Still open:** iOS billing (web-only vs Apple IAP); whether to draft ToS + Privacy Policy now for attorney review.
@@ -140,15 +140,15 @@ All of this can complete during the off-season, so the business is ready the mom
 ## Decisions recorded — 2026-06-06 (cont.)
 
 - **iOS billing: web-only.** Users subscribe on the website (Stripe); the iOS app is a companion that signs them in. This avoids Apple's In-App Purchase cut (15–30%) and keeps billing in one place. Resolves mobile roadmap WS5-E. Note for App Store submission: under the "reader app" model the iOS app generally must not present in-app purchase UI for the subscription; confirm the current Apple external-link/reader rules at submission time, as Apple's policy here has been changing.
-- **ToS + Privacy Policy: drafting now** as attorney-review drafts grounded in the real Corvus data model. Stored under `slops-saloon/corvus/References/docs/legal/`.
+- **ToS + Privacy Policy: drafting now** as attorney-review drafts grounded in the real Omen data model. Stored under `slops-saloon/omen/References/docs/legal/`.
 
 ## Decisions recorded — 2026-06-06 (final infra + strategy)
 
 - **Hosting — self-managed Hostinger, two boxes:**
-  - **KVM1 (new, 1 vCPU / 4GB)** = Corvus production only (`corvus_api` + `corvus_cron`). The critical, must-stay-up box.
-  - **KVM2 (existing, 2 vCPU / 8GB)** = the "AI office": narration model(s) for Corvus plus local agents and experiments. Non-critical — Corvus falls back to math-only if it's unavailable.
+  - **KVM1 (new, 1 vCPU / 4GB)** = Omen production only (`omen_api` + `omen_cron`). The critical, must-stay-up box.
+  - **KVM2 (existing, 2 vCPU / 8GB)** = the "AI office": narration model(s) for Omen plus local agents and experiments. Non-critical — Omen falls back to math-only if it's unavailable.
   - This **supersedes the earlier DigitalOcean App Platform recommendation.** Tradeoff accepted: lower cost + one provider, in exchange for self-managing the VPS (with Claude/Codex + Hostinger's AI assistant). **WS1 materials must be revised from the DigitalOcean path to the Hostinger KVM1 path (Docker Compose + Nginx + Certbot/SSL + DNS).**
-- **Year 1 — Corvus is free for everyone, all platforms**, including the draft assistant. Goal is adoption, feedback, and bug-shakeout, not revenue. Don't charge for something still rough.
+- **Year 1 — Omen is free for everyone, all platforms**, including the draft assistant. Goal is adoption, feedback, and bug-shakeout, not revenue. Don't charge for something still rough.
 - **Year 2 — monetize the draft assistant** (Sleeper-first; Yahoo if commercial permission is granted) as the paid anchor, once proven and polished.
-- **Year 1 cost coverage** (~$15–30/mo): free service tiers + pursue startup cloud credits (e.g. DigitalOcean Hatch, once the CT LLC + business email exist) + optional non-gating "support Corvus" tip jar; self-fund any small remainder as marketing/R&D budget.
-- **Second business — local web/app services**, treated as a **future SLOPS Layer-1 division**, built from Corvus experience and sequenced **after** Corvus gains traction to protect focus. Not started now.
+- **Year 1 cost coverage** (~$15–30/mo): free service tiers + pursue startup cloud credits (e.g. DigitalOcean Hatch, once the CT LLC + business email exist) + optional non-gating "support Omen" tip jar; self-fund any small remainder as marketing/R&D budget.
+- **Second business — local web/app services**, treated as a **future SLOPS Layer-1 division**, built from Omen experience and sequenced **after** Omen gains traction to protect focus. Not started now.

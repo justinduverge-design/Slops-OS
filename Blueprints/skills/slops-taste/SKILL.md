@@ -27,7 +27,7 @@ Wrap taste-skill's portable Agent Skills via the upstream installer. The Slops w
 - Optional variants installed the same way: `high-end-visual-design`, `minimalist-ui`, `imagegen-frontend-web`, `brandkit`.
 
 ## Required Inputs
-- Target product (Corvus default).
+- Target product (Omen default).
 - Requested variant (or "auto" — wrapper picks).
 - Dial overrides (optional; default: read from brand-system.md).
 
@@ -45,7 +45,7 @@ Wrap taste-skill's portable Agent Skills via the upstream installer. The Slops w
 - Net-new. Reduces "boring AI UI" failure mode.
 
 ## Verification
-- Smoke test: run `design-taste-frontend` against the Corvus dashboard hero; confirm output respects brand palette and passes `slops-ui-ux-audit` baseline.
+- Smoke test: run `design-taste-frontend` against the Omen dashboard hero; confirm output respects brand palette and passes `slops-ui-ux-audit` baseline.
 - Watch for hard em-dash bans and pre-flight check rules from taste-skill v2.
 
 ## Default Dials

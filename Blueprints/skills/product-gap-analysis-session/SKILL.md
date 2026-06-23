@@ -1,6 +1,6 @@
 ---
 name: product-gap-analysis-session
-description: Run a stop-and-think product readiness session that separates what a product HAS from what it NEEDS, grounded in real code and current facts, and converts the gap into a phased, approval-gated plan. Use when Justin wants to pause, evaluate how far a product (e.g. Corvus) is from a finished/sellable state, discuss gaps, and decide the next safe moves. Do not use to write code or change product source.
+description: Run a stop-and-think product readiness session that separates what a product HAS from what it NEEDS, grounded in real code and current facts, and converts the gap into a phased, approval-gated plan. Use when Justin wants to pause, evaluate how far a product (e.g. Omen) is from a finished/sellable state, discuss gaps, and decide the next safe moves. Do not use to write code or change product source.
 status: active
 skill_type: simple
 layer: Layer 0
@@ -51,8 +51,8 @@ Do not use this skill when:
 
 Minimum context before analysis:
 
-- The product or workstream in scope (e.g. Corvus, a specific feature).
-- The relevant code root and/or status docs (e.g. `slops-saloon\corvus\Direction`, `release_readiness.md`, `known_issues.md`, `current_sprint.md`).
+- The product or workstream in scope (e.g. Omen, a specific feature).
+- The relevant code root and/or status docs (e.g. `slops-saloon\omen\Direction`, `release_readiness.md`, `known_issues.md`, `current_sprint.md`).
 - Any planning/architecture doc Justin is reacting to.
 - The definition of "done" for this session (full launch, paid launch, one feature, etc.).
 
@@ -111,7 +111,7 @@ When Justin says "no edits yet," provide the analysis in-chat only and name wher
 
 ## DBS Routing
 
-- App-specific product gap analysis (e.g. Corvus): write to `slops-saloon\corvus\Blueprints\handoffs\`.
+- App-specific product gap analysis (e.g. Omen): write to `slops-saloon\omen\Blueprints\handoffs\`.
 - Division/business-level readiness (entity, pricing, commercialization): write to `slops-saloon\Direction\`.
 - Company-wide reusable doctrine that emerges: propose promotion to Layer 0 `SLOPS\Direction\` or `Blueprints\`, but do not promote app-specific content into Layer 0 without explicit approval.
 - Decisions that result should be logged in the relevant `Direction\decision_log.md`.
@@ -139,7 +139,7 @@ Before reusing, check `product-gap-analysis-session/notes/prior-use-review.md` i
 ## Notes
 
 - Pairs well with: `pre-build-research` (external facts), `slops-prompt-generator` (turn a chosen gap into a Codex prompt), `dbs-research-to-architecture-router` (split findings into specs/decisions), and `clean-up-checkpoint` (when a session must pause safely).
-- First captured from the 2026-06 Corvus readiness sessions (hosting, Trade LLM, projection model, Sleeper draft assistant, Capacitor mobile, business foundation).
+- First captured from the 2026-06 Omen readiness sessions (hosting, Trade LLM, projection model, Sleeper draft assistant, Capacitor mobile, business foundation).
 
 ## Changelog
 

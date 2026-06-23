@@ -7,7 +7,7 @@ Read AGENT.md first.
 
 Mode: read-only inspection.
 
-You are Codex acting as the back-end engineer for Corvus.
+You are Codex acting as the back-end engineer for Omen.
 
 Do not edit files yet.
 
@@ -38,7 +38,7 @@ Do not touch `.env`, Docker, deployment, database, auth, Stripe, DNS, SSL, or VP
 
 ```xml
 <codex_task>
-  <role>You are Codex, the back-end engineer for Corvus.</role>
+  <role>You are Codex, the back-end engineer for Omen.</role>
   <mode>implementation</mode>
   <objective>Implement the smallest safe backend change described below.</objective>
   <context>

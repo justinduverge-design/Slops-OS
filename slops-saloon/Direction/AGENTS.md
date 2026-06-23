@@ -2,14 +2,14 @@
 
 ## 1. Identity & Scope
 
-Slops Saloon is the sports, music, and arts division of SLOPS OS; Corvus is its only active product.
+Slops Saloon is the sports, music, and arts division of SLOPS OS; Omen is its only active product.
 
 ## 2. Tech Stack
 
 - **Primary format:** Markdown DBS files.
 - **Division layer:** `SLOPS/slops-saloon/`
-- **Active product repo:** `SLOPS/slops-saloon/corvus/`
-- **Product stack:** Owned by `corvus/`, not this division layer.
+- **Active product repo:** `SLOPS/slops-saloon/omen/`
+- **Product stack:** Owned by `omen/`, not this division layer.
 
 ## 3. Key Commands
 
@@ -20,7 +20,7 @@ Use commands only when explicitly assigned.
 - **Check git state:** `git status`
 - **Review changes:** `git diff`
 
-Do not run product builds, tests, deploys, migrations, Docker commands, or package commands from this layer unless Justin explicitly routes the task to `corvus/`.
+Do not run product builds, tests, deploys, migrations, Docker commands, or package commands from this layer unless Justin explicitly routes the task to `omen/`.
 
 ## 4. Project Structure Hints
 
@@ -29,15 +29,15 @@ Do not run product builds, tests, deploys, migrations, Docker commands, or packa
 - `References/`: Division-level research and source material.
 - `Solutions/`: Division-level finished outputs and reports.
 - `Archive/`: Superseded division material.
-- `corvus/`: Active fantasy football product repo and all current engineering execution.
+- `omen/`: Active fantasy football product repo and all current engineering execution.
 
 ## 5. Decision Tables
 
-| Situation | Stay in Slops Saloon | Route to Corvus |
+| Situation | Stay in Slops Saloon | Route to Omen |
 | :--- | :---: | :---: |
 | Division context, sports/music/arts strategy, future product slots | ✅ | |
 | Cross-product division brand or naming note | ✅ | |
-| Corvus, fantasy football, Omen, MVP Move, Trade Analyzer, Draft Assistant | | ✅ |
+| Omen, fantasy football, Omen, MVP Move, Trade Analyzer, Draft Assistant | | ✅ |
 | Backend, frontend, Stripe, Supabase, Docker, deploy, tests, source, package files | | ✅ |
 | Future product idea not yet approved | ✅ park in division context | |
 
@@ -46,26 +46,26 @@ Do not run product builds, tests, deploys, migrations, Docker commands, or packa
 ### Product route
 
 ```text
-If the task is about Corvus execution, start in:
-SLOPS/slops-saloon/corvus/
+If the task is about Omen execution, start in:
+SLOPS/slops-saloon/omen/
 ```
 
 ### Division rule
 
 ```text
-Keep future product ideas out of Corvus until Justin explicitly starts a second product.
+Keep future product ideas out of Omen until Justin explicitly starts a second product.
 ```
 
 ## 7. Hard Constraints
 
-Do: Keep Slops Saloon division context separate from Corvus product context.
+Do: Keep Slops Saloon division context separate from Omen product context.
 
-Do: Use `corvus/` as the only active product repo.
+Do: Use `omen/` as the only active product repo.
 
 Do: Keep `Blueprints/` mostly empty unless a reusable division-level pattern exists.
 
-Don't: Do not modify Corvus source, tests, deployment, product handoffs, package files, SQL, Docker, Stripe, Supabase, or app behavior from this layer.
+Don't: Do not modify Omen source, tests, deployment, product handoffs, package files, SQL, Docker, Stripe, Supabase, or app behavior from this layer.
 
-Don't: Do not recreate the retired nested `Corvus/` folder.
+Don't: Do not recreate the retired nested `Omen/` folder.
 
 Never: Never treat division-level notes as permission to change production or product code.

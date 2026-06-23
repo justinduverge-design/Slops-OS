@@ -1,6 +1,6 @@
 # Prompts Index
 
-Layer 0 (SLOPS) prompts. A prompt is a runnable task — usually a Claude→Codex handoff — that implements a spec or decision. These are OS-level prompts; Corvus app/product prompts live in `slops-saloon/corvus/Blueprints/prompts/`.
+Layer 0 (SLOPS) prompts. A prompt is a runnable task — usually a Claude→Codex handoff — that implements a spec or decision. These are OS-level prompts; Omen app/product prompts live in `slops-saloon/omen/Blueprints/prompts/`.
 
 ## Reusable templates (`_templates/`)
 

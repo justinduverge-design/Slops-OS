@@ -29,7 +29,7 @@ Curate 5-10 DESIGN.md files into `Blueprints/skills/slops-design-system-pack/sys
 ## Does NOT
 - Fork or rehost the upstream repos (sovereignty: vendor markdown only, never code).
 - Replace `slops-ux-copy` for voice or `slops-ui-ux-audit` for the actual audit pass.
-- Lock Corvus into one system — it's a starting point, not a constraint.
+- Lock Omen into one system — it's a starting point, not a constraint.
 
 ## Replaces / Complements
 - Complements `slops-ui-ux-audit`. Net-new.

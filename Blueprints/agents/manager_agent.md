@@ -2,7 +2,7 @@
 name: manager_agent
 status: active (runtime)
 layer: 1-slops-saloon
-canonical-location: slops-saloon\corvus\Blueprints\prompts\manager_agent.md
+canonical-location: slops-saloon\omen\Blueprints\prompts\manager_agent.md
 ---
 
 # Manager Agent — Redirect Stub
@@ -16,12 +16,12 @@ canonical-location: slops-saloon\corvus\Blueprints\prompts\manager_agent.md
 ## Canonical Location
 
 ```text
-slops-saloon\corvus\Blueprints\prompts\manager_agent.md
+slops-saloon\omen\Blueprints\prompts\manager_agent.md
 ```
 
 ## Status
 
-`active (runtime)` — Corvus fantasy football weekly recommendation engine.
+`active (runtime)` — Omen fantasy football weekly recommendation engine.
 
 Do not edit the canonical file without reading the Tuning Notes section inside it first.
 Every change to the Manager Agent prompt affects every user's weekly recommendation.
@@ -34,8 +34,8 @@ recommendation in strict JSON format.
 
 ## Related Files
 
-- `slops-saloon\corvus\Blueprints\prompts\sub_agents.md` — the six sub-agent prompts
-- `slops-saloon\corvus\Blueprints\prompts\PROMPTS_CHANGELOG.md` — tuning history
+- `slops-saloon\omen\Blueprints\prompts\sub_agents.md` — the six sub-agent prompts
+- `slops-saloon\omen\Blueprints\prompts\PROMPTS_CHANGELOG.md` — tuning history
 - `Blueprints\agents\AGENT_INDEX.md` — Section 3 (Project-Specific Agents)
 - `Blueprints\agents\layer-handoff-protocol.md` — cross-layer communication rules
 
@@ -46,4 +46,4 @@ one layer down at `1-slops-saloon` because it is product-specific runtime logic,
 reusable OS-level role. This stub prevents confusion when browsing the global agent
 directory.
 
-See `layer-handoff-protocol.md` for the full 0-OS → 1-slops-saloon → 2-Corvus authority chain.
+See `layer-handoff-protocol.md` for the full 0-OS → 1-slops-saloon → 2-Omen authority chain.

@@ -1,8 +1,8 @@
-# Handoff — Corvus Launch Readiness Check-In
+# Handoff — Omen Launch Readiness Check-In
 **Date:** 2026-06-10
 **For:** Claude + Codex session tomorrow
 **Deadline:** First Draft Day — August 2026 (~8 weeks)
-**Purpose:** Deep inspection of Corvus against launch readiness criteria. Find gaps, plan solutions, align sprints and roadmap to ship before drafts start.
+**Purpose:** Deep inspection of Omen against launch readiness criteria. Find gaps, plan solutions, align sprints and roadmap to ship before drafts start.
 
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: mobile-first-qa-playbook
-description: Phone-first QA sweep — iOS Safari + Android Chrome viewport matrix, touch targets, safe-area insets, keyboard avoidance, scroll lock, share sheet, motion-reduce. Severity-ranked findings. Closes Corvus launch gap #8 (mobile blocker).
+description: Phone-first QA sweep — iOS Safari + Android Chrome viewport matrix, touch targets, safe-area insets, keyboard avoidance, scroll lock, share sheet, motion-reduce. Severity-ranked findings. Closes Omen launch gap #8 (mobile blocker).
 status: active
 skill_type: simple
 layer: 0

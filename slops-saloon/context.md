@@ -11,22 +11,22 @@ Slops Saloon is the sports, music, and arts division inside SLOPS OS.
 Path:
 
 ```text
-C:\Users\JDuve\OneDrive\Desktop\SLOPS\slops-saloon
+C:\Users\JDuve\dev\SLOPS\slops-saloon
 ```
 
-This folder is not the Corvus git repo. It is the division parent for Corvus and future Slops Saloon products.
+This folder is not the Omen git repo. It is the division parent for Omen and future Slops Saloon products.
 
 ## Current Product
 
-Corvus is the only active product.
+Omen is the only active product.
 
 Path:
 
 ```text
-C:\Users\JDuve\OneDrive\Desktop\SLOPS\slops-saloon\corvus
+C:\Users\JDuve\dev\SLOPS\slops-saloon\omen
 ```
 
-Corvus owns:
+Omen owns:
 
 - App source.
 - Backend.
@@ -46,38 +46,38 @@ This layer should answer:
 - Which product is active?
 - Where should agents go next?
 
-It should not duplicate Corvus implementation context.
+It should not duplicate Omen implementation context.
 
 ## Active Routing
 
 Use this layer for division-level naming, product portfolio decisions, and future product setup.
 
-Use `corvus/` for all current app and product work.
+Use `omen/` for all current app and product work.
 
-New Claude or Codex chats for Corvus execution should route into:
+New Claude or Codex chats for Omen execution should route into:
 
 ```text
-corvus/
+omen/
 ```
 
-Then use the Corvus build loop:
+Then use the Omen build loop:
 
 ```text
-corvus/Direction/agent_inbox.md
-corvus/Blueprints/prompts/HOW-TO-RUN-THE-LOOP.md
-corvus/Blueprints/definition-of-done.md
+omen/Direction/agent_inbox.md
+omen/Blueprints/prompts/HOW-TO-RUN-THE-LOOP.md
+omen/Blueprints/definition-of-done.md
 ```
 
 For future Slops Saloon products, copy the reusable pattern from
 `Blueprints/prompts/agent-build-loop-template.md` into that product.
 
-## Latest Corvus Status — 2026-05-27
+## Latest Omen Status — 2026-05-27
 
-- Corvus remains the only active Slops Saloon product.
-- Backend/frontend handoff Requests 13-18 were advanced locally in `corvus/`.
+- Omen remains the only active Slops Saloon product.
+- Backend/frontend handoff Requests 13-18 were advanced locally in `omen/`.
 - Local backend test baseline is 216/216 passing.
 - Prepared Supabase launch SQL remains approval-gated; it has not been applied to staging or production.
-- Legacy Corvus compatibility endpoints now return `410 legacy_route_retired`; canonical frontend routes remain the source of truth.
+- Legacy Omen compatibility endpoints now return `410 legacy_route_retired`; canonical frontend routes remain the source of truth.
 - Do not perform Supabase, Stripe live, deploy, DNS, SSL, Nginx, or VPS work from this division layer without explicit Justin approval.
 
 ## Read First
@@ -90,8 +90,8 @@ For future Slops Saloon products, copy the reusable pattern from
 6. `Direction/decision_log.md`
 7. `Blueprints/README.md`
 8. `Blueprints/prompts/agent-build-loop-template.md` when setting up a future product loop
-9. `corvus/DBS_INDEX.md` when moving into product work
+9. `omen/DBS_INDEX.md` when moving into product work
 
 ## Safety Boundary
 
-Do not modify Corvus source, tests, deploy config, package files, SQL, Docker, Stripe, or Supabase from this division layer. Do not perform deploy, DNS, SSL, Nginx, or VPS work without explicit Justin approval. Route all product execution to `corvus/`.
+Do not modify Omen source, tests, deploy config, package files, SQL, Docker, Stripe, or Supabase from this division layer. Do not perform deploy, DNS, SSL, Nginx, or VPS work without explicit Justin approval. Route all product execution to `omen/`.

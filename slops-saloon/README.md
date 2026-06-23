@@ -2,27 +2,27 @@
 
 Slops Saloon is the sports, music, and arts division inside SLOPS OS.
 
-This is a division folder. The active product repo is `corvus/`.
+This is a division folder. The active product repo is `omen/`.
 
 ## Current Route
 
 ```text
-C:\Users\JDuve\OneDrive\Desktop\SLOPS
+C:\Users\JDuve\dev\SLOPS
   slops-saloon
-    corvus
+    omen
 ```
 
 ## Layer Roles
 
 - `SLOPS/` is the company operating system.
 - `slops-saloon/` is the Slops Saloon division.
-- `slops-saloon/corvus/` is the Corvus product git repo.
+- `slops-saloon/omen/` is the Omen product git repo.
 
 ## Active Product
 
-Corvus - Fantasy Football MVP.
+Omen - Fantasy Football MVP.
 
-All engineering, code, tests, deploy config, product handoffs, product prompts, and product specs live in `corvus/`.
+All engineering, code, tests, deploy config, product handoffs, product prompts, and product specs live in `omen/`.
 
 ## Read First
 
@@ -36,13 +36,13 @@ For division context:
 6. `Direction/roadmap.md`
 7. `Direction/decision_log.md`
 
-For Corvus work:
+For Omen work:
 
-1. `corvus/DBS_INDEX.md`
-2. `corvus/Direction/context.md`
-3. `corvus/Direction/current_sprint.md`
-4. `corvus/Blueprints/handoffs/frontend-to-backend.md`
-5. `corvus/Blueprints/handoffs/backend-to-frontend.md`
+1. `omen/DBS_INDEX.md`
+2. `omen/Direction/context.md`
+3. `omen/Direction/current_sprint.md`
+4. `omen/Blueprints/handoffs/frontend-to-backend.md`
+5. `omen/Blueprints/handoffs/backend-to-frontend.md`
 
 ## Boundary
 

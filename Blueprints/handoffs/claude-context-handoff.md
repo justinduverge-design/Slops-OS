@@ -9,7 +9,7 @@ Prepare Claude to continue SLOPS documentation, skill, agent, and DBS cleanup wo
 ```text
 SLOPS/
   slops-saloon/
-    corvus/
+    omen/
 ```
 
 ## Read First
@@ -31,20 +31,20 @@ For Slops Saloon division work:
 3. `slops-saloon/Direction/context.md`
 4. `slops-saloon/Direction/roadmap.md`
 
-For Corvus product work:
+For Omen product work:
 
-1. `slops-saloon/corvus/DBS_INDEX.md`
-2. `slops-saloon/corvus/Direction/context.md`
-3. `slops-saloon/corvus/Direction/current_sprint.md`
-4. `slops-saloon/corvus/Blueprints/handoffs/frontend-to-backend.md`
-5. `slops-saloon/corvus/Blueprints/handoffs/backend-to-frontend.md`
+1. `slops-saloon/omen/DBS_INDEX.md`
+2. `slops-saloon/omen/Direction/context.md`
+3. `slops-saloon/omen/Direction/current_sprint.md`
+4. `slops-saloon/omen/Blueprints/handoffs/frontend-to-backend.md`
+5. `slops-saloon/omen/Blueprints/handoffs/backend-to-frontend.md`
 
 ## Current State
 
 - SLOPS OS is the root operating layer.
 - Slops Saloon is the division layer.
-- Corvus is the active Fantasy Football MVP product repo.
-- The old nested `Corvus/` product subfolder is retired.
+- Omen is the active Fantasy Football MVP product repo.
+- The old nested `Omen/` product subfolder is retired.
 - SLOPS-authored skills live under `Blueprints/skills/`.
 - Imported agents remain reference-only unless reviewed, wrapped, indexed, and approved.
 

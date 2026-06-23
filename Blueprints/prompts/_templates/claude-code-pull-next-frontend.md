@@ -1,6 +1,6 @@
 # Claude Code Prompt — Pull Next Frontend Lane Item
 
-**Layer:** 2 (Corvus)
+**Layer:** 2 (Omen)
 **Type:** Reusable template — fire whenever the prior Frontend / Claude Phase item closes (or its backend dependency lands).
 **Date drafted:** 2026-06-13
 **Posture:** Single focused PR. No deploy. No push. Frontend build must stay green.
@@ -16,11 +16,11 @@ If the next item has hand-drafted requirements (specific component refactors, vi
 ## The Prompt
 
 ```text
-Read CLAUDE.md first, then slops-saloon/corvus/Direction/current_sprint.md.
+Read CLAUDE.md first, then slops-saloon/omen/Direction/current_sprint.md.
 
 Mode: implementation.
 
-You are Claude Code acting as the front-end engineer for Corvus.
+You are Claude Code acting as the front-end engineer for Omen.
 
 Pull the topmost open `[ ]` item from the `Frontend / Claude — Phase N` sections of `Direction/current_sprint.md`, in Phase order (1 → 2 → 3 → 4).
 
@@ -40,7 +40,7 @@ Ignore the `Verify`, `Decisions`, and `Tech debt` sections unless I name a speci
 Before making changes, tell me:
 1. Which Phase item you pulled, quoted verbatim.
 2. Any backend dependency check and your reading of it (shipped vs missing).
-3. Files you expect to touch (full paths). Frontend lives under `slops-saloon/corvus/frontend/`.
+3. Files you expect to touch (full paths). Frontend lives under `slops-saloon/omen/frontend/`.
 4. Files you will avoid (and why if non-obvious).
 5. What the user-visible change will look like (one paragraph or screen description).
 
@@ -58,7 +58,7 @@ After implementing:
 2. Run any frontend tests that exist. Report count delta.
 3. Run `git diff --check`. Confirm clean.
 4. Commit on `main` with a Conventional Commit message (`feat(phaseN.M): …` or `fix/chore/docs/test`). Do NOT push.
-5. Update `slops-saloon/corvus/Blueprints/handoffs/frontend-to-backend.md` if the change needs a new backend contract or surfaces a backend bug.
+5. Update `slops-saloon/omen/Blueprints/handoffs/frontend-to-backend.md` if the change needs a new backend contract or surfaces a backend bug.
 
 Report back in two short paragraphs:
 1. What landed (Phase item, files, commit hash, build status, visual change summary).
@@ -67,7 +67,7 @@ Report back in two short paragraphs:
 
 ## How To Use
 
-1. Open a fresh Claude Code session inside `SLOPS/slops-saloon/corvus`.
+1. Open a fresh Claude Code session inside `SLOPS/slops-saloon/omen`.
 2. Paste the block above verbatim.
 3. Review Claude Code's pre-change report. If the pulled item, dependency reading, or file list looks wrong, push back before any edits land.
 4. Approve. Claude Code implements + commits to `main`. No push (your gate).
@@ -84,5 +84,5 @@ Report back in two short paragraphs:
 
 - `_templates/Claude_prompt_format.md` / `_templates/Codex_prompt_format.md` — house format guides.
 - `_templates/codex-pull-next-backend.md` — Backend lane equivalent.
-- `slops-saloon/corvus/Direction/current_sprint.md` — source of truth for lane state.
-- `slops-saloon/corvus/Blueprints/handoffs/backend-to-frontend.md` — current backend contracts available to consume.
+- `slops-saloon/omen/Direction/current_sprint.md` — source of truth for lane state.
+- `slops-saloon/omen/Blueprints/handoffs/backend-to-frontend.md` — current backend contracts available to consume.

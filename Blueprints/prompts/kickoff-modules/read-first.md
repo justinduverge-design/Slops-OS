@@ -8,6 +8,6 @@ Additionally read on demand:
 - The relevant handoff (`backend-to-frontend.md` for frontend work; `frontend-to-backend.md` for backend work)
 - The recent commits if the task is a continuation (`git log --oneline -20`)
 - `Blueprints/skills/slops-tdd/SKILL.md` for code that changes observable behavior or fixes a reproducible defect
-- The target product's `Blueprints/playbooks/corvus-company-baseline.md` and `skill-activation-runbook.md` when present
+- The target product's `Blueprints/playbooks/omen-company-baseline.md` and `skill-activation-runbook.md` when present
 
 Do not pre-load archives, old prompts, or worktree copies. The current files are authoritative.

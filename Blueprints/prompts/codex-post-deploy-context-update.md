@@ -3,13 +3,13 @@
 ## Skill: slops-context-markdown
 ## Operation type: Markdown update only — no code, no secrets, no deploy
 ## Date: 2026-05-24
-## Layers: 0-OS SLOPS · 1-Slops Saloon · 2-Corvus
+## Layers: 0-OS SLOPS · 1-Slops Saloon · 2-Omen
 
 ---
 
 ## What Happened (Ground Truth)
 
-As of 2026-05-24, Corvus is live on Oracle. Here is the complete factual record:
+As of 2026-05-24, Omen is live on Oracle. Here is the complete factual record:
 
 - Omen canonical path migration complete — `OmenOfTheWeek.jsx` calls `POST /api/omen/mvp-move` ✅
 - npm audit fix — 0 vulnerabilities, 175/175 tests pass ✅
@@ -58,7 +58,7 @@ Rewrite the entire file. Replace with:
 
 ## Focus
 
-Corvus is deployed and live on Oracle. Post-deploy verification in progress.
+Omen is deployed and live on Oracle. Post-deploy verification in progress.
 
 ## Completed
 
@@ -80,7 +80,7 @@ Corvus is deployed and live on Oracle. Post-deploy verification in progress.
 - Stale doc cleanup — agent files, redirect stubs, archive ops, context normalization ✅
 - Stripe live key validation — sk_live_*, both price IDs confirmed in live account ✅
 - Docker prove-out — both images build clean ✅
-- Oracle deploy — Corvus live at slopssaloon.com, containers healthy ✅
+- Oracle deploy — Omen live at slopssaloon.com, containers healthy ✅
 
 ## Post-Deploy Remaining
 
@@ -112,7 +112,7 @@ Rewrite the entire file. Replace with:
 
 ## Now — Post-Deploy
 
-Corvus is live on Oracle. Two tasks remain before launch is fully stable:
+Omen is live on Oracle. Two tasks remain before launch is fully stable:
 
 - Stripe webhook registration (Stripe Dashboard — not a code change)
 - Load test: POST /api/omen/mvp-move and POST /api/trade/compare
@@ -146,7 +146,7 @@ Read the file first. Append a new section at the end:
 ```markdown
 ## Decisions Added 2026-05-24 (Deploy)
 
-- **Oracle deploy complete**: Corvus live at slopssaloon.com as of 2026-05-24.
+- **Oracle deploy complete**: Omen live at slopssaloon.com as of 2026-05-24.
   Both slops-saloon_api and slops-saloon_cron containers healthy. GitHub Actions pipeline green.
 
 - **npm 10 lockfile**: Local npm 11 generated a lockfile Docker's npm 10 rejected.
@@ -168,20 +168,20 @@ Read the file first. Append a new section at the end:
 
 ---
 
-## Layer 2 — Corvus
+## Layer 2 — Omen
 
-### File 4: `slops-saloon/corvus/Direction/current_sprint.md`
+### File 4: `slops-saloon/omen/Direction/current_sprint.md`
 
 Rewrite the entire file. Replace with:
 
 ```markdown
-# Corvus Current Sprint
+# Omen Current Sprint
 
 **Last updated**: 2026-05-24
 
 ## Focus
 
-Corvus is deployed and live on Oracle at slopssaloon.com.
+Omen is deployed and live on Oracle at slopssaloon.com.
 
 Post-deploy tasks: Stripe webhook registration and load test.
 
@@ -233,12 +233,12 @@ Post-deploy tasks: Stripe webhook registration and load test.
 
 ---
 
-### File 5: `slops-saloon/corvus/Direction/roadmap.md`
+### File 5: `slops-saloon/omen/Direction/roadmap.md`
 
 Rewrite the entire file. Replace with:
 
 ```markdown
-# Corvus Roadmap
+# Omen Roadmap
 
 **Last updated**: 2026-05-24
 
@@ -290,14 +290,14 @@ Platform breadth and feature depth after post-launch polish is stable.
 
 ---
 
-### File 6: `slops-saloon/corvus/Direction/decision_log.md`
+### File 6: `slops-saloon/omen/Direction/decision_log.md`
 
 Read the file first. Append a new section at the end:
 
 ```markdown
 ## Decisions Added 2026-05-24 (Deploy)
 
-- **Corvus deployed**: Live at slopssaloon.com on Oracle VPS as of 2026-05-24.
+- **Omen deployed**: Live at slopssaloon.com on Oracle VPS as of 2026-05-24.
   Both API and cron containers healthy. GitHub Actions pipeline green.
   GET /api/health → {"status":"ok"}.
 
@@ -324,9 +324,9 @@ Read the file first. Append a new section at the end:
 - [ ] `slops-saloon/Direction/current_sprint.md` — rewritten as "Slops Saloon Current Sprint", deploy complete reflected
 - [ ] `slops-saloon/Direction/roadmap.md` — rewritten as "Slops Saloon Roadmap", post-deploy framing
 - [ ] `slops-saloon/Direction/decision_log.md` — deploy decisions appended
-- [ ] `slops-saloon/corvus/Direction/current_sprint.md` — rewritten, all items updated
-- [ ] `slops-saloon/corvus/Direction/roadmap.md` — rewritten, Now/Next/Later updated
-- [ ] `slops-saloon/corvus/Direction/decision_log.md` — deploy decisions appended
+- [ ] `slops-saloon/omen/Direction/current_sprint.md` — rewritten, all items updated
+- [ ] `slops-saloon/omen/Direction/roadmap.md` — rewritten, Now/Next/Later updated
+- [ ] `slops-saloon/omen/Direction/decision_log.md` — deploy decisions appended
 - [ ] No source code, secrets, or deployment files touched
 - [ ] Report all files modified
 

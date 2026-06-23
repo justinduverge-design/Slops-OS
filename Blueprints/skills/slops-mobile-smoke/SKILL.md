@@ -7,7 +7,7 @@ layer: 0
 default_agent: Claude (review findings), Codex (extend driver + fixes via loop)
 trigger: "mobile smoke | iPhone smoke | phone-shape smoke | pre-deploy mobile check"
 version: 0.1.0
-upstream: playwright-core@1.49.x (already vendored in slops-saloon/corvus/node_modules)
+upstream: playwright-core@1.49.x (already vendored in slops-saloon/omen/node_modules)
 owner: Justin
 ---
 
@@ -51,8 +51,8 @@ interactive-element 44px checks. Use the device for the things only a human can 
 ## Preconditions & Dependencies
 
 - **Runtime:** Node.js 24+ (`node --version`).
-- **Package:** `playwright-core` — already in `slops-saloon/corvus/node_modules` (vendored).
-  Pinned at the version in `corvus/package.json`. No install required.
+- **Package:** `playwright-core` — already in `slops-saloon/omen/node_modules` (vendored).
+  Pinned at the version in `omen/package.json`. No install required.
 - **Browser binary:** Chromium downloaded on first run to `%LOCALAPPDATA%\ms-playwright`.
   WebKit binary will need a first-run download too — detect and stop with the install command if
   missing (see Install Boundary below).
@@ -180,7 +180,7 @@ Always include:
 
 - Reports → `Solutions/reports/<YYYY-MM-DD>-mobile-smoke-<product>.md`
 - Screenshot evidence → `Solutions/reports/_screenshots/<run-id>/...`
-- Driver extensions → `slops-saloon/corvus/.claude/skills/run-slops-saloon/` (extends, doesn't
+- Driver extensions → `slops-saloon/omen/.claude/skills/run-slops-saloon/` (extends, doesn't
   replace, the existing CJS driver)
 - This skill → `Blueprints/skills/_proposals/slops-mobile-smoke/SKILL.md` while in draft,
   promote to `Blueprints/skills/slops-mobile-smoke/SKILL.md` on approval

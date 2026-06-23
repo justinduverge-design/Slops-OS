@@ -90,4 +90,4 @@ any dependency blocks, and the recommended first pull.
 
 ## Change Log
 
-- 2026-06-08: Created from the Corvus build-loop planning method (promoted from HOW-TO-RUN-THE-LOOP.md).
+- 2026-06-08: Created from the Omen build-loop planning method (promoted from HOW-TO-RUN-THE-LOOP.md).

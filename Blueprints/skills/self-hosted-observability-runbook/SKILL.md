@@ -1,6 +1,6 @@
 ---
 name: self-hosted-observability-runbook
-description: Wire self-hosted observability (sentry-self-hosted + Umami + Vector log shipping) on KVM1 for any Slops product. Replaces SaaS Sentry/Plausible/Datadog. Closes Corvus launch gaps #10 (no error monitoring) and #14 (no analytics).
+description: Wire self-hosted observability (sentry-self-hosted + Umami + Vector log shipping) on KVM1 for any Slops product. Replaces SaaS Sentry/Plausible/Datadog. Closes Omen launch gaps #10 (no error monitoring) and #14 (no analytics).
 status: active
 skill_type: package
 layer: 0

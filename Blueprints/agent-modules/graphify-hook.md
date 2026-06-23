@@ -1,6 +1,6 @@
 # Cross-Layer Knowledge Graph (graphify) — consult before multi-layer tasks
 
-**When to use:** only when a task bridges layers (L0 doctrine ↔ L1 Slops Saloon ↔ L2 Corvus), traces a dependency across the stack, or asks "what governs this?" Single-layer tasks skip this — the graph is leverage for cross-cutting work, not overhead on every pull.
+**When to use:** only when a task bridges layers (L0 doctrine ↔ L1 Slops Saloon ↔ L2 Omen), traces a dependency across the stack, or asks "what governs this?" Single-layer tasks skip this — the graph is leverage for cross-cutting work, not overhead on every pull.
 
 ## Where it lives
 
@@ -11,8 +11,8 @@
 
 ## Query pattern
 
-1. **God nodes** (highest degree) — start here for context. Currently: Corvus, then SLOPS OS, Skill system, Slops Saloon.
+1. **God nodes** (highest degree) — start here for context. Currently: Omen, then SLOPS OS, Skill system, Slops Saloon.
 2. **Cross-layer edges** (L0↔L1, L1↔L2, L0↔L2) — trace constraints across layers.
 3. **Shortest path** between two concepts — surface hidden relationships.
 
-**Example:** before implementing a Corvus (L2) feature, ask "what L0 doctrine governs this?" and follow the edge before pulling the task.
+**Example:** before implementing a Omen (L2) feature, ask "what L0 doctrine governs this?" and follow the edge before pulling the task.

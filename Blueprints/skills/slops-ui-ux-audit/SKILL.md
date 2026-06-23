@@ -1,15 +1,15 @@
 ---
 name: slops-ui-ux-audit
-description: Slops-native UI/UX audit for Corvus screens and components. Audits against the AAA framework (Accuracy, Accessibility, Aesthetic Integrity), Brand/brand-system.md, and the design-system v1 — required states, 44px touch targets, motion-reduce, ARIA/keyboard, WCAG AA contrast, design-token consistency, brand voice, and mock/live labeling. Use to "audit a page/component", "ui/ux review", "design QA before handoff", "is this screen ready", or when replacing an external UX-audit skill. Produces a severity-ranked findings report with before/after fixes; it reviews, it does not edit app code (fixes route back through the build loop).
+description: Slops-native UI/UX audit for Omen screens and components. Audits against the AAA framework (Accuracy, Accessibility, Aesthetic Integrity), Brand/brand-system.md, and the design-system v1 — required states, 44px touch targets, motion-reduce, ARIA/keyboard, WCAG AA contrast, design-token consistency, brand voice, and mock/live labeling. Use to "audit a page/component", "ui/ux review", "design QA before handoff", "is this screen ready", or when replacing an external UX-audit skill. Produces a severity-ranked findings report with before/after fixes; it reviews, it does not edit app code (fixes route back through the build loop).
 ---
 
 # Slops UI/UX Audit Skill
 
 ## Purpose
 
-Replace a generic UX audit with one grounded in Corvus's own standards: the **AAA framework**
+Replace a generic UX audit with one grounded in Omen's own standards: the **AAA framework**
 (`Blueprints/definition-of-done.md`), `Brand/brand-system.md`, and
-`Blueprints/specs/corvus-ux-ui-design-system-v1.md`. The output is a findings report an agent can
+`Blueprints/specs/omen-ux-ui-design-system-v1.md`. The output is a findings report an agent can
 turn into build-loop items — not edited code.
 
 ## When To Use
@@ -27,7 +27,7 @@ turn into build-loop items — not edited code.
 
 - The screen(s)/component(s) in scope (file paths or routes).
 - `Brand/brand-system.md` (palette, type, voice, copy anchors).
-- `Blueprints/specs/corvus-ux-ui-design-system-v1.md` (tokens, state patterns).
+- `Blueprints/specs/omen-ux-ui-design-system-v1.md` (tokens, state patterns).
 - `Blueprints/definition-of-done.md` (AAA bar).
 
 ## Audit Checklist
@@ -79,7 +79,7 @@ to become ordered frontend loop items — not applied here.
 
 ## Where This Operates
 
-On the target product's frontend (e.g. `slops-saloon/corvus/frontend`). `Layer 0` doctrine.
+On the target product's frontend (e.g. `slops-saloon/omen/frontend`). `Layer 0` doctrine.
 
 ## Change Log
 

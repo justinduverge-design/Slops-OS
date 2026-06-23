@@ -2,7 +2,7 @@
 
 **Layer:** 0 — SLOPS OS
 **Status:** approved doctrine (2026-06-11, Justin)
-**Applies to:** every Slops Saloon product (Corvus, future apps)
+**Applies to:** every Slops Saloon product (Omen, future apps)
 
 ## The Doctrine
 

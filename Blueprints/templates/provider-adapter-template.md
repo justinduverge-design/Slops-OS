@@ -5,8 +5,8 @@ Use this when a product must ingest data from several interchangeable third-part
 (fantasy platforms, banks, calendars, CRMs, model hosts, etc.) and feed them into one shared engine.
 
 This template is reference material, not a callable skill. Copy its structure when designing a
-multi-provider integration. First live application: Corvus Omen
-(`slops-saloon/corvus/Blueprints/specs/live-engine-spec.md`).
+multi-provider integration. First live application: Omen Omen
+(`slops-saloon/omen/Blueprints/specs/live-engine-spec.md`).
 
 ## The core idea — one seam
 

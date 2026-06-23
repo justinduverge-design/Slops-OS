@@ -18,7 +18,7 @@ Render non-math animated content — onboarding intros, social cuts, OG-card ani
 
 ## When to Use
 
-- Onboarding or feature-intro animation for Corvus.
+- Onboarding or feature-intro animation for Omen.
 - Social/marketing cuts (vertical + horizontal).
 - Animated OG cards / share assets.
 
@@ -44,7 +44,7 @@ Locked (no longer blockers — captured below): brand palette, typography, sonic
 | `#8B1A1A` | Deep crimson | Risk indicators, warnings |
 | `#5B2D8E` | Electric violet | AI signal, Omen accent moments |
 
-Type: **Alegreya Sans** (display, titles, UI labels, buttons) + **Alegreya** (body). Source: `slops-saloon/corvus/Brand/brand-system.md`.
+Type: **Alegreya Sans** (display, titles, UI labels, buttons) + **Alegreya** (body). Source: `slops-saloon/omen/Brand/brand-system.md`.
 
 ## Sonic Direction (spec, not an asset)
 

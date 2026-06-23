@@ -23,7 +23,7 @@ name: <skill-name>                  # kebab-case, matches the folder name
 description: <one line: what it does + when to use it>
 status: draft                       # draft | active | restricted | reference-only | archived
 skill_type: simple                  # simple | package | wrapper
-layer: 0                            # 0 = SLOPS | 1 = Slops Saloon | 2 = Corvus (matches SKILL_ROUTING "Layer" column)
+layer: 0                            # 0 = SLOPS | 1 = Slops Saloon | 2 = Omen (matches SKILL_ROUTING "Layer" column)
 default_agent: Claude               # who runs it (matches SKILL_ROUTING "Default Agent" column)
 trigger: <none | /command | alias>  # invocation hook; consumed by command-bridge-generator
 version: 0.1.0                       # bump on every behavior change (see Version & Changelog)

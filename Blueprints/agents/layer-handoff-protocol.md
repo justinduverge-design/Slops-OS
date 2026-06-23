@@ -21,7 +21,7 @@ boundary must follow this protocol.
 |-------|------|----------|------|-------|
 | Layer 0 (`0-OS`) | SLOPS | Parent company / OS | `SLOPS\` | Founder OS — reusable doctrine, global skills, global agents, cross-product rules |
 | Layer 1 (`1-slops-saloon`) | Slops Saloon | Subsidiary | `SLOPS\slops-saloon\` | Subsidiary — fantasy sports product strategy, division naming/brand, future product slots. No app implementation. |
-| Layer 2 (`2-corvus`) | Corvus | First app | `SLOPS\slops-saloon\corvus\` | App runtime — Corvus feature logic, fantasy engine, app-specific implementation |
+| Layer 2 (`2-omen`) | Omen | First app | `SLOPS\slops-saloon\omen\` | App runtime — Omen feature logic, fantasy engine, app-specific implementation |
 
 ---
 
@@ -58,7 +58,7 @@ boundary must follow this protocol.
 **Owns:**
 - Product strategy documents (`slops-saloon\Direction\`)
 - App-level Blueprints (`slops-saloon\Blueprints\`)
-- Runtime agent prompts (`slops-saloon\corvus\Blueprints\prompts\`)
+- Runtime agent prompts (`slops-saloon\omen\Blueprints\prompts\`)
 - App-wide solutions and reports (`slops-saloon\Solutions\`)
 - Implementation context for the slops-saloon product
 
@@ -67,7 +67,7 @@ boundary must follow this protocol.
 - Tool tier grants beyond what 0-OS authorizes
 - Cross-product rules that affect the SLOPS OS
 
-**Passes down to 2-corvus:**
+**Passes down to 2-omen:**
 - Product context (roadmap, feature scope, launch criteria)
 - Data contracts and API boundaries
 - Sub-agent prompt definitions
@@ -76,7 +76,7 @@ boundary must follow this protocol.
 
 ---
 
-### Layer 2 (2-corvus) — Corvus (First App / Runtime)
+### Layer 2 (2-omen) — Omen (First App / Runtime)
 
 **Owns:**
 - Feature-specific runtime logic
@@ -98,7 +98,7 @@ boundary must follow this protocol.
 |-------|------------------|-------|
 | `0-OS` | Justin, Claude, Codex | Global — any file in `SLOPS\` with correct approval |
 | `1-slops-saloon` | Product agents, Claude (scoped), Codex (scoped) | App files only — cannot touch 0-OS doctrine without Justin |
-| `2-corvus` | Project agents, Claude (scoped), Codex (scoped) | Project files only — cannot touch slops-saloon product strategy without slops-saloon approval |
+| `2-omen` | Project agents, Claude (scoped), Codex (scoped) | Project files only — cannot touch slops-saloon product strategy without slops-saloon approval |
 
 **Key rule**: No agent at a lower layer may modify files at a higher layer without
 explicit Justin approval and a logged decision.
@@ -110,7 +110,7 @@ explicit Justin approval and a logged decision.
 When work crosses a layer boundary, the chain is:
 
 ```
-2-corvus runtime request
+2-omen runtime request
   → escalate to 1-slops-saloon product layer
   → escalate to 0-OS Claude for planning/review
   → escalate to Justin for approval (if risk threshold exceeded)
@@ -128,8 +128,8 @@ Runtime prompts (agent system prompts that run in production) belong at the
 
 | Artifact | Correct Location | Reason |
 |----------|-----------------|--------|
-| `manager_agent.md` | `slops-saloon\corvus\Blueprints\prompts\` | Product-specific runtime logic |
-| `sub_agents.md` | `slops-saloon\corvus\Blueprints\prompts\` | Product-specific runtime logic |
+| `manager_agent.md` | `slops-saloon\omen\Blueprints\prompts\` | Product-specific runtime logic |
+| `sub_agents.md` | `slops-saloon\omen\Blueprints\prompts\` | Product-specific runtime logic |
 | Global skill files | `Blueprints\skills\` (0-OS) | Reusable across all products |
 | Global agent roster | `Blueprints\agents\` (0-OS) | Authority index, not runtime content |
 
@@ -173,7 +173,7 @@ SLOPS\slops-saloon\                  ← 1-slops-saloon: App layer
   Direction\                    ← Product strategy
   Solutions\                    ← App reports and analysis
 
-SLOPS\slops-saloon\corvus\           ← Layer 2 (corvus): App layer
+SLOPS\slops-saloon\omen\           ← Layer 2 (omen): App layer
   (project-specific runtime)
 ```
 

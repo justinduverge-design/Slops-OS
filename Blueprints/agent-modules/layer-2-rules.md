@@ -1,6 +1,6 @@
-# Layer 2 — Corvus (active product)
+# Layer 2 — Omen (active product)
 
-**Path:** `<git-root>/slops-saloon/corvus/`
+**Path:** `<git-root>/slops-saloon/omen/`
 
 **In scope:**
 

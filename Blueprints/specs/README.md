@@ -4,7 +4,7 @@ Layer 0 (SLOPS) specs. A spec defines what a piece of the operating system shoul
 
 ## Layer note
 
-These are company/OS specs. App-implementation and product specs for Corvus live in `slops-saloon/corvus/Blueprints/specs/`, not here.
+These are company/OS specs. App-implementation and product specs for Omen live in `slops-saloon/omen/Blueprints/specs/`, not here.
 
 ## Specs
 
@@ -16,7 +16,7 @@ These are company/OS specs. App-implementation and product specs for Corvus live
 | `app-strategy.spec.md` | App/distribution strategy scope and constraints. |
 | `ux-ui-execution.spec.md` | UX/UI execution standards (spec layer only — no components, no design system, no app code). |
 | `hermes-split.spec.md` | The Local/Cloud Hermes two-agent split: scope, permissions, readiness gates, and the v2 expansion gate. |
-| `kvm2-model-decision-matrix.md` | KVM2 (AI office) hardware budget, model options, Corvus use cases, concurrency strategy, and model change protocol. |
+| `kvm2-model-decision-matrix.md` | KVM2 (AI office) hardware budget, model options, Omen use cases, concurrency strategy, and model change protocol. |
 
 ## Related
 

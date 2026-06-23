@@ -112,7 +112,7 @@ After the commit:
 
 - The `slops-context-markdown` vs `slops-markdown-authoring` near-duplicate — open question, awaiting Justin's call.
 - Any other proposal still in `_proposals/`.
-- Any L2 / Corvus file.
+- Any L2 / Omen file.
 - `SKILL_ROUTING.md` row edits (rows are correct as landed).
 
 ## Report Back

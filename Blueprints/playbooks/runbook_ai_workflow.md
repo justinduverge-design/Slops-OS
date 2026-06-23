@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This runbook defines how Justin, Claude, and Codex work together while building Corvus.
+This runbook defines how Justin, Claude, and Codex work together while building Omen.
 
 The goal is to keep progress focused, safe, and reversible.
 
@@ -46,7 +46,7 @@ Mode: read-only inspection.
 
 Do not edit files.
 
-Inspect the Corvus app and report the current frontend structure, active frontend folder, active routes, important components, and what should be changed next to support the app backbone and Draft Assistant.
+Inspect the Omen app and report the current frontend structure, active frontend folder, active routes, important components, and what should be changed next to support the app backbone and Draft Assistant.
 ```
 
 ### Codex start prompt
@@ -58,7 +58,7 @@ Mode: read-only inspection.
 
 Do not edit files.
 
-Inspect the Corvus app and report the backend framework, API route structure, existing Omen/Draft/Platform routes, environment safety, test status, and what backend task should come next.
+Inspect the Omen app and report the backend framework, API route structure, existing Omen/Draft/Platform routes, environment safety, test status, and what backend task should come next.
 ```
 
 ---

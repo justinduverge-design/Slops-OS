@@ -8,17 +8,17 @@ Use these paths:
 
 - OS handoffs: `Blueprints/handoffs/`
 - Slops Saloon division context: `slops-saloon/`
-- Corvus product handoffs: `slops-saloon/corvus/Blueprints/handoffs/`
+- Omen product handoffs: `slops-saloon/omen/Blueprints/handoffs/`
 
-## Corvus Handoffs
+## Omen Handoffs
 
 Active frontend/backend contracts live in:
 
 ```text
-slops-saloon/corvus/Blueprints/handoffs/
+slops-saloon/omen/Blueprints/handoffs/
 ```
 
-Do not put active Corvus endpoint contracts in the root OS handoff folder.
+Do not put active Omen endpoint contracts in the root OS handoff folder.
 
 ## Current OS Handoff Files
 

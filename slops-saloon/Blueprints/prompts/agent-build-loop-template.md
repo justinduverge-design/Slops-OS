@@ -39,14 +39,14 @@ Add the loop files to the product read-first lists:
 3. The agent reports task understanding, expected files, avoided areas, and verification before editing.
 4. The agent builds inside its ownership lane, satisfies the Definition of Done, writes the handoff, logs decisions, and stops at gated actions.
 
-## Current Corvus Reference
+## Current Omen Reference
 
-Corvus is the current reference implementation:
+Omen is the current reference implementation:
 
 ```text
-corvus/Direction/agent_inbox.md
-corvus/Blueprints/prompts/HOW-TO-RUN-THE-LOOP.md
-corvus/Blueprints/definition-of-done.md
+omen/Direction/agent_inbox.md
+omen/Blueprints/prompts/HOW-TO-RUN-THE-LOOP.md
+omen/Blueprints/definition-of-done.md
 ```
 
-Do not route Corvus execution from the division layer. Start in `corvus/`.
+Do not route Omen execution from the division layer. Start in `omen/`.

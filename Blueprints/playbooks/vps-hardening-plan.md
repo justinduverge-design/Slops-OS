@@ -33,7 +33,7 @@ You need to know which machine you are touching, which user you are using, and w
 Good outcome:
 
 - You know the VPS provider, public IP, OS version, and purpose.
-- The box has a clear role, such as "KVM1 = Corvus app" or "KVM2 = private model host."
+- The box has a clear role, such as "KVM1 = Omen app" or "KVM2 = private model host."
 - You know whether you are on the new box, the old production box, or a utility/model box before changing anything.
 
 ## Phase 2 - Create A Non-Root Admin User

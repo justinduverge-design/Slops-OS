@@ -4,7 +4,7 @@
 **Created:** 2026-06-12
 **Replaces:** the Week-1-only prompt drafted 2026-06-11
 
-Paste the block below into a fresh Codex session in `C:\Users\JDuve\OneDrive\Desktop\SLOPS\`.
+Paste the block below into a fresh Codex session in `C:\Users\JDuve\dev\SLOPS\`.
 
 ---
 
@@ -18,7 +18,7 @@ each one in SKILL_ROUTING.md.
 
 READ FIRST (in order)
 1. Blueprints/handoffs/2026-06-11-skills-acquisition-handoff.md
-2. Blueprints/handoffs/2026-06-11-corvus-pull-prep-handoff.md (revised 2026-06-12)
+2. Blueprints/handoffs/2026-06-11-omen-pull-prep-handoff.md (revised 2026-06-12)
 3. Blueprints/skills/SKILL_ROUTING.md
 4. Blueprints/skills/SLOPS_LIFECYCLE.md
 5. Blueprints/skills/_template/SKILL.md
@@ -144,4 +144,4 @@ After Justin reviews the eight scaffolds and gives final approval. The proposals
 - The graphify v2 upstream swap (gated on smoke test; not part of promotion).
 - The pm-skills harvest (gated on Justin approving the specific 5 patterns + installing pm-ai-shipping plugin).
 - Parked stubs (explainer-cut, animation-render, lore-review).
-- Any L2 (Corvus) pull — that waits for Phase 1.1 to ship, per `2026-06-11-corvus-pull-prep-handoff.md`.
+- Any L2 (Omen) pull — that waits for Phase 1.1 to ship, per `2026-06-11-omen-pull-prep-handoff.md`.

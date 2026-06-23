@@ -2,7 +2,7 @@
 
 This folder contains the canonical authority model for all SLOPS OS agents.
 
-**Canonical path:** `C:\Users\JDuve\OneDrive\Desktop\SLOPS\Blueprints\agents`
+**Canonical path:** `C:\Users\JDuve\dev\SLOPS\Blueprints\agents`
 
 ## Lookup Rule (Critical)
 

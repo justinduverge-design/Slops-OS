@@ -1,6 +1,6 @@
 ---
 name: slops-repo-inspector
-description: Inspect SLOPS L0, Slops Saloon L1, and Corvus L2 repo truth before planning or editing. Use when an agent needs current paths, source-of-truth docs, git status, canonical skill authority, or stale-path cleanup.
+description: Inspect SLOPS L0, Slops Saloon L1, and Omen L2 repo truth before planning or editing. Use when an agent needs current paths, source-of-truth docs, git status, canonical skill authority, or stale-path cleanup.
 status: active
 skill_type: simple
 layer: 0
@@ -23,7 +23,7 @@ Use this skill to prevent stale-path drift, especially old pre-DBS instructions 
 
 - L0 workspace: the path returned by `git rev-parse --show-toplevel`
 - L1 Slops Saloon division: `<git-root>/slops-saloon/`
-- L2 Corvus app repo: `<git-root>/slops-saloon/corvus/`
+- L2 Omen app repo: `<git-root>/slops-saloon/omen/`
 - Canonical SLOPS skills: `<git-root>/Blueprints/skills/<name>/SKILL.md`
 - Codex-installed skills: `$HOME/.codex/skills/<name>/SKILL.md`
 - Claude-installed skills: `$HOME/.claude/skills/<name>/SKILL.md`
@@ -46,12 +46,12 @@ When skill/source authority matters, also read:
 - `Blueprints/skills/<name>/SKILL.md`, if present
 - `C:\Users\JDuve\.codex\skills\<name>\SKILL.md`, only after checking the canonical Blueprints copy
 
-For Corvus app work, route to L2:
+For Omen app work, route to L2:
 
-- Queue: `slops-saloon/corvus/Direction/current_sprint.md`
-- Override slot: `slops-saloon/corvus/Direction/agent_inbox.md`
-- Product handoffs: `slops-saloon/corvus/Blueprints/handoffs/`
-- Done bar: `slops-saloon/corvus/Blueprints/definition-of-done.md`
+- Queue: `slops-saloon/omen/Direction/current_sprint.md`
+- Override slot: `slops-saloon/omen/Direction/agent_inbox.md`
+- Product handoffs: `slops-saloon/omen/Blueprints/handoffs/`
+- Done bar: `slops-saloon/omen/Blueprints/definition-of-done.md`
 
 ## Stale Path Rule
 
@@ -72,14 +72,14 @@ Root `context.md` is a legacy orientation snapshot, not the active queue. Curren
    - `git status --short`
    - `git branch --show-current`
    - `git rev-parse --show-toplevel`
-2. If the task touches Corvus, confirm the app repo separately:
-   - `git -C slops-saloon/corvus status --short`
-   - `git -C slops-saloon/corvus branch --show-current`
-   - `git -C slops-saloon/corvus rev-parse --show-toplevel`
+2. If the task touches Omen, confirm the app repo separately:
+   - `git -C slops-saloon/omen status --short`
+   - `git -C slops-saloon/omen branch --show-current`
+   - `git -C slops-saloon/omen rev-parse --show-toplevel`
 3. Classify the DBS layer before reading broadly:
    - L0: cross-cutting doctrine, skills, agents, prompts, tools, operating rules.
    - L1: Slops Saloon division strategy, brand/content/marketing, future products.
-   - L2: Corvus app source, backend, frontend, tests, deploy, product specs, app handoffs.
+   - L2: Omen app source, backend, frontend, tests, deploy, product specs, app handoffs.
 4. Read only the current source-of-truth files for that layer.
 5. Name dirty worktree files before edits. Never revert user changes.
 6. For skill work, edit `Blueprints/skills/<name>/SKILL.md` first when it exists, then sync installed copies. If no canonical source exists, say so before editing the installed copy.

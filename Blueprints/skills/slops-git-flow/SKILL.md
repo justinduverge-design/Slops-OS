@@ -9,7 +9,7 @@ description: Slops-native git workflow for the build loop. One scoped branch and
 
 Map git onto the build loop so the unit of work is consistent end to end: **one sprint item =
 one branch = one PR = one definition-of-done.** Replaces external stacking tools (e.g. gstack)
-with a workflow that matches how Corvus already builds, and bakes in the scoped-commit discipline
+with a workflow that matches how Omen already builds, and bakes in the scoped-commit discipline
 that keeps a known-dirty worktree from leaking unrelated files into a commit.
 
 ## When To Use
@@ -78,7 +78,7 @@ A scoped commit and a ready PR description — never an executed push or merge.
 
 ## Where This Operates
 
-On the target product repo (e.g. `slops-saloon/corvus`). This skill is `Layer 0` doctrine; the
+On the target product repo (e.g. `slops-saloon/omen`). This skill is `Layer 0` doctrine; the
 branches/PRs it prepares live in the product repo.
 
 ## Change Log

@@ -2,7 +2,7 @@
 
 This is the canonical **Layer 2 (product/app)** DBS scaffold. Copy it to start a new app
 under a division so the new repo is DBS-conformant from the first commit — instead of
-cloning Corvus and stripping out its source, secrets, and `node_modules`.
+cloning Omen and stripping out its source, secrets, and `node_modules`.
 
 ## How to instantiate a new app
 
@@ -20,8 +20,8 @@ cloning Corvus and stripping out its source, secrets, and `node_modules`.
 
    | Token               | Meaning                                 | Example                           |
    | :------------------ | :-------------------------------------- | :-------------------------------- |
-   | `{{APP_NAME}}`      | Human-readable product name             | `Corvus`                          |
-   | `{{app-slug}}`      | Folder/repo slug                        | `corvus`                          |
+   | `{{APP_NAME}}`      | Human-readable product name             | `Omen`                          |
+   | `{{app-slug}}`      | Folder/repo slug                        | `omen`                          |
    | `{{DIVISION}}`      | Parent Layer 1 division name            | `Slops Saloon`                    |
    | `{{division-slug}}` | Parent division folder slug             | `slops-saloon`                    |
    | `{{ONE_LINER}}`     | One-sentence description of the product | `Fantasy football decision layer` |

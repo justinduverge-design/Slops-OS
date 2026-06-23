@@ -98,7 +98,7 @@ For each imported agent, assign exactly one recommended status:
 
 Evaluate each agent on:
 
-- Relevance: Is this directly useful for SLOPS OS, slops-saloon MVP, Corvus launch, or the next 90 days?
+- Relevance: Is this directly useful for SLOPS OS, slops-saloon MVP, Omen launch, or the next 90 days?
 - Risk: Does it imply production, secrets, payments, auth, databases, app source, external tool mutation, outbound messaging, user data, customer data, or paid systems?
 - Overlap: Does Claude, Codex, an existing SLOPS skill, or an existing SLOPS agent already cover this work well enough?
 - Wrapper feasibility: Can `slops-agent-author` write a clear least-privilege wrapper without ambiguity?
@@ -277,7 +277,7 @@ Rules:
 - Prefer a skill when repeated imported-agent behavior is better expressed as a workflow than an actor.
 - Prefer an agent wrapper when a durable role identity, responsibility boundary, and RBAC profile are needed.
 - Mark priority as:
-  - `High` when the skill would immediately reduce agent sprawl or support a near-term SLOPS/Corvus workflow.
+  - `High` when the skill would immediately reduce agent sprawl or support a near-term SLOPS/Omen workflow.
   - `Medium` when useful soon but not blocking.
   - `Low` when useful later or mostly inspirational.
 - If there are no useful skill opportunities, explicitly say: `No new skill recommended. Existing skills cover the observed patterns.`
@@ -343,7 +343,7 @@ If it does not exist, continue and note that no prior-use review was available.
 - [ ] One imported division reviewed, unless Justin explicitly requested more.
 - [ ] All files in the division read before status decisions.
 - [ ] Every agent assigned exactly one recommended status.
-- [ ] Candidate choices are justified by near-term SLOPS/Corvus usefulness.
+- [ ] Candidate choices are justified by near-term SLOPS/Omen usefulness.
 - [ ] Risky agents are marked `do-not-activate` with a specific RBAC reason.
 - [ ] Heavy-overlap agents are marked `reference-only`.
 - [ ] Candidate wrapper handoff is ready for `slops-agent-author`.

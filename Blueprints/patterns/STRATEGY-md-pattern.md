@@ -38,7 +38,7 @@ YYYY-MM-DD by <who>
 
 ## Why This Pattern
 
-Corvus today has direction spread across `Direction/current_sprint.md`, `Direction/roadmap.md`, the launch-readiness handoff, the architecture-pivot handoff, and several smaller docs. None of them serve as the one-pager an agent reads to ground itself before doing the next thing.
+Omen today has direction spread across `Direction/current_sprint.md`, `Direction/roadmap.md`, the launch-readiness handoff, the architecture-pivot handoff, and several smaller docs. None of them serve as the one-pager an agent reads to ground itself before doing the next thing.
 
 STRATEGY.md is that one-pager. It does not replace the sprint or roadmap — it grounds them.
 
@@ -59,8 +59,8 @@ When absent, the skills proceed without it (no failure), but Claude should sugge
 
 - **Slops OS (L0):** no STRATEGY.md — SLOPS is the operating system, not a product. Doctrine lives in `CLAUDE.md` + `AGENTS.md`.
 - **Slops Saloon (L1):** create a one-page `slops-saloon/STRATEGY.md` covering the division — what apps it ships, what aesthetic, what monetization rule.
-- **Corvus (L2):** create `slops-saloon/corvus/STRATEGY.md` after Phase 1.1 ships. Do NOT add it mid-phase — let the existing sprint finish.
-- **Future products (Corvus #2, etc.):** STRATEGY.md is a Day-1 file, written before any code.
+- **Omen (L2):** create `slops-saloon/omen/STRATEGY.md` after Phase 1.1 ships. Do NOT add it mid-phase — let the existing sprint finish.
+- **Future products (Omen #2, etc.):** STRATEGY.md is a Day-1 file, written before any code.
 
 ## Does NOT
 
@@ -69,4 +69,4 @@ When absent, the skills proceed without it (no failure), but Claude should sugge
 - Live anywhere except the product repo root.
 
 ## Changelog
-- 2026-06-11 — pattern approved by Justin. Adoption order set; Corvus does NOT get STRATEGY.md until after Phase 1.1.
+- 2026-06-11 — pattern approved by Justin. Adoption order set; Omen does NOT get STRATEGY.md until after Phase 1.1.

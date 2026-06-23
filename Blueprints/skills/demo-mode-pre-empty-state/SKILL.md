@@ -19,7 +19,7 @@ Designing any user-facing surface that has a "you haven't connected anything yet
 Define a reusable cold-start pattern: a clearly labeled sample dataset that lets a new user see real value before they connect their real league/account, plus a hard rule that demo data never silently mixes into real data once they switch over. The skill produces a per-product `demo-mode.md` covering: sample fixture shape, the visible "this is sample data" affordance (ties to `slops-ui-ux-audit` mock/live rule), the conversion CTA, and the swap-in moment.
 
 ## Required Inputs
-- Product name + the entity model that needs sampling (for Corvus: league, roster, matchups, score).
+- Product name + the entity model that needs sampling (for Omen: league, roster, matchups, score).
 - Brand-system mock/live badge spec.
 
 ## Outputs
@@ -39,7 +39,7 @@ Define a reusable cold-start pattern: a clearly labeled sample dataset that lets
 
 ## Replaces / Complements
 - **Net-new.** Complements `slops-ui-ux-audit` by giving the mock/live check a target pattern.
-- Harvested from Corvus Phase 1 work; best authored AFTER Corvus ships its version so the pattern is real, not guessed.
+- Harvested from Omen Phase 1 work; best authored AFTER Omen ships its version so the pattern is real, not guessed.
 
 ## Verification
 - Success signal: a `demo-mode.md` exists for the product; the audit confirms badge visibility on every demo-mode route.

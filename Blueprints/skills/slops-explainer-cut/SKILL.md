@@ -1,6 +1,6 @@
 ---
 name: slops-explainer-cut
-description: Produce 30-90s Manim explainer videos for the math behind Slops opinion features (Omen, Trade Analyzer, MVP Move, ADP). Dual purpose — sharpen/QA Corvus's own math AND produce social "show your work" content (e.g. the weekly Omen of the Week). On-brand format that visualizes how the Slops opinion layer departs from the nflverse baseline. Use when Justin asks to explain a projection's math on video, make a Manim cut, build an Omen-of-the-Week clip, or turn an Omen/Trade verdict into a "show your work" explainer. Do not use for the hand-drawn animated series (future OpenToonz pipeline) or for writing the narrative beats (use slops-screenplay-loop first).
+description: Produce 30-90s Manim explainer videos for the math behind Slops opinion features (Omen, Trade Analyzer, MVP Move, ADP). Dual purpose — sharpen/QA Omen's own math AND produce social "show your work" content (e.g. the weekly Omen of the Week). On-brand format that visualizes how the Slops opinion layer departs from the nflverse baseline. Use when Justin asks to explain a projection's math on video, make a Manim cut, build an Omen-of-the-Week clip, or turn an Omen/Trade verdict into a "show your work" explainer. Do not use for the hand-drawn animated series (future OpenToonz pipeline) or for writing the narrative beats (use slops-screenplay-loop first).
 skill_type: package
 layer: 0
 default_agent: Claude (plan), Codex (render)

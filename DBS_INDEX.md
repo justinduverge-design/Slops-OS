@@ -6,30 +6,30 @@ This is the root navigation map for the active SLOPS folder system.
 
 ```text
 Layer 0 - SLOPS OS
-Path: C:\Users\JDuve\OneDrive\Desktop\SLOPS
+Path: C:\Users\JDuve\dev\SLOPS
 
 Layer 1 - Slops Saloon division
-Path: C:\Users\JDuve\OneDrive\Desktop\SLOPS\slops-saloon
+Path: C:\Users\JDuve\dev\SLOPS\slops-saloon
 
-Layer 2 - Corvus product repo
-Path: C:\Users\JDuve\OneDrive\Desktop\SLOPS\slops-saloon\corvus
+Layer 2 - Omen product repo
+Path: C:\Users\JDuve\dev\SLOPS\slops-saloon\omen
 ```
 
 Older docs may call these Layer 1, Layer 2, and Layer 3. Current routing should use Layer 0, Layer 1, and Layer 2.
 
-When Justin says "Layer 3," treat that as the third layer in plain English: the current canonical Layer 2 Corvus product repo.
+When Justin says "Layer 3," treat that as the third layer in plain English: the current canonical Layer 2 Omen product repo.
 
 ## Current Product Route
 
-Corvus is the only active product.
+Omen is the only active product.
 
 ```text
 SLOPS/
   slops-saloon/
-    corvus/
+    omen/
 ```
 
-The old product subfolder path `slops-saloon/corvus/Corvus/` is retired.
+The old product subfolder path `slops-saloon/omen/Omen/` is retired.
 
 ## Layer Responsibilities
 
@@ -69,7 +69,7 @@ Read:
 - `slops-saloon/Direction/context.md`
 - `slops-saloon/Direction/roadmap.md`
 
-### Layer 2 - Corvus
+### Layer 2 - Omen
 
 Owns:
 
@@ -81,15 +81,15 @@ Owns:
 - Product prompts.
 - Product specs.
 - Product handoffs.
-- Corvus product decisions.
+- Omen product decisions.
 
 Read:
 
-- `slops-saloon/corvus/DBS_INDEX.md`
-- `slops-saloon/corvus/Direction/context.md`
-- `slops-saloon/corvus/Direction/current_sprint.md`
-- `slops-saloon/corvus/Direction/roadmap.md`
-- `slops-saloon/corvus/Blueprints/handoffs/`
+- `slops-saloon/omen/DBS_INDEX.md`
+- `slops-saloon/omen/Direction/context.md`
+- `slops-saloon/omen/Direction/current_sprint.md`
+- `slops-saloon/omen/Direction/roadmap.md`
+- `slops-saloon/omen/Blueprints/handoffs/`
 
 ## DBS Folders
 
@@ -117,7 +117,7 @@ On this Windows workspace, lowercase `agents.md` / `claude.md` references resolv
 
 Layer-specific detail can live in `Direction/`, but these root files must exist so Claude, Codex, and future agents do not need to guess where to start.
 
-The Corvus app layer may add app-specific folders such as `src/`, `frontend/`, `test/`, `sql/`, `.github/`, and `scripts/`. Those do not replace the baseline DBS context files.
+The Omen app layer may add app-specific folders such as `src/`, `frontend/`, `test/`, `sql/`, `.github/`, and `scripts/`. Those do not replace the baseline DBS context files.
 
 ## Skills
 
@@ -133,14 +133,14 @@ Skill lookup:
 2. `Blueprints/skills/SKILL_ROUTING.md`
 3. `Blueprints/skills/<skill-name>/SKILL.md`
 
-Do not create new SLOPS-authored skills inside `slops-saloon/` or `slops-saloon/corvus/` unless Justin explicitly changes that rule.
+Do not create new SLOPS-authored skills inside `slops-saloon/` or `slops-saloon/omen/` unless Justin explicitly changes that rule.
 
 ## Handoffs
 
-Corvus frontend/backend handoffs live at:
+Omen frontend/backend handoffs live at:
 
 ```text
-slops-saloon/corvus/Blueprints/handoffs/
+slops-saloon/omen/Blueprints/handoffs/
 ```
 
 Root handoffs are OS-level coordination only.

@@ -20,12 +20,12 @@ Run BOTH tools on the SAME two targets, compare outputs side-by-side.
 
 ### Targets
 - **Target A:** active Git root (`git rev-parse --show-toplevel`) — L0 doctrine pass.
-- **Target B:** `slops-saloon/corvus/` — L2 code pass (166 code files per the existing `slops-graphify` smoke test).
+- **Target B:** `slops-saloon/omen/` — L2 code pass (166 code files per the existing `slops-graphify` smoke test).
 
 ### Procedure
 1. Justin runs: `/plugin marketplace add Egonex-AI/Understand-Anything && /plugin install understand-anything` (Claude Code), OR `bash install.sh codex` for Codex.
 2. Inside SLOPS root: `/understand` (auto-detects scope) — output to `.understand-anything/knowledge-graph.json`.
-3. Inside `corvus/`: `/understand` — output to `corvus/.understand-anything/knowledge-graph.json`.
+3. Inside `omen/`: `/understand` — output to `omen/.understand-anything/knowledge-graph.json`.
 4. Compare per-target:
    - **Node count parity:** Understand-Anything node count vs graphify node count. Difference should be ≤20%; either tool may legitimately find more.
    - **Edge accuracy:** spot-check 10 cross-file edges in each output. Score: correct / wrong / missing.

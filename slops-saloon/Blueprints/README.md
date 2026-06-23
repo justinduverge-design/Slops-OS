@@ -2,7 +2,7 @@
 
 This folder is for division-level blueprints only.
 
-It is intentionally light right now because Corvus is the only active product.
+It is intentionally light right now because Omen is the only active product.
 
 ## Use This Folder For
 
@@ -20,22 +20,22 @@ task routing pattern:
 Blueprints/prompts/agent-build-loop-template.md
 ```
 
-Corvus already has its product-specific loop under `corvus/Blueprints/`.
+Omen already has its product-specific loop under `omen/Blueprints/`.
 
 ## Do Not Use This Folder For
 
-- Corvus product prompts.
-- Corvus engineering specs.
-- Corvus frontend/backend handoffs.
-- Corvus deploy or source documentation.
+- Omen product prompts.
+- Omen engineering specs.
+- Omen frontend/backend handoffs.
+- Omen deploy or source documentation.
 - Global SLOPS skills.
 
 ## Current Product Blueprint Path
 
-Corvus product blueprints live at:
+Omen product blueprints live at:
 
 ```text
-corvus/Blueprints/
+omen/Blueprints/
 ```
 
 Global SLOPS skills live at:

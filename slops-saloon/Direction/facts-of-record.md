@@ -5,8 +5,8 @@
 
 ## Active facts
 
-1. **Corvus is the only active product.** Future products stay parked until Justin explicitly starts one.
+1. **Omen is the only active product.** Future products stay parked until Justin explicitly starts one.
 2. **Content + marketing is agent work.** Claude and Codex produce; Justin directs. Canonical strategy docs: `Direction/marketing-strategy.md`, `Direction/content-strategy.md`.
-3. **Working rule** — *Corvus creates the proof. Slops Saloon turns the proof into marketing.* (Proof generated at L2 in `Solutions/product-evidence/`; marketing artifacts produced at L1 in `Solutions/marketing/`.)
-4. **L1 does not touch Corvus source.** Division-level work stays at L1; product implementation routes to L2 (`corvus/`).
-5. **Do not recreate** the retired nested `Corvus/` folder at L1 root.
+3. **Working rule** — *Omen creates the proof. Slops Saloon turns the proof into marketing.* (Proof generated at L2 in `Solutions/product-evidence/`; marketing artifacts produced at L1 in `Solutions/marketing/`.)
+4. **L1 does not touch Omen source.** Division-level work stays at L1; product implementation routes to L2 (`omen/`).
+5. **Do not recreate** the retired nested `Omen/` folder at L1 root.

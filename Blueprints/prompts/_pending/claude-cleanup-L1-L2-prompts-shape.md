@@ -1,6 +1,6 @@
 # Claude Prompt — L1 + L2 Prompts Same-Shape Pass
 
-**Layer:** 1 (slops-saloon) + 2 (Corvus)
+**Layer:** 1 (slops-saloon) + 2 (Omen)
 **Type:** One-shot — fires once, then this file is itself archived.
 **Date drafted:** 2026-06-13
 **Posture:** File moves + README updates + PROMPTS_CHANGELOG entry at L2. No git push. Justin gates the commit and the L2 triage decisions.
@@ -13,7 +13,7 @@
 Bring L1 and L2 prompt directories into the same `_templates/ _pending/ _archive/` shape as L0. Two layers, very different work loads:
 
 - **L1 (`slops-saloon/Blueprints/prompts/`)** has exactly 1 file — `agent-build-loop-template.md`, a template by name and content. Trivial pass: create `_templates/`, move the file, add a stub README.
-- **L2 (`slops-saloon/corvus/Blueprints/prompts/`)** has 26 files flat. Needs **triage table → Justin approval → moves**. Much larger surface, more risk.
+- **L2 (`slops-saloon/omen/Blueprints/prompts/`)** has 26 files flat. Needs **triage table → Justin approval → moves**. Much larger surface, more risk.
 
 The two halves can run in the same session or be split — they're scoped independently.
 
@@ -27,7 +27,7 @@ The two halves can run in the same session or be split — they're scoped indepe
 
 No README. No subfolders.
 
-### L2 — `slops-saloon/corvus/Blueprints/prompts/`
+### L2 — `slops-saloon/omen/Blueprints/prompts/`
 
 26 files flat. Has its own `README.md` and `PROMPTS_CHANGELOG.md` at root. The README already classifies some files ("Active Build Loop Prompts," "Historical Rename Prompts," "Active Runtime Prompts") which gives us a starting triage.
 
@@ -44,7 +44,7 @@ Files (sorted, with my best initial classification — **verify each before movi
 | `sub_agents.md` | template (likely) | Companion to `manager_agent.md`. Read to confirm. |
 | `prompt_playbook.md` | archive | L2 README explicitly says "superseded by the kickoff files above and remains only as historical context." |
 | `emergency-brake.txt` | template (probably) — verify | Sounds reusable. Read first lines. |
-| `codex-corvus-restructure.md` | archive | L2 README "Historical Rename Prompts." |
+| `codex-omen-restructure.md` | archive | L2 README "Historical Rename Prompts." |
 | `codex-slops-saloon-rename.md` | archive | L2 README "Historical Rename Prompts." |
 | `codex-git-ssffmvp-clean-tree.md` | archive | L2 README "Historical Rename Prompts." |
 | `codex-docs-commit.md` | archive | L2 README "Historical Rename Prompts." |
@@ -71,7 +71,7 @@ Counts: ~3 root operational, ~4-6 templates, ~16-18 archive, depending on verifi
 
 1. `mkdir slops-saloon/Blueprints/prompts/_templates/`.
 2. `git mv slops-saloon/Blueprints/prompts/agent-build-loop-template.md slops-saloon/Blueprints/prompts/_templates/`. (Fall back to `mv` + `git add` if `git mv` errors on OneDrive.)
-3. Write `slops-saloon/Blueprints/prompts/README.md` — short, 15-20 lines max. List `_templates/` contents and note that L1 currently has no `_pending/` or `_archive/` because the queue is empty. Reference the L0 `_templates/` for cross-cutting templates and the L2 `_templates/` for Corvus-specific ones.
+3. Write `slops-saloon/Blueprints/prompts/README.md` — short, 15-20 lines max. List `_templates/` contents and note that L1 currently has no `_pending/` or `_archive/` because the queue is empty. Reference the L0 `_templates/` for cross-cutting templates and the L2 `_templates/` for Omen-specific ones.
 4. Verify: `ls slops-saloon/Blueprints/prompts/` shows `README.md` + `_templates/` only.
 
 ### Phase B — L2 triage (stop for Justin)
@@ -84,7 +84,7 @@ Counts: ~3 root operational, ~4-6 templates, ~16-18 archive, depending on verifi
 
 ### Phase C — L2 moves
 
-8. `mkdir slops-saloon/corvus/Blueprints/prompts/{_templates,_pending,_archive}`.
+8. `mkdir slops-saloon/omen/Blueprints/prompts/{_templates,_pending,_archive}`.
 
 9. Execute moves per the approved triage table. Prefer `git mv`. Fall back to `mv` + `git add` if OneDrive blocks.
 
@@ -98,7 +98,7 @@ Counts: ~3 root operational, ~4-6 templates, ~16-18 archive, depending on verifi
 
 12. Verify:
     - `ls slops-saloon/Blueprints/prompts/` shows expected L1 shape (`README.md` + `_templates/`).
-    - `ls slops-saloon/corvus/Blueprints/prompts/` shows expected L2 shape (root operational docs + `_templates/` + `_pending/` + `_archive/`).
+    - `ls slops-saloon/omen/Blueprints/prompts/` shows expected L2 shape (root operational docs + `_templates/` + `_pending/` + `_archive/`).
     - `grep -rn "Blueprints/prompts/" slops-saloon/` — report any references to moved files that now point to old paths. Ask Justin whether to fix or leave.
     - L2 README and PROMPTS_CHANGELOG both reflect the new state.
 
@@ -110,7 +110,7 @@ Counts: ~3 root operational, ~4-6 templates, ~16-18 archive, depending on verifi
     L1 (slops-saloon/Blueprints/prompts/): create _templates/, move
     agent-build-loop-template.md into it, add a short README.
 
-    L2 (slops-saloon/corvus/Blueprints/prompts/): create _templates/,
+    L2 (slops-saloon/omen/Blueprints/prompts/): create _templates/,
     _pending/, _archive/. Move <N> files per the approved triage:
     <X> templates, <Y> archived one-shots, <Z> root operational docs
     untouched. README restructured to mirror L0. PROMPTS_CHANGELOG

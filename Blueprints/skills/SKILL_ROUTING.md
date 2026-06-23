@@ -46,7 +46,7 @@ SLOPS uses three operating layers. This matches the company structure: a parent 
 |---|---|---|---|---|
 | Layer 0 | SLOPS | Parent company / operating system | Company-level operating doctrine, reusable skills, reusable agents, cross-division handoffs, founder context. Everything below inherits from here. | active Git root |
 | Layer 1 | Slops Saloon | Subsidiary | The subsidiary that builds fantasy sports apps. Division strategy, product portfolio, brand/naming standards, future product slots. No app implementation. | `slops-saloon/` |
-| Layer 2 | Corvus | First app | The first app shipped by Slops Saloon. App source, backend, frontend, tests, Docker/deploy, product specs, handoffs, prompts, and product runtime logic. | `slops-saloon/corvus/` |
+| Layer 2 | Omen | First app | The first app shipped by Slops Saloon. App source, backend, frontend, tests, Docker/deploy, product specs, handoffs, prompts, and product runtime logic. | `slops-saloon/omen/` |
 
 Use the highest reusable layer that is safe.
 
@@ -88,28 +88,28 @@ Do not place app implementation work in Layer 1 (Slops Saloon). The division lay
 | `command-bridge-generator` | Claude first, Codex if writing files | `Layer 0` | `active` | Generate approved Claude and Codex command-bridge shim files from `SKILL_ROUTING.md` and `AGENT_INDEX.md`. |
 | `pre-build-research` | Claude / ChatGPT research first, Codex later | `Layer 0` or project layer when scoped | `active` | Research external APIs, data sources, and integrations before any build prompt. |
 | `slops-community-needs-research` | Claude researches; Codex writes approved artifacts | `Layer 0` or division/project layer when scoped | `parked: future-community-product` | Retained for a far-future community-information/basic-needs product. Do not invoke until Justin explicitly opens discovery with a named community, geography, need, and decision. |
-| `slops-learning-loop` | Claude teaches; Codex verifies technical practice when requested | `Layer 0` | `parked: Corvus-live-plus-7-days` | After Corvus is live and stable, teach why its technology was chosen and use operating evidence to improve it before season end. |
+| `slops-learning-loop` | Claude teaches; Codex verifies technical practice when requested | `Layer 0` | `parked: Omen-live-plus-7-days` | After Omen is live and stable, teach why its technology was chosen and use operating evidence to improve it before season end. |
 | `clean-up-checkpoint` | Claude first, Codex if writing files | `Layer 0` | `active` | Stop new work and create a rate-limit-safe checkpoint with next prompt. |
 | `dbs-research-to-architecture-router` | Claude first, Codex if writing files | `Layer 0` | `active` | Convert research packets and critic reviews into modular DBS outputs: reference patterns, reviews, decisions, specs, skill drafts, and handoff prompts. |
 | `slops-markdown-authoring` | — | `Layer 0` | `retired` | Merged into `slops-context-markdown` (2026-06-20): Source Integrity Principle, Pruning Rules, and work-classification doctrine folded into the canonical markdown skill. Use `slops-context-markdown`. |
-| `slops-repo-inspector` | Codex first, Claude if planning | `Layer 0` | `active` | Inspect SLOPS L0, Slops Saloon L1, and Corvus L2 repo truth before planning or editing: source-of-truth docs, DBS routing, git state, canonical skill authority, and stale path cleanup. |
+| `slops-repo-inspector` | Codex first, Claude if planning | `Layer 0` | `active` | Inspect SLOPS L0, Slops Saloon L1, and Omen L2 repo truth before planning or editing: source-of-truth docs, DBS routing, git state, canonical skill authority, and stale path cleanup. |
 | `planning-pass` | Claude first, Codex if writing files | `Layer 0` (writes into target product queue) | `active` | Turn a goal into ordered, buildable backlog items (P#/FP#) in a product's `current_sprint.md`, each with a spec link and explicit done-when; respects dependencies. Plans only — never builds. |
 | `product-gap-analysis-session` | Claude analyzes; Codex writes only when approved | `Layer 0` (analyzes a target product or division) | `active` | Ground a product-readiness session in code and current facts, separate Have/Need/Gap, and produce a phased approval-gated plan without implementing it. |
 | `slops-tdd` | Codex implements; Claude may define acceptance behavior | `Layer 0` (writes in the approved target repo) | `active` | Build one vertical red-green-refactor behavior slice at a time through a fast deterministic test; no deploys, installs, or unrelated refactors. |
 | `slops-git-flow` | Claude plans, Codex/Justin execute | `Layer 0` (operates on product repo) | `active` | One scoped branch + PR per sprint item, explicit-path commits (never `git add -A`), light stacking for blocked items; push/merge gated to Justin. Replaces external stacking tools. |
 | `slops-quality-baseline` | Claude plans, Codex runs checks | `Layer 0` (operates on product repo) | `active` | Record code-health signals (tests, audit, build, diff --check) as a ratcheting baseline and gate merges/deploys against it. Replaces external baseline tooling. |
 | `slops-ui-ux-audit` | Claude (frontend) reviews | `Layer 0` (audits product frontend) | `paired-with: ui-ux-pro-max` | Audit screens/components against the AAA framework, `brand-system.md`, and design-system v1 — states, 44px, motion-reduce, ARIA, contrast, token consistency, voice, mock/live. Severity-ranked findings; fixes route through the loop. **Replaces `ui-ux-pro-max` in the audit/verdict role only.** `ui-ux-pro-max` remains the external design-intelligence library (palettes, font pairings, UX patterns) and is still the default while *creating* new design — use it for Phase 1.3-style spec work and palette/typography decisions. Pair with `design:design-system` when writing a design-system or page-system spec. |
-| `slops-ux-copy` | Claude (frontend) writes/reviews | `Layer 0` (product frontend) | `active` | Write/review Corvus UX copy (CTAs, states, onboarding) in the brand voice and copy anchors; honest about mock/live. Replaces external ux-copy skills. |
+| `slops-ux-copy` | Claude (frontend) writes/reviews | `Layer 0` (product frontend) | `active` | Write/review Omen UX copy (CTAs, states, onboarding) in the brand voice and copy anchors; honest about mock/live. Replaces external ux-copy skills. |
 | `slops-code-review` | Claude reviews; Codex/Justin act | `Layer 0` (reviews product repo) | `active` | Pre-merge code + security review (authz, secrets, SY0-701, errors, perf, tests, scope) with P0/P1/P2 verdict. Replaces gstack `review` + `cso` (quarantined 2026-06-08). |
 | `slops-canary` | Claude measures; Justin rolls back | `Layer 0` (watches deployed product) | `active` | Post-deploy health watch (health/ready, route smoke, error/latency vs baseline) -> pass/hold/rollback tied to the cutover playbook. Replaces gstack `canary` + `landing-report` (quarantined 2026-06-08). |
 | `slops-ship` | Claude orchestrates; Justin merges/deploys | `Layer 0` (releases product) | `active` | Sequence review -> quality gate -> merge -> deploy -> canary -> close-out; reuses the other skills + cutover playbook. Replaces gstack `land-and-deploy` / `setup-deploy` / `ship` (quarantined 2026-06-08). |
 | `slops-retro` | Claude writes doctrine | `Layer 0` (writes lessons + proposes artifacts) | `active` | Turn a cycle's lessons into decision_log entries, doctrine updates, and proposed new skills. The compounding step. Replaces gstack `learn` + `retro` (quarantined 2026-06-08). |
 | `slops-investigate` | Claude diagnoses; fix via loop | `Layer 0` (read-only on prod) | `active` | Reproduce -> isolate -> diagnose -> propose fix (as a loop item) -> verification plan. No hot-patches. Replaces gstack `investigate` (quarantined 2026-06-08). |
 | `slops-verify` | Claude verifies via driver | `Layer 0` (runs against the app) | `active` | Functional/real-account QA via the run-slops-saloon driver; states, mock/live, no cookie logging. Replaces gstack `browse` / `qa` / `qa-only` (quarantined 2026-06-08). |
-| `slops-graphify` | Claude orchestrates; Justin runs install/runs | `Layer 0` (graphs across L0↔L2) | `active` | Wrapper around the external graphify tool: build one cross-layer knowledge graph so SLOPS OS (L0) and Corvus (L2) see each other. Detects-not-installs; output routed to `References/graphify/`. Net-new capability, not a replacement. |
+| `slops-graphify` | Claude orchestrates; Justin runs install/runs | `Layer 0` (graphs across L0↔L2) | `active` | Wrapper around the external graphify tool: build one cross-layer knowledge graph so SLOPS OS (L0) and Omen (L2) see each other. Detects-not-installs; output routed to `References/graphify/`. Net-new capability, not a replacement. |
 | `slops-legal-spot-check` | Claude | `Layer 0` | `active` | Pre-counsel triage on a draft document, copy, or product behavior — flag compliance risk before it ships. Converted from agent support-legal-compliance-checker. |
-| `mobile-first-qa-playbook` | Claude (audit), Codex (fixes via the loop) | `Layer 0` | `active` | Phone-first QA sweep — iOS Safari + Android Chrome viewport matrix, touch targets, safe-area insets, keyboard avoidance, scroll lock, share sheet, motion-reduce. Severity-ranked findings. Closes Corvus launch gap #8 (mobile blocker). |
-| `self-hosted-observability-runbook` | Claude first, Codex if writing files or running install commands | `Layer 0` | `active` | Wire self-hosted observability (sentry-self-hosted + Umami + Vector log shipping) on KVM1 for any Slops product. Replaces SaaS Sentry/Plausible/Datadog (sovereignty). Closes Corvus launch gaps #10 (no error monitoring) and #14 (no analytics). |
+| `mobile-first-qa-playbook` | Claude (audit), Codex (fixes via the loop) | `Layer 0` | `active` | Phone-first QA sweep — iOS Safari + Android Chrome viewport matrix, touch targets, safe-area insets, keyboard avoidance, scroll lock, share sheet, motion-reduce. Severity-ranked findings. Closes Omen launch gap #8 (mobile blocker). |
+| `self-hosted-observability-runbook` | Claude first, Codex if writing files or running install commands | `Layer 0` | `active` | Wire self-hosted observability (sentry-self-hosted + Umami + Vector log shipping) on KVM1 for any Slops product. Replaces SaaS Sentry/Plausible/Datadog (sovereignty). Closes Omen launch gaps #10 (no error monitoring) and #14 (no analytics). |
 | `compliance-by-template` | Claude (draft), Justin (review), Codex (file writes) | `Layer 0` | `active` | Draft launch-required legal docs (ToS, Privacy Policy, DPA, NDA, GDPR/CCPA pages) using open-agreements templates + AI-drafted custom paragraphs. Self-hosted, signable DOCX output. Replaces Termly (sovereignty). |
 | `demo-mode-pre-empty-state` | Claude (pattern review), Codex (fixture generation) | `Layer 0` | `active` | Pattern + doctrine for what every Slops product shows before a user has connected real data. Sample dataset, mock/live badge, swap contract, and the "never silently mix demo + real" rule. |
 | `slops-headroom` | Claude (governs invocation), Justin (runs install) | `Layer 0` | `active` | Compress tool outputs, logs, RAG chunks, and large file reads before they hit the LLM. 60-95% token reduction, local-only, MCP-native. Wraps chopratejas/headroom. |
@@ -273,7 +273,7 @@ Claude should be used when the task requires reasoning, planning, review, docume
   - deciding what gets cut
   - challenging drift
   - turning instinct into rules
-  - deciding whether a file belongs at `Layer 0` (SLOPS), `Layer 1` (Slops Saloon), or `Layer 2` (Corvus)
+  - deciding whether a file belongs at `Layer 0` (SLOPS), `Layer 1` (Slops Saloon), or `Layer 2` (Omen)
 
 ## Execution Skills
 
@@ -591,7 +591,7 @@ Do not let rebrand exploration interrupt launch execution.
 
 ### Knowledge Graph / Cross-Layer Map
 
-Start with `slops-graphify` when the request is to map how things connect, build a knowledge graph, see Corvus from SLOPS OS (or vice versa), or cut re-anchoring cost with a persistent map.
+Start with `slops-graphify` when the request is to map how things connect, build a knowledge graph, see Omen from SLOPS OS (or vice versa), or cut re-anchoring cost with a persistent map.
 
 graphify is an external tool: detect-not-install. Justin runs the install; output routes to `References/graphify/`.
 

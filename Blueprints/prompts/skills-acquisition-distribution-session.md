@@ -13,7 +13,7 @@ Acquire only high-leverage skills or procedures, normalize them into the SLOPS s
 Active repository:
 - Resolve with `git rev-parse --show-toplevel` at session start.
 - Expected for this workspace: C:\Users\JDuve\dev\SLOPS
-- Do not treat old C:\Users\JDuve\OneDrive\Desktop\SLOPS references as current authority.
+- Do not treat old C:\Users\JDuve\dev\SLOPS references as current authority.
 
 Read first, in order:
 - AGENTS.md or CLAUDE.md
@@ -101,7 +101,7 @@ For procedures, map at minimum:
 - Frame through Scale lifecycle phases in SLOPS_LIFECYCLE.md
 - L0/L1/L2 AGENTS.md and CLAUDE.md wrapper inheritance
 - kickoff modules: read-first, pull-task, plan-approval, safety-gates, done-and-close
-- Corvus definition-of-done and each done gate
+- Omen definition-of-done and each done gate
 - playbooks/runbooks/templates and their callers
 - handoff and decision-log closeout procedure
 
@@ -132,7 +132,7 @@ Acceptance criteria:
 - Gaps are prioritized by impact and smallest safe corrective action.
 
 Do not:
-- edit Corvus product source during this Layer-0 session
+- edit Omen product source during this Layer-0 session
 - edit .env, credentials, cookies, secrets, package files, SQL, migrations, deploy config, or production infrastructure
 - install dependencies, connect services, push, merge, deploy, delete, or move cross-layer files without Justin's explicit approval
 - use git add -A or git add .

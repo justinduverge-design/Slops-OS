@@ -1,15 +1,15 @@
 ---
 name: slops-ux-copy
-description: Write or review Corvus UX copy in the brand voice — CTAs, empty/error/disconnected/loading states, confirmations, onboarding, microcopy. Grounded in Brand/brand-system.md copy anchors and the sharp, recommendation-first, instinct-testing voice. Use to "write copy for", "what should this button say", "review this error/empty state", "name this CTA", or when replacing an external UX-copy skill. Returns copy options with rationale; never flatters the user's instinct, never presents mock data as live, never invents marketing or legal claims.
+description: Write or review Omen UX copy in the brand voice — CTAs, empty/error/disconnected/loading states, confirmations, onboarding, microcopy. Grounded in Brand/brand-system.md copy anchors and the sharp, recommendation-first, instinct-testing voice. Use to "write copy for", "what should this button say", "review this error/empty state", "name this CTA", or when replacing an external UX-copy skill. Returns copy options with rationale; never flatters the user's instinct, never presents mock data as live, never invents marketing or legal claims.
 ---
 
 # Slops UX Copy Skill
 
 ## Purpose
 
-Corvus's voice is specific — a sharp, observant analyst that tests instinct rather than flattering
+Omen's voice is specific — a sharp, observant analyst that tests instinct rather than flattering
 it. Generic UX-copy guidance misses it. This skill writes and reviews on-product copy against
-`Brand/brand-system.md` and the design-system voice rules so every surface sounds like Corvus.
+`Brand/brand-system.md` and the design-system voice rules so every surface sounds like Omen.
 
 ## Voice Rules (from brand-system.md + design-system v1)
 
@@ -18,7 +18,7 @@ it. Generic UX-copy guidance misses it. This skill writes and reviews on-product
 - Empty states **acknowledge** the situation; they do not apologize.
 - Errors are honest and tell the user **what to do next**.
 - Loading is contextual ("Analyzing your matchup…"), never generic.
-- Corvus **tests instinct, it does not flatter it.** It is not a chatbot, dashboard, or news feed.
+- Omen **tests instinct, it does not flatter it.** It is not a chatbot, dashboard, or news feed.
 
 ## Copy Anchors (do not reinvent)
 
@@ -42,7 +42,7 @@ it. Generic UX-copy guidance misses it. This skill writes and reviews on-product
 
 - The surface and its specific state.
 - `Brand/brand-system.md` (anchors, voice, is/is-not, audience).
-- `Blueprints/specs/corvus-ux-ui-design-system-v1.md` (state copy patterns).
+- `Blueprints/specs/omen-ux-ui-design-system-v1.md` (state copy patterns).
 
 ## Steps
 

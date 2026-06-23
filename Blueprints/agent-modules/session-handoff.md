@@ -4,7 +4,7 @@ At the end of any non-trivial session, write a handoff. Location:
 
 - L0 work → `Blueprints/handoffs/YYYY-MM-DD-[topic]-handoff.md`
 - L1 work → `slops-saloon/Blueprints/handoffs/YYYY-MM-DD-[topic]-handoff.md`
-- L2 work → `slops-saloon/corvus/Blueprints/handoffs/YYYY-MM-DD-[topic]-handoff.md`
+- L2 work → `slops-saloon/omen/Blueprints/handoffs/YYYY-MM-DD-[topic]-handoff.md`
 
 **Required sections:**
 

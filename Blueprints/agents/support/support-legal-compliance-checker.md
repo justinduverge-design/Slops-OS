@@ -60,8 +60,8 @@ Tier 2 - read, analyze, draft, and recommend only.
 
 ## Must Not Write To
 
-- `slops-saloon\corvus\src\`
-- `slops-saloon\corvus\sql\`
+- `slops-saloon\omen\src\`
+- `slops-saloon\omen\sql\`
 - `.env`, `.key`, credentials, secrets, tokens, cookies
 - legal, compliance, customer-data, auth, payment, database, production, or infrastructure files
 

@@ -1,17 +1,17 @@
 # Slops OS App Template Spec
 
 **Date:** 2026-05-24
-**Status:** v1 — established from Corvus reference implementation
-**Applies to:** All Slops Saloon products (Corvus is the first instance)
+**Status:** v1 — established from Omen reference implementation
+**Applies to:** All Slops Saloon products (Omen is the first instance)
 
 ---
 
 ## Purpose
 
 This spec defines the reusable app template that all Slops Saloon products share.
-Corvus is the reference implementation. Future products inherit this template and override where needed.
+Omen is the reference implementation. Future products inherit this template and override where needed.
 
-When a second Slops Saloon product starts, create a product-specific design system document (like `corvus-ux-ui-design-system-v1.md`) that extends this template with product-specific tokens and patterns.
+When a second Slops Saloon product starts, create a product-specific design system document (like `omen-ux-ui-design-system-v1.md`) that extends this template with product-specific tokens and patterns.
 
 ---
 
@@ -32,7 +32,7 @@ Every Slops OS product follows this route structure:
 
 ```
 /                        ← Slops Saloon parent landing (company layer)
-/[product]               ← Product landing / entry point (e.g., /corvus)
+/[product]               ← Product landing / entry point (e.g., /omen)
 /[product]/app           ← Authenticated app shell (dashboard)
 /[product]/[tool]        ← Individual tool pages
 /login                   ← Auth entry point (shared across products)
@@ -249,4 +249,4 @@ When a Slops OS product needs a new backend contract:
 
 - Team / league theming (personalized color schemes per team) is planned for a future pass
 - Content and social publishing workflows are out of scope for v1
-- Multi-product navigation (Corvus → future product) is a future Slops Saloon shell concern
+- Multi-product navigation (Omen → future product) is a future Slops Saloon shell concern

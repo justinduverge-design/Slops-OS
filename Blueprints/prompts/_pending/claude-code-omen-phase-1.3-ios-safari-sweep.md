@@ -1,6 +1,6 @@
-# Claude Code Prompt — Corvus Phase 1.3 iOS Safari Mobile QA Sweep
+# Claude Code Prompt — Omen Phase 1.3 iOS Safari Mobile QA Sweep
 
-**Layer:** 2 (Corvus)
+**Layer:** 2 (Omen)
 **Type:** One-shot, four-phase. Delete from `_pending/` after the fix PR lands.
 **Date drafted:** 2026-06-13
 **Posture:** Single focused PR with all fixes batched. Frontend build must stay green. No backend edits.
@@ -10,7 +10,7 @@
 
 ## Goal
 
-Run a full iOS Safari mobile QA sweep across every routed page in the Corvus frontend. Catch and fix: viewport overflows, flex/grid overflows, touch targets <44px, focus rings, safe-area-inset issues, and the long list of iOS Safari–specific quirks below. Ship one PR. Phase 1 closes when this lands.
+Run a full iOS Safari mobile QA sweep across every routed page in the Omen frontend. Catch and fix: viewport overflows, flex/grid overflows, touch targets <44px, focus rings, safe-area-inset issues, and the long list of iOS Safari–specific quirks below. Ship one PR. Phase 1 closes when this lands.
 
 This sweep is different from the prior Phase 1 prompts because **the testing surface is a real device, not a test suite.** Justin runs the device half (his iPhone, hitting production). You run the code half — auditing patterns that are likely broken, applying pre-emptive fixes that don't need device confirmation, then triaging and shipping fixes for what Justin reports.
 
@@ -23,7 +23,8 @@ From `frontend/src/routes/index.jsx`:
 | Path | Component | Layout |
 | --- | --- | --- |
 | `/` | `Landing` | bare |
-| `/corvus` | `CorvusLanding` | bare |
+| `/about` | `OmenLanding` | bare |
+| `/corvus` | legacy redirect to `/about` | bare |
 | `/login` | `Login` | bare |
 | `/onboarding` | (component) | bare |
 | `/account/connect` | `ConnectLeague` | bare |
@@ -38,7 +39,7 @@ From `frontend/src/routes/index.jsx`:
 | `/dev/omen` | (dev-only) | AppLayout |
 | `*` | `NotFound` | bare |
 
-Re-read `frontend/src/routes/index.jsx` to confirm; if the routing has changed since this prompt was drafted, work from the updated set. `/dev/omen` is dev-only — exclude from production QA, include in code audit only.
+Re-read `frontend/src/routes/index.jsx` to confirm; if the routing has changed since this prompt was drafted, work from the updated set. `/corvus` is a legacy redirect route and `/dev/omen` is dev-only — exclude `/dev/omen` from production QA, include it in code audit only.
 
 ## Hard Constraints (apply to every phase)
 

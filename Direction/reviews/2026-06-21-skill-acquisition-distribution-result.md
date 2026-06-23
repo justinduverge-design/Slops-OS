@@ -4,7 +4,7 @@
 **Layer:** L0 — SLOPS OS
 **Status:** canonical authoring, registration, and two-runtime file distribution complete; fresh-session discovery and real-use evidence remain open where noted
 
-> **Subsequent 2026-06-21 sequencing decision:** `slops-learning-loop` and `slops-community-needs-research` were parked after this point-in-time distribution result. Their runtime copies were backed up at `C:\Users\JDuve\.slops-skill-parked-backup-20260621-202704` and removed; current counts and activation gates are authoritative in `Blueprints/RESOURCES_INDEX.md`, `SKILL_ROUTING.md`, and `SLOPS_LIFECYCLE.md`. Corvus procedure wiring is reported in `slops-saloon/corvus/Direction/reviews/2026-06-21-skill-playbook-operationalization.md`.
+> **Subsequent 2026-06-21 sequencing decision:** `slops-learning-loop` and `slops-community-needs-research` were parked after this point-in-time distribution result. Their runtime copies were backed up at `C:\Users\JDuve\.slops-skill-parked-backup-20260621-202704` and removed; current counts and activation gates are authoritative in `Blueprints/RESOURCES_INDEX.md`, `SKILL_ROUTING.md`, and `SLOPS_LIFECYCLE.md`. Omen procedure wiring is reported in `slops-saloon/omen/Direction/reviews/2026-06-21-skill-playbook-operationalization.md`.
 
 ## Outcome
 
@@ -36,7 +36,7 @@
 | Skill authoring | `hard-prohibitions.md`, `RESOURCES_INDEX.md`, `SKILL_ROUTING.md`, `SLOPS_LIFECYCLE.md`, and the acquisition prompt route new/materially revised skills through `slops-skill-author`. This batch used that procedure. | Evidenced use |
 | Build/TDD | Lifecycle Phase 3 now invokes `slops-tdd`. Kickoff `read-first`, `plan-approval`, `safety-gates`, and `done-and-close` require the TDD read, planned red-capable command, correct RED handling, and RED/GREEN evidence for behavior-changing code. | Procedure-integrated; first product run pending |
 | Investigation | Lifecycle Phase 11 routes bugs/incidents to `slops-investigate`; its skill now blocks hypothesis-first diagnosis without a faithful failing signal or equivalent evidence. | Routed; upgraded procedure not yet exercised |
-| Code/security review | Lifecycle Phase 5, kickoff safety gates, done gates, Corvus audits/handoffs, and prior decision records already use `slops-code-review`; new runs now also apply the safeguarded simplicity ladder. | Existing evidenced use; upgraded lens pending first run |
+| Code/security review | Lifecycle Phase 5, kickoff safety gates, done gates, Omen audits/handoffs, and prior decision records already use `slops-code-review`; new runs now also apply the safeguarded simplicity ladder. | Existing evidenced use; upgraded lens pending first run |
 | Product readiness | `product-gap-analysis-session` is now in routing and lifecycle auxiliary capabilities instead of being an unindexed package. | Installed/routed; explicit invocation evidence pending |
 | Personal learning | `slops-learning-loop` is registered as an auxiliary capability and available in both runtimes. | Installed/routed; no learning plan or retention evidence yet |
 | Community product discovery | `slops-community-needs-research` is registered as the gate before planning a community-information/basic-needs app. | Installed/routed; no scoped community study yet |
@@ -110,6 +110,6 @@ This distribution was a verified manual sync. There is no checked-in, dry-run-fi
 
 ## Intentionally Not Touched
 
-- Corvus product source, tests, database, auth, payments, package files, environment files, deploy configuration, and production.
+- Omen product source, tests, database, auth, payments, package files, environment files, deploy configuration, and production.
 - Front-end components and Claude-owned design work.
 - Git commit, push, PR, merge, and external outreach.

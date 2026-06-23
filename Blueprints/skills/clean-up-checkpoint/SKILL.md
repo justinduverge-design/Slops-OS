@@ -41,10 +41,10 @@ For `slops-saloon`, prefer:
 - `Blueprints/handoffs/frontend-to-backend.md`
 - `Blueprints/handoffs/decisions.md`
 - `Blueprints/security-privacy.md`
-- `slops-saloon/corvus/README.md`
-- `slops-saloon/corvus/Direction/context.md`
-- `slops-saloon/corvus/Direction/current_sprint.md`
-- `slops-saloon/corvus/Direction/decision_log.md`
+- `slops-saloon/omen/README.md`
+- `slops-saloon/omen/Direction/context.md`
+- `slops-saloon/omen/Direction/current_sprint.md`
+- `slops-saloon/omen/Direction/decision_log.md`
 - Relevant active specs, playbooks, prompts, and handoffs
 - `probo.yaml` only when security/privacy tracking changed
 

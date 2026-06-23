@@ -74,12 +74,12 @@ Blueprints\prompts
 1-slops-saloon:
 slops-saloon\References\research
 slops-saloon\Direction\reviews
-slops-saloon\corvus\Blueprints\prompts
+slops-saloon\omen\Blueprints\prompts
 
-Layer 2 (corvus):
-slops-saloon\corvus\References\research
-slops-saloon\corvus\Direction\reviews
-slops-saloon\corvus\Blueprints\prompts
+Layer 2 (omen):
+slops-saloon\omen\References\research
+slops-saloon\omen\Direction\reviews
+slops-saloon\omen\Blueprints\prompts
 ```
 
 Use the lowest layer that safely contains the research.
@@ -88,7 +88,7 @@ If the research is reusable across future Slops Saloon products, route it to `0-
 
 If it is specific to slops-saloon, route it to `1-slops-saloon`.
 
-If it is specific to Corvus runtime behavior, route it to `2-Corvus`.
+If it is specific to Omen runtime behavior, route it to `2-Omen`.
 
 ## Priority Order
 
@@ -119,7 +119,7 @@ Evaluate every candidate through this lens, in order:
 Extract or ask for:
 
 - Exact data or capability needed.
-- App/project layer: `0-OS`, `1-slops-saloon`, or `2-Corvus`.
+- App/project layer: `0-OS`, `1-slops-saloon`, or `2-Omen`.
 - Current stack.
 - Existing integrations that can be reused.
 - Usage volume expectations.
@@ -213,7 +213,7 @@ Use this report structure:
 
 ## Layer
 
-0-OS | 1-slops-saloon | 2-Corvus
+0-OS | 1-slops-saloon | 2-Omen
 
 ## Constraints
 
@@ -281,11 +281,11 @@ Use this report structure:
 - Do not skip auth, rate limits, or ToS.
 - Do not bury the recommendation at the end without a clear build target.
 
-## Corvus Context
+## Omen Context
 
-Use this only when the research is for Corvus.
+Use this only when the research is for Omen.
 
-Corvus is a fantasy football decision app built on Node.js and Express.
+Omen is a fantasy football decision app built on Node.js and Express.
 
 Known context:
 
@@ -295,10 +295,10 @@ Known context:
 - ESPN cookie/session flows carry ToS and security risk.
 - NFL draft season peaks August to September.
 - Data freshness matters most in that window.
-- Corvus is pre-revenue, so free/open options come first.
+- Omen is pre-revenue, so free/open options come first.
 - Paid providers require Justin approval.
 
-If the research is not for Corvus, do not force Corvus assumptions into the report.
+If the research is not for Omen, do not force Omen assumptions into the report.
 
 ## Prior Use Review Loop
 

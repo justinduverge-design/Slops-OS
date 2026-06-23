@@ -27,7 +27,7 @@ Use this skill when Justin asks to:
 - Decide whether an agent belongs globally or inside a project.
 - Create a reusable agent role file.
 - Normalize `manager_agent.md`, `sub_agents.md`, or division agents.
-- Separate reusable roles from Corvus-specific runtime agents.
+- Separate reusable roles from Omen-specific runtime agents.
 
 ## Do Not Use
 
@@ -59,7 +59,7 @@ Blueprints\agents\_imported
 
 Project-specific app agents should live closer to the project.
 
-For Corvus / slops-saloon-specific agents, prefer:
+For Omen / slops-saloon-specific agents, prefer:
 
 ```text
 slops-saloon/Blueprints/agents/
@@ -299,7 +299,7 @@ When reviewing an agent:
 
 ## Special Rule for manager_agent.md and sub_agents.md
 
-If `manager_agent.md` or `sub_agents.md` describe Corvus runtime behavior, fantasy football orchestration, or application-specific sub-agent routing, treat them as project-specific until reviewed.
+If `manager_agent.md` or `sub_agents.md` describe Omen runtime behavior, fantasy football orchestration, or application-specific sub-agent routing, treat them as project-specific until reviewed.
 
 Likely project path:
 
@@ -318,7 +318,7 @@ Avoid:
 - Mixing role identity with workflow instructions.
 - Granting broad write access.
 - Forgetting approval gates.
-- Moving Corvus-specific agents into global authority.
+- Moving Omen-specific agents into global authority.
 - Creating agents that can invoke every skill.
 - Allowing agents to touch production-risk files.
 - Updating indexes without approval.

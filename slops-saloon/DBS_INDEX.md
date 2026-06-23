@@ -6,9 +6,9 @@ This folder is a division layer, not the active product git repo.
 
 ## Layer Structure
 
-- Layer 0 - SLOPS OS: `C:\Users\JDuve\OneDrive\Desktop\SLOPS`
-- Layer 1 - Slops Saloon division: `C:\Users\JDuve\OneDrive\Desktop\SLOPS\slops-saloon`
-- Layer 2 - Corvus product repo: `C:\Users\JDuve\OneDrive\Desktop\SLOPS\slops-saloon\corvus`
+- Layer 0 - SLOPS OS: `C:\Users\JDuve\dev\SLOPS`
+- Layer 1 - Slops Saloon division: `C:\Users\JDuve\dev\SLOPS\slops-saloon`
+- Layer 2 - Omen product repo: `C:\Users\JDuve\dev\SLOPS\slops-saloon\omen`
 
 ## What Belongs Here
 
@@ -21,21 +21,21 @@ Use this folder for:
 - Multi-product naming and brand direction.
 - Future product slots under Slops Saloon.
 
-Do not put Corvus implementation work here. Corvus code and product DBS files live in `corvus/`.
+Do not put Omen implementation work here. Omen code and product DBS files live in `omen/`.
 
 ## Active Product
 
-Corvus is the only active product right now.
+Omen is the only active product right now.
 
-- Product repo: `corvus/`
-- Product context: `corvus/Direction/context.md`
-- Product roadmap: `corvus/Direction/roadmap.md`
-- Product handoffs: `corvus/Blueprints/handoffs/`
-- Product prompts: `corvus/Blueprints/prompts/`
-- Product specs: `corvus/Blueprints/specs/`
-- Active task slot: `corvus/Direction/agent_inbox.md`
-- Build loop guide: `corvus/Blueprints/prompts/HOW-TO-RUN-THE-LOOP.md`
-- Definition of Done: `corvus/Blueprints/definition-of-done.md`
+- Product repo: `omen/`
+- Product context: `omen/Direction/context.md`
+- Product roadmap: `omen/Direction/roadmap.md`
+- Product handoffs: `omen/Blueprints/handoffs/`
+- Product prompts: `omen/Blueprints/prompts/`
+- Product specs: `omen/Blueprints/specs/`
+- Active task slot: `omen/Direction/agent_inbox.md`
+- Build loop guide: `omen/Blueprints/prompts/HOW-TO-RUN-THE-LOOP.md`
+- Definition of Done: `omen/Blueprints/definition-of-done.md`
 
 ## Division Folders
 
@@ -45,7 +45,7 @@ Blueprints/    Division-level prompts, specs, or templates when needed
 Solutions/     Division-level finished outputs and reports
 References/    Division-level supporting research and source material
 Archive/       Superseded or parked division material
-corvus/        Active Corvus product git repo
+omen/        Active Omen product git repo
 ```
 
 ## Baseline Entry Files
@@ -78,23 +78,23 @@ For division-level work:
 8. `Blueprints/README.md`
 9. `Blueprints/prompts/agent-build-loop-template.md` when setting up a future product loop
 
-For Corvus product work:
+For Omen product work:
 
-1. `corvus/DBS_INDEX.md`
-2. `corvus/Direction/context.md`
-3. `corvus/Direction/current_sprint.md`
-4. `corvus/Direction/agent_inbox.md`
-5. `corvus/Blueprints/prompts/HOW-TO-RUN-THE-LOOP.md`
-6. `corvus/Blueprints/definition-of-done.md`
-7. `corvus/Blueprints/handoffs/frontend-to-backend.md`
-8. `corvus/Blueprints/handoffs/backend-to-frontend.md`
+1. `omen/DBS_INDEX.md`
+2. `omen/Direction/context.md`
+3. `omen/Direction/current_sprint.md`
+4. `omen/Direction/agent_inbox.md`
+5. `omen/Blueprints/prompts/HOW-TO-RUN-THE-LOOP.md`
+6. `omen/Blueprints/definition-of-done.md`
+7. `omen/Blueprints/handoffs/frontend-to-backend.md`
+8. `omen/Blueprints/handoffs/backend-to-frontend.md`
 
 ## Routing Rule
 
-If the work touches backend, frontend, tests, Docker, deploy, package files, SQL, source code, or product handoffs, route to `corvus/`.
+If the work touches backend, frontend, tests, Docker, deploy, package files, SQL, source code, or product handoffs, route to `omen/`.
 
 If the work is about Slops Saloon as a division or future products under the division, stay in this folder.
 
 If Justin starts a second Slops Saloon product, copy the build loop pattern from
 `Blueprints/prompts/agent-build-loop-template.md` into that product rather than
-sharing Corvus task files.
+sharing Omen task files.
