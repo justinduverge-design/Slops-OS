@@ -2,8 +2,8 @@
 
 > Status: legacy orientation snapshot. Current L0 startup truth lives in
 > `Direction/facts-of-record.md` and `Blueprints/agent-modules/files-to-read-first-L0.md`.
-> Corvus work queues live in `slops-saloon/corvus/Direction/current_sprint.md`
-> and `slops-saloon/corvus/Direction/agent_inbox.md`. If this file conflicts
+> Omen work queues live in `slops-saloon/omen/Direction/current_sprint.md`
+> and `slops-saloon/omen/Direction/agent_inbox.md`. If this file conflicts
 > with those sources, the newer Direction/module files win.
 
 ## Current Focus
