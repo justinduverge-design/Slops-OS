@@ -3,7 +3,7 @@
 Stop and wait for Justin before:
 
 - Any deploy or production action
-- Any `git push` or PR merge
+- Any PR merge (`git push` to a feature/worktree branch is allowed on its own — see the verification requirement below)
 - Any secret / env edit
 - Any database migration
 - Any package-file edit (`package.json`, `requirements.txt`)
@@ -12,4 +12,4 @@ Stop and wait for Justin before:
 
 **An intended `slops-tdd` RED before implementation is expected.** If the failure is for the wrong reason, or if any test/build fails after implementation or during the broader verification pass: STOP. Do not weaken the test to make it pass. Report the failure.
 
-**If a guardrail skill (`slops-ui-ux-audit`, `slops-code-review`) returns P0 findings:** STOP. Do not commit. Surface the findings.
+**If a guardrail skill (`slops-ui-ux-au

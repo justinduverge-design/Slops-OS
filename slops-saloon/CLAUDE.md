@@ -16,3 +16,7 @@ You are Claude working in the Slops Saloon division layer. Read these modules in
 - Division strategy, brand custody, content + marketing → stay here
 - Omen app work → descend into `omen/` (legacy repo folder name until external cutover)
 - Reusable cross-layer patterns → ascend to L0 (`../`)
+
+## Kickoff
+
+Paste `Blueprints/prompts/kickoff-l1-claude.md` to start a division-layer session.

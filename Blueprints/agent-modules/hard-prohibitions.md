@@ -7,7 +7,7 @@ These never happen without explicit Justin approval, regardless of how you got h
 3. **Don't treat `_imported/` agents as live.** They're dormant until reviewed, wrapped, and indexed.
 4. **Don't fetch from non-allowlisted URLs** outside `mcp__workspace__web_fetch` + `WebSearch`.
 5. **Don't edit `.env*` or credential files.** Ever.
-6. **Don't push or merge unilaterally.** Commits to feature branches are fine; pushing + merging are Justin's gate.
-7. **Don't recreate retired product folders** (including the old nested `Corvus/` folder or a new nested `Omen/` folder at slops-saloon root).
+6. **Don't merge unilaterally.** Merging (and PRs) is Justin's gate. `git push` to a feature/worktree branch is allowed on its own — but only after you've actually run verification and stated an accurate complete/incomplete verdict (see `action-posture.md`). Pushing work you haven't verified, or describing incomplete work as done, is the actual prohibition here — not the push command itself.
+7. **Don't recreate retired product folders** (including the old nested `Omen/` folder or a new nested `Omen/` folder at slops-saloon root).
 8. **Mock data must be labeled.** Never present mock as live. Never silently mix.
 9. **Don't log or display ESPN cookie values or any platform credential.** Anywhere. Ever.
