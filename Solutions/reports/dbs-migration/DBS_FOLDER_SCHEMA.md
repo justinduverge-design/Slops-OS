@@ -106,11 +106,11 @@ It owns:
 
 Rule: SLOPS OS can describe how work should happen. `ssffmvp` contains the app that actually runs.
 
-## 5. ssffmvp Vs Corvus
+## 5. ssffmvp Vs Omen
 
 `ssffmvp` is the repo and engineering layer.
 
-Corvus is the product/brand layer inside the repo.
+Omen is the product/brand layer inside the repo.
 
 Use `ssffmvp` for:
 
@@ -121,24 +121,24 @@ Use `ssffmvp` for:
 - app-local specs
 - repo health and release readiness
 
-Use `ssffmvp\Corvus` for:
+Use `ssffmvp\Omen` for:
 
-- Corvus brand
-- Corvus product strategy
-- Corvus product specs
-- Corvus website templates
-- Corvus logos/images/screenshots
+- Omen brand
+- Omen product strategy
+- Omen product specs
+- Omen website templates
+- Omen logos/images/screenshots
 - product deliverables and product notes
 
-Rule: app mechanics belong to `ssffmvp`; product identity and product-facing docs belong to `Corvus`.
+Rule: app mechanics belong to `ssffmvp`; product identity and product-facing docs belong to `Omen`.
 
 ## 6. Brand Assets
 
 Brand assets should go under the product brand layer:
 
 ```text
-ssffmvp\Corvus\Brand
-ssffmvp\Corvus\Assets
+ssffmvp\Omen\Brand
+ssffmvp\Omen\Assets
 ```
 
 Use:
@@ -150,7 +150,7 @@ Use:
 - `Assets\images` for product imagery and design source exports.
 - `Assets\screenshots` for app and landing screenshots.
 
-Active implementation assets that the app imports from `frontend\public` or `client\public` should stay there. Copy them into `Corvus\Assets` only as reference/canonical brand assets.
+Active implementation assets that the app imports from `frontend\public` or `client\public` should stay there. Copy them into `Omen\Assets` only as reference/canonical brand assets.
 
 ## 7. Skills
 
@@ -166,10 +166,10 @@ App/repo-specific skills go under:
 ssffmvp\Blueprints\skills
 ```
 
-Corvus product-specific skills may go under:
+Omen product-specific skills may go under:
 
 ```text
-ssffmvp\Corvus\Blueprints\skills
+ssffmvp\Omen\Blueprints\skills
 ```
 
 Before moving any existing skill folder, check whether Codex, Claude, or local tooling expects the current path.
@@ -210,13 +210,13 @@ App implementation specs go under:
 ssffmvp\Blueprints\specs
 ```
 
-Corvus product specs go under:
+Omen product specs go under:
 
 ```text
-ssffmvp\Corvus\Blueprints\specs
+ssffmvp\Omen\Blueprints\specs
 ```
 
-If a spec is both product and implementation relevant, keep the app repo copy canonical and add a reference/copy in Corvus only after approval.
+If a spec is both product and implementation relevant, keep the app repo copy canonical and add a reference/copy in Omen only after approval.
 
 ## 10. Archive Instead Of Delete
 
@@ -252,7 +252,7 @@ SLOPS\Archive\parked
 SLOPS\Archive\codex-artifacts
 SLOPS\Archive\superseded-docs
 ssffmvp\Archive\old-handoffs
-ssffmvp\Corvus\Archive
+ssffmvp\Omen\Archive
 ```
 
 Archiving should happen only after approval and only by moving or copying known-safe files. Active app source and secrets should not be part of a DBS archive pass.

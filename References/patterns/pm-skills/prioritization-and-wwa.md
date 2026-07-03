@@ -59,4 +59,4 @@ Acceptance Criteria:
 - [observable outcome 3]
 ```
 
-Arguments when applying: `$PRODUCT`, `$FEATURE`, `$DESIGN` (link), `$ASSUMPTIONS` (strategic context). Substitute the real SLOPS product (Corvus, Omen, etc.).
+Arguments when applying: `$PRODUCT`, `$FEATURE`, `$DESIGN` (link), `$ASSUMPTIONS` (strategic context). Substitute the real SLOPS product (Omen, Omen, etc.).

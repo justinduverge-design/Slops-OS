@@ -17,11 +17,11 @@ The scan was path/metadata-only. It pruned `.git`, `node_modules`, and `Archive\
 | `ssffmvp\Direction\context.md` | Missing |
 | `ssffmvp\agent_handoff.md` | Missing |
 | `ssffmvp\current_sprint.md` | Missing |
-| `ssffmvp\Corvus\README.md` | Missing |
-| `ssffmvp\Corvus\Direction\context.md` | Missing |
-| `ssffmvp\Corvus\Brand\brand.md` | Missing |
-| `ssffmvp\Corvus\Brand\positioning.md` | Missing |
-| `ssffmvp\Corvus\Blueprints\specs\omen-mvp-move.md` | Missing |
+| `ssffmvp\Omen\README.md` | Missing |
+| `ssffmvp\Omen\Direction\context.md` | Missing |
+| `ssffmvp\Omen\Brand\brand.md` | Missing |
+| `ssffmvp\Omen\Brand\positioning.md` | Missing |
+| `ssffmvp\Omen\Blueprints\specs\omen-mvp-move.md` | Missing |
 
 ## Search Results
 
@@ -33,7 +33,7 @@ Found in the safe search scope:
 
 Not found in the safe search scope:
 
-- `Corvus` folder
+- `Omen` folder
 - `ssffmvp\Direction` folder
 - `corvus_brand_product_context.original.md`
 - `brand.md`
@@ -45,21 +45,21 @@ Not found in the safe search scope:
 The Phase 5 report exists and says it created:
 
 - `ssffmvp\Direction\context.md`
-- `ssffmvp\Corvus\Direction\context.md`
-- `ssffmvp\Corvus\Brand\brand.md`
-- `ssffmvp\Corvus\Brand\positioning.md`
-- `ssffmvp\Corvus\Blueprints\specs\omen-mvp-move.md`
+- `ssffmvp\Omen\Direction\context.md`
+- `ssffmvp\Omen\Brand\brand.md`
+- `ssffmvp\Omen\Brand\positioning.md`
+- `ssffmvp\Omen\Blueprints\specs\omen-mvp-move.md`
 - the `ssffmvp` DBS folders
 
 The Phase 8 report exists and says it created:
 
-- `ssffmvp\Corvus\README.md`
+- `ssffmvp\Omen\README.md`
 
 The current filesystem does not match those reports.
 
 ## Wrong-Place Assessment
 
-The missing Corvus files did not appear elsewhere in the safe search scope. The only matching repair/migration artifacts found were the Phase 5 and Phase 8 reports themselves.
+The missing Omen files did not appear elsewhere in the safe search scope. The only matching repair/migration artifacts found were the Phase 5 and Phase 8 reports themselves.
 
 This suggests one of these likely causes:
 
@@ -77,7 +77,7 @@ There is not enough evidence to prove cloud-only files caused the mismatch, but 
 ## Recommended Repair Actions
 
 1. Recreate only the minimum DBS control directories and starter docs inside `ssffmvp`.
-2. Recreate only the minimum Corvus product-layer directories and starter docs inside `ssffmvp\Corvus`.
+2. Recreate only the minimum Omen product-layer directories and starter docs inside `ssffmvp\Omen`.
 3. Add a short DBS navigation note to `ssffmvp\README.md`.
 4. Do not move app source folders or old `Projects\ssffmvp` material.
 5. Do not inspect or modify `Archive\quarantine`.
@@ -102,26 +102,26 @@ Created minimum ssffmvp DBS files:
 - `ssffmvp\agent_handoff.md`
 - `ssffmvp\agent_inbox.md`
 
-Created minimum Corvus DBS directories:
+Created minimum Omen DBS directories:
 
-- `ssffmvp\Corvus\Direction`
-- `ssffmvp\Corvus\Brand`
-- `ssffmvp\Corvus\Blueprints\specs`
-- `ssffmvp\Corvus\Solutions`
-- `ssffmvp\Corvus\References`
-- `ssffmvp\Corvus\Archive`
-- `ssffmvp\Corvus\Assets`
+- `ssffmvp\Omen\Direction`
+- `ssffmvp\Omen\Brand`
+- `ssffmvp\Omen\Blueprints\specs`
+- `ssffmvp\Omen\Solutions`
+- `ssffmvp\Omen\References`
+- `ssffmvp\Omen\Archive`
+- `ssffmvp\Omen\Assets`
 
-Created minimum Corvus DBS files:
+Created minimum Omen DBS files:
 
-- `ssffmvp\Corvus\README.md`
-- `ssffmvp\Corvus\Direction\context.md`
-- `ssffmvp\Corvus\Direction\roadmap.md`
-- `ssffmvp\Corvus\Direction\decision_log.md`
-- `ssffmvp\Corvus\Direction\current_sprint.md`
-- `ssffmvp\Corvus\Brand\brand.md`
-- `ssffmvp\Corvus\Brand\positioning.md`
-- `ssffmvp\Corvus\Blueprints\specs\omen-mvp-move.md`
+- `ssffmvp\Omen\README.md`
+- `ssffmvp\Omen\Direction\context.md`
+- `ssffmvp\Omen\Direction\roadmap.md`
+- `ssffmvp\Omen\Direction\decision_log.md`
+- `ssffmvp\Omen\Direction\current_sprint.md`
+- `ssffmvp\Omen\Brand\brand.md`
+- `ssffmvp\Omen\Brand\positioning.md`
+- `ssffmvp\Omen\Blueprints\specs\omen-mvp-move.md`
 
 Updated:
 

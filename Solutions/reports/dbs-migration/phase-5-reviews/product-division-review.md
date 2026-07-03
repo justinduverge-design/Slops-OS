@@ -2,7 +2,7 @@
 
 ## Executive Summary
 
-Phase 5A reviewed all five imported Product Division agents against SLOPS OS, ssffmvp MVP, and Corvus launch needs. Two agents are recommended as `candidate` with SLOPS doctrine wrappers: `product-manager` and `product-sprint-prioritizer`. Both are useful in the next 90 days if constrained to Tier 2 draft documentation, prioritization, and recommendation work.
+Phase 5A reviewed all five imported Product Division agents against SLOPS OS, ssffmvp MVP, and Omen launch needs. Two agents are recommended as `candidate` with SLOPS doctrine wrappers: `product-manager` and `product-sprint-prioritizer`. Both are useful in the next 90 days if constrained to Tier 2 draft documentation, prioritization, and recommendation work.
 
 `product-trend-researcher` is left `reference-only` because its useful work is already largely covered by the canonical `pre-build-research` skill and it references external paid intelligence systems. `product-behavioral-nudge-engine` and `product-feedback-synthesizer` are marked `do-not-activate` pending review because they imply user data, behavioral profiling, outbound messaging, external feedback systems, or customer-data access.
 
@@ -34,15 +34,15 @@ Missing read-first files from root AGENTS instructions:
 
 | Agent | Source File | Recommended Status | Relevance | Risk | Overlap | Reason |
 |---|---|---|---|---|---|---|
-| Behavioral Nudge Engine | `Blueprints\agents\_imported\__product_division\product-behavioral-nudge-engine.md` | do-not-activate | Medium for future onboarding/retention, low for immediate Corvus launch | High | Medium with product/UX planning | Implies behavioral profiling, user preferences, communication channels, SMS/email nudges, memory, engagement optimization, and opt-out architecture. Needs privacy, consent, user-data, and outbound-message review before any wrapper. |
+| Behavioral Nudge Engine | `Blueprints\agents\_imported\__product_division\product-behavioral-nudge-engine.md` | do-not-activate | Medium for future onboarding/retention, low for immediate Omen launch | High | Medium with product/UX planning | Implies behavioral profiling, user preferences, communication channels, SMS/email nudges, memory, engagement optimization, and opt-out architecture. Needs privacy, consent, user-data, and outbound-message review before any wrapper. |
 | Feedback Synthesizer | `Blueprints\agents\_imported\__product_division\product-feedback-synthesizer.md` | do-not-activate | Medium once real users/support channels exist | High | Medium with Claude review and future support workflows | Original agent includes WebFetch/WebSearch/Read/Write/Edit plus surveys, support tickets, reviews, social media monitoring, NPS, dashboards, and customer feedback systems. This touches user/customer data and external systems. |
-| Product Manager | `Blueprints\agents\_imported\__product_division\product-manager.md` | candidate | High for Corvus launch, ssffmvp MVP, PRDs, scope control, and launch planning | Medium, reduced by wrapper | Medium with Claude product planning | Useful for draft PRDs, opportunity assessments, non-goals, metrics, and trade-off docs. Wrapper limits it to Tier 2 markdown drafts and recommendations with Justin approval for roadmap or launch decisions. |
+| Product Manager | `Blueprints\agents\_imported\__product_division\product-manager.md` | candidate | High for Omen launch, ssffmvp MVP, PRDs, scope control, and launch planning | Medium, reduced by wrapper | Medium with Claude product planning | Useful for draft PRDs, opportunity assessments, non-goals, metrics, and trade-off docs. Wrapper limits it to Tier 2 markdown drafts and recommendations with Justin approval for roadmap or launch decisions. |
 | Sprint Prioritizer | `Blueprints\agents\_imported\__product_division\product-sprint-prioritizer.md` | candidate | High for near-term launch prioritization and backlog discipline | Medium, reduced by wrapper | Medium with Product Manager and Claude planning | Useful for sprint framing, RICE scoring, dependencies, and scope trade-off notes. Wrapper denies release, deployment, feature flag, and capacity authority. |
 | Trend Researcher | `Blueprints\agents\_imported\__product_division\product-trend-researcher.md` | reference-only | Medium for market and competitor analysis | Medium-high | High with `pre-build-research` | Valuable as research inspiration, but overlaps the canonical `pre-build-research` skill and references paid/external tools, social listening, competitive intelligence, and regulatory monitoring. Keep reference-only until a specific approved research task needs an agent wrapper. |
 
 ## Candidate Agents Selected
 
-- `product-manager`: selected because Corvus launch and ssffmvp MVP need clear PRDs, opportunity assessments, non-goals, success metrics, and product trade-off documentation. The wrapper removes any binding decision authority.
+- `product-manager`: selected because Omen launch and ssffmvp MVP need clear PRDs, opportunity assessments, non-goals, success metrics, and product trade-off documentation. The wrapper removes any binding decision authority.
 - `product-sprint-prioritizer`: selected because the next 90 days need disciplined launch backlog review, sprint framing, and scope control. The wrapper keeps it draft-only and denies execution or delivery-system control.
 
 ## Deferred / Reference-Only Agents
@@ -80,7 +80,7 @@ Do not apply these changes. Present them for Justin approval only.
 |---|---|---|---|---|
 | Behavioral Nudge Engine | Product | reference-only | do-not-activate | Behavioral profiling, user preference memory, outbound SMS/email/in-app nudges, and consent/privacy risk require review. |
 | Feedback Synthesizer | Product | reference-only | do-not-activate | Customer/user feedback data, support tickets, reviews, surveys, social monitoring, analytics, and external-tool risk require review. |
-| Product Manager | Product | reference-only | candidate | Strong near-term use for Corvus launch docs, PRDs, non-goals, success metrics, and product trade-off recommendations under Tier 2. |
+| Product Manager | Product | reference-only | candidate | Strong near-term use for Omen launch docs, PRDs, non-goals, success metrics, and product trade-off recommendations under Tier 2. |
 | Sprint Prioritizer | Product | reference-only | candidate | Strong near-term use for backlog discipline, sprint framing, RICE scoring, dependency notes, and launch scope control under Tier 2. |
 | Trend Researcher | Product | reference-only | reference-only | Useful reference, but overlaps `pre-build-research` and references paid/external market intelligence tools. |
 

@@ -8,11 +8,11 @@ Focused cleanup and audit for:
 
 - Layer 0: `SLOPS/`
 - Layer 1: `SLOPS/slops-saloon/`
-- Corvus app layer: `SLOPS/slops-saloon/corvus/`
+- Omen app layer: `SLOPS/slops-saloon/omen/`
 
 ## Objective
 
-Bring Layer 0 and Layer 1 to the same baseline DBS shape, give Corvus the same baseline context entry files, and reduce stale `ssffmvp` routing risk outside `Archive/quarantine`.
+Bring Layer 0 and Layer 1 to the same baseline DBS shape, give Omen the same baseline context entry files, and reduce stale `ssffmvp` routing risk outside `Archive/quarantine`.
 
 ## Baseline Contract
 
@@ -33,7 +33,7 @@ Archive/
 
 On this Windows workspace, lowercase `agents.md` / `claude.md` references resolve to the canonical `AGENTS.md` / `CLAUDE.md` files.
 
-Corvus may also contain app-specific folders such as `src/`, `frontend/`, `test/`, `sql/`, `.github/`, and `scripts/`.
+Omen may also contain app-specific folders such as `src/`, `frontend/`, `test/`, `sql/`, `.github/`, and `scripts/`.
 
 ## Completed
 
@@ -42,11 +42,11 @@ Corvus may also contain app-specific folders such as `src/`, `frontend/`, `test/
 - Added Layer 1 `Solutions/` baseline folder with README.
 - Added Layer 1 `Direction/TODO.md` and `Direction/manifesto.md`.
 - Added Layer 1 README files for `References/`, `Archive/`, and `Blueprints/handoffs/`.
-- Added Corvus root `context.md`, `AGENTS.md`, and `CLAUDE.md`.
-- Added Corvus README files for `Blueprints/`, `Blueprints/handoffs/`, `Blueprints/prompts/`, `References/`, `Solutions/`, and `Archive/`.
+- Added Omen root `context.md`, `AGENTS.md`, and `CLAUDE.md`.
+- Added Omen README files for `Blueprints/`, `Blueprints/handoffs/`, `Blueprints/prompts/`, `References/`, `Solutions/`, and `Archive/`.
 - Updated root and layer indexes to state the baseline entry-file contract.
-- Updated active stale `ssffmvp` handoff references to the current `slops-saloon/corvus` route.
-- Marked Corvus pre-rename prompts as historical/stale instead of active current instructions.
+- Updated active stale `ssffmvp` handoff references to the current `slops-saloon/omen` route.
+- Marked Omen pre-rename prompts as historical/stale instead of active current instructions.
 
 ## Intentionally Not Touched
 

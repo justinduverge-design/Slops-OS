@@ -12,7 +12,7 @@ No files were deleted, deployed, committed, pushed, or overwritten. No `.env` fi
 
 | Original Path | Archive Path | Canonical/Review Copy | Reason |
 | --- | --- | --- | --- |
-| `C:\Users\JDuve\OneDrive\Desktop\SLOPS\draft_assistant_spec.md` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\Archive\superseded-docs\draft_assistant_spec.md` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Corvus\Blueprints\specs\draft_assistant_spec.md` | DBS copy existed and matched by SHA-256; no active old-path workflow references found. |
+| `C:\Users\JDuve\OneDrive\Desktop\SLOPS\draft_assistant_spec.md` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\Archive\superseded-docs\draft_assistant_spec.md` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen\Blueprints\specs\draft_assistant_spec.md` | DBS copy existed and matched by SHA-256; no active old-path workflow references found. |
 | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\handoffs\handoffsfrontend-to-backend.md` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\Archive\superseded-docs\handoffs\handoffsfrontend-to-backend.md` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\handoffs\frontend-to-backend.md` | File was a deprecated redirect stub; canonical app handoff exists. |
 | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\handoffs\handoffsbackend-to-frontend.md` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\Archive\superseded-docs\handoffs\handoffsbackend-to-frontend.md` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\handoffs\backend-to-frontend.md` | File was a deprecated redirect stub; canonical app handoff exists. |
 | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\handoffs\handoffsREADME.md` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\Archive\superseded-docs\handoffs\handoffsREADME.md` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\handoffs\README.md` | File was a deprecated redirect stub; canonical root handoff README exists. |
@@ -42,7 +42,7 @@ None outside archive moves listed above.
 ## Still Needs Justin Review
 
 - Whether `brand\brand_voice.md` and `brand\rebrand_notes.md` should get redirect notes later or remain as root brand workspace files.
-- Whether `design.md` should stay as a root convenience doc or become a redirect to `ssffmvp\Corvus\Blueprints\specs\design.md`.
+- Whether `design.md` should stay as a root convenience doc or become a redirect to `ssffmvp\Omen\Blueprints\specs\design.md`.
 - Whether root `prompts`, `skills`, and `agents` should be copied/indexed into `Blueprints` before any archive decision.
 - Whether `agents\manager_agent.md` and `agents\sub_agents.md` should be reconciled against `ssffmvp\prompts\manager_agent.md` and `ssffmvp\prompts\sub_agents.md`.
 

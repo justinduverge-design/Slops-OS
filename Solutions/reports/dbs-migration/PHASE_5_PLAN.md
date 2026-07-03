@@ -11,7 +11,7 @@
 
 The `Blueprints\agents\_imported\` folder contains 11 divisions and ~90 imported agent role files. All are currently `reference-only`. Phase 5 runs each division through `slops-agent-author` to:
 
-1. Select which agents in each division are most relevant to current SLOPS/Corvus launch needs
+1. Select which agents in each division are most relevant to current SLOPS/Omen launch needs
 2. Create SLOPS doctrine wrapper files for selected agents
 3. Update `AGENT_INDEX.md` with new status rows
 4. Leave unselected agents as `reference-only` until needed
@@ -66,7 +66,7 @@ The imported file stays in `_imported/` as the role definition. The wrapper file
 
 For each division, ask:
 
-1. **Is this agent relevant to current launch scope?** (Corvus launch, ssffmvp MVP, SLOPS OS build-out)
+1. **Is this agent relevant to current launch scope?** (Omen launch, ssffmvp MVP, SLOPS OS build-out)
 2. **Is this agent low enough risk to promote now?** (No broad write access, no secrets/production/payment authority)
 3. **Would Justin actually call this agent in the next 30–90 days?**
 4. **Does the division already have a Claude/Codex workflow that covers this?** (If so, defer)

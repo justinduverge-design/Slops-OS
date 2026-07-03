@@ -10,10 +10,10 @@ Archived matched duplicates:
 - `00_FINAL_PLAN.md` -> `Archive\superseded-docs\00_FINAL_PLAN.md`
 - `runbook_ai_workflow.md` -> `Archive\superseded-docs\runbook_ai_workflow.md`
 - `pre-build-research.skill` -> `Archive\superseded-docs\pre-build-research.skill`
-- `ssffmvp\Corvus\Corvus Logo.png` -> `ssffmvp\Corvus\Archive\pre-dbs-flat-folder\Corvus Logo.png`
-- `ssffmvp\Corvus\Corvus Logo2.png` -> `ssffmvp\Corvus\Archive\pre-dbs-flat-folder\Corvus Logo2.png`
-- `ssffmvp\Corvus\Corvus Logo 3.png` -> `ssffmvp\Corvus\Archive\pre-dbs-flat-folder\Corvus Logo 3.png`
-- `ssffmvp\Corvus\corvus_website_app_template.jsx` -> `ssffmvp\Corvus\Archive\pre-dbs-flat-folder\corvus_website_app_template.jsx`
+- `ssffmvp\Omen\Omen Logo.png` -> `ssffmvp\Omen\Archive\pre-dbs-flat-folder\Omen Logo.png`
+- `ssffmvp\Omen\Omen Logo2.png` -> `ssffmvp\Omen\Archive\pre-dbs-flat-folder\Omen Logo2.png`
+- `ssffmvp\Omen\Omen Logo 3.png` -> `ssffmvp\Omen\Archive\pre-dbs-flat-folder\Omen Logo 3.png`
+- `ssffmvp\Omen\corvus_website_app_template.jsx` -> `ssffmvp\Omen\Archive\pre-dbs-flat-folder\corvus_website_app_template.jsx`
 
 Each archived file had a matching DBS copy verified by SHA-256 before archive.
 
@@ -50,12 +50,12 @@ These require deeper comparison and user approval before any archive decision.
 
 ## Remaining User Decisions
 
-- Whether root `brand` remains a root brand workspace or becomes Corvus-only legacy.
+- Whether root `brand` remains a root brand workspace or becomes Omen-only legacy.
 - Whether `design.md` should remain a root convenience doc or become a redirect later.
 - Whether to index/copy root `agents`, `prompts`, and `skills` into `Blueprints`.
-- Whether to split `corvus_brand_product_context.original.md` into Corvus Direction, Brand, and Omen spec files.
-- Whether to split `BRAND_STRATEGY.md` into Corvus positioning/brand/roadmap/reference docs.
-- Which Corvus logo variant is canonical.
+- Whether to split `corvus_brand_product_context.original.md` into Omen Direction, Brand, and Omen spec files.
+- Whether to split `BRAND_STRATEGY.md` into Omen positioning/brand/roadmap/reference docs.
+- Which Omen logo variant is canonical.
 - Whether high-risk stale folders are safe after a deep comparison phase.
 
 ## Safety Confirmation

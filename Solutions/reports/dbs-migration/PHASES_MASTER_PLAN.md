@@ -69,7 +69,7 @@ Each phase entry includes:
 
 ## Phase 1B — Title Case Non-Pillar Folder Renames ✅
 
-**Goal**: Rename `Direction\Reviews → reviews`, `Corvus\Assets → assets`, `Corvus\Brand → brand`.
+**Goal**: Rename `Direction\Reviews → reviews`, `Omen\Assets → assets`, `Omen\Brand → brand`.
 
 **Executor**: Codex
 **Prompt**: `Blueprints\prompts\phase-1b-codex-title-case-cleanup.md`
@@ -539,7 +539,7 @@ Each phase entry includes:
 
 ## Phase 6 — Manager Agent Disposition + Layer-to-Layer Handoff Documentation ⬜
 
-**Goal**: Decide final home for `manager_agent.md` and `sub_agents.md`. Document the communication protocol between 0-OS, 1-ssffmvp, and 2-Corvus layers so future agents can follow the handoff chain without ambiguity.
+**Goal**: Decide final home for `manager_agent.md` and `sub_agents.md`. Document the communication protocol between 0-OS, 1-ssffmvp, and 2-Omen layers so future agents can follow the handoff chain without ambiguity.
 
 **Executor**: Claude (with `slops-agent-author` + `slops-context-markdown` skills)
 **Prompt**: `Blueprints\prompts\phase-6-handoff-documentation.md` *(to be created)*
@@ -549,7 +549,7 @@ Each phase entry includes:
 **Key decisions Phase 6 must make**:
 1. Confirm `manager_agent.md` and `sub_agents.md` stay at `ssffmvp\Blueprints\prompts\` (project-level, not global)
 2. Add redirect stubs at `Blueprints\agents\` root pointing to the project-level location
-3. Define the 0-OS → 1-ssffmvp → 2-Corvus handoff protocol document
+3. Define the 0-OS → 1-ssffmvp → 2-Omen handoff protocol document
 4. Document what each layer owns, what it passes down, and what escalates up
 
 ### SLOPS Skills Invoked

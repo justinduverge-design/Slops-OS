@@ -18,7 +18,7 @@ Approved capabilities are acquired and normalized, every approved active SLOPS s
 | Claude installs matching canonical names | 14 of 48 present | 34 missing. Two `SKILL.md` files match canonical content; 12 differ. |
 | L0 playbooks | 6 | Caller/adoption evidence is not indexed consistently. |
 | Shared kickoff modules | 5 | Strong procedural wiring exists, but skill selection is named only at the plan gate. |
-| Corvus done gates | 7 gate files plus ledger | Several gates name skills directly; other lifecycle skills have no comparable evidence field. |
+| Omen done gates | 7 gate files plus ledger | Several gates name skills directly; other lifecycle skills have no comparable evidence field. |
 
 The two canonical `SKILL.md` files matching both installs are `slops-graphify` and `slops-repo-inspector`. The latter has an extra Codex-only `agents/openai.yaml`, which should be reported separately rather than treated as canonical content drift.
 
@@ -27,11 +27,11 @@ The two canonical `SKILL.md` files matching both installs are `slops-graphify` a
 ### Strong procedure wiring
 
 - L0, L1, and L2 `AGENTS.md` / `CLAUDE.md` wrappers inherit the shared identity, action posture, resource index, read-first, prohibition, handoff, and graphify modules.
-- Corvus kickoff modules enforce task selection, plan approval, guardrail declaration, safety stops, verification, commit discipline, sprint closure, decision logging, and handoff creation.
-- Corvus `Blueprints/definition-of-done.md` routes work into per-type gate files and the evidence ledger.
+- Omen kickoff modules enforce task selection, plan approval, guardrail declaration, safety stops, verification, commit discipline, sprint closure, decision logging, and handoff creation.
+- Omen `Blueprints/definition-of-done.md` routes work into per-type gate files and the evidence ledger.
 - `feature-done.md` requires `slops-code-review` and, for UI, `slops-ui-ux-audit`.
 - `security-done.md` requires security review evidence through `slops-code-review`.
-- Corvus contains dated audits, handoffs, sprint entries, and done-ledger records showing real `slops-code-review` use.
+- Omen contains dated audits, handoffs, sprint entries, and done-ledger records showing real `slops-code-review` use.
 
 ### Adoption signal, not proof
 
@@ -73,7 +73,7 @@ The post-session report must include:
 - `Blueprints/prompts/claude-skills-playbooks-acquisition-session.md`
 - `Blueprints/prompts/codex-skill-migration.md`
 - `Blueprints/handoffs/2026-06-11-skills-acquisition-handoff.md`
-- L1/L2 wrappers, Corvus kickoff modules, definition-of-done files, audits, handoffs, sprint, and ledger evidence
+- L1/L2 wrappers, Omen kickoff modules, definition-of-done files, audits, handoffs, sprint, and ledger evidence
 - `$HOME/.codex/skills/` and `$HOME/.claude/skills/`
 
 ## Intentionally not touched

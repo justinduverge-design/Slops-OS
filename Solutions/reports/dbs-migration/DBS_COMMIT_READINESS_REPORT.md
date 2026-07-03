@@ -26,7 +26,7 @@ Purpose: prepare a safe commit plan after DBS physical cleanup and relocation de
  M src/services/agents.js
  M src/ssffmvp_prompt_loader.js
 ?? Blueprints/
-?? Corvus/
+?? Omen/
 ?? Direction/
 ?? Solutions/
 ```
@@ -43,16 +43,16 @@ Expanded untracked DBS destinations:
 ?? Blueprints/prompts/sub_agents.md
 ?? Blueprints/specs/docs/ADR-004-yahoo-oauth-replacement.md
 ?? Blueprints/specs/docs/ADR-005-vorp-v2-trade-analysis.md
-?? Corvus/Blueprints/design.md
-?? Corvus/Blueprints/specs/omen-mvp-move.md
-?? Corvus/Brand/BRAND_STRATEGY.md
-?? Corvus/Brand/brand.md
-?? Corvus/Brand/positioning.md
-?? Corvus/Direction/context.md
-?? Corvus/Direction/current_sprint.md
-?? Corvus/Direction/decision_log.md
-?? Corvus/Direction/roadmap.md
-?? Corvus/README.md
+?? Omen/Blueprints/design.md
+?? Omen/Blueprints/specs/omen-mvp-move.md
+?? Omen/Brand/BRAND_STRATEGY.md
+?? Omen/Brand/brand.md
+?? Omen/Brand/positioning.md
+?? Omen/Direction/context.md
+?? Omen/Direction/current_sprint.md
+?? Omen/Direction/decision_log.md
+?? Omen/Direction/roadmap.md
+?? Omen/README.md
 ?? Direction/agent_inbox.md
 ?? Direction/context.md
 ?? Direction/current_sprint.md
@@ -71,7 +71,7 @@ Safe after Justin review:
 | `.gitignore` | Safety ignore additions for local tool/build state. |
 | `README.md` | Repo navigation updated for DBS layout. |
 | `Blueprints/` | DBS docs, prompt docs, handoffs, and specs moved from old locations. |
-| `Corvus/` | Corvus product layer docs, brand material, and product direction. |
+| `Omen/` | Omen product layer docs, brand material, and product direction. |
 | `Direction/` | ssffmvp department context, roadmap, sprint, decisions, and inbox. |
 | `Solutions/audit_report.json` | Moved report artifact from repo root. |
 | `Solutions/impeccable_baseline.json` | Moved baseline output/reference from repo root. |
@@ -82,7 +82,7 @@ Safe old-path removals to stage with their DBS destinations:
 
 | Old Path | New Path |
 | --- | --- |
-| `BRAND_STRATEGY.md` | `Corvus/Brand/BRAND_STRATEGY.md` |
+| `BRAND_STRATEGY.md` | `Omen/Brand/BRAND_STRATEGY.md` |
 | `audit_report.json` | `Solutions/audit_report.json` |
 | `impeccable_baseline.json` | `Solutions/impeccable_baseline.json` |
 | `docs/ADR-004-yahoo-oauth-replacement.md` | `Blueprints/specs/docs/ADR-004-yahoo-oauth-replacement.md` |
@@ -114,8 +114,8 @@ None of those sensitive paths appear in the current visible `git status --short`
 | --- | --- |
 | `README.md` | Human-facing repo navigation changed; Justin should approve wording. |
 | `.gitignore` | Safe additions, but still repo-policy material. |
-| `Corvus/Brand/brand.md`, `Corvus/Brand/positioning.md`, `Corvus/Brand/BRAND_STRATEGY.md` | Brand positioning is product-sensitive and should get Justin review before commit. |
-| `Corvus/Direction/*` | Product direction docs should be approved for repo permanence. |
+| `Omen/Brand/brand.md`, `Omen/Brand/positioning.md`, `Omen/Brand/BRAND_STRATEGY.md` | Brand positioning is product-sensitive and should get Justin review before commit. |
+| `Omen/Direction/*` | Product direction docs should be approved for repo permanence. |
 | `Direction/*` | Department-level context and direction should be reviewed before becoming canonical. |
 | `Blueprints/handoffs/*` | Active handoff docs may be used by agents; check current content before commit. |
 | `src/services/agents.js` and `src/ssffmvp_prompt_loader.js` | Source changes are small and tested, but they intentionally make DBS prompt docs runtime-readable. |
@@ -155,7 +155,7 @@ prompts/PROMPTS_CHANGELOG.md
 prompts/manager_agent.md
 prompts/sub_agents.md
 Blueprints/
-Corvus/
+Omen/
 Direction/
 Solutions/
 ```
@@ -163,7 +163,7 @@ Solutions/
 Suggested message:
 
 ```text
-docs: organize ssffmvp and Corvus docs into DBS folders
+docs: organize ssffmvp and Omen docs into DBS folders
 ```
 
 Notes: stage old deletes and new DBS files together so Git can recognize these as moves where possible.

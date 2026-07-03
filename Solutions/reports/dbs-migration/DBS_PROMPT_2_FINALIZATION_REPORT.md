@@ -105,7 +105,7 @@ ssffmvp
     specs/
     agent_handoff.md
   client/ [active app]
-  Corvus/ [DBS product layer]
+  Omen/ [DBS product layer]
   Direction/ [DBS]
     agent_inbox.md
     context.md
@@ -139,19 +139,19 @@ ssffmvp
   README.md
 ```
 
-## 5. Final Corvus Tree Summary
+## 5. Final Omen Tree Summary
 
-Compact depth-3 Corvus tree:
+Compact depth-3 Omen tree:
 
 ```text
-Corvus
+Omen
   Archive/ [DBS]
-  Assets/ [approved Corvus extension]
+  Assets/ [approved Omen extension]
   Blueprints/ [DBS]
     specs/
       omen-mvp-move.md
     design.md
-  Brand/ [approved Corvus extension]
+  Brand/ [approved Omen extension]
     BRAND_STRATEGY.md
     brand.md
     positioning.md
@@ -196,7 +196,7 @@ Corvus
 | `.github/` | yes | GitHub Actions/config. | Do not touch. |
 | `.gitignore` | yes | Protects secrets/tool state/build artifacts. | Safe to commit later after review. |
 | `Archive/`, `Blueprints/`, `Direction/`, `References/`, `Solutions/` | yes | ssffmvp DBS folders. | Safe to commit DBS docs after review. |
-| `Corvus/` | yes | Product layer. | Safe to commit product docs after review. |
+| `Omen/` | yes | Product layer. | Safe to commit product docs after review. |
 | `client/`, `frontend/`, `src/` | yes | Active app source/runtime. | Do not touch in DBS cleanup. |
 | `scripts/`, `sql/`, `test/`, `evals/` | yes | Active app workflow/data/test areas. | Do not touch in DBS cleanup. |
 | `node_modules/` | yes physically, no commit | Dependency folder; ignored. | Do not commit. |
@@ -216,7 +216,7 @@ After Justin review, likely safe:
 - `ssffmvp\.gitignore` safety additions
 - `ssffmvp\README.md`
 - `ssffmvp\Direction/`, `Blueprints/`, `Solutions/`, `References/`, and non-sensitive `Archive/` docs
-- `ssffmvp\Corvus/` product docs, brand docs, specs, and README files
+- `ssffmvp\Omen/` product docs, brand docs, specs, and README files
 
 ## 8. Do Not Commit
 

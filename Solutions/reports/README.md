@@ -2,7 +2,7 @@
 
 This folder holds finished reports and audit artifacts.
 
-Reports are evidence, not active routing authority. If a report mentions `ssffmvp`, old `Corvus/` paths, or prior folder layouts, treat that wording as historical unless a current root file says otherwise.
+Reports are evidence, not active routing authority. If a report mentions `ssffmvp`, old `Omen/` paths, or prior folder layouts, treat that wording as historical unless a current root file says otherwise.
 
 Current routing starts at:
 

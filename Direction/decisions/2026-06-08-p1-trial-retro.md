@@ -1,6 +1,6 @@
 # Retro — P1 Sleeper Live Omen, Slops Toolkit Trial (2026-06-08)
 
-First end-to-end run of the new Slops skill family, using Corvus **P1 — Sleeper live Omen** as the
+First end-to-end run of the new Slops skill family, using Omen **P1 — Sleeper live Omen** as the
 test case. Produced via `slops-retro`. Backend committed at `25529ce` on `backend/p1-sleeper-live`
 (code complete, smoke pending; not pushed).
 

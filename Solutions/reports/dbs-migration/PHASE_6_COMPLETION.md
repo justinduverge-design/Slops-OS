@@ -32,7 +32,7 @@ The SLOPS 0-OS layer holds only navigation stubs — no duplicated runtime conte
 | `Blueprints\agents\layer-handoff-protocol.md` | Defines what each DBS layer owns, what it passes down, how agents escalate up, and where runtime prompts belong |
 
 Covers:
-- 0-OS → 1-ssffmvp → 2-Corvus authority chain
+- 0-OS → 1-ssffmvp → 2-Omen authority chain
 - What each layer owns and does not own
 - Escalation triggers (when to go up a layer)
 - DBS folder quick reference

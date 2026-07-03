@@ -53,7 +53,7 @@ All changes preserve folder structure and authority boundaries. No files deleted
    - Status legend (active, candidate, restricted, reference-only, archived)
    - Global authorities: Justin (CEO), Claude (Architect), Codex (Engineer)
    - Active SLOPS skills (6 canonical skills)
-   - Project-specific agents (Manager Agent, Sub-Agents for Corvus)
+   - Project-specific agents (Manager Agent, Sub-Agents for Omen)
    - Imported agent library (12 divisions, default reference-only)
    - Promotion pipeline (10-step review sequence)
    - Tool permission reference (tier caps per role)
@@ -103,8 +103,8 @@ All changes preserve folder structure and authority boundaries. No files deleted
    - Scope rules (keep app-specific only)
    - Naming conventions with examples
 
-2. **`ssffmvp\Corvus\Blueprints\README.md`** (59 lines)
-   - Corvus-level blueprint structure reference
+2. **`ssffmvp\Omen\Blueprints\README.md`** (59 lines)
+   - Omen-level blueprint structure reference
    - Subfolder routing (specs, playbooks, design)
    - Kebab-case naming convention with examples
    - Index file naming (ALL_CAPS_SNAKE)
@@ -147,7 +147,7 @@ All changes preserve folder structure and authority boundaries. No files deleted
 | SKILL_ROUTING.md is canonical | ✅ PASS | DBS_INDEX.md, READMEs all reference SKILL_ROUTING.md |
 | Folder casing normalized | ✅ PASS | Updated SKILL_ROUTING.md to use Skills→skills, Prompts→prompts |
 | Naming conventions documented | ✅ PASS | Both Blueprints\README and DBS_INDEX contain complete conventions |
-| App-layer READMEs created | ✅ PASS | ssffmvp\Blueprints\skills and ssffmvp\Corvus\Blueprints both have README.md |
+| App-layer READMEs created | ✅ PASS | ssffmvp\Blueprints\skills and ssffmvp\Omen\Blueprints both have README.md |
 
 ---
 
@@ -159,7 +159,7 @@ All changes preserve folder structure and authority boundaries. No files deleted
 - `Blueprints\tools\tool-permissions.md` (updated from existing)
 - `Blueprints\agents\AGENT_INDEX.md`
 - `ssffmvp\Blueprints\skills\README.md`
-- `ssffmvp\Corvus\Blueprints\README.md`
+- `ssffmvp\Omen\Blueprints\README.md`
 - `Blueprints\skills\tools.md` (redirect stub)
 
 **Existing files updated**: 9
@@ -236,7 +236,7 @@ All changes preserve folder structure and authority boundaries. No files deleted
 
 3. **ESPN cookie handling**: Noted as security-critical in AGENT_INDEX but no new controls added; security review remains separate task.
 
-4. **App-specific agents**: Manager Agent and Sub-Agents (Corvus) documented in global AGENT_INDEX. May be moved to app-layer agents folder if Corvus grows beyond single-product scope.
+4. **App-specific agents**: Manager Agent and Sub-Agents (Omen) documented in global AGENT_INDEX. May be moved to app-layer agents folder if Omen grows beyond single-product scope.
 
 ---
 
@@ -259,7 +259,7 @@ All changes preserve folder structure and authority boundaries. No files deleted
 2. **Review imported agents** (when ready): Use AGENT_INDEX.md as checklist for promoting GitHub-imported agents from `reference-only` to `active` or `restricted`
 3. **Security review** (separately): ESPN cookie handling noted in AGENT_INDEX; coordinate security review per standard protocol
 4. **Cross-reference audit** (future): Periodically grep for old path patterns to catch any new references to capitalized folders or SKILL_INDEX.md
-5. **Document app-specific agents** (if Corvus expands): Consider creating `ssffmvp\Blueprints\agents\` layer when sub-agents become reusable
+5. **Document app-specific agents** (if Omen expands): Consider creating `ssffmvp\Blueprints\agents\` layer when sub-agents become reusable
 
 ---
 

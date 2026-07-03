@@ -20,7 +20,7 @@ Pattern files use hyphen-case: `topic-patterns.md`. (Older underscore drafts hav
 | `slops-os-dbs-patterns.md` | Validated patterns for the DBS folder/routing system. |
 | `slops-os-markdown-patterns.md` | Patterns for authoring SLOPS Markdown/context files. |
 | `ux-ui-fundamentals-patterns.md` | UX/UI fundamentals research patterns. |
-| `vorp-v2-patterns.md` | Patterns behind the VORP v2 / Corvus-brain trade-analysis work. |
+| `vorp-v2-patterns.md` | Patterns behind the VORP v2 / Omen-brain trade-analysis work. |
 
 ## Related
 

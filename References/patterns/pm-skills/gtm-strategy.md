@@ -1,4 +1,4 @@
-<!-- reference-only | source: phuryn/pm-skills (MIT) pm-go-to-market/skills/gtm-strategy | harvested 2026-06-20 | pairs with Corvus launch comms (Phase 4) -->
+<!-- reference-only | source: phuryn/pm-skills (MIT) pm-go-to-market/skills/gtm-strategy | harvested 2026-06-20 | pairs with Omen launch comms (Phase 4) -->
 
 # GTM Strategy
 

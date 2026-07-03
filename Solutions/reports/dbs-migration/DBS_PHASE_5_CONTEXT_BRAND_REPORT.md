@@ -15,10 +15,10 @@ ssffmvp DBS layer:
 Context and product docs:
 
 - `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Direction\context.md`
-- `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Corvus\Direction\context.md`
-- `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Corvus\Brand\brand.md`
-- `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Corvus\Brand\positioning.md`
-- `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Corvus\Blueprints\specs\omen-mvp-move.md`
+- `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen\Direction\context.md`
+- `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen\Brand\brand.md`
+- `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen\Brand\positioning.md`
+- `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen\Blueprints\specs\omen-mvp-move.md`
 - `C:\Users\JDuve\OneDrive\Desktop\SLOPS\DBS_PROJECTS_SSFFMVP_COMPARISON.md`
 - `C:\Users\JDuve\OneDrive\Desktop\SLOPS\DBS_PHASE_5_CONTEXT_BRAND_REPORT.md`
 
@@ -37,7 +37,7 @@ Context and product docs:
 
 ## Files Moved / Archived
 
-Root `brand` was archived as Corvus-only after confirming matching Corvus copies existed.
+Root `brand` was archived as Omen-only after confirming matching Omen copies existed.
 
 Moved:
 
@@ -45,14 +45,14 @@ Moved:
 
 To:
 
-- `C:\Users\JDuve\OneDrive\Desktop\SLOPS\Archive\superseded-docs\brand-root-corvus-only\brand`
+- `C:\Users\JDuve\OneDrive\Desktop\SLOPS\Archive\superseded-docs\brand-root-omen-only\brand`
 
 Hash and size checks passed before archiving:
 
-| Source | Corvus Copy | Size Match | Hash Match |
+| Source | Omen Copy | Size Match | Hash Match |
 | --- | --- | --- | --- |
-| `brand\brand_voice.md` | `ssffmvp\Corvus\Brand\voice.md` | yes | yes |
-| `brand\rebrand_notes.md` | `ssffmvp\Corvus\References\rebrand_notes.md` | yes | yes |
+| `brand\brand_voice.md` | `ssffmvp\Omen\Brand\voice.md` | yes | yes |
+| `brand\rebrand_notes.md` | `ssffmvp\Omen\References\rebrand_notes.md` | yes | yes |
 
 No files were deleted.
 
@@ -67,9 +67,9 @@ Reason: comparison found `.git`, `.env` files, key-like files, package files, so
 - All three levels now have separate context files.
 - Root SLOPS context is company-wide and about Justin / Slops OS / Slops Saloon operations.
 - ssffmvp context defines the Fantasy Sports MVP Builder department/project layer.
-- Corvus context defines the Fantasy Football MVP product layer.
-- `BRAND_STRATEGY.md` was promoted into Corvus brand material by creating `Corvus\Brand\positioning.md`.
-- Root `brand` was treated as Corvus-only and archived after matching copies were verified.
+- Omen context defines the Fantasy Football MVP product layer.
+- `BRAND_STRATEGY.md` was promoted into Omen brand material by creating `Omen\Brand\positioning.md`.
+- Root `brand` was treated as Omen-only and archived after matching copies were verified.
 - DBS folders were created directly inside `ssffmvp`.
 
 ## Remaining User Decisions
@@ -77,7 +77,7 @@ Reason: comparison found `.git`, `.env` files, key-like files, package files, so
 - Whether to archive `Projects\ssffmvp` after a secrets-safe review.
 - How to handle `Projects\ssffmvp\oraclepr.key` and other secret/env-like files before any archive.
 - Whether `ssffmvp\BRAND_STRATEGY.md` should eventually remain in app root, become a redirect note, or be archived after humans/tools adjust.
-- Whether `Corvus\Brand\brand.md`, `Corvus\Brand\voice.md`, and `Corvus\Brand\positioning.md` should be merged later into one concise brand packet or remain separate.
+- Whether `Omen\Brand\brand.md`, `Omen\Brand\voice.md`, and `Omen\Brand\positioning.md` should be merged later into one concise brand packet or remain separate.
 - Whether Omen/MVP Move should use product naming in UI as `Omen`, `MVP Move`, or both.
 
 ## Safety Confirmation

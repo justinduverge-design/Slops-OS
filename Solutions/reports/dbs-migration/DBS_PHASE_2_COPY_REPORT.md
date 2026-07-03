@@ -13,10 +13,10 @@ Intermediate DBS subfolders were created only where needed for approved copy des
 - `C:\Users\JDuve\OneDrive\Desktop\SLOPS\Blueprints\workflows`
 - `C:\Users\JDuve\OneDrive\Desktop\SLOPS\Blueprints\playbooks`
 - `C:\Users\JDuve\OneDrive\Desktop\SLOPS\Blueprints\skills`
-- `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Corvus\Blueprints\specs`
-- `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Corvus\Solutions\website-template`
-- `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Corvus\Assets\logos`
-- `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Corvus\Assets\screenshots`
+- `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen\Blueprints\specs`
+- `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen\Solutions\website-template`
+- `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen\Assets\logos`
+- `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen\Assets\screenshots`
 
 ## Files Copied Successfully
 
@@ -34,27 +34,27 @@ Intermediate DBS subfolders were created only where needed for approved copy des
 | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\runbook_ai_workflow.md` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\Blueprints\playbooks\runbook_ai_workflow.md` |
 | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\pre-build-research.skill` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\Blueprints\skills\pre-build-research.skill` |
 
-### Phase 2B - Corvus Review Copies
+### Phase 2B - Omen Review Copies
 
 | Source | Destination |
 | --- | --- |
-| `C:\Users\JDuve\OneDrive\Desktop\SLOPS\brand\brand_voice.md` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Corvus\Brand\voice.md` |
-| `C:\Users\JDuve\OneDrive\Desktop\SLOPS\brand\rebrand_notes.md` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Corvus\References\rebrand_notes.md` |
-| `C:\Users\JDuve\OneDrive\Desktop\SLOPS\design.md` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Corvus\Blueprints\specs\design.md` |
-| `C:\Users\JDuve\OneDrive\Desktop\SLOPS\draft_assistant_spec.md` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Corvus\Blueprints\specs\draft_assistant_spec.md` |
-| `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\BRAND_STRATEGY.md` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Corvus\References\BRAND_STRATEGY.md` |
-| `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\specs\001-corvus-decision-layer\spec.md` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Corvus\Blueprints\specs\001-corvus-decision-layer.md` |
-| `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\specs\002-homepage-product-priority\spec.md` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Corvus\Blueprints\specs\002-homepage-product-priority.md` |
-| `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Corvus\corvus_website_app_template.jsx` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Corvus\Solutions\website-template\corvus_website_app_template.jsx` |
-| `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\client\public\corvus-apollo-logo.png` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Corvus\Assets\logos\corvus-apollo-logo-client-copy.png` |
-| `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\frontend\public\corvus-apollo-logo.png` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Corvus\Assets\logos\corvus-apollo-logo-frontend-copy.png` |
-| `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\skills\run-ssffmvp\screenshots\landing-desktop.png` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Corvus\Assets\screenshots\landing-desktop.png` |
-| `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\skills\run-ssffmvp\screenshots\landing-mobile.png` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Corvus\Assets\screenshots\landing-mobile.png` |
-| `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\skills\run-ssffmvp\screenshots\football-route.png` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Corvus\Assets\screenshots\football-route.png` |
-| `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Corvus\corvus_brand_product_context.md` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Corvus\References\corvus_brand_product_context.original.md` |
-| `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Corvus\Corvus Logo.png` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Corvus\Assets\logos\Corvus Logo.png` |
-| `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Corvus\Corvus Logo2.png` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Corvus\Assets\logos\Corvus Logo2.png` |
-| `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Corvus\Corvus Logo 3.png` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Corvus\Assets\logos\Corvus Logo 3.png` |
+| `C:\Users\JDuve\OneDrive\Desktop\SLOPS\brand\brand_voice.md` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen\Brand\voice.md` |
+| `C:\Users\JDuve\OneDrive\Desktop\SLOPS\brand\rebrand_notes.md` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen\References\rebrand_notes.md` |
+| `C:\Users\JDuve\OneDrive\Desktop\SLOPS\design.md` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen\Blueprints\specs\design.md` |
+| `C:\Users\JDuve\OneDrive\Desktop\SLOPS\draft_assistant_spec.md` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen\Blueprints\specs\draft_assistant_spec.md` |
+| `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\BRAND_STRATEGY.md` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen\References\BRAND_STRATEGY.md` |
+| `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\specs\001-omen-decision-layer\spec.md` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen\Blueprints\specs\001-omen-decision-layer.md` |
+| `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\specs\002-homepage-product-priority\spec.md` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen\Blueprints\specs\002-homepage-product-priority.md` |
+| `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen\corvus_website_app_template.jsx` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen\Solutions\website-template\corvus_website_app_template.jsx` |
+| `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\client\public\omen-apollo-logo.png` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen\Assets\logos\omen-apollo-logo-client-copy.png` |
+| `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\frontend\public\omen-apollo-logo.png` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen\Assets\logos\omen-apollo-logo-frontend-copy.png` |
+| `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\skills\run-ssffmvp\screenshots\landing-desktop.png` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen\Assets\screenshots\landing-desktop.png` |
+| `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\skills\run-ssffmvp\screenshots\landing-mobile.png` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen\Assets\screenshots\landing-mobile.png` |
+| `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\skills\run-ssffmvp\screenshots\football-route.png` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen\Assets\screenshots\football-route.png` |
+| `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen\corvus_brand_product_context.md` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen\References\corvus_brand_product_context.original.md` |
+| `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen\Omen Logo.png` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen\Assets\logos\Omen Logo.png` |
+| `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen\Omen Logo2.png` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen\Assets\logos\Omen Logo2.png` |
+| `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen\Omen Logo 3.png` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen\Assets\logos\Omen Logo 3.png` |
 
 ## Files Missing Or Skipped
 
@@ -66,13 +66,13 @@ None. No approved destination file already existed, so no overwrite was attempte
 
 ## Medium-Risk Items That Still Need Justin Review
 
-- Decide whether `ssffmvp\Corvus\References\BRAND_STRATEGY.md` should remain a reference copy or become the basis for `Corvus\Brand\positioning.md`.
-- Decide whether `ssffmvp\Corvus\References\corvus_brand_product_context.original.md` should be split into `Corvus\Brand\brand.md` and `Corvus\Direction\context.md`.
-- Decide which Corvus logo variant is canonical before any rename or active asset replacement.
+- Decide whether `ssffmvp\Omen\References\BRAND_STRATEGY.md` should remain a reference copy or become the basis for `Omen\Brand\positioning.md`.
+- Decide whether `ssffmvp\Omen\References\corvus_brand_product_context.original.md` should be split into `Omen\Brand\brand.md` and `Omen\Direction\context.md`.
+- Decide which Omen logo variant is canonical before any rename or active asset replacement.
 - Decide whether `brand\rebrand_notes.md` is historical reference only or should become part of active positioning doctrine.
-- Decide whether copied specs in `Corvus\Blueprints\specs` are canonical product specs or review copies while `ssffmvp\specs` remains canonical.
+- Decide whether copied specs in `Omen\Blueprints\specs` are canonical product specs or review copies while `ssffmvp\specs` remains canonical.
 - Decide whether copied screenshots should become current visual references or be treated as temporary review artifacts.
-- Decide whether the copied website template is useful as a Corvus template or should remain a historical prototype.
+- Decide whether the copied website template is useful as a Omen template or should remain a historical prototype.
 
 ## Files That Should Remain Canonical In Original Location
 
@@ -86,21 +86,21 @@ None. No approved destination file already existed, so no overwrite was attempte
   - `C:\Users\JDuve\OneDrive\Desktop\SLOPS\CLAUDE.md`
 - Active app and repo docs should remain canonical in original locations until a separate approval:
   - `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\BRAND_STRATEGY.md`
-  - `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\specs\001-corvus-decision-layer\spec.md`
+  - `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\specs\001-omen-decision-layer\spec.md`
   - `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\specs\002-homepage-product-priority\spec.md`
 - Active implementation assets should remain canonical where the app currently expects them:
-  - `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\client\public\corvus-apollo-logo.png`
-  - `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\frontend\public\corvus-apollo-logo.png`
+  - `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\client\public\omen-apollo-logo.png`
+  - `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\frontend\public\omen-apollo-logo.png`
 - Active app handoffs remain canonical in:
   - `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\handoffs`
 
 ## Recommended Next Review Decisions
 
 1. Approve or reject making `Direction` the canonical SLOPS OS home for context, roadmap, manifesto, TODO, and final-plan docs.
-2. Choose the canonical Corvus logo variant and decide whether any resized/exported derivatives are needed later.
+2. Choose the canonical Omen logo variant and decide whether any resized/exported derivatives are needed later.
 3. Decide how to split `corvus_brand_product_context.original.md` into product direction versus brand doctrine.
-4. Decide whether `BRAND_STRATEGY.md` should be promoted into Corvus Brand after cleanup.
-5. Decide whether app-level specs should stay in `ssffmvp\specs` with Corvus copies, or whether Corvus product specs should become canonical under `Corvus\Blueprints\specs`.
+4. Decide whether `BRAND_STRATEGY.md` should be promoted into Omen Brand after cleanup.
+5. Decide whether app-level specs should stay in `ssffmvp\specs` with Omen copies, or whether Omen product specs should become canonical under `Omen\Blueprints\specs`.
 
 ## Copy-Only Confirmation
 

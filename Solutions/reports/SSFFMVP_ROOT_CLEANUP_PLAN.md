@@ -24,11 +24,11 @@ No files had been moved for this repo-scoped cleanup before this plan was create
 | `AGENT.md` | `AGENT.md` | `Blueprints\workflows\AGENT.md` | move to Blueprints | medium | Agent instruction file; leave root redirect because tools may look here. |
 | `Archive` | `Archive` | root | keep at root | low | DBS layer folder. |
 | `Blueprints` | `Blueprints` | root | keep at root | low | DBS layer folder. |
-| `BRAND_STRATEGY.md` | `BRAND_STRATEGY.md` | `Corvus\Brand\positioning.md` | keep redirect at root | low | Already promoted/archived; current file is redirect. |
+| `BRAND_STRATEGY.md` | `BRAND_STRATEGY.md` | `Omen\Brand\positioning.md` | keep redirect at root | low | Already promoted/archived; current file is redirect. |
 | `CLAUDE.md` | `CLAUDE.md` | `Blueprints\workflows\CLAUDE.md` | move to Blueprints | medium | Agent instruction file; leave root redirect because tools may look here. |
 | `client` | `client` | root | do not touch | high | Active app/client folder; explicitly protected. |
 | `context.md` | `context.md` | `Direction\context.md` | keep redirect at root | low | Already redirected. |
-| `Corvus` | `Corvus` | root | keep at root | low | Product DBS layer. |
+| `Omen` | `Omen` | root | keep at root | low | Product DBS layer. |
 | `current_sprint.md` | `current_sprint.md` | `Direction\current_sprint.md` | keep redirect at root | low | Already redirected. |
 | `decision_log.md` | `decision_log.md` | `Direction\decision_log.md` | keep redirect at root | low | Already redirected. |
 | `Direction` | `Direction` | root | keep at root | low | DBS layer folder. |

@@ -41,7 +41,7 @@ DBS-related additions/changes include:
 - `README.md`
 - `Archive/`
 - `Blueprints/`
-- `Corvus/`
+- `Omen/`
 - `Direction/`
 - `References/`
 - `Solutions/`
@@ -60,7 +60,7 @@ Likely safe after Justin review:
 - Root `AGENT.md` and `CLAUDE.md` DBS navigation additions
 - `ssffmvp\README.md`
 - `ssffmvp\Direction`, `Blueprints`, `Solutions`, `References`, `Archive` README/context docs
-- `ssffmvp\Corvus` product docs, brand docs, assets references, and archive notes, after app repo review
+- `ssffmvp\Omen` product docs, brand docs, assets references, and archive notes, after app repo review
 - Root `.gitignore` quarantine/secrets protection
 
 ## Should Not Be Committed

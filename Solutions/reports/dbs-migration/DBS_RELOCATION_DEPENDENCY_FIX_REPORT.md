@@ -134,7 +134,7 @@ Result:
  M src/services/agents.js
  M src/ssffmvp_prompt_loader.js
 ?? Blueprints/
-?? Corvus/
+?? Omen/
 ?? Direction/
 ?? Solutions/
 ```
