@@ -25,3 +25,11 @@
 **Reason:** Omen is the baseline product for the company. Skills only create value when operating procedures invoke them and preserve evidence. The learning/community work would distract from getting Omen live if activated now.
 
 **Impact:** Parked canonical packages remain versioned but leave both runtime skill directories after backup. Omen gains a core lifecycle playbook, conditional skill runbook, complete usage matrix, and usage ledger. Kickoff and done gates must record which skills were used or why a conditional skill was not applicable.
+
+## 2026-07-03 — CRLF and Corvus→Omen rebrand cleanup closed
+
+**Decision:** The ~90-file dirty working tree flagged at the end of the 2026-07-03 fan-experience doctrine session was resolved via two scoped PRs (`docs/2026-07-03-crlf-rebrand-content-cleanup`, merged `be8e9a0`; `chore/normalize-line-endings`, merged `56d5a66`) rather than the single normalize-then-content sequence the reanchor doc originally proposed.
+
+**Reason:** Phase 1 diff testing (`git diff --name-only -w`) disproved the reanchor doc's core assumption — none of the modified files were pure CRLF churn; all 91 had real, uncommitted Corvus→Omen rebrand content. `.gitattributes` also already existed (added 2802c43, 2026-06-21); the actual drift cause was local `core.autocrlf=true` fighting the existing `eol=lf` attribute, not a missing normalization rule. Content commits had to land first so the dedicated normalize branch's diff stayed pure (confirmed empty via `git diff --cached -w --stat` beyond the `.gitattributes` edit itself).
+
+**Impact:** `core.autocrlf` is now `input` locally; `.gitattributes` covers `.docx`/`.xlsx`/`.pptx`/`.zip` (binary) and `.bat`/`.cmd`/`.ps1` (CRLF-preserved) in addition to the existing rules. A `.gitignore` rebrand bug (duplicate `slops-saloon/omen/` line, legacy-folder comment defeated) was fixed by dropping the stale line. 5 files under `_pending/`, `_old-prompts-for-analysis/`, and `_proposals/` remain intentionally uncommitted pending Justin's call. Full detail in `Blueprints/handoffs/2026-07-03-crlf-and-rebrand-cleanup-handoff.md`.
