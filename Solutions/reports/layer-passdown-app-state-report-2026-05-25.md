@@ -29,14 +29,14 @@ No secrets, `.env` files, key-like files, production infrastructure, SQL, packag
 | :--- | ---: | ---: | ---: | ---: | ---: | :--- |
 | Layer 0 - SLOPS OS | 26 files | 208 files | 9 files | 70 files | 26 files | Strong operating layer; rich but easy to over-pass downward. |
 | Layer 1 - Slops Saloon | 9 files | 3 files | 1 file | 1 file | 1 file | Clean division shell; should stay intentionally light. |
-| Layer 2 - Corvus | 10 files | 54 files | 3 files | 3 files | 13 files | Active product layer; most implementation truth belongs here. |
+| Layer 2 - Omen | 10 files | 54 files | 3 files | 3 files | 13 files | Active product layer; most implementation truth belongs here. |
 
 ## Current App State
 
-Corvus is the active product app at:
+Omen is the active product app at:
 
 ```text
-SLOPS/slops-saloon/corvus/
+SLOPS/slops-saloon/omen/
 ```
 
 Current product surface:
@@ -76,12 +76,12 @@ The env file was not opened or edited. Treat this as a follow-up configuration h
 
 Pass only durable operating context from SLOPS OS to Slops Saloon:
 
-- Canonical route: `SLOPS/` -> `slops-saloon/` -> `corvus/`.
+- Canonical route: `SLOPS/` -> `slops-saloon/` -> `omen/`.
 - DBS bucket meanings and baseline file contract.
 - Safety doctrine: approval before secrets, production, deploy, SQL, package, destructive, or infrastructure work.
 - Agent ownership doctrine: Justin decides product direction; Codex owns backend; Claude owns frontend.
 - Handoff doctrine: product contracts live in product handoffs, not root handoffs.
-- Historical doctrine: Archive, imported agents, old `ssffmvp`, and old `Corvus/` paths are reference-only.
+- Historical doctrine: Archive, imported agents, old `ssffmvp`, and old `Omen/` paths are reference-only.
 - Reusable skill doctrine: root `Blueprints/skills/` is canonical; do not duplicate skills in Layer 1 unless a second product makes a division-level skill necessary.
 
 Do not pass down:
@@ -96,12 +96,12 @@ Layer 1 should remain a clean division router, not a second app brain.
 
 ## Layer 1 -> Layer 2 Passdown
 
-Pass product-relevant division context into Corvus:
+Pass product-relevant division context into Omen:
 
 - Slops Saloon is the parent division for sports, music, and arts.
-- Corvus is the only active product.
-- Future products stay out of Corvus until Justin starts them.
-- Corvus product hierarchy:
+- Omen is the only active product.
+- Future products stay out of Omen until Justin starts them.
+- Omen product hierarchy:
   - Trade Analyzer is the front door.
   - Draft Assistant is the preparation tool.
   - Omen / MVP Move is the main event.
@@ -113,17 +113,17 @@ Pass product-relevant division context into Corvus:
   - Sleeper and ESPN are connected-platform work, but live Omen engines remain incomplete or pending.
   - ESPN is high-value but fragile and needs careful recovery UI.
 - Gate order for Omen: auth -> platform -> subscription -> live Omen.
-- Product truth must be written in Corvus `Direction/` and `Blueprints/handoffs/`.
+- Product truth must be written in Omen `Direction/` and `Blueprints/handoffs/`.
 
 Do not pass down:
 
-- Division-level future product ideas as active Corvus scope.
-- Parent-brand homepage decisions unless Justin routes them to Corvus.
+- Division-level future product ideas as active Omen scope.
+- Parent-brand homepage decisions unless Justin routes them to Omen.
 - Broad Slops Saloon brand exploration that does not affect current app behavior.
 
 ## Layer 2 -> Layer 0 Report Back
 
-Corvus should report these facts back up:
+Omen should report these facts back up:
 
 - Backend tests are healthy: 199/199 passing.
 - The primary frontend build is blocked by `frontend/src/pages/Account.jsx`.
@@ -136,7 +136,7 @@ Corvus should report these facts back up:
 
 ## Backend Focus
 
-1. Update Corvus handoffs so `backend-to-frontend.md` reflects the current tested reality: Yahoo-first live Omen exists, Sleeper/ESPN live Omen remains pending, and dashboard gate state is the source of truth.
+1. Update Omen handoffs so `backend-to-frontend.md` reflects the current tested reality: Yahoo-first live Omen exists, Sleeper/ESPN live Omen remains pending, and dashboard gate state is the source of truth.
 2. Validate Stripe live behavior end to end: checkout, trial, season plan, portal, webhook activation/deactivation, and Account subscription summary.
 3. Load test `POST /api/omen/mvp-move` and `POST /api/trade/compare`.
 4. Harden live Omen error states around Yahoo token expiration, missing league id, no lineup edge, and provider failures.
@@ -158,7 +158,7 @@ Corvus should report these facts back up:
 ## Recommended Next Actions
 
 1. Claude/frontend fixes the Account build blocker.
-2. Codex/backend updates the Corvus backend-to-frontend handoff to match the tested live Omen and Stripe contracts.
+2. Codex/backend updates the Omen backend-to-frontend handoff to match the tested live Omen and Stripe contracts.
 3. Run `npm test`, `npm run build` in `frontend/`, and `npm run build` in `client/` before any deploy conversation.
 4. After build is green, do a browser QA pass on `/trade`, `/draft`, `/login`, `/account`, `/account/connect`, `/football`, and `/omen`.
 5. Then choose between Stripe live validation or Omen load testing as the next paid-launch confidence step.

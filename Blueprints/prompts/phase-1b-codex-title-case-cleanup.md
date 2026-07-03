@@ -43,16 +43,16 @@ This is a content subfolder of the Direction DBS pillar, not a DBS pillar itself
 
 ---
 
-## Task 2 — Rename `Corvus/Assets` and `Corvus/Brand`
+## Task 2 — Rename `Omen/Assets` and `Omen/Brand`
 
-**Location:** `C:\Users\JDuve\OneDrive\Desktop\SLOPS\slops-saloon\corvus`
+**Location:** `C:\Users\JDuve\OneDrive\Desktop\SLOPS\slops-saloon\omen`
 
 | Current Name | New Name |
 |---|---|
 | `Assets` | `assets` |
 | `Brand` | `brand` |
 
-These are content subfolders of the Corvus product layer, not DBS pillars.
+These are content subfolders of the Omen product layer, not DBS pillars.
 All files inside these folders stay exactly as-is — rename the folder only.
 
 ---
@@ -65,13 +65,13 @@ Blueprints\         ← DBS pillar — do NOT rename
 Solutions\          ← DBS pillar — do NOT rename
 References\         ← DBS pillar — do NOT rename
 Archive\            ← DBS pillar — do NOT rename, contents — do NOT touch
-Corvus\Archive\     ← DBS pillar subfolder — do NOT rename
-slops-saloon\corvus\src\
-slops-saloon\corvus\frontend\
-slops-saloon\corvus\client\
-slops-saloon\corvus\scripts\
-slops-saloon\corvus\sql\
-slops-saloon\corvus\test\
+Omen\Archive\     ← DBS pillar subfolder — do NOT rename
+slops-saloon\omen\src\
+slops-saloon\omen\frontend\
+slops-saloon\omen\client\
+slops-saloon\omen\scripts\
+slops-saloon\omen\sql\
+slops-saloon\omen\test\
 slops-saloon\.env
 slops-saloon\.env.cloud
 slops-saloon\oraclepu.key
@@ -94,9 +94,9 @@ dir "C:\Users\JDuve\OneDrive\Desktop\SLOPS\Direction"
 ```
 Expected: `reviews` present (lowercase), `Reviews` absent.
 
-**Step 2:** Confirm `Corvus` subfolders.
+**Step 2:** Confirm `Omen` subfolders.
 ```
-dir "C:\Users\JDuve\OneDrive\Desktop\SLOPS\slops-saloon\corvus"
+dir "C:\Users\JDuve\OneDrive\Desktop\SLOPS\slops-saloon\omen"
 ```
 Expected: `assets` and `brand` present (lowercase), `Assets` and `Brand` absent.
 DBS pillars `Archive`, `Blueprints`, `Direction`, `References`, `Solutions` still Title Case ✅.
@@ -129,8 +129,8 @@ Write this file:
 | Task | Folder | Renamed |
 |---|---|---|
 | Task 1 | `Direction/Reviews` → `Direction/reviews` | 1 |
-| Task 2 | `Corvus/Assets` → `Corvus/assets` | 1 |
-| Task 2 | `Corvus/Brand` → `Corvus/brand` | 1 |
+| Task 2 | `Omen/Assets` → `Omen/assets` | 1 |
+| Task 2 | `Omen/Brand` → `Omen/brand` | 1 |
 | **Total** | | **3** |
 
 Zero file content changes. Zero app source touched.

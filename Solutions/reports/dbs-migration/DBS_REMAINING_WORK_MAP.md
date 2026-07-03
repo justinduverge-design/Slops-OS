@@ -25,10 +25,10 @@ This is a safe placement map. It uses folder-level inspection and known DBS repo
 | `ssffmvp\Solutions` | ssffmvp | canonical location established | Use for app-adjacent outputs, not active source | low | Starter folder only. |
 | `ssffmvp\References` | ssffmvp | canonical location established | Use for app/repo references | low | Starter folder only. |
 | `ssffmvp\Archive` | ssffmvp | canonical location established | Use for reviewed ssffmvp archive | medium | Do not archive source/config/secrets without explicit approval. |
-| `ssffmvp\Corvus` | Corvus | canonical location established | Use as product layer | low | Product DBS folders and README now exist. |
+| `ssffmvp\Omen` | Omen | canonical location established | Use as product layer | low | Product DBS folders and README now exist. |
 | `ssffmvp\handoffs` | ssffmvp | keep in place | Keep as canonical engineering handoffs | medium | Active Claude/Codex coordination files. |
 | `ssffmvp\skills` | ssffmvp | keep in place | Keep where tools expect; index later if needed | medium | App-local skills and screenshots are active workflow material. |
-| `ssffmvp\specs` | ssffmvp / Corvus | keep in place | Keep app specs; Corvus copies can live in `Corvus\Blueprints\specs` | medium | Do not move active spec-kit structure yet. |
+| `ssffmvp\specs` | ssffmvp / Omen | keep in place | Keep app specs; Omen copies can live in `Omen\Blueprints\specs` | medium | Do not move active spec-kit structure yet. |
 | `ssffmvp\docs` | ssffmvp | keep in place | Keep app docs and ADRs | medium | App documentation may be referenced by repo workflows. |
 | `ssffmvp\frontend`, `ssffmvp\client`, `ssffmvp\src` | ssffmvp | do not touch | No DBS cleanup moves | high | Active app source/implementation areas. |
 | `ssffmvp\.env*`, key-like files, `.git`, `node_modules` | ssffmvp | do not touch | Do not inspect, move, or commit | high | Active secrets/tooling/runtime boundaries. |

@@ -106,9 +106,9 @@ Output:
  M Blueprints/handoffs/backend-to-frontend.md
  M Blueprints/handoffs/decisions.md
  M Blueprints/prompts/PROMPTS_CHANGELOG.md
- M Corvus/Blueprints/specs/omen-mvp-move.md
- M Corvus/Direction/current_sprint.md
- M Corvus/Direction/decision_log.md
+ M Omen/Blueprints/specs/omen-mvp-move.md
+ M Omen/Direction/current_sprint.md
+ M Omen/Direction/decision_log.md
  M Direction/current_sprint.md
  M Direction/decision_log.md
  M frontend/src/pages/Football.jsx
@@ -119,7 +119,7 @@ Output:
 ?? Blueprints/prompts/omen-mvp-move-development.md
 ?? Blueprints/prompts/omen-mvp-move-frontend.md
 ?? Blueprints/security-privacy.md
-?? Corvus/Blueprints/playbooks/
+?? Omen/Blueprints/playbooks/
 ?? DBS_INDEX.md
 ?? frontend/src/pages/Omen.jsx
 ?? src/routes/omen.js

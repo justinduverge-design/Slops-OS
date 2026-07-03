@@ -37,7 +37,7 @@ The research and critique both support the same practical direction:
 - A lightweight root-level file is enough for MVP projects.
 - Slops OS needs repeatable UI guidance across Claude, Codex, Gemini, and future local models.
 
-This is useful now for Slops OS, Corvus, and future app builds.
+This is useful now for Slops OS, Omen, and future app builds.
 
 ---
 

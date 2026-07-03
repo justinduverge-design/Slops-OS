@@ -1,7 +1,7 @@
 vorp-v2-critic-review  
 # Phase 1 — Immediate Critique  
 ### What Looks Strong  
- * **Value-Based Foundation:** Prioritizing VORP (Value Over Replacement Player) over raw total points is fundamentally correct. It instantly elevates Corvus above low-tier public tools that fall into the "projected points" trap.  
+ * **Value-Based Foundation:** Prioritizing VORP (Value Over Replacement Player) over raw total points is fundamentally correct. It instantly elevates Omen above low-tier public tools that fall into the "projected points" trap.  
  * **Uneven Trade Logic:** Implementing a depth discount (0.5x/0.25x) and an elite scarcity bonus directly addresses the biggest flaw in competitor trade engines (where three bench warmers equal one superstar).  
  * **Clear Architecture Separation:** Moving away from a sales-led strategy to a Product-Led Growth (PLG) model focused on workflow features like a localized Draft Assistant is smart, high-leverage positioning.  
 ### Weak Assumptions  
@@ -31,7 +31,7 @@ vorp-v2-critic-review
 ### Biggest Risk  
  * **Infrastructure Failure and Churn Under Peak Load:** The private VPS running local LLM instances bottlenecks or crashes during high-traffic windows (Draft season or Sunday mornings), leading to immediate user abandonment due to a slow/unresponsive decision layer.  
 ### Missing Decision  
- * **The Core Data Strategy:** A definitive decision on whether Corvus is an *aggregator* of existing projection data or a *creator* of proprietary algorithmic projections.  
+ * **The Core Data Strategy:** A definitive decision on whether Omen is an *aggregator* of existing projection data or a *creator* of proprietary algorithmic projections.  
 ## DBS Routing  
 Recommend path:  
 Direction/Reviews/vorp-v2-critic-review.md  

@@ -70,12 +70,12 @@ Rename:
 ## Do Not Touch — Absolute
 
 ```
-slops-saloon\corvus\src\
-slops-saloon\corvus\frontend\
-slops-saloon\corvus\client\
-slops-saloon\corvus\scripts\
-slops-saloon\corvus\sql\
-slops-saloon\corvus\test\
+slops-saloon\omen\src\
+slops-saloon\omen\frontend\
+slops-saloon\omen\client\
+slops-saloon\omen\scripts\
+slops-saloon\omen\sql\
+slops-saloon\omen\test\
 slops-saloon\evals\
 slops-saloon\.env
 slops-saloon\.env.cloud

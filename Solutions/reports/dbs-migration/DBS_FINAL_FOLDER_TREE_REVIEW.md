@@ -1,7 +1,7 @@
 # DBS Final Folder Tree Review
 **Generated:** 2026-05-22  
 **Inspector:** Claude Cowork (read-only — no files were changed)  
-**Scope:** SLOPS root · ssffmvp · Corvus
+**Scope:** SLOPS root · ssffmvp · Omen
 
 ---
 
@@ -123,7 +123,7 @@ ssffmvp/
 ├── .gitignore                        [active app — do not move]
 ├── Archive/                          (empty)
 ├── Blueprints/                       ⚠️ EMPTY — no content
-├── Corvus/                           → see Layer 3 tree
+├── Omen/                           → see Layer 3 tree
 ├── Direction/
 │   ├── context.md
 │   ├── current_sprint.md
@@ -136,10 +136,10 @@ ssffmvp/
 ├── agent_handoff.md                  ⚠️ loose — DBS candidate (Direction or Blueprints)
 ├── agent_inbox.md                    ⚠️ loose — DBS candidate (Direction)
 ├── audit_report.json                 ⚠️ loose — Solutions candidate
-├── BRAND_STRATEGY.md                 ⚠️ loose — belongs in Corvus/Brand or Corvus/Blueprints
+├── BRAND_STRATEGY.md                 ⚠️ loose — belongs in Omen/Brand or Omen/Blueprints
 ├── client/                           [active app — do not move]
 │   └── (React app — App.jsx, AuthApp.jsx, vite.config.js, dist/, etc.)
-├── design.md                         ⚠️ loose — DBS candidate (Corvus/Blueprints or Blueprints)
+├── design.md                         ⚠️ loose — DBS candidate (Omen/Blueprints or Blueprints)
 ├── docker-compose.yml                [active app — do not move]
 ├── docs/
 │   ├── ADR-004-yahoo-oauth-replacement.md   ⚠️ loose — Blueprints/specs candidate
@@ -172,10 +172,10 @@ ssffmvp/
 
 ---
 
-### 1C — Corvus
+### 1C — Omen
 
 ```
-Corvus/
+Omen/
 ├── Archive/                          (empty)
 ├── Assets/                           ⚠️ EMPTY — non-standard DBS folder
 ├── Blueprints/
@@ -252,7 +252,7 @@ ssffmvp/
 ├── Solutions/        audit reports, completed deliverables, baselines
 ├── References/       research notes, source material
 ├── Archive/          retired dept material
-├── Corvus/           product layer (DBS sub-tree)
+├── Omen/           product layer (DBS sub-tree)
 │
 │   [active app repo — do not move]
 ├── src/              backend source
@@ -288,11 +288,11 @@ Active app folders (src/, frontend/, client/, scripts/, sql/, test/, evals/) are
 
 | Item | Current Location | Recommended DBS Home |
 |---|---|---|
-| `BRAND_STRATEGY.md` | ssffmvp root | `Corvus/Brand/` or `Corvus/Blueprints/` |
+| `BRAND_STRATEGY.md` | ssffmvp root | `Omen/Brand/` or `Omen/Blueprints/` |
 | `agent_handoff.md` | ssffmvp root | `ssffmvp/Blueprints/` or `ssffmvp/Direction/` |
 | `agent_inbox.md` | ssffmvp root | `ssffmvp/Direction/` |
 | `audit_report.json` | ssffmvp root | `ssffmvp/Solutions/` |
-| `design.md` | ssffmvp root | `Corvus/Blueprints/` |
+| `design.md` | ssffmvp root | `Omen/Blueprints/` |
 | `impeccable_baseline.json` | ssffmvp root | `ssffmvp/Solutions/` or `ssffmvp/References/` |
 | `handoffs/` (folder) | ssffmvp root | `ssffmvp/Blueprints/handoffs/` |
 | `prompts/` (folder) | ssffmvp root | `ssffmvp/Blueprints/prompts/` |
@@ -324,7 +324,7 @@ README.md
 ### Git Status Note
 
 These ssffmvp files are **untracked** in Git (shown as `??`):
-`.claude/`, `Corvus/`, `Direction/`, `agent_handoff.md`, `agent_inbox.md`, `design.md`, `handoffs/`
+`.claude/`, `Omen/`, `Direction/`, `agent_handoff.md`, `agent_inbox.md`, `design.md`, `handoffs/`
 
 `README.md` shows as modified (`M`). The DBS folders and loose docs are not committed — this is expected if they are intentionally gitignored or not yet staged.
 
@@ -334,12 +334,12 @@ These ssffmvp files are **untracked** in Git (shown as `??`):
 
 ---
 
-## Layer 3 — Corvus
+## Layer 3 — Omen
 
 ### Intended
 
 ```
-Corvus/
+Omen/
 ├── Direction/        product context, sprint, decisions, roadmap
 ├── Blueprints/       specs, prompts, templates, playbooks, feature designs
 ├── Solutions/        completed product deliverables, shipped feature reports
@@ -369,12 +369,12 @@ Two non-standard folders exist: `Brand/` (has brand.md, positioning.md) and `Ass
 |---|---|
 | `Brand/` folder | Non-standard DBS folder — could be folded into `Blueprints/brand/` or kept as named sub-folder in Blueprints |
 | `Assets/` folder | Non-standard, empty — Justin's decision: keep for future assets or remove |
-| `BRAND_STRATEGY.md` (at ssffmvp root) | Belongs in Corvus — probably in `Brand/` or `Blueprints/` |
-| `design.md` (at ssffmvp root) | Likely a Corvus/Blueprints doc |
+| `BRAND_STRATEGY.md` (at ssffmvp root) | Belongs in Omen — probably in `Brand/` or `Blueprints/` |
+| `design.md` (at ssffmvp root) | Likely a Omen/Blueprints doc |
 
 ### Recommendation
 
-**Needs light cleanup.** Direction is clean. The `Brand/` folder is a useful named extension of Blueprints — consider formalizing it as `Blueprints/brand/` or keeping `Brand/` with a note in README. `Assets/` is empty and can be removed or kept as a placeholder. Main action: migrate the loose Corvus-related docs from ssffmvp root.
+**Needs light cleanup.** Direction is clean. The `Brand/` folder is a useful named extension of Blueprints — consider formalizing it as `Blueprints/brand/` or keeping `Brand/` with a note in README. `Assets/` is empty and can be removed or kept as a placeholder. Main action: migrate the loose Omen-related docs from ssffmvp root.
 
 ---
 
@@ -387,10 +387,10 @@ Two non-standard folders exist: `Brand/` (has brand.md, positioning.md) and `Ass
 | `SLOPS/_archive/` | SLOPS | Empty lowercase duplicate folder | Delete | low | Already empty |
 | `SLOPS/Blueprints/handoffs/` | SLOPS | Appears to duplicate agents/handoffs/ | Needs user review — consolidate or clarify purpose | low | Check if content differs from agents/handoffs/ |
 | `SLOPS/References/` | SLOPS | Empty (README only) | Keep — populate over time | low | Placeholder is fine |
-| `ssffmvp/BRAND_STRATEGY.md` | ssffmvp | Loose brand doc at repo root | Move to Corvus/Brand/ | low | Pure doc — safe to move |
+| `ssffmvp/BRAND_STRATEGY.md` | ssffmvp | Loose brand doc at repo root | Move to Omen/Brand/ | low | Pure doc — safe to move |
 | `ssffmvp/agent_handoff.md` | ssffmvp | Loose agent doc at repo root | Move to ssffmvp/Blueprints/ | low | Untracked in git |
 | `ssffmvp/agent_inbox.md` | ssffmvp | Loose inbox doc at repo root | Move to ssffmvp/Direction/ | low | Untracked in git |
-| `ssffmvp/design.md` | ssffmvp | Loose design doc at repo root | Move to Corvus/Blueprints/ | low | Untracked in git |
+| `ssffmvp/design.md` | ssffmvp | Loose design doc at repo root | Move to Omen/Blueprints/ | low | Untracked in git |
 | `ssffmvp/audit_report.json` | ssffmvp | Loose report at repo root | Move to ssffmvp/Solutions/ | low | Pure output artifact |
 | `ssffmvp/impeccable_baseline.json` | ssffmvp | Loose baseline at repo root | Move to ssffmvp/Solutions/ or References/ | low | Needs user review on classification |
 | `ssffmvp/handoffs/` | ssffmvp | Loose folder at repo root | Move to ssffmvp/Blueprints/handoffs/ | low | Untracked in git — 3 .md files |
@@ -402,10 +402,10 @@ Two non-standard folders exist: `Brand/` (has brand.md, positioning.md) and `Ass
 | `ssffmvp/Blueprints/` | ssffmvp | Empty DBS bucket | Keep — populate after moving handoffs/, prompts/, docs/ | low | Will be filled by moves above |
 | `ssffmvp/Solutions/` | ssffmvp | Empty DBS bucket | Keep — populate after moving audit_report.json | low | — |
 | `ssffmvp/References/` | ssffmvp | Empty DBS bucket | Keep — populate over time | low | — |
-| `Corvus/Brand/` | Corvus | Non-standard folder (not in DBS model) | Needs user review — fold into Blueprints/brand/ or keep named | low | brand.md + positioning.md are well-placed here |
-| `Corvus/Assets/` | Corvus | Non-standard, empty folder | Needs user review — keep as placeholder or remove | low | Empty |
-| `Corvus/Solutions/` | Corvus | Empty DBS bucket | Keep — populate over time | low | — |
-| `Corvus/References/` | Corvus | Empty DBS bucket | Keep — populate over time | low | — |
+| `Omen/Brand/` | Omen | Non-standard folder (not in DBS model) | Needs user review — fold into Blueprints/brand/ or keep named | low | brand.md + positioning.md are well-placed here |
+| `Omen/Assets/` | Omen | Non-standard, empty folder | Needs user review — keep as placeholder or remove | low | Empty |
+| `Omen/Solutions/` | Omen | Empty DBS bucket | Keep — populate over time | low | — |
+| `Omen/References/` | Omen | Empty DBS bucket | Keep — populate over time | low | — |
 | `SLOPS/Solutions/.codex-artifacts/` | SLOPS | Auto-generated backups | Do not touch | low | Codex-managed — leave in place |
 | `ssffmvp/src/` | ssffmvp | Active app backend | Do not touch | high | Core app source |
 | `ssffmvp/frontend/` | ssffmvp | Active app frontend | Do not touch | high | Core app source |
@@ -445,7 +445,7 @@ Two non-standard folders exist: `Brand/` (has brand.md, positioning.md) and `Ass
 ```
  M README.md
 ?? .claude/
-?? Corvus/
+?? Omen/
 ?? Direction/
 ?? agent_handoff.md
 ?? agent_inbox.md
@@ -455,7 +455,7 @@ Two non-standard folders exist: `Brand/` (has brand.md, positioning.md) and `Ass
 
 **Notes:**
 - `README.md` has unstaged modifications — review before committing
-- All DBS folders/files (`Corvus/`, `Direction/`, loose docs, `handoffs/`) are untracked
+- All DBS folders/files (`Omen/`, `Direction/`, loose docs, `handoffs/`) are untracked
 - If these DBS folders are intentionally excluded from the app repo, they should be added to `.gitignore`
 - If they should be committed, they need to be staged
 
@@ -470,8 +470,8 @@ These are ordered from safest to most considered:
 1. **Delete `SLOPS/_archive/`** — it is empty and a duplicate of `Archive/`
 2. **Move `SLOPS/roadmap.md`** → confirm `Direction/roadmap.md` is current, then archive or delete root copy
 3. **Move `SLOPS/"Slops OS Global Context.md"`** → `SLOPS/Direction/global-context.md` or `context.md`
-4. **Move `ssffmvp/BRAND_STRATEGY.md`** → `ssffmvp/Corvus/Brand/BRAND_STRATEGY.md`
-5. **Move `ssffmvp/design.md`** → `ssffmvp/Corvus/Blueprints/design.md`
+4. **Move `ssffmvp/BRAND_STRATEGY.md`** → `ssffmvp/Omen/Brand/BRAND_STRATEGY.md`
+5. **Move `ssffmvp/design.md`** → `ssffmvp/Omen/Blueprints/design.md`
 6. **Move `ssffmvp/agent_handoff.md`** → `ssffmvp/Blueprints/agent_handoff.md`
 7. **Move `ssffmvp/agent_inbox.md`** → `ssffmvp/Direction/agent_inbox.md`
 8. **Move `ssffmvp/audit_report.json`** → `ssffmvp/Solutions/audit_report.json`
@@ -484,10 +484,10 @@ These are ordered from safest to most considered:
 12. **`ssffmvp/impeccable_baseline.json`** — classify as Solutions or References, then move
 13. **`ssffmvp/.env.local-backup-20260502`** — is this still needed? If not, delete. If yes, confirm it is gitignored and not committed
 14. **`ssffmvp/oraclepu.key`** — ⚠️ Security: verify this is in `.gitignore`, never committed, and consider moving out of the repo entirely
-15. **`Corvus/Brand/`** — decide: keep as named extension of Blueprints (fine as-is) or fold into `Blueprints/brand/`
-16. **`Corvus/Assets/`** — keep empty as placeholder or remove
+15. **`Omen/Brand/`** — decide: keep as named extension of Blueprints (fine as-is) or fold into `Blueprints/brand/`
+16. **`Omen/Assets/`** — keep empty as placeholder or remove
 17. **`SLOPS/Blueprints/handoffs/` vs `agents/handoffs/`** — are these the same content? Consolidate if so
-18. **ssffmvp git decision** — should DBS folders (`Direction/`, `Corvus/`, etc.) be committed to the app repo or added to `.gitignore`?
+18. **ssffmvp git decision** — should DBS folders (`Direction/`, `Omen/`, etc.) be committed to the app repo or added to `.gitignore`?
 
 ---
 
@@ -527,7 +527,7 @@ ssffmvp/Archive/ (contents — not expanded)
 |---|---|---|---|
 | **SLOPS** | 🟡 Needs light cleanup | `roadmap.md` loose at root, `"Slops OS Global Context.md"` not filed, `_archive/` empty duplicate | 3 quick moves/deletes, then clean |
 | **ssffmvp** | 🔴 Needs major cleanup | Blueprints/Solutions/References all empty; ~10 items loose at root; `oraclepu.key` security concern | File loose docs into DBS buckets; security review for key |
-| **Corvus** | 🟡 Needs light cleanup | Brand/ and Assets/ are non-standard; Solutions/References empty | Clarify Brand/ convention, migrate loose Corvus docs from ssffmvp root |
+| **Omen** | 🟡 Needs light cleanup | Brand/ and Assets/ are non-standard; Solutions/References empty | Clarify Brand/ convention, migrate loose Omen docs from ssffmvp root |
 
 **Biggest remaining mess:** ssffmvp root — approximately 10 loose files/folders that belong in DBS buckets, plus a key file that needs a security review.
 

@@ -1,4 +1,4 @@
-# Corvus TODO
+# Omen TODO
 
 This file tracks active work only.
 
@@ -32,7 +32,7 @@ Future projects are intentionally excluded from this list.
 - [ ] Define Draft Assistant user flow.
 - [ ] Define Draft Assistant API contract.
 - [ ] Define Draft Assistant data inputs.
-- [ ] Build Draft Assistant UI using shared Corvus layout.
+- [ ] Build Draft Assistant UI using shared Omen layout.
 - [ ] Build mock backend contract first if live data is not ready.
 - [ ] Add explanation/confidence/risk pattern.
 - [ ] Verify mobile experience.
@@ -49,7 +49,7 @@ Future projects are intentionally excluded from this list.
 
 - [ ] Keep landing page simple.
 - [ ] Explain Slops Saloon as umbrella brand.
-- [ ] Point users to Corvus.
+- [ ] Point users to Omen.
 - [ ] Avoid CMS/blog/podcast/media hub scope.
 
 ---
@@ -68,7 +68,7 @@ Future projects are intentionally excluded from this list.
 
 ## Parked
 
-Do not work on these during active Corvus backbone sessions:
+Do not work on these during active Omen backbone sessions:
 
 - non-football sport products
 - league hosting

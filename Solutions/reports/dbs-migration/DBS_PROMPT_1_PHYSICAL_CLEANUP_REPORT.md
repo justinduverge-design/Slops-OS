@@ -15,8 +15,8 @@ SLOPS root:
 
 ssffmvp:
 
-- `BRAND_STRATEGY.md` -> `Corvus\Brand\BRAND_STRATEGY.md`
-- `design.md` -> `Corvus\Blueprints\design.md`
+- `BRAND_STRATEGY.md` -> `Omen\Brand\BRAND_STRATEGY.md`
+- `design.md` -> `Omen\Blueprints\design.md`
 - `agent_handoff.md` -> `Blueprints\agent_handoff.md`
 - `agent_inbox.md` -> `Direction\agent_inbox.md`
 - `audit_report.json` -> `Solutions\audit_report.json`
@@ -95,7 +95,7 @@ Visible ssffmvp root now contains:
 - `Archive`
 - `Blueprints`
 - `client`
-- `Corvus`
+- `Omen`
 - `Direction`
 - `docker-compose.yml`
 - `Dockerfile`
@@ -127,7 +127,7 @@ Root `SLOPS` status:
 Canonical `ssffmvp` status:
 
 - Shows deleted old root doc/folder paths for moved files/folders.
-- Shows untracked DBS destinations under `Blueprints`, `Corvus`, `Direction`, and `Solutions`.
+- Shows untracked DBS destinations under `Blueprints`, `Omen`, `Direction`, and `Solutions`.
 - This reflects physical file moves, not deletion.
 
 ## Safety Confirmation

@@ -11,7 +11,7 @@
 | `pre-mortem.md` | `product-management:write-spec` | Tigers / Paper Tigers / Elephants risk classification + launch-blocking/fast-follow/track urgency. |
 | `north-star-metric.md` | `product-management:metrics-review` | NSM + 3-5 input metrics; Attention/Transaction/Productivity business-game classification; 7-criteria validation. |
 | `competitive-battlecard.md` | `product-management:competitive-brief` | Sales-ready format with objection handling + "landmines to plant" + win/loss patterns. |
-| `gtm-strategy.md` | Corvus launch comms (Phase 4) | Channel / messaging / metrics / phased-launch matrix. |
+| `gtm-strategy.md` | Omen launch comms (Phase 4) | Channel / messaging / metrics / phased-launch matrix. |
 | `prioritization-and-wwa.md` | `product-management:write-spec`, `planning-pass` | Combined: 9 prioritization frameworks (Opportunity Score / ICE / RICE) + Why-What-Acceptance backlog format. |
 | `strategy-red-team.md` | the relevant planning/review skill | Load-bearing assumptions, steelman/attack, `fails if`, evidence-this-week, kill criteria, and the cheapest disconfirming test. |
 
@@ -21,4 +21,4 @@ The upstream `strategy-red-team` file was present again when checked on 2026-06-
 
 ## Source $ARGUMENTS note
 
-Each file uses `$ARGUMENTS` as the source repo's invocation placeholder. When applying a pattern in SLOPS, substitute the actual product/context (Corvus, Omen, Slops Saloon, etc.).
+Each file uses `$ARGUMENTS` as the source repo's invocation placeholder. When applying a pattern in SLOPS, substitute the actual product/context (Omen, Omen, Slops Saloon, etc.).

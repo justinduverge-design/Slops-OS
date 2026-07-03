@@ -1,14 +1,14 @@
-# Corvus App State — Layer 1 Report
+# Omen App State — Layer 1 Report
 
 **Date:** 2026-05-25
 **Author:** Claude Code / frontend audit pass
-**Layer:** 1 (Slops Saloon division) ← report from Layer 2 (Corvus)
+**Layer:** 1 (Slops Saloon division) ← report from Layer 2 (Omen)
 
 ---
 
 ## What This Is
 
-A full frontend + backend audit of Corvus as of 2026-05-25. Written for the Layer 1 owner (Justin / Slops Saloon) to understand what is done, what is not done, and what needs to happen before confident paid launch.
+A full frontend + backend audit of Omen as of 2026-05-25. Written for the Layer 1 owner (Justin / Slops Saloon) to understand what is done, what is not done, and what needs to happen before confident paid launch.
 
 ---
 

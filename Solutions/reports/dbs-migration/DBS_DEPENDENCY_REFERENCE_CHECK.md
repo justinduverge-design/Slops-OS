@@ -5,7 +5,7 @@ Date: 2026-05-22
 Scope:
 - SLOPS root: `C:\Users\JDuve\OneDrive\Desktop\SLOPS`
 - Active app repo: `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp`
-- Corvus product layer: `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Corvus`
+- Omen product layer: `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen`
 
 This was a reference and documentation cleanup pass only. No app development, deployment, commit, push, secret inspection, or source behavior change was performed.
 
@@ -13,8 +13,8 @@ This was a reference and documentation cleanup pass only. No app development, de
 
 | Old Reference | New Correct Path | Notes |
 | --- | --- | --- |
-| `BRAND_STRATEGY.md` | `ssffmvp\Corvus\Brand\BRAND_STRATEGY.md` | Corvus brand material. `Corvus\Brand\positioning.md` also contains promoted brand positioning material. |
-| `design.md` | `ssffmvp\Corvus\Blueprints\design.md` | Corvus design blueprint. Earlier DBS copies may exist under `Corvus\Blueprints\specs\design.md` and should be reviewed before consolidation. |
+| `BRAND_STRATEGY.md` | `ssffmvp\Omen\Brand\BRAND_STRATEGY.md` | Omen brand material. `Omen\Brand\positioning.md` also contains promoted brand positioning material. |
+| `design.md` | `ssffmvp\Omen\Blueprints\design.md` | Omen design blueprint. Earlier DBS copies may exist under `Omen\Blueprints\specs\design.md` and should be reviewed before consolidation. |
 | `agent_handoff.md` | `ssffmvp\Blueprints\agent_handoff.md` | Active app coordination note. |
 | `agent_inbox.md` | `ssffmvp\Direction\agent_inbox.md` | Current app work inbox. |
 | `handoffs\` | `ssffmvp\Blueprints\handoffs\` | Active app engineering handoffs. Root OS handoffs live under `SLOPS\Blueprints\handoffs\`. |
@@ -43,7 +43,7 @@ Safe documentation-only references were updated in:
 | `ssffmvp\Blueprints\prompts\manager_agent.md` | Updated file path header to DBS location. |
 | `ssffmvp\Blueprints\prompts\sub_agents.md` | Updated file path header to DBS location. |
 | `ssffmvp\Blueprints\prompts\PROMPTS_CHANGELOG.md` | Updated prompt changelog path references. |
-| `ssffmvp\Corvus\Blueprints\design.md` | Updated canonical design path note. |
+| `ssffmvp\Omen\Blueprints\design.md` | Updated canonical design path note. |
 | `SLOPS\Blueprints\README.md` | Clarified root and app DBS prompt/handoff locations. |
 | `SLOPS\References\README.md` | Clarified active app docs now live under `ssffmvp\Blueprints\specs\docs\`. |
 | `SLOPS\Blueprints\handoffs\README.md` | Updated app handoff location. |
@@ -122,7 +122,7 @@ Recommended next technical decision:
  D prompts/manager_agent.md
  D prompts/sub_agents.md
 ?? Blueprints/
-?? Corvus/
+?? Omen/
 ?? Direction/
 ?? Solutions/
 ```

@@ -4,7 +4,7 @@ Date: 2026-05-21
 
 ## Scope
 
-Phase 9 physically moved low-risk documentation, reports, operating folders, and loose Corvus material into the DBS folder system.
+Phase 9 physically moved low-risk documentation, reports, operating folders, and loose Omen material into the DBS folder system.
 
 No files were deleted. No app behavior was changed.
 
@@ -68,9 +68,9 @@ ssffmvp docs archived:
 
 - `ssffmvp\BRAND_STRATEGY.md` -> `ssffmvp\Archive\superseded-docs\BRAND_STRATEGY.md`
 
-Corvus loose file archived:
+Omen loose file archived:
 
-- `ssffmvp\Corvus\corvus_brand_product_context.md` -> `ssffmvp\Corvus\Archive\pre-dbs-flat-folder\corvus_brand_product_context.md`
+- `ssffmvp\Omen\corvus_brand_product_context.md` -> `ssffmvp\Omen\Archive\pre-dbs-flat-folder\corvus_brand_product_context.md`
 
 ## Files Replaced By Redirect Notes
 
@@ -79,7 +79,7 @@ Root redirect notes:
 - `context.md` -> `Direction\context.md`
 - `roadmap.md` -> `Direction\roadmap.md`
 - `manifesto.md` -> `Direction\manifesto.md`
-- `design.md` -> `ssffmvp\Corvus\Blueprints\specs\design.md`
+- `design.md` -> `ssffmvp\Omen\Blueprints\specs\design.md`
 
 Root folder redirect notes:
 
@@ -95,7 +95,7 @@ ssffmvp redirect notes:
 - `ssffmvp\roadmap.md` -> `Direction\roadmap.md`
 - `ssffmvp\current_sprint.md` -> `Direction\current_sprint.md`
 - `ssffmvp\decision_log.md` -> `Direction\decision_log.md`
-- `ssffmvp\BRAND_STRATEGY.md` -> `Corvus\Brand\positioning.md`
+- `ssffmvp\BRAND_STRATEGY.md` -> `Omen\Brand\positioning.md`
 - `ssffmvp\prompt_playbook.md` -> `Blueprints\playbooks\prompt_playbook.md`
 
 ## Files Skipped
@@ -157,7 +157,7 @@ Likely safe after Justin review:
 - Root redirect notes and DBS navigation docs
 - Root `Blueprints` folder moves
 - ssffmvp DBS documentation folders and redirect notes
-- Corvus product-layer docs and archived flat product context
+- Omen product-layer docs and archived flat product context
 
 ## Must Not Be Committed
 

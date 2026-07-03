@@ -7,7 +7,7 @@ Scope:
 - Root: `C:\Users\JDuve\OneDrive\Desktop\SLOPS`
 - 0-OS layer: SLOPS operating system
 - 1-slops-saloon layer: Fantasy Sports MVP Builder app/subsidiary
-- 2-Corvus layer: Fantasy Football MVP product/project
+- 2-Omen layer: Fantasy Football MVP product/project
 
 This was an audit and recommendation pass only. No files were moved, renamed, deleted, activated, or rewritten. The only file written was this report. `Direction\Reviews\` was created because the requested report folder did not already exist.
 
@@ -15,7 +15,7 @@ This was an audit and recommendation pass only. No files were moved, renamed, de
 
 The SLOPS skills layer is mostly coherent. `Blueprints\skills` is already the right 0-OS home for reusable SLOPS-authored workflows, and the active skill files mostly follow a useful frontmatter, purpose, workflow, output, and safety pattern.
 
-The agents layer is not yet deterministic. `Blueprints\agents\agents.md` is a useful global agent manifesto, but there is no `AGENT_INDEX.md`, the `README.md` is only a redirect, and `manager_agent.md` plus `sub_agents.md` are not global agent role files. They are Corvus/slops-saloon runtime prompt artifacts and should stay project-specific unless Justin explicitly promotes a generalized version.
+The agents layer is not yet deterministic. `Blueprints\agents\agents.md` is a useful global agent manifesto, but there is no `AGENT_INDEX.md`, the `README.md` is only a redirect, and `manager_agent.md` plus `sub_agents.md` are not global agent role files. They are Omen/slops-saloon runtime prompt artifacts and should stay project-specific unless Justin explicitly promotes a generalized version.
 
 The imported agent library under `Blueprints\agents\_imported` should remain candidate/reference-only. It contains many useful role examples, but several imported files include broad `Write`, `Edit`, `Bash`, deployment, database, credential, paid-media, and infrastructure instructions that do not fit SLOPS least-privilege rules without review and wrapping.
 
@@ -31,7 +31,7 @@ Primary folders inspected:
 - `C:\Users\JDuve\OneDrive\Desktop\SLOPS\Blueprints\agents`
 - `C:\Users\JDuve\OneDrive\Desktop\SLOPS\Blueprints\agents\_imported`
 - `C:\Users\JDuve\OneDrive\Desktop\SLOPS\slops-saloon`
-- `C:\Users\JDuve\OneDrive\Desktop\SLOPS\slops-saloon\corvus`
+- `C:\Users\JDuve\OneDrive\Desktop\SLOPS\slops-saloon\omen`
 
 Read-first files inspected:
 
@@ -53,7 +53,7 @@ Read-first files inspected:
 
 Additional inspection:
 
-- Folder trees for `Blueprints\skills`, `Blueprints\agents`, `slops-saloon\Blueprints`, and `slops-saloon\corvus`
+- Folder trees for `Blueprints\skills`, `Blueprints\agents`, `slops-saloon\Blueprints`, and `slops-saloon\omen`
 - Markdown references to `SKILL_INDEX`, `AGENT_INDEX`, `tools.md`, `skills.md`, `manager_agent.md`, `sub_agents.md`, `_imported`, and current prompt/agent paths
 - Imported-agent risk terms including tools, write, delete, deploy, production, secret, credential, database, migration, git, Docker, VPS, API key, and env
 - Git status at root and inside `slops-saloon`
@@ -79,15 +79,15 @@ Additional inspection:
 | `Blueprints\agents\README.md` | Readme/redirect | Says canonical agents live at `Blueprints\agents` | Medium | Too thin and self-referential. Needs real agent lookup, status, and imported-agent warnings. |
 | `Blueprints\agents\AGENT_INDEX.md` | Missing index | Deterministic agent authority map | High | Not present. Without it, imported agents and active roles are ambiguous. |
 | `Blueprints\agents\agents.md` | Global agent manifesto | Defines Justin, Claude, Codex roles and authority | Low/medium | Useful 0-OS doctrine, but not a deterministic index. Consider `AGENT_MANIFEST.md` or keep with clear README. |
-| `Blueprints\agents\manager_agent.md` | Prompt artifact, not global agent role | Corvus/slops-saloon Manager Agent system prompt copy | High if treated as global agent | Header says file belongs to `slops-saloon/Blueprints/prompts/manager_agent.md`. This is Corvus runtime prompt material, not a reusable SLOPS agent role. |
-| `Blueprints\agents\sub_agents.md` | Prompt artifact, not global agent role | Corvus/slops-saloon sub-agent prompt copy | High if treated as global agent | Header says file belongs to `slops-saloon/Blueprints/prompts/sub_agents.md`. Corvus-specific. |
+| `Blueprints\agents\manager_agent.md` | Prompt artifact, not global agent role | Omen/slops-saloon Manager Agent system prompt copy | High if treated as global agent | Header says file belongs to `slops-saloon/Blueprints/prompts/manager_agent.md`. This is Omen runtime prompt material, not a reusable SLOPS agent role. |
+| `Blueprints\agents\sub_agents.md` | Prompt artifact, not global agent role | Omen/slops-saloon sub-agent prompt copy | High if treated as global agent | Header says file belongs to `slops-saloon/Blueprints/prompts/sub_agents.md`. Omen-specific. |
 | `Blueprints\agents\_imported\*` | Imported agent examples | External candidate/reference agent library | High if activated | Many files include broad tool or execution language. Keep candidate/reference-only until reviewed. |
 | `Blueprints\agents\_imported\handoffs\*` | Imported/legacy handoff docs | Reference-only handoff notes | Medium | Could confuse with active handoffs. Keep non-authoritative. |
-| `slops-saloon\Blueprints\prompts\manager_agent.md` | Runtime prompt artifact | Current app prompt loaded by source | Medium | App runtime now reads from this path. Treat as 1-slops-saloon canonical until a Corvus-specific runtime path is approved. |
-| `slops-saloon\Blueprints\prompts\sub_agents.md` | Runtime prompt artifact | Current app sub-agent prompt source | Medium | Same as above. Corvus-specific in content, but app-runtime canonical today. |
+| `slops-saloon\Blueprints\prompts\manager_agent.md` | Runtime prompt artifact | Current app prompt loaded by source | Medium | App runtime now reads from this path. Treat as 1-slops-saloon canonical until a Omen-specific runtime path is approved. |
+| `slops-saloon\Blueprints\prompts\sub_agents.md` | Runtime prompt artifact | Current app sub-agent prompt source | Medium | Same as above. Omen-specific in content, but app-runtime canonical today. |
 | `slops-saloon\Blueprints\skills` | Empty folder | Potential app-specific skill folder | Low | Keep empty unless app-specific skills are needed. Do not duplicate global skills. |
-| `slops-saloon\corvus\Blueprints\playbooks\espn-recovery.md` | Corvus playbook | Product-specific recovery playbook | Low/medium | Correct 2-Corvus placement. |
-| `slops-saloon\corvus\Blueprints\specs\omen-mvp-move.md` | Corvus spec | Product-specific spec | Low | Correct 2-Corvus placement. |
+| `slops-saloon\omen\Blueprints\playbooks\espn-recovery.md` | Omen playbook | Product-specific recovery playbook | Low/medium | Correct 2-Omen placement. |
+| `slops-saloon\omen\Blueprints\specs\omen-mvp-move.md` | Omen spec | Product-specific spec | Low | Correct 2-Omen placement. |
 
 Imported agent library map:
 
@@ -127,26 +127,26 @@ Imported agent library map:
 | `Blueprints\agents\README.md` | 0-OS | `Blueprints\agents\README.md` | index | Replace redirect with real lookup rules, status model, and import warnings. |
 | `Blueprints\agents\AGENT_INDEX.md` | 0-OS | `Blueprints\agents\AGENT_INDEX.md` | index | Create later. This is the missing authority map. |
 | `Blueprints\agents\agents.md` | 0-OS | `Blueprints\agents\AGENT_MANIFEST.md` or keep `agents.md` with index links | rename | It is a global manifesto, not a folder index. |
-| `Blueprints\agents\manager_agent.md` | 2-Corvus | `slops-saloon\Blueprints\prompts\manager_agent.md` now; later consider `slops-saloon\corvus\Blueprints\prompts\manager_agent.md` | review only | It is Corvus runtime prompt material. Do not keep as global agent authority. Moving later requires source path review. |
-| `Blueprints\agents\sub_agents.md` | 2-Corvus | `slops-saloon\Blueprints\prompts\sub_agents.md` now; later consider `slops-saloon\corvus\Blueprints\prompts\sub_agents.md` | review only | Same as manager prompt. |
+| `Blueprints\agents\manager_agent.md` | 2-Omen | `slops-saloon\Blueprints\prompts\manager_agent.md` now; later consider `slops-saloon\omen\Blueprints\prompts\manager_agent.md` | review only | It is Omen runtime prompt material. Do not keep as global agent authority. Moving later requires source path review. |
+| `Blueprints\agents\sub_agents.md` | 2-Omen | `slops-saloon\Blueprints\prompts\sub_agents.md` now; later consider `slops-saloon\omen\Blueprints\prompts\sub_agents.md` | review only | Same as manager prompt. |
 | `Blueprints\agents\_imported\**\*.md` | 0-OS Reference | `Blueprints\agents\_imported\<Division>\<file>.md` | keep | Keep candidate/reference-only until reviewed. |
 | `Blueprints\agents\_imported\handoffs\*` | 0-OS Reference | `Blueprints\agents\_imported\handoffs\*` or `Archive\imports\agents-handoffs\*` | review only | Non-authoritative; do not mix with active handoffs. |
-| `slops-saloon\Blueprints\prompts\manager_agent.md` | 1-slops-saloon now, 2-Corvus long-term | Keep current path until runtime path strategy is decided | keep | Current runtime source reads here after dependency repair. |
-| `slops-saloon\Blueprints\prompts\sub_agents.md` | 1-slops-saloon now, 2-Corvus long-term | Keep current path until runtime path strategy is decided | keep | Current runtime source reads here after dependency repair. |
+| `slops-saloon\Blueprints\prompts\manager_agent.md` | 1-slops-saloon now, 2-Omen long-term | Keep current path until runtime path strategy is decided | keep | Current runtime source reads here after dependency repair. |
+| `slops-saloon\Blueprints\prompts\sub_agents.md` | 1-slops-saloon now, 2-Omen long-term | Keep current path until runtime path strategy is decided | keep | Current runtime source reads here after dependency repair. |
 | `slops-saloon\Blueprints\skills` | 1-slops-saloon | `slops-saloon\Blueprints\skills` | no action | Empty app-specific skill bucket. Use only if a skill is not reusable at 0-OS. |
-| `slops-saloon\corvus\Blueprints\playbooks\espn-recovery.md` | 2-Corvus | `slops-saloon\corvus\Blueprints\playbooks\espn-recovery.md` | keep | Product-specific playbook. |
-| `slops-saloon\corvus\Blueprints\specs\omen-mvp-move.md` | 2-Corvus | `slops-saloon\corvus\Blueprints\specs\omen-mvp-move.md` | keep | Product-specific spec. |
+| `slops-saloon\omen\Blueprints\playbooks\espn-recovery.md` | 2-Omen | `slops-saloon\omen\Blueprints\playbooks\espn-recovery.md` | keep | Product-specific playbook. |
+| `slops-saloon\omen\Blueprints\specs\omen-mvp-move.md` | 2-Omen | `slops-saloon\omen\Blueprints\specs\omen-mvp-move.md` | keep | Product-specific spec. |
 
 ## Skills Recommendations
 
 | Skill Name | Recommended Path | Status | Edits Needed | Index Update Needed |
 |---|---|---|---|---|
 | `slops-context-markdown` | `Blueprints\skills\slops-context-markdown\SKILL.md` | active | Optional: rename support folder `agents` to `interface`. | Yes, only if support folder is renamed. |
-| `slops-prompt-generator` | `Blueprints\skills\slops-prompt-generator\SKILL.md` | active | Optional: rename support folder `agents` to `interface`; clarify output paths for 2-Corvus prompts. | Yes, only if support folder is renamed or Corvus prompt routing is added. |
+| `slops-prompt-generator` | `Blueprints\skills\slops-prompt-generator\SKILL.md` | active | Optional: rename support folder `agents` to `interface`; clarify output paths for 2-Omen prompts. | Yes, only if support folder is renamed or Omen prompt routing is added. |
 | `clean-up-checkpoint` | `Blueprints\skills\clean-up-checkpoint\SKILL.md` | active | Add note that app-specific defaults are examples, not hardcoded global authority. | No immediate index change unless description changes. |
 | `pre-build-research` | `Blueprints\skills\pre-build-research\SKILL.md` | active | No urgent edits. Strong ToS/pricing/rate-limit structure. | Normalize path casing in `SKILL_INDEX.md`. |
 | `slops-skill-author` | `Blueprints\skills\slops-skill-author\SKILL.md` | active | No urgent edits. | Normalize path casing in `SKILL_INDEX.md`. |
-| `slops-agent-author` | `Blueprints\skills\slops-agent-author\SKILL.md` | active | No urgent edits. Already flags manager/sub as project-specific if Corvus runtime. | Normalize path casing in `SKILL_INDEX.md`. |
+| `slops-agent-author` | `Blueprints\skills\slops-agent-author\SKILL.md` | active | No urgent edits. Already flags manager/sub as project-specific if Omen runtime. | Normalize path casing in `SKILL_INDEX.md`. |
 | `_template` | `Blueprints\skills\_template\SKILL.md` | reference-only | Keep as template. Do not list as callable active skill unless clearly marked template. | Optional: add template row under a separate "Reference Templates" section. |
 | `skills.md` matrix | `Blueprints\skills\SKILL_ROUTING.md` | reference/routing doc | Rename or keep with clearer name. | Update links after approval. |
 | `tools.md` | `Blueprints\tools\tool-permissions.md` | policy/RBAC doc | Move later; split by tool risk and agent role. | Update links from skills and agents docs after approval. |
@@ -158,13 +158,13 @@ Imported agent library map:
 | Justin / CEO | Founder authority | active | 0-OS | Approved as global authority in `agents.md`. | Global |
 | Claude / Architect | Planning/review | active | 0-OS | Approved as global planning role, subject to current tool permissions. | Global |
 | Codex / Engineer | Execution/verification | active | 0-OS with repo-specific constraints | Approved as global execution role, but repo-specific instructions still control each task. | Global |
-| Manager Agent prompt | Corvus fantasy football runtime | active prompt, not active global agent | 1-slops-saloon now, 2-Corvus long-term | Keep canonical runtime prompt under `slops-saloon\Blueprints\prompts` for now. Do not treat root copy as global agent. | Project-specific |
-| Weather Agent prompt | Corvus sub-agent | active prompt, not active global agent | 1-slops-saloon now, 2-Corvus long-term | Part of `sub_agents.md`; project-specific runtime prompt. | Project-specific |
-| Travel Agent prompt | Corvus sub-agent | active prompt, not active global agent | 1-slops-saloon now, 2-Corvus long-term | Part of `sub_agents.md`; project-specific runtime prompt. | Project-specific |
-| Game Time Agent prompt | Corvus sub-agent | active prompt, not active global agent | 1-slops-saloon now, 2-Corvus long-term | Part of `sub_agents.md`; project-specific runtime prompt. | Project-specific |
-| Roster Agent prompt | Corvus sub-agent | active prompt, not active global agent | 1-slops-saloon now, 2-Corvus long-term | Part of `sub_agents.md`; project-specific runtime prompt. | Project-specific |
-| Performance Agent prompt | Corvus sub-agent | active prompt, not active global agent | 1-slops-saloon now, 2-Corvus long-term | Part of `sub_agents.md`; project-specific runtime prompt. | Project-specific |
-| Matchup Agent prompt | Corvus sub-agent | active prompt, not active global agent | 1-slops-saloon now, 2-Corvus long-term | Part of `sub_agents.md`; project-specific runtime prompt. | Project-specific |
+| Manager Agent prompt | Omen fantasy football runtime | active prompt, not active global agent | 1-slops-saloon now, 2-Omen long-term | Keep canonical runtime prompt under `slops-saloon\Blueprints\prompts` for now. Do not treat root copy as global agent. | Project-specific |
+| Weather Agent prompt | Omen sub-agent | active prompt, not active global agent | 1-slops-saloon now, 2-Omen long-term | Part of `sub_agents.md`; project-specific runtime prompt. | Project-specific |
+| Travel Agent prompt | Omen sub-agent | active prompt, not active global agent | 1-slops-saloon now, 2-Omen long-term | Part of `sub_agents.md`; project-specific runtime prompt. | Project-specific |
+| Game Time Agent prompt | Omen sub-agent | active prompt, not active global agent | 1-slops-saloon now, 2-Omen long-term | Part of `sub_agents.md`; project-specific runtime prompt. | Project-specific |
+| Roster Agent prompt | Omen sub-agent | active prompt, not active global agent | 1-slops-saloon now, 2-Omen long-term | Part of `sub_agents.md`; project-specific runtime prompt. | Project-specific |
+| Performance Agent prompt | Omen sub-agent | active prompt, not active global agent | 1-slops-saloon now, 2-Omen long-term | Part of `sub_agents.md`; project-specific runtime prompt. | Project-specific |
+| Matchup Agent prompt | Omen sub-agent | active prompt, not active global agent | 1-slops-saloon now, 2-Omen long-term | Part of `sub_agents.md`; project-specific runtime prompt. | Project-specific |
 | Academic Division imported agents | Academic Division | reference-only by default | 0-OS Reference | Keep candidate/reference-only. | Global candidates only after review |
 | Design Division imported agents | Design Division | candidate/reference-only | 0-OS Reference | Potential future design/brand reviewers, but no active authority yet. | Global candidates only after review |
 | Engineering Division imported agents | Engineering Division | reference-only until strict RBAC | 0-OS Reference | High-risk because of implementation, security, infrastructure, and deployment language. | Global candidates only after review |
@@ -238,7 +238,7 @@ If the recommendations are approved, these references need updates:
 | `Blueprints\agents\agents.md` | `skills.md` and `tools.md` | Update to `Blueprints\skills\SKILL_ROUTING.md` and `Blueprints\tools\tool-permissions.md` if renamed/moved. |
 | `Blueprints\agents\manager_agent.md` | Header says `slops-saloon/Blueprints/prompts/manager_agent.md` | If keeping root copy, replace with redirect note. If archiving, update indexes to point to `slops-saloon\Blueprints\prompts\manager_agent.md`. |
 | `Blueprints\agents\sub_agents.md` | Header says `slops-saloon/Blueprints/prompts/sub_agents.md` | Same as manager prompt. |
-| `slops-saloon\Blueprints\prompts\PROMPTS_CHANGELOG.md` | `Blueprints/prompts/manager_agent.md`, `Blueprints/prompts/sub_agents.md` | Current relative path is okay inside `slops-saloon`; update only if moving to Corvus. |
+| `slops-saloon\Blueprints\prompts\PROMPTS_CHANGELOG.md` | `Blueprints/prompts/manager_agent.md`, `Blueprints/prompts/sub_agents.md` | Current relative path is okay inside `slops-saloon`; update only if moving to Omen. |
 | `slops-saloon\src\services\agents.js` | Runtime path to `Blueprints\prompts\manager_agent.md` | Do not change unless prompt files move again. |
 | `slops-saloon\src\slops-saloon_prompt_loader.js` | Runtime path to `Blueprints\prompts` | Do not change unless prompt files move again. |
 | `Blueprints\skills\tools.md` | `agents from github` | Replace with current `Blueprints\agents\_imported` wording. |
@@ -332,7 +332,7 @@ Do not execute this plan until Justin approves it.
 2. Should `tools.md` move to a new `Blueprints\tools\tool-permissions.md` folder, or should it stay in `Blueprints\skills` until the agent index exists?
 3. Should `skills.md` be renamed to `SKILL_ROUTING.md`, or do you prefer keeping the simpler current filename?
 4. Should root `Blueprints\agents\manager_agent.md` and `sub_agents.md` become redirect notes, archive copies, or be deleted later after confirmation?
-5. Should Corvus runtime prompts eventually move from `slops-saloon\Blueprints\prompts` to `slops-saloon\corvus\Blueprints\prompts`, knowing that source paths must change too?
+5. Should Omen runtime prompts eventually move from `slops-saloon\Blueprints\prompts` to `slops-saloon\omen\Blueprints\prompts`, knowing that source paths must change too?
 6. Which imported-agent divisions are worth reviewing first: Engineering, Product, Design, Marketing, or Support?
 7. Do you want imported agents to default to `reference-only` or `candidate` in the future `AGENT_INDEX.md`?
 
@@ -347,14 +347,14 @@ Commands run:
 - `dir Blueprints\agents`
 - `dir Blueprints\agents\_imported`
 - `dir slops-saloon`
-- `dir slops-saloon\corvus`
+- `dir slops-saloon\omen`
 - `dir Direction\Reviews`
 - `tree Blueprints\skills /F`
 - `tree Blueprints\agents /F`
 - `tree slops-saloon\Blueprints /F`
-- `tree slops-saloon\corvus /F`
+- `tree slops-saloon\omen /F`
 - `rg --files Blueprints\skills Blueprints\agents`
-- `rg --files slops-saloon\Blueprints slops-saloon\corvus\Blueprints slops-saloon\corvus\Direction slops-saloon\corvus\Brand`
+- `rg --files slops-saloon\Blueprints slops-saloon\omen\Blueprints slops-saloon\omen\Direction slops-saloon\omen\Brand`
 - `rg` searches for path dependencies and imported-agent risk terms
 - `git status --short` at SLOPS root
 - `git status --short` inside `slops-saloon`

@@ -18,7 +18,7 @@ Per CLAUDE.md: "The division layer stays lean." No app implementation work belon
 ## What L1 Inherits (just-in-time, by reference)
 
 ### New playbook
-- `SLOPS/Blueprints/playbooks/proprietary-math-stack-playbook.md` — applies to every Slops Saloon product. **Action at L1:** add a one-line pointer in the division's portfolio doctrine so future products (post-Corvus) inherit the boundary automatically.
+- `SLOPS/Blueprints/playbooks/proprietary-math-stack-playbook.md` — applies to every Slops Saloon product. **Action at L1:** add a one-line pointer in the division's portfolio doctrine so future products (post-Omen) inherit the boundary automatically.
 
 ### New skills (proposals — not yet promoted)
 - Active Week 1: `self-hosted-observability-runbook`, `mobile-first-qa-playbook`, `demo-mode-pre-empty-state`, `compliance-by-template`, `slops-legal-spot-check`.
@@ -34,7 +34,7 @@ Per CLAUDE.md: "The division layer stays lean." No app implementation work belon
 ## What L1 Does NOT Do
 
 - Does not copy skills into a `slops-saloon/Blueprints/skills/` folder. L1 reads from L0.
-- Does not host product implementation. Corvus (L2) does that.
+- Does not host product implementation. Omen (L2) does that.
 - Does not promote proposals — only Justin does, at L0.
 
 ---

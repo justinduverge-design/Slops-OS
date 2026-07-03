@@ -1,6 +1,6 @@
-# Corvus Project Context
+# Omen Project Context
 
-This file is the active source of truth for Corvus.
+This file is the active source of truth for Omen.
 
 All agents must read this file before planning, executing, or reviewing work.
 
@@ -8,17 +8,17 @@ All agents must read this file before planning, executing, or reviewing work.
 
 ## Current Mission
 
-Corvus is the active product and the main build focus.
+Omen is the active product and the main build focus.
 
 The immediate priority is integrating and polishing the app backbone and app UI foundation so the team can build polished fantasy football tools on top of a stable, reusable product experience.
 
-Corvus must keep backbone stability ahead of feature expansion. Draft Assistant is the first-impression tool and will be free this year only, but it must be built on reusable Corvus patterns. MVP Move / Omen of the Week remains the paid centerpiece and should use the same foundation.
+Omen must keep backbone stability ahead of feature expansion. Draft Assistant is the first-impression tool and will be free this year only, but it must be built on reusable Omen patterns. MVP Move / Omen of the Week remains the paid centerpiece and should use the same foundation.
 
 ---
 
 ## Current Build State - 2026-05-18
 
-The Corvus app backbone is implemented locally and is ready for polish/integration work.
+The Omen app backbone is implemented locally and is ready for polish/integration work.
 
 Completed locally:
 
@@ -93,7 +93,7 @@ It is free this year only.
 
 It must be polished, useful, and easy to understand.
 
-It must use reusable Corvus app patterns, not one-off code.
+It must use reusable Omen app patterns, not one-off code.
 
 ### 2. MVP Move / Omen of the Week
 
@@ -117,7 +117,7 @@ Supporting tools include:
 
 Slops Saloon is the umbrella brand.
 
-For now, the landing page should be a simple doorway that points users to Corvus.
+For now, the landing page should be a simple doorway that points users to Omen.
 
 Do not build a full media hub, CMS, blog, art gallery, podcast archive, or unrelated content system during this phase.
 
@@ -127,13 +127,13 @@ Do not build a full media hub, CMS, blog, art gallery, podcast archive, or unrel
 
 Do not build or plan unrelated future products unless Justin explicitly reactivates them.
 
-Do not expand into non-football products during Corvus app-backbone work.
+Do not expand into non-football products during Omen app-backbone work.
 
 Do not introduce league hosting into MVP scope.
 
-Do not build a family or investment assistant into Corvus.
+Do not build a family or investment assistant into Omen.
 
-Do not turn Slops Saloon into a full content platform until Corvus has a stable app experience.
+Do not turn Slops Saloon into a full content platform until Omen has a stable app experience.
 
 ---
 
@@ -141,11 +141,11 @@ Do not turn Slops Saloon into a full content platform until Corvus has a stable 
 
 Slops Saloon is the parent brand, mission site, and long-term product studio.
 
-Corvus is the first flagship product inside the Slops Saloon ecosystem.
+Omen is the first flagship product inside the Slops Saloon ecosystem.
 
-Corvus product line:
+Omen product line:
 
-> Corvus — See the winning move.
+> Omen — See the winning move.
 
 Slops Saloon is not a former name. It remains the umbrella brand and parent domain.
 
@@ -155,28 +155,28 @@ Do not rename repositories, routes, domains, packages, environment variables, da
 
 ## Product Definition
 
-Corvus is a fantasy football decision layer.
+Omen is a fantasy football decision layer.
 
 It helps users make sharper roster and draft decisions across major fantasy football platforms.
 
-Corvus is not a general chatbot.
+Omen is not a general chatbot.
 
-Corvus is not trying to replace major fantasy platforms at launch.
+Omen is not trying to replace major fantasy platforms at launch.
 
-Corvus sits above them as the decision system.
+Omen sits above them as the decision system.
 
 ---
 
 ## App UI Is In Scope
 
-Claude Code and Codex are expected to help build the actual Corvus application. This includes app UI, screen structure, dashboard layout, user flows, API contracts, and backend support.
+Claude Code and Codex are expected to help build the actual Omen application. This includes app UI, screen structure, dashboard layout, user flows, API contracts, and backend support.
 
 The app UI is not a side task. It is part of the backbone.
 
 Required app screens include:
 
 - lightweight Slops Saloon landing page
-- Corvus entry/marketing page
+- Omen entry/marketing page
 - app shell/dashboard
 - Draft Assistant
 - MVP Move / Omen of the Week
@@ -197,9 +197,9 @@ Justin is the product owner and final decision-maker.
 
 Claude Chat is the planner, reviewer, architect, and prompt helper.
 
-Claude Code is the front-end engineer for Corvus.
+Claude Code is the front-end engineer for Omen.
 
-Codex is the back-end engineer for Corvus.
+Codex is the back-end engineer for Omen.
 
 Claude Code and Codex must work through handoff files.
 

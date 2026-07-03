@@ -31,8 +31,8 @@
 
 ### Scaffolds Written (`Blueprints/skills/_proposals/`)
 Week 1 (active proposals):
-- `self-hosted-observability-runbook` — closes Corvus gaps #10 + #14.
-- `mobile-first-qa-playbook` — closes Corvus gap #8 (mobile blocker).
+- `self-hosted-observability-runbook` — closes Omen gaps #10 + #14.
+- `mobile-first-qa-playbook` — closes Omen gap #8 (mobile blocker).
 - `demo-mode-pre-empty-state` — pattern doctrine.
 - `compliance-by-template` — Termly replacement via open-agreements.
 - `slops-legal-spot-check` — converted from `support-legal-compliance-checker`.
@@ -57,8 +57,8 @@ Parked stubs (need raw material from Justin):
 2. **`open-agreements` as Termly replacement** — `compliance-by-template` promoted from parked to onboard-now.
 3. **Proprietary-math doctrine** — nflverse baseline / Slops opinion layer, captured as playbook.
 4. **Manim direction confirmed** for `slops-explainer-cut`.
-5. **Layer discipline confirmed** — none of this touches Corvus source.
-6. **Prepare push to Corvus and Slops Saloon** — see companion handoffs.
+5. **Layer discipline confirmed** — none of this touches Omen source.
+6. **Prepare push to Omen and Slops Saloon** — see companion handoffs.
 
 ## What's Open
 
@@ -87,4 +87,4 @@ Run the retirement diff first. It's the lowest-risk, highest-leverage cleanup �
 ## Companion Handoffs
 
 - `2026-06-11-slops-saloon-inheritance-handoff.md` — Layer 1 pointer.
-- `2026-06-11-corvus-pull-prep-handoff.md` — Layer 2 prep.
+- `2026-06-11-omen-pull-prep-handoff.md` — Layer 2 prep.

@@ -2,7 +2,7 @@
 
 **Layer:** Slops Saloon division reference
 **Applies to:** Any future Slops Saloon product that integrates ESPN Fantasy Football
-**Last updated:** 2026-06-05 (derived from Corvus live QA session)
+**Last updated:** 2026-06-05 (derived from Omen live QA session)
 
 ---
 
@@ -143,7 +143,7 @@ When implementing season-candidate retry logic, these ESPN HTTP responses warran
 
 ESPN credentials expire when the user signs out of ESPN or after extended inactivity. Apps must provide a reconnect path.
 
-The established Corvus pattern (reusable):
+The established Omen pattern (reusable):
 - Store `espn_s2` and `SWID` in Supabase Vault (encrypted at rest) — never in plaintext columns
 - Surface `espn_import_blocked` as the user-facing state when live API access fails
 - Route recovery to the Account page for cookie re-entry

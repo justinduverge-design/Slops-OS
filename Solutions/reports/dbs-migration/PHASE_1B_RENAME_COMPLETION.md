@@ -9,8 +9,8 @@ Operation type: folder renames only.
 | Old Path | New Path |
 |---|---|
 | `Direction\Reviews` | `Direction\reviews` |
-| `ssffmvp\Corvus\Assets` | `ssffmvp\Corvus\assets` |
-| `ssffmvp\Corvus\Brand` | `ssffmvp\Corvus\brand` |
+| `ssffmvp\Omen\Assets` | `ssffmvp\Omen\assets` |
+| `ssffmvp\Omen\Brand` | `ssffmvp\Omen\brand` |
 
 Total folders renamed: 3.
 
@@ -35,10 +35,10 @@ TODO.md
 
 Result: `reviews` is present. `Reviews` is absent.
 
-### Corvus Listing
+### Omen Listing
 
 ```text
-C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Corvus
+C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen
 
 Archive
 assets

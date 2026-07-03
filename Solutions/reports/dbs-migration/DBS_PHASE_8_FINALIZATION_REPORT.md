@@ -9,7 +9,7 @@ Date: 2026-05-21
 - `DBS_GIT_HYGIENE_REPORT.md`
 - `DBS_PHASE_8_FINALIZATION_REPORT.md`
 - `.gitignore`
-- `ssffmvp\Corvus\README.md`
+- `ssffmvp\Omen\README.md`
 
 ## Files Updated
 
@@ -48,7 +48,7 @@ ssffmvp folder groups:
 - `Solutions`
 - `References`
 - `Archive`
-- `Corvus`
+- `Omen`
 - `handoffs`
 - `skills`
 - `specs`
@@ -65,7 +65,7 @@ Done enough means:
 - The three layers are named and documented.
 - Root navigation points to `DBS_INDEX.md`.
 - ssffmvp is clearly marked as the active app repo and Fantasy Sports MVP Builder.
-- Corvus is clearly marked as the Fantasy Football MVP product.
+- Omen is clearly marked as the Fantasy Football MVP product.
 - Agent files tell Claude/Codex where DBS layers live.
 - Quarantine is documented and git-ignored at the root.
 - Remaining folders are mapped instead of moved.
@@ -78,7 +78,7 @@ Done enough means:
 - Compare `_archive`, `_parked`, and `.codex-artifacts` before any consolidation.
 - Decide whether root `design.md` should stay as a convenience doc or become a redirect/reference.
 - Decide what should happen to root `context.md`, `roadmap.md`, and `manifesto.md` after Justin curates the new `Direction` docs.
-- Decide which Corvus logo is canonical.
+- Decide which Omen logo is canonical.
 - Separate DBS documentation commits from app source commits if committing later.
 
 ## What Justin Should Research Next About Context Writing
@@ -88,7 +88,7 @@ Useful next research topic: how to write short, durable context files for multi-
 Focus questions:
 
 - What should be stable doctrine versus current sprint context?
-- What should live in root SLOPS OS context versus ssffmvp context versus Corvus context?
+- What should live in root SLOPS OS context versus ssffmvp context versus Omen context?
 - How much should context files repeat for agent readability?
 - What should be a decision log instead of a context paragraph?
 - What should be removed once agents have enough route signs?

@@ -1,12 +1,12 @@
-# Corvus Manifesto
+# Omen Manifesto
 
 ## Mission
 
-Corvus exists to help fantasy football players make sharper decisions.
+Omen exists to help fantasy football players make sharper decisions.
 
 The product should reduce confusion, surface useful context, and help users act with confidence.
 
-Corvus is not a chatbot. It is a decision layer.
+Omen is not a chatbot. It is a decision layer.
 
 ---
 
@@ -14,9 +14,9 @@ Corvus is not a chatbot. It is a decision layer.
 
 Slops Saloon is the umbrella brand.
 
-Corvus is the active product.
+Omen is the active product.
 
-Slops Saloon can introduce the world. Corvus must deliver the value.
+Slops Saloon can introduce the world. Omen must deliver the value.
 
 ---
 
@@ -68,7 +68,7 @@ The theme should support the product, not overwhelm it.
 
 ---
 
-## Corvus Decision Style
+## Omen Decision Style
 
 Recommendations should be:
 
@@ -79,7 +79,7 @@ Recommendations should be:
 - clear about confidence
 - useful even when data is incomplete
 
-A good Corvus recommendation says:
+A good Omen recommendation says:
 
 ```text
 Here is the move.
@@ -96,7 +96,7 @@ Draft Assistant is the first-impression tool.
 
 It is free this year only.
 
-It must feel polished enough to make users trust Corvus.
+It must feel polished enough to make users trust Omen.
 
 It must not be built as a one-off feature. It should reuse shared layouts, API patterns, and explanation components that can also support MVP Move.
 

@@ -2,9 +2,9 @@
 
 > **Status: superseded.** This 2026-06-11 prompt preserves the earlier acquisition run and its old OneDrive paths. For the current acquisition, two-agent distribution, verification, and usage/gap audit workflow, use `Blueprints/prompts/skills-acquisition-distribution-session.md`.
 
-**Purpose:** Open a separate Claude chat dedicated to finding, evaluating, and onboarding new skills, playbooks, and patterns that make the Slops OS stronger. Run this in parallel with the Corvus Phase 1 build so capability expansion doesn't bottleneck on the build loop.
+**Purpose:** Open a separate Claude chat dedicated to finding, evaluating, and onboarding new skills, playbooks, and patterns that make the Slops OS stronger. Run this in parallel with the Omen Phase 1 build so capability expansion doesn't bottleneck on the build loop.
 
-**How to use:** Open a new Claude Code session in `C:\Users\JDuve\OneDrive\Desktop\SLOPS\`. Paste the block below as the first message. Keep this session running alongside the Corvus build session.
+**How to use:** Open a new Claude Code session in `C:\Users\JDuve\OneDrive\Desktop\SLOPS\`. Paste the block below as the first message. Keep this session running alongside the Omen build session.
 
 ---
 
@@ -12,18 +12,18 @@
 You are Claude, working at the SLOPS OS layer (Layer 0) on capability expansion.
 Your job in this session is to make the Slops OS stronger by finding and
 onboarding new skills, playbooks, and operational patterns — not by touching
-Corvus product code.
+Omen product code.
 
 CONTEXT (read these first, in this order):
 - C:\Users\JDuve\OneDrive\Desktop\SLOPS\AGENTS.md
 - C:\Users\JDuve\OneDrive\Desktop\SLOPS\CLAUDE.md
 - C:\Users\JDuve\OneDrive\Desktop\SLOPS\Blueprints\skills\README.md
 - C:\Users\JDuve\OneDrive\Desktop\SLOPS\Blueprints\skills\SKILL_ROUTING.md
-- C:\Users\JDuve\OneDrive\Desktop\SLOPS\Blueprints\handoffs\2026-06-10-corvus-architecture-pivot.md
-- C:\Users\JDuve\OneDrive\Desktop\SLOPS\slops-saloon\corvus\Blueprints\handoffs\2026-06-10-product-architecture-pivot.md
+- C:\Users\JDuve\OneDrive\Desktop\SLOPS\Blueprints\handoffs\2026-06-10-omen-architecture-pivot.md
+- C:\Users\JDuve\OneDrive\Desktop\SLOPS\slops-saloon\omen\Blueprints\handoffs\2026-06-10-product-architecture-pivot.md
 
 KNOW THE CURRENT GAP:
-Corvus is in a four-phase launch sprint ending August 2026. The build loop is
+Omen is in a four-phase launch sprint ending August 2026. The build loop is
 fully scoped. What's missing is *capability density* — durable OS-layer skills
 and playbooks that turn one-off problems into repeatable operations.
 
@@ -43,13 +43,13 @@ WHAT TO DO IN THIS SESSION:
    Anything scoring 12+ is a candidate to onboard now. Below 10, park for later.
 
    Specific candidate categories to evaluate:
-   - Live data adapter patterns (the Lazy Sync pattern Corvus is building for
+   - Live data adapter patterns (the Lazy Sync pattern Omen is building for
      Sleeper drafts is a candidate to harvest into an OS template).
-   - Demo Mode / pre-empty-state UX patterns (Corvus is building one; could
+   - Demo Mode / pre-empty-state UX patterns (Omen is building one; could
      become a Slops Saloon-wide pattern).
    - Self-hosted observability stack patterns (Umami + Sentry + log shipping
      to KVM1 — is there a reusable runbook?).
-   - LLM cost-cap toggle patterns (the AI_PROVIDER=local|cloud toggle Corvus
+   - LLM cost-cap toggle patterns (the AI_PROVIDER=local|cloud toggle Omen
      is designing is a candidate for a reusable safety pattern).
    - Trade/share hash patterns (cryptographic share links + OG image
      generation — reusable across future products).
@@ -73,7 +73,7 @@ WHAT TO DO IN THIS SESSION:
      to base an incident-response playbook on).
 
 5. Stay in your lane.
-   - DO NOT touch corvus/ source code or sprint files.
+   - DO NOT touch omen/ source code or sprint files.
    - DO NOT add new skills without Justin approving the name and scope.
    - DO write candidate skill scaffolds under
      SLOPS/Blueprints/skills/_proposals/ for Justin to review.
@@ -107,7 +107,7 @@ CANDIDATES TO ONBOARD. Wait for Justin to react before writing scaffolds.
 ## Why this is a separate session, not a sub-task of the build loop
 
 Capability expansion competes with build velocity for attention. Running it in
-the same session as Corvus Phase 1 means one of them gets shortchanged — usually
+the same session as Omen Phase 1 means one of them gets shortchanged — usually
 the long-term work, because the build has a deadline.
 
 Spinning it up as a parallel session lets the inventory + proposal cycle run on

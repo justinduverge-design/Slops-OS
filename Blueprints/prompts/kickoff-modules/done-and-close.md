@@ -11,4 +11,5 @@ Then, in order:
 5. Write the session handoff per `session-handoff.md`.
 6. Append the skill receipt to the target product's `Blueprints/playbooks/skill-usage-ledger.md` when present.
 7. Re-run the required verification after all code and evidence files are final, then run `git diff --check`.
-8. Commit the explicit task paths on the worktree branch with a Conventional Commit message (`feat(phase1.N): …`, `fix(…)`, `chore(…)`, `docs(…)`, `test(…)`). Push the branch once verification is actually done and step 9's report is accurate — do not push on the assumption something passes. **Do not merge or open/merge a PR** �
+8. Commit the explicit task paths on the worktree branch with a Conventional Commit message (`feat(phase1.N): …`, `fix(…)`, `chore(…)`, `docs(…)`, `test(…)`). Push the branch once verification is actually done and step 9's report is accurate — do not push on the assumption something passes. **Do not merge or open/merge a PR** — that's Justin's gate.
+9. Confirm the task paths are clean and report what landed: file paths + commit hash + push confirmation + a plain complete/incomplete verdict + verification result + skills used/skipped + anything surprising.
