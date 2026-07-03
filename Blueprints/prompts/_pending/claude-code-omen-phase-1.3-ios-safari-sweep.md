@@ -24,7 +24,7 @@ From `frontend/src/routes/index.jsx`:
 | --- | --- | --- |
 | `/` | `Landing` | bare |
 | `/about` | `OmenLanding` | bare |
-| `/corvus` | legacy redirect to `/about` | bare |
+| `/omen` | legacy redirect to `/about` | bare |
 | `/login` | `Login` | bare |
 | `/onboarding` | (component) | bare |
 | `/account/connect` | `ConnectLeague` | bare |
@@ -39,7 +39,7 @@ From `frontend/src/routes/index.jsx`:
 | `/dev/omen` | (dev-only) | AppLayout |
 | `*` | `NotFound` | bare |
 
-Re-read `frontend/src/routes/index.jsx` to confirm; if the routing has changed since this prompt was drafted, work from the updated set. `/corvus` is a legacy redirect route and `/dev/omen` is dev-only — exclude `/dev/omen` from production QA, include it in code audit only.
+Re-read `frontend/src/routes/index.jsx` to confirm; if the routing has changed since this prompt was drafted, work from the updated set. `/omen` is a legacy redirect route and `/dev/omen` is dev-only — exclude `/dev/omen` from production QA, include it in code audit only.
 
 ## Hard Constraints (apply to every phase)
 
