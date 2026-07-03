@@ -10,9 +10,9 @@
 
 Grand Central is the public homepage for slopssaloon.com — the Slops Saloon parent brand hub.
 
-It is NOT the Corvus fantasy football product page. It is the front door to a multi-product cultural studio whose first flagship app is Corvus.
+It is NOT the Omen fantasy football product page. It is the front door to a multi-product cultural studio whose first flagship app is Omen.
 
-The Slops Saloon podcast ran 47 episodes from 2022–2024 in the Society & Culture category. It covered sports, movies, art, and culture with personality and opinions. The Discord community exists. Corvus is the first app product in the ecosystem.
+The Slops Saloon podcast ran 47 episodes from 2022–2024 in the Society & Culture category. It covered sports, movies, art, and culture with personality and opinions. The Discord community exists. Omen is the first app product in the ecosystem.
 
 Grand Central should feel like walking into the saloon and seeing everything on offer — a living, curated place with warmth, character, and stakes.
 
@@ -23,7 +23,7 @@ Grand Central should feel like walking into the saloon and seeing everything on 
 - Warm, opinionated, and culturally literate. Not academic, not bro-y.
 - Saloon as metaphor: a gathering place for people who take their opinions seriously and buy rounds for the table.
 - Playful but not childish. Illustrated but not cartoon-cheap. Western-pub energy without the kitsch.
-- The Corvus card is the one place where the saloon energy steps aside for something darker and more serious. That contrast is intentional and valuable.
+- The Omen card is the one place where the saloon energy steps aside for something darker and more serious. That contrast is intentional and valuable.
 
 ---
 
@@ -40,14 +40,14 @@ Grand Central should feel like walking into the saloon and seeing everything on 
 | Off-white | `#FAF5EB` | Body text on dark, headline contrast |
 | Copper rust | `#A0522D` | Hover states, secondary accents |
 
-Corvus card exception: `#050505` background, `#C9A44C` gold accent, white body text. One dark island in a warm sea.
+Omen card exception: `#050505` background, `#C9A44C` gold accent, white body text. One dark island in a warm sea.
 
 ### Typography
 
 - **Headings:** Playfair Display (Google Fonts) — serif, editorial, slightly literary. Evokes a 19th-century broadside or menu board.
 - **Body:** Lato or Source Sans 3 (Google Fonts) — readable, neutral, unpretentious.
 - **Accent / label text:** uppercase tracked Playfair Display for section titles (e.g., "WHAT'S GOOD THIS WEEK")
-- **Corvus card:** Cormorant Garamond headlines (to echo the canonical Corvus brand), Lato body.
+- **Omen card:** Cormorant Garamond headlines (to echo the canonical Omen brand), Lato body.
 
 ### Texture and Atmosphere
 
@@ -63,7 +63,7 @@ Corvus card exception: `#050505` background, `#C9A44C` gold accent, white body t
 - Single column on mobile, 2-column grid for widgets on desktop
 - Hero: full-width, full-bleed background, centered text
 - Widget cards: bulletin-board metaphor — cards that look like pinned notes or framed posters
-- Corvus card: intentionally dark, full-width or prominent half-width, breaking the warm grid
+- Omen card: intentionally dark, full-width or prominent half-width, breaking the warm grid
 - Footer: dark wood tone, gold text, minimal
 
 ### Motion / Interaction
@@ -85,12 +85,12 @@ Corvus card exception: `#050505` background, `#C9A44C` gold accent, white body t
 - CTA / invitation: "Come on in."
 - Illustration: SVG saloon interior silhouette or CSS-drawn swinging doors
 
-### 2. Corvus App Card
+### 2. Omen App Card
 - Dark premium card, visually distinct from everything around it
 - Gold "CORVUS" wordmark
 - Tagline: "See the winning move."
 - Brief one-line description: "Fantasy football intelligence. Built for people who take the W seriously."
-- CTA button: "Open Corvus" → links to #corvus / corvus product page
+- CTA button: "Open Omen" → links to #omen / omen product page
 - Subtle crow icon or feather motif in SVG
 
 ### 3. "What's Good This Week" Movie Widget
@@ -126,10 +126,10 @@ Corvus card exception: `#050505` background, `#C9A44C` gold accent, white body t
 
 ## What This Is NOT
 
-- Not the Corvus fantasy football app itself
+- Not the Omen fantasy football app itself
 - Not a podcast-only landing page
 - Not a generic link-in-bio page
-- Not trying to sell anything yet (Corvus handles the product conversion)
+- Not trying to sell anything yet (Omen handles the product conversion)
 - Not overloaded — Grand Central is a hub, not a content feed
 
 ---
@@ -138,7 +138,7 @@ Corvus card exception: `#050505` background, `#C9A44C` gold accent, white body t
 
 - Mockup uses hardcoded dummy data for movie and history widgets
 - Podcast section uses real artwork URL from Apple Podcasts CDN
-- Corvus card links to `#corvus` anchor in the mockup; production link TBD
+- Omen card links to `#omen` anchor in the mockup; production link TBD
 - The page must be functional in-browser with no build step required (single HTML file)
 - All assets via CDN (Google Fonts only) — no local image dependencies
 
@@ -148,7 +148,7 @@ Corvus card exception: `#050505` background, `#C9A44C` gold accent, white body t
 
 A first-time visitor lands on slopssaloon.com and immediately understands:
 1. This is a cultural hub with personality — movies, sports, art, culture
-2. There's a serious fantasy football app called Corvus
+2. There's a serious fantasy football app called Omen
 3. There's a podcast with 47 episodes they can go listen to
 4. There's a Discord community
 5. They want to come back

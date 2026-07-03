@@ -1,14 +1,14 @@
-# Corvus Design Direction
+# Omen Design Direction
 
 ## Product Name
 
-Corvus
+Omen
 
 ## Relationship
 
 Slops Saloon is the umbrella brand.
 
-Corvus is the active fantasy football product.
+Omen is the active fantasy football product.
 
 ---
 
@@ -34,7 +34,7 @@ Do not let the theme overpower usability.
 
 ## Current Page Goals
 
-### Corvus App
+### Omen App
 
 Build a polished app experience for:
 
@@ -49,7 +49,7 @@ Build a polished app experience for:
 
 Keep it lightweight.
 
-It should introduce the umbrella brand and point users to Corvus.
+It should introduce the umbrella brand and point users to Omen.
 
 Do not build a full media hub yet.
 
@@ -59,13 +59,13 @@ Do not build a full media hub yet.
 
 1. Header
    - Slops Saloon umbrella identity
-   - Corvus feature link/card
+   - Omen feature link/card
 
 2. Hero
-   - Corvus as the first flagship product
-   - Clear CTA to enter or learn about Corvus
+   - Omen as the first flagship product
+   - Clear CTA to enter or learn about Omen
 
-3. Corvus Preview
+3. Omen Preview
    - Draft Assistant
    - MVP Move / Omen of the Week
    - Trade Analyzer

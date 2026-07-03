@@ -1,6 +1,6 @@
 # Context Recommendations
 **Generated**: 2026-05-24
-**Scope**: Full doc pass — Layer 0 (SLOPS OS), Layer 1 (ssffmvp), Layer 2 (Corvus)
+**Scope**: Full doc pass — Layer 0 (SLOPS OS), Layer 1 (ssffmvp), Layer 2 (Omen)
 **Author**: Claude doc pass after Omen canonical migration completion
 
 ---
@@ -13,7 +13,7 @@ You confirmed that `POST /api/optimizer/mvp-move` (the Pro-gated six-agent pipel
 
 **Log this in both:**
 - `ssffmvp/Direction/decision_log.md`
-- `ssffmvp/Corvus/Direction/decision_log.md`
+- `ssffmvp/Omen/Direction/decision_log.md`
 
 **Suggested wording:**
 > `POST /api/optimizer/mvp-move` (Pro-gated six-agent pipeline) and `POST /api/omen/mvp-move` (canonical Omen path) are the same product surface at different tiers. Open decision: whether this merge happens as a single endpoint with tier-based enrichment, or whether `optimizer` becomes an internal Pro enrichment layer called by the `omen` route. Architectural work deferred until after load testing and Stripe live validation.
@@ -164,25 +164,25 @@ This reduces three agent instruction files to two (one per agent), with no loss 
 
 ---
 
-## Layer 2 — Corvus
+## Layer 2 — Omen
 
 ### `Direction/roadmap.md` — stale
 
 **Current content:**
-- Now: "Restore the Corvus DBS product layer" — done
+- Now: "Restore the Omen DBS product layer" — done
 - Next: "Stabilize core decision tools" — Trade Analyzer, Draft Assistant, Omen are all live
 - Later: "Harden platform integrations" — ESPN recovery is live, Yahoo and Sleeper are live
 
 The entire roadmap is describing work that is complete.
 
-**Recommended action:** Rewrite Corvus roadmap to reflect post-launch milestones:
+**Recommended action:** Rewrite Omen roadmap to reflect post-launch milestones:
 - Now: Git cleanup, npm audit, Stripe live validation, Docker prove-out
 - Next: Load test, final deploy, launch gate
 - Later: Path B optimizer integration into Omen (Pro tier), Hall of Records polish, Draft Assistant season content
 
 ---
 
-### Corvus context.md and decision_log.md — current ✅
+### Omen context.md and decision_log.md — current ✅
 
 These were updated 2026-05-23 during the last session. No changes needed now.
 
@@ -196,7 +196,7 @@ These were updated 2026-05-23 during the last session. No changes needed now.
 |---|---|---|---|---|
 | 0 — SLOPS OS | None (SLOPS isn't an app repo) | None | `Direction/context.md` covers this | ✅ OK |
 | 1 — ssffmvp | `CLAUDE.md` | `AGENT.md` | `agent_rules.md` (retire after absorbing) | ⚠️ 3 → 2 after cleanup |
-| 2 — Corvus | None (product layer, not a repo) | None | Inherits from ssffmvp | ✅ OK |
+| 2 — Omen | None (product layer, not a repo) | None | Inherits from ssffmvp | ✅ OK |
 
 ---
 
@@ -204,14 +204,14 @@ These were updated 2026-05-23 during the last session. No changes needed now.
 
 ### Do now (before next Codex session)
 
-1. **Log optimizer/omen merge decision** in `ssffmvp/Direction/decision_log.md` and `Corvus/Direction/decision_log.md`
+1. **Log optimizer/omen merge decision** in `ssffmvp/Direction/decision_log.md` and `Omen/Direction/decision_log.md`
 2. **Update `CLAUDE.md` route table** — add `/api/omen` row, fix system.js comment
 3. **Update `AGENT.md`** — add canonical Omen path, trim stale launch framing
 4. **Update `agent_rules.md` read-first list** — point to `Direction/` files
 
 ### Do this session (Claude doc pass)
 
-5. **Corvus roadmap rewrite** — post-launch milestones replace completed work
+5. **Omen roadmap rewrite** — post-launch milestones replace completed work
 6. **Root-level redirect stubs** — context.md, current_sprint.md, decision_log.md, roadmap.md, agent_inbox.md
 7. **Absorb `agent_rules.md` universal rules into CLAUDE.md and AGENT.md**, then mark agent_rules.md as retired
 
@@ -235,8 +235,8 @@ These were updated 2026-05-23 during the last session. No changes needed now.
 - `ssffmvp/Direction/current_sprint.md` — updated 2026-05-23 ✅
 - `ssffmvp/Direction/decision_log.md` — updated 2026-05-23 ✅ (pending optimizer/omen entry)
 - `ssffmvp/Blueprints/handoffs/decisions.md` — canonical, current
-- `ssffmvp/Corvus/Direction/current_sprint.md` — updated 2026-05-23 ✅
-- `ssffmvp/Corvus/Direction/decision_log.md` — updated 2026-05-23 ✅ (pending optimizer/omen entry)
+- `ssffmvp/Omen/Direction/current_sprint.md` — updated 2026-05-23 ✅
+- `ssffmvp/Omen/Direction/decision_log.md` — updated 2026-05-23 ✅ (pending optimizer/omen entry)
 - `Blueprints/agents/manager_agent.md` — correct redirect stub ✅
 - `Blueprints/agents/sub_agents.md` — correct redirect stub ✅
 - `Blueprints/agents/layer-handoff-protocol.md` — authoritative ✅

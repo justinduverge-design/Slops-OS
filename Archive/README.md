@@ -7,7 +7,7 @@ Historical files may still mention the old `ssffmvp` path. Current active routin
 ```text
 SLOPS/
   slops-saloon/
-    corvus/
+    omen/
 ```
 
 Archive is preservation, not deletion.

@@ -1,10 +1,10 @@
-# Slops OS / Corvus Final Operating Plan
+# Slops OS / Omen Final Operating Plan
 
 ## Purpose
 
-This plan turns the current Slops OS files into a cleaner working system for building Corvus without distracting Claude, Codex, or Justin with future ideas.
+This plan turns the current Slops OS files into a cleaner working system for building Omen without distracting Claude, Codex, or Justin with future ideas.
 
-Corvus is the active product. The current priority is finishing the app backbone so polished tools can be built on top of a stable foundation.
+Omen is the active product. The current priority is finishing the app backbone so polished tools can be built on top of a stable foundation.
 
 ---
 
@@ -12,7 +12,7 @@ Corvus is the active product. The current priority is finishing the app backbone
 
 ### Active now
 
-- **Corvus** — fantasy football decision assistant and app experience.
+- **Omen** — fantasy football decision assistant and app experience.
 - **Draft Assistant** — first-impression free tool for this year only.
 - **MVP Move / Omen of the Week** — paid centerpiece after the backbone is stable.
 - **Slops Saloon landing page** — lightweight umbrella doorway only.
@@ -53,7 +53,7 @@ This comes before feature expansion.
 
 ### Priority 1 — Draft Assistant
 
-Draft Assistant is the first-impression tool. It is free this year only. It must feel polished and trustworthy, but it must not be built as a one-off toy. It should reuse the same Corvus layout, API conventions, and UI patterns that will later support MVP Move.
+Draft Assistant is the first-impression tool. It is free this year only. It must feel polished and trustworthy, but it must not be built as a one-off toy. It should reuse the same Omen layout, API conventions, and UI patterns that will later support MVP Move.
 
 ### Priority 2 — MVP Move / Omen of the Week
 
@@ -65,7 +65,7 @@ Trade Analyzer, Start/Sit, Waiver Wire, roster insights, and related features co
 
 ### Priority 4 — Slops Saloon Landing Page
 
-Slops Saloon is the umbrella brand. For now, it should be a thin doorway that introduces the world and points users to Corvus. It should not become a media hub, CMS, blog, podcast archive, or second product build during this phase.
+Slops Saloon is the umbrella brand. For now, it should be a thin doorway that introduces the world and points users to Omen. It should not become a media hub, CMS, blog, podcast archive, or second product build during this phase.
 
 ---
 
@@ -75,7 +75,7 @@ Slops Saloon is the umbrella brand. For now, it should be a thin doorway that in
 Slops Saloon
 Umbrella brand / parent domain / founder world
 │
-└── Corvus
+└── Omen
     Active product
     Fantasy football decision assistant
     │
@@ -102,7 +102,7 @@ Desktop/
     ├── runbook_ai_workflow.md     ← Claude/Codex workflow
     ├── CLAUDE.md                  ← global Claude instructions
     ├── AGENT.md                   ← global Codex instructions
-    ├── design.md                  ← Corvus visual direction
+    ├── design.md                  ← Omen visual direction
     ├── handoffs/                  ← global decisions and notes
     ├── prompts/                   ← reusable prompt templates
     └── ssffmvp/                   ← canonical app repo
@@ -123,13 +123,13 @@ Product owner and final decision-maker
 │   Planner, reviewer, architect, doctrine helper
 │
 ├── Claude Code
-│   Front-end engineer for Corvus app experience
+│   Front-end engineer for Omen app experience
 │
 └── Codex
     Back-end engineer for APIs, data contracts, integrations, infrastructure support
 ```
 
-Claude Code and Codex should not be given unrelated future-product context during normal Corvus build sessions.
+Claude Code and Codex should not be given unrelated future-product context during normal Omen build sessions.
 
 ---
 

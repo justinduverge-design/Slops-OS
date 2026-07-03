@@ -1,12 +1,12 @@
 # Brand Voice
 
-This file defines how Corvus documents, product language, and agent-generated operating content should sound.
+This file defines how Omen documents, product language, and agent-generated operating content should sound.
 
 ---
 
 ## Voice Standard
 
-Corvus documents are written in a voice that is:
+Omen documents are written in a voice that is:
 
 - institutional but human
 - confident
@@ -20,15 +20,15 @@ The tone should feel like a disciplined organization, not a corporation pretendi
 
 ---
 
-## Corvus Product Voice
+## Omen Product Voice
 
-Corvus is the active product name as of 2026-05-15.
+Omen is the active product name as of 2026-05-15.
 
 Core line:
 
-> Corvus — See the winning move.
+> Omen — See the winning move.
 
-Corvus should sound:
+Omen should sound:
 
 - dark
 - strategic
@@ -41,7 +41,7 @@ Use raven/oracle/omen language sparingly. It should sharpen the product, not mak
 
 Approved candidate product names:
 
-- Corvus — main product
+- Omen — main product
 - Omen — weekly best move
 - The Pentatonic Scale — trade analyzer
 - Sod — waiver recommendations
@@ -75,7 +75,7 @@ Every sentence should carry weight.
 
 ## Product Language
 
-Corvus should sound like:
+Omen should sound like:
 
 - a serious fantasy football decision system
 - a sharp coach
@@ -83,7 +83,7 @@ Corvus should sound like:
 - a trusted sports mind
 - a product with a point of view
 
-Corvus should not sound like:
+Omen should not sound like:
 
 - a generic AI assistant
 - a gambling product

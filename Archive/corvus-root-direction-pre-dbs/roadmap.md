@@ -1,8 +1,8 @@
-# Corvus Product Roadmap
+# Omen Product Roadmap
 
 **Format:** Now / Next / Later  
 **Hard Deadline:** NFL Kickoff — September 10, 2026  
-**Active Product:** Corvus  
+**Active Product:** Omen  
 **Current Doctrine:** Backbone before feature expansion
 
 ---
@@ -56,7 +56,7 @@ Goal: finish the first pass of live-tool polish now that the local app backbone 
 
 ## NEXT — Draft Assistant
 
-Goal: ship the first polished Corvus experience.
+Goal: ship the first polished Omen experience.
 
 Draft Assistant is free this year only and is the first impression for many users.
 
@@ -73,7 +73,7 @@ Draft Assistant is free this year only and is the first impression for many user
 
 ### Engineering rule
 
-Draft Assistant must reuse shared Corvus layout, API conventions, types, state handling, and design language.
+Draft Assistant must reuse shared Omen layout, API conventions, types, state handling, and design language.
 
 It should not become a standalone toy.
 
@@ -132,7 +132,7 @@ Goal: reduce risk before NFL kickoff.
 
 ## Explicitly Out Of Scope
 
-The following are not active roadmap items for this Corvus build phase:
+The following are not active roadmap items for this Omen build phase:
 
 - non-football sport products
 - full league hosting
@@ -146,7 +146,7 @@ The following are not active roadmap items for this Corvus build phase:
 
 ## Launch Doctrine
 
-- Corvus must feel trustworthy before it feels big.
+- Omen must feel trustworthy before it feels big.
 - Backbone beats feature sprawl.
 - The first free tool must make users believe the paid tool will be worth it.
 - No placeholders pretending to be live features.

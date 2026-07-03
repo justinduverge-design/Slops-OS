@@ -22,8 +22,8 @@
       --cream:        #F5ECD7;
       --cream-light:  #FAF5EB;
       --warm-red:     #8B2A1A;
-      --corvus-bg:    #0A0A0A;
-      --corvus-gold:  #C9A44C;
+      --omen-bg:    #0A0A0A;
+      --omen-gold:  #C9A44C;
       --text-dark:    #1C0F06;
       --text-muted:   #7A5C3A;
     }
@@ -330,14 +330,14 @@
     }
 
     /* ===== CORVUS CARD ===== */
-    .corvus-section {
+    .omen-section {
       padding: 0 24px 72px;
     }
 
-    .corvus-card {
+    .omen-card {
       max-width: 1100px;
       margin: 0 auto;
-      background: var(--corvus-bg);
+      background: var(--omen-bg);
       border: 1px solid rgba(201,164,76,0.35);
       border-radius: 4px;
       padding: 56px 64px;
@@ -348,40 +348,40 @@
       transition: box-shadow 0.3s ease;
     }
 
-    .corvus-card:hover {
+    .omen-card:hover {
       box-shadow: 0 0 40px rgba(201,164,76,0.18), 0 0 80px rgba(201,164,76,0.06);
     }
 
-    .corvus-eyebrow {
+    .omen-eyebrow {
       font-family: 'Lato', sans-serif;
       font-size: 0.65rem;
       font-weight: 700;
       letter-spacing: 0.3em;
       text-transform: uppercase;
-      color: var(--corvus-gold);
+      color: var(--omen-gold);
       opacity: 0.6;
       margin-bottom: 12px;
     }
 
-    .corvus-name {
+    .omen-name {
       font-family: 'Playfair Display', serif;
       font-style: italic;
       font-weight: 700;
       font-size: clamp(2.8rem, 6vw, 4.5rem);
-      color: var(--corvus-gold);
+      color: var(--omen-gold);
       line-height: 1;
       letter-spacing: -0.02em;
       margin-bottom: 4px;
     }
 
-    .corvus-bird {
+    .omen-bird {
       font-size: clamp(2rem, 4vw, 3rem);
       opacity: 0.8;
       margin-left: 12px;
       vertical-align: middle;
     }
 
-    .corvus-tagline {
+    .omen-tagline {
       font-family: 'Playfair Display', serif;
       font-style: italic;
       font-size: clamp(1rem, 2.5vw, 1.35rem);
@@ -389,7 +389,7 @@
       margin-bottom: 16px;
     }
 
-    .corvus-desc {
+    .omen-desc {
       font-family: 'Lato', sans-serif;
       font-weight: 300;
       font-size: 0.95rem;
@@ -399,31 +399,31 @@
       margin-bottom: 36px;
     }
 
-    .corvus-cta {
+    .omen-cta {
       display: inline-block;
       font-family: 'Lato', sans-serif;
       font-size: 0.75rem;
       font-weight: 700;
       letter-spacing: 0.2em;
       text-transform: uppercase;
-      color: var(--corvus-gold);
+      color: var(--omen-gold);
       text-decoration: none;
       padding: 14px 36px;
-      border: 1px solid var(--corvus-gold);
+      border: 1px solid var(--omen-gold);
       border-radius: 2px;
       transition: all 0.22s ease;
     }
 
-    .corvus-cta:hover {
-      background: var(--corvus-gold);
-      color: var(--corvus-bg);
+    .omen-cta:hover {
+      background: var(--omen-gold);
+      color: var(--omen-bg);
     }
 
-    .corvus-feather {
+    .omen-feather {
       font-size: clamp(5rem, 10vw, 9rem);
       opacity: 0.08;
       line-height: 1;
-      color: var(--corvus-gold);
+      color: var(--omen-gold);
       filter: sepia(1) saturate(0.8);
     }
 
@@ -841,12 +841,12 @@
       }
       .hamburger { display: flex; }
 
-      .corvus-card {
+      .omen-card {
         grid-template-columns: 1fr;
         padding: 40px 28px;
         gap: 20px;
       }
-      .corvus-feather {
+      .omen-feather {
         display: none;
       }
 
@@ -874,7 +874,7 @@
     @media (max-width: 480px) {
       .movie-grid { grid-template-columns: 1fr; }
       .section { padding: 48px 16px; }
-      .corvus-card { padding: 32px 20px; }
+      .omen-card { padding: 32px 20px; }
     }
   </style>
 </head>
@@ -887,7 +887,7 @@
       <a href="#" class="nav-logo">Slops Saloon</a>
       <ul class="nav-links" id="navLinks">
         <li><a href="#">Home</a></li>
-        <li><a href="#corvus">Corvus</a></li>
+        <li><a href="#omen">Omen</a></li>
         <li><a href="#podcast">Podcast</a></li>
         <li><a href="#" target="_blank">Discord</a></li>
       </ul>
@@ -904,28 +904,28 @@
       <h1 class="hero-title">Slops Saloon</h1>
       <p class="hero-subtitle">Sports &nbsp;&#183;&nbsp; Movies &nbsp;&#183;&nbsp; Art &nbsp;&#183;&nbsp; Culture</p>
       <div class="hero-divider"><span class="hero-divider-star">&#9830;</span></div>
-      <a href="#corvus" class="hero-cta">Come on in.</a>
+      <a href="#omen" class="hero-cta">Come on in.</a>
       <div class="hero-doors">&#x1F6AA; &nbsp;&nbsp; &#x1F6AA;</div>
     </div>
   </section>
 
   <!-- ===== CORVUS CARD ===== -->
-  <div class="corvus-section" id="corvus">
-    <div class="corvus-card">
+  <div class="omen-section" id="omen">
+    <div class="omen-card">
       <div>
-        <div class="corvus-eyebrow">Flagship App &mdash; Fantasy Football Intelligence</div>
+        <div class="omen-eyebrow">Flagship App &mdash; Fantasy Football Intelligence</div>
         <div>
-          <span class="corvus-name">Corvus</span>
-          <span class="corvus-bird">&#x1F54A;</span>
+          <span class="omen-name">Omen</span>
+          <span class="omen-bird">&#x1F54A;</span>
         </div>
-        <div class="corvus-tagline">See the winning move.</div>
-        <p class="corvus-desc">
+        <div class="omen-tagline">See the winning move.</div>
+        <p class="omen-desc">
           AI-powered fantasy football intelligence. Built for people who take the W seriously.
-          Start. Sit. Trade. Waiver. Corvus reads the omens.
+          Start. Sit. Trade. Waiver. Omen reads the omens.
         </p>
-        <a href="#" class="corvus-cta">Enter Corvus</a>
+        <a href="#" class="omen-cta">Enter Omen</a>
       </div>
-      <div class="corvus-feather">&#x1F54A;</div>
+      <div class="omen-feather">&#x1F54A;</div>
     </div>
   </div>
 
@@ -1067,7 +1067,7 @@
 
       <nav class="footer-nav">
         <a href="#">Home</a>
-        <a href="#corvus">Corvus</a>
+        <a href="#omen">Omen</a>
         <a href="#podcast">Podcast</a>
         <a href="#">Discord</a>
       </nav>
