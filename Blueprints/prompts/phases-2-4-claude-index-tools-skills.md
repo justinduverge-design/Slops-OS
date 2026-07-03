@@ -24,7 +24,7 @@ This ensures all outputs follow SLOPS DBS structure, frontmatter, and routing co
 ## Context You Need
 
 **SLOPS root:** `C:\Users\JDuve\OneDrive\Desktop\SLOPS`
-**Three layers:** 0-OS SLOPS · 1-slops-saloon · 2-Corvus
+**Three layers:** 0-OS SLOPS · 1-slops-saloon · 2-Omen
 **DBS model:** Direction / Blueprints / Solutions / References / Archive
 
 **What changed before this operation:**
@@ -142,8 +142,8 @@ It is the authority map — the single file any agent reads to understand who ha
 **Section 3 — Project-Specific Agents (not global)**
 | Agent | File | Layer | Status | Note |
 |---|---|---|---|---|
-| Manager Agent | `slops-saloon\corvus\Blueprints\prompts\manager_agent.md` | 1-slops-saloon | active (runtime) | Corvus fantasy football runtime prompt. Not a global SLOPS agent. |
-| Sub-Agents (6) | `slops-saloon\corvus\Blueprints\prompts\sub_agents.md` | 1-slops-saloon | active (runtime) | Corvus sub-agent prompts. Not global. |
+| Manager Agent | `slops-saloon\omen\Blueprints\prompts\manager_agent.md` | 1-slops-saloon | active (runtime) | Omen fantasy football runtime prompt. Not a global SLOPS agent. |
+| Sub-Agents (6) | `slops-saloon\omen\Blueprints\prompts\sub_agents.md` | 1-slops-saloon | active (runtime) | Omen sub-agent prompts. Not global. |
 
 **Section 4 — Imported Agent Library**
 All entries default to `reference-only`. None are callable until promoted through `slops-agent-author`.
@@ -230,7 +230,7 @@ Read the file. Update any references to:
 Read the file. Update any references to:
 - `Blueprints\Agents\` → `Blueprints\agents\`
 - `Blueprints\Skills\` → `Blueprints\skills\`
-- `slops-saloon\Blueprints\agents` → `slops-saloon\corvus\Blueprints\prompts` (this is the correct runtime path)
+- `slops-saloon\Blueprints\agents` → `slops-saloon\omen\Blueprints\prompts` (this is the correct runtime path)
 - Old `skills.md` → `SKILL_ROUTING.md`
 - Old `tools.md` → `Blueprints\tools\tool-permissions.md`
 
@@ -300,7 +300,7 @@ Read the existing `DBS_INDEX.md`. Add or replace the naming convention section w
 ```
 ## SLOPS OS Canonical Naming Convention
 
-This convention applies at all three layers (0-OS SLOPS, 1-slops-saloon, 2-Corvus)
+This convention applies at all three layers (0-OS SLOPS, 1-slops-saloon, 2-Omen)
 on all paths and all markdown files. It is the rule when creating any folder or
 file in the future at any layer.
 
@@ -338,12 +338,12 @@ When writing that README, include a section:
 
 ---
 
-### 4C — Note Corvus skills convention
+### 4C — Note Omen skills convention
 
-**Path:** Check if `C:\Users\JDuve\OneDrive\Desktop\SLOPS\slops-saloon\corvus\Blueprints\` has a `skills\` folder.
+**Path:** Check if `C:\Users\JDuve\OneDrive\Desktop\SLOPS\slops-saloon\omen\Blueprints\` has a `skills\` folder.
 
-If not present: add a note to `slops-saloon\corvus\Blueprints\README.md` (create if needed):
-- "A `skills\` folder will be created here when Corvus-specific skills are needed."
+If not present: add a note to `slops-saloon\omen\Blueprints\README.md` (create if needed):
+- "A `skills\` folder will be created here when Omen-specific skills are needed."
 - "Until then, use slops-saloon or SLOPS root skills."
 - "When created, follow the `_interface\` / `_references\` subfolder naming convention."
 
@@ -385,15 +385,15 @@ Expected: `_interface` present, `__interface` absent.
 ## Do Not Touch — Absolute
 
 ```
-slops-saloon\corvus\src\
-slops-saloon\corvus\frontend\
-slops-saloon\corvus\client\
-slops-saloon\corvus\scripts\
-slops-saloon\corvus\sql\
-slops-saloon\corvus\test\
+slops-saloon\omen\src\
+slops-saloon\omen\frontend\
+slops-saloon\omen\client\
+slops-saloon\omen\scripts\
+slops-saloon\omen\sql\
+slops-saloon\omen\test\
 slops-saloon\evals\
-slops-saloon\corvus\Blueprints\prompts\manager_agent.md    ← runtime prompt — do not change content
-slops-saloon\corvus\Blueprints\prompts\sub_agents.md       ← runtime prompt — do not change content
+slops-saloon\omen\Blueprints\prompts\manager_agent.md    ← runtime prompt — do not change content
+slops-saloon\omen\Blueprints\prompts\sub_agents.md       ← runtime prompt — do not change content
 slops-saloon\.env
 slops-saloon\.env.cloud
 slops-saloon\oraclepu.key
@@ -445,4 +445,4 @@ Include:
 ### Phase 4 — Normalize skill conventions
 - [ ] `Blueprints\skills\slops-prompt-generator\SKILL.md` (update `_interface` ref)
 - [ ] `slops-saloon\Blueprints\skills\README.md` (create)
-- [ ] `slops-saloon\corvus\Blueprints\README.md` (create or update with skills convention note)
+- [ ] `slops-saloon\omen\Blueprints\README.md` (create or update with skills convention note)

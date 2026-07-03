@@ -22,7 +22,7 @@
 - `Blueprints/skills/SLOPS_LIFECYCLE.md`
 - `Blueprints/prompts/codex-skill-migration.md`
 - `Blueprints/handoffs/2026-06-11-skills-acquisition-handoff.md`
-- Corvus kickoff modules, definition-of-done gates, audits, sprint, handoffs, and ledger
+- Omen kickoff modules, definition-of-done gates, audits, sprint, handoffs, and ledger
 
 ## Decisions made
 

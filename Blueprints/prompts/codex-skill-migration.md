@@ -15,7 +15,7 @@ PRECONDITIONS (already done — confirm, don't redo):
 
 STEP 2 — FIX THE REPO-INSPECTOR
 - Update Codex's repo-inspector skill so the canonical app repo is
-  C:\Users\JDuve\OneDrive\Desktop\SLOPS\slops-saloon\corvus  (NOT SLOPS\ssffmvp).
+  C:\Users\JDuve\OneDrive\Desktop\SLOPS\slops-saloon\omen  (NOT SLOPS\ssffmvp).
 - Show the before/after diff.
 
 STEP 3 — INSTALL THE SHARED SLOPS SKILLS FOR BOTH AGENTS
@@ -45,7 +45,7 @@ STEP 5 — QUARANTINE ONLY WHAT THE MAP ALLOWS
 STEP 6 — REPORT, DO NOT BROAD-COMMIT
 - Report: inspector diff, both target dirs, skills installed to each, what was quarantined,
   what was intentionally kept (REPLACE-not-yet-built).
-- Do NOT `git add -A`. Both SLOPS and corvus worktrees are intentionally dirty. If committing the
+- Do NOT `git add -A`. Both SLOPS and omen worktrees are intentionally dirty. If committing the
   inspector fix or skill copies, use slops-git-flow: explicit paths, verify staged set, Justin
   approves push.
 
