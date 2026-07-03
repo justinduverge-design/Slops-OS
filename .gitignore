@@ -23,8 +23,5 @@ ssffmvp/
 # Omen is a separate git repo - do not track app source from SLOPS root.
 slops-saloon/omen/
 
-# Empty/rollback legacy app folder can linger if Windows holds a handle.
-slops-saloon/corvus/
-
 # Codex-generated artifact backups - do not track
 Solutions/.codex-artifacts/
