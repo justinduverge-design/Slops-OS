@@ -1,14 +1,14 @@
-# Corvus Backend Finish Audit
+# Omen Backend Finish Audit
 
 Date: 2026-05-26
 
 Owner: Codex / backend
 
-Layer: Slops Saloon Layer 1 report about active product `corvus/`
+Layer: Slops Saloon Layer 1 report about active product `omen/`
 
 ## Current App State
 
-Corvus backend is materially stronger after the finish pass, but not production-validated.
+Omen backend is materially stronger after the finish pass, but not production-validated.
 
 Local verification:
 
@@ -52,7 +52,7 @@ Current backend surface:
 1. Run Stripe test-mode validation for checkout, portal, subscription webhook, cancellation, trial, and payment failure.
 2. Apply or schedule the approved Supabase schema update for subscription metadata columns.
 3. QA real Yahoo, Sleeper, and ESPN connected-account Omen flows.
-4. Run `scripts/load-corvus-routes.js` against local/staging with auth token evidence.
+4. Run `scripts/load-omen-routes.js` against local/staging with auth token evidence.
 5. Inventory legacy mounted routes and mark active, compatibility-only, retired, or internal.
 6. Decide optimizer-vs-Omen route ownership.
 7. Add staging evidence for ESPN recovery states with no cookie logging.
@@ -95,4 +95,4 @@ Current backend surface:
 
 ## Recommendation
 
-Treat Corvus backend as locally hardened and frontend-unblocked, not launch-finished. The next founder-grade move is evidence collection: Stripe test mode, real platform QA, load script output, and a short legacy-route retirement decision.
+Treat Omen backend as locally hardened and frontend-unblocked, not launch-finished. The next founder-grade move is evidence collection: Stripe test mode, real platform QA, load script output, and a short legacy-route retirement decision.

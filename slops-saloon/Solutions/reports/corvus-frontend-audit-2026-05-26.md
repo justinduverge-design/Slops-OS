@@ -1,14 +1,14 @@
-# Corvus Frontend Audit
+# Omen Frontend Audit
 
 Date: 2026-05-26
 
 Owner: Claude Code / frontend
 
-Layer: Slops Saloon Layer 1 report about active product `corvus/`
+Layer: Slops Saloon Layer 1 report about active product `omen/`
 
 ## Current App State
 
-Corvus frontend builds cleanly and all routes are wired. No production browser QA has been performed.
+Omen frontend builds cleanly and all routes are wired. No production browser QA has been performed.
 
 Local verification:
 
@@ -97,4 +97,4 @@ Current frontend surface:
 
 ## Recommendation
 
-Treat the Corvus frontend as structurally complete and unblocked, not QA-verified. The next move is evidence collection: a full browser QA pass across all eight routes, a product decision on social login buttons and the MockBanner strategy, and visual confirmation of Sleeper/ESPN Omen once the backend live path is staged. These are short tasks, not rebuilds.
+Treat the Omen frontend as structurally complete and unblocked, not QA-verified. The next move is evidence collection: a full browser QA pass across all eight routes, a product decision on social login buttons and the MockBanner strategy, and visual confirmation of Sleeper/ESPN Omen once the backend live path is staged. These are short tasks, not rebuilds.

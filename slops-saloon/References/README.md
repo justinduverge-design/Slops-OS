@@ -7,4 +7,4 @@ References inform work. They do not override `context.md`, `DBS_INDEX.md`, `Dire
 ## docs/
 
 - `nflverse-data-research.md` — nflverse-data dataset inventory and use cases for fantasy scoring
-- `espn-fantasy-connection-prerequisites.md` — **Start here before building any ESPN integration.** Cookie auth requirements, encoding gotchas, season year detection, off-season API behavior, CORS, and security rules. Derived from Corvus live QA (2026-06-05).
+- `espn-fantasy-connection-prerequisites.md` — **Start here before building any ESPN integration.** Cookie auth requirements, encoding gotchas, season year detection, off-season API behavior, CORS, and security rules. Derived from Omen live QA (2026-06-05).

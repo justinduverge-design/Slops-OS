@@ -1,4 +1,4 @@
-# Decision: Corvus UX/UI Direction v1
+# Decision: Omen UX/UI Direction v1
 
 **Date:** 2026-05-24
 **Updated:** 2026-05-24 (Justin approval pass — open questions resolved)
@@ -9,7 +9,7 @@
 
 ## What This Document Is
 
-This is the canonical UX/UI direction decision for Corvus v1.
+This is the canonical UX/UI direction decision for Omen v1.
 It records the decisions made in the May 2026 clean-plate design pass.
 All frontend work should align to this before building new screens.
 
@@ -40,7 +40,7 @@ The design must make the value ladder feel natural, not coercive.
 
 ## Brand Character
 
-Corvus should feel like:
+Omen should feel like:
 - A sharp, trusted fantasy football analyst — not a chatbot
 - Old-school down-south coach energy: direct, confident, a little edge
 - Premium sports intelligence, not a neon sports bar
@@ -63,7 +63,7 @@ Think war-room intelligence, not pop-quiz trivia game.
 - Deep crimson for risk, warnings, and strong alerts
 - Electric violet for AI / intelligence layer moments
 
-**Dark mode is the primary Corvus experience.**
+**Dark mode is the primary Omen experience.**
 Light mode is supported and must be clean, not washed-out.
 System mode (respects OS preference) is the default.
 
@@ -172,9 +172,9 @@ When a user taps "Connect ESPN," the app walks them through every step of the co
 
 No generic Omen. League connection is mandatory. Skipping means Omen is locked (see Decision 4).
 
-### Decision 12: `/` serves Corvus at launch
+### Decision 12: `/` serves Omen at launch
 
-At actual launch, `/` points to Corvus. The Slops Saloon parent-brand page at `/` is a future decision — it is not blocking launch and should not be built now. Future Slops Saloon parent routing can be revisited when a second product is active.
+At actual launch, `/` points to Omen. The Slops Saloon parent-brand page at `/` is a future decision — it is not blocking launch and should not be built now. Future Slops Saloon parent routing can be revisited when a second product is active.
 
 ### Decision 13: Provisional final headline
 
@@ -196,12 +196,12 @@ Omen access depends on the quality and completeness of the league data available
 
 **Tier 1 — Connected League Omen (full access)**
 
-A platform connection (Sleeper, Yahoo, ESPN) provides enough league, roster, matchup, scoring, and transaction context for Corvus to produce a real, honest Omen recommendation.
+A platform connection (Sleeper, Yahoo, ESPN) provides enough league, roster, matchup, scoring, and transaction context for Omen to produce a real, honest Omen recommendation.
 Full Omen access is granted when a supported platform connection is active and healthy.
 
 **Tier 2 — Manual Omen (conditional access)**
 
-Manual entry may unlock Omen only if the user completes a required data checklist that gives Corvus enough information to produce an honest recommendation.
+Manual entry may unlock Omen only if the user completes a required data checklist that gives Omen enough information to produce an honest recommendation.
 
 The checklist must include at minimum:
 - League scoring format (ppr / half_ppr / standard)
@@ -210,8 +210,8 @@ The checklist must include at minimum:
 - Current week's matchup opponent (if start/sit decision is requested)
 - Waiver wire pool (if waiver recommendation is requested)
 
-Corvus must clearly show which checklist items are missing and what each missing item prevents.
-Corvus must not pretend to know waiver availability, opponent matchup context, scoring rules, or roster constraints if the user has not provided them.
+Omen must clearly show which checklist items are missing and what each missing item prevents.
+Omen must not pretend to know waiver availability, opponent matchup context, scoring rules, or roster constraints if the user has not provided them.
 A `DataSourceLabel: manual` must appear on every signal derived from manual data.
 
 The decision of whether Manual Omen is feasible given the data quality ceiling is pending a Codex audit. Codex evaluates; Justin decides.
@@ -230,7 +230,7 @@ The UI should encourage completion of the checklist or platform connection — n
 
 ## Backend Questions (not product decisions — owned by Codex)
 
-See `corvus/Blueprints/handoffs/codex-ux-ui-build-handoff.md` for the full list. Key items:
+See `omen/Blueprints/handoffs/codex-ux-ui-build-handoff.md` for the full list. Key items:
 - Discord OAuth Supabase provider configuration status
 - `?next=` preservation strategy through Supabase OAuth redirect
 - Sleeper connect endpoint (does not exist — must be built)
