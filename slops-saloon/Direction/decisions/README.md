@@ -7,6 +7,7 @@ Division-level decision records for Slops Saloon. These cover the subsidiary and
 | File | Decision |
 |---|---|
 | `omen-ux-ui-direction-v1.md` | Omen UX/UI direction v1 — approved and locked for build (2026-05-24). |
+| `slops-saloon-fan-experience-doctrine-v1.md` | Slops Saloon fan-experience doctrine v1 — two-sided presence (War Room / Color Rush), three-room mapping (Owner Suite / GM Suite / Locker Room), chant medium follows skin, data-legibility invariant. Load-bearing principle: Look Good — Play Good. Binds Omen + all future Slops Saloon products (2026-07-03). |
 
 ## Running log
 
