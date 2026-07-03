@@ -15,4 +15,8 @@ You are Codex working in the SLOPS OS root layer. Read these modules in order be
 
 - Cross-cutting doctrine → stay here
 - Slops Saloon division strategy, content + marketing, future products → `slops-saloon/`
-- Omen app code (frontend, backend, deploy, tests) → `slops-saloon/omen/`
+- Omen app code (frontend, backend, deploy, tests) → `slops-saloon/omen/`
+
+## Kickoff
+
+Paste `Blueprints/prompts/kickoff-l0-codex.md` to start a root-layer session.
