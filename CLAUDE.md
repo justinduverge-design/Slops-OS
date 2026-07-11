@@ -15,7 +15,7 @@ You are Claude working in the SLOPS OS root layer. Read these modules in order b
 
 - Cross-cutting doctrine → stay here
 - Slops Saloon division strategy, content + marketing, future products → `slops-saloon/`
-- Omen app code (frontend, backend, deploy, tests) → `slops-saloon/omen/`
+- Omen app code (frontend, backend, deploy, tests) → separate repo, `justinduverge-design/omen` (not a subdirectory of this repo — confirmed 2026-07-11)
 
 ## Kickoff
 
@@ -25,6 +25,6 @@ Paste `Blueprints/prompts/kickoff-l0-claude.md` to start a root-layer session.
 
 Canonical hook doctrine lives in `Blueprints/agent-modules/graphify-hook.md` (referenced as module 8 by every layer's `CLAUDE.md`/`AGENTS.md`). Quick reference:
 
-- **Read for multi-layer tasks:** `References/graphify/graphify-out/graph.json` (curated L0↔L1↔L2). Full extraction at repo-root `graphify-out/graph.json`.
-- **Freshness:** last full build 2026-06-13; rebuild pending until `graphifyy` is reinstalled — see latest `References/graphify/REFRESH_REPORT_*.md`.
-- **Query:** start at god nodes (Omen → SLOPS OS → Skill system → Slops Saloon), follow cross-layer edges, trace shortest paths. Single-layer tasks skip it.
+- **Status: not currently buildable.** `References/graphify/graphify-out/graph.json` and repo-root `graphify-out/graph.json` do not exist anywhere in this repo (confirmed absent via repo-wide search, 2026-07-11) — do not attempt to read either path. `References/graphify/` itself does not exist.
+- **To rebuild:** `pip install graphifyy`, then run the `slops-graphify` skill (see `Blueprints/skills/SKILL_ROUTING.md`). Until rebuilt, treat cross-layer questions ("what governs this?") as requiring manual doc lookup — start at root doctrine (`AGENTS.md`/`CLAUDE.md`), follow explicit routing/citation links by hand.
+- **Query pattern once rebuilt:** start at god nodes (Omen → SLOPS OS → Skill system → Slops Saloon), follow cross-layer edges, trace shortest paths. Single-layer tasks skip it.

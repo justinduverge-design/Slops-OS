@@ -15,7 +15,7 @@ You are Codex working in the SLOPS OS root layer. Read these modules in order be
 
 - Cross-cutting doctrine → stay here
 - Slops Saloon division strategy, content + marketing, future products → `slops-saloon/`
-- Omen app code (frontend, backend, deploy, tests) → `slops-saloon/omen/`
+- Omen app code (frontend, backend, deploy, tests) → separate repo, `justinduverge-design/omen` (not a subdirectory of this repo — confirmed 2026-07-11)
 
 ## Kickoff
 
