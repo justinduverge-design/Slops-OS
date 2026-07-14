@@ -75,7 +75,9 @@ Do not place app implementation work in Layer 1 (Slops Saloon). The division lay
 | Skill | Default Agent | Layer | Status | Purpose |
 |---|---|---|---|---|
 | `slops-context-markdown` | Claude first, Codex if writing files | `Layer 0` | `active` | Create, update, normalize, and route DBS markdown context files. |
-| `design-md-author` | Claude first, Codex if writing files | `Layer 0` | `active` | Create, critique, normalize, and improve SLOPS `design.md` files from the canonical design template without editing app source or granting design-agent authority. |
+| `design-md-author` | Claude first, Codex if writing files | `Layer 0` | `active` | Create, critique, normalize, and improve SLOPS `design.md` files from the canonical design template without editing app source or granting design-agent authority. Internally gated by `design-quality-bar` (v1.1.0). |
+| `design-quality-bar` | Claude | `Layer 0` | `active` | Standalone 10-item pass/fail rubric (5 hard fail, 5 soft fail) for catching generic/uncited/"vibe-coded" `design.md` output. Called by `design-md-author` as a mandatory self-critique gate; also callable directly to critique an existing `design.md`. Registered 2026-07-09. |
+| `ux-ui-build-pipeline` | Claude for planning/gates (Stages 0,1,2,4,5,6); Stage 3 (Build) runs on whichever capable coding agent is doing the work — Codex, Claude, Cursor, or another — as long as it follows the pipeline's gates | `Layer 0` | `active` | Six-stage runbook sequencing `design-md-author` (+ internal `design-quality-bar` gate) → design-source reconciliation (Figma MCP — no-op for Omen, no files exist; 21st.dev Magic MCP — Omen's actual design-exploration tool, output must be re-skinned with real tokens) → Build (any capable agent, gated on token substitution not scaffold defaults) → `design:design-critique` + `design:accessibility-review` → `slops-ui-ux-audit` (flagged stale against the 2026-06-22 rebrand) → report. Registered 2026-07-09. |
 | `slops-prompt-generator` | Claude first, Codex if writing files | `Layer 0` | `active` | Convert audits, handoffs, specs, contracts, and context into concrete runnable prompts. |
 | `slops-skill-author` | Claude first, Codex if writing files | `Layer 0` | `active` | Create, critique, normalize, and improve SLOPS-authored skill markdown files. |
 | `slops-agent-author` | Claude first, Codex if writing files | `Layer 0` | `active` | Create, critique, normalize, and improve SLOPS agent role files using RBAC and least privilege. |
@@ -108,6 +110,8 @@ Do not place app implementation work in Layer 1 (Slops Saloon). The division lay
 | `slops-verify` | Claude verifies via driver | `Layer 0` (runs against the app) | `active` | Functional/real-account QA via the run-slops-saloon driver; states, mock/live, no cookie logging. Replaces gstack `browse` / `qa` / `qa-only` (quarantined 2026-06-08). |
 | `slops-graphify` | Claude orchestrates; Justin runs install/runs | `Layer 0` (graphs across L0↔L2) | `active` | Wrapper around the external graphify tool: build one cross-layer knowledge graph so SLOPS OS (L0) and Omen (L2) see each other. Detects-not-installs; output routed to `References/graphify/`. Net-new capability, not a replacement. |
 | `slops-legal-spot-check` | Claude | `Layer 0` | `active` | Pre-counsel triage on a draft document, copy, or product behavior — flag compliance risk before it ships. Converted from agent support-legal-compliance-checker. |
+| `slops-content-ship` | Claude reviews; Justin publishes | `Layer 2` (Omen-local: `slops-saloon/omen/Blueprints/skills/slops-content-ship/`) | `active` | QC gate for Omen promo/marketing video content — script, storyboard, footage (real captures vs. recreated UI), voiceover, captions, and goal-communication. The content equivalent of `slops-ship`; reuses `marketing:brand-review`, `slops-legal-spot-check`, `design:accessibility-review`, `slops-ux-copy` rather than reinventing those checks. Severity-ranked findings only — no auto-fix, no publish authority. |
+| `slops-voiceover` | Claude generates; Justin installs/approves | `Layer 2` (Omen-local: `slops-saloon/omen/Blueprints/skills/slops-voiceover/`) | `active` | Wrapper skill fronting `voicebox` (jamiepine/voicebox, MIT, local-first, `POST /speak` + MCP) to turn an approved promo script into real recorded VO audio — closes the missing-VO gap `slops-content-ship` found. Detects voicebox, never installs it; no cloud/paid TTS fallback. `upstream: voicebox@v0.5.0`. |
 | `mobile-first-qa-playbook` | Claude (audit), Codex (fixes via the loop) | `Layer 0` | `active` | Phone-first QA sweep — iOS Safari + Android Chrome viewport matrix, touch targets, safe-area insets, keyboard avoidance, scroll lock, share sheet, motion-reduce. Severity-ranked findings. Closes Omen launch gap #8 (mobile blocker). |
 | `self-hosted-observability-runbook` | Claude first, Codex if writing files or running install commands | `Layer 0` | `active` | Wire self-hosted observability (sentry-self-hosted + Umami + Vector log shipping) on KVM1 for any Slops product. Replaces SaaS Sentry/Plausible/Datadog (sovereignty). Closes Omen launch gaps #10 (no error monitoring) and #14 (no analytics). |
 | `compliance-by-template` | Claude (draft), Justin (review), Codex (file writes) | `Layer 0` | `active` | Draft launch-required legal docs (ToS, Privacy Policy, DPA, NDA, GDPR/CCPA pages) using open-agreements templates + AI-drafted custom paragraphs. Self-hosted, signable DOCX output. Replaces Termly (sovereignty). |
@@ -597,7 +601,18 @@ graphify is an external tool: detect-not-install. Justin runs the install; outpu
 
 ### Design Documentation
 
-Start with `design-md-author` when creating or reviewing `design.md` files.
+Start with `design-md-author` when creating or reviewing `design.md` files. Every draft it returns has
+already passed (or been revised against) the `design-quality-bar` rubric — do not treat a draft as done
+if that gate hasn't run.
+
+Use `design-quality-bar` directly when the ask is narrower: critiquing an existing `design.md` for
+generic/uncited/"vibe-coded" content without a full authoring pass.
+
+Use `ux-ui-build-pipeline` when the ask is the full design-to-ship sequence — not just the contract, but
+taking a screen/component/entity-theming system from doctrine through build, critique, and final audit
+with explicit gates at each stage. This is the runbook to reach for on "build a screen," "design
+pipeline," or "full design-to-ship pass," not a replacement for calling `design-md-author` or
+`slops-ui-ux-audit` directly for a narrower ask.
 
 Use `slops-context-markdown` for general DBS cleanup.
 
