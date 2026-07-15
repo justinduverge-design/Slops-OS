@@ -1,5 +1,18 @@
 # Slops Saloon Division Decision Log
 
+## Decisions Added 2026-07-14 (D1 — Content Strategy Open Questions, partial resolution)
+
+- **Art style: vary by format**, not one locked style. See `content-strategy.md` Open Questions.
+- **Cast: Omen + human fantasy managers** — human managers are in-scope characters, not narration-only.
+- **Tone: more sitcom + more sports-media**, explicitly not leaning further mythic.
+- **Voice: AI voice stays, current preset ("Onyx") is being replaced** with a more feminine option.
+  Not yet resolved: whether "better voice online" means a different local Kokoro preset or an actual
+  cloud TTS service — `slops-voiceover`'s doctrine requires Justin's separate explicit approval before
+  any cloud/paid TTS fallback, so this is flagged, not decided, pending a session with voicebox running
+  to audition options. Tracked in `current_sprint.md` CP4.
+- **Still open:** minimum-viable-post bar, and which recurring setting (League Court / Waiver Wire
+  Tavern / Group Chat Oracle / Omen Chamber / Trade Confessional) gets built first.
+
 ## Active Decisions
 
 - Slops Saloon is the Layer 1 division under SLOPS OS.

@@ -137,12 +137,25 @@ slops-saloon/
 
 ## Open questions
 
-- One consistent art style or vary by video?
-- Omen-only or include human fantasy managers?
-- More mythic, more sitcom-like, or more sports-media-like?
-- Human voice, AI voice, or no voice at first?
-- Simplest version of a Omen video still worth posting?
-- How often without slowing app dev?
+**Resolved 2026-07-14 (D1, `planning-pass`):**
+
+- **Art style:** vary by format — no single locked visual identity yet; static cards, voiceover shorts,
+  and future animation can each look different for now.
+- **Cast:** Omen + human fantasy managers. Human managers are in scope as characters (League Court
+  defendants, Waiver Wire panickers, etc.), not just Omen narrating alone.
+- **Tone register:** more sitcom-like and more sports-media-like — explicitly *not* leaning further into
+  the mythic/oracle register than the existing character description already does.
+- **Voice:** AI voice stays (Kokoro, via `slops-voiceover`), but the current preset ("Onyx") is out —
+  Justin wants a better, more feminine voice. Two sub-questions still open, flagged rather than assumed:
+  (1) does "better voice online" mean a different local Kokoro preset (`GET /profiles/presets/kokoro`
+  lists 50 options), or an actual cloud TTS service? `slops-voiceover`'s doctrine explicitly requires
+  Justin's separate explicit approval before any cloud/paid TTS fallback — do not treat "online" as
+  approval for that by itself. (2) which preset/service, specifically — needs a real session with
+  voicebox running to browse and audition options, not a decision made blind here.
+
+**Still open:**
+
+- Simplest version of an Omen video still worth posting?
 - Recurring settings (League Court, Omen Chamber) created first?
 
 ## Working recommendation
