@@ -62,10 +62,10 @@ checkout at `C:/Users/JDuve/dev/SLOPS` was read only and never written to.
 
 **Archive (§3)** — 8 artifacts moved by `git mv`; git recorded all as pure renames (`R`).
 
-- L0 → `Archive/planning-pipeline/2026-07-29-pre-status-model/`: `Direction/CLAUDE.md`,
+- L0 → the `2026-07-29-pre-status-model` archive root: `Direction/CLAUDE.md`,
   `Direction/AGENTS.md`, `Blueprints/workflows/{CLAUDE,AGENT}.md` (renamed `.archived.md`), and
   `Blueprints/workflows/README.md` (name preserved). `Blueprints/workflows/` retires entirely.
-- L1 → `slops-saloon/Archive/planning-pipeline/2026-07-29-pre-status-model/`:
+- L1 → the L1 `2026-07-29-pre-status-model` archive root:
   `Direction/{CLAUDE,AGENTS}.md` (renamed inert) and `Direction/TODO.md` (name preserved).
 - `MANIFEST.md` at both archive roots; one index line added to each `Archive/README.md`.
 
@@ -112,3 +112,51 @@ Per §7, any FAIL halts the PR: branch committed and pushed, **PR not opened**.
 
 Supply the two artifacts above, then finish §4.4-L2 and §4.3 (`agent_inbox.md`, which depends
 on the L2 READY set) and re-run A3/A10. Do not begin PR B.
+
+---
+
+# Second pass — 2026-07-30, founder rulings applied
+
+Both blockers resolved. Applied additively; no amend, reset, rebase, or force-push.
+
+## Files updated at L0
+
+- `Blueprints/agent-modules/status-model.md` — now declares `SCHEMA_VERSION 1.0.0`,
+  `ROLE: canonical source`, and `MIRRORED_BY: omen/Direction/status-model.md`. Adds the
+  **`Claim:` rule** (`IN_PROGRESS` requires a current named claimant actively advancing the
+  work; never inferred from partial implementation, a merged PR, or a deleted branch — no
+  valid claim means `READY`), explicit **`Evidence:` requirements** (exact PR/commit/path/run
+  id only, never a broad range; a merged PR alone does not satisfy `VERIFIED`), and the
+  **mirror-synchronization contract**. There is deliberately **no silent "L0 wins" rule**:
+  when both copies are available, any schema-version or operational-content difference is a
+  blocking Truth Gate failure — halt and report. In a standalone Omen checkout the mirror is
+  operative.
+- `Direction/TODO.md` — the approved `## Parked — Truth Gate design inputs` section appended
+  verbatim (cross-reference alignment; registry and authority alignment; parked until FR-C
+  technical design defines invocation points, failure classes, thresholds, and rollout).
+
+## Why the mirror exists — path-resolution proof
+
+`Blueprints/agent-modules/status-model.md` resolves from L0 (`Blueprints/…`), L1
+(`../Blueprints/…`), and L2 **only in the nested desktop arrangement** (`../../Blueprints/…`).
+It does **not** resolve in a standalone Omen clone or in CI, where `actions/checkout` yields
+only the Omen tree — and Omen is gitignored from L0 (`.gitignore:24`) with its own remote, so
+standalone is the normal case for all 8 workflows. The first-pass L2 references pointed at an
+unreachable path; that defect is now fixed and the three L2 references repoint to the mirror.
+
+## L1 unchanged this pass
+
+L1 remains 4 `READY` / 0 / 0 / 3 `CLOSED` = 7, as approved in the first pass.
+
+## Gates
+
+New count gates A13/A14/A15 validate the L2 active-sprint counts, completed-history
+additions, and the combined 35-disposition reconciliation. A1–A12 re-run and passing. A11 is
+rebaselined: 12 linked Omen worktrees, desktop Omen on `chore/legal-valor-ventures-footer`,
+`main` `09ecec2`, `origin/main` `90f6376`, all documented local changes preserved. The
+legal-footer branch and worktree are expected parallel work from the Apple Developer
+organization migration; they were listed only, never entered, and are excluded from PR A.
+
+## Next recommended pull
+
+Run `planning-pass` on the two Omen planning-intake items. Do not begin PR B.
