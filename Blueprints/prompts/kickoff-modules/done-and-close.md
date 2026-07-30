@@ -6,7 +6,7 @@ Then, in order:
 
 1. For behavior-changing code, report the intended RED and resulting GREEN from `slops-tdd`, then run the broader verification commands committed to in the plan-approval gate. Paste the output.
 2. Update the relevant handoff file if the change needs a contract update on the other lane.
-3. Check the item off in `Direction/current_sprint.md` (`- [x]`).
+3. Set `Status: VERIFIED` and record the `Evidence:` pointer in `Direction/current_sprint.md`, per `Blueprints/agent-modules/status-model.md`.
 4. Log notable decisions in `Direction/decision_log.md`.
 5. Write the session handoff per `session-handoff.md`.
 6. Append the skill receipt to the target product's `Blueprints/playbooks/skill-usage-ledger.md` when present.

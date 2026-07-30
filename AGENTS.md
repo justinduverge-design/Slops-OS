@@ -15,7 +15,7 @@ You are Codex working in the SLOPS OS root layer. Read these modules in order be
 
 - Cross-cutting doctrine → stay here
 - Slops Saloon division strategy, content + marketing, future products → `slops-saloon/`
-- Omen app code (frontend, backend, deploy, tests) → separate repo, `justinduverge-design/omen` (not a subdirectory of this repo — confirmed 2026-07-11)
+- Omen app code (frontend, backend, deploy, tests) → `justinduverge-design/omen`, nested at `slops-saloon/omen/` but gitignored from the L0 repo (`.gitignore:24`), so it pushes to its own remote. It IS reachable as a subdirectory; it is NOT tracked by L0.
 
 ## Kickoff
 
