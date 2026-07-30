@@ -53,6 +53,20 @@ carries items.
 - App repo cleanup.
 - Imported agent activation beyond approved status review.
 
+## Parked — Truth Gate design inputs
+
+Accepted as design inputs only. Truth Gate implementation is not yet authorized.
+
+- Cross-reference alignment: define checks that active orientation and authority
+  files agree on canonical paths, layer boundaries, inheritance, and sources of
+  truth.
+
+- Registry and authority alignment: define checks that AGENT_INDEX,
+  SKILL_ROUTING, TOOLS_INDEX, tool-permissions, and on-disk artifacts agree.
+
+Keep parked until FR-C technical design defines invocation points, failure
+classes, warning/blocking thresholds, and rollout behavior.
+
 ## Removed during the 2026-07-29 planning-pipeline cutover
 
 Removed because standing doctrine already covers them — a queue item that restates a

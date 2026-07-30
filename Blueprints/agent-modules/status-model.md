@@ -1,6 +1,12 @@
 # Status model (authoritative)
 
-This module is the single authority for task state across every layer. Queues at L0
+```text
+SCHEMA_VERSION: 1.0.0
+ROLE:           canonical source
+MIRRORED_BY:    omen/Direction/status-model.md
+```
+
+This module is the shared canonical source for task state across every layer. Queues at L0
 (`Direction/TODO.md`), L1 (`slops-saloon/Direction/current_sprint.md`), and L2
 (`omen/Direction/current_sprint.md`) all use it. It replaces the retired checkbox
 mechanic — `- [ ]` / `- [x]` boxes, selecting work by box state, and ticking a box to
@@ -14,6 +20,21 @@ READY → IN_PROGRESS → VERIFIED → CLOSED
 
 `CLOSED` is terminal. A regression after `CLOSED` does not reopen the task — it creates a
 **new linked task** that names the closed one.
+
+## `Claim:` — required for `IN_PROGRESS`
+
+`IN_PROGRESS` is a statement that a named party is **actively advancing the work right
+now**. It is never inferred from partial implementation, a merged PR, or a branch that
+once existed.
+
+```text
+Claim: <YYYY-MM-DD> <named claimant> — <what is being advanced>
+```
+
+A task carries `IN_PROGRESS` only while a current named `Claim:` is present and that
+claimant is actively advancing the remaining work. With no valid active claim the task is
+`READY`, regardless of how much of it is already built. Release a stale claim rather than
+letting it hold the task.
 
 ## Closure
 
@@ -96,3 +117,28 @@ A closed task carries `Closure:` and its evidence instead of `Blocked by:`:
 
 `VERIFIED` carries an `Evidence:` pointer as well — per
 `Blueprints/definition-of-done.md`, point to evidence rather than pasting command output.
+
+## `Evidence:` requirements
+
+`Evidence:` is required on `VERIFIED` and on `CLOSED / COMPLETED`. It must point **only at
+evidence that directly supports that task** — an exact PR number, commit SHA, file path,
+run ID, or output location. Never a broad range (`#125–#139`) that sweeps in unrelated or
+unmerged work. A merged PR alone does not satisfy `VERIFIED`: the task's own `Done when:`
+criteria must be met, and any outstanding item must be shown to fall outside that task's
+scope.
+
+## Mirror synchronization
+
+Omen (`justinduverge-design/omen`) is a separate repository that must work in standalone
+clones and in CI, where this file is unreachable. It therefore carries a **required
+synchronized operational mirror** at `omen/Direction/status-model.md`, which declares
+`MIRROR_OF`, `SCHEMA_VERSION`, `SOURCE_COMMIT`, and `LAST_SYNCED`.
+
+**There is no silent "L0 wins" rule.**
+
+- **Both copies available:** any difference in `SCHEMA_VERSION` or in operational content
+  is a **blocking Truth Gate failure**. Halt and report the mismatch. Do not proceed on
+  either copy and do not quietly reconcile one to the other — the divergence is the finding.
+- **Standalone Omen checkout:** the local mirror is the **operative model**.
+
+Changing this file means updating the mirror and its metadata in the same change.
