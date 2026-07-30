@@ -66,20 +66,20 @@ A runtime may hold Planner and Executor at different times. Neither role is a st
 
 **Scope:** this is a curated OS-authoring subset; `Blueprints\skills\SKILL_ROUTING.md` is the complete registry. A skill absent from this section is not thereby inactive — check `SKILL_ROUTING.md` before concluding anything about a skill's status. The two lists have different purposes and their counts are not expected to match.
 
-| Skill | File | Status | Default Agent | Layer | Purpose |
+| Skill | File | Status | Capability required | Layer | Purpose |
 |---|---|---|---|---|---|
-| `slops-context-markdown` | `Blueprints\skills\slops-context-markdown\SKILL.md` | active | Claude first, Codex if writing files | 0-OS | Create, update, normalize, and route DBS markdown context files |
-| `slops-prompt-generator` | `Blueprints\skills\slops-prompt-generator\SKILL.md` | active | Claude first, Codex if writing files | 0-OS | Convert audits, handoffs, specs, contracts, context into concrete runnable prompts |
-| `slops-skill-author` | `Blueprints\skills\slops-skill-author\SKILL.md` | active | Claude first, Codex if writing files | 0-OS | Create, critique, normalize, and improve SLOPS-authored skill markdown files |
-| `slops-agent-author` | `Blueprints\skills\slops-agent-author\SKILL.md` | active | Claude first, Codex if writing files | 0-OS | Create, critique, normalize, and improve SLOPS agent role files using RBAC and least privilege |
-| `agent-wrapper-generator` | `Blueprints\skills\agent-wrapper-generator\SKILL.md` | active | Claude first, Codex if writing files | 0-OS | Generate least-privilege SLOPS agent wrapper files from approved review memos or explicit candidate selections |
-| `agent-index-diff-builder` | `Blueprints\skills\agent-index-diff-builder\SKILL.md` | active | Claude first, Codex if writing files | 0-OS | Build proposed `AGENT_INDEX.md` additions or diffs from wrapper files without applying them |
-| `rbac-risk-review` | `Blueprints\skills\rbac-risk-review\SKILL.md` | active | Claude first, Codex if writing files | 0-OS | Review agents, skills, prompts, plans, and proposed changes for RBAC, overlap, tool-tier, and high-risk authority concerns |
-| `workflow-tree-spec` | `Blueprints\skills\workflow-tree-spec\SKILL.md` | active | Claude first, Codex if writing files | 0-OS or project | Produce workflow-tree specs with happy paths, branches, failure states, recovery paths, and observable state contracts |
-| `security-privacy-evidence` | `Blueprints\skills\security-privacy-evidence\SKILL.md` | active | Claude first, Codex if writing files | 0-OS or project | Maintain security/privacy evidence notes, control mappings, data classification, consent boundaries, and approval records |
-| `command-bridge-generator` | `Blueprints\skills\command-bridge-generator\SKILL.md` | active | Claude first, Codex if writing files | 0-OS | Generate approved Claude and Codex command-bridge shim files from `SKILL_ROUTING.md` and `AGENT_INDEX.md` |
-| `pre-build-research` | `Blueprints\skills\pre-build-research\SKILL.md` | active | Claude / ChatGPT research first, Codex later | 0-OS or project | Research external APIs, data sources, and integrations before build prompts |
-| `clean-up-checkpoint` | `Blueprints\skills\clean-up-checkpoint\SKILL.md` | active | Claude first, Codex if writing files | 0-OS | Stop new work and create a rate-limit-safe checkpoint with next prompt |
+| `slops-context-markdown` | `Blueprints\skills\slops-context-markdown\SKILL.md` | active | any runtime; file-write requires `guarded-writer` or above | 0-OS | Create, update, normalize, and route DBS markdown context files |
+| `slops-prompt-generator` | `Blueprints\skills\slops-prompt-generator\SKILL.md` | active | any runtime; file-write requires `guarded-writer` or above | 0-OS | Convert audits, handoffs, specs, contracts, context into concrete runnable prompts |
+| `slops-skill-author` | `Blueprints\skills\slops-skill-author\SKILL.md` | active | any runtime; file-write requires `guarded-writer` or above | 0-OS | Create, critique, normalize, and improve SLOPS-authored skill markdown files |
+| `slops-agent-author` | `Blueprints\skills\slops-agent-author\SKILL.md` | active | any runtime; file-write requires `guarded-writer` or above | 0-OS | Create, critique, normalize, and improve SLOPS agent role files using RBAC and least privilege |
+| `agent-wrapper-generator` | `Blueprints\skills\agent-wrapper-generator\SKILL.md` | active | any runtime; file-write requires `guarded-writer` or above | 0-OS | Generate least-privilege SLOPS agent wrapper files from approved review memos or explicit candidate selections |
+| `agent-index-diff-builder` | `Blueprints\skills\agent-index-diff-builder\SKILL.md` | active | any runtime; file-write requires `guarded-writer` or above | 0-OS | Build proposed `AGENT_INDEX.md` additions or diffs from wrapper files without applying them |
+| `rbac-risk-review` | `Blueprints\skills\rbac-risk-review\SKILL.md` | active | any runtime; file-write requires `guarded-writer` or above | 0-OS | Review agents, skills, prompts, plans, and proposed changes for RBAC, overlap, tool-tier, and high-risk authority concerns |
+| `workflow-tree-spec` | `Blueprints\skills\workflow-tree-spec\SKILL.md` | active | any runtime; file-write requires `guarded-writer` or above | 0-OS or project | Produce workflow-tree specs with happy paths, branches, failure states, recovery paths, and observable state contracts |
+| `security-privacy-evidence` | `Blueprints\skills\security-privacy-evidence\SKILL.md` | active | any runtime; file-write requires `guarded-writer` or above | 0-OS or project | Maintain security/privacy evidence notes, control mappings, data classification, consent boundaries, and approval records |
+| `command-bridge-generator` | `Blueprints\skills\command-bridge-generator\SKILL.md` | active | any runtime; file-write requires `guarded-writer` or above | 0-OS | Generate approved command-bridge shim files for each runtime from `SKILL_ROUTING.md` and `AGENT_INDEX.md` |
+| `pre-build-research` | `Blueprints\skills\pre-build-research\SKILL.md` | active | any runtime with network access; file-write requires `guarded-writer` or above | 0-OS or project | Research external APIs, data sources, and integrations before build prompts |
+| `clean-up-checkpoint` | `Blueprints\skills\clean-up-checkpoint\SKILL.md` | active | any runtime; file-write requires `guarded-writer` or above | 0-OS | Stop new work and create a rate-limit-safe checkpoint with next prompt |
 
 ---
 
@@ -224,7 +224,7 @@ divisions:
 
 Imported agents become active through this workflow:
 
-1. Claude or Codex reviews the imported file using `slops-onboarding-agent`, `slops-agent-author`, and `rbac-risk-review`.
+1. A runtime holding at least `guarded-writer` reviews the imported file using `slops-onboarding-agent`, `slops-agent-author`, and `rbac-risk-review`.
 2. Only clear, useful, least-privilege roles receive wrapper files under `Blueprints\agents\<division>\`.
 3. Ambiguous roles stay `reference-only`.
 4. High-risk roles become `do-not-activate`.
