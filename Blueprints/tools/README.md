@@ -25,7 +25,7 @@ Both reference this folder to understand what tools are available at their tier.
 
 - **Agent authority matrix:** `Blueprints\agents\AGENT_INDEX.md`
 - **Skill routing matrix:** `Blueprints\skills\SKILL_ROUTING.md`
-- **Agent manifest:** `Blueprints\agents\agents.md`
+- **Agent manifest:** `Blueprints\agents\AGENT_INDEX.md`
 
 ## Key Principle
 

@@ -20,7 +20,7 @@ Defines current priorities, tasks, and execution protocols.
 
 ### 3. Executive Office (`00_Executive_Office/`)
 
-* `agents.md` → Defines all C-Suite roles
+* `Blueprints/agents/AGENT_INDEX.md` → Runtime policy and Active Trust Assignments; defines all roles as founder / planner / executor, never by vendor
 * `ceo_operator.md` → Translates CEO intent into structured directives
 
 ### 4. Departments

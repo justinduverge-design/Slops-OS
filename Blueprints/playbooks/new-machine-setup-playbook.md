@@ -251,8 +251,9 @@ Full operator guide: `omen/Blueprints/prompts/HOW-TO-RUN-THE-LOOP.md`.
    empty to let each agent auto-pull the top item in its lane; fill it to override the queue
    (required if you want a specific task that isn't top of its lane).
 2. **Paste the kickoff** for the agent you want:
-   - Frontend → `omen/Blueprints/prompts/kickoff-frontend-claude.md` (run in Claude Code)
-   - Backend → `omen/Blueprints/prompts/kickoff-backend-codex.md` (run in Codex)
+   - Any Omen session → `omen/Blueprints/prompts/kickoff-l2.md` (run in any runtime;
+     the kickoff is layer- and capability-named, not vendor-named, and confirms the
+     session's actual capabilities before applying any trust assignment)
 3. The agent self-pulls, hits the **plan-approval gate**, and waits for your confirm before building.
 
 ---

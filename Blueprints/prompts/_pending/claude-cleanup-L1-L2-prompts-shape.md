@@ -38,8 +38,7 @@ Files (sorted, with my best initial classification — **verify each before movi
 | `HOW-TO-RUN-THE-LOOP.md` | root operational doc | Per L2 README: "operator guide for loading one task." Stays at root. |
 | `PROMPTS_CHANGELOG.md` | root operational doc | Append-only log. Stays at root. |
 | `README.md` | root operational doc | Stays at root, gets updated. |
-| `kickoff-backend-codex.md` | template | Per L2 README: "copy-paste starter for Codex backend tasks." Multi-fire. |
-| `kickoff-frontend-claude.md` | template | Per L2 README: "copy-paste starter for Claude frontend tasks." Multi-fire. |
+| `kickoff-l2.md` | template | Single layer- and capability-named L2 starter. Multi-fire. Supersedes the retired vendor-named `kickoff-backend-codex.md` and `kickoff-frontend-claude.md`, both archived under `Archive/authority-routing/`. |
 | `manager_agent.md` | template (or root operational doc) | Per L2 README "Active Runtime Prompts." Read first lines to decide. |
 | `sub_agents.md` | template (likely) | Companion to `manager_agent.md`. Read to confirm. |
 | `prompt_playbook.md` | archive | L2 README explicitly says "superseded by the kickoff files above and remains only as historical context." |
