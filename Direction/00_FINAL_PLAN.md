@@ -1,5 +1,11 @@
 # SLOPS OS Operating Plan
 
+> **HISTORICAL — superseded planning artifact.** This plan records the original root-layer
+> operating design and is preserved for provenance. It is **not** current authority. For
+> current truth use `Direction/facts-of-record.md`, `Direction/decision_log.md`, the layer
+> wrappers (`CLAUDE.md` / `AGENTS.md`), and `Blueprints/agent-modules/status-model.md` for
+> task state. Banner added 2026-07-29 during the planning-pipeline cutover.
+
 ## Purpose
 
 This plan keeps the root SLOPS layer focused on the operating system: context, reusable workflows, agent authority, skills, tools, reports, references, and archive policy.

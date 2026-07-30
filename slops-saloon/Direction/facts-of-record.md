@@ -1,7 +1,7 @@
 # Facts of Record — Slops Saloon (L1)
 
 **valid-as-of:** 2026-06-15
-**Purpose:** L1-specific facts. Inherits L0's facts (see `../Direction/facts-of-record.md`).
+**Purpose:** L1-specific facts. Inherits L0's facts (see `../../Direction/facts-of-record.md`).
 
 ## Active facts
 

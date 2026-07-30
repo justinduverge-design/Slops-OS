@@ -8,8 +8,8 @@ description: Turn a goal into ordered, buildable backlog items for the SLOPS bui
 ## Purpose
 
 Convert a goal or pile of discovered work into ordered, buildable items the build loop can pull
-automatically. A good planning pass means an agent can later read the top unchecked item in its lane
-and start cold — no clarifying questions, no scope guessing.
+automatically. A good planning pass means an agent can later select the top `Status: READY` item in
+its lane and start cold — no clarifying questions, no scope guessing.
 
 This is the deliberate, human-in-the-loop act that *creates* backlog. It is the counterpart to
 `clean-up-checkpoint`, which only surfaces what is already next and never invents new work.
@@ -48,11 +48,26 @@ Read only what is needed for the target product/layer:
    Highest first — that is what the agent pulls.
 5. **Write each item in the required shape** and place blocked items *below* their blockers.
 
-## Required P-Item Shape
+## Required item shape
+
+Emit the status-model field block — never a checkbox. `Blueprints/agent-modules/status-model.md`
+is authoritative for every field below.
 
 ```
-- [ ] **P{n} — {imperative title}.** {what + the files/modules}. Spec: `{path}`. Done-when: {explicit, testable outcome}. {Blocked by P# — only if true.}
+### P{n} — {imperative title}
+
+- **Status:** READY
+- **Blocked by:** None
+- **Priority:** P1
+- **Cost:** small
+- **Scope:** {what + the files/modules}. Spec: `{path}`.
+- **Done when:** {explicit, testable outcome}
+- **Do not touch:** {boundaries}
 ```
+
+`Blocked by:` is required and repeatable — one blocker per line, type as the first token
+(`None`, `AGENT_RESOLVABLE — …`, `FOUNDER_APPROVAL — …`, `EXTERNAL — …`, `TASK-<key> — …`).
+Never write an empty or placeholder reason, and never pair `None` with another blocker.
 
 ## Quality Bar
 
@@ -65,12 +80,14 @@ Read only what is needed for the target product/layer:
 ## Dependency Rule
 
 The loop's pull is dumb about dependencies. Keep a blocked item **below** an unblocked one in the
-same lane and write `Blocked by P#` in the line, so the top-pull always lands on something runnable.
+same lane and write `Blocked by: TASK-P# — <predecessor>`, so the top selection always lands on
+something runnable.
 
 ## Output Format
 
 Write items into the product's `Direction/current_sprint.md` under "Next", in the correct lane,
-in priority order. Update the "Last updated" line. Do not check anything off. The final response
+in priority order. Update the "Last updated" line. Every new item is written at `Status: READY` —
+never advance a status during a planning pass. The final response
 should restate, in 5 bullets max: the goal, the new items by lane in order, any new spec created,
 any dependency blocks, and the recommended first pull.
 
@@ -91,3 +108,5 @@ any dependency blocks, and the recommended first pull.
 ## Change Log
 
 - 2026-06-08: Created from the Omen build-loop planning method (promoted from HOW-TO-RUN-THE-LOOP.md).
+- 2026-07-29: Retired the `- [ ] **P{n}…**` checkbox emitter. This skill now emits the status-model
+  field block per `Blueprints/agent-modules/status-model.md` (`Status:` + `Blocked by:` required).

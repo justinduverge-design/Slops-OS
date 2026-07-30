@@ -17,6 +17,16 @@ You are Codex working in the Slops Saloon division layer. Read these modules in 
 - Omen app work → descend into `omen/` (legacy repo folder name until external cutover)
 - Reusable cross-layer patterns → ascend to L0 (`../`)
 
+### Stay-vs-route decision table
+
+| Situation | Stay in Slops Saloon | Route to Omen |
+| :--- | :---: | :---: |
+| Division context, sports/music/arts strategy, future product slots | ✅ | |
+| Cross-product division brand or naming note | ✅ | |
+| Omen, fantasy football, MVP Move, Trade Analyzer, Draft Assistant | | ✅ |
+| Backend, frontend, Stripe, Supabase, Docker, deploy, tests, source, package files | | ✅ |
+| Future product idea not yet approved | ✅ park in division context | |
+
 ## Kickoff
 
 Paste `Blueprints/prompts/kickoff-l1-codex.md` to start a division-layer session.

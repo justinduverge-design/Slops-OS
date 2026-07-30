@@ -11,6 +11,9 @@ reusable patterns. Not in scope: Omen app code/deploy/tests (L2 — descend
 into omen/), OS-level skills/agents/doctrine (L0 — ascend to ../).
 
 Read in order before acting:
+0. Run slops-repo-inspector before planning. Establish repository truth —
+   branch, ahead/behind origin, uncommitted state, canonical paths — before
+   reading any queue.
 1. CLAUDE.md (this folder)
 2. ../Blueprints/agent-modules/identity-claude.md (Cowork addendum: identity-cowork.md)
 3. ../Blueprints/agent-modules/layer-1-rules.md
@@ -23,22 +26,25 @@ Read in order before acting:
 10. Direction/marketing-strategy.md
 11. Direction/content-strategy.md
 12. Direction/decision_log.md (last 5 entries)
-13. Direction/TODO.md
+13. Direction/current_sprint.md
 
 Then run, in order:
 1. PULL TASK
    - L1 has no agent_inbox.md / auto-populate queue — that mechanism belongs
      to product layers (currently just omen/). Don't route Omen execution
      from here.
-   - Check Direction/TODO.md "Active" section for the next open item, skipping
-     anything under "Out Of Scope" or requiring Justin approval.
+   - Select the top Direction/current_sprint.md item with Status: READY,
+     ordered by the selection rule in
+     ../Blueprints/agent-modules/status-model.md. Skip anything whose
+     Blocked by: line is not None.
    - If Justin's message already names a specific task, that task wins over
-     TODO.md — do it.
+     current_sprint.md — do it.
    - If neither gives you a clear task, say so directly and ask what to work
      on. Don't sit on an unclear message silently, and don't invent a task.
 
 2. PLAN-APPROVAL GATE
-   - Report: task (and where it came from — TODO.md item or direct ask), files
+   - Report: task (and where it came from — current_sprint.md item or direct
+     ask), files
      you expect to touch, whether this belongs at L1 or should route to
      omen/ instead, verification plan, skills you'll invoke, skills
      considered-but-N/A with reason. Wait for Justin's confirmation.
@@ -46,7 +52,8 @@ Then run, in order:
 3. BUILD — once Justin confirms.
 
 4. DONE & CLOSE
-   - Check the item off in Direction/TODO.md (or note why it's still open).
+   - Set Status: VERIFIED on the item in Direction/current_sprint.md and
+     record its Evidence: pointer (or state plainly why it is still open).
    - Log decisions in Direction/decision_log.md.
    - Write a dated handoff in Blueprints/handoffs/YYYY-MM-DD-[topic]-handoff.md
      per session-handoff.md.

@@ -10,6 +10,9 @@ doctrine, skills/agents/tools/prompts, reusable patterns, OS-level rules.
 Not in scope: Slops Saloon division strategy (L1), Omen app code (L2).
 
 Read in order before acting:
+0. Run slops-repo-inspector before planning. Establish repository truth —
+   branch, ahead/behind origin, uncommitted state, canonical paths — before
+   reading any queue.
 1. CLAUDE.md (this folder)
 2. Blueprints/agent-modules/identity-claude.md (Cowork addendum: identity-cowork.md)
 3. Blueprints/agent-modules/layer-0-rules.md
@@ -26,8 +29,9 @@ Then run, in order:
 1. PULL TASK
    - L0 has no agent_inbox.md / auto-populate queue — that mechanism is
      product-layer only (currently just Omen).
-   - Check Direction/TODO.md "Active" section for the next open item, skipping
-     anything listed under "Blocked Without Justin Approval."
+   - Select the top Direction/TODO.md item with Status: READY, ordered by the
+     selection rule in Blueprints/agent-modules/status-model.md. Skip anything
+     whose Blocked by: line is not None.
    - If Justin's message already names a specific task, that task wins over
      TODO.md — do it.
    - If neither gives you a clear task, say so directly and ask what to work
@@ -42,7 +46,8 @@ Then run, in order:
 3. BUILD — once Justin confirms.
 
 4. DONE & CLOSE
-   - Check the item off in Direction/TODO.md (or note why it's still open).
+   - Set Status: VERIFIED on the item in Direction/TODO.md and record its
+     Evidence: pointer (or state plainly why it is still open).
    - Log decisions in Direction/decision_log.md.
    - Write a dated handoff in Blueprints/handoffs/YYYY-MM-DD-[topic]-handoff.md
      per session-handoff.md.
