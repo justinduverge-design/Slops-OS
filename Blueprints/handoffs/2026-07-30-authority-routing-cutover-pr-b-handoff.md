@@ -73,23 +73,52 @@ desktop checkout at `dev/SLOPS` was never written to, and no linked worktree was
 
 ## 4. Unresolved questions
 
-- **D63's canonical A/B/C path definitions were not inlined in the packet.** The audit
-  defines them as enforce-now / time-boxed-exception / retire and says so explicitly. If
-  D63 differs, re-map the rows — the findings and severities do not change.
+- ~~D63's canonical A/B/C path definitions were not inlined in the packet.~~
+  **RESOLVED by D73.** The canonical definitions are A = tighten enforcement,
+  B = founder-ratify existing behavior and update doctrine, C = time-limited exception
+  with owner, reason, expiry, and follow-up task key. Every audit row has been remapped.
+  Every finding resolved to **A**. No B was used (no ratification sought); no C was used
+  (no exception could satisfy all four fields).
 - `cutover/planning-pipeline` still exists on both remotes (it is PR A's merged branch).
   Left untouched; delete only if you want to.
 
+## 4b. Founder rulings D70–D75 — applied
+
+Backup taken first: `dev/_enforcement-backup-d70-d72-2026-07-30T195706/`. The two
+pre-existing backup directories were not touched.
+
+- **D70** — removed the `perPath` OneDrive editor preference from `config.toml`.
+  Unrelated editor preferences preserved (`global = "wsl"` intact). Zero OneDrive and
+  zero `ssffmvp` entries now remain across all three config files. **B10 now PASSES.**
+- **D71** — removed `Bash(npm run *)` and `Bash(npm test *)`. Replaced with exact
+  `Bash(npm test)`, `Bash(npm run test)`, `Bash(npm run evals:validate)`. Script
+  inventory drove the decision: `start`, `dev`, and `cron` all launch servers or cron and
+  were denied; `evals:mock` was denied as unbounded. No npm wildcard remains.
+- **D72** — disabled all 8 write-capable-or-ambiguous plugins in the default profile,
+  including `computer-use` and `sites`. Posture is now **1 enabled, 16 disabled**; the
+  only enabled plugin is the read-only `codex-security`. No credentials, connections, or
+  installations deleted — only `enabled` flags changed. No secret printed or modified.
+- **D73** — canonical A/B/C definitions restored and every row remapped.
+- **D74** — B5 wording replaced; verified on active surfaces only.
+- **D75** — all 13 gates rerun; evidence tracked in
+  `Direction/reviews/2026-07-30-pr-b-gate-results.md`.
+
 ## 5. Blockers surfaced
 
-**CUTOVER_COMPLETE is not yet reachable.** It needs verified local enforcement cleanup,
-and three path-A items are open, all founder-owned machine config:
+**CUTOVER_COMPLETE is now reachable.** All 13 PR B gates pass, local enforcement cleanup
+is verified, and direct Codex hardening is verified. Re-confirm PR A's 15 gates before
+merging.
 
-1. `Bash(npm run *)` in `~/.claude/settings.local.json` — a standing indirect-executor
-   grant. Replace the wildcard with explicit scripts.
-2. `computer-use` and `sites` Codex plugins — write-capable, standing, no recorded
-   assignment. Disable or record a time-boxed exception.
-3. Path C cleanups: five retired-project trust entries and one OneDrive `perPath` line at
-   `config.toml:117`.
+Two **path-A** items remain open. Neither blocks a gate. Neither was actioned because no
+ruling covered it, and acting anyway would be the scope expansion this cutover exists to
+eliminate:
+
+1. **Five retired-project trust entries** in `config.toml` — four dated Codex session
+   folders plus a Palworld directory. Narrow, but stale.
+2. **`Bash(npx vite *)`** — the last wildcard in the Claude allowlist. Not an npm rule,
+   so outside D71's scope.
+
+Both are one edit each on founder-owned machine config.
 
 ## 6. Last verified result
 
@@ -101,12 +130,14 @@ names remain in `tool-permissions.md`, `TOOLS_INDEX.md`, or `AGENT_INDEX.md`; ex
 active layer-named kickoffs and exactly 6 archived vendor-named kickoffs across both
 repos.
 
-**11 of 13 gates PASS. B10 fails on one residual OneDrive UI preference (zero authority
-impact, Path C). B12 passes 3 of 5 sub-checks with 2 findings.** Full detail in the
-enforcement audit and the PR body.
+**13 of 13 gates PASS** after D70–D72. B10 moved FAIL → PASS once the OneDrive preference
+was removed; B12 moved 3/5 → 5/5 once the npm wildcard was removed and the write-capable
+plugins were disabled. Per-gate commands and output are in
+`Direction/reviews/2026-07-30-pr-b-gate-results.md`.
 
 ## 7. Next recommended pull
 
-Action the three Path A enforcement items above, then re-run B10 and B12. Those are the
-only things standing between this branch and CUTOVER_COMPLETE. Do not merge either PR
-until both are green and PR A's 15 gates are re-confirmed.
+Founder review of both PRs. If the two open path-A items are wanted, they are one edit
+each. Merge order is **Slops-OS #10, then Omen #247** — L2's `kickoff-l2.md` points at
+L0's `AGENT_INDEX.md` §§8–9, so merging L2 first would leave those pointers dangling.
+Re-confirm PR A's 15 gates before merging. Do not merge until then.
