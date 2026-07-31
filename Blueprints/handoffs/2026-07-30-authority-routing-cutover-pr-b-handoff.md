@@ -103,22 +103,45 @@ pre-existing backup directories were not touched.
 - **D75** — all 13 gates rerun; evidence tracked in
   `Direction/reviews/2026-07-30-pr-b-gate-results.md`.
 
+## 4c. Founder rulings D76–D78 — applied
+
+Backup first: `dev/_enforcement-backup-d76-d77-2026-07-30T220024/`.
+
+- **D76** — removed all five retired/unrelated Codex trust entries (four dated session
+  folders, one Palworld directory). **Zero trusted project entries now remain**; the only
+  two entries left are `dev\slops` and `dev\slops\slops-saloon\omen`, both `untrusted`.
+  Forbidden-pattern sweep: `documents.codex` 0, `palworld` 0, `onedrive` 0, `ssffmvp` 0,
+  `corvus` 0, no broad-drive entry. **The underlying directories were not deleted or
+  modified** — all four verified still present on disk.
+- **D77** — removed `Bash(npx vite *)`. No replacement wildcard, no standing Vite
+  permission. Allowlist is now 11 rules.
+- **D78** — the premature "13 of 13" claim is retracted in the tracked gate report.
+  Classification is not resolution; a path-A row that has not been tightened is an open
+  finding, not a passing gate. The correct score for that interval was 11 of 13.
+
 ## 5. Blockers surfaced
 
-**CUTOVER_COMPLETE is now reachable.** All 13 PR B gates pass, local enforcement cleanup
-is verified, and direct Codex hardening is verified. Re-confirm PR A's 15 gates before
-merging.
+**CUTOVER_COMPLETE is NOT yet reachable. Current score: 12 of 13.**
 
-Two **path-A** items remain open. Neither blocks a gate. Neither was actioned because no
-ruling covered it, and acting anyway would be the scope expansion this cutover exists to
-eliminate:
+Re-running the verification after D76/D77 surfaced a **third** item of the same class,
+which this session's earlier audit had **mis-assessed**:
 
-1. **Five retired-project trust entries** in `config.toml` — four dated Codex session
-   folders plus a Palworld directory. Narrow, but stale.
-2. **`Bash(npx vite *)`** — the last wildcard in the Claude allowlist. Not an npm rule,
-   so outside D71's scope.
+**`Skill(gstack:*)` — a standing indirect-executor grant. Blocks B12.**
 
-Both are one edit each on founder-owned machine config.
+It is a wildcard over 52 gstack sub-skills. 47 declare `allowed-tools` including **Bash,
+Write, Edit, WebSearch**, so it pre-approves `gstack:land-and-deploy`,
+`gstack:setup-deploy`, `gstack:ship`, `gstack:document-release`,
+`gstack:setup-browser-cookies`, `gstack:autoplan`, and `gstack:codex` — deploy, release,
+and cookie-setup skills. The first audit called this "bounded, read-only or local-dev-only"
+without inspecting the sub-skills. That was wrong.
+
+This is the same class as the `Bash(npm run *)` grant D71 removed and the
+`Bash(npx vite *)` grant D77 removed.
+
+**Classification: A — tighten. Status: OPEN.** Recommended correction: drop
+`Skill(gstack:*)`; keep `Skill(gstack)`, or enumerate the exact QA sub-skills needed
+(`gstack:qa`, `gstack:qa-only`, `gstack:browse`). Not actioned — neither D76 nor D77
+covered it.
 
 ## 6. Last verified result
 
@@ -130,14 +153,28 @@ names remain in `tool-permissions.md`, `TOOLS_INDEX.md`, or `AGENT_INDEX.md`; ex
 active layer-named kickoffs and exactly 6 archived vendor-named kickoffs across both
 repos.
 
-**13 of 13 gates PASS** after D70–D72. B10 moved FAIL → PASS once the OneDrive preference
-was removed; B12 moved 3/5 → 5/5 once the npm wildcard was removed and the write-capable
-plugins were disabled. Per-gate commands and output are in
-`Direction/reviews/2026-07-30-pr-b-gate-results.md`.
+**12 of 13 gates PASS.** B9 moved to PASS once D76 and D77 actually tightened the two
+open path-A rows. **B12 remains UNRESOLVED** — 4 of 5 sub-checks pass; the
+"no indirect executor access" sub-check fails on `Skill(gstack:*)`. Per-gate commands and
+output are in `Direction/reviews/2026-07-30-pr-b-gate-results.md`.
+
+**PR A reconfirmation (D78.3) — PARTIAL.** The A1–A15 gate *definitions* are not committed
+to either repository; they lived in the PR A design packet. Only the summary line survives
+(`2026-07-29-planning-pipeline-cutover-pr-a-handoff.md:153-157`). A literal by-number
+reconfirmation is therefore not possible from the repos alone and is **not** claimed.
+Every checkable PR A invariant was reconfirmed against the merged defaults
+(`origin/master 0632e42`, `origin/main 5be1d25`): `SCHEMA_VERSION` parity 1.0.0 == 1.0.0;
+the L2 mirror pin `SOURCE_COMMIT d26b7b6` resolves in Slops-OS and **is an ancestor of
+origin/master**; `MIRROR_OF` and `LAST_SYNCED` present; and **PR B does not modify
+`status-model.md` at either layer**, so the pin cannot break from this cutover. Supply the
+A1–A15 definitions to complete D78.3 literally.
 
 ## 7. Next recommended pull
 
-Founder review of both PRs. If the two open path-A items are wanted, they are one edit
-each. Merge order is **Slops-OS #10, then Omen #247** — L2's `kickoff-l2.md` points at
-L0's `AGENT_INDEX.md` §§8–9, so merging L2 first would leave those pointers dangling.
-Re-confirm PR A's 15 gates before merging. Do not merge until then.
+A ruling on `Skill(gstack:*)`. It is the only thing between this branch and a genuine
+13 of 13, and it is one edit.
+
+Merge order is **Slops-OS #10, then Omen #247**, and it is load-bearing: L2's
+`kickoff-l2.md` points at L0's `AGENT_INDEX.md` §§8–9, and Omen's `status-model.md`
+pins `SOURCE_COMMIT d26b7b6` from Slops-OS. Merge Slops-OS first and **do not squash
+it**, or the pin stops resolving. Do not merge until B12 passes.

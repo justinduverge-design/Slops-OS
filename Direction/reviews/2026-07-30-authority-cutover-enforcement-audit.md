@@ -1,7 +1,7 @@
 # Enforcement Audit — PR B Authority / Routing Cutover
 
 **Date:** 2026-07-30
-**Revised:** 2026-07-30, after founder rulings D70–D75.
+**Revised:** 2026-07-30, twice — after D70–D75, then again after D76–D78.
 **Scope:** local Claude enforcement rules, direct Codex effective configuration, plugin
 posture, and project trust — the evidence base for gates B9, B10, and B12.
 
@@ -19,10 +19,21 @@ the prior state shown for comparison.
 - **C — time-limited exception.** Requires owner, reason, expiry, **and** follow-up task
   key. Not used anywhere in this audit.
 
-Every finding in this audit resolved to **path A** and every path-A item has been
-actioned, except the two open items called out at the end.
+Every finding in this audit resolved to **path A**. No path B and no path C was used.
 
-**Backup taken before any edit:** `dev/_enforcement-backup-d70-d72-2026-07-30T195706/`
+**Path A means tighten enforcement. Classifying a row as A does not resolve it — only
+the tightening does.** An A row that has not been tightened is an open finding and its
+gate does not pass. One such item remains open; see the end of this document.
+
+**Second revision, after D76-D78.** D76 removed the five retired/unrelated trust entries.
+D77 removed `Bash(npx vite *)`. Both were previously classified path A and left
+uncorrected -- classification is not resolution, and the earlier "13 of 13" claim built on
+that gap has been retracted. Re-running the verification surfaced a **third** item of the
+same class that this audit had mis-assessed: `Skill(gstack:*)`. See "Evidence 5".
+
+**Backup for D76/D77:** `dev/_enforcement-backup-d76-d77-2026-07-30T220024/`.
+
+**Backup taken before the D70-D72 edits:** `dev/_enforcement-backup-d70-d72-2026-07-30T195706/`
 containing `config.toml`, `settings.local.json`, and `settings.json` as they stood before
 the corrections. The pre-existing `_enforcement-backup-2026-07-30T175555` and
 `_codex-config-backup-2026-07-30T181451` were not touched.
@@ -101,19 +112,24 @@ standing default is a doctrine violation, not a convenience.
 |---|---|---|---|
 | `c:\users\jduve\dev\slops` | `untrusted` | Correct. The active work tree is untrusted. | — |
 | `c:\users\jduve\dev\slops\slops-saloon\omen` | `untrusted` | Correct. | — |
-| `c:\users\jduve\documents\codex\2026-06-08\i-want-to-review-your-skills` | `trusted` | Retired-project trust on a dated one-off session folder. | **A — open** |
-| `c:\users\jduve\documents\codex\2026-06-08\help-me-finish-got-it-slops` | `trusted` | Retired-project trust. | **A — open** |
-| `c:\users\jduve\documents\codex\2026-07-18\you-re-working-in-the-omen` | `trusted` | Retired-project trust, Omen-adjacent. | **A — open** |
-| `c:\users\jduve\documents\codex\2026-07-25\realtime-voice-chat` | `trusted` | Retired-project trust. | **A — open** |
-| `e:\steamlibrary\steamapps\common\palworld` | `trusted` | Retired-project trust, unrelated to Slops work. | **A — open** |
+| `c:\users...2026-06-08\i-want-to-review-your-skills` | **REMOVED** | Retired-project trust. | **A — done (D76)** |
+| `c:\users...2026-06-08\help-me-finish-got-it-slops` | **REMOVED** | Retired-project trust. | **A — done (D76)** |
+| `c:\users...2026-07-18\you-re-working-in-the-omen` | **REMOVED** | Retired-project trust, Omen-adjacent. | **A — done (D76)** |
+| `c:\users...2026-07-25\realtime-voice-chat` | **REMOVED** | Retired-project trust. | **A — done (D76)** |
+| `e:\steamlibrary...palworld` | **REMOVED** | Unrelated to Slops work. | **A — done (D76)** |
 
 **No broad drive trust exists.** There is no `c:\`, `e:\`, `c:\users\jduve`, or other
 drive- or profile-root trust entry. Every entry names a specific directory.
 
-These five rows are classified **A — tighten enforcement**, remapped from the earlier
-non-canonical "C". **They remain open:** D70, D71, and D72 authorized specific
-corrections and none of them covered project trust entries. Acting on them without a
-ruling would be exactly the scope expansion this cutover is meant to eliminate.
+**D76 applied. All five removed.** Only two trust entries remain, both `untrusted`:
+`c:\users\jduve\dev\slops` and its `slops-saloon\omen` subdirectory.
+
+**Zero trusted project entries now exist.** Forbidden-pattern sweep over `config.toml`:
+`documents.codex` 0, `palworld` 0, `onedrive` 0, `ssffmvp` 0, `corvus` 0. No drive- or
+profile-root entry exists.
+
+**The underlying directories were not deleted or modified** -- only their Codex trust
+entries were removed. All four were verified still present on disk after the edit.
 
 ---
 
@@ -172,10 +188,43 @@ No rule now permits deploy, migrate, publish, release, database write, productio
 secrets alteration, or starting a production service. Each of those requires an active
 task assignment and explicit action-level founder approval.
 
-**One residual wildcard, open:** `Bash(npx vite *)`. Classified **A — tighten**. It is
-not an npm rule, so D71 did not cover it, and no ruling authorized changing it. It is
-bounded to the local Vite toolchain, but it is still a wildcard. Flagged for a ruling
-rather than changed unilaterally.
+**`Bash(npx vite *)` removed per D77.** No replacement wildcard and no standing Vite
+permission was added. A Vite command may be approved later as an exact command for a
+named task. The allowlist is now 11 rules.
+
+---
+
+## Evidence 5 — `Skill(gstack:*)`: a mis-assessed standing grant
+
+**This audit got this one wrong the first time.** It recorded the gstack rules as
+"bounded, read-only or local-dev-only" and took no action, without inspecting the
+sub-skills. Corrected:
+
+```
+find ~/.claude/skills/gstack -name SKILL.md | wc -l   -> 52
+sub-skills declaring "- Bash" under allowed-tools     -> 47
+```
+
+`Skill(gstack:*)` is a wildcard over 52 sub-skills. 47 declare `allowed-tools` including
+**Bash, Write, Edit, WebSearch**. It therefore pre-approves invocation of:
+
+| Sub-skill | Declares | Prohibited category (D71) |
+|---|---|---|
+| `gstack:land-and-deploy` | Bash | deploy |
+| `gstack:setup-deploy` | Bash | deploy |
+| `gstack:ship` | Bash | release |
+| `gstack:document-release` | Bash | publish / release |
+| `gstack:setup-browser-cookies` | Bash | alter secrets / cookies |
+| `gstack:autoplan` | Bash, Write, Edit | arbitrary write + execution |
+| `gstack:codex` | Bash, Write | arbitrary write + execution |
+
+Same class as the `Bash(npm run *)` grant D71 removed and the `Bash(npx vite *)` grant
+D77 removed.
+
+**Classification: A — tighten. Status: OPEN.** Recommended correction: drop
+`Skill(gstack:*)`, keep `Skill(gstack)`, or enumerate the exact QA sub-skills needed
+(`gstack:qa`, `gstack:qa-only`, `gstack:browse`). Not actioned -- neither D76 nor D77
+covered it. **This item blocks B12.**
 
 ---
 
@@ -206,17 +255,18 @@ Result: **zero matches across all three files.** Zero active OneDrive entries, z
 
 | Gate | Verdict |
 |---|---|
-| **B9** — audit complete, every mismatch on a canonical path, none indefinite | **PASS.** Evidence includes the effective global Codex configuration and the full plugin posture. All rows use the D73 canonical definitions. Every finding resolved to path A; no path B (no founder ratification sought) and no path C (no exception fields would have been satisfiable). |
+| **B9** — audit complete, every mismatch on a canonical path, none indefinite | **PASS.** All prior path-A items are now tightened, not merely classified (D76, D77). Evidence includes the effective global Codex configuration and the full plugin posture. All rows use the D73 canonical definitions; no path B and no path C used. The one newly-identified item (`Skill(gstack:*)`) is recorded with a stated correction and is not indefinite. |
 | **B10** — zero ssffmvp / OneDrive legacy rules | **PASS.** Zero of both, verified across all three configuration files. |
-| **B12** — five sub-checks | **PASS (5 of 5).** No local Claude rule grants blanket publication or indirect executor access — the `npm run *` grant is removed. Direct Codex effective policy is `on-request`. Direct Codex effective sandbox is `workspace-write`. No broad drive trust remains; retired-project trust is documented and open under path A. No write-capable plugin retains standing authority — all are disabled, leaving only the read-only `codex-security`. |
+| **B12** — five sub-checks | **UNRESOLVED. 4 of 5 pass.** No blanket publication: PASS. Direct Codex policy `on-request`: PASS. Direct Codex sandbox `workspace-write`: PASS. No broad drive or retired-project trust: **PASS** — D76 removed all five; zero trusted entries remain. No write-capable plugin with standing authority: PASS — 1 enabled, 16 disabled. **No indirect executor access: FAIL** — `Skill(gstack:*)`, Evidence 5. |
 
-### Open path-A items — founder action required
+### Open path-A item — founder action required
 
-Neither blocks the three gates above. Both are recorded so they cannot be silently
-carried forward, and neither has been actioned because no ruling authorized it:
+One remains, and unlike the previous two it **does block a gate**:
 
-1. **Five retired-project trust entries** in `config.toml` (four dated Codex session
-   folders plus a Palworld directory). Narrow, but stale.
-2. **`Bash(npx vite *)`** — the last remaining wildcard in the Claude allowlist.
+**`Skill(gstack:*)`** — a standing indirect-executor grant across 47 Bash-declaring
+sub-skills, including deploy, release, and cookie-setup skills. **Blocks B12.**
 
-Both are founder-owned machine configuration. Say the word and they take one edit each.
+Recommended correction: drop `Skill(gstack:*)`; keep `Skill(gstack)` or enumerate exact
+QA sub-skills. Not actioned because no ruling covered it.
+
+**Current honest score: 12 of 13.** CUTOVER_COMPLETE is not yet reachable.
