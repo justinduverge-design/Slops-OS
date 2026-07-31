@@ -26,7 +26,7 @@ Use this skill when Justin asks to:
 - Define role-based access control.
 - Decide whether an agent belongs globally or inside a project.
 - Create a reusable agent role file.
-- Normalize `manager_agent.md`, `sub_agents.md`, or division agents.
+- Normalize division agents. (`manager_agent.md` and `sub_agents.md` are canonical at `slops-saloon\omen\Blueprints\prompts\manager_agent.md` and `slops-saloon\omen\Blueprints\prompts\sub_agents.md` — the L0 redirect stubs were archived 2026-07-30.)
 - Separate reusable roles from Omen-specific runtime agents.
 
 ## Do Not Use
@@ -295,11 +295,14 @@ When reviewing an agent:
 9. Define skills it may invoke.
 10. Define approval gates.
 11. Define escalation path.
-12. Add to `AGENT_INDEX.md` only if Justin approves.
+12. Add to `AGENT_INDEX.md` only if the founder approves. Adding a row records a built wrapper; it grants no authority. Authority requires a separate Active Trust Assignment.
 
 ## Special Rule for manager_agent.md and sub_agents.md
 
-If `manager_agent.md` or `sub_agents.md` describe Omen runtime behavior, fantasy football orchestration, or application-specific sub-agent routing, treat them as project-specific until reviewed.
+Both are **already resolved**: they are canonical, live L2 runtime prompts at
+`slops-saloon\omen\Blueprints\prompts\manager_agent.md` and `slops-saloon\omen\Blueprints\prompts\sub_agents.md`. The L0 redirect stubs were archived on 2026-07-30 under
+`Archive/authority-routing/`. Do not recreate an L0 copy, and do not treat either as an
+OS-level agent — neither inherits the 0-OS authority model.
 
 Likely project path:
 

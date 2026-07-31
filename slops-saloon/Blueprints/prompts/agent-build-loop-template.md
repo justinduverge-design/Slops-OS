@@ -15,8 +15,8 @@ Each active product should own its own copies of these files:
 
 - `Direction/agent_inbox.md` - the single active task slot plus candidate queue.
 - `Blueprints/prompts/HOW-TO-RUN-THE-LOOP.md` - operator guide.
-- `Blueprints/prompts/kickoff-backend-codex.md` - backend/API/platform starter.
-- `Blueprints/prompts/kickoff-frontend-claude.md` - frontend/product starter.
+- `Blueprints/prompts/kickoff-l2.md` - the single L2 starter, layer- and
+  capability-named. Supersedes the retired vendor-named backend/frontend pair.
 - `Blueprints/definition-of-done.md` - shared completion checklist.
 - `Blueprints/handoffs/frontend-to-backend.md` - frontend requests to backend.
 - `Blueprints/handoffs/backend-to-frontend.md` - backend contracts to frontend.

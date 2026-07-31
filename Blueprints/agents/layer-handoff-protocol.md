@@ -128,8 +128,8 @@ Runtime prompts (agent system prompts that run in production) belong at the
 
 | Artifact | Correct Location | Reason |
 |----------|-----------------|--------|
-| `manager_agent.md` | `slops-saloon\omen\Blueprints\prompts\` | Product-specific runtime logic |
-| `sub_agents.md` | `slops-saloon\omen\Blueprints\prompts\` | Product-specific runtime logic |
+| `manager_agent.md` | `slops-saloon\omen\Blueprints\prompts\` | Product-specific runtime logic. **Canonical and live.** The L0 redirect stub was archived 2026-07-30. |
+| `sub_agents.md` | `slops-saloon\omen\Blueprints\prompts\` | Product-specific runtime logic. **Canonical and live.** The L0 redirect stub was archived 2026-07-30. |
 | Global skill files | `Blueprints\skills\` (0-OS) | Reusable across all products |
 | Global agent roster | `Blueprints\agents\` (0-OS) | Authority index, not runtime content |
 
@@ -183,6 +183,6 @@ SLOPS\slops-saloon\omen\           ← Layer 2 (omen): App layer
 
 - `Blueprints\agents\AGENT_INDEX.md` — canonical agent authority matrix
 - `Blueprints\tools\tool-permissions.md` — tool tier definitions
-- `Blueprints\skills\SKILL_ROUTING.md` — when to use Claude vs. Codex vs. skills
-- `Blueprints\agents\manager_agent.md` — redirect stub (points to slops-saloon layer)
-- `Blueprints\agents\sub_agents.md` — redirect stub (points to slops-saloon layer)
+- `Blueprints\skills\SKILL_ROUTING.md` — skill registry and routing (keyed to roles and capabilities, not vendors)
+- `slops-saloon\omen\Blueprints\prompts\manager_agent.md` — **canonical** live runtime prompt (the L0 redirect stub was archived under `Archive/authority-routing/`)
+- `slops-saloon\omen\Blueprints\prompts\sub_agents.md` — **canonical** live runtime prompt (the L0 redirect stub was archived under `Archive/authority-routing/`)

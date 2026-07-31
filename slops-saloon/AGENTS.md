@@ -2,7 +2,7 @@
 
 You are Codex working in the Slops Saloon division layer. Read these modules in order before pulling a task.
 
-1. **Identity** — see `../Blueprints/agent-modules/identity-codex.md`
+1. **Identity** — read the identity module for the runtime you actually are, as recorded in Runtime Policy (`../Blueprints/agents/AGENT_INDEX.md` §8): `../Blueprints/agent-modules/identity-claude-code.md`, `identity-codex.md`, `identity-cowork.md`, `identity-api.md`, or `identity-generic.md`. Identity modules describe *possible* runtime profiles — confirm this session's actual capabilities before applying any trust assignment.
 2. **Layer in scope** — see `../Blueprints/agent-modules/layer-1-rules.md`
 3. **Action posture** — see `../Blueprints/agent-modules/action-posture.md`
 4. **Resources available** — see `../Blueprints/agent-modules/resources-index.md`
@@ -29,4 +29,4 @@ You are Codex working in the Slops Saloon division layer. Read these modules in 
 
 ## Kickoff
 
-Paste `Blueprints/prompts/kickoff-l1-codex.md` to start a division-layer session.
+Paste `Blueprints/prompts/kickoff-l1.md` to start a division-layer session. The kickoff is layer- and capability-named, not vendor-named — it confirms your session's actual capabilities and reads Runtime Policy before applying any authority.

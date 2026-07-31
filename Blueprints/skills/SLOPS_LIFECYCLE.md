@@ -15,7 +15,11 @@ When you ask "what skill or playbook handles X?" or "what should we build next?"
 - **Status:** `have` / `partial` / `gap` / `parked`.
 - All Slops-authored skills live **flat** under `Blueprints/skills/` and are indexed in
   `SKILL_ROUTING.md`. This map groups them by phase for reasoning; the folder stays flat for lookup.
-- Every skill keeps the Slops contract: **Claude plans / Codex executes / Justin gates.**
+- Every skill keeps the Slops contract: **planner plans / executor executes / founder gates.**
+  These are roles, not vendors. Which runtime is *eligible* for a role is recorded in
+  Runtime Policy (`Blueprints/agents/AGENT_INDEX.md` §8); which runtime currently *holds*
+  it comes from an Active Trust Assignment (§9). Eligibility is not authority, and no
+  vendor or model name grants a role.
 
 ## The lifecycle
 
@@ -33,7 +37,7 @@ When you ask "what skill or playbook handles X?" or "what should we build next?"
 | 10 | **Monitor** — post-deploy canary | `slops-canary` | skill | have |
 | 11 | **Operate** — root-cause / debug / incident | `slops-investigate` | skill | have |
 | 12 | **Learn** — retro → memory/decision_log | `slops-retro` | skill | have |
-| 13 | **Scale** — scaffold the next product | `app-scaffold` template, `provider-adapter-template` | template | have |
+| 13 | **Scale** — scaffold the next product | `app-scaffold` template, `provider-adapter-template` | template | have — see template inheritance note below |
 
 ## Auxiliary OS capabilities
 
@@ -51,8 +55,8 @@ These are net-new SLOPS utilities that support the lifecycle but do not replace 
 | **Community needs and resource research** | `slops-community-needs-research` | simple skill | parked | Far-future product discovery only; Justin must explicitly name the community, geography, need, and decision before reactivation. |
 | **Product readiness / gap analysis** | `product-gap-analysis-session` | simple skill | have | Verifies current code and facts, then separates Have/Need/Gap and routes a phased plan; registered 2026-06-21 after an index-drift audit. |
 | **AI design contracts** | `design-md-author` | package skill | have | Authors/normalizes product-root `design.md` files (Google DESIGN.md-format visual contracts for Claude/Codex/Gemini/Cursor). Compiles existing brand + UX-system + entity-identity doctrine into cited, guardrail-bearing tokens; does not invent design direction. Normalized to full template shape 2026-07-08 after a live compilation exercise for Omen's 32-team identity system. Pairs with `slops-design-system-pack` (reference systems) and `slops-ui-ux-audit` (post-build audit). |
-| **Design-contract quality rubric** | `design-quality-bar` | package skill | have | Standalone 10-item pass/fail rubric for catching generic/uncited/"vibe-coded" output in any design.md or brand-contract draft. Called as a mandatory step inside `design-md-author`'s Process Recipe (and any future component/page-level design.md skill); not a standalone deliverable-producing skill. Registered 2026-07-09. |
-| **UX/UI build-to-ship runbook** | `ux-ui-build-pipeline` | package skill | have | Orchestrates `design-md-author` → `design-quality-bar` (internal) → design-source reconciliation (21st.dev Magic MCP — Omen's actual tool; Figma MCP connected but unused, Justin has no Figma files) → Codex build (must replace scaffold defaults with real design.md tokens) → `design:design-critique` + `design:accessibility-review` → `slops-ui-ux-audit` → report, with explicit gates at each stage. Names available MCP tooling honestly rather than assuming it (Playwright MCP recommended-but-not-installed). Surfaced that `slops-ui-ux-audit` is stale against the 2026-06-22 palette/font rebrand as part of its own authoring pass. Registered 2026-07-09. |
+| **Design-contract quality rubric** | `design-quality-bar` | package skill | **PLANNED — does not exist** | Standalone 10-item pass/fail rubric for catching generic/uncited/"vibe-coded" output in any design.md or brand-contract draft. **Correction:** previously described as "called as a mandatory step inside `design-md-author`'s Process Recipe". That was never implemented — `design-md-author/SKILL.md` contains zero references to it, and no `design-quality-bar` skill exists. The gate is unimplemented and the skill is absent. Not callable. |
+| **UX/UI build-to-ship runbook** | `ux-ui-build-pipeline` | package skill | **PLANNED — does not exist** | Would orchestrate `design-md-author` → `design-quality-bar` (PLANNED, absent — no gate runs today) → design-source reconciliation (21st.dev Magic MCP — Omen's actual tool; Figma MCP connected but unused, Justin has no Figma files) → Codex build (must replace scaffold defaults with real design.md tokens) → `design:design-critique` + `design:accessibility-review` → `slops-ui-ux-audit` → report, with explicit gates at each stage. Names available MCP tooling honestly rather than assuming it (Playwright MCP recommended-but-not-installed). Surfaced that `slops-ui-ux-audit` is stale against the 2026-06-22 palette/font rebrand as part of its own authoring pass. Registered 2026-07-09. |
 
 Notes:
 - `slops-legal-spot-check` is active as pre-counsel triage support. It flags legal/compliance risk before publication but does not replace counsel or claim a lifecycle phase.
@@ -162,3 +166,33 @@ Still parked in `_proposals/`: `slops-lore-review` (needs animated-series concep
 - Add / rename / retire a skill → update **both** this map and `SKILL_ROUTING.md` in the same pass.
 - This file is the source of truth for the gstack keep/replace/drop migration; Codex should not
   remove `gstack-latest` skills that are still marked KEEP-pending or REPLACE-not-yet-built here.
+
+### Template inheritance: `app-scaffold`
+
+A product scaffolded from `app-scaffold` inherits the **structure** of the layer it is
+scaffolded into. It does **not** inherit authority.
+
+- A scaffolded product inherits doctrine pointers, folder shape, and the definition of
+  done from its layer.
+- It does **not** inherit any trust tier, any Active Trust Assignment, or any prior
+  approval. A new product starts at each runtime's `default_tier`, with
+  `assignments: []`, exactly like any other scope.
+- Scaffolding is a Tier 3 action. It never carries a Tier 4 or Tier 5 grant forward from
+  the template or from the layer it was copied out of.
+- Templates must not embed vendor-keyed role assignments. Where a template names who does
+  what, it names **planner / executor / founder**, and the runtime is resolved at
+  invocation from Runtime Policy.
+
+### Activating a PLANNED design skill
+
+`design-quality-bar` and `ux-ui-build-pipeline` are **PLANNED**. They are not `active`,
+not `PARKED`, and not an executor's choice. No folder and no placeholder `SKILL.md` may
+be created to make a routing row look consistent.
+
+Restoring either to `active` requires all five steps, in order:
+
+1. Create the skill.
+2. Integrate the caller.
+3. Test the gate.
+4. Record evidence.
+5. Only then restore ACTIVE.

@@ -75,9 +75,9 @@ Do not place app implementation work in Layer 1 (Slops Saloon). The division lay
 | Skill | Default Agent | Layer | Status | Purpose |
 |---|---|---|---|---|
 | `slops-context-markdown` | Claude first, Codex if writing files | `Layer 0` | `active` | Create, update, normalize, and route DBS markdown context files. |
-| `design-md-author` | Claude first, Codex if writing files | `Layer 0` | `active` | Create, critique, normalize, and improve SLOPS `design.md` files from the canonical design template without editing app source or granting design-agent authority. Internally gated by `design-quality-bar` (v1.1.0). |
-| `design-quality-bar` | Claude | `Layer 0` | `active` | Standalone 10-item pass/fail rubric (5 hard fail, 5 soft fail) for catching generic/uncited/"vibe-coded" `design.md` output. Called by `design-md-author` as a mandatory self-critique gate; also callable directly to critique an existing `design.md`. Registered 2026-07-09. |
-| `ux-ui-build-pipeline` | Claude for planning/gates (Stages 0,1,2,4,5,6); Stage 3 (Build) runs on whichever capable coding agent is doing the work — Codex, Claude, Cursor, or another — as long as it follows the pipeline's gates | `Layer 0` | `active` | Six-stage runbook sequencing `design-md-author` (+ internal `design-quality-bar` gate) → design-source reconciliation (Figma MCP — no-op for Omen, no files exist; 21st.dev Magic MCP — Omen's actual design-exploration tool, output must be re-skinned with real tokens) → Build (any capable agent, gated on token substitution not scaffold defaults) → `design:design-critique` + `design:accessibility-review` → `slops-ui-ux-audit` (flagged stale against the 2026-06-22 rebrand) → report. Registered 2026-07-09. |
+| `design-md-author` | Claude first, Codex if writing files | `Layer 0` | `active` | Create, critique, normalize, and improve SLOPS `design.md` files from the canonical design template without editing app source or granting design-agent authority. **No implemented quality gate.** `design-quality-bar` is PLANNED and does not exist; this skill contains zero references to it. Any claim of an internal gate is unimplemented. |
+| `design-quality-bar` | (unassigned until built) | `Layer 0` | `PLANNED` | **Does not exist.** No `Blueprints/skills/design-quality-bar/` folder and no `SKILL.md`. Intended as a standalone 10-item pass/fail rubric (5 hard fail, 5 soft fail) for catching generic/uncited/"vibe-coded" `design.md` output. **Correction:** this row previously stated it was "called by `design-md-author` as a mandatory gate". That was never true — `design-md-author/SKILL.md` contains zero references to it. The gate is unimplemented **and** the skill does not exist. Not callable. See "Activating a PLANNED design skill". |
+| `ux-ui-build-pipeline` | (unassigned until built) | `Layer 0` | `PLANNED` | **Does not exist.** No `Blueprints/skills/ux-ui-build-pipeline/` folder and no `SKILL.md`. Not callable. Intended as a six-stage runbook sequencing `design-md-author` (+ internal `design-quality-bar` gate) → design-source reconciliation (Figma MCP — no-op for Omen, no files exist; 21st.dev Magic MCP — Omen's actual design-exploration tool, output must be re-skinned with real tokens) → Build (any capable agent, gated on token substitution not scaffold defaults) → `design:design-critique` + `design:accessibility-review` → `slops-ui-ux-audit` (flagged stale against the 2026-06-22 rebrand) → report. Registered 2026-07-09. |
 | `slops-prompt-generator` | Claude first, Codex if writing files | `Layer 0` | `active` | Convert audits, handoffs, specs, contracts, and context into concrete runnable prompts. |
 | `slops-skill-author` | Claude first, Codex if writing files | `Layer 0` | `active` | Create, critique, normalize, and improve SLOPS-authored skill markdown files. |
 | `slops-agent-author` | Claude first, Codex if writing files | `Layer 0` | `active` | Create, critique, normalize, and improve SLOPS agent role files using RBAC and least privilege. |
@@ -155,7 +155,7 @@ Claude should be used when the task requires reasoning, planning, review, docume
 - **Use Case**: Updating operating rules, project boundaries, and agent behavior documentation.
 - **Examples**:
   - updating `coo.md`
-  - updating `agents.md`
+  - updating `AGENT_INDEX.md` (runtime policy / active assignments)
   - creating skill files
   - writing standard operating procedures
   - creating Claude/Codex handoff prompts
@@ -602,13 +602,13 @@ graphify is an external tool: detect-not-install. Justin runs the install; outpu
 ### Design Documentation
 
 Start with `design-md-author` when creating or reviewing `design.md` files. Every draft it returns has
-already passed (or been revised against) the `design-quality-bar` rubric — do not treat a draft as done
+would ideally have passed a `design-quality-bar` rubric — but that skill is PLANNED and does not exist, so no such gate currently runs. Do not treat a draft as gate-passed
 if that gate hasn't run.
 
-Use `design-quality-bar` directly when the ask is narrower: critiquing an existing `design.md` for
+`design-quality-bar` is PLANNED and cannot be used. Once built, it would serve the narrower ask: critiquing an existing `design.md` for
 generic/uncited/"vibe-coded" content without a full authoring pass.
 
-Use `ux-ui-build-pipeline` when the ask is the full design-to-ship sequence — not just the contract, but
+`ux-ui-build-pipeline` is PLANNED and cannot be used. Once built, it would serve the full design-to-ship sequence — not just the contract, but
 taking a screen/component/entity-theming system from doctrine through build, critique, and final audit
 with explicit gates at each stage. This is the runbook to reach for on "build a screen," "design
 pipeline," or "full design-to-ship pass," not a replacement for calling `design-md-author` or

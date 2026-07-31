@@ -15,7 +15,7 @@ If a role is not listed as `active` in `AGENT_INDEX.md`, it is not callable and 
 | File | Purpose |
 |---|---|
 | **`AGENT_INDEX.md`** | Canonical agent authority matrix — read this first |
-| **`agents.md`** | Agent manifest defining Claude, Codex, and Justin roles |
+| **`AGENT_INDEX.md`** | Runtime policy (§8) and Active Trust Assignments (§9). Roles are keyed to founder / planner / executor, never to a vendor. Supersedes the retired `agents.md` manifest, archived under `Archive/authority-routing/`. |
 | **`_imported\`** | Imported agent library — reference-only by default; see AGENT_INDEX.md for promotion status |
 
 ## Imported Agents Warning
@@ -49,4 +49,5 @@ Every agent has a tier cap:
 - **Tool permissions:** `Blueprints\tools\tool-permissions.md`
 - **Tool index:** `Blueprints\tools\TOOLS_INDEX.md`
 - **Skill routing:** `Blueprints\skills\SKILL_ROUTING.md`
-- **Agent manifest:** `agents.md`
+- **Runtime policy and active assignments:** `AGENT_INDEX.md`
+- **Action Risk Tiers / approval doctrine:** `Blueprints\tools\tool-permissions.md`

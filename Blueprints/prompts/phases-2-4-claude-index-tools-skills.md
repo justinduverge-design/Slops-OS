@@ -1,3 +1,13 @@
+> **HISTORICAL — EXECUTED PROMPT. Do not run.** Drafted 2026-05-23 and completed. Its
+> body is preserved as written and is **not** edited to match current doctrine (D58).
+> Where it names `agents.md` as a live file, that was true then and is not now: the
+> global `agents.md` manifest was retired on 2026-07-30 and archived under
+> `Archive/authority-routing/2026-07-30-pre-runtime-trust/`. Current authority lives in
+> `Blueprints/agents/AGENT_INDEX.md` (Runtime Policy §8, Active Trust Assignments §9)
+> and `Blueprints/tools/tool-permissions.md` (Action Risk Tiers). The `manager_agent.md`
+> and `sub_agents.md` redirect stubs it references were archived at the same time; their
+> canonicals are live at `slops-saloon\omen\Blueprints\prompts\`.
+
 # Phases 2–4 — SLOPS OS Index, Tools, and Skills Normalization
 ## Prompt for: Claude (Cowork mode)
 ## Skill to invoke: slops-context-markdown (for every file created or edited)
