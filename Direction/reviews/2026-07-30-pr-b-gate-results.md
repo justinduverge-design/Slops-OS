@@ -1,4 +1,4 @@
-# PR B — Gate Results (13 gates; currently 12 pass)
+# PR B — Gate Results (13 of 13 PASS)
 
 **Date:** 2026-07-30, after founder rulings D70–D75.
 **Branches:** `cutover/authority-routing` in `Slops-OS` and `omen`. Both open, unmerged.
@@ -16,11 +16,12 @@
 > The correct score in that interval was **11 of 13**. This file now records the state
 > after D76 and D77 were actually applied.
 >
-> **D76 and D77 have since been applied.** Both prior path-A items are now genuinely
-> tightened. Re-running the verification, however, surfaced a **third** item of the same
-> class that the earlier audit had mis-assessed: `Skill(gstack:*)`. It is documented under
-> B12 below. **Current score: 12 of 13. B12 remains UNRESOLVED.** This file does not claim
-> 13/13.
+> **D76, D77, and D79 have since been applied.** All three path-A items are now genuinely
+> tightened, not merely classified. The third item — `Skill(gstack:*)` plus the standing
+> `Skill(gstack)` dispatcher — was removed under D79. **Zero path-A items remain open.**
+>
+> **Current score: 13 of 13, genuinely.** The history above is retained deliberately so the
+> premature claim and its correction stay visible in the record.
 
 Commands were run from `dev/_cutover-b-2026-07-30/`. `slops-os/` and `omen/` are the two
 fresh clones. No desktop checkout and no linked worktree was involved.
@@ -170,9 +171,9 @@ as D69 requires. Every row uses the D73 canonical definitions. No path B was use
 founder ratification was sought). No path C was used (no exception could have satisfied
 all four required fields).
 
-One **newly-identified** path-A item is open and recorded: `Skill(gstack:*)`. It is not
-indefinite -- it carries a stated correction and awaits a ruling. It is recorded here
-rather than silently carried, which is what this gate asks for. It does block **B12**.
+The newly-identified item (`Skill(gstack:*)` and the `Skill(gstack)` dispatcher) was
+tightened under D79. **Zero path-A items remain open.** No path B and no path C was used
+anywhere in this audit.
 
 ## B10 — Zero ssffmvp / OneDrive legacy rules
 
@@ -208,11 +209,30 @@ every file read and PULL TASK, in all three.
 
 ## B12 — Five sub-checks
 
-**UNRESOLVED. 4 of 5 sub-checks pass.**
+**PASS (5 of 5), after D79.**
 
-`Bash(npx vite *)` was removed per D77. But re-running the verification surfaced a
+`Bash(npx vite *)` was removed per D77. Re-running the verification then surfaced a
 standing indirect-execution grant the earlier audit **mis-assessed as bounded**:
-`Skill(gstack:*)`.
+`Skill(gstack:*)`. D79 removed it — and also the top-level `Skill(gstack)`, because that
+entry both declares `Bash` in its own `allowed-tools` and explicitly dispatches into
+sub-skills (`invoke /autoplan`, `/investigate`, `/qa`, `/office-hours`), making it a
+standing dispatcher in its own right.
+
+```
+grep -c 'gstack' ~/.claude/settings.local.json        -> 0
+grep -o '"[^"]*\*[^"]*"' ~/.claude/settings.local.json -> ZERO wildcards
+find ~/.claude/skills/gstack -name SKILL.md | wc -l   -> 52  (still installed, nothing deleted)
+```
+
+No replacement standing permission was added for `gstack:qa`, `gstack:qa-only`,
+`gstack:browse`, or any other sub-skill. A specific gstack skill may be approved later for
+a named task through the normal assignment and action-approval process.
+
+**Effective allowlist is now 9 rules with zero wildcards.** None can reach deployment,
+release, publication, secrets/cookie modification, arbitrary Bash, arbitrary Write,
+arbitrary Edit, or delegated Codex execution.
+
+The original finding, retained for the record:
 
 ```
 find ~/.claude/skills/gstack -name SKILL.md | wc -l            -> 52
@@ -242,16 +262,15 @@ from `Bash(npm run *)` and D77 removed from `Bash(npx vite *)`.
 | Sub-check | Verdict |
 |---|---|
 | No blanket **publication** access | **PASS** |
-| No **indirect executor** access | **FAIL** -- `Skill(gstack:*)` |
+| No **indirect executor** access | **PASS** — `Skill(gstack:*)` and `Skill(gstack)` removed (D79) |
 | Direct Codex effective policy `on-request` | **PASS** (`config.toml:6`) |
 | Direct Codex effective sandbox `workspace-write` | **PASS** (`config.toml:8`) |
 | No broad drive or retired-project trust | **PASS** -- see B9; only 2 entries remain, both `untrusted` |
 | No write-capable plugin with unproven standing authority | **PASS** -- 1 enabled, 16 disabled |
 
-**Path A — tighten.** Recommended correction: remove `Skill(gstack:*)` and keep only
-`Skill(gstack)`, or replace it with the exact sub-skills actually needed for QA
-(`gstack:qa`, `gstack:qa-only`, `gstack:browse`). Not actioned -- D76 and D77 did not
-cover it, and acting unbidden is the scope expansion this cutover exists to eliminate.
+**Path A — tighten. DONE under D79.** Note that the correction went further than this
+audit first recommended: keeping `Skill(gstack)` would **not** have been sufficient, since
+the top-level entry is itself a Bash-declaring dispatcher. Both entries were removed.
 
 | Sub-check | Verdict | Evidence |
 |---|---|---|
@@ -286,14 +305,32 @@ and `omen/Blueprints/prompts/sub_agents.md` (2665 B), neither renamed nor archiv
 | Component | Status |
 |---|---|
 | 15 PR A gates | Passed at PR A. Re-confirm before merge. |
-| 13 PR B gates | **12 of 13.** B12 unresolved (`Skill(gstack:*)`). |
-| Verified local enforcement cleanup | **NOT fully verified.** One path-A item open. |
+| 13 PR B gates | **13 of 13 PASS.** |
+| Verified local enforcement cleanup | **Verified.** D70, D71, D72, D76, D77, D79 applied and confirmed. Zero path-A items open. |
 | Verified direct Codex hardening | **Verified.** `on-request` + `workspace-write`, F2 commands not regenerated. |
 
-Both PRs remain open and unmerged. **CUTOVER_COMPLETE is not yet reachable.** One
-path-A item (`Skill(gstack:*)`) must be tightened before B12 passes.
+### PR A regression verification (D80)
 
-### PR A gate reconfirmation (D78.3) — PARTIAL
+Per D80, the exact A1–A15 definitions are **not durable repository artifacts** and were
+**not** invented or reconstructed. The approved regression set was run instead, against the
+merged defaults (`origin/master 0632e42`, `origin/main 5be1d25`):
+
+| # | Check | Result |
+|---|---|---|
+| 1 | L0 / L2 status-model schema parity | **PASS** — `1.0.0` == `1.0.0` |
+| 2 | Omen `SOURCE_COMMIT` resolves and remains an ancestor of Slops-OS master | **PASS** — `d26b7b6` resolves; ancestor of `origin/master` |
+| 3 | `MIRROR_OF`, `SCHEMA_VERSION`, `SOURCE_COMMIT`, `LAST_SYNCED` present | **PASS** — all four present |
+| 4 | PR B does not modify either status-model file | **PASS** — untouched at both layers |
+| 5 | Merged PR A handoffs remain present | **PASS** — both present on the PR B branches |
+| 6 | Active/completed task structure from PR A remains resolvable | **PASS** — `current_sprint.md`, `agent_inbox.md`, `status-model.md`, `done/LEDGER.md` all resolve |
+| 7 | Archived PR A control surfaces remain outside active routing | **PASS** — the PR A archive is referenced only from `Archive/README.md` and records; no active surface points into it |
+
+**Non-blocking follow-up lesson recorded (D80):**
+
+> Future cutover gate definitions must be committed in a durable verification document and
+> not exist only inside an execution prompt.
+
+### Superseded note — the earlier partial reconfirmation
 
 The A1-A15 gate **definitions** are not committed to either repository; they lived in the
 PR A design packet. Only the summary survives, in
@@ -316,4 +353,6 @@ Every PR A invariant that *is* checkable against the merged defaults was reconfi
 **Merge order is load-bearing for the pin:** merge Slops-OS #10 first and do not squash
 it, or Omen's pinned `SOURCE_COMMIT` stops resolving.
 
-To complete D78.3 literally, supply the A1-A15 definitions from the PR A packet.
+D80 supersedes this: the A1–A15 definitions are accepted as non-durable, and the seven
+checks above are the agreed regression verification for this cutover. No replacement
+definitions were created or guessed.

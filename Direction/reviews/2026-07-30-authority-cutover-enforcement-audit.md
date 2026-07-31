@@ -1,7 +1,7 @@
 # Enforcement Audit — PR B Authority / Routing Cutover
 
 **Date:** 2026-07-30
-**Revised:** 2026-07-30, twice — after D70–D75, then again after D76–D78.
+**Revised:** 2026-07-30, three times — after D70–D75, after D76–D78, and finally after D79–D81.
 **Scope:** local Claude enforcement rules, direct Codex effective configuration, plugin
 posture, and project trust — the evidence base for gates B9, B10, and B12.
 
@@ -23,7 +23,7 @@ Every finding in this audit resolved to **path A**. No path B and no path C was 
 
 **Path A means tighten enforcement. Classifying a row as A does not resolve it — only
 the tightening does.** An A row that has not been tightened is an open finding and its
-gate does not pass. One such item remains open; see the end of this document.
+gate does not pass. **Every path-A row in this audit is now tightened. Zero remain open.**
 
 **Second revision, after D76-D78.** D76 removed the five retired/unrelated trust entries.
 D77 removed `Bash(npx vite *)`. Both were previously classified path A and left
@@ -221,10 +221,38 @@ sub-skills declaring "- Bash" under allowed-tools     -> 47
 Same class as the `Bash(npm run *)` grant D71 removed and the `Bash(npx vite *)` grant
 D77 removed.
 
-**Classification: A — tighten. Status: OPEN.** Recommended correction: drop
-`Skill(gstack:*)`, keep `Skill(gstack)`, or enumerate the exact QA sub-skills needed
-(`gstack:qa`, `gstack:qa-only`, `gstack:browse`). Not actioned -- neither D76 nor D77
-covered it. **This item blocks B12.**
+**Classification: A — tighten. Status: DONE under D79.**
+
+D79 removed **both** `Skill(gstack:*)` and the top-level `Skill(gstack)`. The top-level
+entry had to go too: it declares `Bash` in its own `allowed-tools` and explicitly
+dispatches into sub-skills (`invoke /autoplan`, `/investigate`, `/qa`, `/office-hours`),
+so it is a standing dispatcher in its own right. This audit's first recommendation —
+"keep `Skill(gstack)`" — would have been insufficient.
+
+No replacement standing permission was added for any gstack sub-skill. **gstack itself was
+not uninstalled and no gstack skill was deleted** — all 52 `SKILL.md` files remain on disk.
+A specific gstack skill may be approved later for a named task through the normal
+assignment and action-approval process.
+
+Backup: `dev/_enforcement-backup-d79-2026-07-30T220948/`.
+
+**Effective allowlist: 9 rules, zero wildcards.**
+
+```json
+"Bash(npm --prefix frontend run build)",
+"Bash(npm test)",
+"Bash(npm run test)",
+"Bash(npm run evals:validate)",
+"Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:5173/)",
+"mcp__notebooklm-mcp__notebook_list",
+"mcp__notebooklm-mcp__notebook_get",
+"mcp__notebooklm-mcp__notebook_describe",
+"mcp__notebooklm-mcp__source_describe"
+```
+
+Reachability check — no remaining rule can invoke: deployment, release, publication,
+secrets/cookie modification, arbitrary Bash, arbitrary Write, arbitrary Edit, or delegated
+Codex execution.
 
 ---
 
@@ -255,18 +283,23 @@ Result: **zero matches across all three files.** Zero active OneDrive entries, z
 
 | Gate | Verdict |
 |---|---|
-| **B9** — audit complete, every mismatch on a canonical path, none indefinite | **PASS.** All prior path-A items are now tightened, not merely classified (D76, D77). Evidence includes the effective global Codex configuration and the full plugin posture. All rows use the D73 canonical definitions; no path B and no path C used. The one newly-identified item (`Skill(gstack:*)`) is recorded with a stated correction and is not indefinite. |
+| **B9** — audit complete, every mismatch on a canonical path, none indefinite | **PASS.** Every path-A row is tightened, not merely classified (D70, D71, D72, D76, D77, D79). **Zero open items.** Evidence includes the effective global Codex configuration and the full plugin posture. All rows use the D73 canonical definitions; no path B and no path C used. |
 | **B10** — zero ssffmvp / OneDrive legacy rules | **PASS.** Zero of both, verified across all three configuration files. |
-| **B12** — five sub-checks | **UNRESOLVED. 4 of 5 pass.** No blanket publication: PASS. Direct Codex policy `on-request`: PASS. Direct Codex sandbox `workspace-write`: PASS. No broad drive or retired-project trust: **PASS** — D76 removed all five; zero trusted entries remain. No write-capable plugin with standing authority: PASS — 1 enabled, 16 disabled. **No indirect executor access: FAIL** — `Skill(gstack:*)`, Evidence 5. |
+| **B12** — five sub-checks | **PASS (5 of 5).** No blanket publication: PASS. **No indirect executor access: PASS** — `Skill(gstack:*)` and `Skill(gstack)` removed under D79; allowlist is 9 rules with zero wildcards. Direct Codex policy `on-request`: PASS. Direct Codex sandbox `workspace-write`: PASS. No broad drive or retired-project trust: PASS — zero trusted entries remain. No write-capable plugin with standing authority: PASS — 1 enabled, 16 disabled. |
 
-### Open path-A item — founder action required
+### Open path-A items
 
-One remains, and unlike the previous two it **does block a gate**:
+**None.** All were tightened: D70 (OneDrive preference), D71 (`npm` wildcards), D72
+(write-capable plugin posture), D76 (retired trust entries), D77 (`npx vite` wildcard),
+D79 (gstack standing authority).
 
-**`Skill(gstack:*)`** — a standing indirect-executor grant across 47 Bash-declaring
-sub-skills, including deploy, release, and cookie-setup skills. **Blocks B12.**
+**Final score: 13 of 13.**
 
-Recommended correction: drop `Skill(gstack:*)`; keep `Skill(gstack)` or enumerate exact
-QA sub-skills. Not actioned because no ruling covered it.
+### Follow-up lesson (D80, non-blocking)
 
-**Current honest score: 12 of 13.** CUTOVER_COMPLETE is not yet reachable.
+> Future cutover gate definitions must be committed in a durable verification document and
+> not exist only inside an execution prompt.
+
+The A1–A15 definitions for PR A existed only in an execution prompt, so a literal
+by-number reconfirmation was impossible. D80 replaced it with a seven-check regression set
+recorded in `2026-07-30-pr-b-gate-results.md`. No replacement definitions were invented.

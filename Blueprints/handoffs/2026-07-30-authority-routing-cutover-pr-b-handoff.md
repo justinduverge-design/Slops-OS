@@ -119,29 +119,41 @@ Backup first: `dev/_enforcement-backup-d76-d77-2026-07-30T220024/`.
   Classification is not resolution; a path-A row that has not been tightened is an open
   finding, not a passing gate. The correct score for that interval was 11 of 13.
 
+## 4d. Founder rulings D79–D81 — applied
+
+Backup first: `dev/_enforcement-backup-d79-2026-07-30T220948/`.
+
+- **D79** — removed `Skill(gstack:*)` **and** the top-level `Skill(gstack)`. The top-level
+  entry had to go as well: it declares `Bash` in its own `allowed-tools` and explicitly
+  dispatches into sub-skills (`invoke /autoplan`, `/investigate`, `/qa`, `/office-hours`),
+  making it a standing dispatcher in its own right. **gstack was not uninstalled and no
+  gstack skill was deleted** — all 52 `SKILL.md` files remain on disk. No replacement
+  standing permission was added for any sub-skill.
+- **D80** — the A1–A15 definitions are accepted as non-durable and were **not** invented or
+  reconstructed. The approved seven-check regression set was run instead; all seven pass.
+- **D81** — full re-verification, then conditional merge.
+
+**Effective allowlist: 9 rules, zero wildcards.** No remaining rule can reach deployment,
+release, publication, secrets/cookie modification, arbitrary Bash, arbitrary Write,
+arbitrary Edit, or delegated Codex execution.
+
 ## 5. Blockers surfaced
 
-**CUTOVER_COMPLETE is NOT yet reachable. Current score: 12 of 13.**
+**None. Zero path-A enforcement items remain open.**
 
-Re-running the verification after D76/D77 surfaced a **third** item of the same class,
-which this session's earlier audit had **mis-assessed**:
+Every path-A row is now tightened, not merely classified: D70 (OneDrive preference),
+D71 (`npm` wildcards), D72 (write-capable plugin posture), D76 (retired trust entries),
+D77 (`npx vite` wildcard), D79 (gstack standing authority).
 
-**`Skill(gstack:*)` — a standing indirect-executor grant. Blocks B12.**
+**CUTOVER_COMPLETE is supportable.**
 
-It is a wildcard over 52 gstack sub-skills. 47 declare `allowed-tools` including **Bash,
-Write, Edit, WebSearch**, so it pre-approves `gstack:land-and-deploy`,
-`gstack:setup-deploy`, `gstack:ship`, `gstack:document-release`,
-`gstack:setup-browser-cookies`, `gstack:autoplan`, and `gstack:codex` — deploy, release,
-and cookie-setup skills. The first audit called this "bounded, read-only or local-dev-only"
-without inspecting the sub-skills. That was wrong.
+### Follow-up lesson recorded (D80, non-blocking)
 
-This is the same class as the `Bash(npm run *)` grant D71 removed and the
-`Bash(npx vite *)` grant D77 removed.
+> Future cutover gate definitions must be committed in a durable verification document and
+> not exist only inside an execution prompt.
 
-**Classification: A — tighten. Status: OPEN.** Recommended correction: drop
-`Skill(gstack:*)`; keep `Skill(gstack)`, or enumerate the exact QA sub-skills needed
-(`gstack:qa`, `gstack:qa-only`, `gstack:browse`). Not actioned — neither D76 nor D77
-covered it.
+PR A's A1–A15 lived only in an execution prompt, so a literal by-number reconfirmation was
+impossible. D80 replaced it with a seven-check regression set. This should not recur.
 
 ## 6. Last verified result
 
@@ -153,28 +165,29 @@ names remain in `tool-permissions.md`, `TOOLS_INDEX.md`, or `AGENT_INDEX.md`; ex
 active layer-named kickoffs and exactly 6 archived vendor-named kickoffs across both
 repos.
 
-**12 of 13 gates PASS.** B9 moved to PASS once D76 and D77 actually tightened the two
-open path-A rows. **B12 remains UNRESOLVED** — 4 of 5 sub-checks pass; the
-"no indirect executor access" sub-check fails on `Skill(gstack:*)`. Per-gate commands and
-output are in `Direction/reviews/2026-07-30-pr-b-gate-results.md`.
+**13 of 13 gates PASS**, genuinely. B9 moved to PASS once D76/D77 tightened the first two
+path-A rows; B12 moved to PASS once D79 removed the gstack standing authority. Per-gate
+commands and output are in `Direction/reviews/2026-07-30-pr-b-gate-results.md`.
 
-**PR A reconfirmation (D78.3) — PARTIAL.** The A1–A15 gate *definitions* are not committed
-to either repository; they lived in the PR A design packet. Only the summary line survives
-(`2026-07-29-planning-pipeline-cutover-pr-a-handoff.md:153-157`). A literal by-number
-reconfirmation is therefore not possible from the repos alone and is **not** claimed.
-Every checkable PR A invariant was reconfirmed against the merged defaults
-(`origin/master 0632e42`, `origin/main 5be1d25`): `SCHEMA_VERSION` parity 1.0.0 == 1.0.0;
-the L2 mirror pin `SOURCE_COMMIT d26b7b6` resolves in Slops-OS and **is an ancestor of
-origin/master**; `MIRROR_OF` and `LAST_SYNCED` present; and **PR B does not modify
-`status-model.md` at either layer**, so the pin cannot break from this cutover. Supply the
-A1–A15 definitions to complete D78.3 literally.
+The score history — 11/13, a premature 13/13, a retraction, 12/13, and now a genuine
+13/13 — is retained deliberately in the tracked evidence so the error and its correction
+stay visible.
+
+**PR A regression verification (D80) — all 7 checks PASS**, against the merged defaults
+(`origin/master 0632e42`, `origin/main 5be1d25`): schema parity `1.0.0 == 1.0.0`; the L2
+mirror pin `SOURCE_COMMIT d26b7b6` resolves and **is an ancestor of `origin/master`**;
+`MIRROR_OF` / `SCHEMA_VERSION` / `SOURCE_COMMIT` / `LAST_SYNCED` all present; PR B modifies
+neither status-model file; both merged PR A handoffs present; the PR A task structure
+(`current_sprint.md`, `agent_inbox.md`, `status-model.md`, `done/LEDGER.md`) resolves; and
+the archived PR A control surfaces sit outside active routing.
 
 ## 7. Next recommended pull
 
-A ruling on `Skill(gstack:*)`. It is the only thing between this branch and a genuine
-13 of 13, and it is one edit.
+Both PRs merged under D81 with normal merge commits, in order, **not squashed and not
+rebased** — for traceability and because Omen's `status-model.md` pins
+`SOURCE_COMMIT d26b7b6` from Slops-OS.
 
-Merge order is **Slops-OS #10, then Omen #247**, and it is load-bearing: L2's
-`kickoff-l2.md` points at L0's `AGENT_INDEX.md` §§8–9, and Omen's `status-model.md`
-pins `SOURCE_COMMIT d26b7b6` from Slops-OS. Merge Slops-OS first and **do not squash
-it**, or the pin stops resolving. Do not merge until B12 passes.
+Next session: resume the normal queue. Your kickoff is now `Blueprints/prompts/kickoff-l0.md`,
+which will ask you to confirm your session's actual capabilities and read Runtime Policy
+before applying any authority. `assignments: []` means you start at your runtime's
+`default_tier` until the founder issues an Active Trust Assignment.
