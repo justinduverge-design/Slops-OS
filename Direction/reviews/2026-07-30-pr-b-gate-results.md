@@ -2,7 +2,19 @@
 
 **Date:** 2026-07-30, after founder rulings D70–D75.
 **Branches:** `cutover/authority-routing` in `Slops-OS` and `omen`. Both open, unmerged.
-**Result: 13 of 13 PASS.**
+
+> **RETRACTION (D78).** An earlier revision of this file claimed **13 of 13 PASS**. That
+> claim was wrong and is withdrawn. Two findings were classified **path A — tighten
+> enforcement** and then left uncorrected. **Classification is not resolution.** A path-A
+> row that has not been tightened is an open finding, not a passing gate.
+>
+> While those two items were open:
+>
+> - **B9 was UNRESOLVED** — two path-A corrections were outstanding.
+> - **B12 was UNRESOLVED** — an indirect-execution wildcard (`Bash(npx vite *)`) remained.
+>
+> The correct score in that interval was **11 of 13**. This file now records the state
+> after D76 and D77 were actually applied.
 
 Commands were run from `dev/_cutover-b-2026-07-30/`. `slops-os/` and `omen/` are the two
 fresh clones. No desktop checkout and no linked worktree was involved.
@@ -138,7 +150,9 @@ and defaults, and eligibility is not authority.
 
 ## B9 — Enforcement audit complete; every mismatch on path A/B/C; none indefinite
 
-**PASS.** See `2026-07-30-authority-cutover-enforcement-audit.md`.
+**UNRESOLVED until D76 + D77 are applied.** Two path-A corrections were classified and
+left open, so the audit was not complete in the sense this gate requires. Superseded by
+the post-D76/D77 verification below. See `2026-07-30-authority-cutover-enforcement-audit.md`.
 
 Evidence includes the effective global Codex configuration and the full plugin posture,
 as D69 requires. Every row uses the D73 canonical definitions. Every finding resolved to
@@ -180,7 +194,9 @@ every file read and PULL TASK, in all three.
 
 ## B12 — Five sub-checks
 
-**PASS (5 of 5).** Was 3 of 5 before D71 and D72.
+**UNRESOLVED until D77 is applied.** `Bash(npx vite *)` remained as a standing
+indirect-execution wildcard, so the "no indirect executor access" sub-check did not pass.
+Superseded by the post-D76/D77 verification below.
 
 | Sub-check | Verdict | Evidence |
 |---|---|---|
@@ -215,9 +231,9 @@ and `omen/Blueprints/prompts/sub_agents.md` (2665 B), neither renamed nor archiv
 | Component | Status |
 |---|---|
 | 15 PR A gates | Passed at PR A. Re-confirm before merge. |
-| 13 PR B gates | **13 of 13 PASS** |
-| Verified local enforcement cleanup | **Verified.** D70, D71, D72 applied and confirmed. |
+| 13 PR B gates | **11 of 13** in this interval. B9 and B12 unresolved. |
+| Verified local enforcement cleanup | **NOT verified.** Two path-A items open. |
 | Verified direct Codex hardening | **Verified.** `on-request` + `workspace-write`, F2 commands not regenerated. |
 
-Both PRs remain open and unmerged, awaiting founder review. Merge order:
-**Slops-OS #10, then Omen #247.**
+Both PRs remain open and unmerged. **CUTOVER_COMPLETE is not reachable in this state.**
+D76 and D77 must be applied first; results are appended below.
