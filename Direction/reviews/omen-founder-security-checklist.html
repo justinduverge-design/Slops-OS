@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0b0c10">
+    <title>Omen Founder Security Checklist</title>
+    <style>
+      :root { color-scheme: dark; --bg:#0b0c10; --card:#17191f; --line:#30333d; --text:#f7f3ec; --muted:#b8b5ae; --gold:#c4922b; --red:#ff7b72; --green:#6dd47e; }
+      * { box-sizing:border-box; }
+      body { margin:0; background:var(--bg); color:var(--text); font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+      main { max-width:720px; margin:0 auto; padding:28px 18px 48px; }
+      h1 { font:700 clamp(2rem,8vw,3.2rem)/1.08 Georgia,serif; margin:0 0 8px; }
+      h2 { font-size:1.1rem; letter-spacing:.04em; text-transform:uppercase; color:var(--gold); margin:30px 0 10px; }
+      p { color:var(--muted); margin:8px 0; }
+      .notice { border-left:3px solid var(--gold); background:#201b10; padding:12px 14px; border-radius:8px; color:var(--text); }
+      .card { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:14px; margin:10px 0; }
+      label { display:flex; align-items:flex-start; gap:12px; cursor:pointer; }
+      input { width:22px; height:22px; margin:1px 0 0; accent-color:var(--gold); flex:none; }
+      .task { font-weight:650; color:var(--text); }
+      small { display:block; color:var(--muted); margin-top:2px; }
+      .done .task { color:var(--green); }
+      .p0 { color:var(--red); font-weight:700; }
+      footer { color:var(--muted); font-size:.86rem; border-top:1px solid var(--line); margin-top:32px; padding-top:18px; }
+      @media print { body { background:#fff; color:#111; } main { max-width:none; } .card { border-color:#bbb; background:#fff; } p,small,footer { color:#444; } }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p class="p0">OMEN / VALOR VENTURES LLC</p>
+      <h1>Founder security checklist</h1>
+      <p>Use this as your operating list. Check boxes stay on this device/browser; this page does not send any information anywhere.</p>
+      <div class="notice"><strong>Right now:</strong> GitHub Actions is blocked by billing/spend settings, and Yahoo Fantasy API access is pending approval. Fix the billing block first; do not paste keys into chat, tickets, or screenshots.</div>
+
+      <h2>P0 — do these first</h2>
+      <div class="card"><label><input type="checkbox"><span><span class="task">Restore GitHub Actions</span><small>Resolve the GitHub Billing &amp; plans payment/spending-limit block, then rerun the newest main deployment—not old failed runs.</small></span></label></div>
+      <div class="card"><label><input type="checkbox"><span><span class="task">Turn on MFA everywhere</span><small>GitHub, primary email, Supabase, Hostinger, Infisical, Yahoo Developer, and domain registrar. Save recovery codes offline or in a password manager.</small></span></label></div>
+      <div class="card"><label><input type="checkbox"><span><span class="task">Review who has access</span><small>Remove old collaborators, use separate admin accounts where possible, and give the minimum role required.</small></span></label></div>
+      <div class="card done"><label><input type="checkbox"><span><span class="task">Record the Supabase secret rotation</span><small>New server secret was placed in the approved deployment path. Confirm the old credential is disabled and keep the rotation date in your private operations notes.</small></span></label></div>
+      <div class="card done"><label><input type="checkbox"><span><span class="task">Record the Vault permissions remediation</span><small>Public execution was removed from the sensitive Vault functions. Retain the migration and verification result as evidence.</small></span></label></div>
+      <div class="card"><label><input type="checkbox"><span><span class="task">Create recovery proof</span><small>Confirm Supabase backup/PITR coverage, take a VPS snapshot, and write a one-page restore test: who does it, where the backup is, and how success is verified.</small></span></label></div>
+      <div class="card"><label><input type="checkbox"><span><span class="task">Write an incident card</span><small>Include: who to contact, how to pause deploys, rotate a secret, review logs, notify affected users, and document the incident.</small></span></label></div>
+
+      <h2>P1 — harden the product</h2>
+      <div class="card"><label><input type="checkbox"><span><span class="task">Finish Yahoo access correctly</span><small>Keep Omen as a Confidential Client, use only https://slopssaloon.com/api/yahoo/callback, and request read-only Fantasy Sports access. Current invalid_scope is a Yahoo permission problem, not a browser-login problem.</small></span></label></div>
+      <div class="card"><label><input type="checkbox"><span><span class="task">Verify OAuth safety</span><small>Exact redirect URI, server-only client secret, state validation, token encryption/storage, a disconnect/revoke path, and no tokens in logs.</small></span></label></div>
+      <div class="card"><label><input type="checkbox"><span><span class="task">Add abuse controls</span><small>Rate-limit sign-in, OAuth, password-reset, AI, and expensive recommendation routes; alert on repeated failures.</small></span></label></div>
+      <div class="card"><label><input type="checkbox"><span><span class="task">Set browser and API boundaries</span><small>HSTS, a reviewed Content Security Policy, frame protection, nosniff, least-privilege CORS, and secure cookies.</small></span></label></div>
+      <div class="card"><label><input type="checkbox"><span><span class="task">Close remaining Supabase findings</span><small>Review RLS on every exposed table; narrow the waitlist insert policy; enable leaked-password protection; document any service-role-only tables.</small></span></label></div>
+      <div class="card"><label><input type="checkbox"><span><span class="task">Make logs safe</span><small>Redact authorization headers, cookies, OAuth codes, refresh tokens, service secrets, and unnecessary personal data. Add error monitoring with the same redaction rules.</small></span></label></div>
+      <div class="card"><label><input type="checkbox"><span><span class="task">Protect the repository</span><small>Require pull-request review/status checks for main, enable secret scanning and dependency alerts, and schedule the existing low-severity dependency update.</small></span></label></div>
+
+      <h2>Privacy and trust</h2>
+      <div class="card"><label><input type="checkbox"><span><span class="task">Publish truthful privacy and terms pages</span><small>Explain what league data is used, why, retention/deletion, provider connections, contact method, and that advice is informational.</small></span></label></div>
+      <div class="card"><label><input type="checkbox"><span><span class="task">Test account deletion and provider disconnect</span><small>Verify personal data and stored provider tokens are removed or irreversibly detached as promised.</small></span></label></div>
+      <div class="card"><label><input type="checkbox"><span><span class="task">Keep analytics lean</span><small>Use an allowlist of useful events. Do not record session replay, query strings, tokens, private roster detail, or free-text prompts by default.</small></span></label></div>
+
+      <h2>Operating rhythm</h2>
+      <div class="card"><strong>Weekly — 15 minutes</strong><small>Check uptime/health, error alerts, failed deploys, unexpected access, backup status, and expense/billing notices.</small></div>
+      <div class="card"><strong>Monthly — 30 minutes</strong><small>Review users/admins, secrets nearing rotation, dependency alerts, public endpoints, logs, and restore readiness.</small></div>
+      <div class="card"><strong>Quarterly — 60 minutes</strong><small>Do a restore drill, access audit, incident-tabletop exercise, privacy-policy review, and vendor/account review.</small></div>
+      <footer>Prepared for Omen / Valor Ventures LLC. This is an operating checklist, not legal or compliance certification. Keep credentials and recovery codes out of this file.</footer>
+    </main>
+  </body>
+</html>

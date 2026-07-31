@@ -1,0 +1,1672 @@
+# Slops OS — Planning Capability Map (machine-readable companion)
+# Created:  2026-07-28 by Claude (Cowork), Planning System Architecture Audit
+# Revised:  2026-07-29 — correction + founder-response pass (revision 2)
+# Prose:    Direction/reviews/2026-07-28-planning-architecture-audit.md
+#
+# STATUS: evidence + proposal. Per Direction/reviews/README.md, reviews are evidence, not authority.
+# Nothing here has been applied. Verdicts are RECOMMENDATIONS. Founder approval status is in
+# `approval_status` below and in §13 of the prose audit. Several verdicts are explicitly NOT APPROVED.
+#
+# REVISION 2 CHANGES
+#   - verdict counts reconciled to a reproducible, machine-derivable basis (see counting_method)
+#   - every top-level record now carries all 10 required fields (value / [] / unknown / not_applicable)
+#   - records typed as `artifact` or `aggregate`; aggregates are NOT individual artifact records
+#   - §1.2 skills evidence re-derived (invocation-column parsing, not substring matching)
+#   - §4.2 worktree "prunable" finding WITHDRAWN as a sandbox artifact
+#   - §5.2 propagation restated as a 3-case tested pattern, not a proven law
+#   - claims withdrawn are recorded in `withdrawn_claims`
+
+schema_version: 2
+created: 2026-07-28
+revised: 2026-07-29
+audit_doc: Direction/reviews/2026-07-28-planning-architecture-audit.md
+
+# ---------------------------------------------------------------------------
+# LEGEND
+# ---------------------------------------------------------------------------
+legend:
+  record_type:
+    artifact:  A single addressable artifact. Carries meaningful artifact-level fields.
+    aggregate: A named collection counted as ONE record. Artifact-level fields describe the
+               collection, not any single member. NOT an individual artifact record.
+  verdict:
+    KEEP:   working as designed; do not touch
+    MODIFY: keep the artifact, change its content or wiring
+    MERGE:  fold into another artifact
+    RETIRE: remove from the live surface
+    CREATE: new artifact required (must justify why orchestration cannot suffice)
+  invocation_kind:
+    mechanical: a script, gate, or predicate triggers it
+    documented: a written rule says when to use it
+    tribal:     nothing written; depends on the operator remembering
+    none:       nothing invokes it
+  health:
+    healthy | degraded | broken | dormant
+  field_conventions:
+    - "[] means the field genuinely has no entries"
+    - "unknown means the audit did not establish it"
+    - "not_applicable means the field does not apply to this record type"
+
+# ---------------------------------------------------------------------------
+# COUNTING METHOD — the human-readable totals must be reproducible from this file
+# ---------------------------------------------------------------------------
+counting_method:
+  primary_basis: >
+    One count per top-level record under `artifacts:` that carries a `verdict` key.
+    Both `artifact` and `aggregate` records count as exactly ONE each.
+    This is the number quoted in the prose audit §2.
+  reproduce_with: |
+    python3 -c "
+    import yaml,collections
+    d=yaml.safe_load(open('2026-07-28-planning-capability-map.yaml'))
+    print(collections.Counter(a['verdict'] for a in d['artifacts'] if 'verdict' in a))
+    print('records:', len(d['artifacts']))
+    print('CREATE:', len(d['create_recommendations']))"
+  note_on_revision_1: >
+    Revision 1's prose totals (KEEP 21 / MODIFY 18 / MERGE 9 / RETIRE 24 / CREATE 1 = 73) were
+    counted at the level of underlying items — expanding aggregates such as the 20 never-used
+    skills into 20 separate RETIRE verdicts — while the YAML carried them as single grouped
+    records. The two could not be reconciled. Revision 2 uses the record basis in both files and
+    reports the expanded figure separately below, with its expansion documented per record.
+
+# ---------------------------------------------------------------------------
+# SUMMARY
+# ---------------------------------------------------------------------------
+summary:
+  layers: 3
+  git_repos: 2                        # L0 Slops-OS, L2 omen. L1 is tracked inside L0.
+  local_main_behind_origin: 20        # CONFIRMED DEFECT — checkout is not current
+
+  skills_on_disk_L0: 52               # dirs with SKILL.md, excluding _template and _proposals
+  skill_ledger_data_rows: 345
+  skill_invocation_records: 622       # names in the Skill column only
+  skill_skipped_records: 5
+  skills_zero_ledger_records: 23      # corrected from 20 in revision 1
+  skills_zero_records_but_correctly_parked: 2
+  skills_registry_only_genuine_defect: 2   # design-quality-bar, ux-ui-build-pipeline
+  phantom_ledger_skills: 2            # slops-deploy-guard (13), jules-react-component (11)
+
+  routing_table_status_field: well-formed    # WITHDRAWN claim that it does not parse
+  routing_status_distribution: {active: 53, parked: 2, retired: 1, paired-with: 1}
+
+  decision_stores: 4
+  decision_stores_with_status_field: 1       # only the abandoned ADR folder
+  decision_stores_with_stable_ids: 1         # only the abandoned ADR folder
+  structured_governance_control_maps: 1      # omen/probo.yaml — NARROWED claim, see legend below
+  competing_agent_wrapper_sets: 3
+
+  worktrees_registered: 11
+  worktrees_fully_merged_into_origin_main: 7
+  worktrees_patch_duplicate: 1
+  worktrees_holding_unique_work: 2           # 6 unique commits total
+  worktree_prunable_flag: sandbox-artifact-not-a-defect
+
+  total_records: 54
+  records_by_type: {artifact: 36, aggregate: 18}
+
+  verdict_counts_basis: one-per-top-level-record
+  verdict_counts: {KEEP: 12, MODIFY: 31, MERGE: 4, RETIRE: 7, CREATE: 0}
+  verdict_counts_note: >
+    Sums to 54, the record count. CREATE is 0 within `artifacts:` by design — the single CREATE
+    recommendation lives in `create_recommendations:` and is counted there. THIS is the basis the
+    prose audit §2 quotes. Verified by the reproduce_with snippet above on 2026-07-29.
+
+  verdict_counts_expanded: {KEEP: 60, MODIFY: 59, MERGE: 14, RETIRE: 89, CREATE: 1}
+  verdict_counts_expanded_method: >
+    Each aggregate record contributes its `expansion_count` instead of 1; artifact records
+    contribute 1. Reproduce by summing expansion_count where record_type == aggregate.
+  verdict_counts_expanded_caveat: >
+    USE WITH CARE. The expanded figure is mechanically correct but weakly meaningful, because a
+    few large collections dominate it: L2.audits (43 files, one RETIRE decision) drives most of
+    the RETIRE total, and L2.reviews (44 files, one KEEP decision) drives most of KEEP. Retiring
+    the abandoned audits folder is ONE decision about 43 files, not 43 decisions. The record basis
+    is the honest summary; this figure exists only so the two counting bases are both reproducible.
+
+# ---------------------------------------------------------------------------
+# CLAIMS WITHDRAWN IN REVISION 2
+# ---------------------------------------------------------------------------
+withdrawn_claims:
+  - id: CHG-01
+    revision_1_claim: "10 prunable git worktrees — repository rot; prune all 10 plus 5 orphans."
+    why_wrong: >
+      `prunable` was reported because the worktree admin files record Windows absolute paths
+      (C:/Users/JDuve/...) which do not resolve inside this Linux audit sandbox. The directories
+      exist on disk. On Windows git would very likely not flag them. Running the recommended
+      prune from this sandbox would have destroyed all 11 admin records.
+    status: WITHDRAWN
+    replaced_by: A safety table computed against origin/main, plus an explicit uncertainty note.
+
+  - id: CHG-02a
+    revision_1_claim: "5 skills routed but absent from L0."
+    why_wrong: >
+      slops-markdown-authoring is routed with Status `retired` and is correctly absent.
+      slops-content-ship and slops-voiceover are routed with the Layer column explicitly reading
+      "Layer 2 (Omen-local: slops-saloon/omen/Blueprints/skills/...)" and exist exactly there.
+    status: CORRECTED
+    corrected_to: 2 genuine registry-only defects (design-quality-bar, ux-ui-build-pipeline).
+
+  - id: CHG-02b
+    revision_1_claim: "The routing table does not distinguish product-local skills."
+    why_wrong: The Layer column names the exact Omen-local path for both product-local skills.
+    status: WITHDRAWN
+
+  - id: CHG-02c
+    revision_1_claim: "The Status column does not parse as a consistent enumerated field."
+    why_wrong: >
+      It has a documented legend and parses cleanly into active / parked:<gate> /
+      retired:<date> / paired-with:<name> / proposed. The audit's parser was wrong, not the file.
+    status: WITHDRAWN
+
+  - id: CHG-02d
+    revision_1_claim: "20 skills never used."
+    why_wrong: >
+      Counts came from substring matching across the whole ledger file, which also matched skill
+      names in the Evidence and "Procedure gap" columns — including skills named as NOT applicable.
+      Parsing the Skill column only yields 23 with zero records, and lower counts for most used skills.
+    status: CORRECTED
+    corrected_to: 23 zero-record skills, classified into 8 groups; no bulk retirement recommended.
+
+  - id: CHG-03
+    revision_1_claim: >
+      "Propagation succeeds when a decision carries a machine-checkable literal or a blocking
+      predicate. It fails when it carries a documentation obligation." — stated as a general law.
+    why_wrong: 3 traced cases out of 98 decision entries, non-randomly selected, cannot establish a law.
+    status: SOFTENED
+    restated_as: A tested pattern across one failure case and two success cases; encoding appears
+                 to be the dominant variable. Recommendations do not depend on the stronger claim.
+
+  - id: CHG-04
+    revision_1_claim: >
+      Launch doctrine "describes the paused program" while the native program has no gates —
+      implying web/KVM work was misdirected.
+    why_wrong: >
+      Founder response FR-A: shared backend, web client, iOS and Android are all active.
+      KVM1/Docker/API-health gating is correct and should continue.
+    status: REFRAMED
+    restated_as: Launch doctrine never gained a PARALLEL set of native-client and store-readiness
+                 gates after the native pivot. The web gates are not wrong; they are incomplete.
+
+  - id: CHG-05
+    revision_1_claim: Absence of a second live product cuts against a company layer.
+    why_wrong: That is an argument about timing, not architectural correctness.
+    status: CLARIFIED
+    restated_as: Defer. Revisit when multiple products or divisions create a concrete governance
+                 requirement. The question is not settled.
+
+  - id: CHG-06
+    revision_1_claim: "Slops OS is a well-designed operating system specification with no kernel."
+    why_wrong: The same document calls agent-modules/ a doctrine kernel. One metaphor, two meanings.
+    status: CLARIFIED
+    restated_as: Strong DOCTRINE kernel present; EXECUTABLE GOVERNANCE kernel absent.
+
+  - id: CHG-07
+    revision_1_claim: "Exactly one machine-checkable governance artifact."
+    why_wrong: Too broad — the repo holds tests, CI workflows, a prompt-guard eval, and a quality baseline.
+    status: NARROWED
+    restated_as: probo.yaml is the only explicit STRUCTURED GOVERNANCE-CONTROL MAP. Not the only
+                 machine-readable or automatically-testable artifact.
+
+  - id: CHG-08
+    revision_1_claim: "Every other defect is downstream of decision identity."
+    why_wrong: Physical repository hygiene is an independent failure class with an independent cause.
+    status: SOFTENED
+    restated_as: Three failure classes — decision-truth, orchestration, physical hygiene. Decision
+                 identity is highest-leverage because it corrupts future work, not because it causes the others.
+
+  - id: CHG-09
+    revision_1_claim: "Tier 4 is that kernel, and it is one script."
+    why_wrong: Presents a proposed simplification as a proven final architecture.
+    status: SOFTENED
+    restated_as: A validator may be the first executable enforcement component. It does not by
+                 itself complete the kernel; it depends on decision schema, truth generation,
+                 repo inspection, routing, and evidence definitions.
+
+# ---------------------------------------------------------------------------
+# FOUNDER-RATIFIED DIRECTION (2026-07-29) — planning authorization only
+# ---------------------------------------------------------------------------
+founder_response:
+  authorizes: planning-and-correction-only
+  does_not_authorize: implementation
+
+  product_activity_boundaries:
+    shared_backend_platform: ACTIVE
+    web_client_feature_work: ACTIVE_AS_NEEDED
+    web_maintenance_security: ACTIVE_AS_NEEDED
+    ios_client: ACTIVE
+    android_client: ACTIVE
+    consequence: >
+      KVM1, Docker, API health, provider integrations, authentication, databases, caching and
+      shared recommendation services remain active because they support the shared platform.
+      The audit finding is NOT that backend or web deployment work was unnecessary. The finding
+      is that launch-readiness doctrine stayed centred on the web/KVM program and never added
+      separate native-client and store-readiness evidence after the native pivot.
+    do_not_say: web client is paused or abandoned
+
+  decision_identity_model:
+    name: Hybrid + Time
+    permanent_id: {form: "DEC-YYYYMMDD-NNN", mutable: false}
+    human_key: {form: "SCOPE.DOMAIN.TOPIC", mutable: true}
+    classification: {form: "Layer.Group.Item", optional: true, mutable: true}
+    graphify_node_identity: permanent_id
+    graphify_display_label: human_key
+    rule: The permanent ID must not change if the decision moves between categories or layers.
+    implementation_status: NOT_AUTHORIZED
+
+  minimum_enforcement:
+    name: Truth Gate
+    mode: read-only
+    built_on: existing repository-inspection capability
+    runs_at: [before-planning-or-execution, before-work-is-closed]
+    intended_coverage: [repository-truth, decision-schema-validity, active-decision-conflicts,
+                        sprint-and-queue-validity, skill-and-routing-integrity, completion-evidence]
+    rollout: [report-only, block-proven-critical-failures, local-and-CI-after-validation]
+    approved: direction-only
+    implementation_status: NOT_AUTHORIZED
+    requires_design: [technical-design, invocation-points, failure-taxonomy, block-warn-thresholds]
+
+  agent_session_protocol:
+    stages: [DISCUSS, PROPOSE, RATIFY, EXECUTE]
+    default_stage: DISCUSS
+    rules:
+      - Casual founder conversation is not automatically doctrine.
+      - PROPOSE structures a candidate decision but does not approve it.
+      - RATIFY records an approved decision and identifies what it supersedes and governs.
+      - EXECUTE requires approved task, repository truth, permissions, and governing decisions.
+    implementation_status: NOT_AUTHORIZED
+
+# ---------------------------------------------------------------------------
+# APPROVAL STATUS
+# ---------------------------------------------------------------------------
+approval_status:
+  - {area: "Tier 0 path and queue corrections", status: ACCEPTED_DIRECTION, note: "pending corrected evidence"}
+  - {area: "Decision identity and status", status: ACCEPTED_DIRECTION, note: ""}
+  - {area: "Hybrid + Time ID model", status: ACCEPTED_DIRECTION, note: ""}
+  - {area: "Read-only Truth Gate", status: ACCEPTED_DIRECTION, note: "exact implementation REQUIRES_DESIGN"}
+  - {area: "DISCUSS -> PROPOSE -> RATIFY -> EXECUTE", status: ACCEPTED_DIRECTION, note: ""}
+  - {area: "Provisioned release state", status: ACCEPTED_DIRECTION, note: ""}
+  - {area: "Native/store release gates", status: ACCEPTED_DIRECTION, note: "scope REQUIRES_DESIGN"}
+  - {area: "Capability-based agent routing", status: ACCEPTED_DIRECTION, note: ""}
+  - {area: "Bulk retirement of unused skills", status: NOT_APPROVED, note: "requires individual triage"}
+  - {area: "Bulk deletion of wrapper sets and division documents", status: NOT_APPROVED, note: "requires dependency review"}
+  - {area: "Immediate company-layer migration", status: DEFERRED, note: "revisit at multi-product"}
+  - {area: "Immediate repository restructuring", status: NOT_APPROVED, note: ""}
+  - {area: "Truth Gate implementation", status: NOT_YET_AUTHORIZED, note: ""}
+  - {area: "CI enforcement", status: DEFERRED, note: "until report-only checks are validated"}
+  - {area: "Worktree pruning", status: NOT_APPROVED, note: "revision-2 addition: prior basis withdrawn as sandbox artifact; 2 branches hold unique work; dirty state unassessable"}
+
+# ---------------------------------------------------------------------------
+# ARTIFACTS
+# ---------------------------------------------------------------------------
+artifacts:
+
+  # ---- L0 doctrine and state -------------------------------------------------
+  - id: L0.agent-modules
+    record_type: artifact
+    path: Blueprints/agent-modules/
+    layer: 0
+    purpose: Modular doctrine kernel — one concern per file, imported by number from every layer wrapper
+    inputs: []
+    outputs: [agent behavior]
+    dependencies: []
+    invocation: {kind: mechanical, trigger: auto-read at session start via CLAUDE.md / AGENTS.md}
+    owner: Justin
+    health: healthy
+    strengths: [14 single-concern files, all 8 root pointers resolve, per-runtime identity separation]
+    weaknesses: ["layer-2-rules.md names services/ and routes/ which do not exist at L2"]
+    overlap: []
+    verdict: KEEP
+    priority: not_applicable
+
+  - id: L0.facts-of-record
+    record_type: artifact
+    path: Direction/facts-of-record.md
+    layer: 0
+    purpose: Override facts that beat anything older on disk
+    inputs: [founder decisions]
+    outputs: [binding constraints consumed by all layers]
+    dependencies: []
+    invocation: {kind: documented, trigger: "#2 in files-to-read-first-L0.md"}
+    owner: Justin
+    health: degraded
+    strengths: [explicit override semantics, numbered, dated, terse, correct shape for a truth surface]
+    weaknesses:
+      - only 7 items
+      - no written promotion rule — nothing says how a fact gets in
+      - wins silently; contradicting files are never flagged or marked
+      - item 3 flagged stale by the 2026-07-18 handoff and never updated
+    overlap: [L0.decision-log, L0.decisions-dir]
+    verdict: MODIFY
+    recommended_change: Make this the generated, enforced, queryable current-truth surface. Write the promotion rule.
+    priority: tier-1
+    approval: ACCEPTED_DIRECTION
+
+  - id: L0.decision-log
+    record_type: artifact
+    path: Direction/decision_log.md
+    layer: 0
+    purpose: Durable L0 operating decisions
+    inputs: [session outcomes, founder decisions]
+    outputs: [decision records]
+    dependencies: []
+    invocation: {kind: documented, trigger: "#3 in files-to-read-first-L0.md, last 5 entries"}
+    owner: Justin
+    health: degraded
+    metrics: {size_kb: 4.8, entries: 4, heading_form: "## YYYY-MM-DD — <the decision>"}
+    strengths: ["the heading IS the decision — the only readable format of the three logs"]
+    weaknesses: [no ID, no status, no supersession, 4 entries in 2 months while L2 wrote 98]
+    overlap: [L0.facts-of-record, L0.decisions-dir, L0.handoffs]
+    verdict: MODIFY
+    recommended_change: Adopt DEC-YYYYMMDD-NNN + status. Propagate the heading-is-the-decision form to L1/L2.
+    priority: tier-1
+    approval: ACCEPTED_DIRECTION
+
+  - id: L0.decisions-dir
+    record_type: artifact
+    path: Direction/decisions/
+    layer: 0
+    purpose: One-file-per-decision records
+    inputs: [promoted decisions]
+    outputs: [durable decision records with Status + Classification]
+    dependencies: [L0.decision-log]
+    invocation: {kind: documented, trigger: "README states decision records beat specs, prompts, reviews"}
+    owner: Justin
+    health: degraded
+    metrics: {files: 6, indexed_by_readme: 4}
+    strengths: ["Status + Classification schema; BUILD NOW / SPEC ONLY is the closest thing to a lock marker"]
+    weaknesses:
+      - only 4 of 6 files use the schema
+      - 2026-06-08-p1-trial-retro.md is a retro filed as a decision
+      - three status values differing only by punctuation
+      - no precedence rule vs decision_log.md
+    overlap: [L0.decision-log, L0.facts-of-record]
+    verdict: MODIFY
+    priority: tier-1
+    approval: ACCEPTED_DIRECTION
+
+  - id: L0.todo
+    record_type: artifact
+    path: Direction/TODO.md
+    layer: 0
+    purpose: The L0 work queue — what kickoff PULL TASK reads
+    inputs: [founder direction]
+    outputs: [pullable work items]
+    dependencies: []
+    invocation: {kind: mechanical, trigger: "kickoff-l0-{claude,codex}.md line 29"}
+    owner: Justin
+    health: broken
+    strengths: ["Blocked-Without-Approval section is explicit and useful"]
+    weaknesses:
+      - every Active item is initial-commit work closed by the 2026-07-03 PRs
+      - 5+ weeks stale; cites a 2026-05-27 backend status
+    overlap: [L0.roadmap]
+    verdict: MODIFY
+    recommended_change: Repoint L0 PULL TASK or rewrite the queue. Agents currently pull from a finished job.
+    priority: tier-0
+    approval: ACCEPTED_DIRECTION
+
+  - id: L0.skill-routing
+    record_type: artifact
+    path: Blueprints/skills/SKILL_ROUTING.md
+    layer: 0
+    purpose: Flat skill index, per-skill Status, and routing rules
+    inputs: [authored skills]
+    outputs: [skill selection guidance, Status authority]
+    dependencies: [L0.slops-lifecycle]
+    invocation: {kind: documented, trigger: "#5 in files-to-read-first-L0.md — 'read the Status column first'"}
+    owner: Justin
+    health: degraded
+    metrics: {size_kb: 35, routed_rows: 58, status_distribution: {active: 53, parked: 2, retired: 1, paired-with: 1}}
+    strengths:
+      - "Status column IS a well-formed enumerated field with a documented legend (revision-1 claim withdrawn)"
+      - "Layer column correctly records Omen-local paths for product-local skills"
+      - "newest rows already use capability-based agent phrasing (ux-ui-build-pipeline)"
+    weaknesses:
+      - "2 registry-only skills marked active that exist nowhere: design-quality-bar, ux-ui-build-pipeline"
+      - "asserts design-md-author is 'internally gated by design-quality-bar'; that SKILL.md has zero references to it"
+      - "does not list slops-deploy-guard or jules-react-component, both of which carry ledger invocations"
+    overlap: [L0.slops-lifecycle]
+    verdict: MODIFY
+    priority: tier-3
+    approval: ACCEPTED_DIRECTION
+
+  - id: L0.slops-lifecycle
+    record_type: artifact
+    path: Blueprints/skills/SLOPS_LIFECYCLE.md
+    layer: 0
+    purpose: 13-phase lifecycle map — the only artifact that sequences skills into a pipeline
+    inputs: [skill inventory]
+    outputs: [phase -> skill mapping]
+    dependencies: [L0.skill-routing]
+    invocation: {kind: tribal, trigger: "not in any read-first list or kickoff"}
+    owner: Justin
+    health: degraded
+    strengths: ["genuine orchestration artifact; all 13 phases marked 'have'"]
+    weaknesses:
+      - "invisible — agents get SKILL_ROUTING (lookup) but never this (sequence)"
+      - "hard-codes the vendor contract: 'Claude plans / Codex executes / Justin gates'"
+    overlap: [L0.skill-routing]
+    verdict: MODIFY
+    recommended_change: Add to files-to-read-first-L0.md. Rephrase the contract line to planner/executor/founder-gate roles.
+    priority: tier-3
+    approval: ACCEPTED_DIRECTION
+
+  - id: L0.tool-permissions
+    record_type: aggregate
+    expansion_count: 2
+    expansion_members: [Blueprints/tools/tool-permissions.md, Blueprints/tools/TOOLS_INDEX.md]
+    layer: 0
+    purpose: 5-tier RBAC model governing tool access
+    inputs: [tool inventory]
+    outputs: [permission tiers, approval requirements]
+    dependencies: [L0.agents-index]
+    invocation: {kind: documented, trigger: referenced from RESOURCES_INDEX and agent wrappers}
+    owner: Justin
+    health: broken
+    strengths: [coherent and internally consistent 5-tier model, clear approval gates]
+    weaknesses:
+      - "asserts bash / commit / push are 'Codex only' — empirically false and contradicts action-posture.md"
+      - "~20 of the ~50 vendor-coupled L0 lines live here"
+      - all-backslash paths
+    overlap: [L0.agents-index, L0.action-posture]
+    verdict: MODIFY
+    recommended_change: Rekey tiers to capability + permission + trust tier. Preserve every gate unchanged.
+    priority: tier-1
+    approval: ACCEPTED_DIRECTION
+
+  - id: L0.agents-md
+    record_type: artifact
+    path: Blueprints/agents/agents.md
+    layer: 0
+    purpose: Agent manifest named canonical by AGENT_INDEX.md for both Claude and Codex
+    inputs: []
+    outputs: [agent roles, pushback rules, kill switch]
+    dependencies: [coo.md, tools.md]
+    invocation: {kind: documented, trigger: "AGENT_INDEX.md:29-30 names it canonical"}
+    owner: Justin
+    health: broken
+    strengths: [pushback rules, kill switch, and escalation rules are strong ideas worth preserving]
+    weaknesses:
+      - asserts a Sept 10 2026 launch, a paid MVP Move, and "Claude never touches the terminal"
+      - mandates reading coo.md and tools.md — neither exists at L0
+      - the single most contradicted file at L0
+    overlap: [L0.wrapper-sets, L0.agents-index]
+    verdict: RETIRE
+    priority: tier-3
+    approval: NOT_APPROVED
+    approval_note: Bulk deletion not approved — requires dependency review. 5 live files point at it.
+
+  - id: L0.agents-index
+    record_type: artifact
+    path: Blueprints/agents/AGENT_INDEX.md
+    layer: 0
+    purpose: 7-section authority matrix — status legend, authorities, skills, imported census, wrappers, tiers
+    inputs: [agent wrapper files, skill routing]
+    outputs: [authority resolution]
+    dependencies: [L0.agents-md, L0.tool-permissions]
+    invocation: {kind: documented, trigger: "resources-index.md points here for agents"}
+    owner: Justin
+    health: degraded
+    strengths: ["imported-file census is exact against 91 files", "status legend is genuinely usable"]
+    weaknesses:
+      - "candidate-wrapper column sums to 47 against 36 on disk; product division claims 2 with no folder"
+      - "lists 12 active skills against 58 routed"
+      - "68 backslash paths"
+      - "Cowork runtime is absent entirely"
+    overlap: [L0.agents-md, L0.tool-permissions]
+    verdict: MODIFY
+    priority: tier-3
+    approval: ACCEPTED_DIRECTION
+
+  - id: L0.action-posture
+    record_type: artifact
+    path: Blueprints/agent-modules/action-posture.md
+    layer: 0
+    purpose: Default-act posture, 8-item ask-first list, autonomous git push
+    inputs: []
+    outputs: [agent behavior]
+    dependencies: []
+    invocation: {kind: mechanical, trigger: module 3 in every layer wrapper}
+    owner: Justin
+    health: degraded
+    strengths: ["line 29's honesty that tool-permission files silently win is excellent doctrine"]
+    weaknesses: ["directly contradicts tool-permissions.md and TOOLS_INDEX.md on push and bash, with no precedence rule"]
+    overlap: [L0.tool-permissions]
+    verdict: MODIFY
+    priority: tier-1
+    approval: ACCEPTED_DIRECTION
+
+  - id: L0.wrapper-sets
+    record_type: aggregate
+    expansion_count: 6
+    expansion_members: [CLAUDE.md, AGENTS.md, Direction/CLAUDE.md, Direction/AGENTS.md,
+                        Blueprints/workflows/CLAUDE.md, Blueprints/workflows/AGENT.md]
+    layer: 0
+    purpose: Agent entry wrappers — three competing sets
+    inputs: []
+    outputs: [agent behavior at session start]
+    dependencies: [L0.agent-modules]
+    invocation: {kind: mechanical, trigger: auto-loaded by cwd}
+    owner: Justin
+    health: broken
+    strengths: ["the root pair is a tight 30-line router; vendor symmetry done correctly"]
+    weaknesses:
+      - all three sets auto-load by cwd and none cross-references the others
+      - the Direction/ and workflows/ sets are 2026-06-22 and assert superseded doctrine
+      - the root pair carries the corrected-but-still-present Omen subdirectory claim
+    overlap: []
+    verdict: RETIRE
+    recommended_change: Keep root only; retire the Direction/ and Blueprints/workflows/ sets.
+    priority: tier-3
+    approval: NOT_APPROVED
+    approval_note: Bulk deletion not approved — requires dependency review.
+
+  - id: L0.division-folders
+    record_type: aggregate
+    expansion_count: 6
+    expansion_members: ["00_Executive_Office/agents.md", "00_Executive_Office/cep_operator.md",
+                        "01_Operations_COO/agents.md", "02_Engineering_CTO/agents.md",
+                        "03_Security_CISO/agents.md", "04_Brand_CMO/agents.md"]
+    layer: 0
+    purpose: C-Suite agent model
+    inputs: [root context.md]
+    outputs: [role definitions]
+    dependencies: [root context.md]
+    invocation: {kind: documented, trigger: "root README.md sections 3-4"}
+    owner: Justin
+    health: broken
+    strengths: ["03_Security_CISO's CompTIA-domain incident-report pattern is a real reusable idea"]
+    weaknesses:
+      - "01_Operations_COO asserts $1/$2/$20 pricing tiers are 'locked' against facts-of-record 'no paid tier'"
+      - "04_Brand_CMO recommends rebranding the platform to 'Slops Nexus'"
+      - "02_Engineering_CTO targets rebuilding SSFFMVP, which is quarantined"
+      - all five route work to root context.md, which self-declares as legacy
+    overlap: [L0.wrapper-sets]
+    verdict: RETIRE
+    priority: tier-3
+    approval: NOT_APPROVED
+    approval_note: Bulk deletion not approved — requires dependency review.
+
+  - id: L0.playbooks
+    record_type: aggregate
+    expansion_count: 6
+    expansion_members: [vps-hardening-plan.md, new-machine-setup-playbook.md, app-cutover-playbook.md,
+                        runbook_ai_workflow.md, migrate-repos-out-of-onedrive-playbook.md,
+                        proprietary-math-stack-playbook.md]
+    layer: 0
+    purpose: Operational procedures
+    inputs: [operational experience]
+    outputs: [runnable procedures]
+    dependencies: []
+    invocation: {kind: documented, trigger: named from RESOURCES_INDEX and task context}
+    owner: Justin
+    health: healthy
+    strengths: ["healthiest folder at L0 — concrete, dated, reversible; the migrate-repos playbook holds the CORRECT Omen statement"]
+    weaknesses: ["runbook_ai_workflow.md hard-codes Claude=frontend / Codex=backend and has 2 dead pointers"]
+    overlap: []
+    verdict: KEEP
+    priority: not_applicable
+    approval: ACCEPTED_DIRECTION
+
+  - id: L0.kickoffs
+    record_type: aggregate
+    expansion_count: 7
+    expansion_members: [kickoff-l0-claude.md, kickoff-l0-codex.md,
+                        "kickoff-modules/read-first.md", "kickoff-modules/pull-task.md",
+                        "kickoff-modules/plan-approval.md", "kickoff-modules/done-and-close.md",
+                        "kickoff-modules/safety-gates.md"]
+    layer: 0
+    purpose: L0 session entry points plus 5 shared gate modules
+    inputs: [founder paste]
+    outputs: [session start, PULL TASK, gates]
+    dependencies: [L0.todo, L0.agent-modules]
+    invocation: {kind: mechanical, trigger: pasted manually by Justin}
+    owner: Justin
+    health: degraded
+    strengths: [both L0 kickoffs exist and resolve 11/11 read targets, honest that L0 has no agent_inbox]
+    weaknesses:
+      - PULL TASK points at the stale TODO.md
+      - L0 kickoffs inline their own copies of the 5 modules instead of importing them, so gate logic can drift
+      - filenames are vendor-keyed; a third runtime needs a new file
+    overlap: []
+    verdict: MODIFY
+    priority: tier-0
+    approval: ACCEPTED_DIRECTION
+
+  - id: L0.handoff-2026-07-18
+    record_type: artifact
+    path: Blueprints/handoffs/2026-07-18-os-hygiene-and-first-kickoff-readiness.md
+    layer: 0
+    purpose: Newest L0 handoff; prescribes the next session's run order
+    inputs: [prior session]
+    outputs: [next-session plan]
+    dependencies: ["Direction/lanes/", "parallel-lane-doctrine.md", "kickoff-lane-agent.md"]
+    invocation: {kind: tribal, trigger: read as the current plan by the next L0 session}
+    owner: Justin
+    health: broken
+    strengths: [detailed and specific; correctly predicts one of its own missing files]
+    weaknesses:
+      - "all three cited lane dependencies VERIFIED MISSING"
+      - "0 of its 4 blocking pre-kickoff items completed in 10 days"
+      - "claims CLAUDE.md was fixed to name root graphify canonical; CLAUDE.md says the opposite"
+      - conflates L0 and L2 file sizes
+    overlap: []
+    verdict: MODIFY
+    recommended_change: Mark superseded, or create the three lane files it depends on.
+    priority: tier-0
+    approval: ACCEPTED_DIRECTION
+
+  # ---- L0 skills -------------------------------------------------------------
+  - id: skill.slops-repo-inspector
+    record_type: artifact
+    path: Blueprints/skills/slops-repo-inspector/
+    layer: 0
+    purpose: Inspect L0/L1/L2 repo truth before planning or editing
+    inputs: [filesystem, git state]
+    outputs: [current paths, source-of-truth docs, git status, stale-path findings]
+    dependencies: []
+    invocation: {kind: tribal, trigger: "agent initiative only — NOT in any read-first list or kickoff"}
+    owner: Justin
+    usage_invocation_records: 71
+    health: healthy
+    strengths: ["2nd most-used skill; already performs the repo-truth-before-planning job", "the natural host for the Truth Gate"]
+    weaknesses: [not wired into the loop]
+    overlap: [skill.slops-graphify, skill.clean-up-checkpoint]
+    overlap_note: "Not true overlap — three layers of one missing capability: paths / semantics / session state"
+    verdict: MODIFY
+    recommended_change: Make it a required first step in every kickoff. Cheapest high-value fix in the audit.
+    priority: tier-0
+    approval: ACCEPTED_DIRECTION
+
+  - id: skill.planning-pass
+    record_type: artifact
+    path: Blueprints/skills/planning-pass/
+    layer: 0
+    purpose: Turn a goal into ordered, buildable backlog items
+    inputs: [goal, current sprint]
+    outputs: [P-items with cost, done-when, blockers]
+    dependencies: []
+    invocation: {kind: documented, trigger: "'plan the next work', 'groom the sprint'"}
+    owner: Justin
+    usage_invocation_records: 35
+    health: healthy
+    strengths: [most-used planning skill; output shape includes cost and done-when]
+    weaknesses: [no written rule distinguishing it from the other two planning skills]
+    overlap: [skill.product-gap-analysis-session, skill.workflow-tree-spec]
+    overlap_note: "Distinct altitudes — goal->backlog vs HAS-vs-NEEDS vs happy-path/failure-states"
+    verdict: KEEP
+    priority: not_applicable
+    approval: ACCEPTED_DIRECTION
+
+  - id: skill.product-gap-analysis-session
+    record_type: artifact
+    path: Blueprints/skills/product-gap-analysis-session/
+    layer: 0
+    purpose: Separate what a product HAS from what it NEEDS, grounded in real code; convert the gap into a phased approval-gated plan
+    inputs: [codebase, facts of record]
+    outputs: [phased approval-gated plan]
+    dependencies: []
+    invocation: {kind: documented, trigger: "founder wants to pause and evaluate readiness"}
+    owner: Justin
+    usage_invocation_records: 1
+    health: dormant
+    strengths: [correct altitude for exactly the work this audit performed]
+    weaknesses: [used once in 345 ledger rows]
+    overlap: [skill.planning-pass]
+    verdict: KEEP
+    note: Underused, not redundant. Should be the standard pre-launch instrument.
+    priority: not_applicable
+    approval: ACCEPTED_DIRECTION
+
+  - id: skill.workflow-tree-spec
+    record_type: artifact
+    path: Blueprints/skills/workflow-tree-spec/
+    layer: 0
+    purpose: Workflow specs with happy paths, branches, failure states, recovery, observable state contracts
+    inputs: [feature intent]
+    outputs: [workflow tree spec]
+    dependencies: []
+    invocation: {kind: documented, trigger: before implementation or handoff}
+    owner: Justin
+    usage_invocation_records: 7
+    health: healthy
+    strengths: [failure-state and recovery-path coverage is rare and valuable]
+    weaknesses: []
+    overlap: [skill.planning-pass]
+    verdict: KEEP
+    priority: not_applicable
+    approval: ACCEPTED_DIRECTION
+
+  - id: skill.pre-build-research
+    record_type: artifact
+    path: Blueprints/skills/pre-build-research/
+    layer: 0
+    purpose: Research external data sources, APIs, licensing, ToS before an implementation prompt is written
+    inputs: [external sources, web]
+    outputs: [research packet]
+    dependencies: []
+    invocation: {kind: documented, trigger: before any build task depending on external data}
+    owner: Justin
+    usage_invocation_records: 11
+    health: healthy
+    strengths: [prevents building against unverified external assumptions]
+    weaknesses: []
+    overlap: [skill.dbs-research-to-architecture-router]
+    verdict: KEEP
+    priority: not_applicable
+    approval: ACCEPTED_DIRECTION
+
+  - id: skill.security-privacy-evidence
+    record_type: artifact
+    path: Blueprints/skills/security-privacy-evidence/
+    layer: 0
+    purpose: Maintain security/privacy evidence notes, control mappings, consent boundaries, approval records
+    inputs: [code changes, data flows]
+    outputs: ["omen/Direction/reviews/*-security-privacy-evidence.md"]
+    dependencies: []
+    invocation: {kind: documented, trigger: security or privacy affecting change}
+    owner: Justin
+    usage_invocation_records: 32
+    health: healthy
+    strengths: ["feeds Direction/reviews/, the healthiest artifact class in the system"]
+    weaknesses: [evidence records are signed by vendor name rather than role or standard]
+    overlap: [skill.rbac-risk-review, L2.probo]
+    verdict: KEEP
+    priority: not_applicable
+    approval: ACCEPTED_DIRECTION
+
+  - id: skill.slops-graphify
+    record_type: artifact
+    path: Blueprints/skills/slops-graphify/
+    layer: 0
+    purpose: Cross-layer knowledge graph so L0 doctrine and L2 implementation can see each other
+    inputs: [all three layer trees]
+    outputs: ["References/graphify/graphify-out/graph.json", GRAPH_REPORT.md]
+    dependencies: [external graphify tool, slops_root_scan.py]
+    invocation: {kind: documented, trigger: multi-layer or cross-cutting tasks only}
+    owner: Justin
+    usage_invocation_records: 4
+    health: degraded
+    strengths: ["the intended host for FR-B decision-ID node identity"]
+    weaknesses:
+      - "canonicity contested — CLAUDE.md and graphify-hook.md name References/ canonical; the 2026-07-18 handoff claims root"
+      - "stray graphify-out/ dirs at repo root, slops-saloon/, omen/, Blueprints/, and worktrees"
+      - "vanilla graphify stops at the nested-repo boundary, yielding zero L0<->L2 edges"
+    overlap: [skill.slops-repo-inspector]
+    verdict: MODIFY
+    priority: tier-3
+    approval: ACCEPTED_DIRECTION
+
+  - id: skill.clean-up-checkpoint
+    record_type: artifact
+    path: Blueprints/skills/clean-up-checkpoint/
+    layer: 0
+    purpose: Rate-limit-safe session shutdown checkpoint preserving context and next step
+    inputs: [session state]
+    outputs: [checkpoint record, exact next step]
+    dependencies: []
+    invocation: {kind: documented, trigger: near rate limit, ending session, pausing work}
+    owner: Justin
+    usage_invocation_records: 0
+    health: dormant
+    strengths: ["addresses a real failure mode this audit itself hit — an account spend limit mid-run"]
+    weaknesses: [never invoked in 345 ledger rows]
+    overlap: [L0.session-handoff module]
+    verdict: MODIFY
+    recommended_change: Wire into session end rather than retire.
+    priority: tier-3
+    approval: NOT_APPROVED
+    approval_note: Part of the zero-usage set; individual triage required.
+
+  - id: skill.verification-cluster
+    record_type: aggregate
+    expansion_count: 6
+    expansion_members: [slops-quality-baseline, slops-code-review, slops-verify, slops-canary, slops-ship, slops-mobile-smoke]
+    layer: 0
+    purpose: Pre-merge and post-deploy gating
+    inputs: [branch, build, deployed endpoint]
+    outputs: [quality baseline, review verdict, smoke results, canary verdict]
+    dependencies: [run-slops-saloon driver, definition-of-done.md]
+    invocation: {kind: documented, trigger: per-type DoD gates}
+    owner: Justin
+    usage_invocation_records: {slops-quality-baseline: 60, slops-code-review: 59, slops-canary: 6, slops-mobile-smoke: 6, slops-ship: 4, slops-verify: 2}
+    health: degraded
+    strengths: ["slops-ship already sequences the others correctly — the intended orchestrator exists"]
+    weaknesses:
+      - "slops-ship invoked 4 times; the orchestrator is routinely bypassed"
+      - "slops-verify and slops-mobile-smoke drive the same run-slops-saloon driver"
+    overlap: [internal]
+    verdict: MERGE
+    recommended_change: Merge slops-verify + slops-mobile-smoke. Promote slops-ship into the loop.
+    priority: tier-3
+    approval: ACCEPTED_DIRECTION
+
+  - id: skill.meta-authoring-cluster
+    record_type: aggregate
+    expansion_count: 5
+    expansion_members: [slops-skill-author, slops-agent-author, agent-wrapper-generator, agent-index-diff-builder, command-bridge-generator]
+    layer: 0
+    purpose: Authoring and indexing skills, agents, wrappers, and command bridges
+    inputs: [approved review memos, candidate selections]
+    outputs: [SKILL.md files, agent wrappers, index diffs, command shims]
+    dependencies: ["Blueprints/skills/_template/SKILL.md", AGENT_INDEX.md]
+    invocation: {kind: documented, trigger: new skill or agent authoring}
+    owner: Justin
+    usage_invocation_records: {slops-skill-author: 1, slops-agent-author: 0, agent-wrapper-generator: 0, agent-index-diff-builder: 0, command-bridge-generator: 0}
+    health: dormant
+    strengths: [least-privilege authoring discipline is correct in principle]
+    weaknesses: [4 of 5 never invoked; 5 skills maintained for one capability]
+    overlap: [internal]
+    verdict: MERGE
+    merge_into: skill.slops-skill-author
+    priority: tier-3
+    approval: NOT_APPROVED
+    approval_note: Overlaps the zero-usage set; individual triage required.
+
+  - id: skill.learning-cluster
+    record_type: aggregate
+    expansion_count: 2
+    expansion_members: [slops-retro, slops-learning-loop]
+    layer: 0
+    purpose: Convert cycle lessons into durable doctrine
+    inputs: [shipped work, decisions, incidents]
+    outputs: [decision_log entries, doctrine updates]
+    dependencies: []
+    invocation: {kind: documented, trigger: "end of cycle; slops-learning-loop parked until Omen-live+7d"}
+    owner: Justin
+    usage_invocation_records: {slops-retro: 2, slops-learning-loop: 0}
+    health: degraded
+    strengths: ["the only mechanism that would push execution state back up to L1/L0"]
+    weaknesses: [both write to decision_log with overlapping output; slops-retro used twice]
+    overlap: [internal]
+    verdict: MERGE
+    merge_when: on unpark
+    priority: tier-3
+    approval: NOT_APPROVED
+    approval_note: slops-learning-loop is correctly parked with a named gate. Do not touch before the gate opens.
+
+  - id: skill.zero-record-set
+    record_type: aggregate
+    expansion_count: 23
+    layer: 0
+    purpose: Skills with zero invocation records in the L2 ledger — a TRIAGE list, not a retirement list
+    inputs: not_applicable
+    outputs: not_applicable
+    dependencies: not_applicable
+    invocation: {kind: none, trigger: none observed}
+    owner: Justin
+    health: dormant
+    classification:
+      intentionally_parked_named_gate: [slops-community-needs-research, slops-learning-loop]
+      doctrinally_required_never_run: [slops-product-pulse]
+      meta_authoring_superseded_in_practice: [slops-agent-author, agent-wrapper-generator, agent-index-diff-builder, command-bridge-generator, slops-onboarding-agent]
+      media_production_product_not_there_yet: [slops-animation-render, slops-explainer-cut, slops-screenplay-loop, slops-image-prompt, slops-brand-mark-forge]
+      utility_wrappers_never_reached_for: [slops-headroom, slops-markitdown, slops-taste]
+      business_analysis_out_of_scope: [slops-exec-summary, slops-financial-sketch, slops-data-ingest-plan]
+      planning_utilities_overlapping_used_skills: [dbs-research-to-architecture-router, slops-prompt-generator, clean-up-checkpoint]
+      ops_runbook_infra_not_built: [self-hosted-observability-runbook]
+    strengths: ["several are correctly dormant rather than dead — parked pair has named gates"]
+    weaknesses: ["44% of the library carries no evidence of use; slops-product-pulse's zero uses means the validated-in-production state has never been entered"]
+    overlap: [skill.meta-authoring-cluster, skill.learning-cluster]
+    verdict: RETIRE
+    condition: Individual triage against SLOPS_LIFECYCLE.md. Exclude the parked pair and slops-product-pulse.
+    priority: tier-3
+    approval: NOT_APPROVED
+    approval_note: >
+      Bulk retirement explicitly NOT APPROVED by founder. Zero usage is a signal to triage, not
+      evidence of redundancy. Each skill requires individual review before any action.
+
+  - id: skill.registry-only
+    record_type: aggregate
+    expansion_count: 2
+    expansion_members: [design-quality-bar, ux-ui-build-pipeline]
+    layer: 0
+    purpose: Skills marked `active` Layer 0 in SKILL_ROUTING.md that exist nowhere on disk
+    inputs: not_applicable
+    outputs: not_applicable
+    dependencies: not_applicable
+    invocation: {kind: documented, trigger: "SKILL_ROUTING declares design-quality-bar a MANDATORY gate inside design-md-author"}
+    owner: Justin
+    health: broken
+    strengths: []
+    weaknesses:
+      - "both registered active with full Purpose descriptions; neither has a directory or file"
+      - "SKILL_ROUTING calls design-md-author 'internally gated by design-quality-bar (v1.1.0)'; design-md-author/SKILL.md has ZERO references to it — a declared mandatory gate that is not implemented"
+      - "ux-ui-build-pipeline's Default Agent cell is the repo's best capability-based phrasing, and the skill does not exist"
+    overlap: [skill.design-md-author]
+    verdict: MODIFY
+    recommended_change: Author them, or correct SKILL_ROUTING and remove the asserted gate relationship.
+    priority: tier-3
+    approval: ACCEPTED_DIRECTION
+
+  - id: skill.phantom-ledger-entries
+    record_type: aggregate
+    expansion_count: 2
+    expansion_members: [slops-deploy-guard, jules-react-component]
+    layer: 0
+    purpose: Skill names carrying invocation records that exist neither on disk nor in SKILL_ROUTING
+    inputs: not_applicable
+    outputs: not_applicable
+    dependencies: not_applicable
+    invocation: {kind: none, trigger: none — yet 24 invocation records exist}
+    owner: unknown
+    health: broken
+    metrics: {slops-deploy-guard: 13, jules-react-component: 11}
+    strengths: []
+    weaknesses: ["24 recorded invocations of skills that were never authored; nothing detected this"]
+    overlap: []
+    verdict: MODIFY
+    recommended_change: Author them or correct the 24 ledger rows.
+    note: "ui-ux-pro-max (4 records) is NOT a phantom — routed as `paired-with: ui-ux-pro-max` against slops-ui-ux-audit."
+    priority: tier-3
+    approval: ACCEPTED_DIRECTION
+
+  # ---- L1 --------------------------------------------------------------------
+  - id: L1.facts-of-record
+    record_type: artifact
+    path: slops-saloon/Direction/facts-of-record.md
+    layer: 1
+    purpose: L1 override facts, inheriting L0's
+    inputs: ["L0 Direction/facts-of-record.md"]
+    outputs: [L1 binding constraints]
+    dependencies: ["../../Direction/facts-of-record.md"]
+    invocation: {kind: documented, trigger: "#2 in files-to-read-first-L1.md"}
+    owner: Justin
+    health: broken
+    strengths: [correct shape — 5 short numbered override facts]
+    weaknesses:
+      - "line 4 pointer ../Direction/facts-of-record.md normalizes to ITSELF; intended target is ../../"
+      - "consequence: L0's 'no paid tier' fact never propagated; 6 L1 docs still assert a paid product"
+      - "a link checker cannot catch this — the path resolves"
+      - silent on pricing, the single most contested fact at L1
+    overlap: [L0.facts-of-record]
+    verdict: MODIFY
+    recommended_change: "One character: ../ -> ../../"
+    priority: tier-0
+    approval: ACCEPTED_DIRECTION
+
+  - id: L1.decision-log
+    record_type: artifact
+    path: slops-saloon/Direction/decision_log.md
+    layer: 1
+    purpose: Running division decision log
+    inputs: [session outcomes]
+    outputs: [division decisions]
+    dependencies: ["Direction/decisions/"]
+    invocation: {kind: documented, trigger: "read-first #7 per README.md"}
+    owner: Justin
+    health: degraded
+    metrics: {size_kb: 25, sections: 17}
+    strengths: [richest rationale capture at L1]
+    weaknesses:
+      - "chronology broken — the 2026-06-06 go-to-market pivot sits at the bottom, below ## Open Decisions"
+      - no schema, no IDs, no status field
+      - a ratified lock, an explicit non-decision, a commit-hygiene note and a codebase observation are formatted identically
+    overlap: [L1.decisions-dir]
+    verdict: MODIFY
+    priority: tier-1
+    approval: ACCEPTED_DIRECTION
+
+  - id: L1.current-sprint
+    record_type: artifact
+    path: slops-saloon/Direction/current_sprint.md
+    layer: 1
+    purpose: Content/marketing sprint queue
+    inputs: [planning-pass output]
+    outputs: [lane-grouped queue items with cost, done-when, blockers]
+    dependencies: ["omen/Blueprints/playbooks/content-usage-ledger.md"]
+    invocation: {kind: tribal, trigger: "referenced by exactly ONE file in the entire repo"}
+    owner: Justin
+    health: degraded
+    strengths: ["best-structured planning artifact at L1 — explicit done-when, cost, blocker-below-blocker, honest [~] markers"]
+    weaknesses:
+      - not in any read-first list or kickoff PULL TASK
+      - "declares sprints_completed.md which was never created"
+      - "its stated next action names a prompt file that does not exist"
+    overlap: [L1.todo]
+    verdict: MODIFY
+    recommended_change: Make it L1's PULL TASK target, replacing TODO.md.
+    priority: tier-0
+    approval: ACCEPTED_DIRECTION
+
+  - id: L1.todo
+    record_type: artifact
+    path: slops-saloon/Direction/TODO.md
+    layer: 1
+    purpose: What kickoff-l1-*.md PULL TASK actually reads
+    inputs: []
+    outputs: [nominally, pullable work]
+    dependencies: []
+    invocation: {kind: mechanical, trigger: "kickoff-l1-{claude,codex}.md PULL TASK"}
+    owner: Justin
+    health: broken
+    strengths: []
+    weaknesses: ["all 6 Active items are permanent postures, not tasks — literally unpullable", "35 days stale"]
+    overlap: [L1.current-sprint]
+    verdict: RETIRE
+    priority: tier-0
+    approval: ACCEPTED_DIRECTION
+    approval_note: Retirement here is a queue repoint, not a bulk document deletion.
+
+  - id: L1.fan-experience-doctrine
+    record_type: artifact
+    path: slops-saloon/Direction/decisions/slops-saloon-fan-experience-doctrine-v1.md
+    layer: 1
+    purpose: Division fan-experience doctrine binding Omen and all future products
+    inputs: [two quoted founder statements]
+    outputs: [doctrine, 4 spawned specs, a checklist]
+    dependencies: [corvus-ux-ui-direction-v1.md]
+    invocation: {kind: documented, trigger: "cited from 7+ L2 call sites incl. frontend/src/data/nflTeams.js:36"}
+    owner: Justin
+    health: healthy
+    strengths:
+      - "the model artifact — records provenance verbatim, declares conflict precedence, tracks its own downstream artifacts"
+      - genuinely binds L2
+      - generalizes beyond Omen to future products
+    weaknesses: [cites corvus-ux-ui-direction-v1.md by a name retired three months ago]
+    overlap: []
+    verdict: KEEP
+    priority: not_applicable
+    approval: ACCEPTED_DIRECTION
+
+  - id: L1.corvus-ux-direction
+    record_type: artifact
+    path: slops-saloon/Direction/decisions/corvus-ux-ui-direction-v1.md
+    layer: 1
+    purpose: Omen UX/UI direction v1, Decisions 1-15
+    inputs: [May 2026 design pass]
+    outputs: [15 numbered decisions]
+    dependencies: []
+    invocation: {kind: documented, trigger: cited by number from L2 brand-system.md}
+    owner: Justin
+    health: degraded
+    strengths: ["the only numbered, individually-addressable decision set anywhere — L2 cites it BY NUMBER", "the pattern FR-B generalizes"]
+    weaknesses:
+      - "still reads 'Status: Approved — decisions locked' while asserting a paid tier and Cormorant Garamond, both superseded"
+      - filename still carries the retired product name
+    overlap: [L1.decision-log]
+    verdict: MODIFY
+    priority: tier-1
+    approval: ACCEPTED_DIRECTION
+
+  - id: L1.rebrand-migration
+    record_type: artifact
+    path: slops-saloon/REBRAND_Valor_Ventures_migration.md
+    layer: 1
+    purpose: Valor Ventures LLC migration checklist
+    inputs: [founder LLC formation]
+    outputs: [5-section A-E checklist]
+    dependencies: []
+    invocation: {kind: tribal, trigger: ad hoc}
+    owner: Justin
+    health: broken
+    strengths: ["core insight is correct and should be preserved: legal owner / brand / technical IDs are three independent layers that need not match", "correctly forbids changing bundle IDs post-publish"]
+    weaknesses:
+      - UNTRACKED in git; undated; unlogged; unpromoted
+      - "zero propagation — 0 matches for 'Valor' anywhere else in L0 or L2"
+      - "states the entity as settled fact while business-launch-foundation.md in the same tree describes an unnamed Connecticut LLC; neither references the other"
+      - 0 of ~14 checkboxes ticked
+    overlap: [L1.business-launch-foundation]
+    verdict: MODIFY
+    recommended_change: Track, date, log, and promote into Direction/decisions/ before it is acted on.
+    priority: tier-1
+    approval: ACCEPTED_DIRECTION
+
+  - id: L1.misplaced-L2-content
+    record_type: aggregate
+    expansion_count: 4
+    expansion_members: ["Blueprints/handoffs/omen-features-ux-roadmap.md",
+                        "Blueprints/handoffs/corvus-app-state-2026-05-25.md",
+                        "Solutions/reports/corvus-backend-finish-audit-2026-05-26.md",
+                        "Solutions/reports/corvus-frontend-audit-2026-05-26.md"]
+    layer: 1
+    purpose: L2 product content parked at the division layer
+    inputs: [L2 audits]
+    outputs: [endpoint contracts, route tables, jsx line references]
+    dependencies: []
+    invocation: {kind: none, trigger: historical}
+    owner: Justin
+    health: broken
+    strengths: [genuine historical records of real audits]
+    weaknesses: ["omen-features-ux-roadmap.md violates handoffs/README.md's own rule: 'Do not place active Omen endpoint contracts in this folder'"]
+    overlap: [L2 Blueprints/handoffs]
+    verdict: MODIFY
+    recommended_change: "Move to L2 or archive. L1's Archive/ is empty and has never been used."
+    priority: tier-3
+    approval: NOT_APPROVED
+    approval_note: Immediate repository restructuring NOT APPROVED.
+
+  - id: L1.misplaced-L0-content
+    record_type: aggregate
+    expansion_count: 2
+    expansion_members: ["Blueprints/specs/slops-os-app-template-spec.md", "Blueprints/prompts/agent-build-loop-template.md"]
+    layer: 1
+    purpose: Reusable OS doctrine sitting at the division layer
+    inputs: []
+    outputs: [component primitives, token naming, data-transparency rules, agent loop template]
+    dependencies: []
+    invocation: {kind: tribal, trigger: read when a new product or loop is being scoped}
+    owner: Justin
+    health: degraded
+    strengths: ["the Data Transparency Rules are the purest L0 doctrine in the repo"]
+    weaknesses: [scoped to the division while being product-agnostic; route architecture contradicts corvus-ux-ui-direction Decision 12]
+    overlap: [L0.specs]
+    verdict: MODIFY
+    recommended_change: Promote to L0.
+    priority: tier-3
+    approval: NOT_APPROVED
+    approval_note: Immediate repository restructuring NOT APPROVED.
+
+  # ---- L2 --------------------------------------------------------------------
+  - id: L2.decision-log
+    record_type: artifact
+    path: slops-saloon/omen/Direction/decision_log.md
+    layer: 2
+    purpose: Rationale and history — the real decision store of the entire system
+    inputs: [session outcomes, founder ratifications]
+    outputs: [98 dated decision entries]
+    dependencies: []
+    invocation: {kind: documented, trigger: "mandated as read #5-8 by 8 L2 entry points; OMITTED from files-to-read-first-L2.md"}
+    owner: Justin
+    health: broken
+    metrics: {size_kb: 216.8, lines: 846, dated_entries: 98, est_tokens: 54200, span_days: 66}
+    strengths:
+      - "late entries carry verification claims and negative-scope claims — genuinely falsifiable"
+      - the only store that practices supersession, in prose
+    weaknesses:
+      - "no IDs — addressable only by (date, parenthetical), and dates are not unique (15 headings on 2026-07-19)"
+      - "no status field; 6 inconsistent status phrasings; 'Ratified' used once in 98 entries"
+      - "written in TWO OPPOSING DIRECTIONS — lines 5-362 descending, 381-846 ascending"
+      - "cross-references say 'above'/'below', which are wrong in half the file"
+      - "## Active Decisions still opens 'Corvus is the Fantasy Football MVP product' — 5 weeks post-rename; 48 corvus occurrences"
+      - 216 KB cold-start cost before the first line of work
+    overlap: [L2.abandoned-adrs, L2.facts-of-record]
+    verdict: MODIFY
+    recommended_change: Adopt FR-B identity. Fix ordering and state the convention in the preamble. Split by status; keep the log as archive.
+    priority: tier-1
+    approval: ACCEPTED_DIRECTION
+
+  - id: L2.abandoned-adrs
+    record_type: aggregate
+    expansion_count: 9
+    expansion_members: ["ADR-002 through ADR-010 under Blueprints/specs/docs/decisions/"]
+    layer: 2
+    purpose: A schema-complete decision system that was built and abandoned
+    inputs: [design decisions, May 2026]
+    outputs: [ID, Date, Status, Deciders, Context, Decision, Consequences]
+    dependencies: []
+    invocation: {kind: none, trigger: "none since 2026-05-17"}
+    owner: Justin
+    health: broken
+    metrics: {last_entry: 2026-05-17, days_dormant: 72}
+    strengths: ["holds EXACTLY the schema the logs lack — the direct precedent for FR-B"]
+    weaknesses:
+      - "ADR-003 Status:Accepted asserts 'Omen is a paid product' — contradicts facts-of-record"
+      - "ADR-009 Status:Accepted asserts Sept 10 deadline with Stripe live keys — Stripe removed 2026-07-12"
+      - ADR-005 ID collision across two files; ADR-004 duplicated; no ADR-001
+      - lost to the schema-free log because the log has zero write friction
+    overlap: [L2.decision-log]
+    verdict: RETIRE
+    recommended_change: Harvest the schema into FR-B, then retire the folder and mark ADR-003/009 superseded.
+    priority: tier-1
+    approval: ACCEPTED_DIRECTION
+    approval_note: Schema harvest approved as direction. Deletion of the folder requires dependency review.
+
+  - id: L2.facts-of-record
+    record_type: artifact
+    path: slops-saloon/omen/Direction/facts-of-record.md
+    layer: 2
+    purpose: 7 standing constraints that override older docs
+    inputs: [founder decisions]
+    outputs: [binding product constraints]
+    dependencies: []
+    invocation: {kind: documented, trigger: "#2 in files-to-read-first-L2.md"}
+    owner: Justin
+    health: degraded
+    metrics: {valid_as_of: 2026-06-15, items: 7}
+    strengths: [correct shape and explicit override semantics]
+    weaknesses:
+      - predates the native pivot, Stripe removal, and everything after
+      - "fact #3 documents a 'next 5 unchecked items' mechanic that has no checkboxes to read"
+    overlap: [L0.facts-of-record, L2.decision-log]
+    verdict: MODIFY
+    priority: tier-1
+    approval: ACCEPTED_DIRECTION
+
+  - id: L2.current-sprint
+    record_type: artifact
+    path: slops-saloon/omen/Direction/current_sprint.md
+    layer: 2
+    purpose: The active queue
+    inputs: [planning-pass, founder direction]
+    outputs: [lane-grouped queue with per-item Done when]
+    dependencies: [L2.agent-inbox]
+    invocation: {kind: mechanical, trigger: "kickoff PULL TASK — 'pull next 5 unchecked items'"}
+    owner: Justin
+    health: broken
+    metrics: {size_kb: 34.4, lines: 379, unchecked_boxes: 0, checked_boxes: 0}
+    strengths: ["per-item 'Done when' fields are well-formed and evidence-shaped"]
+    weaknesses:
+      - "ZERO checkboxes — the kickoff predicate 'pull next 5 unchecked items' has no referent"
+      - "'Tick the item' close step has no target"
+      - three mutually inconsistent completion conventions in simultaneous use
+      - "carries A1/A2 as live P0/P1 which agent_inbox.md lists as dead (PRs closed)"
+    overlap: [L2.agent-inbox, L2.sprints-completed]
+    verdict: MODIFY
+    recommended_change: Restore checkboxes, or update all three instruction sites to the heading-marker convention.
+    priority: tier-0
+    approval: ACCEPTED_DIRECTION
+
+  - id: L2.agent-inbox
+    record_type: artifact
+    path: slops-saloon/omen/Direction/agent_inbox.md
+    layer: 2
+    purpose: Active-task slot plus auto-populated Top 5
+    inputs: [current_sprint.md, main, gh pr list]
+    outputs: [the next pull, blockers, verified-truth tables]
+    dependencies: [L2.current-sprint]
+    invocation: {kind: mechanical, trigger: "#3 in files-to-read-first-L2.md; rewritten each session"}
+    owner: Justin
+    health: degraded
+    strengths:
+      - "'main is the proof. Handoffs were not treated as evidence.' — the sharpest procedural correction in the repo"
+      - the system formally conceding its own planning layer is not authoritative about its own state
+    weaknesses:
+      - "'Auto-populate' is an LLM rewriting a markdown section — no script, no schema, no validation"
+      - "the Top 5 currently has 4 items; item 5's heading was dropped in a rewrite and nothing caught it"
+    overlap: [L2.current-sprint]
+    verdict: KEEP
+    note: Keep the doctrine. The failure is that it is an instruction, not a check — precisely what FR-C addresses.
+    priority: not_applicable
+    approval: ACCEPTED_DIRECTION
+
+  - id: L2.definition-of-done
+    record_type: artifact
+    path: slops-saloon/omen/Blueprints/definition-of-done.md
+    layer: 2
+    purpose: DoD router, evidence discipline, and degraded-verification doctrine
+    inputs: [shipped work type]
+    outputs: [applicable gate set, substitution rules]
+    dependencies: ["Blueprints/done/*"]
+    invocation: {kind: documented, trigger: "#5 in files-to-read-first-L2.md"}
+    owner: Justin
+    health: healthy
+    metrics: {valid_as_of: 2026-07-27, done_types: 7}
+    strengths:
+      - "evidence discipline names its currency: commit hash, file path, screenshot link, test-run timestamp"
+      - "'Skipping a gate without writing why = lying about done'"
+      - "degraded-verification doctrine: SUBSTITUTED / DEFERRED-CI, with a table that grades its own equivalence and honestly downgrades"
+      - "merged != released is hard-blocked and explicit"
+    weaknesses: ["a vendor name is embedded in a verification substitute (Codex-sandbox SDK path)"]
+    overlap: []
+    verdict: KEEP
+    promote_to: 0
+    promote_note: >
+      The five-state model, evidence discipline, degraded verification and merged!=released are
+      product-agnostic and are the clearest case of reusable doctrine trapped in a product layer.
+    priority: tier-2
+    approval: ACCEPTED_DIRECTION
+
+  - id: L2.release-done
+    record_type: artifact
+    path: slops-saloon/omen/Blueprints/done/release-done.md
+    layer: 2
+    purpose: The one genuinely reusable, evidence-gated launch artifact
+    inputs: [built and merged work]
+    outputs: [18 gate verdicts]
+    dependencies: [slops-quality-baseline, slops-canary, CI deploy workflow]
+    invocation: {kind: documented, trigger: release-type work per definition-of-done.md}
+    owner: Justin
+    health: degraded
+    metrics: {gates: 18, native_mentions: 0}
+    strengths: ["gate 14 is an executable command; gate 13 a measurable threshold; gate 1 pins a baseline at a named commit"]
+    weaknesses:
+      - "ZERO mentions of native/mobile/iOS/Android — no gate can close an App Store or Play submission"
+      - "no PROVISIONED gate: nothing asks whether the credential/DNS/env var/webhook exists in the target environment"
+    overlap: [L2.release-readiness]
+    verdict: MODIFY
+    recommended_change: >
+      Add a PROVISIONED gate set and a parallel native/store gate set. Per FR-A the existing
+      web/KVM gates are CORRECT and should continue — they are incomplete, not wrong.
+    priority: tier-2
+    approval: ACCEPTED_DIRECTION
+    approval_note: Provisioned state ACCEPTED. Native/store gate scope REQUIRES_DESIGN.
+
+  - id: L2.release-readiness
+    record_type: artifact
+    path: slops-saloon/omen/Direction/release_readiness.md
+    layer: 2
+    purpose: Launch posture summary
+    inputs: [ops state]
+    outputs: [6 pre-launch items]
+    dependencies: []
+    invocation: {kind: tribal, trigger: read ad hoc}
+    owner: Justin
+    health: broken
+    metrics: {items: 6, last_updated: 2026-07-19, native_mentions: 0}
+    strengths: [names concrete load-test targets and specific scripts]
+    weaknesses: ["none evidence-gated — 'final review', 'keep in the checklist'; no pass criteria; no artifact required"]
+    overlap: [L2.release-done]
+    verdict: MERGE
+    merge_into: L2.release-done
+    priority: tier-2
+    approval: ACCEPTED_DIRECTION
+
+  - id: L2.probo
+    record_type: artifact
+    path: slops-saloon/omen/probo.yaml
+    layer: 2
+    purpose: Structured governance-control map — controls with evidence paths and assertions
+    inputs: [source files]
+    outputs: [4 control evidence assertions — CC6.1, GDPR_ART_17, GDPR_ART_5, CC7.2]
+    dependencies: ["sql/omen_rls_security.sql", "src/routes/userPrivacy.js"]
+    invocation: {kind: none, trigger: "never wired to CI — no workflow references it"}
+    owner: Justin
+    health: degraded
+    strengths: ["the only STRUCTURED GOVERNANCE-CONTROL MAP in the tree; the pattern FR-C should generalize"]
+    weaknesses: [not wired to CI; only 4 controls]
+    overlap: [L2.quality-baseline]
+    verdict: KEEP
+    note: >
+      Narrowed claim (CHG-07). Not the only machine-readable or automatically-testable artifact —
+      native-visual-evidence.yml, evals/slops-prompt-guard.mjs and quality/baseline.json all
+      attempt automated enforcement in narrower scopes.
+    priority: not_applicable
+    approval: ACCEPTED_DIRECTION
+
+  - id: L2.reviews
+    record_type: aggregate
+    expansion_count: 44
+    layer: 2
+    purpose: Security-privacy evidence, legal spot-checks, AI-integration reviews, code reviews, research memos
+    inputs: [code changes, decisions, external research]
+    outputs: [dated evidence records]
+    dependencies: [skill.security-privacy-evidence]
+    invocation: {kind: documented, trigger: per-type DoD and skill activation}
+    owner: Justin
+    health: healthy
+    metrics: {files: 44, span: "2026-06-19 .. 2026-07-28"}
+    strengths: ["the healthiest artifact class in the system — consistently dated, consistently produced, still active"]
+    weaknesses: ["evidence signed by vendor name (Owner: Codex / Reviewer: Claude) rather than by role or verification standard"]
+    overlap: [L2.audits]
+    verdict: KEEP
+    priority: not_applicable
+    approval: ACCEPTED_DIRECTION
+
+  - id: L2.audits
+    record_type: aggregate
+    expansion_count: 43
+    layer: 2
+    purpose: Code reviews, WCAG sweeps, UI/UX audits
+    inputs: [code, screens]
+    outputs: [audit verdicts]
+    dependencies: []
+    invocation: {kind: none, trigger: "abandoned 2026-07-19"}
+    owner: Justin
+    health: broken
+    metrics: {files: 43, last_entry: 2026-07-19}
+    strengths: [43 genuine historical audit records]
+    weaknesses:
+      - "SILENTLY ABANDONED — function migrated to Direction/reviews/ with no doctrine file recording the move"
+      - "specs/design/README.md still routes to it"
+    overlap: [L2.reviews]
+    verdict: RETIRE
+    priority: tier-3
+    approval: NOT_APPROVED
+    approval_note: Requires dependency review — a live spec still routes here.
+
+  - id: L2.done-ledger
+    record_type: artifact
+    path: slops-saloon/omen/Blueprints/done/LEDGER.md
+    layer: 2
+    purpose: Gate-closure record, one row per closed item
+    inputs: [closed work]
+    outputs: [90 ledger rows]
+    dependencies: [L2.definition-of-done]
+    invocation: {kind: documented, trigger: "DONE & CLOSE step 6 in both kickoffs"}
+    owner: Justin
+    health: degraded
+    metrics: {rows: 90, malformed_rows: 25, handoffs: 120, conversion_rate: 0.75}
+    strengths: [the closest thing to a machine-parseable completion record]
+    weaknesses:
+      - 25 of 90 rows malformed as a 5-column table — unescaped pipes make it non-parseable
+      - 14 zero-row days on which 17 handoffs were written
+      - "the system diagnosed its own 5-day staleness and added a corrective rule — a human noticing, not a check"
+    overlap: [L2.sprints-completed]
+    verdict: MODIFY
+    priority: tier-3
+    approval: ACCEPTED_DIRECTION
+
+  - id: L2.quality-baseline
+    record_type: artifact
+    path: slops-saloon/omen/Blueprints/quality/baseline.json
+    layer: 2
+    purpose: Machine-readable quality ratchet
+    inputs: [test runs, audit, build]
+    outputs: [baseline signals]
+    dependencies: [skill.slops-quality-baseline]
+    invocation: {kind: documented, trigger: pre-merge quality gate}
+    owner: Justin
+    health: broken
+    strengths: [one of the few genuinely machine-readable artifacts; correct intent]
+    weaknesses: ["duplicate JSON keys — the later value wins, silently ratcheting the baseline DOWN, against its own stated rule"]
+    overlap: [L2.probo]
+    verdict: MODIFY
+    priority: tier-2
+    approval: ACCEPTED_DIRECTION
+
+  - id: L2.test-count-divergence
+    record_type: aggregate
+    expansion_count: 6
+    expansion_members: ["context.md 240/240", "quality/baseline.json 388/388", "release_readiness.md 391/391",
+                        "release-done.md 417/417", "agent_inbox.md 422/422 and 432/432", "sprints_completed.md 426/426"]
+    layer: 2
+    purpose: Cross-artifact inconsistency record — six live claims of the same fact
+    inputs: not_applicable
+    outputs: not_applicable
+    dependencies: not_applicable
+    invocation: {kind: none, trigger: not_applicable}
+    owner: Justin
+    health: broken
+    strengths: []
+    weaknesses: [six live claims, none derivable from another]
+    overlap: []
+    verdict: MODIFY
+    note: Exactly the defect class a validator catches and doctrine cannot.
+    priority: tier-4
+    approval: ACCEPTED_DIRECTION
+
+  - id: L2.worktrees
+    record_type: aggregate
+    expansion_count: 11
+    layer: 2
+    purpose: Git worktrees under slops-saloon/ for parallel agent work
+    inputs: [branches]
+    outputs: [isolated working copies]
+    dependencies: [omen git repo]
+    invocation: {kind: mechanical, trigger: created per parallel task}
+    owner: Justin
+    health: unknown
+    metrics:
+      registered: 11
+      fully_merged_into_origin_main: 7
+      patch_duplicate: 1
+      holding_unique_work: 2
+      unique_commits_total: 6
+      branches_with_unique_work: [chore/dependency-health-controls, codex/security-log-redaction]
+    strengths: [enables parallel agent execution]
+    weaknesses:
+      - "2 branches hold 6 commits not present in origin/main"
+      - "dirty state of every worktree is UNASSESSABLE from a POSIX sandbox — .git files record Windows absolute paths"
+    overlap: []
+    verdict: MODIFY
+    recommended_change: Re-assess from Windows. Resolve the 2 branches with unique work before any cleanup.
+    note: >
+      CHG-01. The revision-1 'all prunable = repository rot' finding is WITHDRAWN. `prunable` was
+      reported because Windows paths do not resolve in the audit sandbox; the directories exist on
+      disk. Running `git worktree prune` from the sandbox would have destroyed all 11 admin records.
+    priority: tier-3
+    approval: NOT_APPROVED
+    approval_note: Worktree pruning NOT APPROVED. Prior basis withdrawn; 2 branches hold unique work; dirty state unknown.
+
+# ---------------------------------------------------------------------------
+# TRACEABILITY TESTS — 3 of 98 decision entries, non-random selection
+# ---------------------------------------------------------------------------
+traceability_tests:
+  sample_size: 3
+  population: 98
+  sampling: non-random — selected for ratified + cross-disciplinary + recent
+  claim_strength: tested pattern, not proven law
+
+  cases:
+    - id: T1
+      name: Font stack lock — Cinzel/Inter not revived
+      decided: 2026-07-19
+      result: FAILED
+      encoding: documentation-obligation
+      stages: {decision_record: present, repository_truth: BREAK, planning_constraints: partial,
+               sprint_requirements: present, execution_handoff: BREAK, verification_criteria: BREAK,
+               launch_evidence: not_applicable}
+      disciplines_inherited: 2
+      disciplines_total: 7
+      evidence:
+        - "component-lock-v1.md:203-209 still lists Cinzel/Inter (re-verified 2026-07-29)"
+        - "omen/CLAUDE.md:26 still calls that file 'canonical component API/tokens'"
+        - "done/design-done.md gate 10 still says 'Focus rings visible, gold accent' — contradicting a sibling decision"
+        - 3 downstream briefs hit the contradiction and were told not to fix it
+      caveat: "The same decision DID propagate correctly into 5 mobile specs — encoding shapes probability, it does not determine outcome."
+
+    - id: T2
+      name: "Custom URL scheme com.slopssaloon.omen://"
+      decided: 2026-07-19
+      result: PASSED
+      encoding: machine-checkable-literal
+      evidence: 12 markdown references plus source
+      caveat: Partly self-proving — a broken literal breaks the build, so survival is expected.
+
+    - id: T5
+      name: AI_PROVIDER cloud cap = $0
+      decided: 2026-07-12
+      result: PASSED
+      encoding: blocking-predicate + negative-constraint
+      artifacts_in_chain: 9
+      drift: none
+      span_days: 15
+      evidence: >
+        Carried "DO NOT BUILD until the cap is logged" and "must hard-fail or stay disabled".
+        Closeout explicitly refused to overclaim: "implemented work, not deployment proof".
+
+traceability_finding: >
+  Encoding appears to be the dominant variable in whether a ratified decision survives downstream.
+  The one tested documentation-obligation case failed; both tested self-enforcing cases succeeded.
+  This is a strong pattern across 3 of 98 entries, not a proven law — 95 entries were not traced,
+  and T1 itself propagated correctly into 5 of 6 target files. The recommendations do not depend
+  on the stronger claim.
+
+# ---------------------------------------------------------------------------
+# FIVE-STATE LAUNCH READINESS
+# ---------------------------------------------------------------------------
+capability_states:
+  - state: DESIGNED
+    status: partial
+    evidence: No design-contract-done.md type exists; an agent invented the category inline in a ledger cell.
+  - state: IMPLEMENTED
+    status: present
+    evidence: "done/feature-done.md, 20 gates."
+  - state: PROVISIONED
+    status: ABSENT
+    severity: high
+    approval: ACCEPTED_DIRECTION
+    evidence: >
+      No Done file has a provisioning gate. Live example: the Apple OAuth secret "expires after six
+      months; the founder must rotate it before 2027-01-19" — no artifact tracks that date as a task.
+      Nothing asks whether a credential, DNS record, env var, or webhook exists in the target environment.
+  - state: VERIFIED
+    status: excellent
+    evidence: "Degraded-verification doctrine (SUBSTITUTED / DEFERRED-CI), honest downgrades, hard-blocked Release Done."
+  - state: VALIDATED_IN_PRODUCTION
+    status: defined-never-entered
+    evidence: "slops-product-pulse is 'required post-live cadence' with 0 invocation records in 345 ledger rows."
+
+# ---------------------------------------------------------------------------
+# VENDOR COUPLING
+# ---------------------------------------------------------------------------
+vendor_coupling:
+  L0: {binding_lines: ~50, capability_neutral_lines: 6, files_affected: 11}
+  migration_status: partially-migrated
+  migrated: ["agent-modules/", "kickoff-modules/", facts-of-record.md, L2 lane labels,
+             "omen/Direction/sprints_completed.md", "SKILL_ROUTING ux-ui-build-pipeline row"]
+  not_migrated: ["tools/tool-permissions.md", "tools/TOOLS_INDEX.md", "agents/agents.md",
+                 "agents/AGENT_INDEX.md", "agents/layer-handoff-protocol.md", "workflows/",
+                 "playbooks/runbook_ai_workflow.md", "prompts/_templates/", SLOPS_LIFECYCLE.md,
+                 kickoff filenames, "L2 root AGENT.md", "L2 Direction/context.md",
+                 handoffs contract bus, "jules/ handoff dir"]
+  deepest_couplings:
+    - "kickoff filenames are vendor-keyed (kickoff-frontend-claude.md) — a third runtime cannot start a session without a new file"
+    - "the contract bus is named by vendor pairing (frontend-to-backend.md = Claude->Codex)"
+    - "RBAC tiers 4-5 are 'Codex only' — bash, tests, builds, commits, pushes vendor-gated in written policy"
+    - "a permission boundary is keyed to vendor identity (Jules) rather than to a capability or trust tier"
+    - "the Android SDK path in a DoD substitution is defined relative to one vendor's sandbox"
+  best_existing_counter_example:
+    file: Blueprints/skills/SKILL_ROUTING.md
+    row: ux-ui-build-pipeline
+    text: >
+      "Stage 3 (Build) runs on whichever capable coding agent is doing the work — Codex, Claude,
+      Cursor, or another — as long as it follows the pipeline's gates"
+    note: Dated 2026-07-09. Exactly the target state, already written down. Undercut only by that skill not existing on disk.
+  note: >
+    Coupling is nowhere capability-derived. No file says "the runtime with terminal access does X".
+    A third runtime has no rule to inherit — it must be added by name in ~50 places across 11 files.
+    identity-cowork.md demonstrates the cost: adding one VARIANT of Claude required a new module,
+    and Cowork still does not appear in AGENT_INDEX.md, TOOLS_INDEX.md, or tool-permissions.md.
+    L2 already routes to THREE agents (Jules, Codex, Claude) while facts-of-record enumerates two.
+  verdict: MODIFY
+  recommended_change: >
+    Rekey the subject, not the constraint. RBAC, approval gates, security and auditability must not
+    weaken — rename "Codex only" to a capability + trust-tier requirement, rename kickoffs and the
+    contract bus to role names, and convert the Jules constraints into an inheritable trust tier.
+  priority: tier-1
+  approval: ACCEPTED_DIRECTION
+
+# ---------------------------------------------------------------------------
+# THE ONE CREATE — direction accepted, implementation NOT authorized
+# ---------------------------------------------------------------------------
+create_recommendations:
+  - id: truth-gate-validator
+    layer: 0
+    approval: ACCEPTED_DIRECTION
+    implementation_status: NOT_YET_AUTHORIZED
+    requires_design: [technical-design, invocation-points, failure-taxonomy, block-warn-thresholds]
+    founder_framing: FR-C — a read-only Truth Gate, report-only first
+    invoked_by: skill.slops-repo-inspector
+    pattern_precedent: "omen/probo.yaml (evidence_path + check: contains(...))"
+    intended_coverage: [repository-truth, decision-schema-validity, active-decision-conflicts,
+                        sprint-and-queue-validity, skill-and-routing-integrity, completion-evidence]
+    rollout: [report-only, block-proven-critical-failures, local-and-CI-after-validation]
+    would_have_caught:
+      - "~58 broken pointers across L0 and L1"
+      - both L1 index files broken
+      - "the 2026-07-18 handoff's three dead lane paths"
+      - "the L1 facts-of-record self-pointer (6 L1 docs asserting a paid product)"
+      - 6 divergent test counts
+      - "47-vs-36 wrapper census drift"
+      - "'Corvus' in the ## Active Decisions block, 5 weeks running"
+      - "2 phantom skills carrying 24 invocation records"
+      - "2 registry-only skills marked active"
+      - "quality/baseline.json duplicate-key silent downgrade"
+      - "local main 20 commits behind origin/main"
+    would_NOT_have_caught:
+      - "the worktree assessment error — that required knowing the audit's own sandbox was lying"
+      - judgment calls about layer membership or doctrine correctness
+    why_not_orchestration: >
+      Doctrine has already been tried on this exact problem three times and lost: hard-prohibitions.md
+      #2 ("don't claim work was done without evidence"), definition-of-done.md (which names its own
+      5-day ledger failure), and agent_inbox.md (which instructs agents to distrust handoffs and grep
+      main). All three are correct. All three still require a human to notice. The 2026-07-28
+      reconciliation happened because a GitHub billing hold forced it, not because anything checked.
+    complexity_budget: >
+      Removes more than it adds: replaces manual reconciliation passes, retires the need for periodic
+      audits like this one, and is the precondition for safely retiring stale documents.
+    honest_limit: >
+      CHG-09. A validator is a plausible FIRST executable enforcement component. It does not by itself
+      complete the kernel — it depends on structured decision records (FR-B), current-truth generation,
+      repository inspection, routing, workflow invocation, and evidence definitions.

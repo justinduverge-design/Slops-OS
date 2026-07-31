@@ -25,6 +25,8 @@ Paste `Blueprints/prompts/kickoff-l0-claude.md` to start a root-layer session.
 
 Canonical hook doctrine lives in `Blueprints/agent-modules/graphify-hook.md` (referenced as module 8 by every layer's `CLAUDE.md`/`AGENTS.md`). Quick reference:
 
-- **Status: not currently buildable.** `References/graphify/graphify-out/graph.json` and repo-root `graphify-out/graph.json` do not exist anywhere in this repo (confirmed absent via repo-wide search, 2026-07-11) — do not attempt to read either path. `References/graphify/` itself does not exist.
-- **To rebuild:** `pip install graphifyy`, then run the `slops-graphify` skill (see `Blueprints/skills/SKILL_ROUTING.md`). Until rebuilt, treat cross-layer questions ("what governs this?") as requiring manual doc lookup — start at root doctrine (`AGENTS.md`/`CLAUDE.md`), follow explicit routing/citation links by hand.
-- **Query pattern once rebuilt:** start at god nodes (Omen → SLOPS OS → Skill system → Slops Saloon), follow cross-layer edges, trace shortest paths. Single-layer tasks skip it.
+- **Read:** `References/graphify/graphify-out/graph.json` — the published canonical. Report: `GRAPH_REPORT.md` beside it.
+- **Rebuild:** `python "Blueprints/skills/slops-graphify/slops_root_scan.py" --force` from repo root. Vanilla `graphify update` stops at the nested-repo boundary and yields zero L0↔L2 edges.
+- **Stray `graphify-out/` folders** appear wherever graphify was run directly (repo root, `slops-saloon/`, worktrees). Not canonical — ignore.
+- **`graphify-out/` is gitignored** — a git-tracked search returns nothing even though the files are there. Search the filesystem.
+- Multi-layer tasks only. Single-layer tasks skip it.
