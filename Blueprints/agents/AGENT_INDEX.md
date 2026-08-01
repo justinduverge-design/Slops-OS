@@ -1010,6 +1010,132 @@ assignments:
       - db-write
       - deployment
       - secrets
+
+  - assignment_id: ATA-20260801-01
+    runtime: claude-code
+    session_capability_confirmed: true
+    tier: full-executor
+    scope_task_key: M4-CC-LedgerPreview
+    granted_by: founder
+    granted_at: 2026-08-01
+    expires: on-task-close
+    conditions:
+      - "Figma §3.2 proposal creation only; no implementation code until the proposal is founder-approved"
+      - "no fabricated ledger/outcome data in the proposal"
+    action_level_approvals_required:
+      - destructive
+      - production
+      - db-write
+      - deployment
+      - secrets
+
+  - assignment_id: ATA-20260801-02
+    runtime: claude-code
+    session_capability_confirmed: true
+    tier: full-executor
+    scope_task_key: M4-CC-PlatformsCompact
+    granted_by: founder
+    granted_at: 2026-08-01
+    expires: on-task-close
+    conditions:
+      - "Figma §3.2 proposal creation only; no implementation code until the proposal is founder-approved"
+      - "no live provider connect flow, credentials, or deep-link config in the proposal"
+    action_level_approvals_required:
+      - destructive
+      - production
+      - db-write
+      - deployment
+      - secrets
+
+  - assignment_id: ATA-20260801-03
+    runtime: claude-code
+    session_capability_confirmed: true
+    tier: full-executor
+    scope_task_key: D1
+    granted_by: founder
+    granted_at: 2026-08-01
+    expires: on-task-close
+    conditions:
+      - "research/pre-build-research phase only — evaluate paid live-ADP data source options, pricing, licensing, terms"
+      - "no paid dependency, contract, API key, or spend commitment without a separate explicit approval"
+      - "no code implementation under this assignment"
+    action_level_approvals_required:
+      - destructive
+      - production
+      - db-write
+      - deployment
+      - secrets
+
+  - assignment_id: ATA-20260801-04
+    runtime: claude-code
+    session_capability_confirmed: true
+    tier: full-executor
+    scope_task_key: M3A-QA
+    granted_by: founder
+    granted_at: 2026-08-01
+    expires: on-task-close
+    conditions:
+      - "sanitized QA matrix/checklist preparation only — no real device, no real credentials, no account actions"
+      - "output must contain no real credentials, tokens, or account-specific data"
+    action_level_approvals_required:
+      - destructive
+      - production
+      - db-write
+      - deployment
+      - secrets
+
+  - assignment_id: ATA-20260801-05
+    runtime: claude-code
+    session_capability_confirmed: true
+    tier: full-executor
+    scope_task_key: A3-live-access-followup
+    granted_by: founder
+    granted_at: 2026-08-01
+    expires: on-task-close
+    conditions:
+      - "read-only production verification only — TLS handshake check, Supabase advisors/RLS query via existing Supabase MCP connection"
+      - "no secret values, no mutation, no production data displayed beyond RLS/advisory metadata"
+    action_level_approvals_required:
+      - destructive
+      - production
+      - db-write
+      - deployment
+      - secrets
+
+  - assignment_id: ATA-20260801-06
+    runtime: claude-code
+    session_capability_confirmed: true
+    tier: full-executor
+    scope_task_key: D1-production-verification
+    granted_by: founder
+    granted_at: 2026-08-01
+    expires: on-task-close
+    conditions:
+      - "read-only live GET request to the public /api/trade/pulse endpoint only — no mutation, no auth bypass"
+    action_level_approvals_required:
+      - destructive
+      - production
+      - db-write
+      - deployment
+      - secrets
+
+  - assignment_id: ATA-20260801-07
+    runtime: claude-code
+    session_capability_confirmed: true
+    tier: full-executor
+    scope_task_key: M4-CC-LeaguePulse
+    granted_by: founder
+    granted_at: 2026-08-01
+    expires: on-task-close
+    conditions:
+      - "Figma §3.2 proposal creation only; no implementation code until the proposal is founder-approved"
+      - "no fabricated league-activity data; activity section must render as an honest empty state, matching the approved §1.6 brief"
+    action_level_approvals_required:
+      - destructive
+      - production
+      - db-write
+      - deployment
+      - secrets
 # Shape for a future founder-issued assignment:
 #   - assignment_id: ATA-YYYYMMDD-NN
 #     runtime: claude-code            # must exist in runtime-policy/v1
