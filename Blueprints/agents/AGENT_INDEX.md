@@ -919,7 +919,97 @@ This is where authority actually lives. It is initialized **empty**.
 ```yaml
 schema: active-trust-assignment/v1
 # Empty list = defaults only. No assignment = no authority above runtime default_tier.
-assignments: []
+assignments:
+  - assignment_id: ATA-20260731-01
+    runtime: claude-code
+    session_capability_confirmed: true
+    tier: full-executor
+    scope_task_key: A3
+    granted_by: founder
+    granted_at: 2026-07-31
+    expires: on-task-close
+    conditions:
+      - "audit-preparation only; no secret values reviewed or displayed"
+      - "no mutation to production database, DNS, Nginx, TLS, or environment variables"
+    action_level_approvals_required:
+      - destructive
+      - production
+      - db-write
+      - deployment
+      - secrets
+
+  - assignment_id: ATA-20260731-02
+    runtime: claude-code
+    session_capability_confirmed: true
+    tier: full-executor
+    scope_task_key: A4
+    granted_by: founder
+    granted_at: 2026-07-31
+    expires: on-task-close
+    conditions:
+      - "no-write Supabase dry-run against real nflverse data only"
+      - "production flag flip explicitly excluded from this assignment; requires separate future approval"
+      - "never log provider credentials or raw user data"
+    action_level_approvals_required:
+      - destructive
+      - production
+      - db-write
+      - deployment
+      - secrets
+
+  - assignment_id: ATA-20260731-03
+    runtime: claude-code
+    session_capability_confirmed: true
+    tier: full-executor
+    scope_task_key: F1
+    granted_by: founder
+    granted_at: 2026-07-31
+    expires: on-task-close
+    conditions:
+      - "audit-preparation only; no production data or secret values reviewed or displayed"
+      - "map every service-key route to query/scoping-column/test; unscoped queries become a P0 defect with a failing isolation test"
+    action_level_approvals_required:
+      - destructive
+      - production
+      - db-write
+      - deployment
+      - secrets
+
+  - assignment_id: ATA-20260731-04
+    runtime: claude-code
+    session_capability_confirmed: true
+    tier: full-executor
+    scope_task_key: F4
+    granted_by: founder
+    granted_at: 2026-07-31
+    expires: on-task-close
+    conditions:
+      - "ESPN cookie values must never appear in logs, UI, URLs, or payloads"
+      - "no production mutation; verification only"
+    action_level_approvals_required:
+      - destructive
+      - production
+      - db-write
+      - deployment
+      - secrets
+
+  - assignment_id: ATA-20260731-05
+    runtime: claude-code
+    session_capability_confirmed: true
+    tier: full-executor
+    scope_task_key: M4-CC-WaiverWatch
+    granted_by: founder
+    granted_at: 2026-07-31
+    expires: on-task-close
+    conditions:
+      - "Figma §3.2 proposal creation only; no implementation code until the proposal is founder-approved"
+      - "no fabricated waiver deadlines or provider data in the proposal"
+    action_level_approvals_required:
+      - destructive
+      - production
+      - db-write
+      - deployment
+      - secrets
 # Shape for a future founder-issued assignment:
 #   - assignment_id: ATA-YYYYMMDD-NN
 #     runtime: claude-code            # must exist in runtime-policy/v1
