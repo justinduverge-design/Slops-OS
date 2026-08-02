@@ -1136,6 +1136,151 @@ assignments:
       - db-write
       - deployment
       - secrets
+
+  - assignment_id: ATA-20260801-08
+    runtime: claude-code
+    session_capability_confirmed: true
+    tier: full-executor
+    scope_task_key: M4-Help-Support-Implementation
+    granted_by: founder
+    granted_at: 2026-08-01
+    expires: on-task-close
+    conditions:
+      - "produce the missing Android TalkBack, font-scale, and compact/large-phone screenshot evidence for the already-merged PR #229 implementation only"
+      - "no new API endpoints, provider credentials/cookies, account/store settings, analytics, deployment, or production changes"
+      - "local emulator/device evidence only; no store account or release action"
+    action_level_approvals_required:
+      - destructive
+      - production
+      - db-write
+      - deployment
+      - secrets
+
+  - assignment_id: ATA-20260802-01
+    runtime: codex
+    session_capability_confirmed: true
+    tier: full-executor
+    scope_task_key: B2-D3-S
+    granted_by: founder
+    granted_at: 2026-08-02
+    expires: on-task-close
+    conditions:
+      - "Sleeper trade-capability implementation only; no Yahoo/ESPN, credentials, SQL, dependencies, deployment, or public Trade Analyzer changes"
+    action_level_approvals_required:
+      - destructive
+      - production
+      - db-write
+      - deployment
+      - secrets
+
+  - assignment_id: ATA-20260802-02
+    runtime: codex
+    session_capability_confirmed: true
+    tier: full-executor
+    scope_task_key: B3
+    granted_by: founder
+    granted_at: 2026-08-02
+    expires: on-task-close
+    conditions:
+      - "Replace Tuesday scoring's Sportradar read with public nflverse data and add a no-write dry-run only"
+      - "Do not change OMEN_CRON_SCORING_ENABLED, production environment, credentials, SQL, dependencies, deployment, or production data"
+    action_level_approvals_required:
+      - destructive
+      - production
+      - db-write
+      - deployment
+      - secrets
+
+  - assignment_id: ATA-20260802-03
+    runtime: codex
+    session_capability_confirmed: true
+    tier: full-executor
+    scope_task_key: A4-preseason-deferral
+    granted_by: founder
+    granted_at: 2026-08-02
+    expires: on-task-close
+    conditions:
+      - "Implement issue #263 only: defer an unavailable pre-season nflverse season file without recording a failed move or performing Supabase/Redis writes"
+      - "Do not change OMEN_CRON_SCORING_ENABLED, production environment, credentials, SQL, dependencies, deployment, or production data"
+    action_level_approvals_required:
+      - destructive
+      - production
+      - db-write
+      - deployment
+      - secrets
+
+  - assignment_id: ATA-20260802-04
+    runtime: codex
+    session_capability_confirmed: true
+    tier: full-executor
+    scope_task_key: B2-D-E1-planning
+    granted_by: founder
+    granted_at: 2026-08-02
+    expires: on-task-close
+    conditions:
+      - "Planning-pass only: ratify the ESPN waiver-pool implementation task and its source-backed contract"
+      - "No ESPN credential access, real-account request, application code, SQL, dependency, deployment, or production change"
+    action_level_approvals_required:
+      - destructive
+      - production
+      - db-write
+      - deployment
+      - secrets
+
+  - assignment_id: ATA-20260802-05
+    runtime: codex
+    session_capability_confirmed: true
+    tier: full-executor
+    scope_task_key: B2-D-E1
+    granted_by: founder
+    granted_at: 2026-08-02
+    expires: on-task-close
+    conditions:
+      - "Implement and fixture-test only the ESPN waiver-pool adapter normalization and bounded pagination contract"
+      - "Do not access or print ESPN credentials, make a real-account request, change SQL or dependencies, wire canonical Omen services or clients, deploy, or change production data"
+    action_level_approvals_required:
+      - destructive
+      - production
+      - db-write
+      - deployment
+      - secrets
+
+  - assignment_id: ATA-20260802-06
+    runtime: codex
+    session_capability_confirmed: true
+    tier: full-executor
+    scope_task_key: B2-D-E2
+    granted_by: founder
+    granted_at: 2026-08-02
+    expires: on-task-close
+    conditions:
+      - "Wire the already-built ESPN waiver-pool adapter only into the selected-context canonical Omen recommendation path, with fixture-backed service and route tests"
+      - "Do not access or print ESPN credentials, make a real-account request, change SQL or dependencies, alter the public Trade Analyzer or mobile clients, deploy, or change production data"
+    action_level_approvals_required:
+      - destructive
+      - production
+      - db-write
+      - deployment
+      - secrets
+
+  - assignment_id: ATA-20260802-07
+    runtime: codex
+    session_capability_confirmed: true
+    tier: full-executor
+    scope_task_key: B2-D-E3
+    granted_by: founder
+    granted_at: 2026-08-02
+    expires: on-task-close
+    conditions:
+      - "Perform read-only verification of the founder-connected drafted ESPN league using browser-origin provider requests or aggregate Supabase connection-readiness evidence"
+      - "Report counts and booleans only; credentials and league context may be held in memory solely for the read-only provider request, but must never be printed, persisted, returned, or included in errors or logs"
+      - "Do not write database data, execute provider transactions, publish E1 or E2, deploy, or change production behavior"
+    action_level_approvals_required:
+      - destructive
+      - production
+      - db-write
+      - deployment
+      - secrets
 # Shape for a future founder-issued assignment:
 #   - assignment_id: ATA-YYYYMMDD-NN
 #     runtime: claude-code            # must exist in runtime-policy/v1
