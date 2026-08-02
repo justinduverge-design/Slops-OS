@@ -920,6 +920,24 @@ This is where authority actually lives. It is initialized **empty**.
 schema: active-trust-assignment/v1
 # Empty list = defaults only. No assignment = no authority above runtime default_tier.
 assignments:
+  - assignment_id: ATA-20260802-08
+    runtime: codex
+    session_capability_confirmed: true
+    tier: full-executor
+    scope_task_key: OPS-status-model-truth-gate
+    granted_by: founder
+    granted_at: 2026-08-02
+    expires: on-task-close
+    conditions:
+      - "documentation-only reconciliation of the L0 status model, Omen status-model mirror, and stale Omen CI guidance"
+      - "no app code, package, deployment, secret, database, or production changes"
+    action_level_approvals_required:
+      - destructive
+      - production
+      - db-write
+      - deployment
+      - secrets
+
   - assignment_id: ATA-20260731-01
     runtime: claude-code
     session_capability_confirmed: true
