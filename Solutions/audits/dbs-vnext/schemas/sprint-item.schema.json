@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:slops:direction:v1:sprint-item",
+  "title": "DBS Direction sprint item v1",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "schema_id", "schema_version", "id", "created_at", "updated_at",
+    "repository", "title", "desired_outcome", "why_now", "status",
+    "scope", "non_scope", "dependencies", "blockers",
+    "applicable_blueprints", "supporting_references", "destination",
+    "acceptance_criteria", "validation", "decision_links", "owner",
+    "source", "next_action", "links"
+  ],
+  "properties": {
+    "schema_id": { "const": "slops.direction.sprint-item" },
+    "schema_version": { "type": "string", "pattern": "^1\\.[0-9]+\\.[0-9]+$" },
+    "id": { "type": "string", "pattern": "^(SLOPS|OMEN)-SPR-[0-9]{8}-[0-9]{3}$" },
+    "created_at": { "type": "string", "format": "date" },
+    "updated_at": { "type": "string", "format": "date" },
+    "repository": { "enum": ["slops-os", "omen"] },
+    "title": { "type": "string", "minLength": 1 },
+    "desired_outcome": { "type": "string", "minLength": 1 },
+    "why_now": { "type": "string", "minLength": 1 },
+    "status": { "enum": ["READY", "IN_PROGRESS", "VERIFIED", "CLOSED"] },
+    "scope": { "$ref": "#/$defs/nonEmptyStrings" },
+    "non_scope": { "type": "array", "items": { "type": "string" } },
+    "dependencies": { "$ref": "#/$defs/linkList" },
+    "blockers": { "$ref": "#/$defs/linkList" },
+    "applicable_blueprints": { "$ref": "#/$defs/linkList" },
+    "supporting_references": { "$ref": "#/$defs/linkList" },
+    "destination": { "type": "string", "minLength": 1 },
+    "acceptance_criteria": { "$ref": "#/$defs/nonEmptyStrings" },
+    "validation": { "type": "array", "items": { "type": "object" } },
+    "decision_links": { "$ref": "#/$defs/linkList" },
+    "owner": { "type": "string", "minLength": 1 },
+    "source": { "type": "string", "minLength": 1 },
+    "next_action": { "type": "string", "minLength": 1 },
+    "closure_ref": { "type": ["string", "null"], "pattern": "^(dbs://.*|)$" },
+    "links": { "type": "object" },
+    "legacy_ids": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "migrated_from": { "type": ["object", "null"] }
+  },
+  "$defs": {
+    "linkList": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^(dbs|https)://" },
+      "uniqueItems": true
+    },
+    "nonEmptyStrings": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string", "minLength": 1 }
+    }
+  }
+}

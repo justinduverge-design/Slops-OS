@@ -1,0 +1,1274 @@
+[
+  {
+    "repository": "slops-os",
+    "source": "Blueprints/agents/_imported/__engineering_division/engineering-technical-writer.md",
+    "raw_target": "CONTRIBUTING.md",
+    "resolved_repository": "slops-os",
+    "resolved_target": "Blueprints/agents/_imported/__engineering_division/CONTRIBUTING.md",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "slops-os",
+    "source": "Blueprints/agents/_imported/__engineering_division/engineering-technical-writer.md",
+    "raw_target": "link",
+    "resolved_repository": "slops-os",
+    "resolved_target": "Blueprints/agents/_imported/__engineering_division/link",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "slops-os",
+    "source": "Blueprints/agents/_imported/__engineering_division/engineering-technical-writer.md",
+    "raw_target": "link",
+    "resolved_repository": "slops-os",
+    "resolved_target": "Blueprints/agents/_imported/__engineering_division/link",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "slops-os",
+    "source": "Blueprints/agents/_imported/__engineering_division/engineering-technical-writer.md",
+    "raw_target": "link",
+    "resolved_repository": "slops-os",
+    "resolved_target": "Blueprints/agents/_imported/__engineering_division/link",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "slops-os",
+    "source": "Blueprints/agents/_imported/__engineering_division/engineering-technical-writer.md",
+    "raw_target": "link",
+    "resolved_repository": "slops-os",
+    "resolved_target": "Blueprints/agents/_imported/__engineering_division/link",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "slops-os",
+    "source": "Blueprints/agents/_imported/__engineering_division/engineering-technical-writer.md",
+    "raw_target": "link",
+    "resolved_repository": "slops-os",
+    "resolved_target": "Blueprints/agents/_imported/__engineering_division/link",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "slops-os",
+    "source": "Blueprints/agents/_imported/__specialized_division/specialized-developer-advocate.md",
+    "raw_target": "link",
+    "resolved_repository": "slops-os",
+    "resolved_target": "Blueprints/agents/_imported/__specialized_division/link",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "slops-os",
+    "source": "Blueprints/agents/_imported/__specialized_division/specialized-developer-advocate.md",
+    "raw_target": "link",
+    "resolved_repository": "slops-os",
+    "resolved_target": "Blueprints/agents/_imported/__specialized_division/link",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "slops-os",
+    "source": "Blueprints/agents/_imported/__specialized_division/specialized-developer-advocate.md",
+    "raw_target": "link",
+    "resolved_repository": "slops-os",
+    "resolved_target": "Blueprints/agents/_imported/__specialized_division/link",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "slops-os",
+    "source": "Blueprints/agents/_imported/__specialized_division/specialized-developer-advocate.md",
+    "raw_target": "link",
+    "resolved_repository": "slops-os",
+    "resolved_target": "Blueprints/agents/_imported/__specialized_division/link",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "slops-os",
+    "source": "Blueprints/agents/_imported/__specialized_division/specialized-developer-advocate.md",
+    "raw_target": "link",
+    "resolved_repository": "slops-os",
+    "resolved_target": "Blueprints/agents/_imported/__specialized_division/link",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "slops-os",
+    "source": "Blueprints/handoffs/2026-06-10-corvus-architecture-pivot.md",
+    "raw_target": "../../slops-saloon/omen/",
+    "resolved_repository": "slops-os",
+    "resolved_target": "slops-saloon/omen/",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "slops-os",
+    "source": "Blueprints/handoffs/2026-06-10-corvus-architecture-pivot.md",
+    "raw_target": "../../slops-saloon/Blueprints/handoffs/2026-06-10-omen-architecture-pivot.md",
+    "resolved_repository": "slops-os",
+    "resolved_target": "slops-saloon/Blueprints/handoffs/2026-06-10-omen-architecture-pivot.md",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "slops-os",
+    "source": "slops-saloon/Blueprints/handoffs/2026-06-10-corvus-architecture-pivot.md",
+    "raw_target": "../../omen/Blueprints/playbooks/espn-recovery.md",
+    "resolved_repository": "slops-os",
+    "resolved_target": "slops-saloon/omen/Blueprints/playbooks/espn-recovery.md",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "slops-os",
+    "source": "slops-saloon/Blueprints/handoffs/2026-06-10-corvus-architecture-pivot.md",
+    "raw_target": "../../omen/Blueprints/handoffs/2026-06-10-product-architecture-pivot.md",
+    "resolved_repository": "slops-os",
+    "resolved_target": "slops-saloon/omen/Blueprints/handoffs/2026-06-10-product-architecture-pivot.md",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "slops-os",
+    "source": "slops-saloon/Blueprints/handoffs/2026-06-10-corvus-architecture-pivot.md",
+    "raw_target": "../../omen/Direction/current_sprint.md",
+    "resolved_repository": "slops-os",
+    "resolved_target": "slops-saloon/omen/Direction/current_sprint.md",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "slops-os",
+    "source": "slops-saloon/Blueprints/handoffs/2026-06-10-corvus-architecture-pivot.md",
+    "raw_target": "../../omen/Direction/roadmap.md",
+    "resolved_repository": "slops-os",
+    "resolved_target": "slops-saloon/omen/Direction/roadmap.md",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "slops-os",
+    "source": "slops-saloon/Blueprints/handoffs/2026-06-10-corvus-architecture-pivot.md",
+    "raw_target": "../../omen/Direction/decision_log.md",
+    "resolved_repository": "slops-os",
+    "resolved_target": "slops-saloon/omen/Direction/decision_log.md",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "slops-os",
+    "source": "slops-saloon/Blueprints/handoffs/2026-06-10-corvus-architecture-pivot.md",
+    "raw_target": "../../omen/Blueprints/prompts/codex-architecture-pivot-kickoff.md",
+    "resolved_repository": "slops-os",
+    "resolved_target": "slops-saloon/omen/Blueprints/prompts/codex-architecture-pivot-kickoff.md",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "slops-os",
+    "source": "slops-saloon/Blueprints/handoffs/2026-06-10-corvus-architecture-pivot.md",
+    "raw_target": "../",
+    "resolved_repository": "slops-os",
+    "resolved_target": "slops-saloon/Blueprints/",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/audits/2026-06-20-phase1-5e-32-team-identity-audit.md",
+    "raw_target": "../../frontend/src/lib/teamTemplate.js",
+    "resolved_repository": "omen",
+    "resolved_target": "frontend/src/lib/teamTemplate.js",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/audits/2026-06-20-phase1-5e-32-team-identity-audit.md",
+    "raw_target": "../../frontend/src/lib/teamTemplate.js",
+    "resolved_repository": "omen",
+    "resolved_target": "frontend/src/lib/teamTemplate.js",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/audits/2026-06-20-phase1-5e-32-team-visual-qa.md",
+    "raw_target": "../../frontend/src/lib/teamTemplate.js",
+    "resolved_repository": "omen",
+    "resolved_target": "frontend/src/lib/teamTemplate.js",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/audits/2026-06-20-phase1-5e-32-team-visual-qa.md",
+    "raw_target": "../../frontend/src/lib/teamTemplate.js",
+    "resolved_repository": "omen",
+    "resolved_target": "frontend/src/lib/teamTemplate.js",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/audits/2026-06-20-phase1-5e-32-team-visual-qa.md",
+    "raw_target": "../../frontend/src/lib/teamTemplate.js",
+    "resolved_repository": "omen",
+    "resolved_target": "frontend/src/lib/teamTemplate.js",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/audits/2026-06-20-phase1-5e-32-team-visual-qa.md",
+    "raw_target": "../../frontend/src/lib/teamTemplate.js",
+    "resolved_repository": "omen",
+    "resolved_target": "frontend/src/lib/teamTemplate.js",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/audits/2026-06-20-phase1-5e-32-team-visual-qa.md",
+    "raw_target": "../../frontend/src/lib/teamTemplate.js",
+    "resolved_repository": "omen",
+    "resolved_target": "frontend/src/lib/teamTemplate.js",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/audits/2026-06-20-phase1-5e-32-team-visual-qa.md",
+    "raw_target": "../../frontend/src/components/theme/AppearancePicker.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "frontend/src/components/theme/AppearancePicker.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/audits/2026-06-20-phase1-5e-32-team-visual-qa.md",
+    "raw_target": "../../frontend/src/lib/teamTemplate.js",
+    "resolved_repository": "omen",
+    "resolved_target": "frontend/src/lib/teamTemplate.js",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/audits/2026-06-20-phase1-5e-32-team-visual-qa.md",
+    "raw_target": "../../frontend/src/lib/teamTemplate.js",
+    "resolved_repository": "omen",
+    "resolved_target": "frontend/src/lib/teamTemplate.js",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/audits/2026-06-20-phase1-5e-32-team-visual-qa.md",
+    "raw_target": "../../frontend/src/lib/teamTemplate.js",
+    "resolved_repository": "omen",
+    "resolved_target": "frontend/src/lib/teamTemplate.js",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/audits/2026-06-21-phase1-5f-two-axis-wcag-sweep.md",
+    "raw_target": "../../frontend/src/lib/teamTemplate.js",
+    "resolved_repository": "omen",
+    "resolved_target": "frontend/src/lib/teamTemplate.js",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/audits/2026-06-21-phase1-5h-multi-color-wcag-sweep.md",
+    "raw_target": "../../frontend/src/lib/teamTemplate.js",
+    "resolved_repository": "omen",
+    "resolved_target": "frontend/src/lib/teamTemplate.js",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/audits/2026-06-23-phase1-5g-motif-contrast-sweep.md",
+    "raw_target": "../../frontend/src/lib/teamTemplate.js",
+    "resolved_repository": "omen",
+    "resolved_target": "frontend/src/lib/teamTemplate.js",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/audits/2026-06-25-phase1-5g3-moment-contrast-sweep.md",
+    "raw_target": "../../frontend/src/lib/teamTemplate.js",
+    "resolved_repository": "omen",
+    "resolved_target": "frontend/src/lib/teamTemplate.js",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/handoffs/2026-06-13-phase-1.3-ios-safari-audit.md",
+    "raw_target": "frontend/src/routes/index.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "Blueprints/handoffs/frontend/src/routes/index.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/handoffs/2026-06-13-phase-1.3-ios-safari-audit.md",
+    "raw_target": "frontend/index.html:5",
+    "resolved_repository": "omen",
+    "resolved_target": "Blueprints/handoffs/frontend/index.html:5",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/handoffs/2026-06-13-phase-1.3-ios-safari-audit.md",
+    "raw_target": "frontend/src/index.css",
+    "resolved_repository": "omen",
+    "resolved_target": "Blueprints/handoffs/frontend/src/index.css",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/handoffs/2026-06-13-phase-1.3-ios-safari-audit.md",
+    "raw_target": "frontend/src/components/ui/HelpButton.jsx:324",
+    "resolved_repository": "omen",
+    "resolved_target": "Blueprints/handoffs/frontend/src/components/ui/HelpButton.jsx:324",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/handoffs/2026-06-13-phase-1.3-ios-safari-audit.md",
+    "raw_target": "frontend/src/components/layout/AppLayout.jsx:7",
+    "resolved_repository": "omen",
+    "resolved_target": "Blueprints/handoffs/frontend/src/components/layout/AppLayout.jsx:7",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/handoffs/2026-06-13-phase-1.3-ios-safari-audit.md",
+    "raw_target": "frontend/src/components/layout/ProtectedRoute.jsx:47",
+    "resolved_repository": "omen",
+    "resolved_target": "Blueprints/handoffs/frontend/src/components/layout/ProtectedRoute.jsx:47",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/handoffs/2026-06-13-phase-1.3-ios-safari-audit.md",
+    "raw_target": "frontend/src/main.jsx:12",
+    "resolved_repository": "omen",
+    "resolved_target": "Blueprints/handoffs/frontend/src/main.jsx:12",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/handoffs/2026-06-13-phase-1.3-ios-safari-audit.md",
+    "raw_target": "frontend/src/pages/ConnectLeague.jsx:614",
+    "resolved_repository": "omen",
+    "resolved_target": "Blueprints/handoffs/frontend/src/pages/ConnectLeague.jsx:614",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/handoffs/2026-06-13-phase-1.3-ios-safari-audit.md",
+    "raw_target": "frontend/src/pages/ConnectLeague.jsx:624",
+    "resolved_repository": "omen",
+    "resolved_target": "Blueprints/handoffs/frontend/src/pages/ConnectLeague.jsx:624",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/handoffs/2026-06-13-phase-1.3-ios-safari-audit.md",
+    "raw_target": "frontend/src/pages/CorvusLanding.jsx:100",
+    "resolved_repository": "omen",
+    "resolved_target": "Blueprints/handoffs/frontend/src/pages/CorvusLanding.jsx:100",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/handoffs/2026-06-13-phase-1.3-ios-safari-audit.md",
+    "raw_target": "frontend/src/pages/Landing.jsx:541",
+    "resolved_repository": "omen",
+    "resolved_target": "Blueprints/handoffs/frontend/src/pages/Landing.jsx:541",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/handoffs/2026-06-13-phase-1.3-ios-safari-audit.md",
+    "raw_target": "frontend/src/pages/NotFound.jsx:7",
+    "resolved_repository": "omen",
+    "resolved_target": "Blueprints/handoffs/frontend/src/pages/NotFound.jsx:7",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/handoffs/2026-06-13-phase-1.3-ios-safari-audit.md",
+    "raw_target": "frontend/src/pages/Onboarding.jsx:256",
+    "resolved_repository": "omen",
+    "resolved_target": "Blueprints/handoffs/frontend/src/pages/Onboarding.jsx:256",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/handoffs/2026-06-13-phase-1.3-ios-safari-audit.md",
+    "raw_target": "frontend/src/pages/Login.jsx:93",
+    "resolved_repository": "omen",
+    "resolved_target": "Blueprints/handoffs/frontend/src/pages/Login.jsx:93",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/handoffs/2026-06-13-phase-1.3-ios-safari-audit.md",
+    "raw_target": "frontend/src/pages/Landing.jsx:384",
+    "resolved_repository": "omen",
+    "resolved_target": "Blueprints/handoffs/frontend/src/pages/Landing.jsx:384",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/handoffs/2026-06-13-phase-1.3-ios-safari-audit.md",
+    "raw_target": "frontend/src/pages/ConnectLeague.jsx:99",
+    "resolved_repository": "omen",
+    "resolved_target": "Blueprints/handoffs/frontend/src/pages/ConnectLeague.jsx:99",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/handoffs/2026-06-13-phase-1.3-ios-safari-audit.md",
+    "raw_target": "frontend/src/pages/DraftAssistant.jsx:385",
+    "resolved_repository": "omen",
+    "resolved_target": "Blueprints/handoffs/frontend/src/pages/DraftAssistant.jsx:385",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/handoffs/2026-06-13-phase-1.3-ios-safari-audit.md",
+    "raw_target": "frontend/src/pages/TradeAnalyzer.jsx:18",
+    "resolved_repository": "omen",
+    "resolved_target": "Blueprints/handoffs/frontend/src/pages/TradeAnalyzer.jsx:18",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/handoffs/2026-06-13-phase-1.3-ios-safari-audit.md",
+    "raw_target": "frontend/src/components/platforms/PlatformConnections.jsx:48",
+    "resolved_repository": "omen",
+    "resolved_target": "Blueprints/handoffs/frontend/src/components/platforms/PlatformConnections.jsx:48",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/handoffs/2026-06-13-phase-1.3-ios-safari-audit.md",
+    "raw_target": "frontend/src/pages/Omen.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "Blueprints/handoffs/frontend/src/pages/Omen.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/handoffs/2026-06-13-phase-1.3-ios-safari-audit.md",
+    "raw_target": "frontend/src/pages/TradeAnalyzer.jsx:18",
+    "resolved_repository": "omen",
+    "resolved_target": "Blueprints/handoffs/frontend/src/pages/TradeAnalyzer.jsx:18",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/handoffs/2026-06-13-phase-1.3-ios-safari-audit.md",
+    "raw_target": "frontend/src/pages/TeamTheme.jsx:363",
+    "resolved_repository": "omen",
+    "resolved_target": "Blueprints/handoffs/frontend/src/pages/TeamTheme.jsx:363",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/handoffs/2026-06-13-phase-1.3-ios-safari-audit.md",
+    "raw_target": "frontend/src/pages/Standings.jsx:25",
+    "resolved_repository": "omen",
+    "resolved_target": "Blueprints/handoffs/frontend/src/pages/Standings.jsx:25",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/handoffs/2026-06-13-phase-1.3-ios-safari-audit.md",
+    "raw_target": "frontend/src/components/league/LeagueStandings.jsx:21",
+    "resolved_repository": "omen",
+    "resolved_target": "Blueprints/handoffs/frontend/src/components/league/LeagueStandings.jsx:21",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/handoffs/2026-06-13-phase-1.3-ios-safari-audit.md",
+    "raw_target": "frontend/src/pages/Football.jsx:219",
+    "resolved_repository": "omen",
+    "resolved_target": "Blueprints/handoffs/frontend/src/pages/Football.jsx:219",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/handoffs/2026-06-13-phase-1.3-ios-safari-audit.md",
+    "raw_target": "frontend/src/components/ui/HelpButton.jsx:324",
+    "resolved_repository": "omen",
+    "resolved_target": "Blueprints/handoffs/frontend/src/components/ui/HelpButton.jsx:324",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/handoffs/2026-06-13-phase-1.3-ios-safari-audit.md",
+    "raw_target": "frontend/src/components/ui/HelpButton.jsx:188",
+    "resolved_repository": "omen",
+    "resolved_target": "Blueprints/handoffs/frontend/src/components/ui/HelpButton.jsx:188",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/handoffs/2026-06-13-phase-1.3-ios-safari-audit.md",
+    "raw_target": "frontend/src/pages/OmenPage.jsx:99",
+    "resolved_repository": "omen",
+    "resolved_target": "Blueprints/handoffs/frontend/src/pages/OmenPage.jsx:99",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/handoffs/2026-06-13-phase-1.3-ios-safari-audit.md",
+    "raw_target": "frontend/src/pages/Landing.jsx:39",
+    "resolved_repository": "omen",
+    "resolved_target": "Blueprints/handoffs/frontend/src/pages/Landing.jsx:39",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/handoffs/2026-06-13-phase-1.3-ios-safari-audit.md",
+    "raw_target": "frontend/src/pages/Football.jsx:225",
+    "resolved_repository": "omen",
+    "resolved_target": "Blueprints/handoffs/frontend/src/pages/Football.jsx:225",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/handoffs/2026-06-13-phase-1.3-ios-safari-audit.md",
+    "raw_target": "frontend/index.html",
+    "resolved_repository": "omen",
+    "resolved_target": "Blueprints/handoffs/frontend/index.html",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/handoffs/2026-06-13-phase-1.3-ios-safari-audit.md",
+    "raw_target": "frontend/src/index.css",
+    "resolved_repository": "omen",
+    "resolved_target": "Blueprints/handoffs/frontend/src/index.css",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/handoffs/2026-06-13-phase-1.3-ios-safari-audit.md",
+    "raw_target": "frontend/src/components/layout/AppLayout.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "Blueprints/handoffs/frontend/src/components/layout/AppLayout.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/handoffs/2026-06-13-phase-1.3-ios-safari-audit.md",
+    "raw_target": "frontend/src/components/layout/ProtectedRoute.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "Blueprints/handoffs/frontend/src/components/layout/ProtectedRoute.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/handoffs/2026-06-13-phase-1.3-ios-safari-audit.md",
+    "raw_target": "frontend/src/main.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "Blueprints/handoffs/frontend/src/main.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/handoffs/2026-06-13-phase-1.3-ios-safari-audit.md",
+    "raw_target": "frontend/src/components/ui/HelpButton.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "Blueprints/handoffs/frontend/src/components/ui/HelpButton.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/handoffs/2026-06-13-phase-1.3-ios-safari-audit.md",
+    "raw_target": "frontend/src/pages/ConnectLeague.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "Blueprints/handoffs/frontend/src/pages/ConnectLeague.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/handoffs/2026-06-13-phase-1.3-ios-safari-audit.md",
+    "raw_target": "frontend/src/pages/CorvusLanding.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "Blueprints/handoffs/frontend/src/pages/CorvusLanding.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/handoffs/2026-06-13-phase-1.3-ios-safari-audit.md",
+    "raw_target": "frontend/src/pages/Landing.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "Blueprints/handoffs/frontend/src/pages/Landing.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/handoffs/2026-06-13-phase-1.3-ios-safari-audit.md",
+    "raw_target": "frontend/src/pages/NotFound.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "Blueprints/handoffs/frontend/src/pages/NotFound.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/handoffs/2026-06-13-phase-1.3-ios-safari-audit.md",
+    "raw_target": "frontend/src/pages/Onboarding.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "Blueprints/handoffs/frontend/src/pages/Onboarding.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/handoffs/2026-06-14-phase-c-commit-plans.md",
+    "raw_target": "frontend/src/pages/Landing.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "Blueprints/handoffs/frontend/src/pages/Landing.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/handoffs/2026-06-14-phase-c-commit-plans.md",
+    "raw_target": "frontend/src/pages/CorvusLanding.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "Blueprints/handoffs/frontend/src/pages/CorvusLanding.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/handoffs/2026-06-14-phase-c-commit-plans.md",
+    "raw_target": "frontend/src/components/layout/Header.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "Blueprints/handoffs/frontend/src/components/layout/Header.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/handoffs/2026-06-14-phase-c-commit-plans.md",
+    "raw_target": "frontend/src/components/layout/Header.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "Blueprints/handoffs/frontend/src/components/layout/Header.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/handoffs/2026-06-14-phase-c-commit-plans.md",
+    "raw_target": "frontend/src/components/ui/HelpButton.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "Blueprints/handoffs/frontend/src/components/ui/HelpButton.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/handoffs/2026-06-14-phase-c-commit-plans.md",
+    "raw_target": "frontend/src/components/ui/HelpButton.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "Blueprints/handoffs/frontend/src/components/ui/HelpButton.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/handoffs/2026-06-14-phase-c-commit-plans.md",
+    "raw_target": "frontend/src/pages/OmenPage.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "Blueprints/handoffs/frontend/src/pages/OmenPage.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/handoffs/2026-06-14-phase-c-commit-plans.md",
+    "raw_target": "frontend/src/pages/Landing.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "Blueprints/handoffs/frontend/src/pages/Landing.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/handoffs/2026-06-14-phase-c-commit-plans.md",
+    "raw_target": "frontend/src/pages/Football.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "Blueprints/handoffs/frontend/src/pages/Football.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/handoffs/2026-06-14-phase-c-commit-plans.md",
+    "raw_target": "frontend/src/pages/CorvusLanding.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "Blueprints/handoffs/frontend/src/pages/CorvusLanding.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/handoffs/2026-06-14-phase-c-commit-plans.md",
+    "raw_target": "frontend/src/pages/DraftAssistant.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "Blueprints/handoffs/frontend/src/pages/DraftAssistant.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/handoffs/2026-06-14-phase-c-commit-plans.md",
+    "raw_target": "frontend/src/pages/OmenPage.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "Blueprints/handoffs/frontend/src/pages/OmenPage.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/handoffs/2026-06-14-phase-c-commit-plans.md",
+    "raw_target": "frontend/src/pages/Account.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "Blueprints/handoffs/frontend/src/pages/Account.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/handoffs/2026-06-14-phase-c-commit-plans.md",
+    "raw_target": "frontend/src/pages/Login.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "Blueprints/handoffs/frontend/src/pages/Login.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/handoffs/2026-06-14-phase-c-commit-plans.md",
+    "raw_target": "frontend/src/components/ui/HelpButton.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "Blueprints/handoffs/frontend/src/components/ui/HelpButton.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/handoffs/2026-06-14-phase-c-commit-plans.md",
+    "raw_target": "frontend/src/pages/Account.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "Blueprints/handoffs/frontend/src/pages/Account.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/handoffs/2026-06-14-phase-c-commit-plans.md",
+    "raw_target": "frontend/src/pages/Football.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "Blueprints/handoffs/frontend/src/pages/Football.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/handoffs/2026-06-14-phase-c-commit-plans.md",
+    "raw_target": "frontend/src/pages/OmenPage.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "Blueprints/handoffs/frontend/src/pages/OmenPage.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/handoffs/2026-06-14-phase-c-commit-plans.md",
+    "raw_target": "frontend/src/pages/OmenOfTheWeek.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "Blueprints/handoffs/frontend/src/pages/OmenOfTheWeek.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/handoffs/2026-06-14-playwright-evaluation-and-slops-mobile-smoke.md",
+    "raw_target": "../../../Blueprints/skills/_proposals/slops-mobile-smoke/SKILL.md",
+    "resolved_repository": "omen",
+    "resolved_target": "../Blueprints/skills/_proposals/slops-mobile-smoke/SKILL.md",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/handoffs/2026-06-14-playwright-evaluation-and-slops-mobile-smoke.md",
+    "raw_target": "../../../Blueprints/skills/_proposals/slops-mobile-smoke/notes/prior-use-review.md",
+    "resolved_repository": "omen",
+    "resolved_target": "../Blueprints/skills/_proposals/slops-mobile-smoke/notes/prior-use-review.md",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/handoffs/2026-06-14-playwright-evaluation-and-slops-mobile-smoke.md",
+    "raw_target": "../../../Blueprints/skills/_proposals/slops-mobile-smoke/SKILL.md",
+    "resolved_repository": "omen",
+    "resolved_target": "../Blueprints/skills/_proposals/slops-mobile-smoke/SKILL.md",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/handoffs/2026-07-03-phase1-13-mobile-qa-real-safari-sweep.md",
+    "raw_target": "../../frontend/src/components/ui/HelpButton.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "frontend/src/components/ui/HelpButton.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Blueprints/handoffs/2026-07-03-phase1-13-remediation-csp-and-focus-trap.md",
+    "raw_target": "../../frontend/src/components/ui/HelpButton.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "frontend/src/components/ui/HelpButton.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Direction/decision_log.md",
+    "raw_target": "../Blueprints/handoffs/2026-06-10-product-architecture-pivot.md",
+    "resolved_repository": "omen",
+    "resolved_target": "Blueprints/handoffs/2026-06-10-product-architecture-pivot.md",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Direction/decision_log.md",
+    "raw_target": "path",
+    "resolved_repository": "omen",
+    "resolved_target": "Direction/path",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Direction/sprints_completed.md",
+    "raw_target": "frontend/src/pages/DraftAssistant.jsx:380",
+    "resolved_repository": "omen",
+    "resolved_target": "Direction/frontend/src/pages/DraftAssistant.jsx:380",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "Direction/sprints_completed.md",
+    "raw_target": "frontend/src/pages/DraftAssistant.jsx:431",
+    "resolved_repository": "omen",
+    "resolved_target": "Direction/frontend/src/pages/DraftAssistant.jsx:431",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "README.md",
+    "raw_target": "LICENSE",
+    "resolved_repository": "omen",
+    "resolved_target": "LICENSE",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "frontend/index.html",
+    "raw_target": "/omen-favicon-16.png",
+    "resolved_repository": "omen",
+    "resolved_target": "frontend/omen-favicon-16.png",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "frontend/index.html",
+    "raw_target": "/omen-favicon-32.png",
+    "resolved_repository": "omen",
+    "resolved_target": "frontend/omen-favicon-32.png",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "frontend/index.html",
+    "raw_target": "/omen-favicon-180.png",
+    "resolved_repository": "omen",
+    "resolved_target": "frontend/omen-favicon-180.png",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "frontend/scripts/contrast-sweep.mjs",
+    "raw_target": "../../frontend/src/lib/teamTemplate.js",
+    "resolved_repository": "omen",
+    "resolved_target": "frontend/src/lib/teamTemplate.js",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "graphify-out/cache/ast/7315762c2f52de342107458dea3bf10a2044214b528123737ffaad9adc7a37ca.json",
+    "raw_target": "frontend/src/pages/CorvusLanding.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "graphify-out/cache/ast/frontend/src/pages/CorvusLanding.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "graphify-out/cache/ast/7315762c2f52de342107458dea3bf10a2044214b528123737ffaad9adc7a37ca.json",
+    "raw_target": "frontend/src/pages/DraftAssistant.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "graphify-out/cache/ast/frontend/src/pages/DraftAssistant.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "graphify-out/cache/ast/7315762c2f52de342107458dea3bf10a2044214b528123737ffaad9adc7a37ca.json",
+    "raw_target": "frontend/src/pages/OmenPage.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "graphify-out/cache/ast/frontend/src/pages/OmenPage.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "graphify-out/cache/ast/7315762c2f52de342107458dea3bf10a2044214b528123737ffaad9adc7a37ca.json",
+    "raw_target": "frontend/src/pages/Account.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "graphify-out/cache/ast/frontend/src/pages/Account.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "graphify-out/cache/ast/7315762c2f52de342107458dea3bf10a2044214b528123737ffaad9adc7a37ca.json",
+    "raw_target": "frontend/src/pages/Login.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "graphify-out/cache/ast/frontend/src/pages/Login.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "graphify-out/cache/ast/7315762c2f52de342107458dea3bf10a2044214b528123737ffaad9adc7a37ca.json",
+    "raw_target": "frontend/src/components/ui/HelpButton.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "graphify-out/cache/ast/frontend/src/components/ui/HelpButton.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "graphify-out/cache/ast/7315762c2f52de342107458dea3bf10a2044214b528123737ffaad9adc7a37ca.json",
+    "raw_target": "frontend/src/pages/Account.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "graphify-out/cache/ast/frontend/src/pages/Account.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "graphify-out/cache/ast/7315762c2f52de342107458dea3bf10a2044214b528123737ffaad9adc7a37ca.json",
+    "raw_target": "frontend/src/pages/Football.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "graphify-out/cache/ast/frontend/src/pages/Football.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "graphify-out/cache/ast/7315762c2f52de342107458dea3bf10a2044214b528123737ffaad9adc7a37ca.json",
+    "raw_target": "frontend/src/pages/OmenPage.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "graphify-out/cache/ast/frontend/src/pages/OmenPage.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "graphify-out/cache/ast/7315762c2f52de342107458dea3bf10a2044214b528123737ffaad9adc7a37ca.json",
+    "raw_target": "frontend/src/pages/OmenOfTheWeek.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "graphify-out/cache/ast/frontend/src/pages/OmenOfTheWeek.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "graphify-out/graph.html",
+    "raw_target": "frontend/src/pages/CorvusLanding.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "graphify-out/frontend/src/pages/CorvusLanding.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "graphify-out/graph.html",
+    "raw_target": "frontend/src/pages/CorvusLanding.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "graphify-out/frontend/src/pages/CorvusLanding.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "graphify-out/graph.html",
+    "raw_target": "frontend/src/pages/DraftAssistant.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "graphify-out/frontend/src/pages/DraftAssistant.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "graphify-out/graph.html",
+    "raw_target": "frontend/src/pages/DraftAssistant.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "graphify-out/frontend/src/pages/DraftAssistant.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "graphify-out/graph.html",
+    "raw_target": "frontend/src/pages/OmenPage.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "graphify-out/frontend/src/pages/OmenPage.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "graphify-out/graph.html",
+    "raw_target": "frontend/src/pages/OmenPage.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "graphify-out/frontend/src/pages/OmenPage.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "graphify-out/graph.html",
+    "raw_target": "frontend/src/pages/Account.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "graphify-out/frontend/src/pages/Account.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "graphify-out/graph.html",
+    "raw_target": "frontend/src/pages/Account.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "graphify-out/frontend/src/pages/Account.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "graphify-out/graph.html",
+    "raw_target": "frontend/src/pages/Login.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "graphify-out/frontend/src/pages/Login.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "graphify-out/graph.html",
+    "raw_target": "frontend/src/pages/Login.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "graphify-out/frontend/src/pages/Login.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "graphify-out/graph.html",
+    "raw_target": "frontend/src/components/ui/HelpButton.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "graphify-out/frontend/src/components/ui/HelpButton.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "graphify-out/graph.html",
+    "raw_target": "frontend/src/components/ui/HelpButton.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "graphify-out/frontend/src/components/ui/HelpButton.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "graphify-out/graph.html",
+    "raw_target": "frontend/src/pages/Account.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "graphify-out/frontend/src/pages/Account.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "graphify-out/graph.html",
+    "raw_target": "frontend/src/pages/Account.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "graphify-out/frontend/src/pages/Account.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "graphify-out/graph.html",
+    "raw_target": "frontend/src/pages/Football.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "graphify-out/frontend/src/pages/Football.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "graphify-out/graph.html",
+    "raw_target": "frontend/src/pages/Football.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "graphify-out/frontend/src/pages/Football.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "graphify-out/graph.html",
+    "raw_target": "frontend/src/pages/OmenPage.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "graphify-out/frontend/src/pages/OmenPage.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "graphify-out/graph.html",
+    "raw_target": "frontend/src/pages/OmenPage.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "graphify-out/frontend/src/pages/OmenPage.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "graphify-out/graph.html",
+    "raw_target": "frontend/src/pages/OmenOfTheWeek.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "graphify-out/frontend/src/pages/OmenOfTheWeek.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "graphify-out/graph.html",
+    "raw_target": "frontend/src/pages/OmenOfTheWeek.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "graphify-out/frontend/src/pages/OmenOfTheWeek.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "graphify-out/graph.json",
+    "raw_target": "frontend/src/pages/CorvusLanding.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "graphify-out/frontend/src/pages/CorvusLanding.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "graphify-out/graph.json",
+    "raw_target": "frontend/src/pages/corvuslanding.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "graphify-out/frontend/src/pages/corvuslanding.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "graphify-out/graph.json",
+    "raw_target": "frontend/src/pages/DraftAssistant.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "graphify-out/frontend/src/pages/DraftAssistant.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "graphify-out/graph.json",
+    "raw_target": "frontend/src/pages/draftassistant.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "graphify-out/frontend/src/pages/draftassistant.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "graphify-out/graph.json",
+    "raw_target": "frontend/src/pages/OmenPage.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "graphify-out/frontend/src/pages/OmenPage.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "graphify-out/graph.json",
+    "raw_target": "frontend/src/pages/omenpage.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "graphify-out/frontend/src/pages/omenpage.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "graphify-out/graph.json",
+    "raw_target": "frontend/src/pages/Account.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "graphify-out/frontend/src/pages/Account.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "graphify-out/graph.json",
+    "raw_target": "frontend/src/pages/account.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "graphify-out/frontend/src/pages/account.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "graphify-out/graph.json",
+    "raw_target": "frontend/src/pages/Login.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "graphify-out/frontend/src/pages/Login.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "graphify-out/graph.json",
+    "raw_target": "frontend/src/pages/login.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "graphify-out/frontend/src/pages/login.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "graphify-out/graph.json",
+    "raw_target": "frontend/src/components/ui/HelpButton.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "graphify-out/frontend/src/components/ui/HelpButton.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "graphify-out/graph.json",
+    "raw_target": "frontend/src/components/ui/helpbutton.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "graphify-out/frontend/src/components/ui/helpbutton.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "graphify-out/graph.json",
+    "raw_target": "frontend/src/pages/Account.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "graphify-out/frontend/src/pages/Account.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "graphify-out/graph.json",
+    "raw_target": "frontend/src/pages/account.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "graphify-out/frontend/src/pages/account.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "graphify-out/graph.json",
+    "raw_target": "frontend/src/pages/Football.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "graphify-out/frontend/src/pages/Football.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "graphify-out/graph.json",
+    "raw_target": "frontend/src/pages/football.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "graphify-out/frontend/src/pages/football.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "graphify-out/graph.json",
+    "raw_target": "frontend/src/pages/OmenPage.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "graphify-out/frontend/src/pages/OmenPage.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "graphify-out/graph.json",
+    "raw_target": "frontend/src/pages/omenpage.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "graphify-out/frontend/src/pages/omenpage.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "graphify-out/graph.json",
+    "raw_target": "frontend/src/pages/OmenOfTheWeek.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "graphify-out/frontend/src/pages/OmenOfTheWeek.jsx",
+    "finding": "missing local target"
+  },
+  {
+    "repository": "omen",
+    "source": "graphify-out/graph.json",
+    "raw_target": "frontend/src/pages/omenoftheweek.jsx",
+    "resolved_repository": "omen",
+    "resolved_target": "graphify-out/frontend/src/pages/omenoftheweek.jsx",
+    "finding": "missing local target"
+  }
+]

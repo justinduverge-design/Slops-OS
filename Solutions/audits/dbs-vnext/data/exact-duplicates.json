@@ -1,0 +1,66 @@
+[
+  {
+    "id": "DUP-0001",
+    "normalized_sha256": "73dab000924675b578fbe57f844071ac63d214ddee2a7b6d3ad1bbafe453cc3d",
+    "members": [
+      {
+        "repository": "slops-os",
+        "path": "Archive/corvus-root-direction-pre-dbs/TODO.md",
+        "bytes": 2225
+      },
+      {
+        "repository": "slops-os",
+        "path": "Archive/superseded-docs/TODO.md",
+        "bytes": 2225
+      }
+    ]
+  },
+  {
+    "id": "DUP-0002",
+    "normalized_sha256": "eb16b68f7c0bea985744e57767e4b18bf74cb70215e707c0f43e32339d5b30b6",
+    "members": [
+      {
+        "repository": "slops-os",
+        "path": "Archive/corvus-root-direction-pre-dbs/manifesto.md",
+        "bytes": 2962
+      },
+      {
+        "repository": "slops-os",
+        "path": "Archive/superseded-docs/root-redirected/manifesto.md",
+        "bytes": 2962
+      }
+    ]
+  },
+  {
+    "id": "DUP-0003",
+    "normalized_sha256": "447e1e8a2cf5f4cb4cbcc0d4d34e7dd75fb4e03735fd571356ce828195b4ce98",
+    "members": [
+      {
+        "repository": "slops-os",
+        "path": "Archive/corvus-root-direction-pre-dbs/roadmap.md",
+        "bytes": 4415
+      },
+      {
+        "repository": "slops-os",
+        "path": "Archive/superseded-docs/root-redirected/roadmap.md",
+        "bytes": 4415
+      }
+    ]
+  },
+  {
+    "id": "DUP-0004",
+    "normalized_sha256": "ea243140c6aa9c18047fafc6ff152bf3b5cd96f15c97949d3cdfb0d11e83094f",
+    "members": [
+      {
+        "repository": "slops-os",
+        "path": "Direction/CUTOVER_STATE.md",
+        "bytes": 139
+      },
+      {
+        "repository": "omen",
+        "path": "Direction/CUTOVER_STATE.md",
+        "bytes": 139
+      }
+    ]
+  }
+]

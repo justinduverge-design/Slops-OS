@@ -1,0 +1,913 @@
+[
+  {
+    "id": "ALL-DUP-0001",
+    "sha256": "c5a061ae62ed6a2f4e5650ba49fb2109a8dcd844b2c43e68aa71d3bb850d2d35",
+    "members": [
+      {
+        "repository": "slops-os",
+        "path": "Archive/corvus-root-direction-pre-dbs/TODO.md",
+        "bytes": 2225
+      },
+      {
+        "repository": "slops-os",
+        "path": "Archive/superseded-docs/TODO.md",
+        "bytes": 2225
+      }
+    ]
+  },
+  {
+    "id": "ALL-DUP-0002",
+    "sha256": "b11ccb6629075eae957197c81402209955b72ee6f46d1cf6cc3a64ab6dc5daa5",
+    "members": [
+      {
+        "repository": "slops-os",
+        "path": "Archive/corvus-root-direction-pre-dbs/manifesto.md",
+        "bytes": 2962
+      },
+      {
+        "repository": "slops-os",
+        "path": "Archive/superseded-docs/root-redirected/manifesto.md",
+        "bytes": 2962
+      }
+    ]
+  },
+  {
+    "id": "ALL-DUP-0003",
+    "sha256": "fd3d615d3c41c56544f8eab198f4f14513953c663671b9efb642e5313a4b6126",
+    "members": [
+      {
+        "repository": "slops-os",
+        "path": "Archive/corvus-root-direction-pre-dbs/roadmap.md",
+        "bytes": 4415
+      },
+      {
+        "repository": "slops-os",
+        "path": "Archive/superseded-docs/root-redirected/roadmap.md",
+        "bytes": 4415
+      }
+    ]
+  },
+  {
+    "id": "ALL-DUP-0004",
+    "sha256": "1b312b09f648fa0d4a1879da0302f9424c966b267b07b3bffb8c8896edc59723",
+    "members": [
+      {
+        "repository": "slops-os",
+        "path": "Archive/pre-build-research.skill",
+        "bytes": 3660
+      },
+      {
+        "repository": "slops-os",
+        "path": "Archive/superseded-docs/pre-build-research.skill",
+        "bytes": 3660
+      }
+    ]
+  },
+  {
+    "id": "ALL-DUP-0005",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "members": [
+      {
+        "repository": "slops-os",
+        "path": "Blueprints/specs/brand-identity-digital-marketing.spec.md",
+        "bytes": 0
+      },
+      {
+        "repository": "slops-os",
+        "path": "Blueprints/templates/app-scaffold/Archive/.gitkeep",
+        "bytes": 0
+      },
+      {
+        "repository": "slops-os",
+        "path": "Blueprints/templates/app-scaffold/Blueprints/.gitkeep",
+        "bytes": 0
+      },
+      {
+        "repository": "slops-os",
+        "path": "Blueprints/templates/app-scaffold/References/.gitkeep",
+        "bytes": 0
+      },
+      {
+        "repository": "slops-os",
+        "path": "Blueprints/templates/app-scaffold/Solutions/.gitkeep",
+        "bytes": 0
+      },
+      {
+        "repository": "slops-os",
+        "path": "Blueprints/templates/app-scaffold/Solutions/reports/.gitkeep",
+        "bytes": 0
+      },
+      {
+        "repository": "omen",
+        "path": "Archive/handoffs-pre-dbs/.gitkeep",
+        "bytes": 0
+      }
+    ]
+  },
+  {
+    "id": "ALL-DUP-0006",
+    "sha256": "3050092bd54129f1349459a8a7fb265ff56aac45091e599aa103cc44dd298b3b",
+    "members": [
+      {
+        "repository": "slops-os",
+        "path": "Direction/CUTOVER_STATE.md",
+        "bytes": 139
+      },
+      {
+        "repository": "omen",
+        "path": "Direction/CUTOVER_STATE.md",
+        "bytes": 139
+      }
+    ]
+  },
+  {
+    "id": "ALL-DUP-0007",
+    "sha256": "554a01cc78c901830f708252796eef343ba5333ebaa44d56975726e05061f99f",
+    "members": [
+      {
+        "repository": "omen",
+        "path": ".agents/skills/run-slops-saloon/screenshots/football-route.png",
+        "bytes": 415058
+      },
+      {
+        "repository": "omen",
+        "path": ".agents/skills/run-slops-saloon/screenshots/landing-desktop.png",
+        "bytes": 415058
+      }
+    ]
+  },
+  {
+    "id": "ALL-DUP-0008",
+    "sha256": "bedc2adb3c8c7c0339655a9dfe32ec6c11147e5db4db9cfa27a70fec6976ca4f",
+    "members": [
+      {
+        "repository": "omen",
+        "path": "Brand/promos/omen-coming-soon/public/audio/mirostar-hiphop-beat-old-school-boom-bap-560298.mp3",
+        "bytes": 3073671
+      },
+      {
+        "repository": "omen",
+        "path": "Brand/promos/omen-coming-soon/public/audio/omen-explainer-boom-bap.mp3",
+        "bytes": 3073671
+      }
+    ]
+  },
+  {
+    "id": "ALL-DUP-0009",
+    "sha256": "885781b1977ccfe35efeb41213aae5208ad9eba34b2fb104d4c631e1db8c9f5e",
+    "members": [
+      {
+        "repository": "omen",
+        "path": "Brand/promos/omen-coming-soon/public/captures/trade-flow/omen-bottom.png",
+        "bytes": 131326
+      },
+      {
+        "repository": "omen",
+        "path": "Brand/promos/omen-coming-soon/public/captures/trade-flow/omen-middle.png",
+        "bytes": 131326
+      },
+      {
+        "repository": "omen",
+        "path": "Brand/promos/omen-coming-soon/public/captures/trade-flow/omen-top.png",
+        "bytes": 131326
+      }
+    ]
+  },
+  {
+    "id": "ALL-DUP-0010",
+    "sha256": "2eab77b9aca4079a35cd12538263dec4d4bdbc790dc579ca99b6e663c9329489",
+    "members": [
+      {
+        "repository": "omen",
+        "path": "Brand/promos/omen-coming-soon/public/omen-horizontal-lockup-transparent.png",
+        "bytes": 21407
+      },
+      {
+        "repository": "omen",
+        "path": "frontend/public/omen-horizontal-lockup-transparent.png",
+        "bytes": 21407
+      },
+      {
+        "repository": "omen",
+        "path": "logos/omen-horizontal-lockup-transparent.png",
+        "bytes": 21407
+      }
+    ]
+  },
+  {
+    "id": "ALL-DUP-0011",
+    "sha256": "7948542cb4349c7a688720632bec6b43c242dfed36bb3c3fd6c1876f6dd0c897",
+    "members": [
+      {
+        "repository": "omen",
+        "path": "Brand/promos/omen-coming-soon/public/omen-primary-emblem.png",
+        "bytes": 79563
+      },
+      {
+        "repository": "omen",
+        "path": "client/public/omen-primary-emblem.png",
+        "bytes": 79563
+      },
+      {
+        "repository": "omen",
+        "path": "frontend/public/omen-primary-emblem.png",
+        "bytes": 79563
+      },
+      {
+        "repository": "omen",
+        "path": "logos/omen-primary-emblem.png",
+        "bytes": 79563
+      }
+    ]
+  },
+  {
+    "id": "ALL-DUP-0012",
+    "sha256": "0b42506f2d3097b67459f284641fbec3bf9656ad7c4042da63f776d295ad221d",
+    "members": [
+      {
+        "repository": "omen",
+        "path": "Solutions/reports/_screenshots/2026-07-02-mobile-qa/iphone-se__account.png",
+        "bytes": 178189
+      },
+      {
+        "repository": "omen",
+        "path": "Solutions/reports/_screenshots/2026-07-02-mobile-qa/iphone-se__onboarding.png",
+        "bytes": 178189
+      }
+    ]
+  },
+  {
+    "id": "ALL-DUP-0013",
+    "sha256": "93e8cd5ee97f118cd9805f24f67b646029aa4b7871ae057bac5f54a067f8185d",
+    "members": [
+      {
+        "repository": "omen",
+        "path": "Solutions/reports/_screenshots/2026-07-02-mobile-qa/layout-sweep/iphone-15-pro-max__football.png",
+        "bytes": 158911
+      },
+      {
+        "repository": "omen",
+        "path": "Solutions/reports/_screenshots/2026-07-02-mobile-qa/layout-sweep/iphone-15-pro-max__onboarding.png",
+        "bytes": 158911
+      }
+    ]
+  },
+  {
+    "id": "ALL-DUP-0014",
+    "sha256": "bcab84e49e87d2a06e97f51d264033d5a89f6d0eb32fbc1806521647b4c2a55f",
+    "members": [
+      {
+        "repository": "omen",
+        "path": "Solutions/reports/_screenshots/2026-07-02-mobile-qa/layout-sweep/iphone-15-pro__football.png",
+        "bytes": 151350
+      },
+      {
+        "repository": "omen",
+        "path": "Solutions/reports/_screenshots/2026-07-02-mobile-qa/layout-sweep/iphone-15-pro__onboarding.png",
+        "bytes": 151350
+      }
+    ]
+  },
+  {
+    "id": "ALL-DUP-0015",
+    "sha256": "a84de07fcfe6f91a09173cdc689eec3185bbf17b16b20ca41eb43cb2c000639b",
+    "members": [
+      {
+        "repository": "omen",
+        "path": "Solutions/reports/_screenshots/2026-07-02-mobile-qa/layout-sweep/iphone-se__football.png",
+        "bytes": 131457
+      },
+      {
+        "repository": "omen",
+        "path": "Solutions/reports/_screenshots/2026-07-02-mobile-qa/layout-sweep/iphone-se__onboarding.png",
+        "bytes": 131457
+      }
+    ]
+  },
+  {
+    "id": "ALL-DUP-0016",
+    "sha256": "f7becce4c399b6730a306f3dbda857237b172c1a6a17463840b01ff55aabd39b",
+    "members": [
+      {
+        "repository": "omen",
+        "path": "Solutions/reports/_screenshots/2026-07-02-mobile-qa/team-scheme-sweep/ATL__draft.png",
+        "bytes": 42094
+      },
+      {
+        "repository": "omen",
+        "path": "Solutions/reports/_screenshots/2026-07-02-mobile-qa/team-scheme-sweep/ATL__ledger.png",
+        "bytes": 42094
+      },
+      {
+        "repository": "omen",
+        "path": "Solutions/reports/_screenshots/2026-07-02-mobile-qa/team-scheme-sweep/ATL__standings.png",
+        "bytes": 42094
+      },
+      {
+        "repository": "omen",
+        "path": "Solutions/reports/_screenshots/2026-07-02-mobile-qa/team-scheme-sweep/ATL__trade.png",
+        "bytes": 42094
+      },
+      {
+        "repository": "omen",
+        "path": "Solutions/reports/_screenshots/2026-07-02-mobile-qa/team-scheme-sweep/CLE__draft.png",
+        "bytes": 42094
+      },
+      {
+        "repository": "omen",
+        "path": "Solutions/reports/_screenshots/2026-07-02-mobile-qa/team-scheme-sweep/CLE__ledger.png",
+        "bytes": 42094
+      },
+      {
+        "repository": "omen",
+        "path": "Solutions/reports/_screenshots/2026-07-02-mobile-qa/team-scheme-sweep/CLE__omen.png",
+        "bytes": 42094
+      },
+      {
+        "repository": "omen",
+        "path": "Solutions/reports/_screenshots/2026-07-02-mobile-qa/team-scheme-sweep/CLE__standings.png",
+        "bytes": 42094
+      },
+      {
+        "repository": "omen",
+        "path": "Solutions/reports/_screenshots/2026-07-02-mobile-qa/team-scheme-sweep/CLE__trade.png",
+        "bytes": 42094
+      },
+      {
+        "repository": "omen",
+        "path": "Solutions/reports/_screenshots/2026-07-02-mobile-qa/team-scheme-sweep/HOU__draft.png",
+        "bytes": 42094
+      },
+      {
+        "repository": "omen",
+        "path": "Solutions/reports/_screenshots/2026-07-02-mobile-qa/team-scheme-sweep/HOU__ledger.png",
+        "bytes": 42094
+      },
+      {
+        "repository": "omen",
+        "path": "Solutions/reports/_screenshots/2026-07-02-mobile-qa/team-scheme-sweep/HOU__standings.png",
+        "bytes": 42094
+      },
+      {
+        "repository": "omen",
+        "path": "Solutions/reports/_screenshots/2026-07-02-mobile-qa/team-scheme-sweep/HOU__trade.png",
+        "bytes": 42094
+      },
+      {
+        "repository": "omen",
+        "path": "Solutions/reports/_screenshots/2026-07-02-mobile-qa/team-scheme-sweep/LAC__draft.png",
+        "bytes": 42094
+      },
+      {
+        "repository": "omen",
+        "path": "Solutions/reports/_screenshots/2026-07-02-mobile-qa/team-scheme-sweep/LAC__ledger.png",
+        "bytes": 42094
+      },
+      {
+        "repository": "omen",
+        "path": "Solutions/reports/_screenshots/2026-07-02-mobile-qa/team-scheme-sweep/LAC__standings.png",
+        "bytes": 42094
+      },
+      {
+        "repository": "omen",
+        "path": "Solutions/reports/_screenshots/2026-07-02-mobile-qa/team-scheme-sweep/LAC__trade.png",
+        "bytes": 42094
+      },
+      {
+        "repository": "omen",
+        "path": "Solutions/reports/_screenshots/2026-07-02-mobile-qa/team-scheme-sweep/MIN__draft.png",
+        "bytes": 42094
+      },
+      {
+        "repository": "omen",
+        "path": "Solutions/reports/_screenshots/2026-07-02-mobile-qa/team-scheme-sweep/MIN__standings.png",
+        "bytes": 42094
+      },
+      {
+        "repository": "omen",
+        "path": "Solutions/reports/_screenshots/2026-07-02-mobile-qa/team-scheme-sweep/MIN__trade.png",
+        "bytes": 42094
+      },
+      {
+        "repository": "omen",
+        "path": "Solutions/reports/_screenshots/2026-07-02-mobile-qa/team-scheme-sweep/NE__draft.png",
+        "bytes": 42094
+      },
+      {
+        "repository": "omen",
+        "path": "Solutions/reports/_screenshots/2026-07-02-mobile-qa/team-scheme-sweep/NE__ledger.png",
+        "bytes": 42094
+      },
+      {
+        "repository": "omen",
+        "path": "Solutions/reports/_screenshots/2026-07-02-mobile-qa/team-scheme-sweep/NE__standings.png",
+        "bytes": 42094
+      },
+      {
+        "repository": "omen",
+        "path": "Solutions/reports/_screenshots/2026-07-02-mobile-qa/team-scheme-sweep/NE__trade.png",
+        "bytes": 42094
+      },
+      {
+        "repository": "omen",
+        "path": "Solutions/reports/_screenshots/2026-07-02-mobile-qa/team-scheme-sweep/SEA__draft.png",
+        "bytes": 42094
+      },
+      {
+        "repository": "omen",
+        "path": "Solutions/reports/_screenshots/2026-07-02-mobile-qa/team-scheme-sweep/SEA__ledger.png",
+        "bytes": 42094
+      },
+      {
+        "repository": "omen",
+        "path": "Solutions/reports/_screenshots/2026-07-02-mobile-qa/team-scheme-sweep/SEA__standings.png",
+        "bytes": 42094
+      },
+      {
+        "repository": "omen",
+        "path": "Solutions/reports/_screenshots/2026-07-02-mobile-qa/team-scheme-sweep/SEA__trade.png",
+        "bytes": 42094
+      },
+      {
+        "repository": "omen",
+        "path": "Solutions/reports/_screenshots/2026-07-02-mobile-qa/team-scheme-sweep/TB__draft.png",
+        "bytes": 42094
+      },
+      {
+        "repository": "omen",
+        "path": "Solutions/reports/_screenshots/2026-07-02-mobile-qa/team-scheme-sweep/TB__standings.png",
+        "bytes": 42094
+      },
+      {
+        "repository": "omen",
+        "path": "Solutions/reports/_screenshots/2026-07-02-mobile-qa/team-scheme-sweep/TB__trade.png",
+        "bytes": 42094
+      },
+      {
+        "repository": "omen",
+        "path": "Solutions/reports/_screenshots/2026-07-02-mobile-qa/team-scheme-sweep/TEN__draft.png",
+        "bytes": 42094
+      },
+      {
+        "repository": "omen",
+        "path": "Solutions/reports/_screenshots/2026-07-02-mobile-qa/team-scheme-sweep/TEN__standings.png",
+        "bytes": 42094
+      },
+      {
+        "repository": "omen",
+        "path": "Solutions/reports/_screenshots/2026-07-02-mobile-qa/team-scheme-sweep/TEN__trade.png",
+        "bytes": 42094
+      },
+      {
+        "repository": "omen",
+        "path": "Solutions/reports/_screenshots/2026-07-02-mobile-qa/team-scheme-sweep/WAS__draft.png",
+        "bytes": 42094
+      },
+      {
+        "repository": "omen",
+        "path": "Solutions/reports/_screenshots/2026-07-02-mobile-qa/team-scheme-sweep/WAS__ledger.png",
+        "bytes": 42094
+      },
+      {
+        "repository": "omen",
+        "path": "Solutions/reports/_screenshots/2026-07-02-mobile-qa/team-scheme-sweep/WAS__standings.png",
+        "bytes": 42094
+      },
+      {
+        "repository": "omen",
+        "path": "Solutions/reports/_screenshots/2026-07-02-mobile-qa/team-scheme-sweep/WAS__trade.png",
+        "bytes": 42094
+      }
+    ]
+  },
+  {
+    "id": "ALL-DUP-0017",
+    "sha256": "9dc9424cee5c89403da5be9a3ccb4f197f9639dc1f35c9cf67831f10591a2b6b",
+    "members": [
+      {
+        "repository": "omen",
+        "path": "docs/pr-screenshots/pr-cardfill-global/6-teams/BUF-after.png",
+        "bytes": 126478
+      },
+      {
+        "repository": "omen",
+        "path": "docs/pr-screenshots/pr-cardfill-global/6-teams/BUF-before.png",
+        "bytes": 126478
+      },
+      {
+        "repository": "omen",
+        "path": "docs/pr-screenshots/pr-cardfill-global/v2-token-split/BUF-before.png",
+        "bytes": 126478
+      }
+    ]
+  },
+  {
+    "id": "ALL-DUP-0018",
+    "sha256": "f3cde5439c09d3db1a9ecfc87af9b851365c25e0f638995ec8bad0d5f5321b2c",
+    "members": [
+      {
+        "repository": "omen",
+        "path": "docs/pr-screenshots/pr-cardfill-global/6-teams/DEN-after.png",
+        "bytes": 122078
+      },
+      {
+        "repository": "omen",
+        "path": "docs/pr-screenshots/pr-cardfill-global/6-teams/DEN-before.png",
+        "bytes": 122078
+      },
+      {
+        "repository": "omen",
+        "path": "docs/pr-screenshots/pr-cardfill-global/v2-token-split/DEN-before.png",
+        "bytes": 122078
+      }
+    ]
+  },
+  {
+    "id": "ALL-DUP-0019",
+    "sha256": "f19452782845a645327527127394b9d465defe4cb811e77eec48acc526089419",
+    "members": [
+      {
+        "repository": "omen",
+        "path": "docs/pr-screenshots/pr-cardfill-global/6-teams/DET-after.png",
+        "bytes": 122759
+      },
+      {
+        "repository": "omen",
+        "path": "docs/pr-screenshots/pr-cardfill-global/v2-token-split/DET-before.png",
+        "bytes": 122759
+      }
+    ]
+  },
+  {
+    "id": "ALL-DUP-0020",
+    "sha256": "db778ebdeb0c916f94d15131b57715dd6b5e10078d6cde7d1591b75fe34a9b9c",
+    "members": [
+      {
+        "repository": "omen",
+        "path": "docs/pr-screenshots/pr-cardfill-global/6-teams/PHI-after.png",
+        "bytes": 131070
+      },
+      {
+        "repository": "omen",
+        "path": "docs/pr-screenshots/pr-cardfill-global/6-teams/PHI-before.png",
+        "bytes": 131070
+      },
+      {
+        "repository": "omen",
+        "path": "docs/pr-screenshots/pr-cardfill-global/v2-token-split/PHI-before.png",
+        "bytes": 131070
+      }
+    ]
+  },
+  {
+    "id": "ALL-DUP-0021",
+    "sha256": "516a0c46b495e3ca3c340cc20330d784301350331dbbe10121c2773c17d76377",
+    "members": [
+      {
+        "repository": "omen",
+        "path": "docs/pr-screenshots/pr-cardfill-global/6-teams/WAS-after.png",
+        "bytes": 132510
+      },
+      {
+        "repository": "omen",
+        "path": "docs/pr-screenshots/pr-cardfill-global/6-teams/WAS-before.png",
+        "bytes": 132510
+      },
+      {
+        "repository": "omen",
+        "path": "docs/pr-screenshots/pr-cardfill-global/v2-token-split/WAS-before.png",
+        "bytes": 132510
+      }
+    ]
+  },
+  {
+    "id": "ALL-DUP-0022",
+    "sha256": "18fe5a2ee895719a3494d800d18407ab1f8fb75f616230dbbccf7f526cba9db8",
+    "members": [
+      {
+        "repository": "omen",
+        "path": "docs/pr-screenshots/pr108/before.png",
+        "bytes": 511869
+      },
+      {
+        "repository": "omen",
+        "path": "docs/pr-screenshots/prT1/landing-before.png",
+        "bytes": 511869
+      }
+    ]
+  },
+  {
+    "id": "ALL-DUP-0023",
+    "sha256": "a522a461869aef780fdcda00b6ab5d0362aaa16ecdd6ef22b4ea3b52b9356e4e",
+    "members": [
+      {
+        "repository": "omen",
+        "path": "docs/pr-screenshots/pr95/border-refinement/MIA-before.png",
+        "bytes": 119736
+      },
+      {
+        "repository": "omen",
+        "path": "docs/pr-screenshots/pr95/generalized-rule/MIA-after.png",
+        "bytes": 119736
+      }
+    ]
+  },
+  {
+    "id": "ALL-DUP-0024",
+    "sha256": "00905ffa1cd5658dfe929dc67c6d959f8e476b592d26a4f18a37b213f0dd8267",
+    "members": [
+      {
+        "repository": "omen",
+        "path": "docs/pr-screenshots/prT1/account-appearance-before.png",
+        "bytes": 64323
+      },
+      {
+        "repository": "omen",
+        "path": "docs/pr-screenshots/prT2/login-after.png",
+        "bytes": 64323
+      }
+    ]
+  },
+  {
+    "id": "ALL-DUP-0025",
+    "sha256": "491a486801f8705fd2f660e90ffd77160f12bb967c676740853cde69a2a18c41",
+    "members": [
+      {
+        "repository": "omen",
+        "path": "docs/pr-screenshots/prT1/appearance-before.png",
+        "bytes": 98404
+      },
+      {
+        "repository": "omen",
+        "path": "docs/pr-screenshots/prT2/appearance-before.png",
+        "bytes": 98404
+      }
+    ]
+  },
+  {
+    "id": "ALL-DUP-0026",
+    "sha256": "ee34cfc280fb83ab57b4e64197ad014857dfab3ff252b5ca7215934e605d67f9",
+    "members": [
+      {
+        "repository": "omen",
+        "path": "docs/pr-screenshots/prT1/landing-after.png",
+        "bytes": 647973
+      },
+      {
+        "repository": "omen",
+        "path": "docs/pr-screenshots/prT3/landing-after.png",
+        "bytes": 647973
+      },
+      {
+        "repository": "omen",
+        "path": "docs/pr-screenshots/prT3/landing-before.png",
+        "bytes": 647973
+      }
+    ]
+  },
+  {
+    "id": "ALL-DUP-0027",
+    "sha256": "fcee68cfdfbf0ea4fd23fb6c08fd51c4719abd9c1b5f8483ab92882db1248e8b",
+    "members": [
+      {
+        "repository": "omen",
+        "path": "docs/pr-screenshots/prT1/onboarding-before.png",
+        "bytes": 61157
+      },
+      {
+        "repository": "omen",
+        "path": "docs/pr-screenshots/prT2/onboarding-before.png",
+        "bytes": 61157
+      }
+    ]
+  },
+  {
+    "id": "ALL-DUP-0028",
+    "sha256": "323ea756353cd3bab2e4c04c70f7ad2d6cfce2bedf4669d366164ea66c4883f5",
+    "members": [
+      {
+        "repository": "omen",
+        "path": "docs/pr-screenshots/prT2/appearance-after.png",
+        "bytes": 103318
+      },
+      {
+        "repository": "omen",
+        "path": "docs/pr-screenshots/prT3/appearance-after.png",
+        "bytes": 103318
+      },
+      {
+        "repository": "omen",
+        "path": "docs/pr-screenshots/prT3/appearance-before.png",
+        "bytes": 103318
+      }
+    ]
+  },
+  {
+    "id": "ALL-DUP-0029",
+    "sha256": "e7d5af407bd47a2747f1c2fece7cff8f3f3a43e5ec395f307b05b164947b4a92",
+    "members": [
+      {
+        "repository": "omen",
+        "path": "docs/pr-screenshots/prT2/onboarding-after.png",
+        "bytes": 65514
+      },
+      {
+        "repository": "omen",
+        "path": "docs/pr-screenshots/prT3/onboarding-before.png",
+        "bytes": 65514
+      }
+    ]
+  },
+  {
+    "id": "ALL-DUP-0030",
+    "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "members": [
+      {
+        "repository": "omen",
+        "path": "frontend/public/.gitkeep",
+        "bytes": 1
+      },
+      {
+        "repository": "omen",
+        "path": "frontend/src/components/ui/.gitkeep",
+        "bytes": 1
+      }
+    ]
+  },
+  {
+    "id": "ALL-DUP-0031",
+    "sha256": "cb6c036e783b312163d6b052dccad6ba12e7b597e9f3a61c857b11d31f962053",
+    "members": [
+      {
+        "repository": "omen",
+        "path": "frontend/public/omen-favicon-16.png",
+        "bytes": 539
+      },
+      {
+        "repository": "omen",
+        "path": "logos/omen-favicon-16.png",
+        "bytes": 539
+      }
+    ]
+  },
+  {
+    "id": "ALL-DUP-0032",
+    "sha256": "ee5666ec2ac00cc99f63223fadcf63216145a91967da14b1a74dbbe68542046b",
+    "members": [
+      {
+        "repository": "omen",
+        "path": "frontend/public/omen-favicon-180.png",
+        "bytes": 11303
+      },
+      {
+        "repository": "omen",
+        "path": "logos/omen-favicon-180.png",
+        "bytes": 11303
+      }
+    ]
+  },
+  {
+    "id": "ALL-DUP-0033",
+    "sha256": "4fbba430f8efabe6feae3bde4ca977cde80af756c27f10f5402bbd558cbe0c86",
+    "members": [
+      {
+        "repository": "omen",
+        "path": "frontend/public/omen-favicon-256.png",
+        "bytes": 17223
+      },
+      {
+        "repository": "omen",
+        "path": "logos/omen-favicon-256.png",
+        "bytes": 17223
+      }
+    ]
+  },
+  {
+    "id": "ALL-DUP-0034",
+    "sha256": "924297947eb299e8cf2c511566b2147321a6e5a1afb3845593b8fb68d4c66832",
+    "members": [
+      {
+        "repository": "omen",
+        "path": "frontend/public/omen-favicon-32.png",
+        "bytes": 1331
+      },
+      {
+        "repository": "omen",
+        "path": "logos/omen-favicon-32.png",
+        "bytes": 1331
+      }
+    ]
+  },
+  {
+    "id": "ALL-DUP-0035",
+    "sha256": "487f4d79a328164ab4db4d92ea2f609e5dd97a69fcc1cf1adf21f7bd3a893a9d",
+    "members": [
+      {
+        "repository": "omen",
+        "path": "frontend/public/omen-favicon-48.png",
+        "bytes": 2140
+      },
+      {
+        "repository": "omen",
+        "path": "logos/omen-favicon-48.png",
+        "bytes": 2140
+      }
+    ]
+  },
+  {
+    "id": "ALL-DUP-0036",
+    "sha256": "062b8886c38a04f20e623bf50dffe1ca09c4bc40f0addfdee4d4ae96dc35edf0",
+    "members": [
+      {
+        "repository": "omen",
+        "path": "frontend/public/omen-favicon-512.png",
+        "bytes": 55879
+      },
+      {
+        "repository": "omen",
+        "path": "logos/omen-favicon-512.png",
+        "bytes": 55879
+      }
+    ]
+  },
+  {
+    "id": "ALL-DUP-0037",
+    "sha256": "681a86d2cd826f35aac7b5ea8832952173f50f078250d45bf35b8f4eb03462c6",
+    "members": [
+      {
+        "repository": "omen",
+        "path": "frontend/public/omen-favicon-64.png",
+        "bytes": 2900
+      },
+      {
+        "repository": "omen",
+        "path": "logos/omen-favicon-64.png",
+        "bytes": 2900
+      }
+    ]
+  },
+  {
+    "id": "ALL-DUP-0038",
+    "sha256": "617c8e153756320ba76422ceef63ce7497a42a7239884f0da6ad186ad71c8948",
+    "members": [
+      {
+        "repository": "omen",
+        "path": "frontend/public/omen-favicon-app-icon.png",
+        "bytes": 195111
+      },
+      {
+        "repository": "omen",
+        "path": "logos/omen-favicon-app-icon.png",
+        "bytes": 195111
+      }
+    ]
+  },
+  {
+    "id": "ALL-DUP-0039",
+    "sha256": "221dd7d6711cf5517353bca76c7abcfacc68587c3d6c7a9d21f1a9d6950cffba",
+    "members": [
+      {
+        "repository": "omen",
+        "path": "frontend/public/omen-horizontal-lockup-raven.png",
+        "bytes": 21069
+      },
+      {
+        "repository": "omen",
+        "path": "logos/omen-horizontal-lockup-raven.png",
+        "bytes": 21069
+      }
+    ]
+  },
+  {
+    "id": "ALL-DUP-0040",
+    "sha256": "0b9f8edb427a63e34719a9cacdac7aaa3a8765b6fd7c59d82fe8f1bb50716111",
+    "members": [
+      {
+        "repository": "omen",
+        "path": "frontend/public/omen-horizontal-lockup.png",
+        "bytes": 19954
+      },
+      {
+        "repository": "omen",
+        "path": "logos/omen-horizontal-lockup.png",
+        "bytes": 19954
+      }
+    ]
+  },
+  {
+    "id": "ALL-DUP-0041",
+    "sha256": "508eeb911912c4e16a29028e25bc03859b9e5795405601ca8cced503a01026b8",
+    "members": [
+      {
+        "repository": "omen",
+        "path": "frontend/public/omen-standalone-wordmark.png",
+        "bytes": 7593
+      },
+      {
+        "repository": "omen",
+        "path": "logos/omen-standalone-wordmark.png",
+        "bytes": 7593
+      }
+    ]
+  }
+]

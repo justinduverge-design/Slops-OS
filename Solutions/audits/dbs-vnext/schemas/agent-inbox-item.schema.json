@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:slops:direction:v1:agent-inbox-item",
+  "title": "DBS Direction agent inbox item v1",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "schema_id", "schema_version", "id", "created_at", "updated_at",
+    "repository", "product_scope", "source", "request_or_problem",
+    "desired_outcome", "priority", "status", "classification",
+    "affected_system", "dependencies", "linked_decisions",
+    "required_blueprints", "supporting_references", "owner", "next_action",
+    "links"
+  ],
+  "properties": {
+    "schema_id": { "const": "slops.direction.agent-inbox-item" },
+    "schema_version": { "type": "string", "pattern": "^1\\.[0-9]+\\.[0-9]+$" },
+    "id": { "type": "string", "pattern": "^(SLOPS|OMEN)-IN-[0-9]{8}-[0-9]{3}$" },
+    "created_at": { "type": "string", "format": "date" },
+    "updated_at": { "type": "string", "format": "date" },
+    "repository": { "enum": ["slops-os", "omen"] },
+    "product_scope": { "type": "string", "minLength": 1 },
+    "source": { "type": "string", "minLength": 1 },
+    "request_or_problem": { "type": "string", "minLength": 1 },
+    "desired_outcome": { "type": "string", "minLength": 1 },
+    "priority": { "enum": ["P0", "P1", "P2", "P3"] },
+    "status": { "enum": ["NEW", "TRIAGED", "PROMOTED", "DEFERRED", "REJECTED", "CLOSED"] },
+    "classification": { "enum": ["EXECUTE_NOW", "INVESTIGATE", "PLAN", "DEFER", "REJECT"] },
+    "affected_system": { "type": "string", "minLength": 1 },
+    "dependencies": { "$ref": "#/$defs/linkList" },
+    "linked_decisions": { "$ref": "#/$defs/linkList" },
+    "required_blueprints": { "$ref": "#/$defs/linkList" },
+    "supporting_references": { "$ref": "#/$defs/linkList" },
+    "active_solution_or_plan": { "type": ["string", "null"] },
+    "owner": { "type": "string", "minLength": 1 },
+    "assigned_owner": { "type": ["string", "null"] },
+    "next_action": { "type": "string", "minLength": 1 },
+    "closure": { "type": ["object", "null"] },
+    "links": { "type": "object" },
+    "legacy_ids": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "migrated_from": { "type": ["object", "null"] }
+  },
+  "$defs": {
+    "linkList": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^(dbs|https)://" },
+      "uniqueItems": true
+    }
+  }
+}

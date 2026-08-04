@@ -1,0 +1,170 @@
+[
+  {
+    "similarity": 0.9688,
+    "hamming_distance": 2,
+    "length_ratio": 1,
+    "left": {
+      "repository": "omen",
+      "path": "Archive/specs-pre-dbs/001-corvus-decision-layer/spec.md"
+    },
+    "right": {
+      "repository": "omen",
+      "path": "Blueprints/specs/omen-decision-layer.md"
+    },
+    "id": "NEAR-0001"
+  },
+  {
+    "similarity": 0.9688,
+    "hamming_distance": 2,
+    "length_ratio": 0.9991,
+    "left": {
+      "repository": "slops-os",
+      "path": "Archive/superseded-docs/draft_assistant_spec.md"
+    },
+    "right": {
+      "repository": "omen",
+      "path": "Blueprints/specs/docs/draft_assistant_spec.md"
+    },
+    "id": "NEAR-0002"
+  },
+  {
+    "similarity": 0.9688,
+    "hamming_distance": 2,
+    "length_ratio": 0.9865,
+    "left": {
+      "repository": "slops-os",
+      "path": "Archive/authority-routing/2026-07-30-pre-runtime-trust/kickoffs/kickoff-l0-claude.archived.md"
+    },
+    "right": {
+      "repository": "slops-os",
+      "path": "Archive/authority-routing/2026-07-30-pre-runtime-trust/kickoffs/kickoff-l0-codex.archived.md"
+    },
+    "id": "NEAR-0003"
+  },
+  {
+    "similarity": 0.9531,
+    "hamming_distance": 3,
+    "length_ratio": 1,
+    "left": {
+      "repository": "omen",
+      "path": "Archive/specs-pre-dbs/000-infrastructure-boundaries/spec.md"
+    },
+    "right": {
+      "repository": "omen",
+      "path": "Blueprints/specs/docs/infrastructure-boundaries.md"
+    },
+    "id": "NEAR-0004"
+  },
+  {
+    "similarity": 0.9531,
+    "hamming_distance": 3,
+    "length_ratio": 1,
+    "left": {
+      "repository": "omen",
+      "path": "Archive/specs-pre-dbs/005-nflverse-data-research/spec.md"
+    },
+    "right": {
+      "repository": "omen",
+      "path": "References/docs/nflverse-data-research.md"
+    },
+    "id": "NEAR-0005"
+  },
+  {
+    "similarity": 0.9531,
+    "hamming_distance": 3,
+    "length_ratio": 1,
+    "left": {
+      "repository": "slops-os",
+      "path": "Blueprints/skills/slops-mobile-smoke/SKILL.md"
+    },
+    "right": {
+      "repository": "omen",
+      "path": "Blueprints/handoffs/2026-06-14-proposed-slops-mobile-smoke-SKILL.md"
+    },
+    "id": "NEAR-0006"
+  },
+  {
+    "similarity": 0.9531,
+    "hamming_distance": 3,
+    "length_ratio": 1,
+    "left": {
+      "repository": "slops-os",
+      "path": "slops-saloon/AGENTS.md"
+    },
+    "right": {
+      "repository": "slops-os",
+      "path": "slops-saloon/CLAUDE.md"
+    },
+    "id": "NEAR-0007"
+  },
+  {
+    "similarity": 0.9531,
+    "hamming_distance": 3,
+    "length_ratio": 0.9921,
+    "left": {
+      "repository": "slops-os",
+      "path": "Archive/corvus-root-direction-pre-dbs/00_FINAL_PLAN.md"
+    },
+    "right": {
+      "repository": "slops-os",
+      "path": "Archive/superseded-docs/00_FINAL_PLAN.md"
+    },
+    "id": "NEAR-0008"
+  },
+  {
+    "similarity": 0.9531,
+    "hamming_distance": 3,
+    "length_ratio": 0.95,
+    "left": {
+      "repository": "omen",
+      "path": "Blueprints/audits/2026-06-23-phase1-5g-motif-contrast-sweep.md"
+    },
+    "right": {
+      "repository": "omen",
+      "path": "Blueprints/audits/2026-06-25-phase1-5g3-moment-contrast-sweep.md"
+    },
+    "id": "NEAR-0009"
+  },
+  {
+    "similarity": 0.9375,
+    "hamming_distance": 4,
+    "length_ratio": 0.9945,
+    "left": {
+      "repository": "slops-os",
+      "path": "Archive/authority-routing/2026-07-30-pre-runtime-trust/playbooks/runbook_ai_workflow.archived.md"
+    },
+    "right": {
+      "repository": "slops-os",
+      "path": "Archive/superseded-docs/runbook_ai_workflow.md"
+    },
+    "id": "NEAR-0010"
+  },
+  {
+    "similarity": 0.9375,
+    "hamming_distance": 4,
+    "length_ratio": 0.9082,
+    "left": {
+      "repository": "omen",
+      "path": "Archive/authority-routing/2026-07-30-pre-runtime-trust/kickoffs/kickoff-backend-codex.archived.md"
+    },
+    "right": {
+      "repository": "omen",
+      "path": "Archive/authority-routing/2026-07-30-pre-runtime-trust/kickoffs/kickoff-frontend-claude.archived.md"
+    },
+    "id": "NEAR-0011"
+  },
+  {
+    "similarity": 0.9219,
+    "hamming_distance": 5,
+    "length_ratio": 0.9541,
+    "left": {
+      "repository": "omen",
+      "path": "Blueprints/audits/2026-06-21-phase1-5h-multi-color-wcag-sweep.md"
+    },
+    "right": {
+      "repository": "omen",
+      "path": "Blueprints/audits/2026-06-23-phase1-5g-motif-contrast-sweep.md"
+    },
+    "id": "NEAR-0012"
+  }
+]
