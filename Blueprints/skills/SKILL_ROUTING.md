@@ -64,7 +64,7 @@ Do not place app implementation work in Layer 1 (Slops Saloon). The division lay
 | Agent | Actor role with permissions, denied work, status, and escalation. | `Blueprints\agents` |
 | Prompt | One-time runnable task for Claude, Codex, or another agent. | `Blueprints\prompts` |
 | Tool permissions | Guardrails for what agents may do. | `Blueprints\tools\tool-permissions.md` |
-| Imported agents | External references that are not active until reviewed. | `Blueprints\agents\_imported` |
+| ~~Imported agents~~ | Retired 2026-08-05 — the staging tree was deleted and no import pool exists. See `AGENT_INDEX.md` §4. | — |
 
 ## Current SLOPS Skills
 
@@ -81,7 +81,7 @@ Do not place app implementation work in Layer 1 (Slops Saloon). The division lay
 | `slops-prompt-generator` | Claude first, Codex if writing files | `Layer 0` | `active` | Convert audits, handoffs, specs, contracts, and context into concrete runnable prompts. |
 | `slops-skill-author` | Claude first, Codex if writing files | `Layer 0` | `active` | Create, critique, normalize, and improve SLOPS-authored skill markdown files. |
 | `slops-agent-author` | Claude first, Codex if writing files | `Layer 0` | `active` | Create, critique, normalize, and improve SLOPS agent role files using RBAC and least privilege. |
-| `slops-onboarding-agent` | Claude first, Codex if writing files | `Layer 0` | `active` | Review imported agent divisions before promotion, classify candidates, flag RBAC risk, and prepare wrapper handoffs for `slops-agent-author`. |
+| `slops-onboarding-agent` | — | `Layer 0` | `retired` | **Retired 2026-08-05.** Its only input was the `Blueprints\agents\_imported\` staging tree, which was deleted the same day (`AGENT_INDEX.md` §4). Nothing left to onboard. Restore the tree from git and flip this back to `active` if a new import wave is approved. |
 | `agent-wrapper-generator` | Claude first, Codex if writing files | `Layer 0` | `active` | Generate least-privilege SLOPS agent wrapper files from approved review memos or explicit candidate selections. |
 | `agent-index-diff-builder` | Claude first, Codex if writing files | `Layer 0` | `active` | Build proposed `AGENT_INDEX.md` additions or diffs from wrapper files without applying them. |
 | `rbac-risk-review` | Claude first, Codex if writing files | `Layer 0` | `active` | Review agents, skills, prompts, plans, and proposed changes for RBAC, overlap, tool-tier, and high-risk authority concerns. |
@@ -407,11 +407,15 @@ Some tasks require Claude and Codex working together.
 
 ### Agent Creation or Agent Editing
 
+> **Inactive since 2026-08-05.** This workflow consumed the `_imported\` staging
+> tree, which was deleted. It is retained as the procedure to follow if a future
+> import wave is approved; restore the tree from git first.
+
 - **Planning Agent**: Claude
-- **Skill**: `slops-onboarding-agent` for imported division review, then `slops-agent-author` for wrapper creation and RBAC normalization
+- **Skill**: ~~`slops-onboarding-agent`~~ (retired) for imported division review, then `slops-agent-author` for wrapper creation and RBAC normalization
 - **Execution Agent**: Codex, if files must be written locally
 - **Workflow**:
-  1. Claude uses `slops-onboarding-agent` to review one imported division, assign recommended statuses, and flag RBAC risks.
+  1. ~~Claude uses `slops-onboarding-agent` to review one imported division, assign recommended statuses, and flag RBAC risks.~~ (retired — no import pool exists)
   2. Claude uses `slops-agent-author` to create or normalize candidate wrapper files with least-privilege permissions.
   3. Claude proposes `AGENT_INDEX.md` updates but does not apply them without Justin approval.
   4. Justin approves.
@@ -561,7 +565,7 @@ Start with Claude.
 
 Use `slops-skill-author` for skills.
 
-Use `slops-onboarding-agent` before `slops-agent-author` when reviewing imported agent divisions for promotion.
+~~Use `slops-onboarding-agent` before `slops-agent-author` when reviewing imported agent divisions for promotion.~~ Retired 2026-08-05 — no import pool exists.
 
 Use `slops-agent-author` for agents.
 

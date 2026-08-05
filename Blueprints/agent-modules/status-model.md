@@ -48,8 +48,8 @@ letting it hold the task.
 
 ## `Blocked by:`
 
-Required on **every active task** (`READY`, `IN_PROGRESS`, `VERIFIED`). Repeatable — one
-blocker per line. The **type is the first token**:
+Required on **every active task** (`READY`, `IN_PROGRESS`, `VERIFIED`). Repeatable — **one
+blocker per line**, never combined. The **type is the first token**:
 
 | Form | Meaning |
 | :--- | :--- |

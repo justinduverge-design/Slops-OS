@@ -33,7 +33,7 @@ Status describes a **file's review state**. It is not a grant. Even `active` con
 |---|---|---|---|---|
 | **active** | Approved, doctrine-wrapped, callable | Only via an Active Trust Assignment | Per assigned trust tier | The founder role; any runtime under a current assignment |
 | **candidate** | Reviewed, not yet doctrine-wrapped | None | Tier 1–2 only | The 36 built wrappers in Section 5 |
-| **reference-only** | Imported material, readable for inspiration | None | Tier 1 only | Items in `_imported\` folders |
+| ~~**reference-only**~~ | ~~Imported material, readable for inspiration~~ | — | — | **Retired 2026-08-05.** The `_imported\` staging tree was deleted; this class has no members. Recoverable from git history if a future import wave needs it. |
 | **do-not-activate** | Flagged for security/RBAC concerns | None | None | (blocked until founder approval) |
 
 ---
@@ -96,13 +96,22 @@ These are agents defined at layer 1-Slops Saloon or layer 2-Omen. They are not r
 
 ---
 
-## Section 4: Imported Agent Library Review
+## Section 4: Imported Agent Library Review — CLOSED 2026-08-05
 
-All imported files under `Blueprints\agents\_imported\` remain non-authoritative source material.
+**The `_imported\` staging tree was deleted on 2026-08-05** (91 files). Every file
+with a promoted counterpart differed from it, confirming the promoted copy in
+`Blueprints\agents\<division>\` is the cleaned, authoritative version; the
+remaining 58 were reviewed and never selected. Full contents recoverable from
+git history.
 
-**Important:** A division folder does not become callable. Only the reviewed wrapper files listed in Section 5 have `candidate` status. Imported source files that are not represented by a wrapper remain `reference-only` or `do-not-activate` according to the review notes.
+The promotion pipeline this section described is closed. There is no dormant
+import pool. The only agent files that exist are the promoted ones in
+`Blueprints\agents\<division>\`, and their status is recorded in Section 5.
 
-Review sources:
+Reopen this section only if a new import wave is approved — and if so, restore
+the tree from git rather than re-importing.
+
+Historical review sources:
 
 - `Direction\reviews\design-division-import-review.md`
 - `Direction\reviews\marketing-sales-division-import-review.md`
@@ -815,7 +824,7 @@ Uncertainty at any step escalates to the founder. It is never resolved by infere
 - **Tool index (mirror, not an authority):** `Blueprints\tools\TOOLS_INDEX.md`
 - **Runtime identity modules:** `Blueprints\agent-modules\identity-claude-code.md`, `identity-codex.md`, `identity-cowork.md`, `identity-api.md`, `identity-generic.md`
 - **Skill routing matrix (complete skill registry):** `Blueprints\skills\SKILL_ROUTING.md`
-- **Imported agent location:** `Blueprints\agents\_imported\`
+- **Imported agent location:** none — the `_imported\` tree was deleted 2026-08-05 (see Section 4)
 
 ---
 
@@ -920,6 +929,60 @@ This is where authority actually lives. It is initialized **empty**.
 schema: active-trust-assignment/v1
 # Empty list = defaults only. No assignment = no authority above runtime default_tier.
 assignments:
+  - assignment_id: ATA-20260802-10
+    runtime: codex
+    session_capability_confirmed: true
+    tier: full-executor
+    scope_task_key: M4-CC-WaiverWatch
+    granted_by: founder
+    granted_at: 2026-08-02
+    expires: on-task-close
+    conditions:
+      - "implement the approved native Waiver Watch composition only after the required mobile source and Figma contract gates are complete"
+      - "no provider claims, live waiver-deadline data, backend, provider auth, credentials, deep-link configuration, package, SQL, deployment, or production changes"
+    action_level_approvals_required:
+      - destructive
+      - production
+      - db-write
+      - deployment
+      - secrets
+
+  - assignment_id: ATA-20260802-09
+    runtime: codex
+    session_capability_confirmed: true
+    tier: full-executor
+    scope_task_key: B2-D
+    granted_by: founder
+    granted_at: 2026-08-02
+    expires: on-task-close
+    conditions:
+      - "complete only the remaining canonical Omen engine work documented by B2-D; preserve provider truth and no-mock behavior"
+      - "no provider credential inspection, deployment, production-data mutation, store configuration, package, or SQL changes"
+    action_level_approvals_required:
+      - destructive
+      - production
+      - db-write
+      - deployment
+      - secrets
+
+  - assignment_id: ATA-20260802-08
+    runtime: codex
+    session_capability_confirmed: true
+    tier: full-executor
+    scope_task_key: OPS-status-model-truth-gate
+    granted_by: founder
+    granted_at: 2026-08-02
+    expires: on-task-close
+    conditions:
+      - "documentation-only reconciliation of the L0 status model, Omen status-model mirror, and stale Omen CI guidance"
+      - "no app code, package, deployment, secret, database, or production changes"
+    action_level_approvals_required:
+      - destructive
+      - production
+      - db-write
+      - deployment
+      - secrets
+
   - assignment_id: ATA-20260731-01
     runtime: claude-code
     session_capability_confirmed: true

@@ -47,7 +47,7 @@ See **`Blueprints\agents\AGENT_INDEX.md`** for the tool grants assigned to each 
 
 All agents default to `read-only` unless explicitly indexed and granted higher tier.
 
-**Imported agents** (in `Blueprints\agents\_imported\`) have **NO tool authority** by default until promoted to `active` status in `AGENT_INDEX.md`.
+**Imported agents:** none exist. The `Blueprints\agents\_imported\` tree was deleted 2026-08-05. Tool authority comes only from `active` status in `AGENT_INDEX.md`; a promoted wrapper at `candidate` status still carries no tool authority.
 
 ## Per-Skill Tool Grants
 

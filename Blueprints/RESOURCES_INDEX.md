@@ -25,7 +25,7 @@ This index is the *aggregator*. Each section points to its authoritative source.
 
 **Authoritative:** `Blueprints/agents/AGENT_INDEX.md` — wrapped, active agents.
 **README:** `Blueprints/agents/README.md` — orientation, wrapper rules.
-**Dormant pool:** `Blueprints/agents/_imported/` — external imports awaiting review. **Treat as non-authoritative until wrapped + indexed.**
+**Dormant pool:** none. `Blueprints/agents/_imported/` was deleted 2026-08-05 — see `AGENT_INDEX.md` Section 4. All remaining agent files are promoted and indexed.
 
 Only Justin, Claude, and Codex are first-class agents. Other "agents" in the index are skill-shaped — see `feedback_agent_skill_boundary` memo.
 
