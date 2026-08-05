@@ -106,18 +106,25 @@ Use these meanings at every layer:
 Every layer should expose these files at its layer root:
 
 ```text
-context.md
 DBS_INDEX.md
 README.md
 AGENTS.md
 CLAUDE.md
 ```
 
+> **`context.md` removed from the required set 2026-08-05.** The L0 copy had
+> decayed into a legacy snapshot that pointed elsewhere for real truth, so an
+> agent had to read a stale file to learn it was stale. L0 startup truth is
+> `Direction/facts-of-record.md`. Layers may still keep a `context.md` where it
+> carries current product truth — Omen does, and it is maintained — but it is no
+> longer a baseline requirement, and an empty or stale one should be deleted
+> rather than preserved to satisfy this list.
+
 On this Windows workspace, lowercase `agents.md` / `claude.md` references resolve to the canonical `AGENTS.md` / `CLAUDE.md` files.
 
 Layer-specific detail can live in `Direction/`, but these root files must exist so Claude, Codex, and future agents do not need to guess where to start.
 
-The Omen app layer may add app-specific folders such as `src/`, `frontend/`, `test/`, `sql/`, `.github/`, and `scripts/`. Those do not replace the baseline DBS context files.
+The Omen app layer adds app-specific folders — `mobile/` (the primary native surface), plus `src/`, `frontend/`, `test/`, `sql/`, `.github/`, `deploy/`, and `scripts/`. Those do not replace the baseline DBS context files.
 
 ## Skills
 
