@@ -1,0 +1,48 @@
+# SLOPS Truth Gate — suppressions
+#
+#   <check-or-*> | <path prefix> | <reason>
+#
+# Every line needs a reason. A suppression without a reason is a lie you tell
+# yourself later. If a reason is no longer true, delete the line.
+# Prefixes are repo-relative and match with startsWith, so a folder prefix
+# covers everything under it.
+
+# --- Historical evidence: preserved deliberately, cites pre-rename paths ---
+broken-path | Solutions/reports/dbs-migration | Completed 2026-05 migration reports. Preserved as provenance; their ssffmvp/Corvus-era paths are supposed to be dead.
+stale-path  | Solutions/reports/dbs-migration | Same — historical report, not routing authority.
+broken-path | References                       | Research captures and source material, not routing authority (References/README.md says so).
+stale-path  | References                       | Same.
+
+# --- Reference-only component briefs ---
+dead-header | slops-saloon/omen/Blueprints/handoffs/jules | Jules briefs cite deprecated *patterns* in their body; the briefs themselves are live or intentionally retained. Re-review if the Jules track is formally closed.
+
+# --- Files that describe superseded things without being superseded ---
+dead-header | Blueprints/RESOURCES_INDEX.md                        | Documents skill lifecycle states including "retired"; the index itself is current authority.
+dead-header | slops-saloon/omen/Blueprints/specs/design/README.md   | Its job is to label which design docs are historical. Not itself historical.
+dead-header | slops-saloon/omen/Blueprints/agent_handoff.md         | Carries a scoped banner about removed Stripe content; the rest of the contract is live.
+dead-header | slops-saloon/omen/Blueprints/audits/2026-07-10-frontend-doctrine-audit.md | "Deep-read the historical docs" is scope description, not a status banner.
+dead-header | slops-saloon/omen/Blueprints/playbooks/post-live-technology-learning.md   | Discusses retiring technology choices; the playbook is live.
+dead-header | Blueprints/prompts/skills-acquisition-distribution-session.md | Reusable for a future acquisition wave; only its baseline inventory is stale.
+
+# --- _imported tree deleted 2026-08-05 ---
+# Live doctrine (AGENT_INDEX §4, RESOURCES_INDEX, TOOLS_INDEX, SKILL_ROUTING,
+# facts-of-record) was updated to match. What remains are provenance lines and
+# historical records that correctly describe where an agent came from.
+dangling-tree-ref | Blueprints/agents/academic          | Provenance line naming the file's pre-promotion source. Historically accurate; git holds the source.
+dangling-tree-ref | Blueprints/agents/design            | Same.
+dangling-tree-ref | Blueprints/agents/engineering       | Same.
+dangling-tree-ref | Blueprints/agents/finance           | Same.
+dangling-tree-ref | Blueprints/agents/marketing         | Same.
+dangling-tree-ref | Blueprints/agents/paid-media        | Same.
+dangling-tree-ref | Blueprints/agents/project-management| Same.
+dangling-tree-ref | Blueprints/agents/sales             | Same.
+dangling-tree-ref | Blueprints/agents/specialized       | Same.
+dangling-tree-ref | Blueprints/agents/support           | Same.
+dangling-tree-ref | Blueprints/handoffs/2026-07-11      | Historical cleanup handoffs that recommended this exact deletion. Records, not routing.
+dangling-tree-ref | Blueprints/prompts/phase-1          | Executed prompt, preserved as provenance.
+dangling-tree-ref | Blueprints/prompts/phase-5          | Executed prompt, preserved as provenance.
+dangling-tree-ref | Blueprints/prompts/_pending         | Promotion prompt for a pipeline that is now closed. Delete when the OS freeze lifts.
+dangling-tree-ref | Blueprints/skills/agent-wrapper-generator | Describes the wrapper procedure for a future import wave; restore the tree from git first.
+dangling-tree-ref | Blueprints/skills/slops-agent-author      | Same.
+dangling-tree-ref | Direction/reviews                   | Import-review records. Historical evidence of the promotion decisions.
+dangling-tree-ref | Solutions/reports/dbs-migration     | Completed migration reports.
