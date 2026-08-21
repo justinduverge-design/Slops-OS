@@ -33,7 +33,7 @@ Only Justin, Claude, and Codex are first-class agents. Other "agents" in the ind
 
 **Authoritative:** `Blueprints/prompts/` — runnable task instructions.
 **README:** `Blueprints/prompts/README.md`.
-**Kickoff modules:** `Blueprints/prompts/kickoff-modules/` — 5 shared modules (pull-task, plan-approval, done-and-close, safety-gates, read-first) imported by both kickoff wrappers at L2.
+**Kickoff modules:** `Blueprints/prompts/kickoff-modules/` — legacy shared drafts retained for review. Each layer now has one local `Blueprints/prompts/kickoff.md`; those live kickoffs do not import this folder.
 **Templates:** `Blueprints/prompts/_templates/`.
 **Pending:** `Blueprints/prompts/_pending/` — drafted but not yet routed.
 **Archive:** `Blueprints/prompts/_old-prompts-for-analysis/` — historical, do not run.

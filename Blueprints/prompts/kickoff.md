@@ -1,4 +1,4 @@
-# Kickoff — Layer 0 (SLOPS OS root)
+# Kickoff — SLOPS OS root (Layer 0)
 
 Paste this block into any runtime to start a root-layer session. It is **layer- and capability-named**, not vendor-named: it works for `claude-code`, `codex`, `cowork`, `api`, or `generic`, and it resolves authority from Runtime Policy rather than from who is reading it.
 
@@ -45,6 +45,7 @@ Read in order before acting:
    branch, ahead/behind origin, uncommitted state, canonical paths — before
    reading any queue.
 1. CLAUDE.md / AGENTS.md (this folder)
+1a. RESOLVER.md
 2. Your runtime identity module, per Runtime Policy:
    Blueprints/agent-modules/identity-claude-code.md
    Blueprints/agent-modules/identity-codex.md

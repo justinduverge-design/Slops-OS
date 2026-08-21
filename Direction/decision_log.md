@@ -33,3 +33,11 @@
 **Reason:** Phase 1 diff testing (`git diff --name-only -w`) disproved the reanchor doc's core assumption — none of the modified files were pure CRLF churn; all 91 had real, uncommitted Corvus→Omen rebrand content. `.gitattributes` also already existed (added 2802c43, 2026-06-21); the actual drift cause was local `core.autocrlf=true` fighting the existing `eol=lf` attribute, not a missing normalization rule. Content commits had to land first so the dedicated normalize branch's diff stayed pure (confirmed empty via `git diff --cached -w --stat` beyond the `.gitattributes` edit itself).
 
 **Impact:** `core.autocrlf` is now `input` locally; `.gitattributes` covers `.docx`/`.xlsx`/`.pptx`/`.zip` (binary) and `.bat`/`.cmd`/`.ps1` (CRLF-preserved) in addition to the existing rules. A `.gitignore` rebrand bug (duplicate `slops-saloon/omen/` line, legacy-folder comment defeated) was fixed by dropping the stale line. 5 files under `_pending/`, `_old-prompts-for-analysis/`, and `_proposals/` remain intentionally uncommitted pending Justin's call. Full detail in `Blueprints/handoffs/2026-07-03-crlf-and-rebrand-cleanup-handoff.md`.
+
+## 2026-08-20 — Valor Brain metadata v1 ratified across L0, L1, and L2
+
+**Decision:** Ratify the opt-in `valor-brain/v1` metadata profile, its Draft 2020-12 JSON Schema, the required Markdown body contract, and repository-local validation. L0 owns the canonical contract; L1 inherits it from the shared repository; Omen keeps byte-identical schema and validator mirrors for standalone operation.
+
+**Reason:** The O2 pilot demonstrated that task state, change state, and exercise state must remain separate. A governed profile makes authority, provenance, relationships, freshness, and compile snapshot explicit without forcing all Markdown into frontmatter or inventing a parallel DBS tree.
+
+**Impact:** Only pages declaring `metadata_profile: valor-brain/v1` are governed. Existing DBS purpose still selects the physical folder, existing sprint/status doctrine still owns task lifecycle, and ordinary Markdown is unchanged. Mass migration, automatic extraction, Graphify ingestion, production authority, and a new domain-modeling skill remain outside v1.

@@ -15,7 +15,7 @@ Each active product should own its own copies of these files:
 
 - `Direction/agent_inbox.md` - the single active task slot plus candidate queue.
 - `Blueprints/prompts/HOW-TO-RUN-THE-LOOP.md` - operator guide.
-- `Blueprints/prompts/kickoff-l2.md` - the single L2 starter, layer- and
+- `Blueprints/prompts/kickoff.md` - the single local Omen starter, layer- and
   capability-named. Supersedes the retired vendor-named backend/frontend pair.
 - `Blueprints/definition-of-done.md` - shared completion checklist.
 - `Blueprints/handoffs/frontend-to-backend.md` - frontend requests to backend.
@@ -27,7 +27,7 @@ Each active product should own its own copies of these files:
 Add the loop files to the product read-first lists:
 
 - `AGENTS.md`
-- `AGENT.md`
+- `AGENTS.md`
 - `CLAUDE.md`
 - `context.md`
 - `DBS_INDEX.md`
