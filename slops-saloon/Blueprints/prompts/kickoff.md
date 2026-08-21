@@ -1,15 +1,16 @@
-# Kickoff — Layer 0 (SLOPS OS root)
+# Kickoff — Slops Saloon division (Layer 1)
 
-Paste this block into any runtime to start a root-layer session. It is **layer- and capability-named**, not vendor-named: it works for `claude-code`, `codex`, `cowork`, `api`, or `generic`, and it resolves authority from Runtime Policy rather than from who is reading it.
+Paste this block into any runtime to start a division-layer session. It is **layer- and capability-named**, not vendor-named: it works for `claude-code`, `codex`, `cowork`, `api`, or `generic`, and it resolves authority from Runtime Policy rather than from who is reading it.
 
-L0 is doctrine + cross-cutting coordination — it has no auto-populate task inbox like a product layer does.
+L1 is division strategy, brand custody, content + marketing — no app code, and no auto-populate task inbox (that's product-layer only).
 
 ---
 
 ```text
-You are working on SLOPS OS, Layer 0 (root). Scope: cross-cutting doctrine,
-skills/agents/tools/prompts, reusable patterns, OS-level rules.
-Not in scope: Slops Saloon division strategy (L1), Omen app code (L2).
+You are working on Slops Saloon, Layer 1 (division). Scope: division strategy,
+brand custody across products, content + marketing, cross-product reusable
+patterns. Not in scope: Omen app code/deploy/tests (L2 — descend into omen/),
+OS-level skills/agents/doctrine (L0 — ascend to ../).
 
 STEP 0 — CONFIRM SESSION CAPABILITY (do this first, before any read)
   Do NOT infer capability from your vendor name, your model name, or an
@@ -27,7 +28,7 @@ STEP 0 — CONFIRM SESSION CAPABILITY (do this first, before any read)
   cowork, api, or generic. If you are none of them, you are generic.
 
 STEP 0.1 — READ RUNTIME POLICY AND ACTIVE TRUST ASSIGNMENTS
-  Read Blueprints/agents/AGENT_INDEX.md, Section 8 (runtime-policy/v1 and
+  Read ../Blueprints/agents/AGENT_INDEX.md, Section 8 (runtime-policy/v1 and
   unreviewed-eligibility/v1) and Section 9 (active-trust-assignment/v1).
   - Your default_tier applies until an assignment says otherwise.
   - An empty `assignments: []` list means DEFAULTS ONLY. No assignment means
@@ -46,48 +47,52 @@ Read in order before acting:
    reading any queue.
 1. CLAUDE.md / AGENTS.md (this folder)
 2. Your runtime identity module, per Runtime Policy:
-   Blueprints/agent-modules/identity-claude-code.md
-   Blueprints/agent-modules/identity-codex.md
-   Blueprints/agent-modules/identity-cowork.md
-   Blueprints/agent-modules/identity-api.md
-   Blueprints/agent-modules/identity-generic.md
-3. Blueprints/agent-modules/layer-0-rules.md
-4. Blueprints/agent-modules/action-posture.md
-5. Blueprints/agent-modules/resources-index.md -> Blueprints/RESOURCES_INDEX.md
-6. Blueprints/agent-modules/files-to-read-first-L0.md
-7. Blueprints/agent-modules/hard-prohibitions.md
-8. Blueprints/agent-modules/session-handoff.md
-9. Blueprints/tools/tool-permissions.md (Action Risk Tiers)
-10. Direction/facts-of-record.md
-11. Direction/decision_log.md (last 5 entries)
-12. Direction/TODO.md
+   ../Blueprints/agent-modules/identity-claude-code.md
+   ../Blueprints/agent-modules/identity-codex.md
+   ../Blueprints/agent-modules/identity-cowork.md
+   ../Blueprints/agent-modules/identity-api.md
+   ../Blueprints/agent-modules/identity-generic.md
+3. ../Blueprints/agent-modules/layer-1-rules.md
+4. ../Blueprints/agent-modules/action-posture.md
+5. ../Blueprints/agent-modules/resources-index.md
+6. ../Blueprints/agent-modules/files-to-read-first-L1.md
+7. ../Blueprints/agent-modules/hard-prohibitions.md
+8. ../Blueprints/agent-modules/session-handoff.md
+9. ../Blueprints/tools/tool-permissions.md (Action Risk Tiers)
+10. Direction/facts-of-record.md (and L0's, if an L0 decision is in play)
+11. Direction/marketing-strategy.md
+12. Direction/content-strategy.md
+13. Direction/decision_log.md (last 5 entries)
+14. Direction/current_sprint.md
 
 Then run, in order:
 1. PULL TASK
-   - L0 has no agent_inbox.md / auto-populate queue — that mechanism is
-     product-layer only (currently just Omen).
-   - Select the top Direction/TODO.md item with Status: READY, ordered by the
-     selection rule in Blueprints/agent-modules/status-model.md. Skip anything
-     whose Blocked by: line is not None.
+   - L1 has no agent_inbox.md / auto-populate queue — that mechanism belongs
+     to product layers (currently just omen/). Don't route Omen execution
+     from here.
+   - Select the top Direction/current_sprint.md item with Status: READY,
+     ordered by the selection rule in
+     ../Blueprints/agent-modules/status-model.md. Skip anything whose
+     Blocked by: line is not None.
    - If the founder's message already names a specific task, that task wins
-     over TODO.md — do it.
+     over current_sprint.md — do it.
    - If neither gives you a clear task, say so directly and ask what to work
      on. Don't sit on an unclear message silently, and don't invent a task.
    - If your runtime has no queue-wide self-pull authority (see your standing
      conditions), do not select an item — ask the founder to name one.
 
 2. PLAN-APPROVAL GATE
-   - Report: task (and where it came from — TODO.md item or direct ask), the
-     tier you are operating at and the assignment that grants it, files you
-     expect to touch, which other layers (L1 slops-saloon/, L2 omen/) this
-     might ripple into, verification plan, skills you'll invoke, skills
+   - Report: task (and where it came from — current_sprint.md item or direct
+     ask), the tier you are operating at and the assignment that grants it,
+     files you expect to touch, whether this belongs at L1 or should route to
+     omen/ instead, verification plan, skills you'll invoke, skills
      considered-but-N/A with reason. Wait for the founder's confirmation.
 
 3. BUILD — once the founder confirms.
 
 4. DONE & CLOSE
-   - Set Status: VERIFIED on the item in Direction/TODO.md and record its
-     Evidence: pointer (or state plainly why it is still open).
+   - Set Status: VERIFIED on the item in Direction/current_sprint.md and
+     record its Evidence: pointer (or state plainly why it is still open).
    - Log decisions in Direction/decision_log.md.
    - Write a dated handoff in Blueprints/handoffs/YYYY-MM-DD-[topic]-handoff.md
      per session-handoff.md.
@@ -114,10 +119,9 @@ SAFETY GATES (apply throughout — no tier and no assignment removes these)
   verification and your report states an accurate complete/incomplete verdict.
   Never push a "done" claim you haven't checked. There is no standing branch,
   commit, or push authority for any runtime.
-- Do not change app code, deploy posture, secrets, infrastructure, or package
-  files from L0 — that's L1/L2 territory.
-- Treat `Archive/`, `_imported/`, and old project copies as non-authoritative
-  unless the founder says otherwise.
+- Do not modify Omen source, tests, deploy, package files, SQL, Docker,
+  Stripe, or Supabase from L1 — that's L2 territory.
+- Do not recreate the retired nested `Omen/` folder.
 - Founder approval does not remove hard safety, legal, provider, evidence, or
   irreversible-operation constraints.
 ```

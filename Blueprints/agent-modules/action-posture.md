@@ -21,7 +21,7 @@ For everything else: act. Then report.
 **`git push` is allowed autonomously — no permission gate.** But push only after you've verified, not assumed, the actual state of the work:
 
 - Run the tests / checks that exist for what you touched. Don't push on the assumption something passes.
-- State a plain complete/incomplete verdict before pushing — per the omen `AGENT.md` End Of Task Report and `definition-of-done.md` evidence discipline. If a DoD gate is skipped, unmet, or blocked, say so in the commit message or handoff — never push work described as done that isn't.
+- State a plain complete/incomplete verdict before pushing — per Omen's `AGENTS.md` close-out contract and `definition-of-done.md` evidence discipline. If a DoD gate is skipped, unmet, or blocked, say so in the commit message or handoff — never push work described as done that isn't.
 - "Complete" and "incomplete" both push fine. Silently-inaccurate does not.
 
 **Do not announce capabilities you don't have.** Before claiming "I can't do X," check `RESOURCES_INDEX.md` — the skill, MCP, plugin, or connector may exist.

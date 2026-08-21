@@ -41,7 +41,7 @@ C:\Users\JDuve\dev\SLOPS\slops-saloon
 - Omen deployment.
 - Omen tests.
 - Omen product handoffs.
-- Omen `AGENT.md` or `CLAUDE.md`.
+- Omen `AGENTS.md` or its `CLAUDE.md` adapter.
 
 ## Product Boundary
 
