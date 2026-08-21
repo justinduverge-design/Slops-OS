@@ -31,6 +31,7 @@ Exit `0` = no P0. Exit `1` = at least one P0. Exit `2` = the gate itself failed.
 | `sprint-git-drift` | P0 | A sprint item marked "not pushed/merged" whose work is already on main. Handles squash merges by comparing commit subjects. |
 | `registry-drift` | P1 | A skill or agent on disk that no index knows about. |
 | `dangling-tree-ref` | P1 | A doc referencing a directory that has been deleted. |
+| `valor-brain` | P0 | An opted-in `valor-brain/v1` page whose metadata or required body sections violate the ratified contract. |
 
 ### Severity contract
 

@@ -22,6 +22,7 @@ import { readFileSync, existsSync, statSync, readdirSync } from 'node:fs';
 import { readdir } from 'node:fs/promises';
 import { join, relative, dirname, resolve, sep } from 'node:path';
 import { execFileSync } from 'node:child_process';
+import { scanValorBrainTree } from '../valor-brain/validate.mjs';
 
 const ROOT = resolve(process.argv.find(a => a.startsWith('--root='))?.slice(7) ?? '.');
 const JSON_OUT = process.argv.includes('--json');
@@ -39,7 +40,7 @@ const LAYERS = [
 // Baseline entry files each layer root must expose (DBS_INDEX.md contract).
 // `context.md` was removed from this set on 2026-08-05 — the L0 copy was a
 // legacy snapshot and Direction/facts-of-record.md is the real entry point.
-const BASELINE_FILES = ['DBS_INDEX.md', 'README.md', 'AGENTS.md', 'CLAUDE.md'];
+const BASELINE_FILES = ['DBS_INDEX.md', 'README.md', 'AGENTS.md', 'CLAUDE.md', 'RESOLVER.md'];
 
 // Directories that are never doctrine.
 const SKIP_DIRS = new Set([
@@ -357,6 +358,20 @@ function checkDanglingTreeRefs(files) {
   }
 }
 
+/** P0 — an opted-in Valor Brain page violates the ratified metadata/body contract. */
+async function checkValorBrain() {
+  const result = await scanValorBrainTree(ROOT, {
+    schemaPath: join(ROOT, 'Blueprints', 'specs', 'valor-brain-page.schema.json'),
+  });
+  for (const file of result.files) {
+    for (const issue of file.errors) {
+      add('P0', 'valor-brain', file.path,
+          `${issue.path} [${issue.code}] ${issue.message}`,
+          'only pages declaring metadata_profile: valor-brain/v1 are checked');
+    }
+  }
+}
+
 /* ------------------------------------------------------------------- run -- */
 
 const files = await walk(ROOT);
@@ -369,6 +384,7 @@ const CHECKS = {
   'sprint-git-drift':  () => checkSprintGitDrift(),
   'registry-drift':    () => checkRegistryDrift(),
   'dangling-tree-ref': f => checkDanglingTreeRefs(f),
+  'valor-brain':       () => checkValorBrain(),
 };
 
 if (ONLY && !CHECKS[ONLY]) {
