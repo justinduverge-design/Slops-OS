@@ -58,6 +58,7 @@ DBS_INDEX.md
 README.md
 AGENTS.md
 CLAUDE.md
+RESOLVER.md
 ```
 
 On this Windows workspace, lowercase `agents.md` / `claude.md` references resolve to the canonical `AGENTS.md` / `CLAUDE.md` files.
@@ -72,11 +73,12 @@ For division-level work:
 2. `DBS_INDEX.md`
 3. `AGENTS.md`
 4. `CLAUDE.md`
-5. `Direction/context.md`
-6. `Direction/roadmap.md`
-7. `Direction/decision_log.md`
-8. `Blueprints/README.md`
-9. `Blueprints/prompts/agent-build-loop-template.md` when setting up a future product loop
+5. `RESOLVER.md`
+6. `Direction/context.md`
+7. `Direction/roadmap.md`
+8. `Direction/decision_log.md`
+9. `Blueprints/README.md`
+10. `Blueprints/prompts/agent-build-loop-template.md` when setting up a future product loop
 
 For Omen product work:
 

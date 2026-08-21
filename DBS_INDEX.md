@@ -110,6 +110,7 @@ DBS_INDEX.md
 README.md
 AGENTS.md
 CLAUDE.md
+RESOLVER.md
 ```
 
 > **`context.md` removed from the required set 2026-08-05.** The L0 copy had
