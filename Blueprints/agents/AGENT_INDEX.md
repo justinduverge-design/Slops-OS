@@ -929,6 +929,64 @@ This is where authority actually lives. It is initialized **empty**.
 schema: active-trust-assignment/v1
 # Empty list = defaults only. No assignment = no authority above runtime default_tier.
 assignments:
+  - assignment_id: ATA-20260825-02
+    runtime: codex
+    session_capability_confirmed: true
+    tier: full-executor
+    scope_task_key: A7B-OwnedFootballDataPipelineImplementation
+    granted_by: founder
+    granted_at: 2026-08-25
+    expires: 2026-08-25T22:19:24Z
+    conditions:
+      - "Implement and prove only A7B Phase 3 staging-shadow behavior: dedicated non-production primary/witness roots, correction/source-loss/schema-drift drills, KVM1-role recovery, Pi-role hash/freshness/disk evidence, and alerts"
+      - "No production, publication, scoring enablement, database, SQL, dependency, secret, credential, remote-host mutation, service installation, timer, deployment, or ADP change"
+      - "Actual KVM1 or Command Center Pi provisioning requires a separate exact-host action approval"
+      - "Feature-branch git operations only; main-branch merge remains founder-only"
+    action_level_approvals_required:
+      - destructive
+      - production
+      - db-write
+      - deployment
+      - secrets
+
+  - assignment_id: ATA-20260825-01
+    runtime: codex
+    session_capability_confirmed: true
+    tier: full-executor
+    scope_task_key: A7B-OwnedFootballDataPipelineImplementation
+    granted_by: founder
+    granted_at: 2026-08-25
+    expires: 2026-08-25T22:03:41Z
+    conditions:
+      - "Implement only A7B Phase 2: canonical game/player/team identities, versioned offensive/kicker/DST facts, at least four varied historical replay weeks, and hard fail-closed quality gates"
+      - "No staging, infrastructure, timer, database, SQL, publication, provider credential, deployment, production, scoring enablement, or ADP change"
+      - "Feature-branch git operations only; main-branch merge remains founder-only"
+    action_level_approvals_required:
+      - destructive
+      - production
+      - db-write
+      - deployment
+      - secrets
+
+  - assignment_id: ATA-20260824-01
+    runtime: codex
+    session_capability_confirmed: true
+    tier: full-executor
+    scope_task_key: A7B-OwnedFootballDataPipelineImplementation
+    granted_by: founder
+    granted_at: 2026-08-24
+    expires: 2026-08-25T01:57:21Z
+    conditions:
+      - "Implement only A7B Phase 1: a local, non-production nflverse allowlisted raw snapshot/manifest collector and exact-manifest replay path"
+      - "No timer, production storage, database, SQL, dependency, provider credential, deployment, production data, scoring enablement, or ADP change"
+      - "Feature-branch git operations only; main-branch merge remains founder-only"
+    action_level_approvals_required:
+      - destructive
+      - production
+      - db-write
+      - deployment
+      - secrets
+
   - assignment_id: ATA-20260802-10
     runtime: codex
     session_capability_confirmed: true
