@@ -83,10 +83,42 @@ used `tap`, `driver`, `walk`, `per-step`, `accessibility tree`, `readiness`, `te
 **The rule as it should read: enumerate the vocabulary of the model you are removing, not the one
 word you noticed.** Write the list down before editing — here it would have been *tap, navigate,
 walk, step, driver, boot, install, tear down, accessibility tree, end state* — then sweep for every
-term and confirm each survivor is an explicit negation or dated history.
+term and **classify each hit**:
+
+| Class | Meaning | Action |
+|---|---|---|
+| **stale** | describes the removed model | rewrite or delete |
+| **retained** | true of the model you are keeping | **leave alone** |
+| **negation** | explicitly says the thing is not supported | leave alone |
+| **history** | changelog or prior-use recording the change | leave alone |
+
+**Classify; do not require every hit to be a negation.** Shared vocabulary is the trap: this very
+list contains `boot` and `install`, and both are *retained* here — the workflow really does boot an
+iPhone 16 simulator (`SKILL.md` lines 3 and 28), and the install boundary at line 95 is a real
+precondition. A literal "negate or delete every hit" sweep would have damaged correct instructions.
+
+That correction came from a **third** review of the same re-scope, on the rule written after the
+second. The first version of this lesson was itself too literal — which is the same failure it was
+written to prevent, one level up. Worth remembering when writing any rule of this shape: a sweep
+rule that cannot say "this hit is fine" will generate work and break things.
 
 **And check the sections that describe failure, not just the ones that describe success.** Failure
 Modes, Verification and Do-Not-Use encode the old model just as strongly as the recipe does, and are
 easier to skip because they read as generic caution rather than as contract.
 
 Two reviews were needed to finish one re-scope. The reviewer was right both times.
+
+
+## Third review — 2026-09-02, PR #23
+
+The reviewer read the *lesson* rather than the skill and found it over-triggering. See the table
+above. Three reviews, three valid findings, each on the fix for the one before:
+
+| Review | Found |
+|---|---|
+| PR #21 | capability treated as authority; missing `-R`; half-rewritten document |
+| PR #22 | the "half-rewritten" fix missed Failure Modes and Read-First |
+| PR #23 | the rule written to prevent that would misclassify shared vocabulary |
+
+None was a style preference. The pattern in all three is the same shape: **checking the thing
+changed rather than the thing changed away from**, and each fix inherited it from the last.

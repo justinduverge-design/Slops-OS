@@ -6,7 +6,7 @@ skill_type: wrapper
 layer: 0
 default_agent: Per Runtime Policy and an active trust assignment — dispatching bills a macOS runner and is an action-gated operation, not something a runtime may self-authorize. Local capture needs a macOS/SDK host.
 trigger: "sim drive | capture native screenshots | refresh visual evidence | add a screenshot scenario"
-version: 0.2.2
+version: 0.2.3
 upstream: Omen's own `.github/workflows/native-visual-evidence.yml` (macos-14 runner, Xcode 16.2, iPhone 16 simulator; Android emulator matrix). Locally: Xcode command-line tools (simctl, xcodebuild) + Android SDK (emulator, adb, gradle).
 owner: Justin
 ---
@@ -236,6 +236,10 @@ change, tool version changes, and any case where simulator evidence disagreed wi
 
 ## Changelog
 
+- 0.2.3 — a third review found the *lesson* written in 0.2.2 was itself over-literal: it required
+  every vocabulary hit in a re-scope sweep to be a negation or history, which would have
+  misclassified `boot` and `install` — both true of the retained model. The rule is now a four-way
+  classification (stale / retained / negation / history). No change to the skill's behaviour.
 - 0.2.2 — a second Codex review found the re-scope was *still* incomplete. Failure Modes had five
   driver-era entries, one of which ("capturing screenshots without the accessibility tree") made
   **every supported capture a failure** against the skill's own guidance, since v0.2.1 had just
