@@ -4,9 +4,9 @@ description: Capture deterministic native screenshots from the real iOS Simulato
 status: draft
 skill_type: wrapper
 layer: 0
-default_agent: Any runtime that can dispatch the workflow; local runs need a macOS/SDK host
-trigger: "sim drive | capture native screenshots | refresh visual evidence | add a screenshot scenario | native flow check"
-version: 0.2.0
+default_agent: Per Runtime Policy and an active trust assignment — dispatching bills a macOS runner and is an action-gated operation, not something a runtime may self-authorize. Local capture needs a macOS/SDK host.
+trigger: "sim drive | capture native screenshots | refresh visual evidence | add a screenshot scenario"
+version: 0.2.1
 upstream: Omen's own `.github/workflows/native-visual-evidence.yml` (macos-14 runner, Xcode 16.2, iPhone 16 simulator; Android emulator matrix). Locally: Xcode command-line tools (simctl, xcodebuild) + Android SDK (emulator, adb, gradle).
 owner: Justin
 ---
@@ -37,18 +37,19 @@ belongs, and what its evidence does and does not prove.
 **The `parked` status is lifted.** It was parked on "no macOS build host", which was wrong twice
 over: `native-visual-evidence.yml` and `ios-ci.yml` both run on `macos-14`, so CI capture has a host
 today. What is actually blocked is *local* capture on the founder's 2017 Intel MacBook Air — a
-different and much smaller problem, since the workflow is `workflow_dispatch` and can be run from
-anywhere.
+different and much smaller problem: the workflow is `workflow_dispatch`, so it does not need a
+local toolchain — but it does need the Omen repository selected (see below), and it does need
+authorization.
 
 **There is still no Playwright for native.** Locally the stack is `simctl`/`xcodebuild` and
 `emulator`/`adb`/Gradle. But the CI path needs none of that from the operator.
 
 ## When to Use
 
-- Run a native flow end to end on both platforms.
+- Refresh visual evidence for a registered scenario, on both platforms.
 - Capture screenshots feeding `slops-canvas-to-code` stage 3 or `slops-native-ui-audit`.
 - Regression-check a native screen before a release.
-- Reproduce a reported native failure in a controlled environment.
+- Add a screen to the scenario matrix so it has visual evidence at all.
 
 ## Do Not Use
 
@@ -62,20 +63,30 @@ anywhere.
 
 ## Required Inputs
 
-- The flow: a named sequence of steps with an expected end state.
-- Buildable app sources for the target platform.
-- The device targets. Default: a small iPhone, a current iPhone, and a mid-tier Android — mirroring
-  `mobile-first-qa-playbook`'s matrix so findings stay comparable.
-- Whether the flow needs a signed-in state, and how that state is established **without real
-  credentials** — a demo account or a seeded fixture.
+- The scenario slug, from the registered set, or the new one being added.
+- The active trust assignment authorizing a billed dispatch, or a founder who will dispatch it.
+- The branch to run against.
+- For a new scenario: the deterministic in-app fixture it renders, which must reach no session, no
+  network, and no real provider state.
 
 ## Preconditions and Dependencies
 
 **Preferred path — CI, no local toolchain needed.** `native-visual-evidence.yml` is
 `workflow_dispatch` only, deliberately: screenshots are for founder visual review, not every push,
-and macOS runners bill at a higher multiplier on private repos. Dispatch it from the Actions tab or
-with `gh workflow run native-visual-evidence.yml --ref <branch>`, then download the
-`visual-evidence-<platform>-<scenario-slug>` artifacts.
+and macOS runners bill at a higher multiplier on private repos. Dispatch it from the Actions tab, or:
+
+```bash
+# -R is REQUIRED. This skill lives in the L0 repo; the workflow lives in Omen, so gh
+# resolving the repo from the current git context finds nothing.
+gh workflow run native-visual-evidence.yml -R justinduverge-design/omen --ref <branch>
+```
+
+Then download the `visual-evidence-<platform>-<scenario-slug>` artifacts.
+
+**Dispatch is action-gated.** It bills a macOS runner, and the workflow is `workflow_dispatch` only
+for exactly that reason. **Having `gh` authenticated is capability, not authority** — confirm an
+active trust assignment covers this action, or ask the founder to dispatch. A runtime that can
+press the button is not thereby permitted to.
 
 **Local path — only when iterating faster than CI allows.** macOS with Xcode command-line tools and
 an iOS Simulator runtime; Android SDK platform-tools with an emulator image. `scripts/capture-
@@ -115,51 +126,80 @@ Pin exact tool versions in `upstream` at the first successful run.
 
 ## Read-First Procedure
 
-1. The flow definition.
+1. The scenario slug and, for a new one, the fixture it must render.
 2. The app's entry point and navigation, enough to know what to tap and what proves arrival.
 3. Existing UI test targets — **reuse an existing test harness before writing a new driver.**
-4. Any prior run's report, for the same flow.
+4. Any prior run's report and artifacts for the same scenario, to compare against.
 5. Not the whole app. A driver that knows the whole codebase is a driver nobody maintains.
 
 ## Process Recipe
 
-1. **Verify the environment.** If a dependency is missing, stop with the install command. Do not
-   partially run.
-2. **Boot the target** — `simctl boot` / `emulator -avd`, then wait for readiness rather than
-   sleeping a fixed interval.
-3. **Build and install** — `xcodebuild` for a simulator destination, `gradlew installDebug` for the
-   emulator. A build failure ends the run; it is a real finding, not a setup nuisance.
-4. **Establish state** without real credentials.
-5. **Walk the flow**, capturing a screenshot **after every step**, named by step and device, plus
-   the accessibility tree where available — it is what makes the capture useful to an audit rather
-   than only to a human eye.
-6. **Record failures precisely**: which step, what was expected, what appeared, and the screenshot.
-7. **Tear down**, so a later run starts clean and results are comparable.
-8. **Report.** Steps passed and failed, screenshot paths, environment and tool versions, and
-   explicitly what a simulator run cannot prove.
+### What this pipeline does, exactly
+
+**One scenario in, one screenshot per platform out.** The app is launched with
+`OMEN_SCREENSHOT_SCENARIO`, short-circuits straight into a deterministic fixture, and is captured.
+There is no tapping, no navigation, no sequence.
+
+**It does not walk flows.** See "Not supported yet" below — an earlier draft of this skill described
+a step-by-step driver, which the pipeline has never been.
+
+### Refreshing evidence for an existing scenario
+
+1. **Confirm authorization** for a billed dispatch — assignment or founder. Stop here if absent.
+2. **Dispatch** with `-R justinduverge-design/omen` and the branch under test.
+3. **Download** the `visual-evidence-<platform>-<scenario-slug>` artifacts. **Both platforms**; one
+   is half the evidence.
+4. **Compare** against the screen contract, if one exists (`Blueprints/specs/design/screen-contracts/`),
+   or against the artboard. A build failure ends the run and is a real finding, not a setup nuisance.
+5. **Report** scenario, platforms, branch, commit, artifact paths, and explicitly what a simulator
+   run cannot prove.
+
+### Adding a scenario
+
+1. Register the fixture in `ScreenshotScenarios.kt` and its iOS twin, with the **same slug on both**.
+2. Add the row to each matrix in the workflow.
+3. Dispatch once and confirm both artifacts land and render the intended state.
+4. Verify the fixture is genuinely deterministic — re-dispatch on the same commit and confirm the
+   screenshots are identical. **A fixture that varies between runs turns a regression check into a
+   screenshot of whatever happened that day.**
+
+### Not supported yet — do not present these as available
+
+- **Multi-step flow walking**, per-step capture, and end-state assertion. No automation exists.
+  A request to "run a flow end to end" is not served by this skill; say so rather than substituting
+  a fixed-scenario screenshot, which answers a different question.
+- **Accessibility-tree capture.** The workflow captures pixels only. `slops-native-ui-audit`'s
+  screen-reader axis therefore cannot pass on this evidence and stays `PARTIAL` — human traversal
+  is still required, as `F11` already assumes.
+
+Both are real gaps worth closing. Closing them means extending the workflow, and that is its own
+approved change — not something to imply in a skill description.
 
 ## Output Contract
 
-- Screenshots → `Solutions/deliverables/native-runs/YYYY-MM-DD-<flow>/<device>/<NN>-<step>.png`
-- Run report → `Direction/reviews/YYYY-MM-DD-<flow>-sim-run.md`
+- Screenshots → the workflow's own `visual-evidence-<platform>-<scenario-slug>` artifacts. Commit
+  them into the repo only when they are evidence for a specific closed item, under
+  `Solutions/deliverables/native-runs/YYYY-MM-DD-<scenario>/`; otherwise leave them as artifacts.
+- Run report → `Direction/reviews/YYYY-MM-DD-<scenario>-visual-evidence.md`
 
-The report states: flow, devices, tool versions, per-step result, screenshot paths, failures with
-evidence, and a standing note that **simulator evidence does not discharge a device gate.**
+The report states: scenario, both platforms, branch and commit, artifact paths, who authorized the
+dispatch, and a standing note that **simulator evidence does not discharge a device gate.**
 
 ## Verification
 
-- **Smoke test:** boot one simulator, install, capture one screenshot of the launch screen. If that
-  round-trips, the environment is real. Do this before writing any flow.
+- **Smoke test:** dispatch one registered scenario and confirm both platform artifacts land
+  non-empty. If that round-trips, the pipeline is real for you.
 - **Success signal:** the expected number of screenshots exist and are non-empty, and the final
-  screenshot shows the flow's expected end state. **A run that produced no screenshots is a failed
-  run, not a passed one** — silence is the failure mode a driver most easily hides.
-- Compare run to run on the same flow and device; an unexplained difference is a finding.
+  screenshot shows the scenario's intended state. **A run that produced no artifacts is a failed
+  run, not a passed one** — silence is the failure mode a capture pipeline most easily hides.
+- Compare run to run on the same scenario and commit; **any** difference is a finding, because the
+  fixture is supposed to be deterministic.
 
 ## DBS Routing
 
 Screenshots are finished outputs → `Solutions/deliverables/`. Run reports are reviews →
-`Direction/reviews/`. A defect found → `known_issues.md`. A flow worth keeping → committed
-alongside the skill so it is reproducible.
+`Direction/reviews/`. A defect found → `known_issues.md`. A scenario worth keeping → registered in
+`ScreenshotScenarios.kt` and its iOS twin, in the Omen repo, so it is reproducible.
 
 ## Agent and RBAC Rules
 
@@ -178,6 +218,12 @@ founder-executed and are not discharged by any run of this skill.
 - Letting tool versions drift unpinned, so a behaviour change looks like an app regression.
 - Appearing runnable when no macOS host exists.
 - Using real provider credentials to reach a signed-in state.
+- **Treating an authenticated `gh` as permission to dispatch.** It bills a macOS runner. Capability
+  is not authority — the rule SLOPS states everywhere, and one this skill's first draft broke.
+- **Omitting `-R justinduverge-design/omen`.** This skill lives in L0; the workflow lives in Omen.
+  Without the flag `gh` resolves the wrong repository and reports the workflow does not exist.
+- **Offering a fixed-scenario screenshot in answer to a flow request.** It answers a different
+  question, and looks like evidence.
 
 ## Prior Use Review Loop
 
@@ -186,5 +232,12 @@ change, tool version changes, and any case where simulator evidence disagreed wi
 
 ## Changelog
 
+- 0.2.1 — three findings from a Codex review on PR #21, all valid: `default_agent` treated
+  capability as authority for a billed dispatch; the `gh` example omitted `-R` and so could not
+  resolve the workflow from an L0 checkout; and the recipe, inputs, outputs and verification still
+  described a step-by-step flow driver the pipeline has never been. The last is the one that
+  mattered — a half-rewritten skill promised two different things at once.
+- 0.2.0 — re-scoped to govern Omen's existing `native-visual-evidence.yml` rather than propose a
+  driver; unparked (CI has a `macos-14` host; only local capture is blocked).
 - 0.1.0 — initial. Authored ahead of a macOS build host; not runnable until that founder decision
   is settled, and says so.
