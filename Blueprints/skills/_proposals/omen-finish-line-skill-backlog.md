@@ -1,6 +1,8 @@
 # Omen Finish-Line Skill Backlog
 
 **Date:** 2026-09-02
+**Revised:** 2026-09-02 — Skill 3 correction (the ESPN sheet *was* queued as `W1-A`);
+Skill 8 `intent.md` format resolved and renamed `slops-intent-capture`.
 **Status:** PROPOSAL — nothing built. Founder approval required per skill before authoring.
 **Requested by:** Justin
 **Scope:** Skills needed to finish Omen 1.0, derived from a live inspection of both repos.
@@ -123,21 +125,37 @@ whether it already covers step 1 before duplicating it.
   mattering; two headers are required (`x-fantasy-platform: espn-fantasy-web`,
   `x-fantasy-source: kona`); the JSON is relayed, never the credential — a **better**
   posture against `Blueprints/hard-prohibitions.md` #9 than the extension plan.
-- **`current_sprint.md`, `agent_inbox.md`, and `known_issues.md` contain no mention of
-  Candidate D, `WKWebView`, or the relay approach.** Confirmed by grep, 2026-09-02.
 - The recorded blocker was hardware, not design: *"the native iOS app still needs an
   actual build environment. Local Xcode is not viable (2017 Intel MacBook Air)."*
-  That is a CI question, and it stalled the whole approach.
+  That is a CI question, and it held the approach for weeks.
 - Five weeks later, `Direction/reviews/2026-08-15-espn-mobile-feasibility-memo.md`
-  re-litigated the **extension** path — including a dramatic same-day ⛔ SUPERSEDED
-  correction about Safari and `HttpOnly` — and concluded with desktop-handoff-through-beta.
-  **That memo appears not to know the July addendum exists.**
+  re-litigated the **extension** path — including a same-day ⛔ SUPERSEDED correction
+  about Safari and `HttpOnly` — and concluded with desktop-handoff-through-beta.
+  **That memo shows no awareness of the July addendum**, which had already made the
+  extension question moot for this purpose.
+- The work was finally queued on **2026-08-31** as `W1-A — ESPN in-app connect sheet
+  (iOS + Android)`, P0, after `W1-GATE` closed with the founder's accepted-risk
+  decision. Its scope is the July conclusion: consent screen, native web auth sheet
+  against ESPN's own sign-in, read the session, existing league-selection step, no new
+  backend. **What moved it was a beta failure**, recorded in `agent_inbox.md` as the
+  only confirmed beta failure on record — not the research that had established the
+  answer eight weeks earlier.
 - The July memo also flags a dangling citation
   (`2026-07-05-espn-community-api-and-extension-research.md`, referenced by both
   `current_sprint.md` and `agent_inbox.md`, file absent) that was never cleaned up.
 
-So: the best answer was found, spiked, and confirmed — and then lost, and then
-contradicted by later work that did not read it.
+So: the best answer was found, spiked, and confirmed in July — then sat unqueued while
+a later memo re-argued a settled question, and only entered the queue in late August
+when a beta user hit the missing flow. The research was right and the routing was slow.
+
+> **Correction, 2026-09-02.** An earlier version of this section claimed
+> `current_sprint.md`, `agent_inbox.md`, and `known_issues.md` contained *no* mention of
+> this work. That was false. The grep behind it searched for `Candidate D`, `WKWebView`,
+> and `relay` — none of which the sprint uses; the sprint calls it a "native web auth
+> sheet" under `W1-A`. The routing delay above is real and is what this skill addresses.
+> The claim that the work was never queued was not. Recorded here rather than silently
+> edited, because a search that proves a negative is only as good as its search terms —
+> which is itself a rule this skill should carry.
 
 **Scope.** Every research or review artifact must terminate in one of exactly three
 recorded outcomes: a queue item in `current_sprint.md` or `agent_inbox.md`, an entry in
@@ -215,15 +233,46 @@ degradation to demo mode.
 
 ---
 
-### 8. `slops-slc-intent`
+### 8. `slops-intent-capture` (was `slops-slc-intent`)
 
-**Simple / Lovable / Complete gate:** scope down to the smallest lovable cut, name what
-is deliberately excluded, define "complete" as an acceptance list.
+**Format resolved 2026-09-02.** Justin supplied the source: Anthropic's AI-Native SDLC
+Playbook, "Capture as intent.md"
+(`https://academy.claude.com/courses/ai-native-sdlc-playbook/capture-intent`; overview at
+`https://claude.com/blog/the-ai-native-sdlc-playbook`; a community implementation at
+`https://github.com/bashebr/ai-native-sdlc`). The Academy page is not fetchable from the
+build container — the egress proxy blocks that host — so **the authoring session must
+read it directly and reconcile against these notes** rather than treating this summary as
+the spec.
 
-**Open question, flagged rather than guessed.** Justin referenced a recently-released
-`intent.md` format. That specific format was **not verified** during this review. Before
-authoring, either get the pointer from Justin or research the actual release — do not
-approximate a published spec and present it as standard.
+**The practice.** Intent is captured **once, in the originator's own words**, as a
+version-controlled artifact the next stage acts on:
+
+1. The originator describes the problem conversationally — what they cannot do today,
+   who is affected, what better looks like, what is out of scope. No formal language.
+2. Claude asks the questions an analyst would: scope, users, constraints, success.
+3. Claude writes the result as `intent.md` **using the organization's template, encoded
+   as a skill** — which is exactly this item.
+4. The product owner reviews and corrects it **before** it is committed.
+
+**The artifact chain.** Plan commits `intent.md` → Design commits `spec.md` → Build
+commits `plan.md`, then code and tests → Test reports eval results → Deploy ships an
+authorized release → **Maintain writes its diagnosis back as a new `intent.md`**.
+
+**Why this merges with Skill 3.** That last link — diagnosis re-entering the chain as a
+committed intent — is the ESPN gap stated positively. Skill 3 says research must
+terminate in a committed artifact the next stage must act on; the playbook says the
+artifact is `intent.md`. **Build them as one skill, or as a pair sharing one template,
+rather than two competing doctrines.** Decide which at authoring time.
+
+**Keep from the original framing.** The Simple / Lovable / Complete gate — smallest
+lovable cut, explicit exclusions, "complete" as an acceptance list — as the section of
+the SLOPS template that constrains scope. SLC is how Omen fills the template; `intent.md`
+is the template.
+
+**Fit with existing doctrine.** SLOPS already has `planning-pass`, `design-md-author`,
+and `slops-prompt-generator` covering adjacent ground, and `definition-of-done.md` owns
+acceptance. Map those to the playbook's stages before authoring so this adds a missing
+first link rather than a fourth planning doctrine.
 
 ---
 
@@ -287,7 +336,14 @@ confident, irrelevant findings. Skills 4 and 5 are their native successors.
 
 ## Open decisions for the founder
 
-- Skill 3 first action: does the ESPN Candidate D relay approach become a sprint item now?
+- ~~Skill 3 first action: does the ESPN relay approach become a sprint item now?~~
+  **Resolved** — it was queued as `W1-A` on 2026-08-31, before this proposal was written.
+  See the correction in Skill 3.
+- ~~Skill 8: pointer to the real `intent.md` release, or authorize research time?~~
+  **Resolved 2026-09-02** — Anthropic's AI-Native SDLC Playbook. See Skill 8.
+- Skills 3 and 8: build as one skill, or as a pair sharing one `intent.md` template?
 - Skill 4 and the ESPN native path both need a macOS build environment. Cloud runner, or newer hardware?
-- Skill 8: pointer to the real `intent.md` release, or authorize research time?
 - Skill 11: re-scope the two web mobile skills, or retire them outright?
+- Sequencing, live as of 2026-09-02: NFL Week 1 is ~2026-09-10 and the season floor clears
+  2026-09-05. `F7` (Yahoo) and `F8` (Sleeper) are `READY` and gate Phase 4 alongside `F6`.
+  Does skill-building yield to the three-provider QA gate until the season opens?
