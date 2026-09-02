@@ -1,13 +1,13 @@
 ---
 name: slops-native-sim-drive
-description: Drive the real iOS Simulator and Android emulator to exercise a native app flow and capture per-step screenshots. Use to run a native flow end to end, capture screenshots for a design diff or an accessibility audit, or regression-check a native screen before release. This is the native counterpart to the Playwright-based web driver — Playwright cannot drive a native app, and slops-mobile-smoke is web-only. Produces a screenshot set and a run report; it does not judge design or accessibility.
+description: Capture deterministic native screenshots from the real iOS Simulator and Android emulator, for a design diff or an accessibility audit. In Omen this GOVERNS AN EXISTING PIPELINE — `.github/workflows/native-visual-evidence.yml` already builds, boots, launches with a scenario argument and uploads per-scenario artifacts on macOS runners; this skill says when to run it, how to add a scenario, and where the output belongs. Use to refresh visual evidence, add a screen to the matrix, or produce input for slops-canvas-to-code stage 3. Playwright cannot drive a native app and slops-mobile-smoke is web-only. Produces screenshots and a run report; it does not judge design or accessibility.
 status: draft
 skill_type: wrapper
 layer: 0
-default_agent: Codex or Claude with a macOS/SDK host; the founder supplies the build environment
-trigger: "sim drive | run the app in the simulator | android emulator run | capture native screenshots | native flow check"
-version: 0.1.0
-upstream: Xcode command-line tools (simctl, xcodebuild) + Android SDK (emulator, adb, gradle); Maestro optional as the flow layer. Pin exact versions at first successful run — see Preconditions.
+default_agent: Any runtime that can dispatch the workflow; local runs need a macOS/SDK host
+trigger: "sim drive | capture native screenshots | refresh visual evidence | add a screenshot scenario | native flow check"
+version: 0.2.0
+upstream: Omen's own `.github/workflows/native-visual-evidence.yml` (macos-14 runner, Xcode 16.2, iPhone 16 simulator; Android emulator matrix). Locally: Xcode command-line tools (simctl, xcodebuild) + Android SDK (emulator, adb, gradle).
 owner: Justin
 ---
 
@@ -21,13 +21,27 @@ viewports; `mobile-first-qa-playbook` targets iOS Safari and Android Chrome. Mea
 apps have real test targets — Android unit and instrumented tests, iOS `OmenIOSTests` and
 `OmenIOSUITests` — **and no skill drives any of them.**
 
-This is the missing native driver: boot a simulator or emulator, install a build, walk a flow, and
-capture a screenshot at every step.
+**Corrected 2026-09-02, and the correction matters.** The first version of this skill was written
+as if native screenshot capture did not exist and had to be built. **It already exists in Omen**, is
+better than what was proposed, and had been running for some time:
+`.github/workflows/native-visual-evidence.yml` selects Xcode 16.2 on a `macos-14` runner, builds
+`OmenIOS.app` unsigned for the simulator, boots an iPhone 16, launches the app with an
+`OMEN_SCREENSHOT_SCENARIO` argument that short-circuits into a deterministic in-app fixture — no
+session, no network, no fabricated provider state — captures the screen and uploads it as a named
+artifact, matrixed across both platforms.
 
-**Set expectations honestly: there is no Playwright for native.** The stack is `simctl` and
-`xcodebuild` on iOS, `emulator`, `adb`, and Gradle on Android, with Maestro as an optional
-cross-platform flow layer. That is heavier and less ergonomic than a browser driver, and pretending
-otherwise leads to a skill that cannot be run.
+That is the loop this skill described building. So the skill's job is not to build a driver; it is
+to **govern the pipeline that exists**: when to run it, how to add a screen to it, where its output
+belongs, and what its evidence does and does not prove.
+
+**The `parked` status is lifted.** It was parked on "no macOS build host", which was wrong twice
+over: `native-visual-evidence.yml` and `ios-ci.yml` both run on `macos-14`, so CI capture has a host
+today. What is actually blocked is *local* capture on the founder's 2017 Intel MacBook Air — a
+different and much smaller problem, since the workflow is `workflow_dispatch` and can be run from
+anywhere.
+
+**There is still no Playwright for native.** Locally the stack is `simctl`/`xcodebuild` and
+`emulator`/`adb`/Gradle. But the CI path needs none of that from the operator.
 
 ## When to Use
 
@@ -57,26 +71,45 @@ otherwise leads to a skill that cannot be run.
 
 ## Preconditions and Dependencies
 
-**This skill cannot run in a Linux CI container or the agent's own environment.** It needs:
+**Preferred path — CI, no local toolchain needed.** `native-visual-evidence.yml` is
+`workflow_dispatch` only, deliberately: screenshots are for founder visual review, not every push,
+and macOS runners bill at a higher multiplier on private repos. Dispatch it from the Actions tab or
+with `gh workflow run native-visual-evidence.yml --ref <branch>`, then download the
+`visual-evidence-<platform>-<scenario-slug>` artifacts.
 
-- **iOS:** macOS, Xcode with command-line tools, at least one iOS Simulator runtime.
-- **Android:** Android SDK with platform-tools, an emulator image, a working Gradle build.
-- **Optional:** Maestro, for one flow definition across both platforms.
+**Local path — only when iterating faster than CI allows.** macOS with Xcode command-line tools and
+an iOS Simulator runtime; Android SDK platform-tools with an emulator image. `scripts/capture-
+screenshot-scenario.sh` exists in the repo for this.
 
-**Install boundary.** Detect and stop; never install. Xcode, SDK components, and Maestro are all
-founder-installed.
+**Install boundary.** Detect and stop; never install.
 
 ```bash
-xcrun simctl list devices 2>/dev/null | head -1 || echo "No iOS Simulator. Ask Justin to install Xcode + command line tools."
-adb version 2>/dev/null || echo "No Android platform-tools. Ask Justin to install the Android SDK."
-maestro --version 2>/dev/null || echo "Maestro not present (optional). Install: curl -Ls https://get.maestro.mobile.dev | bash"
+xcrun simctl list devices 2>/dev/null | head -1 || echo "No iOS Simulator locally — dispatch native-visual-evidence.yml instead."
+adb version 2>/dev/null || echo "No Android platform-tools locally — dispatch the workflow instead."
 ```
 
-**Known environment constraint, from the record:** local Xcode was found not viable on the
-founder's 2017 Intel MacBook Air, which is why the native ESPN path stalled on build environment
-rather than design. **A macOS build host is an open founder decision** (cloud runner vs. newer
-hardware). Until it is settled, this skill is authored but not runnable, and it must say so rather
-than appear available.
+**The local constraint is real but narrow.** Xcode is not viable on the founder's 2017 Intel
+MacBook Air. That blocks *local* capture only; the CI path has a `macos-14` host today and is the
+route this skill points at first. Do not restate the old "no macOS build host" framing — it was
+wrong, and it parked this skill for no reason.
+
+## Adding a screen to the matrix
+
+The workflow's own header states the contract, and it is deliberately cheap:
+
+1. Add one entry to `mobile/android/app/src/main/kotlin/com/slopssaloon/omen/app/screenshot/ScreenshotScenarios.kt` and its iOS twin.
+2. Add one row to each platform matrix in `native-visual-evidence.yml`.
+3. Nothing else changes.
+
+Scenario slugs are platform-agnostic so an iOS/Android pair shares a suffix — that pairing is what
+makes a parity check possible, so never name one side differently.
+
+**The fixture must stay deterministic.** A scenario that reaches a session, the network, or real
+provider state produces evidence that cannot be compared across runs, and quietly turns a
+regression check into a screenshot of whatever happened that day.
+
+**Registered as of 2026-09-02:** `command-center.demo-connected`, `command-center.disconnected`,
+`omen.demo`, `omen.disconnected`.
 
 Pin exact tool versions in `upstream` at the first successful run.
 
