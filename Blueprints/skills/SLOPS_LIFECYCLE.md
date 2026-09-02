@@ -211,7 +211,7 @@ All are `draft` (or `parked`) until first real use; none is authoritative yet.
 | 3 — Build | `slops-figma-to-native` | skill | draft | Figma frame → same contract shape as the canvas path. Uses the connected Figma MCP server, previously unused by any skill. |
 | 6 — Quality | `slops-api-hardening` | skill | draft | Seven-axis per-route score for quality attributes correctness tests miss. Distinct from `slops-code-review`, which hunts bugs. |
 | 7 — Design QA | `slops-native-ui-audit` | skill | draft | **Native** screen audit. `slops-ui-ux-audit` and `mobile-first-qa-playbook` remain web-only. |
-| 8 — Verify | `slops-native-sim-drive` | skill | parked | Blocked on a macOS build host — a founder decision that also blocks the native ESPN path. Do not mark active until its smoke test passes on a real host. |
+| 8 — Verify | `slops-native-sim-drive` | skill | draft | **Corrected 2026-09-02.** Registered `parked` on a macOS-host blocker that does not exist: Omen's `native-visual-evidence.yml` and `ios-ci.yml` both run on `macos-14`, and the capture pipeline was already built. The skill now governs that pipeline instead of proposing one. Only *local* capture is blocked (2017 Intel MacBook Air). |
 | — Maintenance | `slops-agent-docs-refresh` | skill | draft | Rewrites the agent docs and kickoff prompts as one pass, with a drift check. |
 
 ### Re-scope, same date
@@ -220,6 +220,22 @@ All are `draft` (or `parked`) until first real use; none is authoritative yet.
 frontmatter, in a body banner, and in `SKILL_ROUTING.md`. Both were written before the native pivot
 and kept being routed to native tasks, where they returned confident, irrelevant findings. Their
 native successors are `slops-native-sim-drive` and `slops-native-ui-audit`.
+
+### Correction — 2026-09-02, same day
+
+**One skill in this wave was authored against a gap that was not there.**
+`slops-native-sim-drive` described building a native screenshot driver. Omen already had one:
+`.github/workflows/native-visual-evidence.yml`, running the identical loop on a `macos-14` runner
+with deterministic in-app fixtures and per-scenario artifact upload.
+
+The wave note below claims the native side had "no skill driving any of it". That is true and
+irrelevant — **the capability existed without a skill.** The search that produced the claim looked
+for `SKILL.md` files and grepped documentation for `maestro|appium|detox|xcuitest`; neither could
+have found a workflow implementing the same thing under different names.
+
+**Rule for the next wave: before recording a capability gap, read `.github/workflows/` and
+`scripts/`.** A missing skill is not a missing capability, and a skill authored over working
+machinery is worse than no skill — it invites a second implementation.
 
 ### The gap this wave closes
 

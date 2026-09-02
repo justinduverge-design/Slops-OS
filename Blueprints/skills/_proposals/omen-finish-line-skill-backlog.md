@@ -174,6 +174,19 @@ this charter. Read it first and extend rather than duplicate.
 
 ### 4. `slops-native-sim-drive`
 
+> **Corrected 2026-09-02.** This entry, and the inventory section above, claimed the native side
+> had no tooling and that a simulator driver had to be built. **Omen already had one** —
+> `.github/workflows/native-visual-evidence.yml` builds, boots an iPhone 16 simulator, launches with
+> a deterministic scenario argument and uploads per-scenario artifacts on a `macos-14` runner. The
+> skill was re-scoped to govern that pipeline and unparked; `ios-ci.yml` runs on `macos-14` too, so
+> the "no macOS build host" blocker recorded below applies only to *local* capture.
+>
+> The claim came from searching for `SKILL.md` files and grepping docs for
+> `maestro|appium|detox|xcuitest`. Neither could have found a GitHub Actions workflow doing the same
+> job under different names. **Absence of a skill is not absence of the capability** — read
+> `.github/workflows/` and `scripts/` before recording a gap.
+
+
 **The Playwright-for-iOS-simulator ask.** There is no Playwright for native; the honest
 stack is `xcrun simctl` + `xcodebuild test -destination 'platform=iOS Simulator'` for
 iOS, and `emulator` + `adb` + `gradlew connectedAndroidTest` for Android, with
@@ -342,7 +355,11 @@ confident, irrelevant findings. Skills 4 and 5 are their native successors.
 - ~~Skill 8: pointer to the real `intent.md` release, or authorize research time?~~
   **Resolved 2026-09-02** — Anthropic's AI-Native SDLC Playbook. See Skill 8.
 - Skills 3 and 8: build as one skill, or as a pair sharing one `intent.md` template?
-- Skill 4 and the ESPN native path both need a macOS build environment. Cloud runner, or newer hardware?
+- ~~Skill 4 and the ESPN native path both need a macOS build environment. Cloud runner, or newer hardware?~~
+  **Partly resolved 2026-09-02** — CI already runs on `macos-14` (`native-visual-evidence.yml`,
+  `ios-ci.yml`). Remaining question is narrower: is a *local* macOS environment worth buying, or is
+  dispatching CI enough? The native ESPN path needs a build environment for iteration, not just
+  capture, so it may still want one.
 - Skill 11: re-scope the two web mobile skills, or retire them outright?
 - Sequencing, live as of 2026-09-02: NFL Week 1 is ~2026-09-10 and the season floor clears
   2026-09-05. `F7` (Yahoo) and `F8` (Sleeper) are `READY` and gate Phase 4 alongside `F6`.
