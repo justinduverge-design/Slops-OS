@@ -34,3 +34,31 @@ in the omen repo.
 - The device matrix deliberately mirrors `mobile-first-qa-playbook` so native and web
   findings stay comparable while both exist.
 - Screenshot naming is ordered (`NN-step`) so a directory listing reads as the flow.
+
+
+## Review correction — 2026-09-02, PR #21
+
+A Codex review bot raised three P2 findings on the re-scope commit. **All three were valid and all
+three were fixed**; they are recorded because the third names a failure mode worth generalising.
+
+1. **`default_agent` treated capability as authority.** It read "any runtime that can dispatch the
+   workflow" — for an operation that bills a macOS runner. SLOPS doctrine says capability grants no
+   authority, and this skill's own repo states it in `AGENTS.md`. Corrected to require an active
+   trust assignment or a founder dispatch.
+2. **The `gh` example omitted `-R justinduverge-design/omen`.** The skill lives in L0, the workflow
+   lives in Omen; `gh` resolving the repo from the current git context finds nothing. The draft also
+   claimed the workflow "can be run from anywhere", which was wrong as written.
+3. **The document promised two different things.** The Purpose and Preconditions were re-scoped to
+   fixed-scenario capture, but the Process Recipe, Required Inputs, Output Contract and Verification
+   still described walking a named flow, capturing per-step screenshots and accessibility trees, and
+   asserting an end state — none of which the pipeline does.
+
+**The generalisable lesson: a partial rewrite is worse than no rewrite.** Re-scoping the front of a
+skill and leaving the back intact produces a document that reads as authoritative in both directions,
+and the contradiction is invisible to the author who just changed the top. **When re-scoping, grep
+the whole file for the old vocabulary before committing** — here, `flow` appeared 21 times and only
+the first few had been reconciled.
+
+Also worth keeping: multi-step flow driving and accessibility-tree capture are now named explicitly
+as *not supported*, rather than implied by leftover prose. An unsupported capability that a skill
+appears to offer is how an agent produces evidence that answers the wrong question.
