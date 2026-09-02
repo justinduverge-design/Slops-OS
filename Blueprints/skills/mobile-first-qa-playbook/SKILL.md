@@ -1,16 +1,21 @@
 ---
 name: mobile-first-qa-playbook
-description: Phone-first QA sweep — iOS Safari + Android Chrome viewport matrix, touch targets, safe-area insets, keyboard avoidance, scroll lock, share sheet, motion-reduce. Severity-ranked findings. Closes Omen launch gap #8 (mobile blocker).
+description: **WEB APP ONLY — the device matrix is iOS Safari and Android Chrome, i.e. the web app in a mobile browser, not the native apps; for native use `slops-native-ui-audit`.** Phone-first QA sweep — iOS Safari + Android Chrome viewport matrix, touch targets, safe-area insets, keyboard avoidance, scroll lock, share sheet, motion-reduce. Severity-ranked findings. Closes Omen launch gap #8 (mobile blocker).
 status: active
 skill_type: simple
 layer: 0
 default_agent: Claude (audit), Codex (fixes via the loop)
 trigger: "mobile QA | iOS Safari sweep | mobile audit | responsive check | pre-launch mobile pass"
-version: 0.1.0
+version: 0.2.0
 owner: Justin
 ---
 
 # Mobile-First QA Playbook
+
+> **Scope, corrected 2026-09-02: this playbook is web-app only.** Its device matrix is iOS Safari
+> and Android Chrome — the *web app* in a mobile browser. Native SwiftUI and Compose screens have
+> different accessibility APIs, different units (points, not pixels), and different design
+> authorities; use `slops-native-ui-audit` for those. Written before the native pivot.
 
 ## When to Use
 Before launch, after any layout-touching change, and as a recurring pre-deploy gate for any consumer Slops product. Fantasy sports is phone-first; this audit is non-optional for Slops Saloon products.

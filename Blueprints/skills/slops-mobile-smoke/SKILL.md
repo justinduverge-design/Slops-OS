@@ -1,17 +1,24 @@
 ---
 name: slops-mobile-smoke
-description: Automated phone-shape smoke. Drives the run-slops-saloon driver at iPhone viewports (SE / 15 Pro / 15 Pro Max) and reports machine-checkable violations from mobile-first-qa-playbook — touch targets <44px, horizontal overflow at 375/390/430px, missing safe-area-inset on fixed elements, viewport meta missing viewport-fit=cover, inputs with computed font-size <16px, JS errors, missing routes. Severity-ranked output (P0/P1/P2). Audit only; never replaces real-device QA.
+description: **WEB APP ONLY — this drives a desktop browser at phone viewports and cannot test the native iOS or Android apps; for those use `slops-native-sim-drive` and `slops-native-ui-audit`.** Automated phone-shape smoke. Drives the run-slops-saloon driver at iPhone viewports (SE / 15 Pro / 15 Pro Max) and reports machine-checkable violations from mobile-first-qa-playbook — touch targets <44px, horizontal overflow at 375/390/430px, missing safe-area-inset on fixed elements, viewport meta missing viewport-fit=cover, inputs with computed font-size <16px, JS errors, missing routes. Severity-ranked output (P0/P1/P2). Audit only; never replaces real-device QA.
 status: active
 skill_type: wrapper
 layer: 0
 default_agent: Claude (review findings), Codex (extend driver + fixes via loop)
 trigger: "mobile smoke | iPhone smoke | phone-shape smoke | pre-deploy mobile check"
-version: 0.1.0
+version: 0.2.0
 upstream: playwright-core@1.49.x (already vendored in slops-saloon/omen/node_modules)
 owner: Justin
 ---
 
 # Slops Mobile Smoke
+
+> **Scope, corrected 2026-09-02: this skill is web-app only.** It drives `playwright-core`
+> against the web app at phone viewports. It does not launch, install, or touch the native iOS or
+> Android apps, and a pass here says nothing about them. Omen's primary surface is native; route
+> native work to `slops-native-sim-drive` (drive a simulator/emulator) and `slops-native-ui-audit`
+> (judge a native screen). This skill was written before the native pivot and kept being routed to
+> native tasks, where it returned confident, irrelevant findings.
 
 ## Purpose
 

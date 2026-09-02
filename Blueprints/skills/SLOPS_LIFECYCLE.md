@@ -196,3 +196,34 @@ Restoring either to `active` requires all five steps, in order:
 3. Test the gate.
 4. Record evidence.
 5. Only then restore ACTIVE.
+
+## Skills wave — 2026-09-02
+
+Nine skills registered from `_proposals/omen-finish-line-skill-backlog.md`, plus one re-scope.
+All are `draft` (or `parked`) until first real use; none is authoritative yet.
+
+| Phase | Skill | Type | Status | Note |
+|---|---|---|---|---|
+| 1 — Frame | `slops-intent-capture` | skill | draft | **New first link in the chain.** Idea / beta failure / research conclusion → committed `intent.md` → terminal routing state. Implements the AI-Native SDLC capture-intent stage; carries the SLC scope gate. Sits *before* `planning-pass`. |
+| 1 — Frame | `slops-provider-resilience` | skill | draft | Ten-row failure matrix per provider. Complements `pre-build-research` (choosing a source) by covering what happens once you depend on it. |
+| 2 — Plan | `slops-founder-admin-runbook` | skill | draft | Administrative critical path for stores and provider portals. Structure only — requirements are researched live under a Freshness Contract. |
+| 3 — Build | `slops-canvas-to-code` | skill | draft | Artboard → screen contract → build prompt with per-element checklist → diff. Removes the ambiguity that caused rebuild loops. |
+| 3 — Build | `slops-figma-to-native` | skill | draft | Figma frame → same contract shape as the canvas path. Uses the connected Figma MCP server, previously unused by any skill. |
+| 6 — Quality | `slops-api-hardening` | skill | draft | Seven-axis per-route score for quality attributes correctness tests miss. Distinct from `slops-code-review`, which hunts bugs. |
+| 7 — Design QA | `slops-native-ui-audit` | skill | draft | **Native** screen audit. `slops-ui-ux-audit` and `mobile-first-qa-playbook` remain web-only. |
+| 8 — Verify | `slops-native-sim-drive` | skill | parked | Blocked on a macOS build host — a founder decision that also blocks the native ESPN path. Do not mark active until its smoke test passes on a real host. |
+| — Maintenance | `slops-agent-docs-refresh` | skill | draft | Rewrites the agent docs and kickoff prompts as one pass, with a drift check. |
+
+### Re-scope, same date
+
+`slops-mobile-smoke` and `mobile-first-qa-playbook` are **web-app only** and now say so in their
+frontmatter, in a body banner, and in `SKILL_ROUTING.md`. Both were written before the native pivot
+and kept being routed to native tasks, where they returned confident, irrelevant findings. Their
+native successors are `slops-native-sim-drive` and `slops-native-ui-audit`.
+
+### The gap this wave closes
+
+The lifecycle previously started at Frame with research, and research had no required terminal
+state — a conclusion could be reached and filed without ever becoming work. `slops-intent-capture`
+adds that terminal state. The Maintain phase now loops back to it, so a diagnosis re-enters the
+chain as an intent instead of stopping in `Direction/reviews/`.
