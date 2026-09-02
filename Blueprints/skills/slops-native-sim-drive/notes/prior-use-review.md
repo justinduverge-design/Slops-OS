@@ -62,3 +62,31 @@ the first few had been reconciled.
 Also worth keeping: multi-step flow driving and accessibility-tree capture are now named explicitly
 as *not supported*, rather than implied by leftover prose. An unsupported capability that a skill
 appears to offer is how an agent produces evidence that answers the wrong question.
+
+
+## Second review correction — 2026-09-02, PR #22
+
+The v0.2.1 fix for "the document promises two different things" **did not finish the job**, and a
+second review caught it. Failure Modes still carried five driver-era entries and Read-First still
+told the reader to learn the app's navigation and avoid "writing a new driver".
+
+One of those was actively harmful: *"capturing screenshots without the accessibility tree"* was
+listed as a failure mode, while the same commit declared accessibility-tree capture unavailable.
+**Every supported capture violated the skill's own guidance.**
+
+### Sharpening the lesson, because the first version of it was not enough
+
+v0.2.1's prior-use note said *"grep the whole file for the old vocabulary before committing a
+re-scope."* Then that is what was done — for the word `flow`, and only that word. The stale content
+used `tap`, `driver`, `walk`, `per-step`, `accessibility tree`, `readiness`, `tear down`.
+
+**The rule as it should read: enumerate the vocabulary of the model you are removing, not the one
+word you noticed.** Write the list down before editing — here it would have been *tap, navigate,
+walk, step, driver, boot, install, tear down, accessibility tree, end state* — then sweep for every
+term and confirm each survivor is an explicit negation or dated history.
+
+**And check the sections that describe failure, not just the ones that describe success.** Failure
+Modes, Verification and Do-Not-Use encode the old model just as strongly as the recipe does, and are
+easier to skip because they read as generic caution rather than as contract.
+
+Two reviews were needed to finish one re-scope. The reviewer was right both times.

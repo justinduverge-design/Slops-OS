@@ -6,7 +6,7 @@ skill_type: wrapper
 layer: 0
 default_agent: Per Runtime Policy and an active trust assignment — dispatching bills a macOS runner and is an action-gated operation, not something a runtime may self-authorize. Local capture needs a macOS/SDK host.
 trigger: "sim drive | capture native screenshots | refresh visual evidence | add a screenshot scenario"
-version: 0.2.1
+version: 0.2.2
 upstream: Omen's own `.github/workflows/native-visual-evidence.yml` (macos-14 runner, Xcode 16.2, iPhone 16 simulator; Android emulator matrix). Locally: Xcode command-line tools (simctl, xcodebuild) + Android SDK (emulator, adb, gradle).
 owner: Justin
 ---
@@ -127,10 +127,14 @@ Pin exact tool versions in `upstream` at the first successful run.
 ## Read-First Procedure
 
 1. The scenario slug and, for a new one, the fixture it must render.
-2. The app's entry point and navigation, enough to know what to tap and what proves arrival.
-3. Existing UI test targets — **reuse an existing test harness before writing a new driver.**
+2. `.github/workflows/native-visual-evidence.yml` — its header states the contract and the cost note.
+3. `ScreenshotScenarios.kt` and its iOS twin, to see what is registered and how.
 4. Any prior run's report and artifacts for the same scenario, to compare against.
-5. Not the whole app. A driver that knows the whole codebase is a driver nobody maintains.
+5. The screen contract for the screen, if one exists, under
+   `Blueprints/specs/design/screen-contracts/` in the Omen repo.
+
+**Not the app's navigation.** Nothing here taps, navigates, or asserts arrival — the fixture renders
+the state directly. Reading the app's flow would be reading for a driver that does not exist.
 
 ## Process Recipe
 
@@ -211,12 +215,12 @@ founder-executed and are not discharged by any run of this skill.
 
 - **Reporting a simulator pass as though it clears a device gate.** The most consequential failure —
   it converts a real gate into a false one.
-- Sleeping a fixed interval instead of waiting for readiness, producing flaky runs blamed on the app.
-- Treating a build failure as environment noise.
-- Capturing screenshots without the accessibility tree, leaving the output useful only to a human.
-- Writing a new driver where a UI test target already exists.
-- Letting tool versions drift unpinned, so a behaviour change looks like an app regression.
-- Appearing runnable when no macOS host exists.
+- Treating a build failure as environment noise. It is a real finding.
+- **Capturing one platform and calling it evidence.** Paired slugs exist so parity is checkable;
+  half the pair is half the evidence.
+- **A fixture that varies between runs.** It turns a regression check into a screenshot of whatever
+  happened that day. Re-dispatch on the same commit to prove it does not.
+- A fixture that reaches a session, the network, or real provider state.
 - Using real provider credentials to reach a signed-in state.
 - **Treating an authenticated `gh` as permission to dispatch.** It bills a macOS runner. Capability
   is not authority — the rule SLOPS states everywhere, and one this skill's first draft broke.
@@ -232,6 +236,12 @@ change, tool version changes, and any case where simulator evidence disagreed wi
 
 ## Changelog
 
+- 0.2.2 — a second Codex review found the re-scope was *still* incomplete. Failure Modes had five
+  driver-era entries, one of which ("capturing screenshots without the accessibility tree") made
+  **every supported capture a failure** against the skill's own guidance, since v0.2.1 had just
+  declared accessibility-tree capture unavailable. Read-First still told the reader to learn the
+  app's navigation and to avoid "writing a new driver". Both sections reconciled; every surviving
+  mention of tapping, walking or driving is now an explicit negation.
 - 0.2.1 — three findings from a Codex review on PR #21, all valid: `default_agent` treated
   capability as authority for a billed dispatch; the `gh` example omitted `-R` and so could not
   resolve the workflow from an L0 checkout; and the recipe, inputs, outputs and verification still
