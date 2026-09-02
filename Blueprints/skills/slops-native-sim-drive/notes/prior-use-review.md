@@ -62,3 +62,63 @@ the first few had been reconciled.
 Also worth keeping: multi-step flow driving and accessibility-tree capture are now named explicitly
 as *not supported*, rather than implied by leftover prose. An unsupported capability that a skill
 appears to offer is how an agent produces evidence that answers the wrong question.
+
+
+## Second review correction — 2026-09-02, PR #22
+
+The v0.2.1 fix for "the document promises two different things" **did not finish the job**, and a
+second review caught it. Failure Modes still carried five driver-era entries and Read-First still
+told the reader to learn the app's navigation and avoid "writing a new driver".
+
+One of those was actively harmful: *"capturing screenshots without the accessibility tree"* was
+listed as a failure mode, while the same commit declared accessibility-tree capture unavailable.
+**Every supported capture violated the skill's own guidance.**
+
+### Sharpening the lesson, because the first version of it was not enough
+
+v0.2.1's prior-use note said *"grep the whole file for the old vocabulary before committing a
+re-scope."* Then that is what was done — for the word `flow`, and only that word. The stale content
+used `tap`, `driver`, `walk`, `per-step`, `accessibility tree`, `readiness`, `tear down`.
+
+**The rule as it should read: enumerate the vocabulary of the model you are removing, not the one
+word you noticed.** Write the list down before editing — here it would have been *tap, navigate,
+walk, step, driver, boot, install, tear down, accessibility tree, end state* — then sweep for every
+term and **classify each hit**:
+
+| Class | Meaning | Action |
+|---|---|---|
+| **stale** | describes the removed model | rewrite or delete |
+| **retained** | true of the model you are keeping | **leave alone** |
+| **negation** | explicitly says the thing is not supported | leave alone |
+| **history** | changelog or prior-use recording the change | leave alone |
+
+**Classify; do not require every hit to be a negation.** Shared vocabulary is the trap: this very
+list contains `boot` and `install`, and both are *retained* here — the workflow really does boot an
+iPhone 16 simulator (`SKILL.md` lines 3 and 28), and the install boundary at line 95 is a real
+precondition. A literal "negate or delete every hit" sweep would have damaged correct instructions.
+
+That correction came from a **third** review of the same re-scope, on the rule written after the
+second. The first version of this lesson was itself too literal — which is the same failure it was
+written to prevent, one level up. Worth remembering when writing any rule of this shape: a sweep
+rule that cannot say "this hit is fine" will generate work and break things.
+
+**And check the sections that describe failure, not just the ones that describe success.** Failure
+Modes, Verification and Do-Not-Use encode the old model just as strongly as the recipe does, and are
+easier to skip because they read as generic caution rather than as contract.
+
+Two reviews were needed to finish one re-scope. The reviewer was right both times.
+
+
+## Third review — 2026-09-02, PR #23
+
+The reviewer read the *lesson* rather than the skill and found it over-triggering. See the table
+above. Three reviews, three valid findings, each on the fix for the one before:
+
+| Review | Found |
+|---|---|
+| PR #21 | capability treated as authority; missing `-R`; half-rewritten document |
+| PR #22 | the "half-rewritten" fix missed Failure Modes and Read-First |
+| PR #23 | the rule written to prevent that would misclassify shared vocabulary |
+
+None was a style preference. The pattern in all three is the same shape: **checking the thing
+changed rather than the thing changed away from**, and each fix inherited it from the last.
