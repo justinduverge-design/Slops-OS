@@ -1,12 +1,12 @@
 ---
 name: slops-native-sim-drive
 description: Capture deterministic native screenshots from the real iOS Simulator and Android emulator, for a design diff or an accessibility audit. In Omen this GOVERNS TWO EXISTING ROUTES — `scripts/capture-screen-batch.sh` on the founder's Mac (routine, free, both platforms and both themes in one command) and `.github/workflows/native-visual-evidence.yml` on macOS runners (billed, action-gated, clean-room parity); this skill says which route to use, when to run it, how to add a scenario, and where the output belongs. Use to refresh visual evidence, add a screen to the matrix, or produce input for slops-canvas-to-code stage 3. Playwright cannot drive a native app and slops-mobile-smoke is web-only. Produces screenshots and a run report; it does not judge design or accessibility.
-status: draft
+status: active
 skill_type: wrapper
 layer: 0
 default_agent: Local capture is ordinary work on a host that has the toolchain — it bills nothing and needs no assignment. CI dispatch is different: it bills a macOS runner and stays action-gated, not something a runtime may self-authorize.
 trigger: "sim drive | capture native screenshots | refresh visual evidence | add a screenshot scenario"
-version: 0.3.0
+version: 0.3.1
 upstream: Omen's own `scripts/capture-screen-batch.sh` and `scripts/capture-screenshot-scenario.sh` (local), and `.github/workflows/native-visual-evidence.yml` (macos-14 runner, Xcode 16.2, iPhone 16 simulator; Android emulator matrix). Local stack: Xcode command-line tools (simctl, xcodebuild) + Android SDK (emulator, adb, gradle).
 owner: Justin
 ---
@@ -306,6 +306,10 @@ change, tool version changes, and any case where simulator evidence disagreed wi
 
 ## Changelog
 
+- 0.3.1 — promoted `draft` -> `active`. The gate this skill set for itself was "draft until it has
+  governed one real capture"; it governed one on 2026-09-10 (8 screens, both platforms, both themes,
+  plus the failure path) and that run is recorded in `notes/prior-use-review.md`. No behavioural
+  change.
 - 0.3.0 — the route recommendation inverted, because the constraint it rested on expired. v0.2.0
   correctly killed "no macOS build host" but replaced it with "local capture is blocked on the
   founder's 2017 Intel MacBook Air", which stopped being true when the Mac mini landed
