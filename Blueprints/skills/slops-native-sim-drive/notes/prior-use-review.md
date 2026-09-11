@@ -1,9 +1,10 @@
 # Prior-use review — slops-native-sim-drive
 
-No runs through this skill yet. `draft` until it has governed one real capture.
+First real capture: 2026-09-10. Still `draft` — one run is not a track record.
 
 | Date | Scenario | Platforms | Dispatched or local | Fixture stayed deterministic? | Notes |
 |---|---|---|---|---|---|
+| 2026-09-10 | `command-center.carousel`, `command-center.demo-connected` | iOS + Android | local (`capture-screen-batch.sh --build`) | yes | First run through the batch runner. 8 screens, both themes, manifest written, devices restored. Also exercised the failure path: with the APK absent it reported both scenarios FAILED and exited non-zero rather than reporting an empty success. |
 
 ## Correction — 2026-09-02
 
@@ -122,3 +123,48 @@ above. Three reviews, three valid findings, each on the fix for the one before:
 
 None was a style preference. The pattern in all three is the same shape: **checking the thing
 changed rather than the thing changed away from**, and each fix inherited it from the last.
+
+
+## Fourth instance of the same pattern — 2026-09-10, v0.3.0
+
+The three reviews above converged on one shape: **checking the thing changed rather than the thing
+changed away from.** It happened again, and this time nobody was reviewing.
+
+v0.2.0 correctly killed the `parked: no macOS build host` claim. In its place it wrote *"only local
+capture is blocked, on the founder's 2017 Intel MacBook Air"* — true when written. The Mac mini
+landed on 2026-08-12 and is recorded in `omen-native-build-environment-v1.md` as the trusted routine
+iOS development host, verified on Xcode 26.6 building and launching on a physical iPhone. The skill
+was not rechecked, so for four weeks it sent the founder to a **billed macOS runner from his own
+development machine**, and the routing table and lifecycle ledger repeated the stale line.
+
+It surfaced only because a session spent the whole day capturing locally and then went to write that
+capability into the skill — at which point the skill said it was impossible.
+
+**The durable lesson: a blocker recorded as a fact will outlive the fact.** A correction that
+replaces one environmental claim with another has not removed the risk, it has moved it. Both of
+this skill's blocker claims were accurate on the day they were written and wrong within weeks, and
+both were repeated downstream into `SKILL_ROUTING.md` and `SLOPS_LIFECYCLE.md`, where they aged
+further out of sight.
+
+Two practices that would have caught it, neither expensive:
+
+1. **Date environmental claims and name what would falsify them.** "Blocked on the 2017 MacBook Air"
+   is falsified by a new Mac. Say so in the sentence, so the next reader knows what to check.
+2. **Check the host in front of you before repeating a blocker.** One `xcrun simctl list devices`
+   costs a second and is authoritative in a way a four-week-old note never is.
+
+v0.3.0 states the constraint's expiry explicitly rather than writing a third environmental claim to
+go stale in its turn.
+
+### Also recorded from the same session — two capture traps
+
+Both are now Failure Modes in the skill; both were hit for real.
+
+- **A fixture can be deterministic and still worthless.** A before/after comparison of a carousel
+  clipping fix was run entirely against the demo fixture, which renders the `carousel == null`
+  branch — stacked sections, no pager. Both captures were identical and the comparison proved
+  nothing. Determinism was never the question; *which branch* was. `command-center.carousel` exists
+  because of this.
+- **A cold-booted emulator's "System UI isn't responding" ANR captures cleanly.** It sits over the
+  app and would have been committed as screen evidence. `capture-screenshot-scenario.sh` already
+  checked window focus and refused — the check earned itself on its first real outing.
