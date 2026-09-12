@@ -10,6 +10,7 @@ version: 0.1.0
 upstream: Figma MCP server (hosted; version not pinnable locally — record the observed capability set per run)
 owner: Justin
 ---
+<!-- truth-gate: targets-not-sources — the token-drift review is an output this skill writes, named by shape -->
 
 # Slops Figma to Native
 

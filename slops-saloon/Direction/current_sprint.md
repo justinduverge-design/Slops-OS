@@ -70,12 +70,12 @@ stays in `omen/Blueprints/playbooks/content-usage-ledger.md` — don't duplicate
 - **Scope — buildable now (6 of 9):** (1) device-framing opener, (2) Trade Analyzer live-typing
   animation, (4) stronger weekly-beat pan, (5) three text-card rewrites, (6) end-card trim,
   (7) ambient background motion. Full build handoff:
-  `Blueprints/prompts/codex-all-users-reel-feedback-polish.md`. This is multi-file Remotion
+  a reel-feedback polish prompt that was never written. This is multi-file Remotion
   edit work. The Draft text-card line is confirmed:
   `"Draft day panic? Omen already read the board."`
 - **Explicitly deferred, do not attempt in this pass:** (3) multi-team trade capture — needs a
   real account setup, tracked as a Sandbox-environment dependency; see
-  `omen/Blueprints/specs/sandbox-environment-spec-v1.md`. (8) audio mix — needs a live
+  a sandbox-environment spec that was never written. (8) audio mix — needs a live
   listening session to identify per-segment levels, not a blind change. (9) voice preset swap
   — waits on D1's D2 follow-up.
 - **Done when:** the 6 unblocked items are built and re-QC'd through `slops-content-ship`, and

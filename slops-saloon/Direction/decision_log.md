@@ -90,12 +90,12 @@
 ## Decisions Added 2026-07-03 (Colorway + Chant Specs Pass — same-day follow-up)
 
 - **Team colorway system spec v1 landed** at `Blueprints/specs/team-colorway-system-spec-v1.md`. Framework + priority-tier examples (Eagles / Cowboys / Chiefs) authored. Extended roster of 29 teams listed with regional-candidate seed suggestions; verification and drafting deferred to batched author passes (4 teams per batch, each verified with a fan of at least one team in the batch).
-- **Chant + fan-copy UX spec v1 landed** at `Blueprints/specs/chant-and-fan-copy-spec-v1.md`. Three placement families (header eyebrow, wall placement, celebratory overlay), timing rules, medium-per-skin (curated art on War Room, graffiti on Color Rush), per-team copy correctness check, empty-state inflection pattern, anti-patterns, Codex implementation notes for a new `frontend/src/lib/teamChant.js` library.
+- **Chant + fan-copy UX spec v1 landed** at `Blueprints/specs/chant-and-fan-copy-spec-v1.md`. Three placement families (header eyebrow, wall placement, celebratory overlay), timing rules, medium-per-skin (curated art on War Room, graffiti on Color Rush), per-team copy correctness check, empty-state inflection pattern, anti-patterns, Codex implementation notes for a new frontend/src/lib/teamChant.js (removed with team theming, PR #114, 2026-07-12) library.
 - **Confirmed:** `BIRD GANG` (singular) is the correct Eagles chant. `Birds Gang` in the current repo is a typo scheduled for fix in the Phase 1.13 discrete-fixes batch (Task #5).
 - **Confirmed:** Chiefs ship `CHIEFS KINGDOM`; the Tomahawk Chop is parked pending cultural-sensitivity review, not shipped.
 - **Confirmed regional signatures for priority tier:** Mummers Gold (`#E2B93B`) for Philadelphia Eagles Color Rush; State Fair Gold (`#C89B3A`) for Dallas Cowboys Color Rush (Texan verify pending); BBQ Smoke Brown (`#6B4423`) for Kansas City Chiefs Color Rush (KC-fan verify pending).
 - **Data-legibility invariant restated once more in each spec** — semantic families (risk, confidence, data-source, position chips, platform colors, demo accent) own their own colors. Team colorway runs surfaces / accents / chip fills / chant frames only. Enforcement is Codex's job at implementation time.
-- **New `frontend/src/lib/teamChant.js` library planned** — consumes team + skin + placement, returns chant string + medium + CSS tokens. Ships behind `VITE_FEATURE_TEAM_CHANTS=true` until copy correctness completes across all 32 teams.
+- **New frontend/src/lib/teamChant.js (removed with team theming, PR #114, 2026-07-12) library planned** — consumes team + skin + placement, returns chant string + medium + CSS tokens. Ships behind `VITE_FEATURE_TEAM_CHANTS=true` until copy correctness completes across all 32 teams.
 - **Font addition planned** — Permanent Marker (Google) as the graffiti face for Color Rush chants; fallback Alegreya Sans Black italic with texture mask. Lazy-loaded on first Color-Rush-skin route entry.
 
 ## Decisions Added 2026-07-03 (Logo Usage Pass — same-day follow-up)
@@ -130,7 +130,7 @@
 
 ## Decisions Added 2026-05-24 (UX/UI Planning Pass)
 
-- A clean-plate UX/UI design pass was completed. Decision doc is at `Direction/decisions/omen-ux-ui-direction-v1.md`.
+- A clean-plate UX/UI design pass was completed. Decision doc is at an omen-ux-ui-direction decision page that was never written; the direction lives in `Brand/brand-system.md`.
 - The Slops OS app template spec was created at `Blueprints/specs/slops-os-app-template-spec.md`. Omen is the reference implementation.
 - Omen UX/UI design system v1 is at `omen/Blueprints/specs/omen-ux-ui-design-system-v1.md`.
 - Sign In / Connect Your League screen spec is at `omen/Blueprints/specs/sign-in-connect-league-screen-spec.md`. This is P0 — first screen to build.

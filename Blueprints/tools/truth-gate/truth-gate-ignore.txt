@@ -110,3 +110,14 @@ broken-path | slops-saloon/omen/Blueprints/playbooks/skill-usage-ledger.md | App
 stale-path  | slops-saloon/omen/Blueprints/playbooks/skill-usage-ledger.md | Same.
 broken-path | slops-saloon/omen/Direction/decision_log.md               | Append-only reasoning record and L2's decision authority; entries cite the paths of their date. Direction/decisions/ at L0 stays unsuppressed.
 stale-path  | slops-saloon/omen/Direction/decision_log.md               | Same.
+
+# --- L1 provenance: the same class already suppressed at L0 and L2, 2026-09-12 ---
+# The earlier handoff/review/audit suppressions named L0 and L2 prefixes and silently missed L1.
+broken-path | slops-saloon/Blueprints/handoffs        | Dated session records; paths are a snapshot of their date.
+stale-path  | slops-saloon/Blueprints/handoffs        | Same.
+broken-path | slops-saloon/Direction/reviews          | Dated review records; same.
+stale-path  | slops-saloon/Direction/reviews          | Same.
+broken-path | slops-saloon/omen/Solutions/reports     | Dated launch-validation evidence; preserved as provenance, pre-rename paths expected.
+stale-path  | slops-saloon/omen/Solutions/reports     | Same.
+broken-path | Solutions/reports                       | Same at L0 — dated reports, not routing authority.
+stale-path  | Solutions/reports                       | Same.

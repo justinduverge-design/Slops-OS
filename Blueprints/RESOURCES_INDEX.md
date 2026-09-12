@@ -1,3 +1,4 @@
+<!-- truth-gate: targets-not-sources — memory/MEMORY.md is runtime-written; the rest of this index is checked normally -->
 # SLOPS Resources Index
 
 **valid-as-of:** 2026-06-21

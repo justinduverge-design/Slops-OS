@@ -1,3 +1,4 @@
+<!-- truth-gate: targets-not-sources — scaffold template — its paths resolve in a generated product, not here -->
 # Claude Code Context
 
 ## Canonical Source

@@ -1,4 +1,7 @@
+<!-- truth-gate: targets-not-sources — the team-theming implementation was removed from Omen (PR #114, 2026-07-12); the frontend paths here name code to be rebuilt, not code that exists -->
 # Per-Team Design Documents
+
+> **Implementation status, 2026-09-12:** the team-theming code this spec describes (`teamTheme`, `teamChant`, motif modules) was **removed from Omen on 2026-07-12** (PR #114). The spec is retained as L1 doctrine for the rebuild — the founder's standing intent is to redo team identity from scratch rather than restore this implementation. Treat every frontend path below as a target. *(Falsified when team identity ships again.)*
 
 **Purpose:** per-team `design.md` files authored via the **`design-md-author` skill** (see `Blueprints/skills/design-md-author/SKILL.md`), one per NFL team.
 

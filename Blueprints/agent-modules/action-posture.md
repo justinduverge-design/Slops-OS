@@ -1,3 +1,4 @@
+<!-- truth-gate: targets-not-sources — .claude/settings.json is machine-local and gitignored by design -->
 # Action Posture
 
 **Default: act. Do not under-act. Do not over-explain before doing.**

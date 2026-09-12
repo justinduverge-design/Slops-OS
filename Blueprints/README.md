@@ -1,3 +1,4 @@
+<!-- truth-gate: targets-not-sources — MySkill.md is an illustrative example, not a file -->
 # Blueprints
 
 Use this folder for SLOPS OS blueprints: reusable agent rules, workflow instructions, playbooks, templates, specs, prompts, skills, and reference snapshots.

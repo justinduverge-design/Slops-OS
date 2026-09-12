@@ -9,7 +9,7 @@ This is the authorization layer that governs what tools agents and skills may us
 ## What Lives Here
 
 - **`TOOLS_INDEX.md`** — canonical tool permission lookup; tier legend and summary table
-- **`tool-permissions.md`** — full tool permission policy (migrated from `skills\tools.md`)
+- **`tool-permissions.md`** — full tool permission policy. Migrated in from a pre-DBS skills/tools.md, which no longer exists; this file is the only copy.
 
 ## How It Works
 
