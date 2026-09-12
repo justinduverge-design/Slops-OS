@@ -25,3 +25,7 @@ slops-saloon/omen/
 
 # Codex-generated artifact backups - do not track
 Solutions/.codex-artifacts/
+
+# macOS Finder metadata
+.DS_Store
+**/.DS_Store
