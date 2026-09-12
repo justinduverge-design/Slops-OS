@@ -55,7 +55,7 @@ These record past DBS-migration runs. Keep for history; do not re-run blindly.
 | `phase-1-codex-nomenclature-rename.md` | Phase 1 — nomenclature rename. |
 | `phase-1b-codex-title-case-cleanup.md` | Phase 1b — title-case cleanup. |
 | `phases-2-4-claude-index-tools-skills.md` | Phases 2–4 — indexes, tools, skills. |
-| `phase-5/phase-5a-product-division.md` | Phase 5a — product division split. |
+| `Archive/superseded-docs/2026-09-12/phase-5a-product-division.md` (archived 2026-09-12) | Phase 5a — product division split. |
 
 ## Subfolders
 

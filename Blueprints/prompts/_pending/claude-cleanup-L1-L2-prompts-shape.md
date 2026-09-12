@@ -70,7 +70,7 @@ Counts: ~3 root operational, ~4-6 templates, ~16-18 archive, depending on verifi
 
 1. `mkdir slops-saloon/Blueprints/prompts/_templates/`.
 2. `git mv slops-saloon/Blueprints/prompts/agent-build-loop-template.md slops-saloon/Blueprints/prompts/_templates/`. (Fall back to `mv` + `git add` if `git mv` errors on OneDrive.)
-3. Write `slops-saloon/Blueprints/prompts/README.md` — short, 15-20 lines max. List `_templates/` contents and note that L1 currently has no `_pending/` or `_archive/` because the queue is empty. Reference the L0 `_templates/` for cross-cutting templates and the L2 `_templates/` for Omen-specific ones.
+3. Write `slops-saloon/omen/Blueprints/prompts/README.md` — short, 15-20 lines max. List `_templates/` contents and note that L1 currently has no `_pending/` or `_archive/` because the queue is empty. Reference the L0 `_templates/` for cross-cutting templates and the L2 `_templates/` for Omen-specific ones.
 4. Verify: `ls slops-saloon/Blueprints/prompts/` shows `README.md` + `_templates/` only.
 
 ### Phase B — L2 triage (stop for Justin)
@@ -128,7 +128,7 @@ Counts: ~3 root operational, ~4-6 templates, ~16-18 archive, depending on verifi
 - File moves and three doc edits only (L1 README new, L2 README updated, L2 PROMPTS_CHANGELOG appended). No content edits to moved files.
 - No `git push`. Justin's gate.
 - Stop at the end of Phase B for triage approval. **Do not assume**; the L2 classifications above are starting points, not final calls.
-- Do not touch L0. That has its own prompt at `_pending/claude-cleanup-L0-prompts-archive.md`.
+- Do not touch L0. That has its own prompt at `Blueprints/prompts/_pending/claude-cleanup-L0-prompts-archive.md`.
 - Do not delete anything. Archive ≠ delete. Empty out only `_archive/` after Justin explicitly says so in a future session.
 - Prefer `git mv`; fall back to `mv` + `git add` if OneDrive `.git/index.lock` blocks.
 - If a file's purpose is genuinely unclear from its first 15 lines (no header, no date, ambiguous name), put it in the **"unsure — Justin to call"** row of the triage table. Do not guess.
@@ -136,6 +136,6 @@ Counts: ~3 root operational, ~4-6 templates, ~16-18 archive, depending on verifi
 
 ## Related
 
-- `_pending/claude-cleanup-L0-prompts-archive.md` — the L0 half. Independent of this one.
+- `Blueprints/prompts/_pending/claude-cleanup-L0-prompts-archive.md` — the L0 half. Independent of this one.
 - L2 `PROMPTS_CHANGELOG.md` — read before writing the entry to match style.
 - L2 `README.md` — read before updating to match section conventions.

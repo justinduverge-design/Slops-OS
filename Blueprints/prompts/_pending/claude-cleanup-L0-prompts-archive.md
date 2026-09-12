@@ -61,7 +61,7 @@ The README already classifies most of these as "Claude→Codex handoffs (OS proj
 | `phase-1-codex-nomenclature-rename.md` | DBS-migration Phase 1 — explicitly historical per README. |
 | `phase-1b-codex-title-case-cleanup.md` | DBS-migration Phase 1b — explicitly historical per README. |
 | `phases-2-4-claude-index-tools-skills.md` | DBS-migration Phases 2–4 — explicitly historical per README. |
-| `phase-5/phase-5a-product-division.md` | DBS-migration Phase 5a — explicitly historical per README. Move the `phase-5/` folder whole. |
+| `Archive/superseded-docs/2026-09-12/phase-5a-product-division.md` | DBS-migration Phase 5a — explicitly historical per README. Move the `phase-5/` folder whole. |
 | `slops-os-dbs-claude-codex-handoff.md` | DBS spec implementation handoff — fired. |
 | `slops-os-markdown-claude-codex-handoff.md` | Markdown operating package handoff — fired. |
 
@@ -86,7 +86,7 @@ Leave it where it is. Has its own README. Separate concern — fold-or-delete de
 4. **Move `dbs-style_new_chat.md`** to `_templates/`.
 
 5. **Update `Blueprints/prompts/README.md`:**
-   - Add `_templates/dbs-style_new_chat.md` row to the templates table (it's currently a plain `dbs-style_new_chat.md` row).
+   - Add `Blueprints/prompts/dbs-style_new_chat.md` row to the templates table (it's currently a plain `dbs-style_new_chat.md` row).
    - Replace the "Claude→Codex handoffs (OS projects)" section + "Codex operational prompts" section + "Migration phase prompts (historical run records)" section with a single **"Archived (`_archive/`)"** section that lists all moved files in a single table, with a one-line note: *"Historical run records. Kept for context; do not re-run blindly. Some are superseded by current work in `slops-saloon/omen/`."*
    - Update the `## Subfolders` section to add `_archive/` (already added `_templates/` and `_pending/` rows in the prior pass).
    - Resolve Justin's decision on `codex-post-deploy-context-update.md` before final README write — its row goes in either `_templates/` or `_archive/` depending on the call.
@@ -95,7 +95,7 @@ Leave it where it is. Has its own README. Separate concern — fold-or-delete de
    - `ls Blueprints/prompts/` shows only: `README.md`, `_templates/`, `_pending/`, `_archive/`, `_old-prompts-for-analysis/`. Nothing else at root.
    - `ls Blueprints/prompts/_archive/` shows all 13 (or 14) moved files + the `phase-5/` subfolder.
    - `grep -rn "Blueprints/prompts/" Blueprints/` shows no broken references (or, if any references exist to moved files, list them and ask Justin whether to fix or leave).
-   - `grep -rn "dbs-style_new_chat" Blueprints/` shows references either to `_templates/dbs-style_new_chat.md` or unqualified; flag any pointing to the old root path.
+   - `grep -rn "dbs-style_new_chat" Blueprints/` shows references either to `Blueprints/prompts/dbs-style_new_chat.md` or unqualified; flag any pointing to the old root path.
 
 7. **Commit on `main` with a Conventional Commit message.** Do NOT push.
 
@@ -119,11 +119,11 @@ Leave it where it is. Has its own README. Separate concern — fold-or-delete de
 - File moves and one README edit only. No content edits to moved files.
 - No `git push`. Justin's gate.
 - Do not touch `_pending/`, `_templates/`, or `_old-prompts-for-analysis/` contents — only the L0 root files listed in the Triage tables.
-- Do not touch L1 (`slops-saloon/Blueprints/prompts/`) or L2 (`slops-saloon/omen/Blueprints/prompts/`). Those have their own prompt at `_pending/claude-cleanup-L1-L2-prompts-shape.md`.
+- Do not touch L1 (`slops-saloon/Blueprints/prompts/`) or L2 (`slops-saloon/omen/Blueprints/prompts/`). Those have their own prompt at `Blueprints/prompts/_pending/claude-cleanup-L1-L2-prompts-shape.md`.
 - If `git mv` is available and clean, prefer it over `mv` so history follows the rename. If it errors on OneDrive (it sometimes does — `.git/index.lock` issue), fall back to `mv` + `git add`.
 - After firing, delete this prompt from `_pending/` (it's done its one job).
 
 ## Related
 
-- `_pending/claude-cleanup-L1-L2-prompts-shape.md` — the L1+L2 half. Fire whenever.
+- `Blueprints/prompts/_pending/claude-cleanup-L1-L2-prompts-shape.md` — the L1+L2 half. Fire whenever.
 - Original conversation: 2026-06-13 prompts-cleanup discussion (handoff at `Blueprints/handoffs/2026-06-13-...` if written).

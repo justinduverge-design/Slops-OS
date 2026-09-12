@@ -124,7 +124,7 @@ whether it already covers step 1 before duplicating it.
   the browser attaches the session cookie automatically so `HttpOnly` status stops
   mattering; two headers are required (`x-fantasy-platform: espn-fantasy-web`,
   `x-fantasy-source: kona`); the JSON is relayed, never the credential — a **better**
-  posture against `Blueprints/hard-prohibitions.md` #9 than the extension plan.
+  posture against `Blueprints/agent-modules/hard-prohibitions.md` #9 than the extension plan.
 - The recorded blocker was hardware, not design: *"the native iOS app still needs an
   actual build environment. Local Xcode is not viable (2017 Intel MacBook Air)."*
   That is a CI question, and it held the approach for weeks.

@@ -78,7 +78,7 @@ Missing Playwright WebKit binary. Ask Justin to run:
 
 1. `frontend/src/routes/index.jsx` — route inventory.
 2. `Blueprints/skills/mobile-first-qa-playbook/SKILL.md` — the canonical axis list.
-3. `.claude/skills/run-slops-saloon/driver.cjs` — existing driver to extend.
+3. the `run-slops-saloon` driver package — existing driver to extend.
 4. `Blueprints/definition-of-done.md` — the bar a finding might gate against.
 5. Nothing else unless a specific finding requires reading a component.
 
@@ -189,7 +189,7 @@ Always include:
 - Screenshot evidence → `Solutions/reports/_screenshots/<run-id>/...`
 - Driver extensions → `slops-saloon/omen/.claude/skills/run-slops-saloon/` (extends, doesn't
   replace, the existing CJS driver)
-- This skill → `Blueprints/skills/_proposals/slops-mobile-smoke/SKILL.md` while in draft,
+- This skill → its original proposal (since promoted into this package) while in draft,
   promote to `Blueprints/skills/slops-mobile-smoke/SKILL.md` on approval
 
 ## Failure Modes
@@ -220,7 +220,7 @@ the driver updated.
 
 ## Implementation Notes (proposal-only)
 
-The driver extension to `run-slops-saloon/driver.cjs` should:
+The driver extension to the `run-slops-saloon` driver should:
 
 1. Add a `--mode=mobile-smoke` flag.
 2. Add device profiles using `playwright-core`'s built-in `devices` map (already includes

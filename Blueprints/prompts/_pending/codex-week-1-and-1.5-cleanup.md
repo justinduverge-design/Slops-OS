@@ -55,7 +55,7 @@ Per-skill format: `- 0.1.1 — promoted to active 2026-06-12 (commit <short-hash
 
 In `Blueprints/skills/slops-taste/SKILL.md`:
 
-**3a.** Line 23 (Scope section) points at `slops-saloon/Brand/brand-system.md` for default dials. Verify the file exists:
+**3a.** Line 23 (Scope section) points at `slops-saloon/omen/Brand/brand-system.md` for default dials. Verify the file exists:
 
 ```bash
 ls slops-saloon/Brand/brand-system.md 2>&1

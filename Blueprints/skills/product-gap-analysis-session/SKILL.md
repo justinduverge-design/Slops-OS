@@ -134,7 +134,7 @@ When Justin says "no edits yet," provide the analysis in-chat only and name wher
 
 ## Prior Use Review Loop
 
-Before reusing, check `product-gap-analysis-session/notes/prior-use-review.md` if present for what worked, what Justin corrected, and what to add. Preserve the skill's identity; do not silently broaden it into a build skill.
+Before reusing, check `notes/prior-use-review.md` if present for what worked, what Justin corrected, and what to add. Preserve the skill's identity; do not silently broaden it into a build skill.
 
 ## Notes
 

@@ -24,7 +24,7 @@ Define a reusable cold-start pattern: a clearly labeled sample dataset that lets
 
 ## Outputs
 - `<product>/Blueprints/demo-mode.md` — sample fixtures listed, swap-in contract spelled out, mock/live badge placement, conversion CTA copy direction.
-- A shared pattern doc at `Blueprints/patterns/demo-mode.md` (Layer 0, reusable doctrine).
+- A shared pattern doc at `References/patterns/` (no demo-mode pattern file exists; this skill carries the pattern) (Layer 0, reusable doctrine).
 
 ## Hard Rules
 - Demo data must be visually marked at all times via the mock/live badge.

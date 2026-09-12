@@ -202,6 +202,7 @@ function checkBrokenPaths(files, basenames) {
   const EXTERNAL = /^(https?:|mailto:|#|<)/i;
   // Date and sequence placeholders in template filenames: YYYY-MM-DD, 2026-07-0X, step-NN.
   const DATE_PLACEHOLDER = /YYYY|MM-DD|\b0X\b|\bNN\b|<date>/;
+  const CONVENTION_OUTPUT = /^(notes\/prior-use-review\.md|assets\/|references\/audit-reference\.md|scripts\/generate-audio\.mjs)/;
 
   for (const f of files) {
     const body = read(f);
@@ -217,10 +218,21 @@ function checkBrokenPaths(files, basenames) {
         // Placeholders, globs, and template vars are not real citations.
         if (/[<>*{}]|\.\.\.|\$\{/.test(p)) continue;
         if (DATE_PLACEHOLDER.test(p)) continue;
+        // Package-internal OUTPUTS a document names by convention: the skill template mandates
+        // notes/prior-use-review.md in every skill and says to read it "when present", and a
+        // wrapper skill names the assets it produces. These exist after first use, not before.
+        // Naming one is the contract working, not drift. (Added 2026-09-12 — this class was 11 of
+        // the last 19 P1s, and marking each file would have switched off real checks in each.)
+        if (CONVENTION_OUTPUT.test(p)) continue;
         // Multi-segment only — a bare filename in prose is a reference, not a path.
         if (!/[\\/]/.test(p)) continue;
 
-        const norm = p.split(/[\\/]/).join(sep);
+        let norm = p.split(/[\\/]/).join(sep);
+        // A doc inside a product layer refers to the OS layer by repo name -- "Slops-OS/Blueprints/..."
+        // is how a person writes it and how the founder says it. Treat that prefix as the root,
+        // so the natural spelling resolves instead of reading as drift. (Added 2026-09-12.)
+        const ROOT_ALIAS = /^(Slops-OS|SLOPS-OS|slops-os|SLOPS)[\\/]/;
+        if (ROOT_ALIAS.test(p)) norm = p.replace(ROOT_ALIAS, '').split(/[\\/]/).join(sep);
         const candidates = [
           join(dirname(f), norm),
           join(ROOT, norm),

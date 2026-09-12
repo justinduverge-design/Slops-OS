@@ -59,9 +59,9 @@ Do not require or report these as missing startup files:
 
 - root `roadmap.md`
 - root `manifesto.md`
-- root `handoffs/frontend-to-backend.md`
-- root `handoffs/backend-to-frontend.md`
-- root `handoffs/decisions.md`
+- root `Blueprints/handoffs/frontend-to-backend.md`
+- root `Blueprints/handoffs/backend-to-frontend.md`
+- root `Blueprints/handoffs/decisions.md`
 
 Root `context.md` is a legacy orientation snapshot, not the active queue. Current L0 truth comes from `Direction/facts-of-record.md`, `Direction/decision_log.md`, `Blueprints/RESOURCES_INDEX.md`, and `Blueprints/skills/SKILL_ROUTING.md`.
 
@@ -85,8 +85,8 @@ Root `context.md` is a legacy orientation snapshot, not the active queue. Curren
 6. For skill work, edit `Blueprints/skills/<name>/SKILL.md` first when it exists, then sync installed copies. If no canonical source exists, say so before editing the installed copy.
 7. Search for stale routing strings before and after a cleanup:
    - `roadmap.md`
-   - `handoffs/frontend-to-backend.md`
-   - `handoffs/backend-to-frontend.md`
+   - `Blueprints/handoffs/frontend-to-backend.md`
+   - `Blueprints/handoffs/backend-to-frontend.md`
    - `repo-inspector`
    - `current_sprint.md`
    - `agent_inbox.md`
