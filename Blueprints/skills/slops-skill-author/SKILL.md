@@ -53,6 +53,9 @@ Create narrow, discoverable, checkable SLOPS workflows without turning the skill
 3. Read `Blueprints/skills/_template/SKILL.md` for a new or normalized skill.
 4. Search names, descriptions, and routing for overlap before creating another skill.
 5. Load only the upstream sections needed for the approved adaptation.
+6. Read `References/patterns/writing-for-agents.md` before drafting or restructuring a skill —
+   context pointers, the information hierarchy, completion criteria, leading words, pruning.
+   Adapted from `mattpocock/skills` (MIT).
 
 ## Invocation Economics Gate
 
@@ -79,6 +82,40 @@ Before authoring, answer four questions:
 9. Validate frontmatter, routing uniqueness, links/paths, and the skill's own completion check.
 10. Distribute only when explicitly approved, with backup and canonical-to-runtime hash verification.
 
+## Frontmatter is the delivery contract
+
+A skill reaches a session through `.claude/skills/<name>` symlinks created by
+`Blueprints/tools/skill-link/link-skills.mjs`. What the harness reads is the `SKILL.md`
+frontmatter, so the frontmatter is not decoration — it is the only thing deciding whether the
+skill is ever offered.
+
+- `name` must equal the folder name exactly.
+- `description` is a **context pointer**, and its wording — not the skill's quality — decides when
+  the skill fires. Front-load the leading word. One trigger per branch. State the scope the skill
+  does *not* cover when a sibling skill owns it.
+- Scope limits belong in the `description`, not only in the body. `slops-ui-ux-audit` was web-only
+  for months with the limit recorded only in routing; the description said "Slops-native", and the
+  one ambiguous word pointed native work at a superseded web spec.
+- SLOPS keys (`status`, `layer`, `version`, `owner`, `trigger`, `upstream`, `skill_type`) are
+  ignored by the harness and read by SLOPS. Keep both.
+- **Never add `metadata_profile` to a `SKILL.md`.** `valor-brain/v1` is the contract for knowledge
+  pages, not skills; the two serve different readers and mixing them breaks discovery.
+
+After creating, renaming or removing a skill, re-link and verify:
+
+```bash
+node Blueprints/tools/skill-link/link-skills.mjs
+node Blueprints/tools/skill-link/link-skills.mjs --check
+```
+
+## Environmental claims
+
+A skill that asserts something about the world outside the repo — a host machine, an OS, installed
+tooling, a hardware limit — dates the claim and names what falsifies it.
+`slops-native-sim-drive` was parked on "no macOS build host", which was wrong twice: CI had a host
+all along, and the residual "local capture is blocked on a 2017 Intel MacBook Air" outlived the Mac
+mini. Both survived because neither carried a date or a falsifier. Check the host, not the note.
+
 ## Output Contract
 
 Produce the canonical target path, full skill content or patch, package shape, routing/lifecycle changes, sources and license, verification evidence, intentional exclusions, and next safe step.
@@ -90,6 +127,10 @@ Produce the canonical target path, full skill content or patch, package shape, r
 - The procedure has an observable success signal and clear failure/escalation behavior.
 - A search finds no stale absolute workspace paths in the changed package.
 - `git diff --check` passes.
+- `node Blueprints/tools/skill-link/link-skills.mjs --check` reports no drift.
+- `node Blueprints/tools/truth-gate/truth-gate.mjs --check=registry-drift` passes — the skill is on
+  disk *and* in an index.
+- Every environmental claim in the package carries a date and a falsifier.
 - If distributed, every canonical package file has the same SHA-256 hash in both runtime copies.
 
 ## DBS Routing
@@ -122,5 +163,9 @@ Before revision, read `<skill-name>/notes/prior-use-review.md` when present. Con
 
 ## Changelog
 
+- 1.1.0 — 2026-09-12. Frontmatter is the delivery contract (skill-link); description-as-context-pointer;
+  the valor-brain/skill frontmatter boundary; dated environmental claims; skill-link and
+  registry-drift added to Verification. Points at `References/patterns/writing-for-agents.md`
+  (harvested from `mattpocock/skills`, MIT).
 - 1.0.0 — Added invocation economics, progressive disclosure, checkable completion, pruning, complete metadata, and canonical distribution verification.
 - 0.1.0 — Initial SLOPS skill-authoring workflow.

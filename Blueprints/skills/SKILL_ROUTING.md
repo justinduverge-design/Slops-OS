@@ -13,13 +13,13 @@ Blueprints/skills/SKILL_ROUTING.md
 Related files:
 
 ```text
-Blueprints\skills\README.md
-Blueprints\tools\README.md
-Blueprints\tools\tool-permissions.md
-Blueprints\tools\TOOLS_INDEX.md
-Blueprints\agents\README.md
-Blueprints\agents\AGENT_INDEX.md
-Blueprints\agents\agents.md
+Blueprints/skills/README.md
+Blueprints/tools/README.md
+Blueprints/tools/tool-permissions.md
+Blueprints/tools/TOOLS_INDEX.md
+Blueprints/agents/README.md
+Blueprints/agents/AGENT_INDEX.md
+Blueprints/agents/agents.md
 ```
 
 ## Core Rule
@@ -60,10 +60,10 @@ Do not place app implementation work in Layer 1 (Slops Saloon). The division lay
 
 | Artifact | Purpose | Canonical Layer |
 |---|---|---|
-| Skill | Repeatable workflow. Explains how work is done. | `Blueprints\skills` |
-| Agent | Actor role with permissions, denied work, status, and escalation. | `Blueprints\agents` |
-| Prompt | One-time runnable task for Claude, Codex, or another agent. | `Blueprints\prompts` |
-| Tool permissions | Guardrails for what agents may do. | `Blueprints\tools\tool-permissions.md` |
+| Skill | Repeatable workflow. Explains how work is done. | `Blueprints/skills` |
+| Agent | Actor role with permissions, denied work, status, and escalation. | `Blueprints/agents` |
+| Prompt | One-time runnable task for Claude, Codex, or another agent. | `Blueprints/prompts` |
+| Tool permissions | Guardrails for what agents may do. | `Blueprints/tools/tool-permissions.md` |
 | ~~Imported agents~~ | Retired 2026-08-05 — the staging tree was deleted and no import pool exists. See `AGENT_INDEX.md` §4. | — |
 
 ## Current SLOPS Skills
@@ -81,7 +81,7 @@ Do not place app implementation work in Layer 1 (Slops Saloon). The division lay
 | `slops-prompt-generator` | Claude first, Codex if writing files | `Layer 0` | `active` | Convert audits, handoffs, specs, contracts, and context into concrete runnable prompts. |
 | `slops-skill-author` | Claude first, Codex if writing files | `Layer 0` | `active` | Create, critique, normalize, and improve SLOPS-authored skill markdown files. |
 | `slops-agent-author` | Claude first, Codex if writing files | `Layer 0` | `active` | Create, critique, normalize, and improve SLOPS agent role files using RBAC and least privilege. |
-| `slops-onboarding-agent` | — | `Layer 0` | `retired` | **Retired 2026-08-05.** Its only input was the `Blueprints\agents\_imported\` staging tree, which was deleted the same day (`AGENT_INDEX.md` §4). Nothing left to onboard. Restore the tree from git and flip this back to `active` if a new import wave is approved. |
+| `slops-onboarding-agent` | — | `Layer 0` | `retired` | **Retired 2026-08-05.** Its only input was the `Blueprints/agents/_imported/` staging tree, which was deleted the same day (`AGENT_INDEX.md` §4). Nothing left to onboard. Restore the tree from git and flip this back to `active` if a new import wave is approved. |
 | `agent-wrapper-generator` | Claude first, Codex if writing files | `Layer 0` | `active` | Generate least-privilege SLOPS agent wrapper files from approved review memos or explicit candidate selections. |
 | `agent-index-diff-builder` | Claude first, Codex if writing files | `Layer 0` | `active` | Build proposed `AGENT_INDEX.md` additions or diffs from wrapper files without applying them. |
 | `rbac-risk-review` | Claude first, Codex if writing files | `Layer 0` | `active` | Review agents, skills, prompts, plans, and proposed changes for RBAC, overlap, tool-tier, and high-risk authority concerns. |
@@ -139,6 +139,31 @@ Do not place app implementation work in Layer 1 (Slops Saloon). The division lay
 | `slops-native-ui-audit` | Claude audits; fixes become loop items | `Layer 0` | `draft` | Eleven-axis native screen audit against `omen-native-design-house-v1`, `component-lock-v1`, and `team-theme-contract-v1` — points not pixels, VoiceOver/TalkBack not ARIA, contrast under permitted team-skin overrides. Both platforms required for a complete audit. Honest mock/live labeling is trust-critical and always P0. |
 | `slops-figma-to-native` | Claude pulls and scaffolds; build agent completes | `Layer 0` | `draft` | Pull an approved Figma frame via the Figma MCP server and emit SwiftUI/Compose scaffolding bound to locked tokens. Read-only toward Figma. Emits the **same contract shape** as `slops-canvas-to-code` so downstream work is source-agnostic. Token drift is reported, never silently resolved. |
 | `slops-agent-docs-refresh` | Claude drafts; founder approves the read order | `Layer 0` | `draft` | Rewrite `CLAUDE.md` / `AGENTS.md` and the kickoff prompts **as one atomic pass**, since both encode the same read order. Carries a drift check so the two cannot diverge again. |
+| `slops-native-screen-design` | Claude composes; build agent implements; founder ratifies | `Layer 0` (writes screen contracts into the product spec tree) | `draft` | **Authored 2026-09-12 to close the composing gap.** Every other design skill in the library audits a screen that already exists; none decides what a screen should be. Converts an approved-but-undesigned native screen into a checkable **screen contract** — ordered blocks with a surface level each, spacing drawn only from the locked `4·8·12·16·24·32·48·64·96` scale, a named semantic token per colour, a resolved approved component per element, an anchor for every badge or chip, and the literal string for every control, state and empty case. Emits the **same contract shape** as `slops-canvas-to-code` and `slops-figma-to-native`, so the build step is source-agnostic, and hands off to `slops-native-ui-audit` for the verdict. Token drift is reported, never silently resolved. |
+
+## Reaching the library (skill-link)
+
+**Authoring stays here. Delivery is a symlink.** `Blueprints/skills/` remains the only editable
+copy and this file remains authoritative. `Blueprints/tools/skill-link/link-skills.mjs` creates
+`.claude/skills/<name>` symlinks in L0 and in Omen so a session can invoke a Slops skill by name
+instead of being told a path.
+
+```bash
+node Blueprints/tools/skill-link/link-skills.mjs           # apply
+node Blueprints/tools/skill-link/link-skills.mjs --check   # verify, exit 1 on drift
+```
+
+- Targets are **relative**, so they survive any clone path, mount, or machine. `--check` reports an
+  absolute target as drift for that reason.
+- The tool **refuses** to replace a real directory with a link. A second editable copy drifts, and a
+  drifted library is worse than an unreachable one.
+- `.claude/` is gitignored, so the links are machine-local by design and the *script* is the tracked
+  artifact. Re-run it after adding or renaming a skill, and on any new machine.
+- Registered 2026-09-12, closing Omen `X4-SkillReach`. L0 links 59 skills; Omen links those 59 plus
+  its 2 local skills.
+- **Web-only skills carry the scope in their own `description`**, which is what routing reads:
+  `slops-ui-ux-audit`, `mobile-first-qa-playbook`, `slops-mobile-smoke`. Making them easier to reach
+  on a native task is a regression; the description is the guard.
 
 ## Analytical Skills
 
