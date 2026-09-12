@@ -103,13 +103,24 @@ async function walk(dir, out = []) {
   return out;
 }
 
-/** Every filename in the tree, for telling "missing file" from "stale path". */
+/**
+ * Every filename in the tree, for telling "missing file" from "stale path".
+ *
+ * Archive/ is deliberately INCLUDED here while staying excluded from `walk()`. The two answer
+ * different questions: walk() asks "whose citations do we check?" — archived docs are not
+ * authority and are not checked; this asks "does a file of this name exist anywhere?" — and an
+ * archived file does exist. Without this, archiving a file silently turned every citation of it
+ * into a false P0 "exists nowhere", which punished the correct action. (Fixed 2026-09-12, after
+ * archiving twelve files produced exactly that.)
+ */
+const BASENAME_SKIP = new Set([...SKIP_DIRS].filter(d => d !== 'Archive' && d !== 'archive'));
+
 async function collectBasenames(dir, out = new Set()) {
   let entries;
   try { entries = await readdir(dir, { withFileTypes: true }); } catch { return out; }
   for (const e of entries) {
     if (e.isDirectory()) {
-      if (SKIP_DIRS.has(e.name) || e.name === '.git' || e.name === 'node_modules') continue;
+      if (BASENAME_SKIP.has(e.name) || e.name === '.git' || e.name === 'node_modules') continue;
       await collectBasenames(join(dir, e.name), out);
     } else {
       out.add(e.name);
@@ -174,13 +185,27 @@ function checkDeadHeader(files) {
  * A bare backticked filename (`AGENT_INDEX.md`) is prose, not a path claim, so
  * only multi-segment strings are treated as citations.
  */
+// A document may declare that the paths it cites are TARGETS rather than SOURCES: a proposal
+// naming files it would create, a template naming files the scaffold will write, a runbook naming
+// an artifact a tool generates. Those paths are supposed not to exist yet. The marker is a
+// self-describing opt-out that travels with the document, instead of a suppression the document
+// cannot see. Put it anywhere in the file:
+//
+//   <!-- truth-gate: targets-not-sources — <reason> -->
+//
+// It exempts only broken-path and stale-path. Every other check still runs.
+const TARGETS_MARKER = /<!--\s*truth-gate:\s*targets-not-sources\b/i;
+
 function checkBrokenPaths(files, basenames) {
   const MD_LINK = /\[[^\]]*\]\(([^)\s#]+)/g;
   const TICKED = /`([A-Za-z0-9_.-]+(?:[\\/][A-Za-z0-9_.-]+)+\.(?:md|mjs|cjs|js|json|ya?ml|toml|sql|sh))`/g;
   const EXTERNAL = /^(https?:|mailto:|#|<)/i;
+  // Date and sequence placeholders in template filenames: YYYY-MM-DD, 2026-07-0X, step-NN.
+  const DATE_PLACEHOLDER = /YYYY|MM-DD|\b0X\b|\bNN\b|<date>/;
 
   for (const f of files) {
     const body = read(f);
+    if (TARGETS_MARKER.test(body)) continue;
     const seen = new Set();
     for (const re of [MD_LINK, TICKED]) {
       re.lastIndex = 0;
@@ -191,6 +216,7 @@ function checkBrokenPaths(files, basenames) {
         seen.add(p);
         // Placeholders, globs, and template vars are not real citations.
         if (/[<>*{}]|\.\.\.|\$\{/.test(p)) continue;
+        if (DATE_PLACEHOLDER.test(p)) continue;
         // Multi-segment only — a bare filename in prose is a reference, not a path.
         if (!/[\\/]/.test(p)) continue;
 

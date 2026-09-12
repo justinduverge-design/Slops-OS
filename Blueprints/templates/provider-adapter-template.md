@@ -6,7 +6,7 @@ Use this when a product must ingest data from several interchangeable third-part
 
 This template is reference material, not a callable skill. Copy its structure when designing a
 multi-provider integration. First live application: Omen Omen
-(`slops-saloon/omen/Blueprints/specs/live-engine-spec.md`).
+(the product's live-engine spec, if it has one (Omen does not — the contract lives in `Blueprints/api-routes.md`)).
 
 ## The core idea — one seam
 

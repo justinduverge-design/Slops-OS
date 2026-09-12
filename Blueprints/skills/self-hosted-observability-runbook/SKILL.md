@@ -25,7 +25,7 @@ Stand up and wire three self-hosted services on KVM1 — `sentry-self-hosted` fo
 
 ## Outputs
 - `<product>/Blueprints/observability.md` — per-product wire-up doc (env keys, init snippet locations, dashboard URLs).
-- A KVM1-side runbook at `Blueprints/playbooks/observability-stack-runbook.md` covering install, retention, backup, and rotation. (Written once; reused across all products.)
+- A KVM1-side runbook at this skill itself (an earlier draft planned to split the procedure into a separate playbook; it never was, and the skill carries it) covering install, retention, backup, and rotation. (Written once; reused across all products.)
 - A short audit checklist confirming "no telemetry leaves KVM1."
 
 ## Does NOT

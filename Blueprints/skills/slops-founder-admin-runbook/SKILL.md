@@ -10,6 +10,7 @@ version: 0.1.0
 upstream: none — vendor documentation is read live, never vendored (see Freshness Contract)
 owner: Justin
 ---
+<!-- truth-gate: targets-not-sources — founder-admin-state.md is the stateful checklist this skill creates on first run -->
 
 # Slops Founder Admin Runbook
 

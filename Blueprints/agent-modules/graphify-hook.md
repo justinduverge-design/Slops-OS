@@ -1,3 +1,4 @@
+<!-- truth-gate: targets-not-sources — graph.json is generated output, written by graphify at run time -->
 # Cross-Layer Knowledge Graph (graphify) — consult before multi-layer tasks
 
 **When to use:** only when a task bridges layers (L0 doctrine ↔ L1 Slops Saloon ↔ L2 Omen), traces a dependency across the stack, or asks "what governs this?" Single-layer tasks skip this — the graph is leverage for cross-cutting work, not overhead on every pull.

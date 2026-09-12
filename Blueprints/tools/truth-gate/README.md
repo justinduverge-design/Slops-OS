@@ -49,6 +49,29 @@ This repo squash-merges, so the branch SHA never lands on main and a naive
 ancestry check reports every shipped item as unmerged. The check compares
 normalized commit subjects instead.
 
+## Targets vs sources
+
+`broken-path` assumes every cited path is a **source** that must exist. Some documents cite
+**targets** instead: a proposal naming files it would create, a template naming files the scaffold
+will write, a runbook naming an artifact a tool generates. Those paths are *supposed* not to exist.
+
+A document declares this itself, anywhere in the file:
+
+```
+<!-- truth-gate: targets-not-sources — proposal; these files exist only if the pattern is adopted -->
+```
+
+It exempts that file from `broken-path` and `stale-path` only. Every other check still runs.
+
+**Prefer the marker to a suppression.** A suppression lives in `truth-gate-ignore.txt`, where the
+document cannot see it; a reader of the document learns nothing. The marker travels with the file
+and tells the next reader why its paths do not resolve. Reach for a suppression when the exemption
+is about a *class of location* (all dated handoffs), and the marker when it is about *this
+document's nature*.
+
+Filename placeholders — `YYYY-MM-DD`, `2026-07-0X`, `step-NN`, anything in `<angle brackets>`,
+globs, and `${vars}` — are skipped without a marker.
+
 ## Suppressions
 
 Edit `truth-gate-ignore.txt`:

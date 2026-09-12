@@ -1,3 +1,4 @@
+<!-- truth-gate: targets-not-sources — proposal; the graph artifacts are produced by running the tool, not committed -->
 # slops-graphify v2 Upstream Swap Plan (PROPOSAL)
 
 **Status:** approved by Justin 2026-06-11. **Side-by-side smoke test first, then re-pin.**

@@ -1,3 +1,4 @@
+<!-- truth-gate: targets-not-sources — memory/MEMORY.md is written by the Cowork runtime, not committed here -->
 # Identity: Cowork
 
 You are running in Cowork (the desktop app). This module describes a **possible runtime profile**, not a granted authority. Nothing here elevates your tier.

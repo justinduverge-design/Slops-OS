@@ -1,3 +1,4 @@
+<!-- truth-gate: targets-not-sources — PROPOSAL — the per-product STRATEGY.md files exist only if the pattern is adopted -->
 # STRATEGY.md Pattern (PROPOSAL)
 
 **Source:** harvested from [`EveryInc/compound-engineering-plugin`](https://github.com/EveryInc/compound-engineering-plugin)'s `/ce-strategy`.

@@ -2,18 +2,23 @@
 
 Layer 0 (SLOPS) prompts. A prompt is a runnable task — usually a Claude→Codex handoff — that implements a spec or decision. These are OS-level prompts; Omen app/product prompts live in `slops-saloon/omen/Blueprints/prompts/`.
 
-## Reusable templates (`_templates/`)
+## Reusable templates — retired 2026-07-30
 
-Patterns intended to fire more than once. Edit carefully — the rest of the system relies on their stability.
+**`_templates/` no longer exists.** The six prompt templates below were archived in the
+2026-07-30 pre-runtime-trust cutover to `Archive/authority-routing/2026-07-30-pre-runtime-trust/prompts-templates/`, each with an `.archived.md` suffix. They are
+provenance, not live patterns: prompt structure is now carried by `slops-prompt-generator`, and
+"pull the next item" is `planning-pass` plus the kickoff prompts.
+
+*(Corrected 2026-09-12 — this section named six live paths for six weeks after they moved.)*
 
 | File | Use |
 |---|---|
-| `_templates/Claude_prompt_format.md` | Standard structure for prompts aimed at Claude (planning, review, doctrine). |
-| `_templates/Codex_prompt_format.md` | Standard structure for prompts aimed at Codex (file edits, code, terminal). |
-| `_templates/simple_prompt_system_claude.md` | Lightweight Claude prompt pattern. |
-| `_templates/simple_prompt_system_codex.md` | Lightweight Codex prompt pattern. |
-| `_templates/codex-pull-next-backend.md` | Generic "pull topmost open Backend / Codex Phase item from `current_sprint.md`" prompt. Use from Phase 1.3+ onward. |
-| `_templates/claude-code-pull-next-frontend.md` | Generic "pull topmost open Frontend / Claude Phase item from `current_sprint.md`" prompt, with cross-stack dependency checks. |
+| `Archive/authority-routing/2026-07-30-pre-runtime-trust/prompts-templates/Claude_prompt_format.archived.md` | Standard structure for prompts aimed at Claude. Superseded by `slops-prompt-generator`. |
+| `Archive/authority-routing/2026-07-30-pre-runtime-trust/prompts-templates/Codex_prompt_format.archived.md` | Standard structure for prompts aimed at Codex. Superseded by `slops-prompt-generator`. |
+| `Archive/authority-routing/2026-07-30-pre-runtime-trust/prompts-templates/simple_prompt_system_claude.archived.md` | Lightweight Claude prompt pattern. Superseded by `slops-prompt-generator`. |
+| `Archive/authority-routing/2026-07-30-pre-runtime-trust/prompts-templates/simple_prompt_system_codex.archived.md` | Lightweight Codex prompt pattern. Superseded by `slops-prompt-generator`. |
+| `Archive/authority-routing/2026-07-30-pre-runtime-trust/prompts-templates/codex-pull-next-backend.archived.md` | Generic "pull the topmost open backend item" prompt. Superseded by `planning-pass` + the kickoff prompts. |
+| `Archive/authority-routing/2026-07-30-pre-runtime-trust/prompts-templates/claude-code-pull-next-frontend.archived.md` | Generic "pull the topmost open frontend item" prompt. Superseded by `planning-pass` + the kickoff prompts. |
 | `dbs-style_new_chat.md` | Boot prompt for starting a fresh chat with DBS context loaded. |
 
 ## Claude→Codex handoffs (OS projects)
@@ -54,7 +59,7 @@ These record past DBS-migration runs. Keep for history; do not re-run blindly.
 
 ## Subfolders
 
-- `_templates/` — reusable templates (fire more than once). See table above.
+- `_templates/` — **retired 2026-07-30**; contents archived to `Archive/authority-routing/2026-07-30-pre-runtime-trust/prompts-templates/`. See the table above.
 - `_pending/` — one-shot prompts queued to fire next. Removed once fired.
 - `_old-prompts-for-analysis/` — archived prompts kept for reference, not active.
 

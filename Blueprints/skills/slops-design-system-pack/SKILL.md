@@ -10,6 +10,7 @@ upstream: nexu-io/open-design + VoltAgent/awesome-claude-design (markdown-only, 
 version: 0.1.0
 owner: Justin
 ---
+<!-- truth-gate: targets-not-sources — systems/INDEX.md is internal to the vendored reference pack -->
 
 # Slops Design System Pack (PROPOSAL)
 
