@@ -4,31 +4,31 @@ Date: 2026-05-22
 
 Source of truth:
 
-`C:\Users\JDuve\OneDrive\Desktop\SLOPS\Solutions\reports\dbs-migration\DBS_FINAL_FOLDER_TREE_REVIEW.md`
+`C:\Users\JDuve\OneDrive\Desktop\SLOPS\Solutions/reports/dbs-migration/DBS_FINAL_FOLDER_TREE_REVIEW.md`
 
 ## Files Moved
 
 SLOPS root:
 
-- `roadmap.md` -> `Archive\superseded-docs\roadmap.root.md`
-- `Slops OS Global Context.md` -> `Direction\global-context.md`
+- `roadmap.md` -> `Archive/superseded-docs/roadmap.root.md`
+- `Slops OS Global Context.md` -> `Direction/global-context.md`
 
 ssffmvp:
 
 - `BRAND_STRATEGY.md` -> `Omen\Brand\BRAND_STRATEGY.md`
-- `design.md` -> `Omen\Blueprints\design.md`
-- `agent_handoff.md` -> `Blueprints\agent_handoff.md`
-- `agent_inbox.md` -> `Direction\agent_inbox.md`
-- `audit_report.json` -> `Solutions\audit_report.json`
-- `impeccable_baseline.json` -> `Solutions\impeccable_baseline.json`
+- `design.md` -> `Omen\Blueprints/design.md`
+- `agent_handoff.md` -> `Blueprints/agent_handoff.md`
+- `agent_inbox.md` -> `Direction/agent_inbox.md`
+- `audit_report.json` -> `Solutions/audit_report.json`
+- `impeccable_baseline.json` -> `Solutions/impeccable_baseline.json`
 
 ## Folders Moved
 
 ssffmvp:
 
-- `handoffs` -> `Blueprints\handoffs`
-- `prompts` -> `Blueprints\prompts`
-- `docs` -> `Blueprints\specs\docs`
+- `handoffs` -> `Blueprints/handoffs`
+- `prompts` -> `Blueprints/prompts`
+- `docs` -> `Blueprints/specs/docs`
 
 ## Empty Folders Deleted
 
@@ -55,7 +55,7 @@ Protected files/folders were intentionally skipped:
 - tests
 - `node_modules`
 - active app source folders
-- `Archive\quarantine`
+- `Archive/quarantine`
 
 ## Conflicts
 
@@ -136,7 +136,7 @@ No files were deployed, committed, pushed, or overwritten.
 
 No `.env` files were touched.
 
-No secrets, keys, tokens, cookies, credentials, private files, DNS, SSL, Nginx, Docker config, GitHub Actions, production config, package files, SQL, scripts, tests, `node_modules`, `.git` folders, or `Archive\quarantine` contents were opened, printed, moved, or modified.
+No secrets, keys, tokens, cookies, credentials, private files, DNS, SSL, Nginx, Docker config, GitHub Actions, production config, package files, SQL, scripts, tests, `node_modules`, `.git` folders, or `Archive/quarantine` contents were opened, printed, moved, or modified.
 
 No active app source folders were touched:
 

@@ -58,6 +58,38 @@ state:
 - The profile reflects task state; it does not replace `Claim:`, typed blockers, evidence, closure, or append-only unblock rules in the canonical status model.
 - Domain-specific dimensions such as `change` and `exercise` are allowed without adding them to the task lifecycle.
 
+## Environmental claims — amendment, 2026-09-12
+
+**Convention, not a schema change.** No new field, no validator change, no fixture — v1 stands as
+ratified. This states how the existing `freshness` block carries one class of claim it was already
+shaped for.
+
+An **environmental claim** asserts something about the world outside the repository: the host
+machine, the operating system, installed tooling, a hardware limit, a vendor's availability, a
+billing state. It is the class most likely to go quietly false, because nothing in the repository
+changes when the world does.
+
+A page making an environmental claim records, in `freshness.triggers`, the event that falsifies it:
+
+```yaml
+freshness:
+  reviewed_on: 2026-09-12
+  triggers:
+    - the iOS build host changes
+    - Xcode major version changes
+    - a macOS runner becomes unavailable
+```
+
+A trigger names an **observable event**, not a duration. "Quarterly review" is a calendar habit;
+"the iOS build host changes" is a falsifier. On a page that has not opted in, the same discipline is
+written inline: the date it was true, and what ends it.
+
+**Why this is in the ratified spec rather than a note.** `slops-native-sim-drive` was parked on "no
+macOS build host" — wrong when written, since CI had a host all along — and its residual claim,
+"local capture is blocked on the founder's 2017 Intel MacBook Air", outlived the Mac mini. The same
+defect survived two corrections because each correction was written where it was discovered and the
+claim carried no falsifier anywhere. Check the host, not the note.
+
 ## Body contract
 
 Every opted-in page contains:
@@ -82,19 +114,19 @@ Compiled truth may be edited when the source changes. Timeline entries are appen
 
 Canonical command from L0:
 
-```powershell
+```bash
 node Blueprints/tools/valor-brain/validate.mjs
 ```
 
 Focused Truth Gate command:
 
-```powershell
+```bash
 node Blueprints/tools/truth-gate/truth-gate.mjs --check=valor-brain
 ```
 
 Standalone Omen command:
 
-```powershell
+```bash
 node scripts/check-valor-brain.mjs
 ```
 

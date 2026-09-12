@@ -15,22 +15,22 @@ Before doing any work, read the new DBS navigation/context files:
 
 1. C:\Users\JDuve\dev\SLOPS\DBS_INDEX.md
 2. C:\Users\JDuve\dev\SLOPS\README.md
-3. C:\Users\JDuve\dev\SLOPS\Direction\context.md
+3. C:\Users\JDuve\dev\SLOPS\Direction/context.md
 
 4. C:\Users\JDuve\dev\SLOPS\slops-saloon\README.md
-5. C:\Users\JDuve\dev\SLOPS\slops-saloon\Direction\context.md
-6. C:\Users\JDuve\dev\SLOPS\slops-saloon\Direction\current_sprint.md
-7. C:\Users\JDuve\dev\SLOPS\slops-saloon\Direction\roadmap.md
-8. C:\Users\JDuve\dev\SLOPS\slops-saloon\Direction\decision_log.md
-9. C:\Users\JDuve\dev\SLOPS\slops-saloon\Blueprints\agent_handoff.md
-10. C:\Users\JDuve\dev\SLOPS\slops-saloon\Direction\agent_inbox.md
+5. C:\Users\JDuve\dev\SLOPS\slops-saloon\Direction/context.md
+6. C:\Users\JDuve\dev\SLOPS\slops-saloon\Direction/current_sprint.md
+7. C:\Users\JDuve\dev\SLOPS\slops-saloon\Direction/roadmap.md
+8. C:\Users\JDuve\dev\SLOPS\slops-saloon\Direction/decision_log.md
+9. C:\Users\JDuve\dev\SLOPS\slops-saloon\Blueprints/agent_handoff.md
+10. C:\Users\JDuve\dev\SLOPS\slops-saloon\Direction/agent_inbox.md
 
 11. C:\Users\JDuve\dev\SLOPS\slops-saloon\omen\README.md
-12. C:\Users\JDuve\dev\SLOPS\slops-saloon\omen\Direction\context.md
-13. C:\Users\JDuve\dev\SLOPS\slops-saloon\omen\Direction\current_sprint.md
+12. C:\Users\JDuve\dev\SLOPS\slops-saloon\omen\Direction/context.md
+13. C:\Users\JDuve\dev\SLOPS\slops-saloon\omen\Direction/current_sprint.md
 14. C:\Users\JDuve\dev\SLOPS\slops-saloon\omen\Brand\brand.md
 15. C:\Users\JDuve\dev\SLOPS\slops-saloon\omen\Brand\positioning.md
-16. C:\Users\JDuve\dev\SLOPS\slops-saloon\omen\Blueprints\specs\omen-mvp-move.md
+16. C:\Users\JDuve\dev\SLOPS\slops-saloon\omen\Blueprints/specs/omen-mvp-move.md
 
 If any file is missing:
 - Do not stop.

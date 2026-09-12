@@ -19,7 +19,7 @@ STEP 2 — FIX THE REPO-INSPECTOR
 - Show the before/after diff.
 
 STEP 3 — INSTALL THE SHARED SLOPS SKILLS FOR BOTH AGENTS
-- Source of truth: C:\Users\JDuve\OneDrive\Desktop\SLOPS\Blueprints\skills\<name>\SKILL.md
+- Source of truth: C:\Users\JDuve\OneDrive\Desktop\SLOPS\Blueprints/skills\<name>\SKILL.md
 - Confirm both target dirs first and report them:
     Codex:  C:\Users\JDuve\.codex\skills\
     Claude: %USERPROFILE%\.claude\skills\   (confirm the actual Claude Code skills dir before writing)

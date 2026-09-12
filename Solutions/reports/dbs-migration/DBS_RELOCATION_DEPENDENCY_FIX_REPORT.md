@@ -4,7 +4,7 @@ Date: 2026-05-22
 
 Scope:
 - Active repo: `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp`
-- Source report: `C:\Users\JDuve\OneDrive\Desktop\SLOPS\Solutions\reports\dbs-migration\DBS_DEPENDENCY_REFERENCE_CHECK.md`
+- Source report: `C:\Users\JDuve\OneDrive\Desktop\SLOPS\Solutions/reports/dbs-migration/DBS_DEPENDENCY_REFERENCE_CHECK.md`
 
 Option A decision applied: DBS docs inside `ssffmvp` are intended to be committed with the app repo and used by future agents.
 
@@ -12,15 +12,15 @@ Option A decision applied: DBS docs inside `ssffmvp` are intended to be committe
 
 | Old Reference | New Reference | File Changed | Result |
 | --- | --- | --- | --- |
-| `../../prompts/manager_agent.md` | `..\..\Blueprints\prompts\manager_agent.md` | `ssffmvp\src\services\agents.js` | Runtime manager prompt loading now points at the DBS prompt location. |
-| `src\..\prompts\manager_agent.md` and `src\..\prompts\sub_agents.md` | `src\..\Blueprints\prompts\manager_agent.md` and `src\..\Blueprints\prompts\sub_agents.md` | `ssffmvp\src\ssffmvp_prompt_loader.js` | Shared prompt loader now reads prompt markdown from DBS `Blueprints\prompts`. |
-| Inline folder structure comment showing root `prompts\` | Inline folder structure comment showing `Blueprints\prompts\` | `ssffmvp\src\ssffmvp_prompt_loader.js` | Developer guidance now matches the repo layout. |
+| `../../prompts/manager_agent.md` | `..\..\Blueprints/prompts/manager_agent.md` | `ssffmvp\src\services\agents.js` | Runtime manager prompt loading now points at the DBS prompt location. |
+| `src/../prompts/manager_agent.md` and `src/../prompts/sub_agents.md` | `src/../Blueprints/prompts/manager_agent.md` and `src/../Blueprints/prompts/sub_agents.md` | `ssffmvp\src\ssffmvp_prompt_loader.js` | Shared prompt loader now reads prompt markdown from DBS `Blueprints/prompts`. |
+| Inline folder structure comment showing root `prompts\` | Inline folder structure comment showing `Blueprints/prompts/` | `ssffmvp\src\ssffmvp_prompt_loader.js` | Developer guidance now matches the repo layout. |
 
 ## Files Changed
 
 - `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\src\services\agents.js`
 - `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\src\ssffmvp_prompt_loader.js`
-- `C:\Users\JDuve\OneDrive\Desktop\SLOPS\Solutions\reports\dbs-migration\DBS_RELOCATION_DEPENDENCY_FIX_REPORT.md`
+- `C:\Users\JDuve\OneDrive\Desktop\SLOPS\Solutions/reports/dbs-migration/DBS_RELOCATION_DEPENDENCY_FIX_REPORT.md`
 
 ## Prompt Files Checked
 
@@ -28,9 +28,9 @@ Runtime prompt files:
 
 | File | Status |
 | --- | --- |
-| `ssffmvp\Blueprints\prompts\manager_agent.md` | Found |
-| `ssffmvp\Blueprints\prompts\sub_agents.md` | Found |
-| `ssffmvp\Blueprints\prompts\PROMPTS_CHANGELOG.md` | Found |
+| `ssffmvp\Blueprints/prompts/manager_agent.md` | Found |
+| `ssffmvp\Blueprints/prompts/sub_agents.md` | Found |
+| `ssffmvp\Blueprints/prompts/PROMPTS_CHANGELOG.md` | Found |
 
 Promptfoo eval prompt files:
 
@@ -44,7 +44,7 @@ Promptfoo eval prompt files:
 
 No promptfoo prompt files are missing from their eval-local location.
 
-The previous concern was that these files were not under `Blueprints\prompts`; however, the promptfoo YAML files live in `evals\promptfoo\` and reference the local `prompts\` folder beside those configs. That layout appears intentional and was not changed.
+The previous concern was that these files were not under `Blueprints/prompts`; however, the promptfoo YAML files live in `evals\promptfoo\` and reference the local `prompts\` folder beside those configs. That layout appears intentional and was not changed.
 
 ## Promptfoo Eval References
 
@@ -90,7 +90,7 @@ Runtime prompt loading should now work with the DBS layout.
 
 Verification performed:
 
-- `ssffmvp_prompt_loader.getPromptMetadata()` successfully read `Blueprints\prompts\manager_agent.md`.
+- `ssffmvp_prompt_loader.getPromptMetadata()` successfully read `Blueprints/prompts/manager_agent.md`.
 - `node --check src/services/agents.js` passed.
 - `node --check src/ssffmvp_prompt_loader.js` passed.
 - `npm test` passed.
@@ -147,4 +147,4 @@ Result:
 - No commit happened.
 - No push happened.
 - No unrelated app source was modified.
-- `node_modules`, `.git`, and `Archive\quarantine` were not modified.
+- `node_modules`, `.git`, and `Archive/quarantine` were not modified.

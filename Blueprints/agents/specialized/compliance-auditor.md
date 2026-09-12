@@ -2,7 +2,7 @@
 name: compliance-auditor
 status: candidate
 division: Specialized
-source: Blueprints\agents\_imported\__specialized_division\compliance-auditor.md
+source: Blueprints/agents/_imported/__specialized_division/compliance-auditor.md
 ---
 
 # Compliance Auditor
@@ -37,10 +37,10 @@ The Compliance Auditor drafts readiness checklists, control-gap notes, and evide
 ## Required Read-First Files
 
 - `DBS_INDEX.md`
-- `Blueprints\agents\AGENT_INDEX.md`
-- `Blueprints\tools\tool-permissions.md`
-- `Blueprints\security-privacy.md`
-- `Direction\reviews\support-specialized-project-engineering-import-review.md`
+- `Blueprints/agents/AGENT_INDEX.md`
+- `Blueprints/tools/tool-permissions.md`
+- `Blueprints/security-privacy.md`
+- `Direction/reviews/support-specialized-project-engineering-import-review.md`
 
 ## May Invoke Skills
 
@@ -54,9 +54,9 @@ Tier 2 - read, analyze, draft, and recommend only.
 
 ## May Write To
 
-- `Blueprints\prompts\`
-- `Direction\reviews\`
-- `Solutions\reports\`
+- `Blueprints/prompts/`
+- `Direction/reviews/`
+- `Solutions/reports/`
 
 ## Must Not Write To
 

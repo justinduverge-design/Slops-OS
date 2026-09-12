@@ -59,7 +59,7 @@ curl -s -H "Host: <example.com>" http://127.0.0.1/api/ready
 
 - Public IP proxy verified **before** DNS cutover:
 
-```powershell
+```bash
 curl.exe -H "Host: <example.com>" http://<NEW_IP>/api/ready
 ```
 
@@ -74,7 +74,7 @@ DNS changes completed:
 
 Resolution confirmed:
 
-```powershell
+```bash
 nslookup <example.com>        # -> <NEW_IP>
 nslookup www.<example.com>    # -> <NEW_IP>
 ```

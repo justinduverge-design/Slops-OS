@@ -17,10 +17,10 @@ Omen product code.
 CONTEXT (read these first, in this order):
 - C:\Users\JDuve\OneDrive\Desktop\SLOPS\AGENTS.md
 - C:\Users\JDuve\OneDrive\Desktop\SLOPS\CLAUDE.md
-- C:\Users\JDuve\OneDrive\Desktop\SLOPS\Blueprints\skills\README.md
-- C:\Users\JDuve\OneDrive\Desktop\SLOPS\Blueprints\skills\SKILL_ROUTING.md
-- C:\Users\JDuve\OneDrive\Desktop\SLOPS\Blueprints\handoffs\2026-06-10-omen-architecture-pivot.md
-- C:\Users\JDuve\OneDrive\Desktop\SLOPS\slops-saloon\omen\Blueprints\handoffs\2026-06-10-product-architecture-pivot.md
+- C:\Users\JDuve\OneDrive\Desktop\SLOPS\Blueprints/skills/README.md
+- C:\Users\JDuve\OneDrive\Desktop\SLOPS\Blueprints/skills/SKILL_ROUTING.md
+- C:\Users\JDuve\OneDrive\Desktop\SLOPS\Blueprints/handoffs/2026-06-10-omen-architecture-pivot.md
+- C:\Users\JDuve\OneDrive\Desktop\SLOPS\slops-saloon\omen\Blueprints/handoffs/2026-06-10-product-architecture-pivot.md
 
 KNOW THE CURRENT GAP:
 Omen is in a four-phase launch sprint ending August 2026. The build loop is

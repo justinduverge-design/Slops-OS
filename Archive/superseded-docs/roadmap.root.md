@@ -2,8 +2,8 @@
 
 Canonical SLOPS OS roadmap now lives at:
 
-`Direction\roadmap.md`
+`Direction/roadmap.md`
 
 The previous root `roadmap.md` was preserved at:
 
-`Archive\superseded-docs\root-redirected\roadmap.md`
+`Archive/superseded-docs/root-redirected/roadmap.md`

@@ -16,7 +16,7 @@ Written for a solo founder/operator. The goal is not a zero-downtime enterprise 
 - One change, then verify. Never stack app + DNS + TLS changes and hope.
 - Never paste secrets, tokens, private keys, `.env`, or cookie values into chat.
 - After every phase, update the cutover checkpoint file (`Blueprints/templates/cutover-checkpoint-template.md`).
-- If a command belongs on your local machine, run it locally (PowerShell). If it belongs on the VPS, run it in the SSH session. Mixing them up wastes time.
+- If a command belongs on your local machine, run it locally. If it belongs on the VPS, run it in the SSH session. Mixing them up wastes time.
 
 ## Phase 0 - Pre-Flight
 
@@ -66,7 +66,7 @@ curl -s -H "Host: <example.com>" http://127.0.0.1/api/health
 curl -s -H "Host: <example.com>" http://127.0.0.1/api/ready
 ```
 
-```powershell
+```bash
 # from your machine: public IP answers for the real host, before DNS
 curl.exe -H "Host: <example.com>" http://<NEW_IP>/api/ready
 ```
@@ -86,7 +86,7 @@ First record the current value (rollback target). Then change:
 
 Verify resolution:
 
-```powershell
+```bash
 nslookup <example.com>
 nslookup www.<example.com>
 ```

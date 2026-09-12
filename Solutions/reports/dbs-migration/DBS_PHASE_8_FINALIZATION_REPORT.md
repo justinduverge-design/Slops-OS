@@ -74,7 +74,7 @@ Done enough means:
 ## Remaining For Later
 
 - Decide whether root `agents`, `prompts`, and `skills` should be copied/indexed into `Blueprints`.
-- Review `Projects\AI_OPERATING_SYSTEM` and `project_memory.md`.
+- Review `Projects/AI_OPERATING_SYSTEM` and `project_memory.md`.
 - Compare `_archive`, `_parked`, and `.codex-artifacts` before any consolidation.
 - Decide whether root `design.md` should stay as a convenience doc or become a redirect/reference.
 - Decide what should happen to root `context.md`, `roadmap.md`, and `manifesto.md` after Justin curates the new `Direction` docs.

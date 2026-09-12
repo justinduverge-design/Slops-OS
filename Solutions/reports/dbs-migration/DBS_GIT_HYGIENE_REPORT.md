@@ -67,7 +67,7 @@ Likely safe after Justin review:
 
 Do not commit:
 
-- `Archive\quarantine\`
+- `Archive/quarantine/`
 - Any `.env` file
 - Any key-like, token-like, cookie, credential, or secret-bearing file
 - `.git` folders
@@ -81,9 +81,9 @@ Review before committing:
 - `.codex-artifacts`
 - `_archive`
 - `_parked`
-- `Projects\AI_OPERATING_SYSTEM`
+- `Projects/AI_OPERATING_SYSTEM`
 - root `agents`, `prompts`, and `skills`
-- root `Archive\superseded-docs`
+- root `Archive/superseded-docs`
 - app repo pre-existing modified source files
 - app repo pre-existing modified `.gitignore`
 - app repo untracked skill folders and screenshots
@@ -92,7 +92,7 @@ Review before committing:
 
 Quarantine folders should remain uncommitted.
 
-`Archive\quarantine\Projects-ssffmvp-sensitive-2026-05-21` was moved as a sealed unit in Phase 7 and may contain `.env` and key-like files. It should not be uploaded, committed, pushed, shared, restored, or inspected without a secrets-safe review.
+`Archive/quarantine/Projects-ssffmvp-sensitive-2026-05-21` was moved as a sealed unit in Phase 7 and may contain `.env` and key-like files. It should not be uploaded, committed, pushed, shared, restored, or inspected without a secrets-safe review.
 
 ## Recommended Git Hygiene
 

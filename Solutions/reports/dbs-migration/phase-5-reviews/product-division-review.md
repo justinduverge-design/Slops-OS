@@ -8,17 +8,17 @@ Phase 5A reviewed all five imported Product Division agents against SLOPS OS, ss
 
 ## Files Read
 
-- `Blueprints\agents\AGENT_INDEX.md`
-- `Blueprints\skills\slops-agent-author\SKILL.md`
-- `Solutions\reports\dbs-migration\PHASE_5_PLAN.md`
-- `Blueprints\agents\_imported\__product_division\product-behavioral-nudge-engine.md`
-- `Blueprints\agents\_imported\__product_division\product-feedback-synthesizer.md`
-- `Blueprints\agents\_imported\__product_division\product-manager.md`
-- `Blueprints\agents\_imported\__product_division\product-sprint-prioritizer.md`
-- `Blueprints\agents\_imported\__product_division\product-trend-researcher.md`
+- `Blueprints/agents/AGENT_INDEX.md`
+- `Blueprints/skills/slops-agent-author/SKILL.md`
+- `Solutions/reports/dbs-migration/PHASE_5_PLAN.md`
+- `Blueprints/agents/_imported/__product_division/product-behavioral-nudge-engine.md`
+- `Blueprints/agents/_imported/__product_division/product-feedback-synthesizer.md`
+- `Blueprints/agents/_imported/__product_division/product-manager.md`
+- `Blueprints/agents/_imported/__product_division/product-sprint-prioritizer.md`
+- `Blueprints/agents/_imported/__product_division/product-trend-researcher.md`
 - `DBS_INDEX.md`
-- `Blueprints\skills\SKILL_ROUTING.md`
-- `Blueprints\tools\tool-permissions.md`
+- `Blueprints/skills/SKILL_ROUTING.md`
+- `Blueprints/tools/tool-permissions.md`
 
 Missing read-first files from root AGENTS instructions:
 
@@ -34,11 +34,11 @@ Missing read-first files from root AGENTS instructions:
 
 | Agent | Source File | Recommended Status | Relevance | Risk | Overlap | Reason |
 |---|---|---|---|---|---|---|
-| Behavioral Nudge Engine | `Blueprints\agents\_imported\__product_division\product-behavioral-nudge-engine.md` | do-not-activate | Medium for future onboarding/retention, low for immediate Omen launch | High | Medium with product/UX planning | Implies behavioral profiling, user preferences, communication channels, SMS/email nudges, memory, engagement optimization, and opt-out architecture. Needs privacy, consent, user-data, and outbound-message review before any wrapper. |
-| Feedback Synthesizer | `Blueprints\agents\_imported\__product_division\product-feedback-synthesizer.md` | do-not-activate | Medium once real users/support channels exist | High | Medium with Claude review and future support workflows | Original agent includes WebFetch/WebSearch/Read/Write/Edit plus surveys, support tickets, reviews, social media monitoring, NPS, dashboards, and customer feedback systems. This touches user/customer data and external systems. |
-| Product Manager | `Blueprints\agents\_imported\__product_division\product-manager.md` | candidate | High for Omen launch, ssffmvp MVP, PRDs, scope control, and launch planning | Medium, reduced by wrapper | Medium with Claude product planning | Useful for draft PRDs, opportunity assessments, non-goals, metrics, and trade-off docs. Wrapper limits it to Tier 2 markdown drafts and recommendations with Justin approval for roadmap or launch decisions. |
-| Sprint Prioritizer | `Blueprints\agents\_imported\__product_division\product-sprint-prioritizer.md` | candidate | High for near-term launch prioritization and backlog discipline | Medium, reduced by wrapper | Medium with Product Manager and Claude planning | Useful for sprint framing, RICE scoring, dependencies, and scope trade-off notes. Wrapper denies release, deployment, feature flag, and capacity authority. |
-| Trend Researcher | `Blueprints\agents\_imported\__product_division\product-trend-researcher.md` | reference-only | Medium for market and competitor analysis | Medium-high | High with `pre-build-research` | Valuable as research inspiration, but overlaps the canonical `pre-build-research` skill and references paid/external tools, social listening, competitive intelligence, and regulatory monitoring. Keep reference-only until a specific approved research task needs an agent wrapper. |
+| Behavioral Nudge Engine | `Blueprints/agents/_imported/__product_division/product-behavioral-nudge-engine.md` | do-not-activate | Medium for future onboarding/retention, low for immediate Omen launch | High | Medium with product/UX planning | Implies behavioral profiling, user preferences, communication channels, SMS/email nudges, memory, engagement optimization, and opt-out architecture. Needs privacy, consent, user-data, and outbound-message review before any wrapper. |
+| Feedback Synthesizer | `Blueprints/agents/_imported/__product_division/product-feedback-synthesizer.md` | do-not-activate | Medium once real users/support channels exist | High | Medium with Claude review and future support workflows | Original agent includes WebFetch/WebSearch/Read/Write/Edit plus surveys, support tickets, reviews, social media monitoring, NPS, dashboards, and customer feedback systems. This touches user/customer data and external systems. |
+| Product Manager | `Blueprints/agents/_imported/__product_division/product-manager.md` | candidate | High for Omen launch, ssffmvp MVP, PRDs, scope control, and launch planning | Medium, reduced by wrapper | Medium with Claude product planning | Useful for draft PRDs, opportunity assessments, non-goals, metrics, and trade-off docs. Wrapper limits it to Tier 2 markdown drafts and recommendations with Justin approval for roadmap or launch decisions. |
+| Sprint Prioritizer | `Blueprints/agents/_imported/__product_division/product-sprint-prioritizer.md` | candidate | High for near-term launch prioritization and backlog discipline | Medium, reduced by wrapper | Medium with Product Manager and Claude planning | Useful for sprint framing, RICE scoring, dependencies, and scope trade-off notes. Wrapper denies release, deployment, feature flag, and capacity authority. |
+| Trend Researcher | `Blueprints/agents/_imported/__product_division/product-trend-researcher.md` | reference-only | Medium for market and competitor analysis | Medium-high | High with `pre-build-research` | Valuable as research inspiration, but overlaps the canonical `pre-build-research` skill and references paid/external tools, social listening, competitive intelligence, and regulatory monitoring. Keep reference-only until a specific approved research task needs an agent wrapper. |
 
 ## Candidate Agents Selected
 
@@ -57,8 +57,8 @@ Missing read-first files from root AGENTS instructions:
 ## RBAC Notes
 
 - Candidate wrappers are capped at Tier 2: read, analyze, draft, and recommend only.
-- Candidate wrappers may write only draft markdown in `Blueprints\prompts\`, `Direction\reviews\`, and `Solutions\reports\` when explicitly assigned.
-- Candidate wrappers must not write to app source, app runtime, SQL, tests, evals, scripts, `Archive\`, imported agent source files, or production/deployment/auth/payment/database files.
+- Candidate wrappers may write only draft markdown in `Blueprints/prompts/`, `Direction/reviews/`, and `Solutions/reports/` when explicitly assigned.
+- Candidate wrappers must not write to app source, app runtime, SQL, tests, evals, scripts, `Archive/`, imported agent source files, or production/deployment/auth/payment/database files.
 - Candidate wrappers may not access secrets, `.env`, keys, credentials, tokens, cookies, private files, customer data systems, analytics systems, paid tools, external APIs, or vendor accounts.
 - Candidate wrappers may not make final roadmap, launch scope, monetization, pricing, sprint commitment, feature flag, rollback, or product strategy decisions.
 - Any roadmap, launch, monetization, customer-data, paid-tool, external-vendor, or promotion decision escalates to Justin.
@@ -67,8 +67,8 @@ Missing read-first files from root AGENTS instructions:
 
 ## Wrapper Files Created
 
-- `Blueprints\agents\product\product-manager.md`
-- `Blueprints\agents\product\product-sprint-prioritizer.md`
+- `Blueprints/agents/product/product-manager.md`
+- `Blueprints/agents/product/product-sprint-prioritizer.md`
 
 ## Proposed AGENT_INDEX.md Changes
 
@@ -88,8 +88,8 @@ Do not apply these changes. Present them for Justin approval only.
 
 | Agent | Division | Path | Status | Layer | Allowed Use | May Invoke Skills | Approval Required |
 |---|---|---|---|---|---|---|---|
-| Product Manager | Product | `Blueprints\agents\product\product-manager.md` | candidate | Global Blueprint | Draft PRDs, opportunity assessments, non-goals, metrics, product trade-off notes, and implementation handoff prompts. | `slops-context-markdown`, `slops-prompt-generator`, `pre-build-research` | Roadmap, launch scope, monetization, pricing, product strategy, external vendors, user data, analytics, paid tools, active promotion. |
-| Product Sprint Prioritizer | Product | `Blueprints\agents\product\product-sprint-prioritizer.md` | candidate | Global Blueprint | Draft prioritization notes, sprint goals, RICE scoring, dependency notes, scope trade-off recommendations, and approved implementation prompts. | `slops-context-markdown`, `slops-prompt-generator` | Roadmap, launch scope, monetization, pricing, product strategy, external vendors, user data, analytics, paid tools, active promotion. |
+| Product Manager | Product | `Blueprints/agents/product/product-manager.md` | candidate | Global Blueprint | Draft PRDs, opportunity assessments, non-goals, metrics, product trade-off notes, and implementation handoff prompts. | `slops-context-markdown`, `slops-prompt-generator`, `pre-build-research` | Roadmap, launch scope, monetization, pricing, product strategy, external vendors, user data, analytics, paid tools, active promotion. |
+| Product Sprint Prioritizer | Product | `Blueprints/agents/product/product-sprint-prioritizer.md` | candidate | Global Blueprint | Draft prioritization notes, sprint goals, RICE scoring, dependency notes, scope trade-off recommendations, and approved implementation prompts. | `slops-context-markdown`, `slops-prompt-generator` | Roadmap, launch scope, monetization, pricing, product strategy, external vendors, user data, analytics, paid tools, active promotion. |
 
 ## Completion Checklist
 

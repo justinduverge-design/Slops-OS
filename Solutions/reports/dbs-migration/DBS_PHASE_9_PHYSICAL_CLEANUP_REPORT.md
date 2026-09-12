@@ -12,7 +12,7 @@ No files were deleted. No app behavior was changed.
 
 Root DBS reports moved to:
 
-`Solutions\reports\dbs-migration\`
+`Solutions/reports/dbs-migration/`
 
 Moved report files:
 
@@ -33,31 +33,31 @@ Moved report files:
 
 Root operating folders moved into `Blueprints`:
 
-- `agents` -> `Blueprints\agents`
-- `prompts` -> `Blueprints\prompts`
-- `handoffs` -> `Blueprints\handoffs`
-- `skills\skills.md` -> `Blueprints\skills\skills.md`
-- `skills\tools.md` -> `Blueprints\skills\tools.md`
+- `agents` -> `Blueprints/agents`
+- `prompts` -> `Blueprints/prompts`
+- `handoffs` -> `Blueprints/handoffs`
+- `skills\skills.md` -> `Blueprints/skills/skills.md`
+- `skills\tools.md` -> `Blueprints/skills/tools.md`
 
 ssffmvp documentation/control files moved:
 
-- `ssffmvp\context.md` -> `ssffmvp\Direction\context.app-root-legacy.md`
-- `ssffmvp\roadmap.md` -> `ssffmvp\Direction\roadmap.md`
-- `ssffmvp\current_sprint.md` -> `ssffmvp\Direction\current_sprint.md`
-- `ssffmvp\decision_log.md` -> `ssffmvp\Direction\decision_log.md`
-- `ssffmvp\CURRENT_STATUS.md` -> `ssffmvp\Direction\CURRENT_STATUS.md`
-- `ssffmvp\KNOWN_ISSUES.md` -> `ssffmvp\Direction\KNOWN_ISSUES.md`
-- `ssffmvp\RELEASE_READINESS.md` -> `ssffmvp\Direction\RELEASE_READINESS.md`
-- `ssffmvp\APP_UI_PLAN.md` -> `ssffmvp\Direction\APP_UI_PLAN.md`
-- `ssffmvp\prompt_playbook.md` -> `ssffmvp\Blueprints\playbooks\prompt_playbook.md`
-- `ssffmvp\audit_report.json` -> `ssffmvp\Solutions\reports\quality\audit_report.json`
-- `ssffmvp\impeccable_baseline.json` -> `ssffmvp\Solutions\reports\quality\impeccable_baseline.json`
+- `ssffmvp\context.md` -> `ssffmvp\Direction/context.app-root-legacy.md`
+- `ssffmvp\roadmap.md` -> `ssffmvp\Direction/roadmap.md`
+- `ssffmvp\current_sprint.md` -> `ssffmvp\Direction/current_sprint.md`
+- `ssffmvp\decision_log.md` -> `ssffmvp\Direction/decision_log.md`
+- `ssffmvp\CURRENT_STATUS.md` -> `ssffmvp\Direction/CURRENT_STATUS.md`
+- `ssffmvp\KNOWN_ISSUES.md` -> `ssffmvp\Direction/KNOWN_ISSUES.md`
+- `ssffmvp\RELEASE_READINESS.md` -> `ssffmvp\Direction/RELEASE_READINESS.md`
+- `ssffmvp\APP_UI_PLAN.md` -> `ssffmvp\Direction/APP_UI_PLAN.md`
+- `ssffmvp\prompt_playbook.md` -> `ssffmvp\Blueprints/playbooks/prompt_playbook.md`
+- `ssffmvp\audit_report.json` -> `ssffmvp\Solutions/reports/quality/audit_report.json`
+- `ssffmvp\impeccable_baseline.json` -> `ssffmvp\Solutions/reports/quality/impeccable_baseline.json`
 
 ## Files Archived
 
 Root loose docs archived to:
 
-`Archive\superseded-docs\root-redirected\`
+`Archive/superseded-docs/root-redirected/`
 
 - `context.md`
 - `roadmap.md`
@@ -76,27 +76,27 @@ Omen loose file archived:
 
 Root redirect notes:
 
-- `context.md` -> `Direction\context.md`
-- `roadmap.md` -> `Direction\roadmap.md`
-- `manifesto.md` -> `Direction\manifesto.md`
-- `design.md` -> `ssffmvp\Omen\Blueprints\specs\design.md`
+- `context.md` -> `Direction/context.md`
+- `roadmap.md` -> `Direction/roadmap.md`
+- `manifesto.md` -> `Direction/manifesto.md`
+- `design.md` -> `ssffmvp\Omen\Blueprints/specs/design.md`
 
 Root folder redirect notes:
 
-- `agents\README.md` -> `Blueprints\agents`
-- `prompts\README.md` -> `Blueprints\prompts`
-- `skills\README.md` -> `Blueprints\skills`
-- `handoffs\README.md` -> `Blueprints\handoffs`
-- `handoffs\decisions.md` -> `Blueprints\handoffs\decisions.md`
+- `agents\README.md` -> `Blueprints/agents`
+- `prompts\README.md` -> `Blueprints/prompts`
+- `skills\README.md` -> `Blueprints/skills`
+- `handoffs\README.md` -> `Blueprints/handoffs`
+- `handoffs\decisions.md` -> `Blueprints/handoffs/decisions.md`
 
 ssffmvp redirect notes:
 
-- `ssffmvp\context.md` -> `Direction\context.md`
-- `ssffmvp\roadmap.md` -> `Direction\roadmap.md`
-- `ssffmvp\current_sprint.md` -> `Direction\current_sprint.md`
-- `ssffmvp\decision_log.md` -> `Direction\decision_log.md`
+- `ssffmvp\context.md` -> `Direction/context.md`
+- `ssffmvp\roadmap.md` -> `Direction/roadmap.md`
+- `ssffmvp\current_sprint.md` -> `Direction/current_sprint.md`
+- `ssffmvp\decision_log.md` -> `Direction/decision_log.md`
 - `ssffmvp\BRAND_STRATEGY.md` -> `Omen\Brand\positioning.md`
-- `ssffmvp\prompt_playbook.md` -> `Blueprints\playbooks\prompt_playbook.md`
+- `ssffmvp\prompt_playbook.md` -> `Blueprints/playbooks/prompt_playbook.md`
 
 ## Files Skipped
 
@@ -105,7 +105,7 @@ Root skipped:
 - `README.md`, `AGENT.md`, `CLAUDE.md`, `DBS_INDEX.md`, and `DBS_MIGRATION_PLAN.md` were kept at root by instruction.
 - `.claude` was not moved because tool settings may depend on it.
 - `.codex-artifacts`, `_archive`, `_parked`, and remaining `Projects` content were not consolidated because they need deeper review.
-- `Archive\quarantine` was not touched.
+- `Archive/quarantine` was not touched.
 
 ssffmvp skipped:
 
@@ -153,7 +153,7 @@ No active app source files were moved by Phase 9.
 
 Likely safe after Justin review:
 
-- DBS docs and reports under root and `Solutions\reports\dbs-migration`
+- DBS docs and reports under root and `Solutions/reports/dbs-migration`
 - Root redirect notes and DBS navigation docs
 - Root `Blueprints` folder moves
 - ssffmvp DBS documentation folders and redirect notes
@@ -163,7 +163,7 @@ Likely safe after Justin review:
 
 Do not commit:
 
-- `Archive\quarantine`
+- `Archive/quarantine`
 - `.env*`
 - key-like, token-like, cookie, credential, or secret files
 - `.git` folders
@@ -173,7 +173,7 @@ Do not commit:
 ## Remaining For Justin Review
 
 - Whether to remove root redirect folders later after tools/humans adjust.
-- Whether to consolidate `_archive`, `_parked`, `.codex-artifacts`, and `Projects\AI_OPERATING_SYSTEM`.
+- Whether to consolidate `_archive`, `_parked`, `.codex-artifacts`, and `Projects/AI_OPERATING_SYSTEM`.
 - Whether to move app `specs`, `docs`, `skills`, and `handoffs` into DBS later or keep them as active repo workflow folders.
 - Whether root redirect docs should stay permanently for agent compatibility.
 
@@ -185,4 +185,4 @@ No secrets were opened or printed.
 
 No active app source, package/deploy/config files, SQL, scripts, tests, `.git` folders, `node_modules`, or active implementation assets were touched.
 
-`Archive\quarantine` contents were untouched.
+`Archive/quarantine` contents were untouched.

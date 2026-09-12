@@ -10,24 +10,24 @@ Imported agent division folders:
 
 | Old Name | New Name |
 |---|---|
-| `Blueprints\agents\_imported\__academic division` | `Blueprints\agents\_imported\__academic_division` |
-| `Blueprints\agents\_imported\Design Division` | `Blueprints\agents\_imported\__design_division` |
-| `Blueprints\agents\_imported\Engineering Division` | `Blueprints\agents\_imported\__engineering_division` |
-| `Blueprints\agents\_imported\Finance Division` | `Blueprints\agents\_imported\__finance_division` |
-| `Blueprints\agents\_imported\Marketing Division` | `Blueprints\agents\_imported\__marketing_division` |
-| `Blueprints\agents\_imported\Paid Media Division` | `Blueprints\agents\_imported\__paid_media_division` |
-| `Blueprints\agents\_imported\Product Division` | `Blueprints\agents\_imported\__product_division` |
-| `Blueprints\agents\_imported\Project Management Division` | `Blueprints\agents\_imported\__project_management_division` |
-| `Blueprints\agents\_imported\Sales Division` | `Blueprints\agents\_imported\__sales_division` |
-| `Blueprints\agents\_imported\Specialized Division` | `Blueprints\agents\_imported\__specialized_division` |
-| `Blueprints\agents\_imported\Support Division` | `Blueprints\agents\_imported\__support_division` |
-| `Blueprints\agents\_imported\handoffs` | `Blueprints\agents\_imported\__handoffs` |
+| `Blueprints\agents\_imported\__academic division` | `Blueprints/agents/_imported/__academic_division` |
+| `Blueprints\agents\_imported\Design Division` | `Blueprints/agents/_imported/__design_division` |
+| `Blueprints\agents\_imported\Engineering Division` | `Blueprints/agents/_imported/__engineering_division` |
+| `Blueprints\agents\_imported\Finance Division` | `Blueprints/agents/_imported/__finance_division` |
+| `Blueprints\agents\_imported\Marketing Division` | `Blueprints/agents/_imported/__marketing_division` |
+| `Blueprints\agents\_imported\Paid Media Division` | `Blueprints/agents/_imported/__paid_media_division` |
+| `Blueprints\agents\_imported\Product Division` | `Blueprints/agents/_imported/__product_division` |
+| `Blueprints\agents\_imported\Project Management Division` | `Blueprints/agents/_imported/__project_management_division` |
+| `Blueprints\agents\_imported\Sales Division` | `Blueprints/agents/_imported/__sales_division` |
+| `Blueprints\agents\_imported\Specialized Division` | `Blueprints/agents/_imported/__specialized_division` |
+| `Blueprints\agents\_imported\Support Division` | `Blueprints/agents/_imported/__support_division` |
+| `Blueprints/agents/_imported/handoffs` | `Blueprints/agents/_imported/__handoffs` |
 
 Skill package support folder:
 
 | Old Name | New Name |
 |---|---|
-| `Blueprints\skills\slops-prompt-generator\__interface` | `Blueprints\skills\slops-prompt-generator\_interface` |
+| `Blueprints/skills/slops-prompt-generator/__interface` | `Blueprints/skills/slops-prompt-generator/_interface` |
 
 Total folders renamed: 13.
 
@@ -36,7 +36,7 @@ Total folders renamed: 13.
 ### `_imported` Folder Listing
 
 ```text
-C:\Users\JDuve\OneDrive\Desktop\SLOPS\Blueprints\agents\_imported
+C:\Users\JDuve\OneDrive\Desktop\SLOPS\Blueprints/agents/_imported
 
 __academic_division
 __design_division
@@ -57,7 +57,7 @@ Result: 12 folders present. All start with `__`. No folder names contain spaces.
 ### `slops-prompt-generator` Folder Listing
 
 ```text
-C:\Users\JDuve\OneDrive\Desktop\SLOPS\Blueprints\skills\slops-prompt-generator
+C:\Users\JDuve\OneDrive\Desktop\SLOPS\Blueprints/skills/slops-prompt-generator
 
 _interface
 _references
@@ -131,7 +131,7 @@ Note: no `ssffmvp` paths were touched by this rename operation. The status outpu
 
 ## Issues Or Deviations
 
-- `Direction\Reviews\` was not involved in this phase.
+- `Direction/Reviews/` was not involved in this phase.
 - No destination conflicts were encountered.
 - No source folders were missing.
 - The SLOPS root git status did not show rename entries because root DBS content is currently untracked.

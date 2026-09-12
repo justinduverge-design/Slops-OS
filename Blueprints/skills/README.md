@@ -24,18 +24,18 @@ Create new SLOPS-authored skills only in this folder.
 Do not create SLOPS-authored skills in:
 
 - `.codex\skills`
-- `Blueprints\prompts`
-- `slops-saloon\Blueprints`
-- `slops-saloon\omen\Blueprints`
+- `Blueprints/prompts`
+- `slops-saloon/Blueprints`
+- `slops-saloon/omen/Blueprints`
 - old project copies
 
 Tool-installed external skills may still live where their installer expects them. Treat those as external runtime dependencies, not canonical SLOPS skills.
 
 ## Tool Permissions
 
-Every skill uses agents and tools. See `Blueprints\tools\tool-permissions.md` for tool tier policy.
+Every skill uses agents and tools. See `Blueprints/tools/tool-permissions.md` for tool tier policy.
 
-Agent authority (including tool tier caps) is defined in `Blueprints\agents\AGENT_INDEX.md`.
+Agent authority (including tool tier caps) is defined in `Blueprints/agents/AGENT_INDEX.md`.
 
 ## Current Index
 

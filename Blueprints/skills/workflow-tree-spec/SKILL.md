@@ -16,7 +16,7 @@ A workflow tree makes the sequence of actions visible: entry points, decisions, 
 - **Skill name:** `workflow-tree-spec`
 - **Primary user:** Justin
 - **Primary agents:** Claude for planning and product flow review; Codex for file creation when instructed.
-- **DBS layer:** `Blueprints\skills`
+- **DBS layer:** `Blueprints/skills`
 - **Skill type:** simple skill
 - **Status:** active
 
@@ -61,10 +61,10 @@ Helpful inputs:
 Workflow specs usually belong under:
 
 ```text
-Blueprints\specs
-Direction\reviews
-Direction\roadmaps
-slops-saloon\Blueprints\handoffs
+Blueprints/specs
+Direction/reviews
+Direction/roadmaps
+slops-saloon\Blueprints/handoffs
 ```
 
 Use the highest reusable DBS layer that is safe. Do not place project-specific runtime instructions in global `Blueprints` unless Justin explicitly promotes them.
@@ -164,10 +164,10 @@ When using this skill, produce:
 
 ## DBS Routing
 
-- Reusable workflow templates: `Blueprints\specs`
-- Product or planning reviews: `Direction\reviews`
-- Roadmap sequencing: `Direction\roadmaps`
-- App-specific frontend/backend handoffs: `slops-saloon\Blueprints\handoffs`
+- Reusable workflow templates: `Blueprints/specs`
+- Product or planning reviews: `Direction/reviews`
+- Roadmap sequencing: `Direction/roadmaps`
+- App-specific frontend/backend handoffs: `slops-saloon/Blueprints/handoffs`
 - Do not write runtime code, secrets, production configs, or database migrations from this skill alone.
 
 ## RBAC Boundaries
@@ -201,7 +201,7 @@ Watch for:
 Before changing this skill, check:
 
 ```text
-Blueprints\skills\workflow-tree-spec\notes\prior-use-review.md
+Blueprints/skills/workflow-tree-spec/notes/prior-use-review.md
 ```
 
 If present, incorporate repeated corrections into failure modes or the process recipe.

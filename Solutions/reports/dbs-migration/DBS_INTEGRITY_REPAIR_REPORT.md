@@ -8,28 +8,28 @@ This repair pass checked the SLOPS DBS control-file layout for the active app re
 
 `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp`
 
-The scan was path/metadata-only. It pruned `.git`, `node_modules`, and `Archive\quarantine`, and did not read secrets or private credential material.
+The scan was path/metadata-only. It pruned `.git`, `node_modules`, and `Archive/quarantine`, and did not read secrets or private credential material.
 
 ## Expected Files Checked
 
 | Expected path | Status before repair |
 | --- | --- |
-| `ssffmvp\Direction\context.md` | Missing |
+| `ssffmvp\Direction/context.md` | Missing |
 | `ssffmvp\agent_handoff.md` | Missing |
 | `ssffmvp\current_sprint.md` | Missing |
 | `ssffmvp\Omen\README.md` | Missing |
-| `ssffmvp\Omen\Direction\context.md` | Missing |
+| `ssffmvp\Omen\Direction/context.md` | Missing |
 | `ssffmvp\Omen\Brand\brand.md` | Missing |
 | `ssffmvp\Omen\Brand\positioning.md` | Missing |
-| `ssffmvp\Omen\Blueprints\specs\omen-mvp-move.md` | Missing |
+| `ssffmvp\Omen\Blueprints/specs/omen-mvp-move.md` | Missing |
 
 ## Search Results
 
 Found in the safe search scope:
 
 - `C:\Users\JDuve\OneDrive\Desktop\SLOPS\DBS_INDEX.md`
-- `C:\Users\JDuve\OneDrive\Desktop\SLOPS\Solutions\reports\dbs-migration\DBS_PHASE_5_CONTEXT_BRAND_REPORT.md`
-- `C:\Users\JDuve\OneDrive\Desktop\SLOPS\Solutions\reports\dbs-migration\DBS_PHASE_8_FINALIZATION_REPORT.md`
+- `C:\Users\JDuve\OneDrive\Desktop\SLOPS\Solutions/reports/dbs-migration/DBS_PHASE_5_CONTEXT_BRAND_REPORT.md`
+- `C:\Users\JDuve\OneDrive\Desktop\SLOPS\Solutions/reports/dbs-migration/DBS_PHASE_8_FINALIZATION_REPORT.md`
 
 Not found in the safe search scope:
 
@@ -44,11 +44,11 @@ Not found in the safe search scope:
 
 The Phase 5 report exists and says it created:
 
-- `ssffmvp\Direction\context.md`
-- `ssffmvp\Omen\Direction\context.md`
+- `ssffmvp\Direction/context.md`
+- `ssffmvp\Omen\Direction/context.md`
 - `ssffmvp\Omen\Brand\brand.md`
 - `ssffmvp\Omen\Brand\positioning.md`
-- `ssffmvp\Omen\Blueprints\specs\omen-mvp-move.md`
+- `ssffmvp\Omen\Blueprints/specs/omen-mvp-move.md`
 - the `ssffmvp` DBS folders
 
 The Phase 8 report exists and says it created:
@@ -79,8 +79,8 @@ There is not enough evidence to prove cloud-only files caused the mismatch, but 
 1. Recreate only the minimum DBS control directories and starter docs inside `ssffmvp`.
 2. Recreate only the minimum Omen product-layer directories and starter docs inside `ssffmvp\Omen`.
 3. Add a short DBS navigation note to `ssffmvp\README.md`.
-4. Do not move app source folders or old `Projects\ssffmvp` material.
-5. Do not inspect or modify `Archive\quarantine`.
+4. Do not move app source folders or old `Projects/ssffmvp` material.
+5. Do not inspect or modify `Archive/quarantine`.
 6. After repair, run `git status --short` from `ssffmvp` and keep the repair as documentation-only changes.
 
 ## Repair Performed
@@ -95,10 +95,10 @@ Created minimum ssffmvp DBS directories:
 
 Created minimum ssffmvp DBS files:
 
-- `ssffmvp\Direction\context.md`
-- `ssffmvp\Direction\current_sprint.md`
-- `ssffmvp\Direction\decision_log.md`
-- `ssffmvp\Direction\roadmap.md`
+- `ssffmvp\Direction/context.md`
+- `ssffmvp\Direction/current_sprint.md`
+- `ssffmvp\Direction/decision_log.md`
+- `ssffmvp\Direction/roadmap.md`
 - `ssffmvp\agent_handoff.md`
 - `ssffmvp\agent_inbox.md`
 
@@ -115,13 +115,13 @@ Created minimum Omen DBS directories:
 Created minimum Omen DBS files:
 
 - `ssffmvp\Omen\README.md`
-- `ssffmvp\Omen\Direction\context.md`
-- `ssffmvp\Omen\Direction\roadmap.md`
-- `ssffmvp\Omen\Direction\decision_log.md`
-- `ssffmvp\Omen\Direction\current_sprint.md`
+- `ssffmvp\Omen\Direction/context.md`
+- `ssffmvp\Omen\Direction/roadmap.md`
+- `ssffmvp\Omen\Direction/decision_log.md`
+- `ssffmvp\Omen\Direction/current_sprint.md`
 - `ssffmvp\Omen\Brand\brand.md`
 - `ssffmvp\Omen\Brand\positioning.md`
-- `ssffmvp\Omen\Blueprints\specs\omen-mvp-move.md`
+- `ssffmvp\Omen\Blueprints/specs/omen-mvp-move.md`
 
 Updated:
 
@@ -131,10 +131,10 @@ Not recreated:
 
 - `ssffmvp\current_sprint.md`
 
-Reason: the minimum DBS repair list now places sprint context at `ssffmvp\Direction\current_sprint.md`.
+Reason: the minimum DBS repair list now places sprint context at `ssffmvp\Direction/current_sprint.md`.
 
 ## Safety Confirmation
 
 This repair did not deploy, commit, push, delete files, move active app folders, or modify frontend/backend behavior.
 
-No `.env` files, secrets, keys, tokens, cookies, credentials, DNS, SSL, Nginx, Docker, GitHub Actions, package files, SQL, scripts, tests, `node_modules`, `.git` folders, or `Archive\quarantine` contents were opened or modified.
+No `.env` files, secrets, keys, tokens, cookies, credentials, DNS, SSL, Nginx, Docker, GitHub Actions, package files, SQL, scripts, tests, `node_modules`, `.git` folders, or `Archive/quarantine` contents were opened or modified.

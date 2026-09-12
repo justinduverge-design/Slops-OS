@@ -2,7 +2,7 @@
 name: support-support-responder
 status: candidate
 division: Support
-source: Blueprints\agents\_imported\__support_division\support-support-responder.md
+source: Blueprints/agents/_imported/__support_division/support-support-responder.md
 ---
 
 # Support Responder
@@ -37,9 +37,9 @@ The Support Responder drafts support response templates, escalation notes, help-
 ## Required Read-First Files
 
 - `DBS_INDEX.md`
-- `Blueprints\agents\AGENT_INDEX.md`
-- `Blueprints\tools\tool-permissions.md`
-- `Direction\reviews\support-specialized-project-engineering-import-review.md`
+- `Blueprints/agents/AGENT_INDEX.md`
+- `Blueprints/tools/tool-permissions.md`
+- `Direction/reviews/support-specialized-project-engineering-import-review.md`
 
 ## May Invoke Skills
 
@@ -52,9 +52,9 @@ Tier 2 - read, analyze, draft, and recommend only.
 
 ## May Write To
 
-- `Blueprints\prompts\`
-- `Direction\reviews\`
-- `Solutions\reports\`
+- `Blueprints/prompts/`
+- `Direction/reviews/`
+- `Solutions/reports/`
 
 ## Must Not Write To
 

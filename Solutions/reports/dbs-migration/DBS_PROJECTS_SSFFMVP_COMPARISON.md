@@ -23,14 +23,14 @@ This was a comparison-only pass. No files were moved, deleted, archived, committ
 
 ## Branch / Remote Notes
 
-`Projects\ssffmvp` appears to have only:
+`Projects/ssffmvp` appears to have only:
 
 - `main`
 - `remotes/origin/main`
 
 Canonical `ssffmvp` has multiple local branches and remote tracking for `origin/main` and `origin/feat/title-espn-enable`.
 
-This suggests `Projects\ssffmvp` is older or less active than the canonical app repo, but it should not be archived automatically because it contains secret-like files and one unique private-key-like file.
+This suggests `Projects/ssffmvp` is older or less active than the canonical app repo, but it should not be archived automatically because it contains secret-like files and one unique private-key-like file.
 
 ## File Comparison
 
@@ -38,12 +38,12 @@ Comparison excluded `.git` and `node_modules`.
 
 | Metric | Result |
 | --- | --- |
-| `Projects\ssffmvp` file count | 30 |
+| `Projects/ssffmvp` file count | 30 |
 | Canonical `ssffmvp` file count | 261 |
-| Files present in `Projects\ssffmvp` but not canonical `ssffmvp` | 2 |
-| Same-relative-path docs/assets newer in `Projects\ssffmvp` | 0 |
+| Files present in `Projects/ssffmvp` but not canonical `ssffmvp` | 2 |
+| Same-relative-path docs/assets newer in `Projects/ssffmvp` | 0 |
 
-Files present in `Projects\ssffmvp` but not canonical `ssffmvp`:
+Files present in `Projects/ssffmvp` but not canonical `ssffmvp`:
 
 | Relative Path | Bytes | Last Modified |
 | --- | ---: | --- |
@@ -52,7 +52,7 @@ Files present in `Projects\ssffmvp` but not canonical `ssffmvp`:
 
 ## Package / Source Check
 
-`Projects\ssffmvp` contains package files:
+`Projects/ssffmvp` contains package files:
 
 - `package.json`
 - `package-lock.json`
@@ -79,11 +79,11 @@ Because this folder contains `.env` and key-like files, it should not be moved o
 
 ## Newer Docs / Assets
 
-No same-relative-path markdown, text, image, or PDF assets were newer in `Projects\ssffmvp` than in canonical `ssffmvp`.
+No same-relative-path markdown, text, image, or PDF assets were newer in `Projects/ssffmvp` than in canonical `ssffmvp`.
 
 ## Safety Decision
 
-`Projects\ssffmvp` is not safe to archive in this phase.
+`Projects/ssffmvp` is not safe to archive in this phase.
 
 Reasons:
 

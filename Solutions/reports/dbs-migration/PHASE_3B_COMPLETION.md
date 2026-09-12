@@ -22,19 +22,19 @@ After verifying the Phase 2-4 output, four residual items were identified where 
 
 ---
 
-## Issue #2 — SKILL_ROUTING.md: `Blueprints\Agents` → `Blueprints\agents`
+## Issue #2 — SKILL_ROUTING.md: `Blueprints/Agents` → `Blueprints/agents`
 
-**File**: `Blueprints\skills\SKILL_ROUTING.md`
+**File**: `Blueprints/skills/SKILL_ROUTING.md`
 **Line**: 60 (Skill / Agent / Prompt Split table)
 
 **Before**:
 ```
-| Agent | Actor role with permissions, denied work, status, and escalation. | `Blueprints\Agents` |
+| Agent | Actor role with permissions, denied work, status, and escalation. | `Blueprints/Agents` |
 ```
 
 **After**:
 ```
-| Agent | Actor role with permissions, denied work, status, and escalation. | `Blueprints\agents` |
+| Agent | Actor role with permissions, denied work, status, and escalation. | `Blueprints/agents` |
 ```
 
 **Action**: ✅ Fixed
@@ -43,17 +43,17 @@ After verifying the Phase 2-4 output, four residual items were identified where 
 
 ## Issue #3 — pre-build-research/SKILL.md: Multiple path casing fixes
 
-**File**: `Blueprints\skills\pre-build-research\SKILL.md`
+**File**: `Blueprints/skills/pre-build-research/SKILL.md`
 
 **Changes made**:
 
 | Before | After |
 |--------|-------|
-| `Blueprints\Skills\pre-build-research\SKILL.md` | `Blueprints\skills\pre-build-research\SKILL.md` |
-| `Direction\Reviews` (×3 across DBS routing block) | `Direction\reviews` |
-| `Blueprints\Prompts` (×3 across DBS routing block) | `Blueprints\prompts` |
-| `References\Research` (×3) | `References\research` |
-| `References\Patterns` | `References\patterns` |
+| `Blueprints/Skills/pre-build-research/SKILL.md` | `Blueprints/skills/pre-build-research/SKILL.md` |
+| `Direction/Reviews` (×3 across DBS routing block) | `Direction/reviews` |
+| `Blueprints/Prompts` (×3 across DBS routing block) | `Blueprints/prompts` |
+| `References/Research` (×3) | `References/research` |
+| `References/Patterns` | `References/patterns` |
 
 **Action**: ✅ Fixed — all DBS routing path references in this file now use canonical lowercase subfolders
 
@@ -61,18 +61,18 @@ After verifying the Phase 2-4 output, four residual items were identified where 
 
 ## Issue #4 — _template/SKILL.md: Multiple path casing fixes
 
-**File**: `Blueprints\skills\_template\SKILL.md`
+**File**: `Blueprints/skills/_template/SKILL.md`
 
 **Changes made**:
 
 | Location | Before | After |
 |----------|--------|-------|
-| Frontmatter description | `Blueprints\Skills` | `Blueprints\skills` |
-| Skill Identity section (line 23) | `Blueprints\Skills` | `Blueprints\skills` |
+| Frontmatter description | `Blueprints/Skills` | `Blueprints/skills` |
+| Skill Identity section (line 23) | `Blueprints/Skills` | `Blueprints/skills` |
 | DBS Routing code block (subfolders) | `Skills/`, `Agents/`, `Prompts/`, `Templates/`, `Specs/`, `Decisions/`, `Reviews/`, `Roadmaps/`, `Research/`, `Patterns/`, `Examples/`, `Deliverables/`, `Reports/`, `Superseded/`, `Imports/` | All lowercase |
-| Agent and RBAC Rules section | `Blueprints\Skills` | `Blueprints\skills` |
-| Agent and RBAC Rules section | `Blueprints\Agents` | `Blueprints\agents` |
-| Agent and RBAC Rules section | `Blueprints\Prompts` | `Blueprints\prompts` |
+| Agent and RBAC Rules section | `Blueprints/Skills` | `Blueprints/skills` |
+| Agent and RBAC Rules section | `Blueprints/Agents` | `Blueprints/agents` |
+| Agent and RBAC Rules section | `Blueprints/Prompts` | `Blueprints/prompts` |
 
 **Action**: ✅ Fixed — master template is now fully canonical for all three DBS subfolder paths
 
@@ -82,9 +82,9 @@ After verifying the Phase 2-4 output, four residual items were identified where 
 
 | File | Type | Changes |
 |------|------|---------|
-| `Blueprints\skills\SKILL_ROUTING.md` | Edit | 1 path reference (Agents → agents) |
-| `Blueprints\skills\pre-build-research\SKILL.md` | Edit | 8 path references (Skills/Prompts/Reviews/Research/Patterns → lowercase) |
-| `Blueprints\skills\_template\SKILL.md` | Edit | 18 path references (all DBS subfolder names → lowercase) |
+| `Blueprints/skills/SKILL_ROUTING.md` | Edit | 1 path reference (Agents → agents) |
+| `Blueprints/skills/pre-build-research/SKILL.md` | Edit | 8 path references (Skills/Prompts/Reviews/Research/Patterns → lowercase) |
+| `Blueprints/skills/_template/SKILL.md` | Edit | 18 path references (all DBS subfolder names → lowercase) |
 
 **Total files edited**: 3
 **Total references fixed**: ~27
@@ -95,14 +95,14 @@ After verifying the Phase 2-4 output, four residual items were identified where 
 
 The following patterns should no longer appear in any SLOPS skill or agent files (except inside Archive/ or as explicit historical references):
 
-- `Blueprints\Skills` ← use `Blueprints\skills`
-- `Blueprints\Agents` ← use `Blueprints\agents`
-- `Blueprints\Prompts` ← use `Blueprints\prompts`
-- `Direction\Reviews` ← use `Direction\reviews`
-- `References\Research` ← use `References\research`
+- `Blueprints/Skills` ← use `Blueprints/skills`
+- `Blueprints/Agents` ← use `Blueprints/agents`
+- `Blueprints/Prompts` ← use `Blueprints/prompts`
+- `Direction/Reviews` ← use `Direction/reviews`
+- `References/Research` ← use `References/research`
 
 DBS pillars remain Title Case as intended:
-- `Direction\`, `Blueprints\`, `Solutions\`, `References\`, `Archive\` ✅
+- `Direction/`, `Blueprints/`, `Solutions/`, `References/`, `Archive/` ✅
 
 ---
 
@@ -126,4 +126,4 @@ DBS pillars remain Title Case as intended:
 ---
 
 **Report Status**: Final
-**Archival**: `Solutions\reports\dbs-migration\PHASE_3B_COMPLETION.md`
+**Archival**: `Solutions/reports/dbs-migration/PHASE_3B_COMPLETION.md`

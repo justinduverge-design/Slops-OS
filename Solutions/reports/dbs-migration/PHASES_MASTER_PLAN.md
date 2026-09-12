@@ -45,10 +45,10 @@ Each phase entry includes:
 
 ## Phase 1 — `_imported` Folder Renames ✅
 
-**Goal**: Rename 12 division folders under `Blueprints\agents\_imported\` to the canonical `__lowercase_division` pattern. Fix `slops-prompt-generator\__interface` → `_interface`.
+**Goal**: Rename 12 division folders under `Blueprints/agents/_imported/` to the canonical `__lowercase_division` pattern. Fix `slops-prompt-generator\__interface` → `_interface`.
 
 **Executor**: Codex
-**Prompt**: `Blueprints\prompts\phase-1-codex-nomenclature-rename.md`
+**Prompt**: `Blueprints/prompts/phase-1-codex-nomenclature-rename.md`
 
 ### SLOPS Skills Invoked
 | Skill | Purpose |
@@ -72,7 +72,7 @@ Each phase entry includes:
 **Goal**: Rename `Direction\Reviews → reviews`, `Omen\Assets → assets`, `Omen\Brand → brand`.
 
 **Executor**: Codex
-**Prompt**: `Blueprints\prompts\phase-1b-codex-title-case-cleanup.md`
+**Prompt**: `Blueprints/prompts/phase-1b-codex-title-case-cleanup.md`
 
 ### SLOPS Skills Invoked
 | Skill | Purpose |
@@ -93,10 +93,10 @@ Each phase entry includes:
 
 ## Phases 2–4 — Tools Layer, Agent Matrix, Path Normalization ✅
 
-**Goal**: Create `Blueprints\tools\` layer, `AGENT_INDEX.md`, `TOOLS_INDEX.md`, normalize 8 cross-reference files, document naming conventions, create app-layer READMEs.
+**Goal**: Create `Blueprints/tools/` layer, `AGENT_INDEX.md`, `TOOLS_INDEX.md`, normalize 8 cross-reference files, document naming conventions, create app-layer READMEs.
 
 **Executor**: Claude (with `slops-context-markdown` skill)
-**Prompt**: `Blueprints\prompts\phases-2-4-claude-index-tools-skills.md`
+**Prompt**: `Blueprints/prompts/phases-2-4-claude-index-tools-skills.md`
 
 ### SLOPS Skills Invoked
 | Skill | Purpose |
@@ -117,10 +117,10 @@ Each phase entry includes:
 
 ## Phase 3B — Residual Path Casing Fixes ✅
 
-**Goal**: Fix 3 remaining stale `Blueprints\Skills` / `Blueprints\Agents` capitalization issues in SKILL_ROUTING.md, pre-build-research/SKILL.md, and _template/SKILL.md.
+**Goal**: Fix 3 remaining stale `Blueprints/Skills` / `Blueprints/Agents` capitalization issues in SKILL_ROUTING.md, pre-build-research/SKILL.md, and _template/SKILL.md.
 
 **Executor**: Claude (in-session edits)
-**Output**: `Solutions\reports\dbs-migration\PHASE_3B_COMPLETION.md`
+**Output**: `Solutions/reports/dbs-migration/PHASE_3B_COMPLETION.md`
 
 ### SLOPS Skills Invoked
 | Skill | Purpose |
@@ -146,7 +146,7 @@ Each phase entry includes:
 **Agents**: product-manager, product-feedback-synthesizer, product-sprint-prioritizer, product-behavioral-nudge-engine, product-trend-researcher
 
 **Executor**: Claude (with `slops-agent-author` skill)
-**Prompt**: `Blueprints\prompts\phase-5\phase-5a-product-division.md`
+**Prompt**: `Blueprints/prompts/phase-5/phase-5a-product-division.md`
 
 ### SLOPS Skills Invoked
 | Skill | Purpose |
@@ -180,7 +180,7 @@ Each phase entry includes:
 **Agents**: design-brand-guardian, design-image-prompt-engineer, design-ui-designer, design-ux-architect, design-ux-researcher, design-visual-storyteller, design-whimsy-injector
 
 **Executor**: Claude (with `slops-agent-author` skill)
-**Prompt**: `Blueprints\prompts\phase-5\phase-5b-design-division.md` *(to be created)*
+**Prompt**: `Blueprints/prompts/phase-5/phase-5b-design-division.md` *(to be created)*
 
 ### SLOPS Skills Invoked
 | Skill | Purpose |
@@ -212,7 +212,7 @@ Each phase entry includes:
 **Agents**: marketing-app-store-optimizer, marketing-carousel-growth-engine, marketing-content-creator, marketing-instagram-curator, marketing-reddit-community-builder, marketing-social-media-strategist, marketing-tiktok-strategist, marketing-twitter-engager, marketing-video-optimization-specialist
 
 **Executor**: Claude (with `slops-agent-author` skill)
-**Prompt**: `Blueprints\prompts\phase-5\phase-5c-marketing-division.md` *(to be created)*
+**Prompt**: `Blueprints/prompts/phase-5/phase-5c-marketing-division.md` *(to be created)*
 
 ### SLOPS Skills Invoked
 | Skill | Purpose |
@@ -248,7 +248,7 @@ Each phase entry includes:
 **Agents**: sales-account-strategist, sales-coach, sales-deal-strategist, sales-discovery-coach, sales-engineer, sales-outbound-strategist, sales-outreach, sales-pipeline-analyst, sales-proposal-strategist
 
 **Executor**: Claude (with `slops-agent-author` skill)
-**Prompt**: `Blueprints\prompts\phase-5\phase-5d-sales-division.md` *(to be created)*
+**Prompt**: `Blueprints/prompts/phase-5/phase-5d-sales-division.md` *(to be created)*
 
 ### SLOPS Skills Invoked
 | Skill | Purpose |
@@ -277,7 +277,7 @@ Each phase entry includes:
 **Agents**: support-analytics-reporter, support-executive-summary-generator, support-finance-tracker, support-infrastructure-maintainer, support-legal-compliance-checker, support-support-responder
 
 **Executor**: Claude (with `slops-agent-author` skill)
-**Prompt**: `Blueprints\prompts\phase-5\phase-5e-support-division.md` *(to be created)*
+**Prompt**: `Blueprints/prompts/phase-5/phase-5e-support-division.md` *(to be created)*
 
 **⚠ Caution**: `support-infrastructure-maintainer` and `support-finance-tracker` likely describe elevated tool access. Review carefully. Assign `do-not-activate` if scope is ambiguous.
 
@@ -308,7 +308,7 @@ Each phase entry includes:
 **Agents**: agents-orchestrator, blender-addon-engineer, compliance-auditor, customer-service, language-translator, loan-officer-assistant, real-estate-buyer-seller, recruitment-specialist, report-distribution-agent, retail-customer-returns, specialized-developer-advocate, specialized-document-generator, specialized-workflow-architect, supply-chain-strategist
 
 **Executor**: Claude (with `slops-agent-author` skill)
-**Prompt**: `Blueprints\prompts\phase-5\phase-5f-specialized-division.md` *(to be created)*
+**Prompt**: `Blueprints/prompts/phase-5/phase-5f-specialized-division.md` *(to be created)*
 
 **⚠ Caution**: `agents-orchestrator` may describe broad multi-agent authority. Review very carefully. `compliance-auditor` may have access assumptions that conflict with SLOPS RBAC. Do not promote `loan-officer-assistant` or `real-estate-buyer-seller` — not relevant to current scope.
 
@@ -339,7 +339,7 @@ Each phase entry includes:
 **Agents**: project-management-experiment-tracker, project-management-jira-workflow-steward, project-management-project-shepherd, project-management-studio-operations, project-management-studio-producer, project-manager-senior
 
 **Executor**: Claude (with `slops-agent-author` skill)
-**Prompt**: `Blueprints\prompts\phase-5\phase-5g-project-management-division.md` *(to be created)*
+**Prompt**: `Blueprints/prompts/phase-5/phase-5g-project-management-division.md` *(to be created)*
 
 **Note**: `project-management-jira-workflow-steward` assumes Jira. SLOPS uses Linear as the preferred tracker. Map the role to Linear in the wrapper.
 
@@ -374,7 +374,7 @@ Each phase entry includes:
 **Agents**: engineering-ai-engineer, engineering-autonomous-optimization-architect, engineering-backend-architect, engineering-code-reviewer, engineering-codebase-onboarding-engineer, engineering-data-engineer, engineering-devops-automator, engineering-filament-optimization-specialist, engineering-frontend-developer, engineering-git-workflow-master, engineering-mobile-app-builder, engineering-security-engineer, engineering-senior-developer, engineering-software-architect, engineering-sre, engineering-technical-writer, engineering-threat-detection-engineer
 
 **Executor**: Claude (with `slops-agent-author` skill)
-**Prompt**: `Blueprints\prompts\phase-5\phase-5h-engineering-division.md` *(to be created)*
+**Prompt**: `Blueprints/prompts/phase-5/phase-5h-engineering-division.md` *(to be created)*
 
 **⚠ High Risk Flags**:
 - `engineering-devops-automator` — likely describes deployment/infra authority → assign `do-not-activate` until security review
@@ -420,7 +420,7 @@ Each phase entry includes:
 **Agents**: paid-media-auditor, paid-media-creative-strategist, paid-media-paid-social-strategist, paid-media-ppc-strategist, paid-media-programmatic-buyer, paid-media-search-query-analyst, paid-media-tracking-specialist
 
 **Executor**: Claude (with `slops-agent-author` skill)
-**Prompt**: `Blueprints\prompts\phase-5\phase-5i-paid-media-division.md` *(to be created)*
+**Prompt**: `Blueprints/prompts/phase-5/phase-5i-paid-media-division.md` *(to be created)*
 
 **⚠ High Risk Flags**:
 - `paid-media-programmatic-buyer` — describes active ad spend authority → assign `do-not-activate` until Justin approves explicit spend controls
@@ -457,7 +457,7 @@ Each phase entry includes:
 **Agents**: finance-bookkeeper-controller, finance-financial-analyst, finance-fpa-analyst, finance-investment-researcher, finance-tax-strategist
 
 **Executor**: Claude (with `slops-agent-author` skill)
-**Prompt**: `Blueprints\prompts\phase-5\phase-5j-finance-division.md` *(to be created)*
+**Prompt**: `Blueprints/prompts/phase-5/phase-5j-finance-division.md` *(to be created)*
 
 **⚠ Caution**: `finance-bookkeeper-controller` and `finance-tax-strategist` may assume accounting software write access. Assign `do-not-activate` for any agent that describes initiating payments, recording transactions, or modifying ledgers.
 
@@ -487,7 +487,7 @@ Each phase entry includes:
 **Agents**: academic-anthropologist, academic-geographer, academic-historian, academic-narratologist, academic-psychologist
 
 **Executor**: Claude (with `slops-agent-author` skill)
-**Prompt**: `Blueprints\prompts\phase-5\phase-5k-academic-division.md` *(to be created)*
+**Prompt**: `Blueprints/prompts/phase-5/phase-5k-academic-division.md` *(to be created)*
 
 **Note**: These agents are low risk and potentially useful for founder interview mode, doctrine extraction, and product narrative work. `academic-psychologist` and `academic-narratologist` may be valuable for brand voice and user research synthesis.
 
@@ -517,7 +517,7 @@ Each phase entry includes:
 **Files**: README.md
 
 **Executor**: Claude (with `slops-agent-author` skill)
-**Prompt**: `Blueprints\prompts\phase-5\phase-5l-handoffs.md` *(to be created)*
+**Prompt**: `Blueprints/prompts/phase-5/phase-5l-handoffs.md` *(to be created)*
 
 ### SLOPS Skills Invoked
 | Skill | Purpose |
@@ -542,13 +542,13 @@ Each phase entry includes:
 **Goal**: Decide final home for `manager_agent.md` and `sub_agents.md`. Document the communication protocol between 0-OS, 1-ssffmvp, and 2-Omen layers so future agents can follow the handoff chain without ambiguity.
 
 **Executor**: Claude (with `slops-agent-author` + `slops-context-markdown` skills)
-**Prompt**: `Blueprints\prompts\phase-6-handoff-documentation.md` *(to be created)*
+**Prompt**: `Blueprints/prompts/phase-6-handoff-documentation.md` *(to be created)*
 
 **Prerequisite**: Phase 5 must be substantially complete so the active agent roster is known before the handoff protocol is written.
 
 **Key decisions Phase 6 must make**:
-1. Confirm `manager_agent.md` and `sub_agents.md` stay at `ssffmvp\Blueprints\prompts\` (project-level, not global)
-2. Add redirect stubs at `Blueprints\agents\` root pointing to the project-level location
+1. Confirm `manager_agent.md` and `sub_agents.md` stay at `ssffmvp\Blueprints/prompts\` (project-level, not global)
+2. Add redirect stubs at `Blueprints/agents/` root pointing to the project-level location
 3. Define the 0-OS → 1-ssffmvp → 2-Omen handoff protocol document
 4. Document what each layer owns, what it passes down, and what escalates up
 
@@ -620,10 +620,10 @@ These items are tracked but not yet scheduled:
 |------|-------------|------|
 | `ssffmvp` root loose-file cleanup | ~10 files (BRAND_STRATEGY.md, agent_handoff.md, etc.) need to move to DBS homes | Low |
 | `oraclepu.key` security review | Key file at ssffmvp repo root — verify gitignored, consider moving out of repo | Medium |
-| `Archive\` full audit | Some items in Archive may need re-routing; not touched during migration | Low |
-| `SKILL_INDEX.md` archive | Old redirect stub can be archived to `Archive\superseded\` if no live references | Low |
+| `Archive/` full audit | Some items in Archive may need re-routing; not touched during migration | Low |
+| `SKILL_INDEX.md` archive | Old redirect stub can be archived to `Archive/superseded/` if no live references | Low |
 
 ---
 
 **Document Status**: Complete — all phases executed. 2026-05-23.
-**Canonical location**: `Solutions\reports\dbs-migration\PHASES_MASTER_PLAN.md`
+**Canonical location**: `Solutions/reports/dbs-migration/PHASES_MASTER_PLAN.md`

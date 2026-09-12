@@ -1,15 +1,17 @@
 ---
 name: design-image-prompt-engineer
-status: candidate
+status: superseded
+superseded_by: slops-image-prompt
+superseded_on: 2026-09-12
 division: Design
-source: Blueprints\agents\_imported\__design_division\design-image-prompt-engineer.md
+source: Blueprints/agents/_imported/__design_division/design-image-prompt-engineer.md
 ---
 
 # Design Image Prompt Engineer
 
 ## Status
 
-candidate
+**superseded 2026-09-12 — converted to the `slops-image-prompt` skill.** This wrapper is kept as provenance for how `slops-image-prompt` was derived. Do not activate it; invoke the skill.
 
 ## Division
 
@@ -38,9 +40,9 @@ The Design Image Prompt Engineer drafts image-generation prompts and visual-dire
 ## Required Read-First Files
 
 - `DBS_INDEX.md`
-- `Blueprints\agents\AGENT_INDEX.md`
-- `Blueprints\tools\tool-permissions.md`
-- `Direction\reviews\design-division-import-review.md`
+- `Blueprints/agents/AGENT_INDEX.md`
+- `Blueprints/tools/tool-permissions.md`
+- `Direction/reviews/design-division-import-review.md`
 
 ## May Invoke Skills
 
@@ -54,16 +56,16 @@ Tier 2 - read, analyze, draft, and recommend only.
 
 ## May Write To
 
-- `Blueprints\prompts\`
-- `Direction\reviews\`
-- `Solutions\reports\`
+- `Blueprints/prompts/`
+- `Direction/reviews/`
+- `Solutions/reports/`
 
 ## Must Not Write To
 
 - `slops-saloon\omen\src\`
 - `slops-saloon\omen\frontend\`
 - `slops-saloon\omen\client\`
-- `Archive\`
+- `Archive/`
 - `.env`, `.key`, credentials, secrets, tokens, cookies
 - production, deployment, payment, auth, database, or infrastructure files
 

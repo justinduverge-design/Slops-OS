@@ -1,6 +1,6 @@
 # Layer-to-Layer Handoff Protocol
 
-**File**: `Blueprints\agents\layer-handoff-protocol.md`
+**File**: `Blueprints/agents/layer-handoff-protocol.md`
 **Status**: Active doctrine
 **Layer**: 0-OS (Global Blueprint)
 **Last updated**: 2026-05-23
@@ -32,11 +32,11 @@ boundary must follow this protocol.
 **Owns:**
 - Naming conventions and DBS folder schema
 - Canonical agent authority model (`AGENT_INDEX.md`)
-- Global skills (`Blueprints\skills\`)
-- Global agent roster (`Blueprints\agents\`)
-- Cross-product tool permissions (`Blueprints\tools\tool-permissions.md`)
-- Founder context, brand doctrine, and ADRs (`Direction\`)
-- OS-level prompts and templates (`Blueprints\prompts\`)
+- Global skills (`Blueprints/skills/`)
+- Global agent roster (`Blueprints/agents/`)
+- Cross-product tool permissions (`Blueprints/tools/tool-permissions.md`)
+- Founder context, brand doctrine, and ADRs (`Direction/`)
+- OS-level prompts and templates (`Blueprints/prompts/`)
 
 **Does NOT own:**
 - App-specific product decisions
@@ -58,7 +58,7 @@ boundary must follow this protocol.
 **Owns:**
 - Product strategy documents (`slops-saloon\Direction\`)
 - App-level Blueprints (`slops-saloon\Blueprints\`)
-- Runtime agent prompts (`slops-saloon\omen\Blueprints\prompts\`)
+- Runtime agent prompts (`slops-saloon\omen\Blueprints/prompts\`)
 - App-wide solutions and reports (`slops-saloon\Solutions\`)
 - Implementation context for the slops-saloon product
 
@@ -128,12 +128,12 @@ Runtime prompts (agent system prompts that run in production) belong at the
 
 | Artifact | Correct Location | Reason |
 |----------|-----------------|--------|
-| `manager_agent.md` | `slops-saloon\omen\Blueprints\prompts\` | Product-specific runtime logic. **Canonical and live.** The L0 redirect stub was archived 2026-07-30. |
-| `sub_agents.md` | `slops-saloon\omen\Blueprints\prompts\` | Product-specific runtime logic. **Canonical and live.** The L0 redirect stub was archived 2026-07-30. |
-| Global skill files | `Blueprints\skills\` (0-OS) | Reusable across all products |
-| Global agent roster | `Blueprints\agents\` (0-OS) | Authority index, not runtime content |
+| `manager_agent.md` | `slops-saloon\omen\Blueprints/prompts\` | Product-specific runtime logic. **Canonical and live.** The L0 redirect stub was archived 2026-07-30. |
+| `sub_agents.md` | `slops-saloon\omen\Blueprints/prompts\` | Product-specific runtime logic. **Canonical and live.** The L0 redirect stub was archived 2026-07-30. |
+| Global skill files | `Blueprints/skills/` (0-OS) | Reusable across all products |
+| Global agent roster | `Blueprints/agents/` (0-OS) | Authority index, not runtime content |
 
-Runtime prompt stubs at `Blueprints\agents\` exist only to prevent navigation
+Runtime prompt stubs at `Blueprints/agents/` exist only to prevent navigation
 confusion. They redirect to the canonical product-layer location and contain no
 runtime content.
 
@@ -181,8 +181,8 @@ SLOPS\slops-saloon\omen\           ← Layer 2 (omen): App layer
 
 ## See Also
 
-- `Blueprints\agents\AGENT_INDEX.md` — canonical agent authority matrix
-- `Blueprints\tools\tool-permissions.md` — tool tier definitions
-- `Blueprints\skills\SKILL_ROUTING.md` — skill registry and routing (keyed to roles and capabilities, not vendors)
-- `slops-saloon\omen\Blueprints\prompts\manager_agent.md` — **canonical** live runtime prompt (the L0 redirect stub was archived under `Archive/authority-routing/`)
-- `slops-saloon\omen\Blueprints\prompts\sub_agents.md` — **canonical** live runtime prompt (the L0 redirect stub was archived under `Archive/authority-routing/`)
+- `Blueprints/agents/AGENT_INDEX.md` — canonical agent authority matrix
+- `Blueprints/tools/tool-permissions.md` — tool tier definitions
+- `Blueprints/skills/SKILL_ROUTING.md` — skill registry and routing (keyed to roles and capabilities, not vendors)
+- `slops-saloon/omen/Blueprints/prompts/manager_agent.md` — **canonical** live runtime prompt (the L0 redirect stub was archived under `Archive/authority-routing/`)
+- `slops-saloon/omen/Blueprints/prompts/sub_agents.md` — **canonical** live runtime prompt (the L0 redirect stub was archived under `Archive/authority-routing/`)

@@ -1,15 +1,17 @@
 ---
 name: finance-financial-analyst
-status: candidate
+status: superseded
+superseded_by: slops-financial-sketch
+superseded_on: 2026-09-12
 division: Finance
-source: Blueprints\agents\_imported\__finance_division\finance-financial-analyst.md
+source: Blueprints/agents/_imported/__finance_division/finance-financial-analyst.md
 ---
 
 # Finance Financial Analyst
 
 ## Status
 
-candidate
+**superseded 2026-09-12 — converted to the `slops-financial-sketch` skill.** This wrapper is kept as provenance for how `slops-financial-sketch` was derived. Do not activate it; invoke the skill.
 
 ## Division
 
@@ -37,9 +39,9 @@ The Finance Financial Analyst drafts sanitized financial model templates, varian
 ## Required Read-First Files
 
 - `DBS_INDEX.md`
-- `Blueprints\agents\AGENT_INDEX.md`
-- `Blueprints\tools\tool-permissions.md`
-- `Direction\reviews\paid-media-finance-academic-import-review.md`
+- `Blueprints/agents/AGENT_INDEX.md`
+- `Blueprints/tools/tool-permissions.md`
+- `Direction/reviews/paid-media-finance-academic-import-review.md`
 
 ## May Invoke Skills
 
@@ -53,9 +55,9 @@ Tier 2 - read, analyze, draft, and recommend only.
 
 ## May Write To
 
-- `Blueprints\prompts\`
-- `Direction\reviews\`
-- `Solutions\reports\`
+- `Blueprints/prompts/`
+- `Direction/reviews/`
+- `Solutions/reports/`
 
 ## Must Not Write To
 

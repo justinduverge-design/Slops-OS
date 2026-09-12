@@ -135,6 +135,70 @@ When editing or creating context markdown:
 - Mark uncertain items as open questions.
 - Do not turn temporary brainstorms into permanent doctrine without approval.
 
+## Writing for agents
+
+Before authoring or restructuring any document an agent reads, read
+`References/patterns/writing-for-agents.md` — context pointers, the information hierarchy,
+completion criteria, leading words, and pruning. Adapted from `mattpocock/skills` (MIT) and
+extended with the SLOPS rule below.
+
+**Every environmental claim carries a date and a falsifier.** An environmental claim asserts
+something outside the repo: host machine, OS, installed tooling, a hardware limit, a vendor's
+availability. Write the date it was true and the event that ends it, in the line itself or in
+`freshness` on an opted-in page. `"Local Xcode is not viable (2017 Intel MacBook Air)"` outlived
+its truth twice because it carried neither. A claim you cannot date or falsify is a claim without
+evidence — say that instead.
+
+## Valor Brain metadata
+
+`valor-brain/v1` is the machine-readable contract for **knowledge pages** — decisions, reviews,
+specs, resolvers, logs. It makes authority, state, provenance, relationships and freshness
+checkable while explanation and history stay in Markdown. Canonical spec:
+`Blueprints/specs/valor-brain-metadata-v1.md`. Field validation:
+`Blueprints/specs/valor-brain-page.schema.json`.
+
+Opt a page in when it will be read as authority — when an agent could route or act on it. A page
+declares itself with one line and ordinary Markdown stays valid and ignored:
+
+```yaml
+---
+metadata_profile: valor-brain/v1
+```
+
+An opted-in page then carries `page_id`, `page_type`, `layer`, `authority`, `owner`, `state`,
+`sources`, `relationships`, `freshness`, `snapshot`, and a body with exactly one H1, a
+`## Compiled truth` section, and an append-only `## Append-only timeline`. Compiled truth is
+edited when the source changes; timeline entries are appended, never rewritten to make history
+look cleaner.
+
+**This is not the skill frontmatter contract.** A `SKILL.md` uses the harness contract — `name`
+and `description` — which is what skill routing reads. Do not add `metadata_profile` to a
+`SKILL.md`; the two contracts serve different readers and conflating them breaks discovery.
+
+Validate before finishing:
+
+```bash
+node Blueprints/tools/valor-brain/validate.mjs
+```
+
+An invalid opted-in page is a P0 Truth Gate finding, because an agent could route on malformed
+authority or state.
+
+## Truth Gate
+
+`Blueprints/tools/truth-gate/truth-gate.mjs` checks that the documentation layer agrees with
+itself and with disk — dead headers on live files, broken and stale cited paths, missing baseline
+entry files, sprint/git drift, registry drift, and Valor Brain validity. Read-only.
+
+```bash
+node Blueprints/tools/truth-gate/truth-gate.mjs --quiet          # P0 only
+node Blueprints/tools/truth-gate/truth-gate.mjs --check=<name>   # one check
+```
+
+Run the checks your change touches before you report done. A suppression in
+`truth-gate-ignore.txt` needs a reason — a suppression without one is a lie you tell yourself
+later.
+
 ## Output Contract
 
 When producing analysis only, include:
@@ -251,3 +315,6 @@ Before finishing:
 - [ ] Did I avoid app code and sensitive files?
 - [ ] Did I provide or recommend the correct path?
 - [ ] Did I state assumptions and next step?
+- [ ] Does every environmental claim I wrote carry a date and a falsifier?
+- [ ] If the page is read as authority, did I opt it into `valor-brain/v1` and validate it?
+- [ ] Did I run the Truth Gate checks my change touches?

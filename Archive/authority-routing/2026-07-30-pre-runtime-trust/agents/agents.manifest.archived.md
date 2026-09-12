@@ -98,7 +98,7 @@ Claude must:
 
 - read `context.md` before planning
 - reference `coo.md` before creating a workflow
-- use `agents.md`, `SKILL_ROUTING.md`, and `Blueprints\tools\tool-permissions.md` to understand agent boundaries
+- use `agents.md`, `SKILL_ROUTING.md`, and `Blueprints/tools/tool-permissions.md` to understand agent boundaries
 - avoid inventing files, features, project status, or terminal results
 - avoid telling Codex to perform large rewrites unless explicitly required
 - prefer reversible, testable changes

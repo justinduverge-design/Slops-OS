@@ -10,9 +10,9 @@ There is **one** permission system, not two. It has three surfaces and they do n
 
 | Surface | Role |
 |---|---|
-| `Blueprints\tools\tool-permissions.md` | Canonical **action and approval doctrine** — the Action Risk Tiers and what each action requires. |
-| `Blueprints\agents\AGENT_INDEX.md` (this file) | **Runtime policy** and **Active Trust Assignments**. |
-| `Blueprints\tools\TOOLS_INDEX.md` | **Mirrors** the capability/gate mapping for lookup. It is **not** a competing authority. |
+| `Blueprints/tools/tool-permissions.md` | Canonical **action and approval doctrine** — the Action Risk Tiers and what each action requires. |
+| `Blueprints/agents/AGENT_INDEX.md` (this file) | **Runtime policy** and **Active Trust Assignments**. |
+| `Blueprints/tools/TOOLS_INDEX.md` | **Mirrors** the capability/gate mapping for lookup. It is **not** a competing authority. |
 
 **Authorization requires all four of the following. Any one missing means the action is not authorized:**
 
@@ -58,28 +58,28 @@ A runtime may hold Planner and Executor at different times. Neither role is a st
 - **Planner ↔ Executor:** the planner writes plans; the executor implements only approved plans.
 - **Executor ↔ Founder:** the executor escalates destructive, risky, or unclear work through the planner, then to the founder. Destructive, production, DB-write, deployment, and secrets actions require **action-level** founder approval — general task approval is not sufficient.
 - **Main-branch merge is founder-only**, for every runtime, in every tier.
-- **All:** follow the shared operating principles in `Blueprints\tools\tool-permissions.md` (Context First, No Hallucinations, Explicit Assumptions, Reversible Changes).
+- **All:** follow the shared operating principles in `Blueprints/tools/tool-permissions.md` (Context First, No Hallucinations, Explicit Assumptions, Reversible Changes).
 
 ---
 
 ## Section 2: Active SLOPS Skills (0-OS Authored)
 
-**Scope:** this is a curated OS-authoring subset; `Blueprints\skills\SKILL_ROUTING.md` is the complete registry. A skill absent from this section is not thereby inactive — check `SKILL_ROUTING.md` before concluding anything about a skill's status. The two lists have different purposes and their counts are not expected to match.
+**Scope:** this is a curated OS-authoring subset; `Blueprints/skills/SKILL_ROUTING.md` is the complete registry. A skill absent from this section is not thereby inactive — check `SKILL_ROUTING.md` before concluding anything about a skill's status. The two lists have different purposes and their counts are not expected to match.
 
 | Skill | File | Status | Capability required | Layer | Purpose |
 |---|---|---|---|---|---|
-| `slops-context-markdown` | `Blueprints\skills\slops-context-markdown\SKILL.md` | active | any runtime; file-write requires `guarded-writer` or above | 0-OS | Create, update, normalize, and route DBS markdown context files |
-| `slops-prompt-generator` | `Blueprints\skills\slops-prompt-generator\SKILL.md` | active | any runtime; file-write requires `guarded-writer` or above | 0-OS | Convert audits, handoffs, specs, contracts, context into concrete runnable prompts |
-| `slops-skill-author` | `Blueprints\skills\slops-skill-author\SKILL.md` | active | any runtime; file-write requires `guarded-writer` or above | 0-OS | Create, critique, normalize, and improve SLOPS-authored skill markdown files |
-| `slops-agent-author` | `Blueprints\skills\slops-agent-author\SKILL.md` | active | any runtime; file-write requires `guarded-writer` or above | 0-OS | Create, critique, normalize, and improve SLOPS agent role files using RBAC and least privilege |
-| `agent-wrapper-generator` | `Blueprints\skills\agent-wrapper-generator\SKILL.md` | active | any runtime; file-write requires `guarded-writer` or above | 0-OS | Generate least-privilege SLOPS agent wrapper files from approved review memos or explicit candidate selections |
-| `agent-index-diff-builder` | `Blueprints\skills\agent-index-diff-builder\SKILL.md` | active | any runtime; file-write requires `guarded-writer` or above | 0-OS | Build proposed `AGENT_INDEX.md` additions or diffs from wrapper files without applying them |
-| `rbac-risk-review` | `Blueprints\skills\rbac-risk-review\SKILL.md` | active | any runtime; file-write requires `guarded-writer` or above | 0-OS | Review agents, skills, prompts, plans, and proposed changes for RBAC, overlap, tool-tier, and high-risk authority concerns |
-| `workflow-tree-spec` | `Blueprints\skills\workflow-tree-spec\SKILL.md` | active | any runtime; file-write requires `guarded-writer` or above | 0-OS or project | Produce workflow-tree specs with happy paths, branches, failure states, recovery paths, and observable state contracts |
-| `security-privacy-evidence` | `Blueprints\skills\security-privacy-evidence\SKILL.md` | active | any runtime; file-write requires `guarded-writer` or above | 0-OS or project | Maintain security/privacy evidence notes, control mappings, data classification, consent boundaries, and approval records |
-| `command-bridge-generator` | `Blueprints\skills\command-bridge-generator\SKILL.md` | active | any runtime; file-write requires `guarded-writer` or above | 0-OS | Generate approved command-bridge shim files for each runtime from `SKILL_ROUTING.md` and `AGENT_INDEX.md` |
-| `pre-build-research` | `Blueprints\skills\pre-build-research\SKILL.md` | active | any runtime with network access; file-write requires `guarded-writer` or above | 0-OS or project | Research external APIs, data sources, and integrations before build prompts |
-| `clean-up-checkpoint` | `Blueprints\skills\clean-up-checkpoint\SKILL.md` | active | any runtime; file-write requires `guarded-writer` or above | 0-OS | Stop new work and create a rate-limit-safe checkpoint with next prompt |
+| `slops-context-markdown` | `Blueprints/skills/slops-context-markdown/SKILL.md` | active | any runtime; file-write requires `guarded-writer` or above | 0-OS | Create, update, normalize, and route DBS markdown context files |
+| `slops-prompt-generator` | `Blueprints/skills/slops-prompt-generator/SKILL.md` | active | any runtime; file-write requires `guarded-writer` or above | 0-OS | Convert audits, handoffs, specs, contracts, context into concrete runnable prompts |
+| `slops-skill-author` | `Blueprints/skills/slops-skill-author/SKILL.md` | active | any runtime; file-write requires `guarded-writer` or above | 0-OS | Create, critique, normalize, and improve SLOPS-authored skill markdown files |
+| `slops-agent-author` | `Blueprints/skills/slops-agent-author/SKILL.md` | active | any runtime; file-write requires `guarded-writer` or above | 0-OS | Create, critique, normalize, and improve SLOPS agent role files using RBAC and least privilege |
+| `agent-wrapper-generator` | `Blueprints/skills/agent-wrapper-generator/SKILL.md` | active | any runtime; file-write requires `guarded-writer` or above | 0-OS | Generate least-privilege SLOPS agent wrapper files from approved review memos or explicit candidate selections |
+| `agent-index-diff-builder` | `Blueprints/skills/agent-index-diff-builder/SKILL.md` | active | any runtime; file-write requires `guarded-writer` or above | 0-OS | Build proposed `AGENT_INDEX.md` additions or diffs from wrapper files without applying them |
+| `rbac-risk-review` | `Blueprints/skills/rbac-risk-review/SKILL.md` | active | any runtime; file-write requires `guarded-writer` or above | 0-OS | Review agents, skills, prompts, plans, and proposed changes for RBAC, overlap, tool-tier, and high-risk authority concerns |
+| `workflow-tree-spec` | `Blueprints/skills/workflow-tree-spec/SKILL.md` | active | any runtime; file-write requires `guarded-writer` or above | 0-OS or project | Produce workflow-tree specs with happy paths, branches, failure states, recovery paths, and observable state contracts |
+| `security-privacy-evidence` | `Blueprints/skills/security-privacy-evidence/SKILL.md` | active | any runtime; file-write requires `guarded-writer` or above | 0-OS or project | Maintain security/privacy evidence notes, control mappings, data classification, consent boundaries, and approval records |
+| `command-bridge-generator` | `Blueprints/skills/command-bridge-generator/SKILL.md` | active | any runtime; file-write requires `guarded-writer` or above | 0-OS | Generate approved command-bridge shim files for each runtime from `SKILL_ROUTING.md` and `AGENT_INDEX.md` |
+| `pre-build-research` | `Blueprints/skills/pre-build-research/SKILL.md` | active | any runtime with network access; file-write requires `guarded-writer` or above | 0-OS or project | Research external APIs, data sources, and integrations before build prompts |
+| `clean-up-checkpoint` | `Blueprints/skills/clean-up-checkpoint/SKILL.md` | active | any runtime; file-write requires `guarded-writer` or above | 0-OS | Stop new work and create a rate-limit-safe checkpoint with next prompt |
 
 ---
 
@@ -89,8 +89,8 @@ These are agents defined at layer 1-Slops Saloon or layer 2-Omen. They are not r
 
 | Agent | File | Layer | Status | Scope | Tool Access |
 |---|---|---|---|---|---|
-| **Manager Agent** | `slops-saloon\omen\Blueprints\prompts\manager_agent.md` | 1-Slops Saloon | active (runtime) | Omen fantasy football runtime orchestration | Per prompt definition |
-| **Sub-Agents (6)** | `slops-saloon\omen\Blueprints\prompts\sub_agents.md` | 1-Slops Saloon | active (runtime) | Omen sub-agent prompts (fantasy engine) | Per prompt definition |
+| **Manager Agent** | `slops-saloon/omen/Blueprints/prompts/manager_agent.md` | 1-Slops Saloon | active (runtime) | Omen fantasy football runtime orchestration | Per prompt definition |
+| **Sub-Agents (6)** | `slops-saloon/omen/Blueprints/prompts/sub_agents.md` | 1-Slops Saloon | active (runtime) | Omen sub-agent prompts (fantasy engine) | Per prompt definition |
 
 **Note:** These are runtime prompts, not SLOPS-level agents. They do not inherit 0-OS authority model. Each is defined in its own prompt file.
 
@@ -100,25 +100,25 @@ These are agents defined at layer 1-Slops Saloon or layer 2-Omen. They are not r
 
 **The `_imported\` staging tree was deleted on 2026-08-05** (91 files). Every file
 with a promoted counterpart differed from it, confirming the promoted copy in
-`Blueprints\agents\<division>\` is the cleaned, authoritative version; the
+`Blueprints/agents/<division>/` is the cleaned, authoritative version; the
 remaining 58 were reviewed and never selected. Full contents recoverable from
 git history.
 
 The promotion pipeline this section described is closed. There is no dormant
 import pool. The only agent files that exist are the promoted ones in
-`Blueprints\agents\<division>\`, and their status is recorded in Section 5.
+`Blueprints/agents/<division>/`, and their status is recorded in Section 5.
 
 Reopen this section only if a new import wave is approved — and if so, restore
 the tree from git rather than re-importing.
 
 Historical review sources:
 
-- `Direction\reviews\design-division-import-review.md`
-- `Direction\reviews\marketing-sales-division-import-review.md`
-- `Direction\reviews\paid-media-finance-academic-import-review.md`
-- `Direction\reviews\support-specialized-project-engineering-import-review.md`
-- `Direction\reviews\agent-wrapper-creation-summary.md`
-- `Solutions\reports\dbs-migration\phase-5-reviews\product-division-review.md`
+- `Direction/reviews/design-division-import-review.md`
+- `Direction/reviews/marketing-sales-division-import-review.md`
+- `Direction/reviews/paid-media-finance-academic-import-review.md`
+- `Direction/reviews/support-specialized-project-engineering-import-review.md`
+- `Direction/reviews/agent-wrapper-creation-summary.md`
+- `Solutions/reports/dbs-migration/phase-5-reviews/product-division-review.md`
 
 ### What this section records
 
@@ -234,14 +234,14 @@ divisions:
 Imported agents become active through this workflow:
 
 1. A runtime holding at least `guarded-writer` reviews the imported file using `slops-onboarding-agent`, `slops-agent-author`, and `rbac-risk-review`.
-2. Only clear, useful, least-privilege roles receive wrapper files under `Blueprints\agents\<division>\`.
+2. Only clear, useful, least-privilege roles receive wrapper files under `Blueprints/agents/<division>/`.
 3. Ambiguous roles stay `reference-only`.
 4. High-risk roles become `do-not-activate`.
 5. Justin approves or redirects.
 6. `AGENT_INDEX.md` is updated with the wrapper file only, not the imported source file.
 7. Candidate agents are still not active. Active promotion requires a later explicit Justin decision.
 
-Wrappers shadowed by an active SLOPS skill are retired; see `Blueprints\handoffs\2026-06-11-skills-acquisition-handoff.md`.
+Wrappers shadowed by an active SLOPS skill are retired; see `Blueprints/handoffs/2026-06-11-skills-acquisition-handoff.md`.
 
 ---
 
@@ -263,50 +263,22 @@ Shared constraints for every candidate wrapper:
 schema: approved-built-wrappers/v1
 # APPROVED BUILT WRAPPERS. Every entry below exists as a file on disk.
 # This section is canonical and MUST equal disk at 36 of 36.
+# RECONCILED 2026-09-12. 33 files, and they are four different things:
+#   7  superseded  — converted into Slops skills (see SKILL_ROUTING "Converted from"); provenance only.
+#  15  parked      — L0 company capability held behind a named gate (revenue-motion, paid-acquisition,
+#                    localization, developer-audience). Real, deliberate, not activatable yet.
+#  11  candidate   — live candidates, 6 of them named for conversion.
+#   3  deleted     — the academic/ lore wrappers, removed 2026-09-12; team identity is being redone.
+# Invoke the successor skill, never the wrapper. A parked wrapper's gate is founder-opened.
 # Section 4 records review-time selection (47). The two counts are not expected to match.
-count: 36
+count: 33
 status_note: >
   candidate only. These are not active autonomous agents and hold no
   Active Trust Assignment. Tier 2 max under the shared constraints above.
 wrappers:
-  - agent: academic-anthropologist
-    division: "Academic"
-    path: 'Blueprints\agents\academic\academic-anthropologist.md'
-    status: candidate
-    allowed_use: "Cultural-coherence lore review"
-    may_invoke_skills:
-      - slops-context-markdown
-      - slops-prompt-generator
-      - pre-build-research
-    approval_required:
-      - "Public living-culture references"
-      - "activation"
-  - agent: academic-historian
-    division: "Academic"
-    path: 'Blueprints\agents\academic\academic-historian.md'
-    status: candidate
-    allowed_use: "Historical lore research"
-    may_invoke_skills:
-      - slops-context-markdown
-      - slops-prompt-generator
-      - pre-build-research
-    approval_required:
-      - "Public lore claims"
-      - "activation"
-  - agent: academic-narratologist
-    division: "Academic"
-    path: 'Blueprints\agents\academic\academic-narratologist.md'
-    status: candidate
-    allowed_use: "Narrative and lore structure review"
-    may_invoke_skills:
-      - slops-context-markdown
-      - slops-prompt-generator
-    approval_required:
-      - "Public lore decisions"
-      - "activation"
   - agent: design-brand-guardian
     division: "Design"
-    path: 'Blueprints\agents\design\design-brand-guardian.md'
+    path: 'Blueprints/agents/design/design-brand-guardian.md'
     status: candidate
     allowed_use: "Brand consistency review and voice notes"
     may_invoke_skills:
@@ -319,8 +291,10 @@ wrappers:
       - "activation"
   - agent: design-image-prompt-engineer
     division: "Design"
-    path: 'Blueprints\agents\design\design-image-prompt-engineer.md'
-    status: candidate
+    path: 'Blueprints/agents/design/design-image-prompt-engineer.md'
+    status: superseded
+    superseded_by: slops-image-prompt
+    superseded_on: 2026-09-12
     allowed_use: "Image prompt drafting"
     may_invoke_skills:
       - slops-context-markdown
@@ -332,7 +306,7 @@ wrappers:
       - "activation"
   - agent: design-ux-researcher
     division: "Design"
-    path: 'Blueprints\agents\design\design-ux-researcher.md'
+    path: 'Blueprints/agents/design/design-ux-researcher.md'
     status: candidate
     allowed_use: "Research plans and usability templates"
     may_invoke_skills:
@@ -345,8 +319,10 @@ wrappers:
       - "activation"
   - agent: engineering-ai-integration-advisor
     division: "Engineering"
-    path: 'Blueprints\agents\engineering\engineering-ai-integration-advisor.md'
-    status: candidate
+    path: 'Blueprints/agents/engineering/engineering-ai-integration-advisor.md'
+    status: superseded
+    superseded_by: slops-ai-integration-review
+    superseded_on: 2026-09-12
     allowed_use: "AI integration planning"
     may_invoke_skills:
       - slops-context-markdown
@@ -359,7 +335,7 @@ wrappers:
       - "activation"
   - agent: engineering-backend-architect-advisor
     division: "Engineering"
-    path: 'Blueprints\agents\engineering\engineering-backend-architect-advisor.md'
+    path: 'Blueprints/agents/engineering/engineering-backend-architect-advisor.md'
     status: candidate
     allowed_use: "Backend architecture advice"
     may_invoke_skills:
@@ -372,8 +348,10 @@ wrappers:
       - "activation"
   - agent: engineering-data-engineer-advisor
     division: "Engineering"
-    path: 'Blueprints\agents\engineering\engineering-data-engineer-advisor.md'
-    status: candidate
+    path: 'Blueprints/agents/engineering/engineering-data-engineer-advisor.md'
+    status: superseded
+    superseded_by: slops-data-ingest-plan
+    superseded_on: 2026-09-12
     allowed_use: "Data ingestion planning"
     may_invoke_skills:
       - slops-context-markdown
@@ -385,8 +363,10 @@ wrappers:
       - "activation"
   - agent: finance-financial-analyst
     division: "Finance"
-    path: 'Blueprints\agents\finance\finance-financial-analyst.md'
-    status: candidate
+    path: 'Blueprints/agents/finance/finance-financial-analyst.md'
+    status: superseded
+    superseded_by: slops-financial-sketch
+    superseded_on: 2026-09-12
     allowed_use: "Sanitized financial analysis drafts"
     may_invoke_skills:
       - slops-context-markdown
@@ -398,8 +378,10 @@ wrappers:
       - "activation"
   - agent: finance-fpa-analyst
     division: "Finance"
-    path: 'Blueprints\agents\finance\finance-fpa-analyst.md'
-    status: candidate
+    path: 'Blueprints/agents/finance/finance-fpa-analyst.md'
+    status: superseded
+    superseded_by: slops-financial-sketch
+    superseded_on: 2026-09-12
     allowed_use: "Budget and scenario planning drafts"
     may_invoke_skills:
       - slops-context-markdown
@@ -412,7 +394,7 @@ wrappers:
       - "activation"
   - agent: marketing-content-creator
     division: "Marketing"
-    path: 'Blueprints\agents\marketing\marketing-content-creator.md'
+    path: 'Blueprints/agents/marketing/marketing-content-creator.md'
     status: candidate
     allowed_use: "Content drafts and briefs"
     may_invoke_skills:
@@ -425,7 +407,7 @@ wrappers:
       - "activation"
   - agent: marketing-reddit-community-builder
     division: "Marketing"
-    path: 'Blueprints\agents\marketing\marketing-reddit-community-builder.md'
+    path: 'Blueprints/agents/marketing/marketing-reddit-community-builder.md'
     status: candidate
     allowed_use: "Reddit research and draft strategy"
     may_invoke_skills:
@@ -438,8 +420,10 @@ wrappers:
       - "activation"
   - agent: marketing-social-media-strategist
     division: "Marketing"
-    path: 'Blueprints\agents\marketing\marketing-social-media-strategist.md'
-    status: candidate
+    path: 'Blueprints/agents/marketing/marketing-social-media-strategist.md'
+    status: parked
+    parked_gate: revenue-motion
+    parked_on: 2026-09-12
     allowed_use: "Social strategy drafts"
     may_invoke_skills:
       - slops-context-markdown
@@ -452,7 +436,7 @@ wrappers:
       - "activation"
   - agent: marketing-video-optimization-specialist
     division: "Marketing"
-    path: 'Blueprints\agents\marketing\marketing-video-optimization-specialist.md'
+    path: 'Blueprints/agents/marketing/marketing-video-optimization-specialist.md'
     status: candidate
     allowed_use: "Video packaging drafts"
     may_invoke_skills:
@@ -465,8 +449,10 @@ wrappers:
       - "activation"
   - agent: paid-media-auditor
     division: "Paid Media"
-    path: 'Blueprints\agents\paid-media\paid-media-auditor.md'
-    status: candidate
+    path: 'Blueprints/agents/paid-media/paid-media-auditor.md'
+    status: parked
+    parked_gate: paid-acquisition
+    parked_on: 2026-09-12
     allowed_use: "Manual paid-media audit drafts"
     may_invoke_skills:
       - slops-context-markdown
@@ -478,8 +464,10 @@ wrappers:
       - "activation"
   - agent: paid-media-creative-strategist
     division: "Paid Media"
-    path: 'Blueprints\agents\paid-media\paid-media-creative-strategist.md'
-    status: candidate
+    path: 'Blueprints/agents/paid-media/paid-media-creative-strategist.md'
+    status: parked
+    parked_gate: paid-acquisition
+    parked_on: 2026-09-12
     allowed_use: "Ad creative drafts"
     may_invoke_skills:
       - slops-context-markdown
@@ -492,8 +480,10 @@ wrappers:
       - "activation"
   - agent: paid-media-search-query-analyst
     division: "Paid Media"
-    path: 'Blueprints\agents\paid-media\paid-media-search-query-analyst.md'
-    status: candidate
+    path: 'Blueprints/agents/paid-media/paid-media-search-query-analyst.md'
+    status: parked
+    parked_gate: paid-acquisition
+    parked_on: 2026-09-12
     allowed_use: "Search-query export analysis"
     may_invoke_skills:
       - slops-context-markdown
@@ -504,8 +494,10 @@ wrappers:
       - "activation"
   - agent: paid-media-tracking-specialist
     division: "Paid Media"
-    path: 'Blueprints\agents\paid-media\paid-media-tracking-specialist.md'
-    status: candidate
+    path: 'Blueprints/agents/paid-media/paid-media-tracking-specialist.md'
+    status: parked
+    parked_gate: paid-acquisition
+    parked_on: 2026-09-12
     allowed_use: "Measurement plan drafts"
     may_invoke_skills:
       - slops-context-markdown
@@ -518,7 +510,7 @@ wrappers:
       - "activation"
   - agent: project-management-experiment-tracker
     division: "Project Management"
-    path: 'Blueprints\agents\project-management\project-management-experiment-tracker.md'
+    path: 'Blueprints/agents/project-management/project-management-experiment-tracker.md'
     status: candidate
     allowed_use: "Experiment plan drafts"
     may_invoke_skills:
@@ -531,7 +523,7 @@ wrappers:
       - "activation"
   - agent: project-management-project-shepherd
     division: "Project Management"
-    path: 'Blueprints\agents\project-management\project-management-project-shepherd.md'
+    path: 'Blueprints/agents/project-management/project-management-project-shepherd.md'
     status: candidate
     allowed_use: "Project status and risk drafts"
     may_invoke_skills:
@@ -544,7 +536,7 @@ wrappers:
       - "activation"
   - agent: project-manager-senior
     division: "Project Management"
-    path: 'Blueprints\agents\project-management\project-manager-senior.md'
+    path: 'Blueprints/agents/project-management/project-manager-senior.md'
     status: candidate
     allowed_use: "Task breakdowns from approved specs"
     may_invoke_skills:
@@ -555,8 +547,10 @@ wrappers:
       - "activation"
   - agent: sales-account-strategist
     division: "Sales"
-    path: 'Blueprints\agents\sales\sales-account-strategist.md'
-    status: candidate
+    path: 'Blueprints/agents/sales/sales-account-strategist.md'
+    status: parked
+    parked_gate: revenue-motion
+    parked_on: 2026-09-12
     allowed_use: "Account planning templates"
     may_invoke_skills:
       - slops-context-markdown
@@ -569,8 +563,10 @@ wrappers:
       - "activation"
   - agent: sales-deal-strategist
     division: "Sales"
-    path: 'Blueprints\agents\sales\sales-deal-strategist.md'
-    status: candidate
+    path: 'Blueprints/agents/sales/sales-deal-strategist.md'
+    status: parked
+    parked_gate: revenue-motion
+    parked_on: 2026-09-12
     allowed_use: "Deal-risk and MEDDPICC drafts"
     may_invoke_skills:
       - slops-context-markdown
@@ -583,8 +579,10 @@ wrappers:
       - "activation"
   - agent: sales-discovery-coach
     division: "Sales"
-    path: 'Blueprints\agents\sales\sales-discovery-coach.md'
-    status: candidate
+    path: 'Blueprints/agents/sales/sales-discovery-coach.md'
+    status: parked
+    parked_gate: revenue-motion
+    parked_on: 2026-09-12
     allowed_use: "Discovery templates and call prep"
     may_invoke_skills:
       - slops-context-markdown
@@ -596,8 +594,10 @@ wrappers:
       - "activation"
   - agent: sales-engineer-advisor
     division: "Sales"
-    path: 'Blueprints\agents\sales\sales-engineer-advisor.md'
-    status: candidate
+    path: 'Blueprints/agents/sales/sales-engineer-advisor.md'
+    status: parked
+    parked_gate: revenue-motion
+    parked_on: 2026-09-12
     allowed_use: "Demo and POC-scope drafts"
     may_invoke_skills:
       - slops-context-markdown
@@ -610,8 +610,10 @@ wrappers:
       - "activation"
   - agent: sales-outbound-strategist
     division: "Sales"
-    path: 'Blueprints\agents\sales\sales-outbound-strategist.md'
-    status: candidate
+    path: 'Blueprints/agents/sales/sales-outbound-strategist.md'
+    status: parked
+    parked_gate: revenue-motion
+    parked_on: 2026-09-12
     allowed_use: "ICP and sequence drafts"
     may_invoke_skills:
       - slops-context-markdown
@@ -624,8 +626,10 @@ wrappers:
       - "activation"
   - agent: sales-pipeline-analyst
     division: "Sales"
-    path: 'Blueprints\agents\sales\sales-pipeline-analyst.md'
-    status: candidate
+    path: 'Blueprints/agents/sales/sales-pipeline-analyst.md'
+    status: parked
+    parked_gate: revenue-motion
+    parked_on: 2026-09-12
     allowed_use: "Sanitized pipeline report drafts"
     may_invoke_skills:
       - slops-context-markdown
@@ -637,8 +641,10 @@ wrappers:
       - "activation"
   - agent: sales-proposal-strategist
     division: "Sales"
-    path: 'Blueprints\agents\sales\sales-proposal-strategist.md'
-    status: candidate
+    path: 'Blueprints/agents/sales/sales-proposal-strategist.md'
+    status: parked
+    parked_gate: revenue-motion
+    parked_on: 2026-09-12
     allowed_use: "Proposal narrative drafts"
     may_invoke_skills:
       - slops-context-markdown
@@ -650,7 +656,7 @@ wrappers:
       - "activation"
   - agent: compliance-auditor
     division: "Specialized"
-    path: 'Blueprints\agents\specialized\compliance-auditor.md'
+    path: 'Blueprints/agents/specialized/compliance-auditor.md'
     status: candidate
     allowed_use: "Compliance readiness drafts"
     may_invoke_skills:
@@ -663,8 +669,10 @@ wrappers:
       - "activation"
   - agent: language-translator
     division: "Specialized"
-    path: 'Blueprints\agents\specialized\language-translator.md'
-    status: candidate
+    path: 'Blueprints/agents/specialized/language-translator.md'
+    status: parked
+    parked_gate: localization
+    parked_on: 2026-09-12
     allowed_use: "Draft localization"
     may_invoke_skills:
       - slops-context-markdown
@@ -675,8 +683,10 @@ wrappers:
       - "activation"
   - agent: specialized-developer-advocate
     division: "Specialized"
-    path: 'Blueprints\agents\specialized\specialized-developer-advocate.md'
-    status: candidate
+    path: 'Blueprints/agents/specialized/specialized-developer-advocate.md'
+    status: parked
+    parked_gate: developer-audience
+    parked_on: 2026-09-12
     allowed_use: "DX audits and changelog drafts"
     may_invoke_skills:
       - slops-context-markdown
@@ -688,7 +698,7 @@ wrappers:
       - "activation"
   - agent: support-analytics-reporter
     division: "Support"
-    path: 'Blueprints\agents\support\support-analytics-reporter.md'
+    path: 'Blueprints/agents/support/support-analytics-reporter.md'
     status: candidate
     allowed_use: "Sanitized analytics report drafts"
     may_invoke_skills:
@@ -700,8 +710,10 @@ wrappers:
       - "activation"
   - agent: support-executive-summary-generator
     division: "Support"
-    path: 'Blueprints\agents\support\support-executive-summary-generator.md'
-    status: candidate
+    path: 'Blueprints/agents/support/support-executive-summary-generator.md'
+    status: superseded
+    superseded_by: slops-exec-summary
+    superseded_on: 2026-09-12
     allowed_use: "Executive summary drafts"
     may_invoke_skills:
       - slops-context-markdown
@@ -711,8 +723,10 @@ wrappers:
       - "activation"
   - agent: support-legal-compliance-checker
     division: "Support"
-    path: 'Blueprints\agents\support\support-legal-compliance-checker.md'
-    status: candidate
+    path: 'Blueprints/agents/support/support-legal-compliance-checker.md'
+    status: superseded
+    superseded_by: slops-legal-spot-check
+    superseded_on: 2026-09-12
     allowed_use: "Compliance issue spotting"
     may_invoke_skills:
       - slops-context-markdown
@@ -723,7 +737,7 @@ wrappers:
       - "activation"
   - agent: support-support-responder
     division: "Support"
-    path: 'Blueprints\agents\support\support-support-responder.md'
+    path: 'Blueprints/agents/support/support-support-responder.md'
     status: candidate
     allowed_use: "Support response drafts"
     may_invoke_skills:
@@ -740,7 +754,7 @@ wrappers:
 
 This section is keyed to **trust tier**, not to a vendor or model name. A runtime reaches a tier only through Runtime Policy eligibility (§8) plus an Active Trust Assignment (§9). Reading your runtime's name here would tell you nothing — there are no runtime names here.
 
-Canonical action and approval doctrine lives in `Blueprints\tools\tool-permissions.md` (Action Risk Tiers). This section is a convenience summary of what each trust tier may touch.
+Canonical action and approval doctrine lives in `Blueprints/tools/tool-permissions.md` (Action Risk Tiers). This section is a convenience summary of what each trust tier may touch.
 
 ### guarded-writer — Action Risk Tier 3 max
 
@@ -811,7 +825,7 @@ When you are unsure whether an action is authorized, follow this checklist **in 
 2. **Find the runtime in Runtime Policy (§8).** If it is not listed, use `generic`: default `read-only`, `max_eligible_tier: UNREVIEWED`, no authority inferred.
 3. **Find an Active Trust Assignment (§9) covering this specific task.** No assignment means no authority above the runtime's `default_tier`. An empty `assignments: []` list means defaults only.
 4. **Check the assignment is valid.** `session_capability_confirmed` must be `true`; `tier` must be at or below the runtime's `max_eligible_tier`; the task must be in scope; it must not have expired.
-5. **Check the Action Risk Tier gate** for the specific action in `Blueprints\tools\tool-permissions.md`.
+5. **Check the Action Risk Tier gate** for the specific action in `Blueprints/tools/tool-permissions.md`.
 6. **Check action-level approvals.** Destructive, production, DB-write, deployment, and secrets actions each need their own founder approval. General task approval is not sufficient. Main-branch merge is founder-only.
 
 Uncertainty at any step escalates to the founder. It is never resolved by inference.
@@ -820,10 +834,10 @@ Uncertainty at any step escalates to the founder. It is never resolved by infere
 
 ## See Also
 
-- **Action Risk Tiers / action and approval doctrine:** `Blueprints\tools\tool-permissions.md`
-- **Tool index (mirror, not an authority):** `Blueprints\tools\TOOLS_INDEX.md`
-- **Runtime identity modules:** `Blueprints\agent-modules\identity-claude-code.md`, `identity-codex.md`, `identity-cowork.md`, `identity-api.md`, `identity-generic.md`
-- **Skill routing matrix (complete skill registry):** `Blueprints\skills\SKILL_ROUTING.md`
+- **Action Risk Tiers / action and approval doctrine:** `Blueprints/tools/tool-permissions.md`
+- **Tool index (mirror, not an authority):** `Blueprints/tools/TOOLS_INDEX.md`
+- **Runtime identity modules:** `Blueprints/agent-modules/identity-claude-code.md`, `identity-codex.md`, `identity-cowork.md`, `identity-api.md`, `identity-generic.md`
+- **Skill routing matrix (complete skill registry):** `Blueprints/skills/SKILL_ROUTING.md`
 - **Imported agent location:** none — the `_imported\` tree was deleted 2026-08-05 (see Section 4)
 
 ---

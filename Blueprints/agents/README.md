@@ -2,7 +2,7 @@
 
 This folder contains the canonical authority model for all SLOPS OS agents.
 
-**Canonical path:** `C:\Users\JDuve\dev\SLOPS\Blueprints\agents`
+**Canonical path:** `Blueprints/agents`, relative to the active Git root. An absolute machine path is not canonical — the repository root moves between machines. *(corrected 2026-09-12; the previous value named a Windows desktop that is no longer the working machine.)*
 
 ## Lookup Rule (Critical)
 
@@ -28,7 +28,7 @@ Promotion happens through `slops-agent-author` review.
 
 ## Tool Authorization
 
-See `Blueprints\tools\` for the full tool permission policy and tier definitions.
+See `Blueprints/tools/` for the full tool permission policy and tier definitions.
 
 Every agent has a tier cap:
 - Claude: Tier 3 (write-guarded)
@@ -41,13 +41,13 @@ Every agent has a tier cap:
 2. Find your agent's row.
 3. Check the `Status` column.
 4. If `active`, your tier cap is listed.
-5. Check `Blueprints\tools\tool-permissions.md` for what your tier permits.
+5. Check `Blueprints/tools/tool-permissions.md` for what your tier permits.
 6. If `reference-only` or `do-not-activate`, contact Claude or Justin.
 
 ## Related Files
 
-- **Tool permissions:** `Blueprints\tools\tool-permissions.md`
-- **Tool index:** `Blueprints\tools\TOOLS_INDEX.md`
-- **Skill routing:** `Blueprints\skills\SKILL_ROUTING.md`
+- **Tool permissions:** `Blueprints/tools/tool-permissions.md`
+- **Tool index:** `Blueprints/tools/TOOLS_INDEX.md`
+- **Skill routing:** `Blueprints/skills/SKILL_ROUTING.md`
 - **Runtime policy and active assignments:** `AGENT_INDEX.md`
-- **Action Risk Tiers / approval doctrine:** `Blueprints\tools\tool-permissions.md`
+- **Action Risk Tiers / approval doctrine:** `Blueprints/tools/tool-permissions.md`

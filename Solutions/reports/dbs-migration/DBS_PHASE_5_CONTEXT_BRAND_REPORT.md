@@ -6,25 +6,25 @@ Date: 2026-05-21
 
 ssffmvp DBS layer:
 
-- `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Direction\README.md`
-- `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Blueprints\README.md`
-- `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Solutions\README.md`
-- `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\References\README.md`
+- `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Direction/README.md`
+- `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Blueprints/README.md`
+- `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Solutions/README.md`
+- `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\References/README.md`
 - `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Archive\README.md`
 
 Context and product docs:
 
-- `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Direction\context.md`
-- `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen\Direction\context.md`
+- `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Direction/context.md`
+- `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen\Direction/context.md`
 - `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen\Brand\brand.md`
 - `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen\Brand\positioning.md`
-- `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen\Blueprints\specs\omen-mvp-move.md`
+- `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen\Blueprints/specs/omen-mvp-move.md`
 - `C:\Users\JDuve\OneDrive\Desktop\SLOPS\DBS_PROJECTS_SSFFMVP_COMPARISON.md`
 - `C:\Users\JDuve\OneDrive\Desktop\SLOPS\DBS_PHASE_5_CONTEXT_BRAND_REPORT.md`
 
 ## Files Updated
 
-- `C:\Users\JDuve\OneDrive\Desktop\SLOPS\Direction\context.md`
+- `C:\Users\JDuve\OneDrive\Desktop\SLOPS\Direction/context.md`
 - `C:\Users\JDuve\OneDrive\Desktop\SLOPS\DBS_MIGRATION_PLAN.md`
 
 ## Folders Created
@@ -52,7 +52,7 @@ Hash and size checks passed before archiving:
 | Source | Omen Copy | Size Match | Hash Match |
 | --- | --- | --- | --- |
 | `brand\brand_voice.md` | `ssffmvp\Omen\Brand\voice.md` | yes | yes |
-| `brand\rebrand_notes.md` | `ssffmvp\Omen\References\rebrand_notes.md` | yes | yes |
+| `brand\rebrand_notes.md` | `ssffmvp\Omen\References/rebrand_notes.md` | yes | yes |
 
 No files were deleted.
 
@@ -74,8 +74,8 @@ Reason: comparison found `.git`, `.env` files, key-like files, package files, so
 
 ## Remaining User Decisions
 
-- Whether to archive `Projects\ssffmvp` after a secrets-safe review.
-- How to handle `Projects\ssffmvp\oraclepr.key` and other secret/env-like files before any archive.
+- Whether to archive `Projects/ssffmvp` after a secrets-safe review.
+- How to handle `Projects/ssffmvp/oraclepr.key` and other secret/env-like files before any archive.
 - Whether `ssffmvp\BRAND_STRATEGY.md` should eventually remain in app root, become a redirect note, or be archived after humans/tools adjust.
 - Whether `Omen\Brand\brand.md`, `Omen\Brand\voice.md`, and `Omen\Brand\positioning.md` should be merged later into one concise brand packet or remain separate.
 - Whether Omen/MVP Move should use product naming in UI as `Omen`, `MVP Move`, or both.

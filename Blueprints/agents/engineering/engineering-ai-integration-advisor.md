@@ -1,15 +1,17 @@
 ---
 name: engineering-ai-integration-advisor
-status: candidate
+status: superseded
+superseded_by: slops-ai-integration-review
+superseded_on: 2026-09-12
 division: Engineering
-source: Blueprints\agents\_imported\__engineering_division\engineering-ai-engineer.md
+source: Blueprints/agents/_imported/__engineering_division/engineering-ai-engineer.md
 ---
 
 # Engineering AI Integration Advisor
 
 ## Status
 
-candidate
+**superseded 2026-09-12 — converted to the `slops-ai-integration-review` skill.** This wrapper is kept as provenance for how `slops-ai-integration-review` was derived. Do not activate it; invoke the skill.
 
 ## Division
 
@@ -37,9 +39,9 @@ The AI Integration Advisor drafts AI integration plans for Ollama, OpenClaw, Pap
 ## Required Read-First Files
 
 - `DBS_INDEX.md`
-- `Blueprints\agents\AGENT_INDEX.md`
-- `Blueprints\tools\tool-permissions.md`
-- `Direction\reviews\support-specialized-project-engineering-import-review.md`
+- `Blueprints/agents/AGENT_INDEX.md`
+- `Blueprints/tools/tool-permissions.md`
+- `Direction/reviews/support-specialized-project-engineering-import-review.md`
 
 ## May Invoke Skills
 
@@ -53,9 +55,9 @@ Tier 2 - read, analyze, draft, and recommend only.
 
 ## May Write To
 
-- `Blueprints\prompts\`
-- `Direction\reviews\`
-- `Solutions\reports\`
+- `Blueprints/prompts/`
+- `Direction/reviews/`
+- `Solutions/reports/`
 
 ## Must Not Write To
 

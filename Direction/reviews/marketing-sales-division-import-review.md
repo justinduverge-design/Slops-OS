@@ -4,12 +4,12 @@ Date: 2026-05-23
 Reviewer: Codex / slops-onboarding-agent
 Source folders:
 
-- `Blueprints\agents\_imported\__marketing_division`
-- `Blueprints\agents\_imported\__sales_division`
+- `Blueprints/agents/_imported/__marketing_division`
+- `Blueprints/agents/_imported/__sales_division`
 
 ## Context
 
-The imported Marketing and Sales Division files remain non-authoritative until promoted through `slops-agent-author` review and recorded in `Blueprints\agents\AGENT_INDEX.md`.
+The imported Marketing and Sales Division files remain non-authoritative until promoted through `slops-agent-author` review and recorded in `Blueprints/agents/AGENT_INDEX.md`.
 
 Root `AGENTS.md` required files checked from `C:\Users\JDuve\OneDrive\Desktop\SLOPS`:
 
@@ -23,9 +23,9 @@ Root `AGENTS.md` required files checked from `C:\Users\JDuve\OneDrive\Desktop\SL
 
 Canonical authority files reviewed:
 
-- `Blueprints\agents\AGENT_INDEX.md`
-- `Blueprints\tools\tool-permissions.md`
-- `Blueprints\skills\slops-agent-author\SKILL.md`
+- `Blueprints/agents/AGENT_INDEX.md`
+- `Blueprints/tools/tool-permissions.md`
+- `Blueprints/skills/slops-agent-author/SKILL.md`
 
 ## Marketing Classification
 
@@ -72,22 +72,22 @@ Canonical authority files reviewed:
 
 Recommended Marketing wrappers:
 
-1. `marketing-content-creator` as `Blueprints\agents\marketing\marketing-content-creator.md`
-2. `marketing-social-media-strategist` as `Blueprints\agents\marketing\marketing-social-media-strategist.md`
-3. `marketing-reddit-community-builder` as `Blueprints\agents\marketing\marketing-reddit-community-builder.md`
-4. `marketing-video-optimization-specialist` as `Blueprints\agents\marketing\marketing-video-optimization-specialist.md`
+1. `marketing-content-creator` as `Blueprints/agents/marketing/marketing-content-creator.md`
+2. `marketing-social-media-strategist` as `Blueprints/agents/marketing/marketing-social-media-strategist.md`
+3. `marketing-reddit-community-builder` as `Blueprints/agents/marketing/marketing-reddit-community-builder.md`
+4. `marketing-video-optimization-specialist` as `Blueprints/agents/marketing/marketing-video-optimization-specialist.md`
 
 Do not create wrappers yet for App Store Optimizer, Instagram Curator, TikTok Strategist, or Twitter Engager. Their useful ideas can flow through the Social Media Strategist wrapper. Do not activate Carousel Growth Engine.
 
 Recommended Sales wrappers:
 
-1. `sales-discovery-coach` as `Blueprints\agents\sales\sales-discovery-coach.md`
-2. `sales-deal-strategist` as `Blueprints\agents\sales\sales-deal-strategist.md`
-3. `sales-outbound-strategist` as `Blueprints\agents\sales\sales-outbound-strategist.md`
-4. `sales-proposal-strategist` as `Blueprints\agents\sales\sales-proposal-strategist.md`
-5. `sales-pipeline-analyst` as `Blueprints\agents\sales\sales-pipeline-analyst.md`
-6. `sales-account-strategist` as `Blueprints\agents\sales\sales-account-strategist.md`
-7. `sales-engineer-advisor` as `Blueprints\agents\sales\sales-engineer-advisor.md`
+1. `sales-discovery-coach` as `Blueprints/agents/sales/sales-discovery-coach.md`
+2. `sales-deal-strategist` as `Blueprints/agents/sales/sales-deal-strategist.md`
+3. `sales-outbound-strategist` as `Blueprints/agents/sales/sales-outbound-strategist.md`
+4. `sales-proposal-strategist` as `Blueprints/agents/sales/sales-proposal-strategist.md`
+5. `sales-pipeline-analyst` as `Blueprints/agents/sales/sales-pipeline-analyst.md`
+6. `sales-account-strategist` as `Blueprints/agents/sales/sales-account-strategist.md`
+7. `sales-engineer-advisor` as `Blueprints/agents/sales/sales-engineer-advisor.md`
 
 Do not create wrappers yet for Sales Coach. Do not activate Sales Outreach.
 
@@ -97,8 +97,8 @@ All Marketing and Sales wrappers should start as `candidate`, Tier 2 max:
 
 - Read, analyze, draft, and recommend only.
 - May write draft markdown only when explicitly assigned.
-- May write to `Blueprints\prompts\`, `Direction\reviews\`, and `Solutions\reports\`.
-- Must not write to `slops-saloon\src\`, `slops-saloon\frontend\`, `slops-saloon\client\`, `slops-saloon\sql\`, `slops-saloon\scripts\`, `slops-saloon\test\`, `Archive\`, `.env`, `.key`, credentials, secrets, tokens, cookies, production, deployment, Docker, GitHub Actions, auth, payment, or database files.
+- May write to `Blueprints/prompts/`, `Direction/reviews/`, and `Solutions/reports/`.
+- Must not write to `slops-saloon\src\`, `slops-saloon\frontend\`, `slops-saloon\client\`, `slops-saloon\sql\`, `slops-saloon\scripts\`, `slops-saloon\test\`, `Archive/`, `.env`, `.key`, credentials, secrets, tokens, cookies, production, deployment, Docker, GitHub Actions, auth, payment, or database files.
 - Must not access or mutate external accounts, CRMs, ad platforms, social accounts, app stores, analytics dashboards, email tools, contact databases, call recordings, payment systems, or customer-data systems.
 - Must not send emails, DMs, comments, posts, ads, proposals, contracts, invoices, or public statements.
 - Must not make final decisions on brand voice, launch scope, pricing, discounts, revenue forecasts, customer commitments, legal terms, compliance claims, or platform strategy.
@@ -108,4 +108,4 @@ All Marketing and Sales wrappers should start as `candidate`, Tier 2 max:
 
 ## Next Safe Step
 
-Create the recommended Marketing and Sales wrapper files under `Blueprints\agents\marketing\` and `Blueprints\agents\sales\`, then update `AGENT_INDEX.md` only after Justin/Claude approval.
+Create the recommended Marketing and Sales wrapper files under `Blueprints/agents/marketing/` and `Blueprints/agents/sales/`, then update `AGENT_INDEX.md` only after Justin/Claude approval.

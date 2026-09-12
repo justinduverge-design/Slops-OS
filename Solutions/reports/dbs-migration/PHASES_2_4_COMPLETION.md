@@ -24,19 +24,19 @@ All changes preserve folder structure and authority boundaries. No files deleted
 
 **Files Created:**
 
-1. **`Blueprints\tools\README.md`** (159 lines)
+1. **`Blueprints/tools/README.md`** (159 lines)
    - Explains tools folder is separate RBAC policy layer (not skill/agent folder)
    - Index file reference
    - Principle: tool authority is explicit, not default
 
-2. **`Blueprints\tools\TOOLS_INDEX.md`** (400+ lines)
+2. **`Blueprints/tools/TOOLS_INDEX.md`** (400+ lines)
    - Canonical tool permission lookup table
    - Tier legend (5-level scale: read-only to destructive)
    - Tool categories: file ops, bash, git, database, secrets, paid services, infra, browser, auth, LLM
    - Per-agent tool grants reference
    - Escalation rules
 
-3. **`Blueprints\tools\tool-permissions.md`** (300+ lines, updated from existing Phase 1 file)
+3. **`Blueprints/tools/tool-permissions.md`** (300+ lines, updated from existing Phase 1 file)
    - Comprehensive policy covering explicit authorization principle
    - Tier-based model with category-by-category rules
    - Per-agent grants documentation
@@ -48,7 +48,7 @@ All changes preserve folder structure and authority boundaries. No files deleted
 
 **File Created:**
 
-4. **`Blueprints\agents\AGENT_INDEX.md`** (400+ lines)
+4. **`Blueprints/agents/AGENT_INDEX.md`** (400+ lines)
    - Critical authority matrix with 8 sections
    - Status legend (active, candidate, restricted, reference-only, archived)
    - Global authorities: Justin (CEO), Claude (Architect), Codex (Engineer)
@@ -61,8 +61,8 @@ All changes preserve folder structure and authority boundaries. No files deleted
 
 ### Redirect Stub
 
-5. **`Blueprints\skills\tools.md`** (redirect stub)
-   - Points from old location to canonical `Blueprints\tools\tool-permissions.md`
+5. **`Blueprints/skills/tools.md`** (redirect stub)
+   - Points from old location to canonical `Blueprints/tools/tool-permissions.md`
 
 ---
 
@@ -74,13 +74,13 @@ All changes preserve folder structure and authority boundaries. No files deleted
 
 | File | Changes |
 |------|---------|
-| `Blueprints\README.md` | Updated SKILL_INDEX→ROUTING (line 12), added tool/agent reference sections |
-| `Blueprints\agents\agents.md` | Normalized path `tools.md` → `Blueprints\tools\tool-permissions.md` (line 101) |
-| `Blueprints\skills\README.md` | SKILL_INDEX→ROUTING (2 occurrences), added tool permissions section |
-| `Blueprints\skills\SKILL_ROUTING.md` | Multiple path normalizations: Skills→skills, Agents→agents, Prompts→prompts, SKILL_INDEX→ROUTING |
-| `Blueprints\skills\slops-agent-author\SKILL.md` | Normalized: Blueprints\Agents→agents, Blueprints\Skills→skills (2 replace_all operations) |
-| `Blueprints\skills\slops-context-markdown\SKILL.md` | Normalized: SKILL_INDEX→ROUTING (line 32), DBS routing folder casing (lines 96–121) |
-| `Blueprints\skills\slops-skill-author\SKILL.md` | Normalized: Blueprints\Skills→skills, Blueprints\Agents→agents, SKILL_INDEX→ROUTING (3 replace_all operations) |
+| `Blueprints/README.md` | Updated SKILL_INDEX→ROUTING (line 12), added tool/agent reference sections |
+| `Blueprints/agents/agents.md` | Normalized path `tools.md` → `Blueprints/tools/tool-permissions.md` (line 101) |
+| `Blueprints/skills/README.md` | SKILL_INDEX→ROUTING (2 occurrences), added tool permissions section |
+| `Blueprints/skills/SKILL_ROUTING.md` | Multiple path normalizations: Skills→skills, Agents→agents, Prompts→prompts, SKILL_INDEX→ROUTING |
+| `Blueprints/skills/slops-agent-author/SKILL.md` | Normalized: Blueprints/Agents→agents, Blueprints/Skills→skills (2 replace_all operations) |
+| `Blueprints/skills/slops-context-markdown/SKILL.md` | Normalized: SKILL_INDEX→ROUTING (line 32), DBS routing folder casing (lines 96–121) |
+| `Blueprints/skills/slops-skill-author/SKILL.md` | Normalized: Blueprints/Skills→skills, Blueprints/Agents→agents, SKILL_INDEX→ROUTING (3 replace_all operations) |
 | `DBS_INDEX.md` | SKILL_INDEX→ROUTING (line 53) |
 
 **Status**: ✅ 8 of 8 files completed
@@ -97,13 +97,13 @@ All changes preserve folder structure and authority boundaries. No files deleted
 
 **Files Created:**
 
-1. **`ssffmvp\Blueprints\skills\README.md`** (43 lines)
+1. **`ssffmvp\Blueprints/skills/README.md`** (43 lines)
    - Route for app-specific reusable skills
    - Points to global canonical location
    - Scope rules (keep app-specific only)
    - Naming conventions with examples
 
-2. **`ssffmvp\Omen\Blueprints\README.md`** (59 lines)
+2. **`ssffmvp\Omen\Blueprints/README.md`** (59 lines)
    - Omen-level blueprint structure reference
    - Subfolder routing (specs, playbooks, design)
    - Kebab-case naming convention with examples
@@ -112,7 +112,7 @@ All changes preserve folder structure and authority boundaries. No files deleted
 
 ### Task C: Add Naming Convention Documentation
 
-1. **`Blueprints\README.md`** — Added "Naming Conventions" section (40 lines)
+1. **`Blueprints/README.md`** — Added "Naming Conventions" section (40 lines)
    - Folder naming: lowercase with hyphens
    - File naming: SKILL.md, kebab-case, ALL_CAPS_SNAKE for indexes
    - Support folder convention: underscore-prefixed
@@ -128,7 +128,7 @@ All changes preserve folder structure and authority boundaries. No files deleted
 
 ### Task D: Redirect and Cleanup
 
-3. **`Blueprints\skills\SKILL_INDEX.md`** — Converted to redirect stub
+3. **`Blueprints/skills/SKILL_INDEX.md`** — Converted to redirect stub
    - Explains supersession by SKILL_ROUTING.md
    - Points to new canonical location
    - Directs users to correct reading order
@@ -141,36 +141,36 @@ All changes preserve folder structure and authority boundaries. No files deleted
 
 | Check | Result | Details |
 |-------|--------|---------|
-| Blueprints\tools\ contains all 3 files | ✅ PASS | README.md, TOOLS_INDEX.md, tool-permissions.md present |
-| AGENT_INDEX.md exists | ✅ PASS | Blueprints\agents\AGENT_INDEX.md confirmed |
+| Blueprints/tools\ contains all 3 files | ✅ PASS | README.md, TOOLS_INDEX.md, tool-permissions.md present |
+| AGENT_INDEX.md exists | ✅ PASS | Blueprints/agents/AGENT_INDEX.md confirmed |
 | No lingering SKILL_INDEX.md references (except redirect) | ✅ PASS | grep found 7 files, checked each, all are skill files or prompts containing skill folder references |
 | SKILL_ROUTING.md is canonical | ✅ PASS | DBS_INDEX.md, READMEs all reference SKILL_ROUTING.md |
 | Folder casing normalized | ✅ PASS | Updated SKILL_ROUTING.md to use Skills→skills, Prompts→prompts |
-| Naming conventions documented | ✅ PASS | Both Blueprints\README and DBS_INDEX contain complete conventions |
-| App-layer READMEs created | ✅ PASS | ssffmvp\Blueprints\skills and ssffmvp\Omen\Blueprints both have README.md |
+| Naming conventions documented | ✅ PASS | Both Blueprints/README and DBS_INDEX contain complete conventions |
+| App-layer READMEs created | ✅ PASS | ssffmvp\Blueprints/skills and ssffmvp\Omen\Blueprints both have README.md |
 
 ---
 
 ## Files Changed Summary
 
 **New files created**: 7
-- `Blueprints\tools\README.md`
-- `Blueprints\tools\TOOLS_INDEX.md`
-- `Blueprints\tools\tool-permissions.md` (updated from existing)
-- `Blueprints\agents\AGENT_INDEX.md`
-- `ssffmvp\Blueprints\skills\README.md`
-- `ssffmvp\Omen\Blueprints\README.md`
-- `Blueprints\skills\tools.md` (redirect stub)
+- `Blueprints/tools/README.md`
+- `Blueprints/tools/TOOLS_INDEX.md`
+- `Blueprints/tools/tool-permissions.md` (updated from existing)
+- `Blueprints/agents/AGENT_INDEX.md`
+- `ssffmvp\Blueprints/skills/README.md`
+- `ssffmvp\Omen\Blueprints/README.md`
+- `Blueprints/skills/tools.md` (redirect stub)
 
 **Existing files updated**: 9
-- `Blueprints\README.md`
-- `Blueprints\agents\agents.md`
-- `Blueprints\skills\README.md`
-- `Blueprints\skills\SKILL_ROUTING.md`
-- `Blueprints\skills\slops-agent-author\SKILL.md`
-- `Blueprints\skills\slops-context-markdown\SKILL.md`
-- `Blueprints\skills\slops-skill-author\SKILL.md`
-- `Blueprints\skills\SKILL_INDEX.md` (converted to redirect)
+- `Blueprints/README.md`
+- `Blueprints/agents/agents.md`
+- `Blueprints/skills/README.md`
+- `Blueprints/skills/SKILL_ROUTING.md`
+- `Blueprints/skills/slops-agent-author/SKILL.md`
+- `Blueprints/skills/slops-context-markdown/SKILL.md`
+- `Blueprints/skills/slops-skill-author/SKILL.md`
+- `Blueprints/skills/SKILL_INDEX.md` (converted to redirect)
 - `DBS_INDEX.md`
 
 **Total files touched**: 16
@@ -183,7 +183,7 @@ All changes preserve folder structure and authority boundaries. No files deleted
 
 ### Tool Permissions Layer
 
-- **New**: Separate `Blueprints\tools\` folder for tool-permission policy (not skills or agents)
+- **New**: Separate `Blueprints/tools/` folder for tool-permission policy (not skills or agents)
 - **Authority**: Explicit, tier-based (1-5 scale)
 - **Coverage**: 6 categories, 45+ tools across file ops, bash, git, database, secrets, infrastructure, browser, auth, LLM
 - **Governance**: Per-agent grants defined in AGENT_INDEX.md
@@ -214,7 +214,7 @@ All changes preserve folder structure and authority boundaries. No files deleted
 ### For Claude
 - Can reference `SKILL_ROUTING.md` for skill routing without ambiguity
 - Can reference `AGENT_INDEX.md` for agent authority verification
-- Can reference `Blueprints\tools\tool-permissions.md` for tool tier caps
+- Can reference `Blueprints/tools/tool-permissions.md` for tool tier caps
 
 ### For Codex
 - Tool tier restrictions are explicit in AGENT_INDEX.md
@@ -255,11 +255,11 @@ All changes preserve folder structure and authority boundaries. No files deleted
 
 ## Next Recommended Steps
 
-1. **Archive old files** (optional): Move `Blueprints\skills\SKILL_INDEX.md` to `Archive\superseded\` if no live references remain
+1. **Archive old files** (optional): Move `Blueprints/skills/SKILL_INDEX.md` to `Archive/superseded/` if no live references remain
 2. **Review imported agents** (when ready): Use AGENT_INDEX.md as checklist for promoting GitHub-imported agents from `reference-only` to `active` or `restricted`
 3. **Security review** (separately): ESPN cookie handling noted in AGENT_INDEX; coordinate security review per standard protocol
 4. **Cross-reference audit** (future): Periodically grep for old path patterns to catch any new references to capitalized folders or SKILL_INDEX.md
-5. **Document app-specific agents** (if Omen expands): Consider creating `ssffmvp\Blueprints\agents\` layer when sub-agents become reusable
+5. **Document app-specific agents** (if Omen expands): Consider creating `ssffmvp\Blueprints/agents\` layer when sub-agents become reusable
 
 ---
 
@@ -274,4 +274,4 @@ All changes preserve folder structure and authority boundaries. No files deleted
 
 **Report Status**: Final  
 **Approval**: Ready for review  
-**Archival**: Save to `Solutions\reports\dbs-migration\` for future reference
+**Archival**: Save to `Solutions/reports/dbs-migration/` for future reference

@@ -1,6 +1,6 @@
 ---
 name: slops-ui-ux-audit
-description: Slops-native UI/UX audit for Omen screens and components. Audits against the AAA framework (Accuracy, Accessibility, Aesthetic Integrity), Brand/brand-system.md, and the design-system v1 — required states, 44px touch targets, motion-reduce, ARIA/keyboard, WCAG AA contrast, design-token consistency, brand voice, and mock/live labeling. Use to "audit a page/component", "ui/ux review", "design QA before handoff", "is this screen ready", or when replacing an external UX-audit skill. Produces a severity-ranked findings report with before/after fixes; it reviews, it does not edit app code (fixes route back through the build loop).
+description: **WEB APP ONLY — this audits the Omen web app against a partially superseded spec; for the native iOS/Android apps use `slops-native-ui-audit`.** Slops-authored UI/UX audit for Omen web screens and components. Audits against the AAA framework (Accuracy, Accessibility, Aesthetic Integrity), Brand/brand-system.md, and the design-system v1 — required states, 44px touch targets, motion-reduce, ARIA/keyboard, WCAG AA contrast, design-token consistency, brand voice, and mock/live labeling. Use to "audit a page/component", "ui/ux review", "design QA before handoff", "is this screen ready", or when replacing an external UX-audit skill. Produces a severity-ranked findings report with before/after fixes; it reviews, it does not edit app code (fixes route back through the build loop).
 ---
 
 # Slops UI/UX Audit Skill

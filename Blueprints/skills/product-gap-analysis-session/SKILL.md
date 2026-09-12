@@ -26,7 +26,7 @@ The output is analysis and a routed plan. This skill never edits product source,
 - **Skill name:** `product-gap-analysis-session`
 - **Primary user:** Justin
 - **Primary agents:** Claude for analysis, planning, and review; Codex only if a file write is explicitly approved.
-- **DBS layer:** `Blueprints\skills` (Layer 0 — reusable across divisions and products)
+- **DBS layer:** `Blueprints/skills` (Layer 0 — reusable across divisions and products)
 - **Skill type:** analytical skill (simple)
 - **Status:** active
 
@@ -52,7 +52,7 @@ Do not use this skill when:
 Minimum context before analysis:
 
 - The product or workstream in scope (e.g. Omen, a specific feature).
-- The relevant code root and/or status docs (e.g. `slops-saloon\omen\Direction`, `release_readiness.md`, `known_issues.md`, `current_sprint.md`).
+- The relevant code root and/or status docs (e.g. `slops-saloon/omen/Direction`, `release_readiness.md`, `known_issues.md`, `current_sprint.md`).
 - Any planning/architecture doc Justin is reacting to.
 - The definition of "done" for this session (full launch, paid launch, one feature, etc.).
 
@@ -92,7 +92,7 @@ Least privilege. Verify, do not trust.
 
 Produce a handoff/roadmap markdown file (unless Justin asks for analysis only) containing:
 
-- **Target path** in the correct DBS layer (default: a `*-handoff.md` or `*-roadmap.md` for app-level work in the app's `Blueprints\handoffs\`; founder/business-level work in the subsidiary `Direction\`).
+- **Target path** in the correct DBS layer (default: a `*-handoff.md` or `*-roadmap.md` for app-level work in the app's `Blueprints/handoffs/`; founder/business-level work in the subsidiary `Direction/`).
 - **Purpose** and the session's definition of "done."
 - **Verified baseline** with the discrepancies found between docs and code.
 - **Per-workstream Have / Need / Gap / Plan / Definition of Done.**
@@ -111,10 +111,10 @@ When Justin says "no edits yet," provide the analysis in-chat only and name wher
 
 ## DBS Routing
 
-- App-specific product gap analysis (e.g. Omen): write to `slops-saloon\omen\Blueprints\handoffs\`.
+- App-specific product gap analysis (e.g. Omen): write to `slops-saloon\omen\Blueprints/handoffs\`.
 - Division/business-level readiness (entity, pricing, commercialization): write to `slops-saloon\Direction\`.
-- Company-wide reusable doctrine that emerges: propose promotion to Layer 0 `SLOPS\Direction\` or `Blueprints\`, but do not promote app-specific content into Layer 0 without explicit approval.
-- Decisions that result should be logged in the relevant `Direction\decision_log.md`.
+- Company-wide reusable doctrine that emerges: propose promotion to Layer 0 `SLOPS\Direction\` or `Blueprints/`, but do not promote app-specific content into Layer 0 without explicit approval.
+- Decisions that result should be logged in the relevant `Direction/decision_log.md`.
 
 ## Failure Modes
 

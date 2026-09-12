@@ -66,7 +66,7 @@ correct about the past and was deliberately left alone.
 | **Archived as** | `agents/sub_agents.stub.archived.md` |
 | **Type** | Redirect stub |
 | **Size** | 1865 B |
-| **Reason** | PR A doctrine forbids redirect stubs. `sub_agents.md:5` itself declared the canonical location as `slops-saloon\omen\Blueprints\prompts\sub_agents.md`. |
+| **Reason** | PR A doctrine forbids redirect stubs. `sub_agents.md:5` itself declared the canonical location as `slops-saloon/omen/Blueprints/prompts/sub_agents.md`. |
 | **Successor** | `omen/Blueprints/prompts/sub_agents.md` — **LIVE. PRESERVED, not archived, not renamed.** Verified present at 2665 B. |
 
 ---

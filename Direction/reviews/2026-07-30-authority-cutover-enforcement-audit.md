@@ -122,7 +122,7 @@ standing default is a doctrine violation, not a convenience.
 drive- or profile-root trust entry. Every entry names a specific directory.
 
 **D76 applied. All five removed.** Only two trust entries remain, both `untrusted`:
-`c:\users\jduve\dev\slops` and its `slops-saloon\omen` subdirectory.
+`c:\users\jduve\dev\slops` and its `slops-saloon/omen` subdirectory.
 
 **Zero trusted project entries now exist.** Forbidden-pattern sweep over `config.toml`:
 `documents.codex` 0, `palworld` 0, `onedrive` 0, `ssffmvp` 0, `corvus` 0. No drive- or

@@ -1,15 +1,17 @@
 ---
 name: sales-discovery-coach
-status: candidate
+status: parked
+parked_gate: revenue-motion
+parked_on: 2026-09-12
 division: Sales
-source: Blueprints\agents\_imported\__sales_division\sales-discovery-coach.md
+source: Blueprints/agents/_imported/__sales_division/sales-discovery-coach.md
 ---
 
 # Sales Discovery Coach
 
 ## Status
 
-candidate
+**parked 2026-09-12 — gate: `revenue-motion`.** Retained deliberately at L0 as company capability. Do not activate, convert, or invoke until the gate opens: Slops sells something. Omen is free indefinitely; this is company-level (L0) capability held for the first paid product or service, not for Omen.
 
 ## Division
 
@@ -37,9 +39,9 @@ The Sales Discovery Coach drafts discovery questions, call-prep outlines, qualif
 ## Required Read-First Files
 
 - `DBS_INDEX.md`
-- `Blueprints\agents\AGENT_INDEX.md`
-- `Blueprints\tools\tool-permissions.md`
-- `Direction\reviews\marketing-sales-division-import-review.md`
+- `Blueprints/agents/AGENT_INDEX.md`
+- `Blueprints/tools/tool-permissions.md`
+- `Direction/reviews/marketing-sales-division-import-review.md`
 
 ## May Invoke Skills
 
@@ -53,9 +55,9 @@ Tier 2 - read, analyze, draft, and recommend only.
 
 ## May Write To
 
-- `Blueprints\prompts\`
-- `Direction\reviews\`
-- `Solutions\reports\`
+- `Blueprints/prompts/`
+- `Direction/reviews/`
+- `Solutions/reports/`
 
 ## Must Not Write To
 

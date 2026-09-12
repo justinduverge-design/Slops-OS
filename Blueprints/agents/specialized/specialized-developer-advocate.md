@@ -1,15 +1,17 @@
 ---
 name: specialized-developer-advocate
-status: candidate
+status: parked
+parked_gate: developer-audience
+parked_on: 2026-09-12
 division: Specialized
-source: Blueprints\agents\_imported\__specialized_division\specialized-developer-advocate.md
+source: Blueprints/agents/_imported/__specialized_division/specialized-developer-advocate.md
 ---
 
 # Specialized Developer Advocate
 
 ## Status
 
-candidate
+**parked 2026-09-12 — gate: `developer-audience`.** Retained deliberately at L0 as company capability. Do not activate, convert, or invoke until the gate opens: Slops has an external developer audience. None exists today.
 
 ## Division
 
@@ -37,9 +39,9 @@ The Specialized Developer Advocate drafts DX audits, tutorials, changelog copy, 
 ## Required Read-First Files
 
 - `DBS_INDEX.md`
-- `Blueprints\agents\AGENT_INDEX.md`
-- `Blueprints\tools\tool-permissions.md`
-- `Direction\reviews\support-specialized-project-engineering-import-review.md`
+- `Blueprints/agents/AGENT_INDEX.md`
+- `Blueprints/tools/tool-permissions.md`
+- `Direction/reviews/support-specialized-project-engineering-import-review.md`
 
 ## May Invoke Skills
 
@@ -53,9 +55,9 @@ Tier 2 - read, analyze, draft, and recommend only.
 
 ## May Write To
 
-- `Blueprints\prompts\`
-- `Direction\reviews\`
-- `Solutions\reports\`
+- `Blueprints/prompts/`
+- `Direction/reviews/`
+- `Solutions/reports/`
 
 ## Must Not Write To
 

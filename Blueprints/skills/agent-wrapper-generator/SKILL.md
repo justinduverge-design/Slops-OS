@@ -1,6 +1,6 @@
 ---
 name: agent-wrapper-generator
-description: Generate least-privilege SLOPS agent wrapper files under Blueprints\agents from approved review memos or explicit candidate selections. Use when Justin asks to create wrapper files for selected agents; do not activate agents or edit AGENT_INDEX.md unless separately approved.
+description: Generate least-privilege SLOPS agent wrapper files under Blueprints/agents from approved review memos or explicit candidate selections. Use when Justin asks to create wrapper files for selected agents; do not activate agents or edit AGENT_INDEX.md unless separately approved.
 ---
 
 # Agent Wrapper Generator
@@ -16,7 +16,7 @@ A wrapper is not an activation. It is a controlled role file that preserves the 
 - **Skill name:** `agent-wrapper-generator`
 - **Primary user:** Justin
 - **Primary agents:** Claude for selection and review; Codex for file creation when instructed.
-- **DBS layer:** `Blueprints\skills`
+- **DBS layer:** `Blueprints/skills`
 - **Skill type:** simple skill
 - **Status:** active
 
@@ -25,7 +25,7 @@ A wrapper is not an activation. It is a controlled role file that preserves the 
 Use this skill when Justin asks to:
 
 - Create agent wrapper files from selected candidates.
-- Convert an imported-agent review memo into `Blueprints\agents\<division>\<agent>.md` files.
+- Convert an imported-agent review memo into `Blueprints/agents/<division>/<agent>.md` files.
 - Add least-privilege permissions to candidate agent roles.
 - Preserve imported source notes while preventing accidental activation.
 - Create wrappers without updating `AGENT_INDEX.md`.
@@ -64,13 +64,13 @@ Blueprints/agents/
 Imported source files remain quarantined under:
 
 ```text
-Blueprints\agents\_imported
+Blueprints/agents/_imported
 ```
 
 Review summaries usually belong under:
 
 ```text
-Direction\reviews
+Direction/reviews
 ```
 
 ## Read-First Procedure
@@ -79,9 +79,9 @@ Use least privilege.
 
 1. Read Justin's request.
 2. Read the named review memo or selected source files only.
-3. Read `Blueprints\agents\AGENT_INDEX.md` to avoid conflicting names and authority.
-4. Read `Blueprints\tools\tool-permissions.md` for tier caps.
-5. Read `Blueprints\skills\SKILL_ROUTING.md` only if assigning approved skills.
+3. Read `Blueprints/agents/AGENT_INDEX.md` to avoid conflicting names and authority.
+4. Read `Blueprints/tools/tool-permissions.md` for tier caps.
+5. Read `Blueprints/skills/SKILL_ROUTING.md` only if assigning approved skills.
 6. Do not bulk-read unrelated imported divisions.
 
 ## Process Recipe
@@ -188,9 +188,9 @@ When using this skill, produce:
 
 ## DBS Routing
 
-- Agent wrappers: `Blueprints\agents\<division>\<agent>.md`
-- Wrapper creation summaries: `Direction\reviews\`
-- Imported references: leave in `Blueprints\agents\_imported\`
+- Agent wrappers: `Blueprints/agents/<division>/<agent>.md`
+- Wrapper creation summaries: `Direction/reviews/`
+- Imported references: leave in `Blueprints/agents/_imported/`
 - Do not write to `.codex\skills`, app code, secrets, production, database, deployment, or runtime prompt folders.
 
 ## RBAC Boundaries
@@ -225,7 +225,7 @@ Watch for:
 Before changing this skill, check:
 
 ```text
-Blueprints\skills\agent-wrapper-generator\notes\prior-use-review.md
+Blueprints/skills/agent-wrapper-generator/notes/prior-use-review.md
 ```
 
 If present, incorporate repeated corrections into failure modes or the process recipe.

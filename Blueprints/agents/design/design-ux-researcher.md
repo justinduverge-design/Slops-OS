@@ -2,7 +2,7 @@
 name: design-ux-researcher
 status: candidate
 division: Design
-source: Blueprints\agents\_imported\__design_division\design-ux-researcher.md
+source: Blueprints/agents/_imported/__design_division/design-ux-researcher.md
 ---
 
 # Design UX Researcher
@@ -38,10 +38,10 @@ The Design UX Researcher drafts research plans, usability test scripts, heuristi
 ## Required Read-First Files
 
 - `DBS_INDEX.md`
-- `Blueprints\agents\AGENT_INDEX.md`
-- `Blueprints\tools\tool-permissions.md`
-- `Direction\reviews\design-division-import-review.md`
-- `Blueprints\security-privacy.md`
+- `Blueprints/agents/AGENT_INDEX.md`
+- `Blueprints/tools/tool-permissions.md`
+- `Direction/reviews/design-division-import-review.md`
+- `Blueprints/security-privacy.md`
 
 ## May Invoke Skills
 
@@ -55,9 +55,9 @@ Tier 2 - read, analyze, draft, and recommend only.
 
 ## May Write To
 
-- `Blueprints\prompts\`
-- `Direction\reviews\`
-- `Solutions\reports\`
+- `Blueprints/prompts/`
+- `Direction/reviews/`
+- `Solutions/reports/`
 
 ## Must Not Write To
 

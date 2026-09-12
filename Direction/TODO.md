@@ -11,8 +11,13 @@ carries items.
 
 ### OS1 — Decide whether `Blueprints/agents/AGENT_INDEX.md` candidate statuses are approved current truth
 
-- **Status:** READY
-- **Blocked by:** FOUNDER_APPROVAL — whether the `candidate` rows in `AGENT_INDEX.md` are ratified as current truth or stay provisional
+- **Status:** VERIFIED — 2026-09-12
+- **Blocked by:** None — resolved 2026-09-12.
+- **Evidence:** `Direction/decisions/2026-09-12-agent-wrapper-disposition.md` (RATIFIED / APPLIED).
+  Every §5 row now carries a status that means something: 7 `superseded` (converted to skills, kept
+  as provenance), 14 `parked` behind four named gates, 12 `candidate` of which 6 are named for
+  conversion. 3 `academic/` wrappers deleted with their directory. Nothing is `candidate` by default
+  any more, which was the actual complaint.
 - **Priority:** P1
 - **Cost:** small
 - **Done when:** every `candidate` row in `AGENT_INDEX.md` is either ratified as active truth or explicitly marked provisional, and the file states which.

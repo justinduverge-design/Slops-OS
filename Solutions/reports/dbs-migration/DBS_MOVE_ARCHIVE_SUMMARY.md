@@ -6,10 +6,10 @@ Created: 2026-05-21
 
 Archived matched duplicates:
 
-- `TODO.md` -> `Archive\superseded-docs\TODO.md`
-- `00_FINAL_PLAN.md` -> `Archive\superseded-docs\00_FINAL_PLAN.md`
-- `runbook_ai_workflow.md` -> `Archive\superseded-docs\runbook_ai_workflow.md`
-- `pre-build-research.skill` -> `Archive\superseded-docs\pre-build-research.skill`
+- `TODO.md` -> `Archive/superseded-docs/TODO.md`
+- `00_FINAL_PLAN.md` -> `Archive/superseded-docs/00_FINAL_PLAN.md`
+- `runbook_ai_workflow.md` -> `Archive/superseded-docs/runbook_ai_workflow.md`
+- `pre-build-research.skill` -> `Archive/superseded-docs/pre-build-research.skill`
 - `ssffmvp\Omen\Omen Logo.png` -> `ssffmvp\Omen\Archive\pre-dbs-flat-folder\Omen Logo.png`
 - `ssffmvp\Omen\Omen Logo2.png` -> `ssffmvp\Omen\Archive\pre-dbs-flat-folder\Omen Logo2.png`
 - `ssffmvp\Omen\Omen Logo 3.png` -> `ssffmvp\Omen\Archive\pre-dbs-flat-folder\Omen Logo 3.png`
@@ -21,10 +21,10 @@ Each archived file had a matching DBS copy verified by SHA-256 before archive.
 
 Archived:
 
-- `draft_assistant_spec.md` -> `Archive\superseded-docs\draft_assistant_spec.md`
-- `handoffs\handoffsfrontend-to-backend.md` -> `Archive\superseded-docs\handoffs\handoffsfrontend-to-backend.md`
-- `handoffs\handoffsbackend-to-frontend.md` -> `Archive\superseded-docs\handoffs\handoffsbackend-to-frontend.md`
-- `handoffs\handoffsREADME.md` -> `Archive\superseded-docs\handoffs\handoffsREADME.md`
+- `draft_assistant_spec.md` -> `Archive/superseded-docs/draft_assistant_spec.md`
+- `handoffs\handoffsfrontend-to-backend.md` -> `Archive/superseded-docs/handoffs/handoffsfrontend-to-backend.md`
+- `handoffs\handoffsbackend-to-frontend.md` -> `Archive/superseded-docs/handoffs/handoffsbackend-to-frontend.md`
+- `handoffs\handoffsREADME.md` -> `Archive/superseded-docs/handoffs/handoffsREADME.md`
 
 Skipped:
 
@@ -41,7 +41,7 @@ Skipped items still have references or need fuller DBS copy/index work before an
 
 Reviewed without moving or archiving:
 
-- `Projects\ssffmvp`
+- `Projects/ssffmvp`
 - `_archive\workspaces-2026-05-16\ssffmvp-ghcr-build-migration`
 - `_parked\slops-saloon-homepage`
 - `.codex-artifacts\backups`
