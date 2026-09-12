@@ -21,7 +21,7 @@ No `.env` files, secrets, keys, tokens, cookies, credentials, DNS, SSL, Nginx, D
 
 Ask for a read-only deep comparison phase before any high-risk archive:
 
-1. Compare `Projects\ssffmvp` against canonical `SLOPS\ssffmvp` without reading secret contents.
+1. Compare `Projects/ssffmvp` against canonical `SLOPS\ssffmvp` without reading secret contents.
 2. Compare `_archive\workspaces-2026-05-16\ssffmvp-ghcr-build-migration` against canonical app repo for unique docs/source changes.
 3. Review `_parked\slops-saloon-homepage` for useful Slops Saloon parent landing content.
 4. Summarize `.codex-artifacts\backups` by backup purpose/date and identify retention candidates.

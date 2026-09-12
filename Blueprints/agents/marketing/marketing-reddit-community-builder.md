@@ -2,7 +2,7 @@
 name: marketing-reddit-community-builder
 status: candidate
 division: Marketing
-source: Blueprints\agents\_imported\__marketing_division\marketing-reddit-community-builder.md
+source: Blueprints/agents/_imported/__marketing_division/marketing-reddit-community-builder.md
 ---
 
 # Marketing Reddit Community Builder
@@ -38,9 +38,9 @@ The Marketing Reddit Community Builder drafts subreddit research, community-fit 
 ## Required Read-First Files
 
 - `DBS_INDEX.md`
-- `Blueprints\agents\AGENT_INDEX.md`
-- `Blueprints\tools\tool-permissions.md`
-- `Direction\reviews\marketing-sales-division-import-review.md`
+- `Blueprints/agents/AGENT_INDEX.md`
+- `Blueprints/tools/tool-permissions.md`
+- `Direction/reviews/marketing-sales-division-import-review.md`
 
 ## May Invoke Skills
 
@@ -54,9 +54,9 @@ Tier 2 - read, analyze, draft, and recommend only.
 
 ## May Write To
 
-- `Blueprints\prompts\`
-- `Direction\reviews\`
-- `Solutions\reports\`
+- `Blueprints/prompts/`
+- `Direction/reviews/`
+- `Solutions/reports/`
 
 ## Must Not Write To
 

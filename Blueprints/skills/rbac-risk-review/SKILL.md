@@ -16,7 +16,7 @@ The review should make authority legible: what can read, what can write, what it
 - **Skill name:** `rbac-risk-review`
 - **Primary user:** Justin
 - **Primary agents:** Claude for risk review; Codex for file inspection and report writing when instructed.
-- **DBS layer:** `Blueprints\skills`
+- **DBS layer:** `Blueprints/skills`
 - **Skill type:** simple skill
 - **Status:** active
 
@@ -54,18 +54,18 @@ If intended use is missing, assume the reviewed item is not active and flag any 
 Read as needed:
 
 ```text
-Blueprints\agents\AGENT_INDEX.md
-Blueprints\skills\SKILL_ROUTING.md
-Blueprints\tools\tool-permissions.md
-Blueprints\agents\<division>\<agent>.md
-Blueprints\skills\<skill-name>\SKILL.md
-Blueprints\prompts
+Blueprints/agents/AGENT_INDEX.md
+Blueprints/skills/SKILL_ROUTING.md
+Blueprints/tools/tool-permissions.md
+Blueprints/agents\<division>\<agent>.md
+Blueprints/skills\<skill-name>\SKILL.md
+Blueprints/prompts
 ```
 
 Write review reports, when requested, to:
 
 ```text
-Direction\reviews
+Direction/reviews
 ```
 
 Do not modify reviewed files unless Justin separately asks for fixes.
@@ -156,10 +156,10 @@ Use concise tables for multi-file reviews.
 
 ## DBS Routing
 
-- Risk reviews: `Direction\reviews\`
-- Agent authority source: `Blueprints\agents\AGENT_INDEX.md`
-- Skill authority source: `Blueprints\skills\SKILL_ROUTING.md`
-- Tool policy source: `Blueprints\tools\tool-permissions.md`
+- Risk reviews: `Direction/reviews/`
+- Agent authority source: `Blueprints/agents/AGENT_INDEX.md`
+- Skill authority source: `Blueprints/skills/SKILL_ROUTING.md`
+- Tool policy source: `Blueprints/tools/tool-permissions.md`
 - Do not route review findings into app source or runtime prompts unless specifically requested.
 
 ## RBAC Boundaries
@@ -195,7 +195,7 @@ Watch for:
 Before changing this skill, check:
 
 ```text
-Blueprints\skills\rbac-risk-review\notes\prior-use-review.md
+Blueprints/skills/rbac-risk-review/notes/prior-use-review.md
 ```
 
 If present, incorporate repeated corrections into failure modes or the process recipe.

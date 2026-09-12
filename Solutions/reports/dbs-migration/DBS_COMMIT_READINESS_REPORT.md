@@ -247,4 +247,4 @@ No secret-like files are visible in the current status, and tests are passing.
 - No deploy was made.
 - No files were deleted.
 - No secrets, `.env` files, key files, `.git`, `node_modules`, or `Archive/quarantine` contents were touched.
-- This report is outside the `ssffmvp` repo under `SLOPS\Solutions\reports\dbs-migration\`, so it is not part of the `ssffmvp` commit unless Justin separately commits the SLOPS root workspace.
+- This report is outside the `ssffmvp` repo under `SLOPS\Solutions/reports/dbs-migration\`, so it is not part of the `ssffmvp` commit unless Justin separately commits the SLOPS root workspace.

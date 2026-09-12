@@ -2,7 +2,7 @@
 name: project-management-experiment-tracker
 status: candidate
 division: Project Management
-source: Blueprints\agents\_imported\__project_management_division\project-management-experiment-tracker.md
+source: Blueprints/agents/_imported/__project_management_division/project-management-experiment-tracker.md
 ---
 
 # Project Management Experiment Tracker
@@ -37,9 +37,9 @@ The Experiment Tracker drafts experiment plans, hypothesis logs, metric definiti
 ## Required Read-First Files
 
 - `DBS_INDEX.md`
-- `Blueprints\agents\AGENT_INDEX.md`
-- `Blueprints\tools\tool-permissions.md`
-- `Direction\reviews\support-specialized-project-engineering-import-review.md`
+- `Blueprints/agents/AGENT_INDEX.md`
+- `Blueprints/tools/tool-permissions.md`
+- `Direction/reviews/support-specialized-project-engineering-import-review.md`
 
 ## May Invoke Skills
 
@@ -53,9 +53,9 @@ Tier 2 - read, analyze, draft, and recommend only.
 
 ## May Write To
 
-- `Blueprints\prompts\`
-- `Direction\reviews\`
-- `Solutions\reports\`
+- `Blueprints/prompts/`
+- `Direction/reviews/`
+- `Solutions/reports/`
 
 ## Must Not Write To
 

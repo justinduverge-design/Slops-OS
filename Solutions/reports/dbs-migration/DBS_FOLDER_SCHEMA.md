@@ -53,10 +53,10 @@ Use Blueprints for:
 
 Good examples:
 
-- `Blueprints\specs\omen-contract.md`
-- `Blueprints\prompts\codex_prompt_format.md`
-- `Blueprints\skills\pre-build-research.skill`
-- `Blueprints\playbooks\runbook_ai_workflow.md`
+- `Blueprints/specs/omen-contract.md`
+- `Blueprints/prompts/codex_prompt_format.md`
+- `Blueprints/skills/pre-build-research.skill`
+- `Blueprints/playbooks/runbook_ai_workflow.md`
 
 Blueprints tell agents and humans how to produce good work repeatedly.
 
@@ -150,26 +150,26 @@ Use:
 - `Assets\images` for product imagery and design source exports.
 - `Assets\screenshots` for app and landing screenshots.
 
-Active implementation assets that the app imports from `frontend\public` or `client\public` should stay there. Copy them into `Omen\Assets` only as reference/canonical brand assets.
+Active implementation assets that the app imports from `frontend/public` or `client\public` should stay there. Copy them into `Omen\Assets` only as reference/canonical brand assets.
 
 ## 7. Skills
 
 OS-level skills go under:
 
 ```text
-SLOPS\Blueprints\skills
+SLOPS\Blueprints/skills
 ```
 
 App/repo-specific skills go under:
 
 ```text
-ssffmvp\Blueprints\skills
+ssffmvp\Blueprints/skills
 ```
 
 Omen product-specific skills may go under:
 
 ```text
-ssffmvp\Omen\Blueprints\skills
+ssffmvp\Omen\Blueprints/skills
 ```
 
 Before moving any existing skill folder, check whether Codex, Claude, or local tooling expects the current path.
@@ -191,7 +191,7 @@ Current canonical files:
 SLOPS OS can keep handoff templates or meta-workflow docs in:
 
 ```text
-SLOPS\Blueprints\handoffs
+SLOPS\Blueprints/handoffs
 ```
 
 Do not move active app handoffs until every agent and workflow is updated to the new path.
@@ -201,19 +201,19 @@ Do not move active app handoffs until every agent and workflow is updated to the
 OS-level specs go under:
 
 ```text
-SLOPS\Blueprints\specs
+SLOPS\Blueprints/specs
 ```
 
 App implementation specs go under:
 
 ```text
-ssffmvp\Blueprints\specs
+ssffmvp\Blueprints/specs
 ```
 
 Omen product specs go under:
 
 ```text
-ssffmvp\Omen\Blueprints\specs
+ssffmvp\Omen\Blueprints/specs
 ```
 
 If a spec is both product and implementation relevant, keep the app repo copy canonical and add a reference/copy in Omen only after approval.

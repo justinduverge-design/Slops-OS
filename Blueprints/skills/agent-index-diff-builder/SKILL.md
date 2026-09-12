@@ -16,7 +16,7 @@ The output is a review artifact, not an applied authority change. This skill pro
 - **Skill name:** `agent-index-diff-builder`
 - **Primary user:** Justin
 - **Primary agents:** Claude for review; Codex for file reads and summary creation when instructed.
-- **DBS layer:** `Blueprints\skills`
+- **DBS layer:** `Blueprints/skills`
 - **Skill type:** simple skill
 - **Status:** active
 
@@ -42,14 +42,14 @@ Do not use this skill when:
 Minimum inputs:
 
 - Target wrapper files or division folders.
-- Current `Blueprints\agents\AGENT_INDEX.md`.
+- Current `Blueprints/agents/AGENT_INDEX.md`.
 - Desired output location, if a file should be written.
 - Whether Justin wants table-only, patch-style diff, or both.
 
 If no output path is named, place review summaries under:
 
 ```text
-Direction\reviews
+Direction/reviews
 ```
 
 ## Canonical Paths
@@ -57,16 +57,16 @@ Direction\reviews
 Read:
 
 ```text
-Blueprints\agents\AGENT_INDEX.md
-Blueprints\agents\<division>\<agent>.md
-Blueprints\tools\tool-permissions.md
-Blueprints\skills\SKILL_ROUTING.md
+Blueprints/agents/AGENT_INDEX.md
+Blueprints/agents\<division>\<agent>.md
+Blueprints/tools/tool-permissions.md
+Blueprints/skills/SKILL_ROUTING.md
 ```
 
 Write review output, when requested, to:
 
 ```text
-Direction\reviews
+Direction/reviews
 ```
 
 Do not write the actual index unless Justin explicitly says to apply the change.
@@ -138,9 +138,9 @@ When using this skill, produce:
 
 ## DBS Routing
 
-- Proposed index reviews: `Direction\reviews\`
-- Actual authority file: `Blueprints\agents\AGENT_INDEX.md`
-- Wrapper files: `Blueprints\agents\<division>\`
+- Proposed index reviews: `Direction/reviews/`
+- Actual authority file: `Blueprints/agents/AGENT_INDEX.md`
+- Wrapper files: `Blueprints/agents/<division>/`
 - Do not route proposed authority changes into imported folders.
 
 ## RBAC Boundaries
@@ -173,7 +173,7 @@ Watch for:
 Before changing this skill, check:
 
 ```text
-Blueprints\skills\agent-index-diff-builder\notes\prior-use-review.md
+Blueprints/skills/agent-index-diff-builder/notes/prior-use-review.md
 ```
 
 If present, incorporate repeated corrections into failure modes or the process recipe.

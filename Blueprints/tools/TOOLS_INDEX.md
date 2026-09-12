@@ -4,7 +4,7 @@ This file **mirrors** the capability/gate mapping for quick lookup.
 
 **It is NOT a competing authority.** Canonical action and approval doctrine lives in
 `tool-permissions.md` (Action Risk Tiers). Runtime policy and Active Trust Assignments
-live in `Blueprints\agents\AGENT_INDEX.md`. Where this file and either of those
+live in `Blueprints/agents/AGENT_INDEX.md`. Where this file and either of those
 disagree, they win and this file is wrong — fix it here, do not act on it.
 
 Tiers classify **actions**, not runtimes. The approval column names the **minimum trust
@@ -43,15 +43,15 @@ tier** a runtime must hold by active assignment, never a vendor or model name.
 
 ## Per-Agent Tool Grants
 
-See **`Blueprints\agents\AGENT_INDEX.md`** for the tool grants assigned to each agent by role.
+See **`Blueprints/agents/AGENT_INDEX.md`** for the tool grants assigned to each agent by role.
 
 All agents default to `read-only` unless explicitly indexed and granted higher tier.
 
-**Imported agents:** none exist. The `Blueprints\agents\_imported\` tree was deleted 2026-08-05. Tool authority comes only from `active` status in `AGENT_INDEX.md`; a promoted wrapper at `candidate` status still carries no tool authority.
+**Imported agents:** none exist. The `Blueprints/agents/_imported/` tree was deleted 2026-08-05. Tool authority comes only from `active` status in `AGENT_INDEX.md`; a promoted wrapper at `candidate` status still carries no tool authority.
 
 ## Per-Skill Tool Grants
 
-See **`Blueprints\skills\SKILL_ROUTING.md`** for the tool usage patterns of each skill.
+See **`Blueprints/skills/SKILL_ROUTING.md`** for the tool usage patterns of each skill.
 
 Skills may use agents as part of their workflow. When a skill invokes an agent, the agent's own tool permissions apply (not the skill's).
 
@@ -67,7 +67,7 @@ Skills may use agents as part of their workflow. When a skill invokes an agent, 
 **At 1-slops-saloon and 2-Omen levels:**
 - Follow 0-OS policy unless explicitly overridden by slops-saloon/omen context files.
 - Project-specific agents may be granted tools per their `AGENT.md` or equivalent.
-- Check `slops-saloon\Blueprints\agents\AGENT_INDEX.md` (if it exists) for subsidiary-level grants.
+- Check `slops-saloon/Blueprints/agents/AGENT_INDEX.md` (if it exists) for subsidiary-level grants.
 
 ## Activation Rule
 
@@ -87,6 +87,6 @@ founder; it is never resolved by inference.
 ## See Also
 
 - **Full tool permission policy:** `tool-permissions.md`
-- **Agent authority matrix:** `Blueprints\agents\AGENT_INDEX.md`
-- **Skill routing matrix:** `Blueprints\skills\SKILL_ROUTING.md`
-- **Runtime identity modules:** `Blueprints\agent-modules\identity-claude-code.md`, `identity-codex.md`, `identity-cowork.md`, `identity-api.md`, `identity-generic.md`
+- **Agent authority matrix:** `Blueprints/agents/AGENT_INDEX.md`
+- **Skill routing matrix:** `Blueprints/skills/SKILL_ROUTING.md`
+- **Runtime identity modules:** `Blueprints/agent-modules/identity-claude-code.md`, `identity-codex.md`, `identity-cowork.md`, `identity-api.md`, `identity-generic.md`

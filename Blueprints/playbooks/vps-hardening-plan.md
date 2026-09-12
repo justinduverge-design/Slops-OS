@@ -12,7 +12,7 @@ This guide is written for a solo founder/operator. The goal is not "perfect secu
 - Never paste private keys, passwords, tokens, `.env` files, or cookie values into chat.
 - Back up config files before changing them.
 - Change one layer at a time, then verify.
-- If a command belongs on your local machine, run it in PowerShell. If it belongs on the VPS, run it in the SSH terminal. Mixing these up is common and usually harmless, but it can waste time.
+- If a command belongs on your local machine, run it in your local terminal. If it belongs on the VPS, run it in the SSH terminal. Mixing these up is common and usually harmless, but it can waste time.
 - After every major phase, write a short checkpoint file with what changed, what passed, and what remains.
 
 ## Phase 1 - Know The Box
@@ -86,8 +86,8 @@ Root is the all-powerful account. If attackers can log in as root, they skip a w
 
 On your local machine, find your public key:
 
-```powershell
-type C:\Users\JDuve\.ssh\id_ed25519.pub
+```bash
+cat ~/.ssh/id_ed25519.pub
 ```
 
 On the VPS, confirm the key is in:
@@ -106,8 +106,8 @@ chmod 600 /home/justin/.ssh/authorized_keys
 
 Test from your local machine:
 
-```powershell
-ssh -o IdentitiesOnly=yes -i C:\Users\JDuve\.ssh\id_ed25519 justin@SERVER_IP
+```bash
+ssh -o IdentitiesOnly=yes -i ~/.ssh/id_ed25519 justin@SERVER_IP
 ```
 
 Why it matters:
@@ -123,8 +123,8 @@ If key login still asks for a password, compare fingerprints without exposing se
 
 On your local machine:
 
-```powershell
-ssh-keygen -lf C:\Users\JDuve\.ssh\id_ed25519.pub
+```bash
+ssh-keygen -lf ~/.ssh/id_ed25519.pub
 ```
 
 On the VPS:

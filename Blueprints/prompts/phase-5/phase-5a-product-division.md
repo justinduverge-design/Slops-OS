@@ -26,16 +26,16 @@ Your job is to:
 Before touching any agent file, read:
 
 ```text
-Blueprints\agents\AGENT_INDEX.md
-Blueprints\skills\slops-agent-author\SKILL.md
-Solutions\reports\dbs-migration\PHASE_5_PLAN.md
+Blueprints/agents/AGENT_INDEX.md
+Blueprints/skills/slops-agent-author/SKILL.md
+Solutions/reports/dbs-migration/PHASE_5_PLAN.md
 ```
 
 ---
 
 ## Division: Product
 
-**Folder**: `Blueprints\agents\_imported\__product_division\`
+**Folder**: `Blueprints/agents/_imported/__product_division/`
 
 **Files** (read all 5 before making any selection decisions):
 
@@ -66,7 +66,7 @@ For each agent, answer:
 
 Write to:
 ```text
-Solutions\reports\dbs-migration\phase-5-reviews\product-division-review.md
+Solutions/reports/dbs-migration/phase-5-reviews/product-division-review.md
 ```
 
 Include:
@@ -80,7 +80,7 @@ Include:
 For each agent selected as `candidate`, create the wrapper file at:
 
 ```text
-Blueprints\agents\product\<agent-name>.md
+Blueprints/agents/product\<agent-name>.md
 ```
 
 Use the Required Agent File Shape from `slops-agent-author\SKILL.md`:
@@ -90,7 +90,7 @@ Use the Required Agent File Shape from `slops-agent-author\SKILL.md`:
 name: <agent-name>
 status: candidate
 division: Product
-source: Blueprints\agents\_imported\__product_division\<filename>.md
+source: Blueprints/agents/_imported/__product_division\<filename>.md
 ---
 
 # <Agent Display Name>
@@ -117,7 +117,7 @@ Global Blueprint
 
 ## Required Read-First Files
 - DBS_INDEX.md
-- Blueprints\agents\AGENT_INDEX.md
+- Blueprints/agents/AGENT_INDEX.md
 - <relevant files per role>
 
 ## May Invoke Skills
@@ -127,8 +127,8 @@ Global Blueprint
 Tier 2 (read + draft — no direct file writes without Claude or Codex approval)
 
 ## May Write To
-- Blueprints\prompts\
-- Direction\reviews\
+- Blueprints/prompts\
+- Direction/reviews\
 - (drafts only — Codex applies approved changes)
 
 ## Must Not Write To
@@ -136,10 +136,10 @@ Tier 2 (read + draft — no direct file writes without Claude or Codex approval)
 - slops-saloon\omen\sql\
 - .env, .key, credentials
 - Archive\
-- Blueprints\agents\_imported\
+- Blueprints/agents/_imported\
 
 ## Approval Required For
-- Any file edit outside Blueprints\prompts\ or Direction\reviews\
+- Any file edit outside Blueprints/prompts\ or Direction/reviews\
 - Roadmap changes
 - External vendor recommendations
 
@@ -148,7 +148,7 @@ Tier 2 (read + draft — no direct file writes without Claude or Codex approval)
 - Claude (planning review, RBAC questions)
 
 ## Notes
-Source: Blueprints\agents\_imported\__product_division\<filename>.md
+Source: Blueprints/agents/_imported/__product_division\<filename>.md
 <import notes or limitations>
 ```
 
@@ -187,8 +187,8 @@ Format:
 
 - [ ] All 5 product division agent files read
 - [ ] Each agent assigned a recommended status with reasoning
-- [ ] Division review summary written to `Solutions\reports\dbs-migration\phase-5-reviews\product-division-review.md`
-- [ ] SLOPS wrapper files written for all `candidate` agents at `Blueprints\agents\product\`
+- [ ] Division review summary written to `Solutions/reports/dbs-migration/phase-5-reviews/product-division-review.md`
+- [ ] SLOPS wrapper files written for all `candidate` agents at `Blueprints/agents/product/`
 - [ ] Proposed AGENT_INDEX.md changes presented (not applied)
 - [ ] Any RBAC concerns flagged explicitly
 - [ ] Justin review requested before proceeding to Phase 5B (Design Division)
@@ -202,7 +202,7 @@ Format:
 Once approved:
 - Apply the AGENT_INDEX.md changes
 - Confirm wrapper file paths
-- Proceed to Phase 5B (Design Division): `Blueprints\prompts\phase-5\phase-5b-design-division.md`
+- Proceed to Phase 5B (Design Division): `Blueprints/prompts/phase-5/phase-5b-design-division.md`
 
 ---
 

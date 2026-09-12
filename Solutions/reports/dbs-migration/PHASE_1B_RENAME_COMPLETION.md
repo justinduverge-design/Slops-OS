@@ -8,7 +8,7 @@ Operation type: folder renames only.
 
 | Old Path | New Path |
 |---|---|
-| `Direction\Reviews` | `Direction\reviews` |
+| `Direction/Reviews` | `Direction/reviews` |
 | `ssffmvp\Omen\Assets` | `ssffmvp\Omen\assets` |
 | `ssffmvp\Omen\Brand` | `ssffmvp\Omen\brand` |
 

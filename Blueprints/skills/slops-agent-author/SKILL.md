@@ -1,6 +1,6 @@
 ---
 name: slops-agent-author
-description: Create, critique, normalize, and improve SLOPS agent role files under Blueprints\agents using least privilege and role-based access control. Use when Justin asks to organize agents, classify imported agents, create AGENT.md files, build AGENT_INDEX.md, assign divisions/layers/status, or define agent permissions. Do not use for skill workflows; use slops-skill-author for Blueprints\skills.
+description: Create, critique, normalize, and improve SLOPS agent role files under Blueprints/agents using least privilege and role-based access control. Use when Justin asks to organize agents, classify imported agents, create AGENT.md files, build AGENT_INDEX.md, assign divisions/layers/status, or define agent permissions. Do not use for skill workflows; use slops-skill-author for Blueprints/skills.
 ---
 
 # Slops Agent Author
@@ -17,8 +17,8 @@ This skill protects the SLOPS system from imported or copied agents becoming acc
 
 Use this skill when Justin asks to:
 
-- Organize `Blueprints\agents`.
-- Write `Blueprints\agents\README.md`.
+- Organize `Blueprints/agents`.
+- Write `Blueprints/agents/README.md`.
 - Create or update `AGENT_INDEX.md`.
 - Classify imported agents.
 - Assign agents to company divisions.
@@ -26,14 +26,14 @@ Use this skill when Justin asks to:
 - Define role-based access control.
 - Decide whether an agent belongs globally or inside a project.
 - Create a reusable agent role file.
-- Normalize division agents. (`manager_agent.md` and `sub_agents.md` are canonical at `slops-saloon\omen\Blueprints\prompts\manager_agent.md` and `slops-saloon\omen\Blueprints\prompts\sub_agents.md` — the L0 redirect stubs were archived 2026-07-30.)
+- Normalize division agents. (`manager_agent.md` and `sub_agents.md` are canonical at `slops-saloon/omen/Blueprints/prompts/manager_agent.md` and `slops-saloon/omen/Blueprints/prompts/sub_agents.md` — the L0 redirect stubs were archived 2026-07-30.)
 - Separate reusable roles from Omen-specific runtime agents.
 
 ## Do Not Use
 
 Do not use this skill to:
 
-- Create or edit skill workflows under `Blueprints\skills`.
+- Create or edit skill workflows under `Blueprints/skills`.
 - Perform code implementation.
 - Run terminal commands.
 - Activate imported agents without review.
@@ -54,7 +54,7 @@ Blueprints/agents/
 Imported third-party agents should be quarantined or marked as candidate/reference material under:
 
 ```text
-Blueprints\agents\_imported
+Blueprints/agents/_imported
 ```
 
 Project-specific app agents should live closer to the project.
@@ -78,7 +78,7 @@ Prompts are one-time runnable instructions.
 Use:
 
 ```text
-Blueprints\agents
+Blueprints/agents
 ```
 
 for role identity and authority.
@@ -86,7 +86,7 @@ for role identity and authority.
 Use:
 
 ```text
-Blueprints\skills
+Blueprints/skills
 ```
 
 for reusable procedures.
@@ -94,7 +94,7 @@ for reusable procedures.
 Use:
 
 ```text
-Blueprints\Prompts
+Blueprints/Prompts
 ```
 
 for task prompts.
@@ -273,8 +273,8 @@ High-risk areas always require explicit approval:
    - reference-only persona
 3. Read only named files first.
 4. If no files are named, read:
-   - `Blueprints\agents\README.md`
-   - `Blueprints\agents\AGENT_INDEX.md`, if present
+   - `Blueprints/agents/README.md`
+   - `Blueprints/agents/AGENT_INDEX.md`, if present
    - the target agent file
    - relevant division folder only
 5. Do not scan all imported agents unless the task is an import audit.
@@ -300,17 +300,17 @@ When reviewing an agent:
 ## Special Rule for manager_agent.md and sub_agents.md
 
 Both are **already resolved**: they are canonical, live L2 runtime prompts at
-`slops-saloon\omen\Blueprints\prompts\manager_agent.md` and `slops-saloon\omen\Blueprints\prompts\sub_agents.md`. The L0 redirect stubs were archived on 2026-07-30 under
+`slops-saloon/omen/Blueprints/prompts/manager_agent.md` and `slops-saloon/omen/Blueprints/prompts/sub_agents.md`. The L0 redirect stubs were archived on 2026-07-30 under
 `Archive/authority-routing/`. Do not recreate an L0 copy, and do not treat either as an
 OS-level agent — neither inherits the 0-OS authority model.
 
 Likely project path:
 
 ```text
-slops-saloon\Blueprints\agents
+slops-saloon\Blueprints/agents
 ```
 
-Do not promote them to global `Blueprints\agents` unless Justin approves.
+Do not promote them to global `Blueprints/agents` unless Justin approves.
 
 ## Common Failure Modes
 

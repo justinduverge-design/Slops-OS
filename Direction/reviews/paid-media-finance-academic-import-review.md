@@ -4,13 +4,13 @@ Date: 2026-05-23
 Reviewer: Codex / slops-onboarding-agent
 Source folders:
 
-- `Blueprints\agents\_imported\__paid_media_division`
-- `Blueprints\agents\_imported\__finance_division`
-- `Blueprints\agents\_imported\__academic_division`
+- `Blueprints/agents/_imported/__paid_media_division`
+- `Blueprints/agents/_imported/__finance_division`
+- `Blueprints/agents/_imported/__academic_division`
 
 ## Context
 
-The imported agents remain non-authoritative until promoted through `slops-agent-author` review and recorded in `Blueprints\agents\AGENT_INDEX.md`.
+The imported agents remain non-authoritative until promoted through `slops-agent-author` review and recorded in `Blueprints/agents/AGENT_INDEX.md`.
 
 Root `AGENTS.md` required files checked from `C:\Users\JDuve\OneDrive\Desktop\SLOPS`:
 
@@ -24,9 +24,9 @@ Root `AGENTS.md` required files checked from `C:\Users\JDuve\OneDrive\Desktop\SL
 
 Canonical authority files reviewed:
 
-- `Blueprints\agents\AGENT_INDEX.md`
-- `Blueprints\tools\tool-permissions.md`
-- `Blueprints\skills\slops-agent-author\SKILL.md`
+- `Blueprints/agents/AGENT_INDEX.md`
+- `Blueprints/tools/tool-permissions.md`
+- `Blueprints/skills/slops-agent-author/SKILL.md`
 
 ## Paid Media Classification
 
@@ -76,21 +76,21 @@ Canonical authority files reviewed:
 
 Recommended Paid Media wrappers:
 
-1. `paid-media-creative-strategist` as `Blueprints\agents\paid-media\paid-media-creative-strategist.md`
-2. `paid-media-search-query-analyst` as `Blueprints\agents\paid-media\paid-media-search-query-analyst.md`
-3. `paid-media-tracking-specialist` as `Blueprints\agents\paid-media\paid-media-tracking-specialist.md`
-4. `paid-media-auditor` as `Blueprints\agents\paid-media\paid-media-auditor.md`
+1. `paid-media-creative-strategist` as `Blueprints/agents/paid-media/paid-media-creative-strategist.md`
+2. `paid-media-search-query-analyst` as `Blueprints/agents/paid-media/paid-media-search-query-analyst.md`
+3. `paid-media-tracking-specialist` as `Blueprints/agents/paid-media/paid-media-tracking-specialist.md`
+4. `paid-media-auditor` as `Blueprints/agents/paid-media/paid-media-auditor.md`
 
 Recommended Finance wrappers:
 
-1. `finance-financial-analyst` as `Blueprints\agents\finance\finance-financial-analyst.md`
-2. `finance-fpa-analyst` as `Blueprints\agents\finance\finance-fpa-analyst.md`
+1. `finance-financial-analyst` as `Blueprints/agents/finance/finance-financial-analyst.md`
+2. `finance-fpa-analyst` as `Blueprints/agents/finance/finance-fpa-analyst.md`
 
 Recommended Academic wrappers:
 
-1. `academic-historian` as `Blueprints\agents\academic\academic-historian.md`
-2. `academic-anthropologist` as `Blueprints\agents\academic\academic-anthropologist.md`
-3. `academic-narratologist` as `Blueprints\agents\academic\academic-narratologist.md`
+1. `academic-historian` as `Blueprints/agents/academic/academic-historian.md`
+2. `academic-anthropologist` as `Blueprints/agents/academic/academic-anthropologist.md`
+3. `academic-narratologist` as `Blueprints/agents/academic/academic-narratologist.md`
 
 Do not create wrappers for `paid-media-ppc-strategist` or `finance-tax-strategist`. Keep reference-only agents readable as source material only.
 
@@ -100,8 +100,8 @@ All wrappers from this pass should start as `candidate`, Tier 2 max:
 
 - Read, analyze, draft, and recommend only.
 - May write draft markdown only when explicitly assigned.
-- May write to `Blueprints\prompts\`, `Direction\reviews\`, and `Solutions\reports\`.
-- Must not write to `slops-saloon\src\`, `slops-saloon\frontend\`, `slops-saloon\client\`, `slops-saloon\sql\`, `slops-saloon\scripts\`, `slops-saloon\test\`, `Archive\`, `.env`, `.key`, credentials, secrets, tokens, cookies, production, deployment, Docker, GitHub Actions, auth, payment, database, ad-platform, analytics-platform, accounting, payroll, or tax files.
+- May write to `Blueprints/prompts/`, `Direction/reviews/`, and `Solutions/reports/`.
+- Must not write to `slops-saloon\src\`, `slops-saloon\frontend\`, `slops-saloon\client\`, `slops-saloon\sql\`, `slops-saloon\scripts\`, `slops-saloon\test\`, `Archive/`, `.env`, `.key`, credentials, secrets, tokens, cookies, production, deployment, Docker, GitHub Actions, auth, payment, database, ad-platform, analytics-platform, accounting, payroll, or tax files.
 - Must not access or mutate Google Ads, Microsoft Ads, Meta, LinkedIn, TikTok, Amazon Ads, DV360, DSPs, GTM, GA4, CRMs, accounting systems, bank accounts, payroll systems, tax software, portfolio tools, or customer-data systems.
 - Must not launch ads, change budgets, change bids, deploy keywords, deploy pixels, upload audiences, submit tax filings, approve budgets, issue forecasts, recommend trades, send financial reports externally, or make final legal/tax/financial decisions.
 - Escalates to Justin for spend, budget, financial, tax, legal, investment, regulated-claims, customer-data, public-communication, and platform-access decisions.

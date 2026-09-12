@@ -4,14 +4,14 @@ Date: 2026-05-23
 Reviewer: Codex / slops-onboarding-agent
 Source folders:
 
-- `Blueprints\agents\_imported\__support_division`
-- `Blueprints\agents\_imported\__specialized_division`
-- `Blueprints\agents\_imported\__project_management_division`
-- `Blueprints\agents\_imported\__engineering_division`
+- `Blueprints/agents/_imported/__support_division`
+- `Blueprints/agents/_imported/__specialized_division`
+- `Blueprints/agents/_imported/__project_management_division`
+- `Blueprints/agents/_imported/__engineering_division`
 
 ## Context
 
-The imported agents remain non-authoritative until promoted through `slops-agent-author` review and recorded in `Blueprints\agents\AGENT_INDEX.md`.
+The imported agents remain non-authoritative until promoted through `slops-agent-author` review and recorded in `Blueprints/agents/AGENT_INDEX.md`.
 
 Root `AGENTS.md` required files checked from `C:\Users\JDuve\OneDrive\Desktop\SLOPS`:
 
@@ -25,9 +25,9 @@ Root `AGENTS.md` required files checked from `C:\Users\JDuve\OneDrive\Desktop\SL
 
 Canonical authority files reviewed:
 
-- `Blueprints\agents\AGENT_INDEX.md`
-- `Blueprints\tools\tool-permissions.md`
-- `Blueprints\skills\slops-agent-author\SKILL.md`
+- `Blueprints/agents/AGENT_INDEX.md`
+- `Blueprints/tools/tool-permissions.md`
+- `Blueprints/skills/slops-agent-author/SKILL.md`
 
 ## Support Classification
 
@@ -108,35 +108,35 @@ Canonical authority files reviewed:
 
 Recommended Support wrappers:
 
-1. `support-executive-summary-generator` as `Blueprints\agents\support\support-executive-summary-generator.md`
-2. `support-analytics-reporter` as `Blueprints\agents\support\support-analytics-reporter.md`
-3. `support-support-responder` as `Blueprints\agents\support\support-support-responder.md`
-4. `support-legal-compliance-checker` as `Blueprints\agents\support\support-legal-compliance-checker.md`
+1. `support-executive-summary-generator` as `Blueprints/agents/support/support-executive-summary-generator.md`
+2. `support-analytics-reporter` as `Blueprints/agents/support/support-analytics-reporter.md`
+3. `support-support-responder` as `Blueprints/agents/support/support-support-responder.md`
+4. `support-legal-compliance-checker` as `Blueprints/agents/support/support-legal-compliance-checker.md`
 
 Recommended Specialized wrappers:
 
-1. `specialized-workflow-architect` as `Blueprints\agents\specialized\specialized-workflow-architect.md`
-2. `compliance-auditor` as `Blueprints\agents\specialized\compliance-auditor.md`
-3. `specialized-developer-advocate` as `Blueprints\agents\specialized\specialized-developer-advocate.md`
-4. `language-translator` as `Blueprints\agents\specialized\language-translator.md`
+1. `specialized-workflow-architect` as `Blueprints/agents/specialized/specialized-workflow-architect.md`
+2. `compliance-auditor` as `Blueprints/agents/specialized/compliance-auditor.md`
+3. `specialized-developer-advocate` as `Blueprints/agents/specialized/specialized-developer-advocate.md`
+4. `language-translator` as `Blueprints/agents/specialized/language-translator.md`
 
 Recommended Project Management wrappers:
 
-1. `project-management-project-shepherd` as `Blueprints\agents\project-management\project-management-project-shepherd.md`
-2. `project-management-experiment-tracker` as `Blueprints\agents\project-management\project-management-experiment-tracker.md`
-3. `project-manager-senior` as `Blueprints\agents\project-management\project-manager-senior.md`
+1. `project-management-project-shepherd` as `Blueprints/agents/project-management/project-management-project-shepherd.md`
+2. `project-management-experiment-tracker` as `Blueprints/agents/project-management/project-management-experiment-tracker.md`
+3. `project-manager-senior` as `Blueprints/agents/project-management/project-manager-senior.md`
 
 Recommended Engineering wrappers:
 
-1. `engineering-codebase-onboarding-engineer` as `Blueprints\agents\engineering\engineering-codebase-onboarding-engineer.md`
-2. `engineering-code-reviewer` as `Blueprints\agents\engineering\engineering-code-reviewer.md`
-3. `engineering-technical-writer` as `Blueprints\agents\engineering\engineering-technical-writer.md`
-4. `engineering-security-engineer` as `Blueprints\agents\engineering\engineering-security-engineer.md`
-5. `engineering-software-architect` as `Blueprints\agents\engineering\engineering-software-architect.md`
-6. `engineering-backend-architect-advisor` as `Blueprints\agents\engineering\engineering-backend-architect-advisor.md`
-7. `engineering-ai-integration-advisor` as `Blueprints\agents\engineering\engineering-ai-integration-advisor.md`
-8. `engineering-data-engineer-advisor` as `Blueprints\agents\engineering\engineering-data-engineer-advisor.md`
-9. `engineering-sre-advisor` as `Blueprints\agents\engineering\engineering-sre-advisor.md`
+1. `engineering-codebase-onboarding-engineer` as `Blueprints/agents/engineering/engineering-codebase-onboarding-engineer.md`
+2. `engineering-code-reviewer` as `Blueprints/agents/engineering/engineering-code-reviewer.md`
+3. `engineering-technical-writer` as `Blueprints/agents/engineering/engineering-technical-writer.md`
+4. `engineering-security-engineer` as `Blueprints/agents/engineering/engineering-security-engineer.md`
+5. `engineering-software-architect` as `Blueprints/agents/engineering/engineering-software-architect.md`
+6. `engineering-backend-architect-advisor` as `Blueprints/agents/engineering/engineering-backend-architect-advisor.md`
+7. `engineering-ai-integration-advisor` as `Blueprints/agents/engineering/engineering-ai-integration-advisor.md`
+8. `engineering-data-engineer-advisor` as `Blueprints/agents/engineering/engineering-data-engineer-advisor.md`
+9. `engineering-sre-advisor` as `Blueprints/agents/engineering/engineering-sre-advisor.md`
 
 Do not create wrappers for the `do-not-activate` agents. Keep reference-only agents readable as source material only.
 
@@ -146,8 +146,8 @@ All wrappers from this pass should start as `candidate`, Tier 2 max:
 
 - Read, analyze, draft, and recommend only.
 - May write draft markdown only when explicitly assigned.
-- May write to `Blueprints\prompts\`, `Direction\reviews\`, and `Solutions\reports\`.
-- Must not write to `slops-saloon\src\`, `slops-saloon\frontend\`, `slops-saloon\client\`, `slops-saloon\sql\`, `slops-saloon\scripts\`, `slops-saloon\test\`, `Archive\`, `.env`, `.key`, credentials, secrets, tokens, cookies, production, deployment, Docker, GitHub Actions, auth, payment, or database files.
+- May write to `Blueprints/prompts/`, `Direction/reviews/`, and `Solutions/reports/`.
+- Must not write to `slops-saloon\src\`, `slops-saloon\frontend\`, `slops-saloon\client\`, `slops-saloon\sql\`, `slops-saloon\scripts\`, `slops-saloon\test\`, `Archive/`, `.env`, `.key`, credentials, secrets, tokens, cookies, production, deployment, Docker, GitHub Actions, auth, payment, or database files.
 - Must not access or mutate external systems, CRMs, help desks, analytics dashboards, legal/compliance portals, HR systems, app stores, CI/CD providers, cloud accounts, SIEMs, databases, payment systems, or customer-data systems.
 - Must not deploy, migrate, delete, restore, rotate secrets, alter infrastructure, send customer communications, publish public docs, approve legal/compliance status, or make final commercial/product decisions.
 - Escalates to Justin for commercial, legal, compliance, brand, spend, customer-data, production, infrastructure, and public-communication decisions.

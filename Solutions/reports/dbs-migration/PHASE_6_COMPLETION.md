@@ -19,8 +19,8 @@ Manager agent disposition + layer-to-layer handoff documentation.
 
 | File | Before | After |
 |------|--------|-------|
-| `Blueprints\agents\manager_agent.md` | 200-line full copy of runtime prompt | 45-line redirect stub pointing to `ssffmvp\Blueprints\prompts\manager_agent.md` |
-| `Blueprints\agents\sub_agents.md` | 203-line full copy of runtime prompt | 48-line redirect stub pointing to `ssffmvp\Blueprints\prompts\sub_agents.md` |
+| `Blueprints/agents/manager_agent.md` | 200-line full copy of runtime prompt | 45-line redirect stub pointing to `ssffmvp\Blueprints/prompts/manager_agent.md` |
+| `Blueprints/agents/sub_agents.md` | 203-line full copy of runtime prompt | 48-line redirect stub pointing to `ssffmvp\Blueprints/prompts/sub_agents.md` |
 
 The full runtime prompt content now lives exclusively at the canonical `1-ssffmvp` layer.
 The SLOPS 0-OS layer holds only navigation stubs — no duplicated runtime content.
@@ -29,7 +29,7 @@ The SLOPS 0-OS layer holds only navigation stubs — no duplicated runtime conte
 
 | File | Purpose |
 |------|---------|
-| `Blueprints\agents\layer-handoff-protocol.md` | Defines what each DBS layer owns, what it passes down, how agents escalate up, and where runtime prompts belong |
+| `Blueprints/agents/layer-handoff-protocol.md` | Defines what each DBS layer owns, what it passes down, how agents escalate up, and where runtime prompts belong |
 
 Covers:
 - 0-OS → 1-ssffmvp → 2-Omen authority chain
@@ -100,7 +100,7 @@ These were identified during the migration but not scheduled in Phases 1–6:
 |------|-------------|------|-------|
 | `ssffmvp` root loose-file cleanup | ~10 loose files need to move to DBS homes | Low | Justin to schedule |
 | `oraclepu.key` security review | Key at ssffmvp repo root — verify gitignored, consider moving out of repo | Medium | Justin to review |
-| `Archive\` full audit | Some items may need re-routing | Low | Future pass |
+| `Archive/` full audit | Some items may need re-routing | Low | Future pass |
 | `AGENT_INDEX.md` Section 4/5 update | Proposed changes above — apply after Justin approval | Low | Claude + Codex after approval |
 
 ---
@@ -109,8 +109,8 @@ These were identified during the migration but not scheduled in Phases 1–6:
 
 | File | Action |
 |------|--------|
-| `Blueprints\agents\manager_agent.md` | Replaced full content with redirect stub |
-| `Blueprints\agents\sub_agents.md` | Replaced full content with redirect stub |
-| `Blueprints\agents\layer-handoff-protocol.md` | Created new |
-| `Solutions\reports\dbs-migration\PHASES_MASTER_PLAN.md` | Updated status to complete |
-| `Solutions\reports\dbs-migration\PHASE_6_COMPLETION.md` | Created new (this file) |
+| `Blueprints/agents/manager_agent.md` | Replaced full content with redirect stub |
+| `Blueprints/agents/sub_agents.md` | Replaced full content with redirect stub |
+| `Blueprints/agents/layer-handoff-protocol.md` | Created new |
+| `Solutions/reports/dbs-migration/PHASES_MASTER_PLAN.md` | Updated status to complete |
+| `Solutions/reports/dbs-migration/PHASE_6_COMPLETION.md` | Created new (this file) |

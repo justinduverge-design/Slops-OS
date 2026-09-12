@@ -2,7 +2,7 @@
 name: sub_agents
 status: active (runtime)
 layer: 1-slops-saloon
-canonical-location: slops-saloon\omen\Blueprints\prompts\sub_agents.md
+canonical-location: slops-saloon\omen\Blueprints/prompts/sub_agents.md
 ---
 
 # Sub-Agents — Redirect Stub
@@ -16,7 +16,7 @@ canonical-location: slops-saloon\omen\Blueprints\prompts\sub_agents.md
 ## Canonical Location
 
 ```text
-slops-saloon\omen\Blueprints\prompts\sub_agents.md
+slops-saloon\omen\Blueprints/prompts/sub_agents.md
 ```
 
 ## Status
@@ -37,14 +37,14 @@ Each sub-agent output becomes part of the `signals` object passed to the Manager
 
 ## Related Files
 
-- `slops-saloon\omen\Blueprints\prompts\manager_agent.md` — the orchestrating Manager Agent
-- `slops-saloon\omen\Blueprints\prompts\PROMPTS_CHANGELOG.md` — tuning history
-- `Blueprints\agents\AGENT_INDEX.md` — Section 3 (Project-Specific Agents)
-- `Blueprints\agents\layer-handoff-protocol.md` — cross-layer communication rules
+- `slops-saloon/omen/Blueprints/prompts/manager_agent.md` — the orchestrating Manager Agent
+- `slops-saloon/omen/Blueprints/prompts/PROMPTS_CHANGELOG.md` — tuning history
+- `Blueprints/agents/AGENT_INDEX.md` — Section 3 (Project-Specific Agents)
+- `Blueprints/agents/layer-handoff-protocol.md` — cross-layer communication rules
 
 ## Why This Stub Exists
 
-`Blueprints\agents\` is the global SLOPS OS agent roster. These sub-agents live
+`Blueprints/agents/` is the global SLOPS OS agent roster. These sub-agents live
 one layer down at `1-slops-saloon` because they are product-specific runtime logic for
 the Omen fantasy football engine. This stub prevents confusion when browsing the
 global agent directory.

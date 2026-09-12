@@ -16,7 +16,7 @@ This skill answers: which imported agents are worth wrapping, which should stay 
 - Skill name: `slops-onboarding-agent`
 - Primary user: Justin
 - Primary agents: Claude for review and selection; Codex for approved markdown file creation
-- DBS layer: `Blueprints\skills`
+- DBS layer: `Blueprints/skills`
 - Skill type: simple skill with optional interface metadata
 - Status: candidate until Justin approves routing/index updates
 
@@ -54,7 +54,7 @@ Do not use this skill to:
 - Write final agent wrapper files without also applying `slops-agent-author`.
 - Grant tool authority, production authority, secrets access, app source access, database access, payment authority, auth authority, or user-data access.
 - Review multiple imported divisions in one pass unless Justin explicitly asks.
-- Touch `slops-saloon` source, SQL, frontend, client, scripts, tests, evals, package files, `node_modules`, `.git`, secrets, production, deployment, DNS, SSL, Nginx, VPS, Docker, GitHub Actions, payments, auth, databases, or `Archive\quarantine`.
+- Touch `slops-saloon` source, SQL, frontend, client, scripts, tests, evals, package files, `node_modules`, `.git`, secrets, production, deployment, DNS, SSL, Nginx, VPS, Docker, GitHub Actions, payments, auth, databases, or `Archive/quarantine`.
 
 ## Required Inputs
 
@@ -67,10 +67,10 @@ Minimum inputs:
 
 Recommended inputs:
 
-- `Blueprints\agents\AGENT_INDEX.md`
-- `Blueprints\skills\slops-agent-author\SKILL.md`
-- `Blueprints\skills\SKILL_ROUTING.md`
-- `Blueprints\tools\tool-permissions.md`
+- `Blueprints/agents/AGENT_INDEX.md`
+- `Blueprints/skills/slops-agent-author/SKILL.md`
+- `Blueprints/skills/SKILL_ROUTING.md`
+- `Blueprints/tools/tool-permissions.md`
 - Current Phase 5 plan or migration plan.
 - Prior division review summaries, especially Phase 5A when standardizing later phases.
 
@@ -79,10 +79,10 @@ Recommended inputs:
 Use least privilege.
 
 1. Read the user request and confirm the division scope.
-2. Read `Blueprints\agents\AGENT_INDEX.md`.
-3. Read `Blueprints\skills\slops-agent-author\SKILL.md`.
-4. Read `Blueprints\skills\SKILL_ROUTING.md`.
-5. Read `Blueprints\tools\tool-permissions.md`.
+2. Read `Blueprints/agents/AGENT_INDEX.md`.
+3. Read `Blueprints/skills/slops-agent-author/SKILL.md`.
+4. Read `Blueprints/skills/SKILL_ROUTING.md`.
+5. Read `Blueprints/tools/tool-permissions.md`.
 6. Read the current phase plan, if named.
 7. Read all imported agent files in the single requested division before making selection decisions.
 8. Read prior review summaries only when the task asks to standardize or compare phases.
@@ -284,10 +284,10 @@ Rules:
 
 ## DBS Routing
 
-- Division review summaries: `Solutions\reports\dbs-migration\phase-5-reviews\`
-- Candidate wrapper files: `Blueprints\agents\<division-short-name>\`
+- Division review summaries: `Solutions/reports/dbs-migration/phase-5-reviews/`
+- Candidate wrapper files: `Blueprints/agents/<division-short-name>/`
 - Proposed index changes: inside the review summary only until Justin approves.
-- Reusable future prompts: `Blueprints\prompts\phase-5\`
+- Reusable future prompts: `Blueprints/prompts/phase-5/`
 - Do not route active source, runtime files, or implementation assets through this skill.
 
 ## RBAC Boundaries
@@ -325,7 +325,7 @@ Avoid:
 Before using or editing this skill, check:
 
 ```text
-Blueprints\skills\slops-onboarding-agent\notes\prior-use-review.md
+Blueprints/skills/slops-onboarding-agent/notes/prior-use-review.md
 ```
 
 If it exists, extract:

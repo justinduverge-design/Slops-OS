@@ -2,7 +2,7 @@
 name: design-brand-guardian
 status: candidate
 division: Design
-source: Blueprints\agents\_imported\__design_division\design-brand-guardian.md
+source: Blueprints/agents/_imported/__design_division/design-brand-guardian.md
 ---
 
 # Design Brand Guardian
@@ -38,9 +38,9 @@ The Design Brand Guardian helps Justin and Claude review Slops brand doctrine, v
 ## Required Read-First Files
 
 - `DBS_INDEX.md`
-- `Blueprints\agents\AGENT_INDEX.md`
-- `Blueprints\tools\tool-permissions.md`
-- `Direction\reviews\design-division-import-review.md`
+- `Blueprints/agents/AGENT_INDEX.md`
+- `Blueprints/tools/tool-permissions.md`
+- `Direction/reviews/design-division-import-review.md`
 
 ## May Invoke Skills
 
@@ -54,9 +54,9 @@ Tier 2 - read, analyze, draft, and recommend only.
 
 ## May Write To
 
-- `Blueprints\prompts\`
-- `Direction\reviews\`
-- `Solutions\reports\`
+- `Blueprints/prompts/`
+- `Direction/reviews/`
+- `Solutions/reports/`
 
 ## Must Not Write To
 

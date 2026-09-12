@@ -27,7 +27,7 @@ parent directories, or touch anything outside the specified paths.
 
 ## Task 1 — Rename `_imported` Division Folders
 
-**Location:** `C:\Users\JDuve\OneDrive\Desktop\SLOPS\Blueprints\agents\_imported`
+**Location:** `C:\Users\JDuve\OneDrive\Desktop\SLOPS\Blueprints/agents\_imported`
 
 Rename each folder below. Folder contents stay exactly as-is — rename the folder only.
 
@@ -52,7 +52,7 @@ Rename each folder below. Folder contents stay exactly as-is — rename the fold
 
 ## Task 2 — Fix Skill Package Support Folder Naming
 
-**Location:** `C:\Users\JDuve\OneDrive\Desktop\SLOPS\Blueprints\skills\slops-prompt-generator`
+**Location:** `C:\Users\JDuve\OneDrive\Desktop\SLOPS\Blueprints/skills/slops-prompt-generator`
 
 One naming inconsistency exists: this skill package uses `__interface` (double underscore)
 while the canonical pattern for skill support subfolders is `_interface` (single underscore).
@@ -61,7 +61,7 @@ Rename:
 
 | Current | New |
 |---|---|
-| `Blueprints\skills\slops-prompt-generator\__interface` | `Blueprints\skills\slops-prompt-generator\_interface` |
+| `Blueprints/skills/slops-prompt-generator/__interface` | `Blueprints/skills/slops-prompt-generator/_interface` |
 
 **Note:** `_references` in the same skill package is already correct — do not rename it.
 
@@ -103,13 +103,13 @@ Do not run any install, build, test, migration, deploy, or git commit command.
 
 **Step 1:** List `_imported` folder contents and confirm output.
 ```
-dir "C:\Users\JDuve\OneDrive\Desktop\SLOPS\Blueprints\agents\_imported"
+dir "C:\Users\JDuve\OneDrive\Desktop\SLOPS\Blueprints/agents/_imported"
 ```
 Expected: 12 folders, all start with `__`, no spaces in names.
 
 **Step 2:** List `slops-prompt-generator` contents and confirm.
 ```
-dir "C:\Users\JDuve\OneDrive\Desktop\SLOPS\Blueprints\skills\slops-prompt-generator"
+dir "C:\Users\JDuve\OneDrive\Desktop\SLOPS\Blueprints/skills/slops-prompt-generator"
 ```
 Expected: `_interface` (single underscore) present, `__interface` absent.
 
@@ -131,7 +131,7 @@ Expected: No changes from this operation (we only touched SLOPS root layer).
 
 After verification, write this file:
 
-**Path:** `C:\Users\JDuve\OneDrive\Desktop\SLOPS\Solutions\reports\dbs-migration\PHASE_1_RENAME_COMPLETION.md`
+**Path:** `C:\Users\JDuve\OneDrive\Desktop\SLOPS\Solutions/reports/dbs-migration/PHASE_1_RENAME_COMPLETION.md`
 
 **Contents to include:**
 - Date and time completed

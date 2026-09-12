@@ -16,7 +16,7 @@ Evidence means documented facts and source references that show what SLOPS does,
 - **Skill name:** `security-privacy-evidence`
 - **Primary user:** Justin
 - **Primary agents:** Claude for policy/evidence review; Codex for file creation and source inspection when instructed.
-- **DBS layer:** `Blueprints\skills`
+- **DBS layer:** `Blueprints/skills`
 - **Skill type:** simple skill
 - **Status:** active
 
@@ -55,10 +55,10 @@ If source files are missing, produce an evidence gap note instead of inventing f
 Evidence notes usually belong under:
 
 ```text
-Direction\reviews
-Direction\decisions
-References\research
-Blueprints\specs
+Direction/reviews
+Direction/decisions
+References/research
+Blueprints/specs
 ```
 
 Use app-specific handoff paths only when Justin explicitly scopes the evidence to `slops-saloon`.
@@ -70,9 +70,9 @@ Use least privilege.
 1. Read Justin's request.
 2. Read only named source files first.
 3. Read relevant authority files only if permissions are part of the evidence:
-   - `Blueprints\agents\AGENT_INDEX.md`
-   - `Blueprints\skills\SKILL_ROUTING.md`
-   - `Blueprints\tools\tool-permissions.md`
+   - `Blueprints/agents/AGENT_INDEX.md`
+   - `Blueprints/skills/SKILL_ROUTING.md`
+   - `Blueprints/tools/tool-permissions.md`
 4. Search for policy, handoff, or decision references before reading large folders.
 5. Do not open `.env`, credential stores, raw cookies, private user exports, billing exports, or production secrets.
 6. If evidence depends on a secret or production-only fact, mark it as "requires authorized human verification."
@@ -159,10 +159,10 @@ When using this skill, produce:
 
 ## DBS Routing
 
-- Evidence reviews: `Direction\reviews`
-- Permanent security/privacy decisions: `Direction\decisions`
-- Raw research or source summaries: `References\research`
-- Implementation-neutral requirements: `Blueprints\specs`
+- Evidence reviews: `Direction/reviews`
+- Permanent security/privacy decisions: `Direction/decisions`
+- Raw research or source summaries: `References/research`
+- Implementation-neutral requirements: `Blueprints/specs`
 - Do not write secrets, production configs, credentials, cookies, or raw user data.
 
 ## RBAC Boundaries
@@ -198,7 +198,7 @@ Watch for:
 Before changing this skill, check:
 
 ```text
-Blueprints\skills\security-privacy-evidence\notes\prior-use-review.md
+Blueprints/skills/security-privacy-evidence/notes/prior-use-review.md
 ```
 
 If present, incorporate repeated corrections into failure modes or the process recipe.

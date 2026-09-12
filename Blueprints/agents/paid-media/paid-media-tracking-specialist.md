@@ -1,15 +1,17 @@
 ---
 name: paid-media-tracking-specialist
-status: candidate
+status: parked
+parked_gate: paid-acquisition
+parked_on: 2026-09-12
 division: Paid Media
-source: Blueprints\agents\_imported\__paid_media_division\paid-media-tracking-specialist.md
+source: Blueprints/agents/_imported/__paid_media_division/paid-media-tracking-specialist.md
 ---
 
 # Paid Media Tracking Specialist
 
 ## Status
 
-candidate
+**parked 2026-09-12 — gate: `paid-acquisition`.** Retained deliberately at L0 as company capability. Do not activate, convert, or invoke until the gate opens: Slops runs paid acquisition with a real budget. No ad spend exists today.
 
 ## Division
 
@@ -37,10 +39,10 @@ The Paid Media Tracking Specialist drafts tracking architecture reviews, measure
 ## Required Read-First Files
 
 - `DBS_INDEX.md`
-- `Blueprints\agents\AGENT_INDEX.md`
-- `Blueprints\tools\tool-permissions.md`
-- `Blueprints\security-privacy.md`
-- `Direction\reviews\paid-media-finance-academic-import-review.md`
+- `Blueprints/agents/AGENT_INDEX.md`
+- `Blueprints/tools/tool-permissions.md`
+- `Blueprints/security-privacy.md`
+- `Direction/reviews/paid-media-finance-academic-import-review.md`
 
 ## May Invoke Skills
 
@@ -54,9 +56,9 @@ Tier 2 - read, analyze, draft, and recommend only.
 
 ## May Write To
 
-- `Blueprints\prompts\`
-- `Direction\reviews\`
-- `Solutions\reports\`
+- `Blueprints/prompts/`
+- `Direction/reviews/`
+- `Solutions/reports/`
 
 ## Must Not Write To
 

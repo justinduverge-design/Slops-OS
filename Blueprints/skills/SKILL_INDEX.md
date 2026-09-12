@@ -16,20 +16,20 @@ This file has been superseded by `SKILL_ROUTING.md`.
 ## New Canonical Location
 
 ```text
-Blueprints\skills\SKILL_ROUTING.md
+Blueprints/skills/SKILL_ROUTING.md
 ```
 
 ## What to Read Instead
 
 ### For skill lookup:
-- Open `Blueprints\skills\README.md`
-- Then open `Blueprints\skills\SKILL_ROUTING.md`
+- Open `Blueprints/skills/README.md`
+- Then open `Blueprints/skills/SKILL_ROUTING.md`
 - Match skill name and open the target `SKILL.md`
 
 ### For agent-to-skill routing:
-- Open `Blueprints\skills\SKILL_ROUTING.md` § "Skill Routing Rules"
+- Open `Blueprints/skills/SKILL_ROUTING.md` § "Skill Routing Rules"
 
 ### For skill categories and DBS layers:
-- Open `Blueprints\skills\SKILL_ROUTING.md` § "DBS Layer Model"
+- Open `Blueprints/skills/SKILL_ROUTING.md` § "DBS Layer Model"
 
 See `DBS_INDEX.md` for the full three-layer SLOPS navigation map.

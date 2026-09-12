@@ -59,27 +59,27 @@ Default layer:
 
 ```text
 0-OS
-Blueprints\skills\pre-build-research\SKILL.md
+Blueprints/skills/pre-build-research/SKILL.md
 ```
 
 Research outputs should be routed by scope:
 
 ```text
 0-OS / Slops Saloon:
-References\research
-References\patterns
-Direction\reviews
-Blueprints\prompts
+References/research
+References/patterns
+Direction/reviews
+Blueprints/prompts
 
 1-slops-saloon:
-slops-saloon\References\research
-slops-saloon\Direction\reviews
-slops-saloon\omen\Blueprints\prompts
+slops-saloon\References/research
+slops-saloon\Direction/reviews
+slops-saloon\omen\Blueprints/prompts
 
 Layer 2 (omen):
-slops-saloon\omen\References\research
-slops-saloon\omen\Direction\reviews
-slops-saloon\omen\Blueprints\prompts
+slops-saloon\omen\References/research
+slops-saloon\omen\Direction/reviews
+slops-saloon\omen\Blueprints/prompts
 ```
 
 Use the lowest layer that safely contains the research.

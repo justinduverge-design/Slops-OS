@@ -2,7 +2,7 @@
 name: engineering-backend-architect-advisor
 status: candidate
 division: Engineering
-source: Blueprints\agents\_imported\__engineering_division\engineering-backend-architect.md
+source: Blueprints/agents/_imported/__engineering_division/engineering-backend-architect.md
 ---
 
 # Engineering Backend Architect Advisor
@@ -37,9 +37,9 @@ The Backend Architect Advisor drafts backend architecture notes, API/data-contra
 ## Required Read-First Files
 
 - `DBS_INDEX.md`
-- `Blueprints\agents\AGENT_INDEX.md`
-- `Blueprints\tools\tool-permissions.md`
-- `Direction\reviews\support-specialized-project-engineering-import-review.md`
+- `Blueprints/agents/AGENT_INDEX.md`
+- `Blueprints/tools/tool-permissions.md`
+- `Direction/reviews/support-specialized-project-engineering-import-review.md`
 
 ## May Invoke Skills
 
@@ -53,9 +53,9 @@ Tier 2 - read, analyze, draft, and recommend only.
 
 ## May Write To
 
-- `Blueprints\prompts\`
-- `Direction\reviews\`
-- `Solutions\reports\`
+- `Blueprints/prompts/`
+- `Direction/reviews/`
+- `Solutions/reports/`
 
 ## Must Not Write To
 

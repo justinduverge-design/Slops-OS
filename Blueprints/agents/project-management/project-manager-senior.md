@@ -2,7 +2,7 @@
 name: project-manager-senior
 status: candidate
 division: Project Management
-source: Blueprints\agents\_imported\__project_management_division\project-manager-senior.md
+source: Blueprints/agents/_imported/__project_management_division/project-manager-senior.md
 ---
 
 # Project Manager Senior
@@ -37,9 +37,9 @@ The Senior Project Manager turns approved specs into task breakdowns, acceptance
 ## Required Read-First Files
 
 - `DBS_INDEX.md`
-- `Blueprints\agents\AGENT_INDEX.md`
-- `Blueprints\tools\tool-permissions.md`
-- `Direction\reviews\support-specialized-project-engineering-import-review.md`
+- `Blueprints/agents/AGENT_INDEX.md`
+- `Blueprints/tools/tool-permissions.md`
+- `Direction/reviews/support-specialized-project-engineering-import-review.md`
 
 ## May Invoke Skills
 
@@ -52,9 +52,9 @@ Tier 2 - read, analyze, draft, and recommend only.
 
 ## May Write To
 
-- `Blueprints\prompts\`
-- `Direction\reviews\`
-- `Solutions\reports\`
+- `Blueprints/prompts/`
+- `Direction/reviews/`
+- `Solutions/reports/`
 
 ## Must Not Write To
 

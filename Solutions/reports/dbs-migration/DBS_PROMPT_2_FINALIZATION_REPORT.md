@@ -4,8 +4,8 @@ Date: 2026-05-22
 
 Sources:
 
-- `Solutions\reports\dbs-migration\DBS_FINAL_FOLDER_TREE_REVIEW.md`
-- `Solutions\reports\dbs-migration\DBS_PROMPT_1_PHYSICAL_CLEANUP_REPORT.md`
+- `Solutions/reports/dbs-migration/DBS_FINAL_FOLDER_TREE_REVIEW.md`
+- `Solutions/reports/dbs-migration/DBS_PROMPT_1_PHYSICAL_CLEANUP_REPORT.md`
 
 ## 1. Sensitive Ignore Check
 
@@ -273,4 +273,4 @@ No deploy, commit, push, or delete was performed.
 
 No `.env` files or key files were opened, printed, copied, renamed, moved, or modified.
 
-No app source, Docker files, GitHub Actions, package files, SQL, scripts, tests, `node_modules`, `.git` folders, or `Archive\quarantine` contents were touched.
+No app source, Docker files, GitHub Actions, package files, SQL, scripts, tests, `node_modules`, `.git` folders, or `Archive/quarantine` contents were touched.

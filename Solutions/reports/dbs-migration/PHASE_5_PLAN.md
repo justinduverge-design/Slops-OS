@@ -9,7 +9,7 @@
 
 ## Overview
 
-The `Blueprints\agents\_imported\` folder contains 11 divisions and ~90 imported agent role files. All are currently `reference-only`. Phase 5 runs each division through `slops-agent-author` to:
+The `Blueprints/agents/_imported/` folder contains 11 divisions and ~90 imported agent role files. All are currently `reference-only`. Phase 5 runs each division through `slops-agent-author` to:
 
 1. Select which agents in each division are most relevant to current SLOPS/Omen launch needs
 2. Create SLOPS doctrine wrapper files for selected agents
@@ -27,14 +27,14 @@ Imported agent files are preserved in `_imported/` exactly as they came in. They
 Promoted agents get a **new SLOPS doctrine wrapper file** at:
 
 ```text
-Blueprints\agents\<division-short-name>\<agent-name>.md
+Blueprints/agents\<division-short-name>\<agent-name>.md
 ```
 
 Examples:
 ```text
-Blueprints\agents\product\product-manager.md
-Blueprints\agents\engineering\engineering-code-reviewer.md
-Blueprints\agents\design\design-ux-researcher.md
+Blueprints/agents/product/product-manager.md
+Blueprints/agents/engineering/engineering-code-reviewer.md
+Blueprints/agents/design/design-ux-researcher.md
 ```
 
 The wrapper file:
@@ -82,7 +82,7 @@ Each division review session produces:
 ### 1. SLOPS Wrapper Files
 One file per promoted agent:
 ```text
-Blueprints\agents\<division-short-name>\<agent-name>.md
+Blueprints/agents\<division-short-name>\<agent-name>.md
 ```
 
 File uses the Required Agent File Shape from `slops-agent-author/SKILL.md`.
@@ -99,7 +99,7 @@ A short markdown note documenting:
 
 Saved to:
 ```text
-Solutions\reports\dbs-migration\phase-5-reviews\<division-name>-review.md
+Solutions/reports/dbs-migration/phase-5-reviews\<division-name>-review.md
 ```
 
 ---
@@ -128,8 +128,8 @@ Solutions\reports\dbs-migration\phase-5-reviews\<division-name>-review.md
 Each division gets its own Claude runnable prompt saved to:
 
 ```text
-Blueprints\prompts\phase-5\phase-5a-product-division.md
-Blueprints\prompts\phase-5\phase-5b-design-division.md
+Blueprints/prompts/phase-5/phase-5a-product-division.md
+Blueprints/prompts/phase-5/phase-5b-design-division.md
 ...etc
 ```
 
@@ -144,7 +144,7 @@ These rules apply to every agent wrapper produced in Phase 5:
 - No agent may have write access to `.env`, `.key`, `.pem`, secrets, credentials, or auth tokens
 - No agent may have write access to `ssffmvp/src/`, `ssffmvp/sql/`, or any app source folder
 - No agent may be granted production, deployment, DNS, SSL, Nginx, or VPS authority
-- No agent may invoke skills not listed in `Blueprints\skills\SKILL_ROUTING.md` Current SLOPS Skills without Justin approval
+- No agent may invoke skills not listed in `Blueprints/skills/SKILL_ROUTING.md` Current SLOPS Skills without Justin approval
 - Engineering division agents (especially security-engineer, devops-automator, sre, threat-detection-engineer) require explicit security review before promotion to `active`
 - Paid media agents may not have write access to ad platform accounts or spend controls
 - Finance agents may not initiate payments, transfers, or subscription changes
@@ -160,7 +160,7 @@ Every promoted agent file must use this structure:
 name: <agent-name>
 status: candidate | active | do-not-activate
 division: <division-name>
-source: Blueprints\agents\_imported\<division-folder>\<filename>.md
+source: Blueprints/agents/_imported\<division-folder>\<filename>.md
 ---
 
 # <Agent Display Name>
@@ -197,7 +197,7 @@ Global Blueprint | Project Blueprint | Reference Only
 ## Required Read-First Files
 
 - `DBS_INDEX.md`
-- `Blueprints\agents\AGENT_INDEX.md`
+- `Blueprints/agents/AGENT_INDEX.md`
 - <other relevant files>
 
 ## May Invoke Skills
@@ -217,7 +217,7 @@ Tier <1-3> — <brief reason>
 - `ssffmvp\src\`
 - `ssffmvp\sql\`
 - `.env`, `.key`, credentials
-- `Archive\`
+- `Archive/`
 - <other restricted paths>
 
 ## Approval Required For
@@ -246,7 +246,7 @@ Phase 5 is complete when:
 - [ ] AGENT_INDEX.md Section 4 reflects updated statuses
 - [ ] A promoted candidates section exists in AGENT_INDEX.md
 - [ ] All SLOPS wrapper files are created at `Blueprints\agents\<division>\`
-- [ ] Division review summaries saved to `Solutions\reports\dbs-migration\phase-5-reviews\`
+- [ ] Division review summaries saved to `Solutions/reports/dbs-migration/phase-5-reviews/`
 - [ ] Justin has approved each division before the next is started
 
 ---
@@ -272,4 +272,4 @@ Phase 5 (imported agent promotion) runs before Phase 6 (manager_agent / sub_agen
 ---
 
 **Document Status**: Approved for execution
-**Archival**: `Solutions\reports\dbs-migration\PHASE_5_PLAN.md`
+**Archival**: `Solutions/reports/dbs-migration/PHASE_5_PLAN.md`

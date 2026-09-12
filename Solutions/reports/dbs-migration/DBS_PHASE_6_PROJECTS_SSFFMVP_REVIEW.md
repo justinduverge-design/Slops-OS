@@ -15,7 +15,7 @@ Secret-like files were identified by filename only. Their contents were not read
 
 ## Summary Decision
 
-`Projects\ssffmvp` does not appear to contain unique product or code work worth preserving as a separate active workspace.
+`Projects/ssffmvp` does not appear to contain unique product or code work worth preserving as a separate active workspace.
 
 It does contain sensitive/quarantine-risk material and should not be archived through normal DBS cleanup yet.
 
@@ -25,20 +25,20 @@ Recommended classification: `quarantine before archive`.
 
 | Check | Result |
 | --- | --- |
-| `Projects\ssffmvp` contains `.git` | yes |
+| `Projects/ssffmvp` contains `.git` | yes |
 | Canonical `ssffmvp` contains `.git` | yes |
-| `Projects\ssffmvp` HEAD | `c80c710578aedec08054fdaab350a88ed25b51d0` |
+| `Projects/ssffmvp` HEAD | `c80c710578aedec08054fdaab350a88ed25b51d0` |
 | Canonical `ssffmvp` HEAD | `a058f6c5e339c62e5492b936b46ed1028e9c2d9d` |
 | Canonical repo has the Projects HEAD commit object | yes |
 | Projects HEAD is an ancestor of canonical HEAD | yes |
 | Commits in Projects HEAD not in canonical HEAD | none |
 | Canonical commits after Projects HEAD | 74 |
 
-Interpretation: committed work in `Projects\ssffmvp` appears to already be represented in canonical Git history. The Projects copy is behind canonical `ssffmvp`, not ahead of it.
+Interpretation: committed work in `Projects/ssffmvp` appears to already be represented in canonical Git history. The Projects copy is behind canonical `ssffmvp`, not ahead of it.
 
 ## Project Working Tree Findings
 
-`Projects\ssffmvp` has no reported modified or added files from `git status --short`.
+`Projects/ssffmvp` has no reported modified or added files from `git status --short`.
 
 It does report deleted tracked files, including source, SQL, script, prompt, route, middleware, and service files. These are deletions in the stale Projects working tree, not unique additions.
 
@@ -50,7 +50,7 @@ Previous safe comparison excluded `.git` and `node_modules`.
 
 | Metric | Result |
 | --- | --- |
-| `Projects\ssffmvp` file count excluding `.git` and `node_modules` | 30 |
+| `Projects/ssffmvp` file count excluding `.git` and `node_modules` | 30 |
 | Canonical `ssffmvp` file count excluding `.git` and `node_modules` | 261 |
 | Files present in Projects but not canonical | 2 |
 | Same-relative-path docs/assets newer in Projects | 0 |
@@ -64,7 +64,7 @@ Project-only paths:
 
 ## Secrets / Quarantine Findings
 
-Filename-only scan found env/key-like files in `Projects\ssffmvp`.
+Filename-only scan found env/key-like files in `Projects/ssffmvp`.
 
 Detected paths:
 
@@ -100,7 +100,7 @@ Not worth preserving as active work:
 
 Recommended next phase: `Phase 7 - Secrets-Safe Quarantine Approval`.
 
-Do not archive `Projects\ssffmvp` yet.
+Do not archive `Projects/ssffmvp` yet.
 
 Proposed safe process:
 
@@ -108,7 +108,7 @@ Proposed safe process:
 
    `C:\Users\JDuve\OneDrive\Desktop\SLOPS\Archive\quarantine\Projects-ssffmvp-sensitive-2026-05-21`
 
-2. Move the entire `Projects\ssffmvp` folder as one unit into quarantine, without opening, splitting, renaming, or copying `.env` and key-like files.
+2. Move the entire `Projects/ssffmvp` folder as one unit into quarantine, without opening, splitting, renaming, or copying `.env` and key-like files.
 
 3. Add a README in the quarantine parent explaining that the folder contains stale repo material plus env/key-like files and should not be uploaded, committed, synced, or shared.
 

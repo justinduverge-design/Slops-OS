@@ -14,7 +14,7 @@ Intermediate DBS subfolders were created only where needed for approved copy des
 - `C:\Users\JDuve\OneDrive\Desktop\SLOPS\Blueprints\playbooks`
 - `C:\Users\JDuve\OneDrive\Desktop\SLOPS\Blueprints\skills`
 - `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen\Blueprints\specs`
-- `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen\Solutions\website-template`
+- `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen\Solutions/website-template`
 - `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen\Assets\logos`
 - `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen\Assets\screenshots`
 
@@ -24,34 +24,34 @@ Intermediate DBS subfolders were created only where needed for approved copy des
 
 | Source | Destination |
 | --- | --- |
-| `C:\Users\JDuve\OneDrive\Desktop\SLOPS\context.md` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\Direction\context.md` |
-| `C:\Users\JDuve\OneDrive\Desktop\SLOPS\roadmap.md` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\Direction\roadmap.md` |
-| `C:\Users\JDuve\OneDrive\Desktop\SLOPS\manifesto.md` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\Direction\manifesto.md` |
-| `C:\Users\JDuve\OneDrive\Desktop\SLOPS\TODO.md` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\Direction\TODO.md` |
-| `C:\Users\JDuve\OneDrive\Desktop\SLOPS\00_FINAL_PLAN.md` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\Direction\00_FINAL_PLAN.md` |
-| `C:\Users\JDuve\OneDrive\Desktop\SLOPS\AGENT.md` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\Blueprints\workflows\AGENT.md` |
-| `C:\Users\JDuve\OneDrive\Desktop\SLOPS\CLAUDE.md` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\Blueprints\workflows\CLAUDE.md` |
-| `C:\Users\JDuve\OneDrive\Desktop\SLOPS\runbook_ai_workflow.md` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\Blueprints\playbooks\runbook_ai_workflow.md` |
-| `C:\Users\JDuve\OneDrive\Desktop\SLOPS\pre-build-research.skill` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\Blueprints\skills\pre-build-research.skill` |
+| `C:\Users\JDuve\OneDrive\Desktop\SLOPS\context.md` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\Direction/context.md` |
+| `C:\Users\JDuve\OneDrive\Desktop\SLOPS\roadmap.md` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\Direction/roadmap.md` |
+| `C:\Users\JDuve\OneDrive\Desktop\SLOPS\manifesto.md` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\Direction/manifesto.md` |
+| `C:\Users\JDuve\OneDrive\Desktop\SLOPS\TODO.md` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\Direction/TODO.md` |
+| `C:\Users\JDuve\OneDrive\Desktop\SLOPS\00_FINAL_PLAN.md` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\Direction/00_FINAL_PLAN.md` |
+| `C:\Users\JDuve\OneDrive\Desktop\SLOPS\AGENT.md` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\Blueprints/workflows/AGENT.md` |
+| `C:\Users\JDuve\OneDrive\Desktop\SLOPS\CLAUDE.md` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\Blueprints/workflows/CLAUDE.md` |
+| `C:\Users\JDuve\OneDrive\Desktop\SLOPS\runbook_ai_workflow.md` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\Blueprints/playbooks/runbook_ai_workflow.md` |
+| `C:\Users\JDuve\OneDrive\Desktop\SLOPS\pre-build-research.skill` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\Blueprints/skills/pre-build-research.skill` |
 
 ### Phase 2B - Omen Review Copies
 
 | Source | Destination |
 | --- | --- |
 | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\brand\brand_voice.md` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen\Brand\voice.md` |
-| `C:\Users\JDuve\OneDrive\Desktop\SLOPS\brand\rebrand_notes.md` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen\References\rebrand_notes.md` |
-| `C:\Users\JDuve\OneDrive\Desktop\SLOPS\design.md` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen\Blueprints\specs\design.md` |
-| `C:\Users\JDuve\OneDrive\Desktop\SLOPS\draft_assistant_spec.md` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen\Blueprints\specs\draft_assistant_spec.md` |
-| `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\BRAND_STRATEGY.md` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen\References\BRAND_STRATEGY.md` |
-| `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\specs\001-omen-decision-layer\spec.md` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen\Blueprints\specs\001-omen-decision-layer.md` |
-| `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\specs\002-homepage-product-priority\spec.md` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen\Blueprints\specs\002-homepage-product-priority.md` |
-| `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen\corvus_website_app_template.jsx` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen\Solutions\website-template\corvus_website_app_template.jsx` |
+| `C:\Users\JDuve\OneDrive\Desktop\SLOPS\brand\rebrand_notes.md` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen\References/rebrand_notes.md` |
+| `C:\Users\JDuve\OneDrive\Desktop\SLOPS\design.md` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen\Blueprints/specs/design.md` |
+| `C:\Users\JDuve\OneDrive\Desktop\SLOPS\draft_assistant_spec.md` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen\Blueprints/specs/draft_assistant_spec.md` |
+| `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\BRAND_STRATEGY.md` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen\References/BRAND_STRATEGY.md` |
+| `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\specs\001-omen-decision-layer\spec.md` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen\Blueprints/specs/001-omen-decision-layer.md` |
+| `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\specs\002-homepage-product-priority\spec.md` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen\Blueprints/specs/002-homepage-product-priority.md` |
+| `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen\corvus_website_app_template.jsx` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen\Solutions/website-template/corvus_website_app_template.jsx` |
 | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\client\public\omen-apollo-logo.png` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen\Assets\logos\omen-apollo-logo-client-copy.png` |
 | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\frontend\public\omen-apollo-logo.png` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen\Assets\logos\omen-apollo-logo-frontend-copy.png` |
 | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\skills\run-ssffmvp\screenshots\landing-desktop.png` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen\Assets\screenshots\landing-desktop.png` |
 | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\skills\run-ssffmvp\screenshots\landing-mobile.png` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen\Assets\screenshots\landing-mobile.png` |
 | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\skills\run-ssffmvp\screenshots\football-route.png` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen\Assets\screenshots\football-route.png` |
-| `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen\corvus_brand_product_context.md` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen\References\corvus_brand_product_context.original.md` |
+| `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen\corvus_brand_product_context.md` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen\References/corvus_brand_product_context.original.md` |
 | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen\Omen Logo.png` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen\Assets\logos\Omen Logo.png` |
 | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen\Omen Logo2.png` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen\Assets\logos\Omen Logo2.png` |
 | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen\Omen Logo 3.png` | `C:\Users\JDuve\OneDrive\Desktop\SLOPS\ssffmvp\Omen\Assets\logos\Omen Logo 3.png` |
@@ -66,8 +66,8 @@ None. No approved destination file already existed, so no overwrite was attempte
 
 ## Medium-Risk Items That Still Need Justin Review
 
-- Decide whether `ssffmvp\Omen\References\BRAND_STRATEGY.md` should remain a reference copy or become the basis for `Omen\Brand\positioning.md`.
-- Decide whether `ssffmvp\Omen\References\corvus_brand_product_context.original.md` should be split into `Omen\Brand\brand.md` and `Omen\Direction\context.md`.
+- Decide whether `ssffmvp\Omen\References/BRAND_STRATEGY.md` should remain a reference copy or become the basis for `Omen\Brand\positioning.md`.
+- Decide whether `ssffmvp\Omen\References/corvus_brand_product_context.original.md` should be split into `Omen\Brand\brand.md` and `Omen\Direction/context.md`.
 - Decide which Omen logo variant is canonical before any rename or active asset replacement.
 - Decide whether `brand\rebrand_notes.md` is historical reference only or should become part of active positioning doctrine.
 - Decide whether copied specs in `Omen\Blueprints\specs` are canonical product specs or review copies while `ssffmvp\specs` remains canonical.

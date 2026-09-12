@@ -3,7 +3,7 @@
 This is the canonical tool usage and authorization policy for the SLOPS OS.
 
 **Migrated and normalized:** 2026-05-23 (Phase 2–4 DBS normalization).
-The canonical location is `Blueprints\tools\tool-permissions.md`.
+The canonical location is `Blueprints/tools/tool-permissions.md`.
 
 ## Principle: Explicit Authorization
 
@@ -15,10 +15,10 @@ There is **one** permission system, not two:
 
 | Surface | Role |
 |---|---|
-| `Blueprints\tools\tool-permissions.md` (this file) | Canonical **action and approval doctrine** — Action Risk Tiers. |
-| `Blueprints\agents\AGENT_INDEX.md` | **Runtime policy** and **Active Trust Assignments**. |
-| `Blueprints\tools\TOOLS_INDEX.md` | **Mirrors** the capability/gate mapping. **Not** a competing authority. |
-| `Blueprints\skills\SKILL_ROUTING.md` | Skill registry and skill tool usage. |
+| `Blueprints/tools/tool-permissions.md` (this file) | Canonical **action and approval doctrine** — Action Risk Tiers. |
+| `Blueprints/agents/AGENT_INDEX.md` | **Runtime policy** and **Active Trust Assignments**. |
+| `Blueprints/tools/TOOLS_INDEX.md` | **Mirrors** the capability/gate mapping. **Not** a competing authority. |
+| `Blueprints/skills/SKILL_ROUTING.md` | Skill registry and skill tool usage. |
 
 ### Authorization requires all four
 
@@ -189,5 +189,5 @@ The planner reviews and provides a risk assessment. The executor waits for found
 - **Index and tier legend:** `TOOLS_INDEX.md`
 - **Agent authority matrix:** `AGENT_INDEX.md`
 - **Skill routing matrix:** `SKILL_ROUTING.md`
-- **Runtime policy and active assignments:** `Blueprints\agents\AGENT_INDEX.md`
-- **Runtime identity modules:** `Blueprints\agent-modules\identity-claude-code.md`, `identity-codex.md`, `identity-cowork.md`, `identity-api.md`, `identity-generic.md`
+- **Runtime policy and active assignments:** `Blueprints/agents/AGENT_INDEX.md`
+- **Runtime identity modules:** `Blueprints/agent-modules/identity-claude-code.md`, `identity-codex.md`, `identity-cowork.md`, `identity-api.md`, `identity-generic.md`

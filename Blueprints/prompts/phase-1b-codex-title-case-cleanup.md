@@ -113,7 +113,7 @@ Expected: No unexpected changes to app source files.
 
 Write this file:
 
-**Path:** `C:\Users\JDuve\OneDrive\Desktop\SLOPS\Solutions\reports\dbs-migration\PHASE_1B_RENAME_COMPLETION.md`
+**Path:** `C:\Users\JDuve\OneDrive\Desktop\SLOPS\Solutions/reports/dbs-migration/PHASE_1B_RENAME_COMPLETION.md`
 
 **Contents:**
 - Date and time completed

@@ -1,3 +1,8 @@
+> **HISTORICAL — completed Windows-era procedure. Do not run.** The repos it moves now live on
+> macOS at `~/Documents/GitHub/`, outside any synced folder, and the Windows desktop it was written
+> for is no longer the working machine. *(2026-09-12; falsified by a return to a OneDrive-synced
+> checkout on any machine.)* For setting up a new machine, read `new-machine-setup-playbook.md`.
+
 # Playbook — Move active repos OUT of OneDrive + back up to GitHub
 
 **Why:** OneDrive holds file handles on `.git`, which corrupts the index, blocks lock removal, and races writes. Git wants a local, non-synced working directory. Target home: `C:\Users\JDuve\dev\`. Keep the OneDrive copy as a cold backup only.

@@ -2,11 +2,11 @@
 
 Date: 2026-05-23
 Reviewer: Codex / slops-onboarding-agent
-Source folder: `Blueprints\agents\_imported\__design_division`
+Source folder: `Blueprints/agents/_imported/__design_division`
 
 ## Context
 
-The imported Design Division remains non-authoritative until promoted through `slops-agent-author` review and recorded in `Blueprints\agents\AGENT_INDEX.md`.
+The imported Design Division remains non-authoritative until promoted through `slops-agent-author` review and recorded in `Blueprints/agents/AGENT_INDEX.md`.
 
 Root `AGENTS.md` required files checked from `C:\Users\JDuve\OneDrive\Desktop\SLOPS`:
 
@@ -18,7 +18,7 @@ Root `AGENTS.md` required files checked from `C:\Users\JDuve\OneDrive\Desktop\SL
 - `handoffs\backend-to-frontend.md` missing
 - `CLAUDE.md` missing
 
-Canonical app handoff files were found and reviewed under `slops-saloon\Blueprints\handoffs`.
+Canonical app handoff files were found and reviewed under `slops-saloon/Blueprints/handoffs`.
 
 ## Classification Summary
 
@@ -46,11 +46,11 @@ Canonical app handoff files were found and reviewed under `slops-saloon\Blueprin
 
 Recommended wrapper creation order:
 
-1. `design-brand-guardian` as `Blueprints\agents\design\design-brand-guardian.md`
-2. `design-ui-designer` as `Blueprints\agents\design\design-ui-designer.md`
-3. `design-image-prompt-engineer` as `Blueprints\agents\design\design-image-prompt-engineer.md`
-4. `design-whimsy-injector` as `Blueprints\agents\design\design-whimsy-injector.md`
-5. `design-ux-researcher` as `Blueprints\agents\design\design-ux-researcher.md`
+1. `design-brand-guardian` as `Blueprints/agents/design/design-brand-guardian.md`
+2. `design-ui-designer` as `Blueprints/agents/design/design-ui-designer.md`
+3. `design-image-prompt-engineer` as `Blueprints/agents/design/design-image-prompt-engineer.md`
+4. `design-whimsy-injector` as `Blueprints/agents/design/design-whimsy-injector.md`
+5. `design-ux-researcher` as `Blueprints/agents/design/design-ux-researcher.md`
 
 Do not create a direct `design-ux-architect` wrapper. If architecture support is needed later, create a narrower `design-system-architect` candidate that cannot own repo topology, schemas, contracts, backend behavior, frontend source, or implementation.
 
@@ -62,11 +62,11 @@ All Design Division wrappers should start as `candidate`, Tier 2 max:
 
 - Read, analyze, draft, and recommend only.
 - May write draft markdown only when explicitly assigned.
-- May write to `Blueprints\prompts\`, `Direction\reviews\`, and `Solutions\reports\`.
-- Must not write to `slops-saloon\src\`, `slops-saloon\frontend\`, `slops-saloon\client\`, `slops-saloon\sql\`, `slops-saloon\scripts\`, `slops-saloon\test\`, `Archive\`, `.env`, `.key`, credentials, secrets, tokens, cookies, production, deployment, Docker, GitHub Actions, auth, payment, or database files.
+- May write to `Blueprints/prompts/`, `Direction/reviews/`, and `Solutions/reports/`.
+- Must not write to `slops-saloon\src\`, `slops-saloon\frontend\`, `slops-saloon\client\`, `slops-saloon\sql\`, `slops-saloon\scripts\`, `slops-saloon\test\`, `Archive/`, `.env`, `.key`, credentials, secrets, tokens, cookies, production, deployment, Docker, GitHub Actions, auth, payment, or database files.
 - Must not make final decisions on brand direction, launch scope, monetization, UX direction, frontend implementation, or backend contracts.
 - Escalates to Justin for brand/product decisions, Claude for frontend/design planning, and Codex only for separately approved implementation.
 
 ## Next Safe Step
 
-Create the five recommended wrapper files under `Blueprints\agents\design\`, then update `AGENT_INDEX.md` only after Justin/Claude approval.
+Create the five recommended wrapper files under `Blueprints/agents/design/`, then update `AGENT_INDEX.md` only after Justin/Claude approval.

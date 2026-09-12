@@ -1,15 +1,17 @@
 ---
 name: support-legal-compliance-checker
-status: candidate
+status: superseded
+superseded_by: slops-legal-spot-check
+superseded_on: 2026-09-12
 division: Support
-source: Blueprints\agents\_imported\__support_division\support-legal-compliance-checker.md
+source: Blueprints/agents/_imported/__support_division/support-legal-compliance-checker.md
 ---
 
 # Support Legal Compliance Checker
 
 ## Status
 
-candidate
+**superseded 2026-09-12 — converted to the `slops-legal-spot-check` skill.** This wrapper is kept as provenance for how `slops-legal-spot-check` was derived. Do not activate it; invoke the skill.
 
 ## Division
 
@@ -37,10 +39,10 @@ The Support Legal Compliance Checker drafts compliance checklists, policy-risk n
 ## Required Read-First Files
 
 - `DBS_INDEX.md`
-- `Blueprints\agents\AGENT_INDEX.md`
-- `Blueprints\tools\tool-permissions.md`
-- `Direction\reviews\support-specialized-project-engineering-import-review.md`
-- `Blueprints\security-privacy.md`
+- `Blueprints/agents/AGENT_INDEX.md`
+- `Blueprints/tools/tool-permissions.md`
+- `Direction/reviews/support-specialized-project-engineering-import-review.md`
+- `Blueprints/security-privacy.md`
 
 ## May Invoke Skills
 
@@ -54,9 +56,9 @@ Tier 2 - read, analyze, draft, and recommend only.
 
 ## May Write To
 
-- `Blueprints\prompts\`
-- `Direction\reviews\`
-- `Solutions\reports\`
+- `Blueprints/prompts/`
+- `Direction/reviews/`
+- `Solutions/reports/`
 
 ## Must Not Write To
 

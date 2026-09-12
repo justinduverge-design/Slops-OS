@@ -16,7 +16,7 @@ The bridge is a shim layer. `Blueprints` remains the canonical source of truth. 
 - **Skill name:** `command-bridge-generator`
 - **Primary user:** Justin
 - **Primary agents:** Claude for review and routing; Codex for file generation when instructed.
-- **DBS layer:** `Blueprints\skills`
+- **DBS layer:** `Blueprints/skills`
 - **Skill type:** simple skill
 - **Status:** active
 
@@ -53,8 +53,8 @@ Minimum inputs:
   - `preview`
   - `write`
 - Current routing files:
-  - `Blueprints\skills\SKILL_ROUTING.md`
-  - `Blueprints\agents\AGENT_INDEX.md`
+  - `Blueprints/skills/SKILL_ROUTING.md`
+  - `Blueprints/agents/AGENT_INDEX.md`
 
 If Justin does not specify a mode, default to `preview`.
 
@@ -63,21 +63,21 @@ If Justin does not specify a mode, default to `preview`.
 Read:
 
 ```text
-Blueprints\skills\SKILL_ROUTING.md
-Blueprints\agents\AGENT_INDEX.md
-Blueprints\tools\tool-permissions.md
+Blueprints/skills/SKILL_ROUTING.md
+Blueprints/agents/AGENT_INDEX.md
+Blueprints/tools/tool-permissions.md
 ```
 
 Read skill bodies only for rows approved for bridge generation:
 
 ```text
-Blueprints\skills\<skill-name>\SKILL.md
+Blueprints/skills\<skill-name>\SKILL.md
 ```
 
 Read agent bodies only for rows approved for bridge generation:
 
 ```text
-Blueprints\agents\<division>\<agent>.md
+Blueprints/agents\<division>\<agent>.md
 ```
 
 ## Generated Target Folders
@@ -114,22 +114,22 @@ Do not write into user-global folders such as `~\.claude`, `~\.codex`, or `~\.ag
 
 A skill may receive a command bridge only when:
 
-- It appears in `Blueprints\skills\SKILL_ROUTING.md`.
-- It appears as `active` in the Active SLOPS Skills section of `Blueprints\agents\AGENT_INDEX.md`.
-- Its canonical `Blueprints\skills\<skill-name>\SKILL.md` exists.
+- It appears in `Blueprints/skills/SKILL_ROUTING.md`.
+- It appears as `active` in the Active SLOPS Skills section of `Blueprints/agents/AGENT_INDEX.md`.
+- Its canonical `Blueprints/skills/<skill-name>/SKILL.md` exists.
 - It is not `_template`, imported, archived, or reference-only.
 
 ### Agents
 
 An agent may receive a command bridge only when:
 
-- It appears in `Blueprints\agents\AGENT_INDEX.md`.
+- It appears in `Blueprints/agents/AGENT_INDEX.md`.
 - Its status is `active`.
 - Its path points to a SLOPS-authored agent file, not `_imported`.
 - Its tool tier cap and approval gates are explicit.
 - Justin has not marked it restricted, candidate, reference-only, or do-not-activate.
 
-Candidate wrapper files under `Blueprints\agents\<division>` are not enough. Division folders do not grant authority.
+Candidate wrapper files under `Blueprints/agents/<division>` are not enough. Division folders do not grant authority.
 
 ## Read-First Procedure
 
@@ -171,7 +171,7 @@ Use this pattern for `.claude\skills\<skill-name>\SKILL.md` and `.agents\skills\
 ```markdown
 ---
 name: <skill-name>
-description: Bridge shim for the canonical SLOPS skill at Blueprints\skills\<skill-name>\SKILL.md. Use when Justin invokes /<skill-name> or the task matches the canonical skill.
+description: Bridge shim for the canonical SLOPS skill at Blueprints/skills\<skill-name>\SKILL.md. Use when Justin invokes /<skill-name> or the task matches the canonical skill.
 ---
 
 # <Skill Name> Bridge
@@ -181,7 +181,7 @@ This is a generated bridge shim.
 Canonical source:
 
 ```text
-Blueprints\skills\<skill-name>\SKILL.md
+Blueprints/skills\<skill-name>\SKILL.md
 ```
 
 Before acting, read the canonical source file and follow it.
@@ -213,7 +213,7 @@ Canonical source:
 <canonical agent path>
 ```
 
-Follow the canonical agent file, `Blueprints\agents\AGENT_INDEX.md`, and `Blueprints\tools\tool-permissions.md`.
+Follow the canonical agent file, `Blueprints/agents/AGENT_INDEX.md`, and `Blueprints/tools/tool-permissions.md`.
 
 Do not exceed the canonical tool tier cap. Escalate anything outside the approved role.
 ```
@@ -266,12 +266,12 @@ In `write` mode, produce:
 
 ## DBS Routing
 
-- Canonical skills stay in `Blueprints\skills`.
-- Canonical agents stay in `Blueprints\agents`.
+- Canonical skills stay in `Blueprints/skills`.
+- Canonical agents stay in `Blueprints/agents`.
 - Generated Claude shims go to `.claude`.
 - Generated Codex skill shims go to `.agents`.
 - Generated Codex agent shims go to `.codex`.
-- Bridge reviews or previews may be written to `Direction\reviews` when requested.
+- Bridge reviews or previews may be written to `Direction/reviews` when requested.
 
 ## RBAC Boundaries
 
@@ -308,7 +308,7 @@ Watch for:
 Before changing this skill, check:
 
 ```text
-Blueprints\skills\command-bridge-generator\notes\prior-use-review.md
+Blueprints/skills/command-bridge-generator/notes/prior-use-review.md
 ```
 
 If present, incorporate repeated corrections into failure modes or the process recipe.

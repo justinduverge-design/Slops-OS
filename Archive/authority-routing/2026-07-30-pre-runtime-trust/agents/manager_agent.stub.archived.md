@@ -2,7 +2,7 @@
 name: manager_agent
 status: active (runtime)
 layer: 1-slops-saloon
-canonical-location: slops-saloon\omen\Blueprints\prompts\manager_agent.md
+canonical-location: slops-saloon\omen\Blueprints/prompts/manager_agent.md
 ---
 
 # Manager Agent — Redirect Stub
@@ -16,7 +16,7 @@ canonical-location: slops-saloon\omen\Blueprints\prompts\manager_agent.md
 ## Canonical Location
 
 ```text
-slops-saloon\omen\Blueprints\prompts\manager_agent.md
+slops-saloon\omen\Blueprints/prompts/manager_agent.md
 ```
 
 ## Status
@@ -34,14 +34,14 @@ recommendation in strict JSON format.
 
 ## Related Files
 
-- `slops-saloon\omen\Blueprints\prompts\sub_agents.md` — the six sub-agent prompts
-- `slops-saloon\omen\Blueprints\prompts\PROMPTS_CHANGELOG.md` — tuning history
-- `Blueprints\agents\AGENT_INDEX.md` — Section 3 (Project-Specific Agents)
-- `Blueprints\agents\layer-handoff-protocol.md` — cross-layer communication rules
+- `slops-saloon/omen/Blueprints/prompts/sub_agents.md` — the six sub-agent prompts
+- `slops-saloon/omen/Blueprints/prompts/PROMPTS_CHANGELOG.md` — tuning history
+- `Blueprints/agents/AGENT_INDEX.md` — Section 3 (Project-Specific Agents)
+- `Blueprints/agents/layer-handoff-protocol.md` — cross-layer communication rules
 
 ## Why This Stub Exists
 
-`Blueprints\agents\` is the global SLOPS OS agent roster. The Manager Agent lives
+`Blueprints/agents/` is the global SLOPS OS agent roster. The Manager Agent lives
 one layer down at `1-slops-saloon` because it is product-specific runtime logic, not a
 reusable OS-level role. This stub prevents confusion when browsing the global agent
 directory.
