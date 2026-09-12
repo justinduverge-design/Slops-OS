@@ -41,5 +41,5 @@ omen/Blueprints/
 Global SLOPS skills live at:
 
 ```text
-..\Blueprints\skills\
+..\Blueprints/skills\
 ```
