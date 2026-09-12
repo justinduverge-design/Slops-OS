@@ -1,17 +1,56 @@
-# Prior-use review — slops-agent-docs-refresh
+# Prior use — slops-agent-docs-refresh
 
-| Date | Files forgotten | Drift check caught | Core size before → after |
-|---|---|---|---|
+## Run 1 — 2026-09-12, Omen L2 + Slops OS L0
 
-## Authoring notes
+**First invocation.** The skill was `draft` and this was its first real pass.
 
-- Known defects at authoring, to be fixed by the first run: `omen/AGENT.md` and
-  `omen/AGENTS.md` both exist with only one referenced; Windows absolute paths are
-  canonical in both `DBS_INDEX.md` files; Omen's `CLAUDE.md` orders a 12-file read plus a
-  7-file native gate before any task; the on-demand list cites
-  `omen-ux-ui-design-system-v1.md`, which the same file marks partially superseded; at
-  least one dangling citation exists (`2026-07-05-espn-community-api-and-extension-research.md`,
-  referenced by two Direction files, absent from the repo).
-- The drift check has no natural home yet. Omen has `scripts/check-*.js`; L0 has
-  `Blueprints/tools/`. Cross-repo is the hard part — the same problem `valor-brain` solved
-  by mirroring a validator into each repo. Follow that precedent rather than inventing one.
+### Which file was forgotten
+
+None were forgotten — but the skill's file list was **incomplete**, and that is the finding.
+
+Its "full file set" table names `AGENTS.md`, `CLAUDE.md`, `AGENT.md`, agent-modules, and the kickoff
+prompts. It does not say to grep for *other* files that restate a read order. Three did:
+`omen/AGENTS.md`, `omen/AGENT.md`, and L0's `Blueprints/agent-modules/files-to-read-first-L2.md`.
+All three still listed `Direction/decision_log.md` as an up-front read, all three predated the
+`current_sprint` / `known_issues` splits, and all three disagreed with each other on sequence.
+
+**Carry forward:** step 1 should be a search, not a list. `grep -rl "Read in order\|read first\|always-read"`
+across both repos finds restatements the table cannot anticipate. A file that is not named in the
+table can still carry the contract.
+
+### Whether the drift check caught anything
+
+**No — and that is its limit, not a failure.** `check-kickoff-drift.js` compares exactly two files:
+`CLAUDE.md` and `kickoff-l2.md`. Those two never drifted. The three that did were invisible to it,
+for eight weeks. A check that guards one pair while four files carry the contract reports green on a
+drifted system.
+
+The fix applied was structural rather than another check: the three now **point at `CLAUDE.md`**
+instead of restating it, so there is one copy and nothing left to drift. That is better than
+extending the check to compare five files, because the comparison would then have to tolerate five
+different phrasings of the same list.
+
+### Whether the core actually shrank
+
+Yes, and the number was the whole argument: **~166,000 tokens to ~50,000.** Measured, not estimated —
+`wc -w` on every file in the read order, at 4/3 tokens per word.
+
+`decision_log.md` alone was 93,000 tokens, 56% of the cold start, and sat in *read before you plan*.
+Nothing about picking up a task requires every decision ever made.
+
+**Carry forward:** the skill says "count the core" in Verification. It should say it in **step 3**,
+before the founder is asked to decide the read order. The founder cannot trade session cost against
+consistency without the cost, and the cost is two commands. Presenting the per-file table is what
+turned a vague "the docs feel heavy" into a decision made in one message.
+
+### What the skill got right
+
+The atomic-pass rule held. Rewriting `CLAUDE.md` without `kickoff-l2.md` would have failed the drift
+check immediately, which is exactly the guard rail working. And "Never changes authority" was the
+right boundary — the Safety Gates block was left byte-identical, and the read-order change was put
+to the founder rather than decided in the pass.
+
+### Promotion
+
+Not promoted out of `draft` on one run. Promote after a second pass confirms the search-not-list
+change works, and after the founder's read-order decision has survived a few sessions.

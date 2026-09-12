@@ -63,6 +63,12 @@ Read in order before acting:
 11. Direction/decision_log.md (last 5 entries)
 12. Direction/TODO.md
 
+The Slops skills are INVOCABLE BY NAME as of 2026-09-12 — do not read them as
+files. 59 are linked into .claude/skills/ by
+Blueprints/tools/skill-link/link-skills.mjs; authorship stays in
+Blueprints/skills/ and SKILL_ROUTING.md is authoritative for status and scope.
+If a skill does not appear, re-run the linker. Never copy a skill to reach it.
+
 Then run, in order:
 1. PULL TASK
    - L0 has no agent_inbox.md / auto-populate queue — that mechanism is
@@ -93,6 +99,13 @@ Then run, in order:
    - Write a dated handoff in Blueprints/handoffs/YYYY-MM-DD-[topic]-handoff.md
      per session-handoff.md.
    - State a plain complete/incomplete verdict — don't round up.
+   - Run the gates before writing the handoff. A P0 BLOCKS YOUR OWN CLOSE-OUT:
+     it means an agent reading current docs would act on false information.
+     An unrun check is not a passing check.
+       node Blueprints/tools/truth-gate/truth-gate.mjs --quiet
+       node Blueprints/tools/valor-brain/validate.mjs
+       node Blueprints/tools/skill-link/link-skills.mjs --check
+
 
 Begin now: run STEP 0, then STEP 0.1, then read the files above, then run
 PULL TASK immediately. Do not wait for a separate task description — this
