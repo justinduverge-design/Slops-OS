@@ -46,3 +46,67 @@ dangling-tree-ref | Blueprints/skills/agent-wrapper-generator | Describes the wr
 dangling-tree-ref | Blueprints/skills/slops-agent-author      | Same.
 dangling-tree-ref | Direction/reviews                   | Import-review records. Historical evidence of the promotion decisions.
 dangling-tree-ref | Solutions/reports/dbs-migration     | Completed migration reports.
+
+# --- dead-header false positives: triaged 2026-09-12 ---
+# Each of these is a LIVE authority file whose header mentions a superseded thing without being
+# superseded. Same class as the RESOURCES_INDEX.md line above. Re-review if the file's role changes.
+dead-header | Blueprints/skills/slops-intent-capture/references/intent-template.md | A template. Line 8 prints the status enum "DRAFT | REVIEWED | ROUTED | SUPERSEDED" as a field value, not a claim about itself.
+dead-header | slops-saloon/omen/Blueprints/done/feature-done.md | Live gate file. Its banner records a 2026-08-24 CORRECTION (the Actions billing hold that never existed), not a supersession. The correction is the reason to keep reading it.
+dead-header | slops-saloon/omen/Direction/agent_inbox.md | Live pinned-task file and the first file every session reads. Line 3 is a refresh note describing items retired FROM the queue; the inbox itself is current authority.
+dead-header | slops-saloon/omen/Brand/brand-system.md | Live brand authority. Header describes asset lineage (vector masters, rendered rasters), not its own status.
+dead-header | slops-saloon/omen/ops/command-center/README.md | Live. "These files do not run from this repo" states where the code executes (the Command Center Pi), not that the doc is dead.
+dead-header | slops-saloon/omen/Blueprints/specs/infrastructure/slops-os-raspberry-pi-fleet-v1.md | Live spec. Its SOURCES were TEMP/Historical trackers; the spec compiled from them is current.
+
+# --- broken-path: dated handoffs are provenance, not routing authority ---
+# A handoff records what was true on its date, including paths that have since moved. Same call
+# already made for Solutions/reports/dbs-migration and References above. Routing authority lives in
+# RESOLVER.md, the indexes, and current Direction/ files — none of which are suppressed here.
+# Re-review if handoffs ever become a routing surface.
+broken-path | Blueprints/handoffs                       | Dated session records; their paths are a snapshot of that date, not current routing.
+stale-path  | Blueprints/handoffs                       | Same.
+broken-path | slops-saloon/omen/Blueprints/handoffs     | Same, L2.
+stale-path  | slops-saloon/omen/Blueprints/handoffs     | Same, L2.
+broken-path | Blueprints/prompts/_old-prompts-for-analysis | Explicitly an analysis holding pen for retired prompts; dead paths are the point.
+stale-path  | Blueprints/prompts/_old-prompts-for-analysis | Same.
+
+# --- broken-path: dated reviews and audits are provenance too ---
+# Identical in kind to handoffs above: a review or audit records what was true on its date. The
+# live surfaces (Direction/roadmap.md, current_sprint.md, known_issues.md, decision_log.md,
+# RESOLVER.md, the indexes) stay UNSUPPRESSED and are where a stale path is a real defect.
+broken-path | Direction/reviews                          | Dated review records; paths are a snapshot of that date.
+stale-path  | Direction/reviews                          | Same.
+broken-path | slops-saloon/omen/Direction/reviews        | Same, L2.
+stale-path  | slops-saloon/omen/Direction/reviews        | Same, L2.
+broken-path | slops-saloon/omen/Blueprints/audits        | Dated audit records; same class as reviews.
+stale-path  | slops-saloon/omen/Blueprints/audits        | Same.
+
+# --- the 7 converted wrappers: deliberate provenance, 2026-09-12 ---
+# Each declares itself superseded because it IS superseded — converted into a Slops skill. They are
+# retained on purpose, to show how each skill was derived. Decision:
+# Direction/decisions/2026-09-12-agent-wrapper-disposition.md. Re-review if wrapper provenance is
+# ever moved to Archive/.
+dead-header | Blueprints/agents/design/design-image-prompt-engineer.md        | superseded_by slops-image-prompt; kept as conversion provenance.
+dead-header | Blueprints/agents/engineering/engineering-ai-integration-advisor.md | superseded_by slops-ai-integration-review; same.
+dead-header | Blueprints/agents/engineering/engineering-data-engineer-advisor.md  | superseded_by slops-data-ingest-plan; same.
+dead-header | Blueprints/agents/finance/finance-financial-analyst.md          | superseded_by slops-financial-sketch; same.
+dead-header | Blueprints/agents/finance/finance-fpa-analyst.md                | superseded_by slops-financial-sketch; same.
+dead-header | Blueprints/agents/support/support-executive-summary-generator.md| superseded_by slops-exec-summary; same.
+dead-header | Blueprints/agents/support/support-legal-compliance-checker.md   | superseded_by slops-legal-spot-check; same.
+
+# --- append-only history: founder call, 2026-09-12 ---
+# These four are workbooks and receipts, not routing surfaces. sprints_completed records what was
+# done when; done/LEDGER verifies it was done right; skill-usage-ledger is read to tweak skills;
+# decision_log is Omen's chronological reasoning record. An entry cites the paths that existed on
+# its date, and most "broken" citations here are repo-relative shorthand (done/LEDGER.md,
+# lib/platformChip.js) for files that do exist. The value in these files is the reasoning, not the
+# paths.
+# FORWARD RULE, not suppressed: an entry APPENDED from today cites repo-relative paths that resolve
+# today. Old entries are history; new entries are current writing. See definition-of-done.md.
+broken-path | slops-saloon/omen/Direction/sprints_completed.md          | Append-only workbook; entries cite the paths of their date.
+stale-path  | slops-saloon/omen/Direction/sprints_completed.md          | Same.
+broken-path | slops-saloon/omen/Blueprints/done/LEDGER.md               | Append-only receipt ledger; same.
+stale-path  | slops-saloon/omen/Blueprints/done/LEDGER.md               | Same.
+broken-path | slops-saloon/omen/Blueprints/playbooks/skill-usage-ledger.md | Append-only skill-use record; same.
+stale-path  | slops-saloon/omen/Blueprints/playbooks/skill-usage-ledger.md | Same.
+broken-path | slops-saloon/omen/Direction/decision_log.md               | Append-only reasoning record and L2's decision authority; entries cite the paths of their date. Direction/decisions/ at L0 stays unsuppressed.
+stale-path  | slops-saloon/omen/Direction/decision_log.md               | Same.
