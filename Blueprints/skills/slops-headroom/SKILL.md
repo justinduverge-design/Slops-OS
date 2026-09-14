@@ -8,12 +8,10 @@ default_agent: Claude (governs invocation), Justin (runs install)
 trigger: "compress this output | shrink the context | dedupe before LLM | headroom this"
 upstream: headroomlabs-ai/headroom (Apache-2.0). Corrected 2026-09-14 — the project moved from `chopratejas/headroom`, which now only 301-redirects, and no licence was recorded. See notes/prior-use-review.md
 requires:
-  - name: headroom (library)
-    python-module: headroom
-    install: pip install headroom-ai
-  - name: headroom (cli)
+  - name: headroom
     bin: headroom
-    install: pip install headroom-ai && headroom mcp install
+    install: uv tool install --python 3.12 headroom-ai
+    note: Library/CLI only. Installed 2026-09-14 on pinned Python 3.12. `headroom mcp install` and `headroom proxy` were deliberately NOT run — the proxy is a cloud-LLM path facts-of-record #17 forecloses. Probe is the CLI because the uv venv is invisible to system python3.
 version: 0.1.0
 owner: Justin
 ---

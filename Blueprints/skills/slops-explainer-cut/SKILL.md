@@ -10,8 +10,11 @@ status: active
 requires:
   - name: manim
     bin: manim
-    install: pip install manim
-    note: manimce also needs a system LaTeX and ffmpeg; renders are specified to run on KVM1, not this workstation
+    install: uv tool install --python 3.12 manim
+    note: Installed 2026-09-14 on pinned Python 3.12. System deps also installed via brew — ffmpeg 9.0.1, plus cairo/pango/pkgconf which pycairo needs to build. LaTeX is NOT installed; Tex/MathTex scenes will fail until a TeX distribution is added (basictex is the small option). Renders are specified to run on KVM1.
+  - name: ffmpeg
+    bin: ffmpeg
+    install: brew install ffmpeg
 version: 0.1.0
 owner: Justin
 ---

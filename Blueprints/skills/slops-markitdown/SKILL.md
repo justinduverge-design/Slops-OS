@@ -9,9 +9,9 @@ trigger: "convert to markdown | extract from PDF | extract from PPTX | extract f
 upstream: microsoft/markitdown (MIT, Microsoft; requires-python >=3.10). Vetted 2026-09-14 — see notes/prior-use-review.md
 requires:
   - name: markitdown
-    python-module: markitdown
-    install: pip install 'markitdown[pdf,docx,pptx,xlsx,outlook]'
-    note: NOT [all] — that extra installs azure-ai-documentintelligence, azure-ai-contentunderstanding and azure-identity, which this skill forbids. Needs Python 3.10+; this machine's python3 is 3.9.6.
+    bin: markitdown
+    install: uv tool install --python 3.12 'markitdown[pdf,docx,pptx,xlsx,outlook]'
+    note: Installed 2026-09-14 as markitdown 0.1.7 in an isolated uv venv on pinned Python 3.12. NOT [all] — that extra ships azure-ai-documentintelligence, azure-ai-contentunderstanding and azure-identity, which this skill forbids; absence verified (ModuleNotFoundError azure). Probe is the CLI, not `import markitdown`, because the uv venv is deliberately invisible to system python3.
 version: 0.1.0
 owner: Justin
 ---

@@ -35,3 +35,8 @@ Solutions/.codex-artifacts/
 # carries a content hash per skill. Authorship of OUR skills stays in Blueprints/skills/.
 # A fresh clone therefore reports NEEDS-INSTALL from check-skill-deps.mjs, which is correct.
 .agents/
+
+# Vendored legal-template checkouts (open-agreements). Third-party content with its own
+# .git, pinned by commit in compliance-by-template/SKILL.md and reproducible from it.
+# Treated like node_modules and .agents/ — the pin is tracked, the payload is not.
+References/legal-templates/

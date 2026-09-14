@@ -11,9 +11,11 @@ requires:
   - name: open-agreements templates
     path: References/legal-templates/open-agreements
     install: git clone https://github.com/open-agreements/open-agreements References/legal-templates/open-agreements
+    note: Cloned 2026-09-14 and pinned at commit 02b3113ffe39 (detached HEAD, deliberate — the upstream is seven months old and template text can move between drafts of one document). LICENSE and NOTICE are present; Apache-2.0 attribution must propagate into any generated document.
   - name: pandoc
     bin: pandoc
     install: brew install pandoc
+    note: pandoc 3.11 installed 2026-09-14.
 version: 0.1.0
 owner: Justin
 ---

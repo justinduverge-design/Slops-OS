@@ -211,7 +211,20 @@ field routing actually reads — and it **silently stops being suggested**, show
 name. One unterminated quote does it. That happened during this very session and nothing noticed, so
 the checker now reports structural YAML hazards as `UNREADABLE` with the offending line number.
 
-### All eight wrappers are vetted (2026-09-14)
+### All eight wrappers are vetted AND installed (2026-09-14)
+
+**ready 8 · needs-install 1 · undeclared 0.** The one outstanding is `slops-voiceover`, whose
+voicebox host is a different machine — a correct answer, not a gap. Every Python tool runs on a
+pinned CPython 3.12 in an isolated `uv` venv; system Python (3.9.6) is untouched. Versions, exact
+commands, the constraint decisions carried into each install, and functional proof (real MP4s, a
+real DOCX, a real Markdown conversion) are in
+`Blueprints/tools/skill-link/INSTALL-STATE.md`.
+
+Two traps worth knowing before doing this on another machine are recorded there: `uv` without
+`--python` **silently resolved markitdown to a two-year-old alpha** rather than failing the `>=3.10`
+floor, and manim needs `cairo`/`pango`/`pkgconf` installed before pip can build `pycairo`.
+
+### Vetting verdicts
 
 Each carries a `notes/prior-use-review.md` beside its `SKILL.md`: licence, maintenance, egress
 surface, a verdict against facts-of-record #17, and the local deltas. Two adopted and installed

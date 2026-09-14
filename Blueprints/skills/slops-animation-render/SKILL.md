@@ -1,6 +1,7 @@
 ---
 name: slops-animation-render
 description: Remotion-based animation render pipeline (React-composed video, self-hosted on KVM1) for brand, marketing, social, and onboarding cuts that are NOT math explainers. Use when Justin asks to render an onboarding intro, social cut, OG-card animation, or brand video. Do not use for math-explainer content (use slops-explainer-cut) or cloud-only render farms.
+status: active
 skill_type: package
 layer: 0
 default_agent: Claude (plan), Codex (render)
@@ -19,7 +20,7 @@ requires:
     node-module: remotion
     from: slops-saloon/omen/Brand/promos/omen-coming-soon
     install: npm --prefix slops-saloon/omen/Brand/promos/omen-coming-soon install
-    note: the only Remotion project in the tree; the skill text names KVM1 as the render host but never names a project root
+    note: Installed 2026-09-14 (remotion 4.0.487). This is the only Remotion project in the tree and is the de-facto project root; the skill text names KVM1 as the render host but never named a root, so this path is inferred and still wants founder confirmation.
 version: 0.1.0
 owner: Justin
 ---

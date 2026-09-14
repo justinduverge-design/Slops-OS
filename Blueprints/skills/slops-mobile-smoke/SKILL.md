@@ -13,7 +13,7 @@ requires:
     node-module: playwright-core
     from: slops-saloon/omen
     install: npm --prefix slops-saloon/omen install --save-dev playwright-core@1.49.1
-    note: the skill claims this is already vendored. It is not in omen/node_modules and not in omen/package.json — see the correction in this file's Preconditions.
+    note: Installed 2026-09-14 with --save-dev, so omen/package.json now records it and the vendoring claim is finally true. The WebKit/Chromium browser binaries are a separate first-run download and remain a founder-run step.
 owner: Justin
 ---
 

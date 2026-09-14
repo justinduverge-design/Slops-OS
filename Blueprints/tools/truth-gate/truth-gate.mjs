@@ -47,6 +47,11 @@ const SKIP_DIRS = new Set([
   '.git', 'node_modules', '.claude-worktrees', '.codex-worktrees',
   'Archive', 'archive', 'graphify-out', '_scratch', 'dist', 'build',
   'coverage', '.next', 'screenshots', 'logos',
+  // Vendored third-party checkouts. Same category as node_modules: someone else's
+  // documents, pinned to a commit, that we read and never author. Added 2026-09-14 when
+  // cloning open-agreements for `compliance-by-template` put two P0s on the board that
+  // were findings about the upstream's own docs, not about ours.
+  'legal-templates',
 ]);
 
 // A file whose header matches this is claiming it is not current truth.
