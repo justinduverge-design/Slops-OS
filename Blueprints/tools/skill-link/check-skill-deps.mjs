@@ -141,18 +141,26 @@ function kv(line) {
 
 const PROBES = {
   bin(spec) {
+    let p;
     try {
-      const p = execFileSync('sh', ['-c', `command -v ${shq(spec.bin)}`], { encoding: 'utf8', timeout: 5000 }).trim();
-      return p ? { ok: true, detail: p } : { ok: false, detail: 'not on PATH' };
+      p = execFileSync('sh', ['-c', `command -v ${shq(spec.bin)}`], { encoding: 'utf8', timeout: 5000 }).trim();
     } catch { return { ok: false, detail: 'not on PATH' }; }
+    if (!p) return { ok: false, detail: 'not on PATH' };
+    return withMinVersion(spec, p, () => probeVersion(spec.bin, spec.version_arg ?? '--version'));
   },
 
+  // "Present" is not the same as "the version we vetted". A resolver that cannot satisfy a
+  // version floor may BACKTRACK to an ancient release rather than fail — uv did exactly that on
+  // 2026-09-14, silently installing markitdown 0.0.1a1 (a two-year-old alpha) because it had
+  // inherited Python 3.9 and the real package needs >=3.10. It reported that as a warning about
+  // an unknown extra. Without a floor here, that install reads as READY and the wrapper is wrong
+  // in the one way this whole tool exists to prevent.
   'python-module'(spec) {
     const py = spec.python ?? 'python3';
     try {
       const out = execFileSync(py, ['-c', `import ${spec['python-module']} as m, sys; print(getattr(m,"__version__","present"))`],
         { encoding: 'utf8', timeout: 20000, stdio: ['ignore', 'pipe', 'pipe'] }).trim();
-      return { ok: true, detail: `${py} → ${out}` };
+      return withMinVersion(spec, py, () => (/^\d+\.\d+/.test(out) ? out : null));
     } catch (e) {
       const why = /No module named/.test(String(e.stderr ?? '')) ? 'module not installed' : `${py} probe failed`;
       return { ok: false, detail: why };
@@ -171,9 +179,14 @@ const PROBES = {
     } catch { return { ok: true, detail: 'present (version unreadable)' }; }
   },
 
+  // `~` is expanded: a machine-local cache (browser binaries, model files) lives in $HOME, not
+  // under the repo, and a probe that cannot express that silently reports absent for something
+  // demonstrably installed.
   path(spec) {
-    const p = resolve(L0, spec.path);
-    return existsSync(p) ? { ok: true, detail: relative(L0, p) } : { ok: false, detail: `no ${spec.path}` };
+    const raw = String(spec.path);
+    const p = raw.startsWith('~/') ? join(process.env.HOME ?? '', raw.slice(2)) : resolve(L0, raw);
+    if (!existsSync(p)) return { ok: false, detail: `no ${raw}` };
+    return { ok: true, detail: raw.startsWith('~/') ? raw : relative(L0, p) };
   },
 
   // A harness skill installed alongside ours (taste-skill's variants). `.claude/` is
@@ -212,6 +225,43 @@ const PROBES = {
 };
 
 function shq(s) { return `'${String(s).replace(/'/g, `'\\''`)}'`; }
+
+/** Run `<bin> <arg>` and pull the first version-looking token out of it. */
+function probeVersion(bin, arg) {
+  try {
+    const out = execFileSync('sh', ['-c', `${shq(bin)} ${arg} 2>&1`], { encoding: 'utf8', timeout: 30000 });
+    const m = /(\d+\.\d+(?:\.\d+)?(?:[-.]?(?:a|b|rc|alpha|beta)\d*)?)/i.exec(out);
+    return m ? m[1] : null;
+  } catch { return null; }
+}
+
+/** Compare dotted versions; a prerelease suffix sorts BELOW the same release. */
+function cmpVersion(a, b) {
+  const parse = v => {
+    const m = /^(\d+)\.(\d+)(?:\.(\d+))?(?:[-.]?(a|b|rc|alpha|beta)(\d*))?$/i.exec(String(v).trim());
+    if (!m) return null;
+    return [+m[1], +m[2], +(m[3] ?? 0), m[4] ? 0 : 1, +(m[5] || 0)];
+  };
+  const x = parse(a), y = parse(b);
+  if (!x || !y) return null;
+  for (let i = 0; i < x.length; i++) if (x[i] !== y[i]) return x[i] < y[i] ? -1 : 1;
+  return 0;
+}
+
+/** Gate a found dependency on `min_version` when the skill declares one. */
+function withMinVersion(spec, where, readVersion) {
+  if (!spec.min_version) return { ok: true, detail: where };
+  const found = readVersion();
+  if (found === null) {
+    return { ok: false, detail: `found at ${where}, but its version could not be read and the skill requires >= ${spec.min_version}` };
+  }
+  const c = cmpVersion(found, spec.min_version);
+  if (c === null) return { ok: false, detail: `found ${found} at ${where}, uncomparable to required >= ${spec.min_version}` };
+  if (c < 0) {
+    return { ok: false, detail: `found ${found} — BELOW the required ${spec.min_version}. A resolver that backtracks past a version floor installs an ancient release instead of failing; that is what this floor catches.` };
+  }
+  return { ok: true, detail: `${found} at ${where}` };
+}
 
 function probeKind(spec) { return Object.keys(PROBES).find(k => k in spec) ?? null; }
 

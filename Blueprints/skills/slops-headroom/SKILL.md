@@ -10,6 +10,7 @@ upstream: headroomlabs-ai/headroom (Apache-2.0). Corrected 2026-09-14 — the pr
 requires:
   - name: headroom
     bin: headroom
+    min_version: 0.30.0
     install: uv tool install --python 3.12 headroom-ai
     note: Library/CLI only. Installed 2026-09-14 on pinned Python 3.12. `headroom mcp install` and `headroom proxy` were deliberately NOT run — the proxy is a cloud-LLM path facts-of-record #17 forecloses. Probe is the CLI because the uv venv is invisible to system python3.
 version: 0.1.0

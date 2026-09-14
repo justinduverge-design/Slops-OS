@@ -33,6 +33,8 @@ is untouched, and each tool's dependency tree is sealed off from every other's.
 | remotion | 4.0.487 | `npm --prefix …/Brand/promos/omen-coming-soon install` |
 | open-agreements | pinned `02b3113ffe39` | cloned to `References/legal-templates/open-agreements`, detached HEAD |
 | taste-skill | pinned `ccbc15639c97` | `npx skills add … --skill <name>` ×4 |
+| TinyTeX (LaTeX) | TeX Live 2026 | `sh install-bin-unix.sh --no-path` + `tlmgr install …` (see below) |
+| Chromium / WebKit | 131.0.6778.33 / 18.2 | `npx playwright-core@1.49.1 install chromium webkit` |
 
 ## Constraint decisions carried into the installs
 
@@ -57,6 +59,35 @@ is untouched, and each tool's dependency tree is sealed off from every other's.
   `OmenHypeVertical` to a 400 KB **1080×1920 h264 + aac** MP4.
 - **headroom** — `headroom, version 0.37.0`.
 
+## LaTeX — TinyTeX, not BasicTeX
+
+`brew install --cask basictex` **fails without a terminal password**: the cask runs
+`/usr/sbin/installer` under `sudo`. **TinyTeX** (`rstudio/tinytex`, Posit) is the no-root
+equivalent — the same TeX Live, unpacked into `~/Library/TinyTeX`.
+
+The installer was read before running rather than piped from curl to sh: it downloads a release
+tarball from `rstudio/tinytex-releases`, extracts it, and runs `tlmgr`. Its only `sudo` is for PATH
+setup via `/etc/paths.d`, which `--no-path` skips; binaries were linked into `~/.local/bin` with
+`tlmgr option sys_bin ~/.local/bin && tlmgr path add` instead.
+
+manim's TeX packages: `standalone preview doublestroke ms setspace rsfs relsize ragged2e
+fundus-calligra microtype wasysym physics dvisvgm jknapltx wasy cm-super babel-english
+gnu-freefont mathastext everysel`.
+
+`tlmgr` printed an error during `fmtutil-sys`, so the only thing that settled it was rendering
+real math: a `MathTex` scene renders (20,049 bytes). **A tool that errors and works is still
+working; a tool that succeeds and does not is the dangerous one.**
+
+## Render host — corrected
+
+Both `slops-explainer-cut` and `slops-animation-render` said renders happen **on KVM1**. `AGENT.md`
+§ Infrastructure Boundary: **KVM1 is the live app hosting lane** — `omen_api` and `omen_cron`
+serving `https://slopssaloon.com`. It is the production API host, not a render farm, and a
+multi-minute CPU-saturating render there risks the live service.
+
+Both skills now say renders run locally, which is proved for both pipelines. The instruction
+survived because the tools had never been installed, so it was never tested against what KVM1 is.
+
 ## Two traps this install hit, recorded so the next machine does not
 
 1. **`uv` silently resolved markitdown to `0.0.1a1`** — a two-year-old alpha — because without
@@ -66,6 +97,16 @@ is untouched, and each tool's dependency tree is sealed off from every other's.
    pass `--python`; treat a resolver that succeeds against an unmet floor as a red flag.
 2. **manim needs system libraries pip cannot supply.** `pycairo` builds from source and wants
    `cairo`, `pango` and `pkgconf` present first. A pip-only install line for manim is misleading.
-   **LaTeX is still NOT installed** — `Tex`/`MathTex` scenes will fail until a TeX distribution is
-   added (`brew install --cask basictex` is the ~100 MB option versus MacTeX's multi-GB). For a
-   skill whose job is *math* explainers that is a real limit, not a footnote.
+   **Fixed structurally, not just noted:** `cairo`, `pango`, `pkgconf`, `latex`, `dvisvgm` and
+   `ffmpeg` are now declared probes in `slops-explainer-cut`, so the checker names the missing
+   cause before an opaque build error does.
+
+## Both traps are now caught by the tool, not by a note
+
+A note in a file is a control only if someone reads it. Both traps are now structural:
+
+- **`min_version` in `requires:`.** `markitdown >= 0.1.0`, `manim >= 0.19.0`, `headroom >= 0.30.0`.
+  A silently-backtracked install reports **NEEDS-INSTALL**, not READY. Tested by declaring an
+  impossible floor: *"found 0.1.7 — BELOW the required 99.0.0."*
+- **System libraries are declared dependencies**, not prose in a note, so `pkg-config`/`latex`
+  absence is reported by name.

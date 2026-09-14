@@ -13,7 +13,11 @@ requires:
     node-module: playwright-core
     from: slops-saloon/omen
     install: npm --prefix slops-saloon/omen install --save-dev playwright-core@1.49.1
-    note: Installed 2026-09-14 with --save-dev, so omen/package.json now records it and the vendoring claim is finally true. The WebKit/Chromium browser binaries are a separate first-run download and remain a founder-run step.
+    note: Installed 2026-09-14 with --save-dev, so omen/package.json records it and the vendoring claim is finally true.
+  - name: chromium + webkit browser binaries
+    path: ~/Library/Caches/ms-playwright
+    install: npx playwright-core@1.49.1 install chromium webkit
+    note: Downloaded 2026-09-14 — Chromium 131.0.6778.33 and WebKit 18.2. Both proved by launching at 390x844 and running this skill's own 44px touch-target check, which correctly flagged a 30px button.
 owner: Justin
 ---
 
@@ -82,9 +86,11 @@ interactive-element 44px checks. Use the device for the things only a human can 
   changes, which is this skill's whole job. See `notes/prior-use-review.md`.
   Open: `1.49.1` is 14 minor versions behind current — the pin should be a decision, not an
   accident of when this skill was written.
-- **Browser binary:** Chromium downloaded on first run to `%LOCALAPPDATA%\ms-playwright`.
-  WebKit binary will need a first-run download too — detect and stop with the install command if
-  missing (see Install Boundary below).
+- **Browser binaries:** installed 2026-09-14 — **Chromium 131.0.6778.33 and WebKit 18.2** at
+  `~/Library/Caches/ms-playwright` (macOS; `%LOCALAPPDATA%\ms-playwright` on Windows). Both were
+  proved by launching at 390×844 and running this skill's own touch-target axis, which correctly
+  flagged a 30px button. Re-download with
+  `npx playwright-core@1.49.1 install chromium webkit` on a new machine.
 - **Reachable target:** the dev server or deployed URL must respond before the driver starts. A
   build-only run cannot smoke functional axes (learned by `slops-verify` on 2026-06-08).
 
