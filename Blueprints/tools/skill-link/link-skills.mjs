@@ -16,7 +16,7 @@
  * Exit 0 = in sync.  Exit 1 = drift (or, in apply mode, a refusal).  Exit 2 = gate failed.
  */
 import { readdirSync, statSync, lstatSync, existsSync, mkdirSync, symlinkSync, unlinkSync, readlinkSync } from 'node:fs';
-import { join, resolve, relative, isAbsolute } from 'node:path';
+import { join, resolve, relative, isAbsolute, sep } from 'node:path';
 
 const ARGV = process.argv.slice(2);
 const CHECK = ARGV.includes('--check');
@@ -91,11 +91,18 @@ for (const t of targets) {
     symlinkSync(relTarget(dest, dir), link, 'dir'); console.log(`   LINK     ${name}`); created++;
   }
 
-  // Orphans: links pointing at skills that no longer exist.
+  // Orphans: links pointing at OUR skills that no longer exist.
+  //
+  // A link we did not create is not an orphan — third-party skills installed by
+  // `npx skills add` live here too, and deleting one silently uninstalls it. That is a
+  // destructive act on someone else's property, and it would be invisible: the skill just
+  // stops existing and check-skill-deps.mjs flips to NEEDS-INSTALL with no explanation.
+  // Ownership is decided by where the target resolves, not by the link's name.
   for (const n of safeReaddir(dest)) {
     if (want.has(n)) continue;
     const link = join(dest, n);
     if (!isLink(link)) { console.log(`   SKIP     ${n} — not ours and not a symlink; left alone`); continue; }
+    if (!ownedByUs(dest, link)) { console.log(`   FOREIGN  ${n} — not linked to ${relative(L0, SRC)}; left alone`); continue; }
     if (CHECK || DRY) { console.log(`   ORPHAN   ${n}`); drift++; continue; }
     unlinkSync(link); console.log(`   UNLINK   ${n} (orphan)`); removed++;
   }
@@ -104,6 +111,14 @@ for (const t of targets) {
 /** Symlink targets are RELATIVE so they survive any checkout path, mount, or clone. */
 function relTarget(linkDir, skillDir) { return relative(linkDir, skillDir); }
 function isLink(p) { try { return lstatSync(p).isSymbolicLink(); } catch { return false; } }
+/** True only when the link resolves inside our own authored library. */
+function ownedByUs(linkDir, link) {
+  const cur = safeReadlink(link);
+  if (cur === null) return false;
+  const target = isAbsolute(cur) ? cur : resolve(linkDir, cur);
+  const src = resolve(SRC);
+  return target === src || target.startsWith(src + sep);
+}
 function safeReadlink(p) { try { return readlinkSync(p); } catch { return null; } }
 function safeReaddir(p) { try { return readdirSync(p); } catch { return []; } }
 

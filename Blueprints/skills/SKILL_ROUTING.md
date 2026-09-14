@@ -196,6 +196,12 @@ was routed at a 30-artboard canvas and could not run; the session had already be
 - **It never probes off this machine.** The one network probe kind refuses any non-loopback host, so
   a dependency check cannot become egress (facts-of-record #17).
 - Registered 2026-09-14. First run: 9 wrappers front an external tool, 8 unmet, 1 ready.
+- **The two tools share `.claude/skills/` and had to be taught to coexist.** `npx skills add`
+  installs third-party skills into the same directory `link-skills.mjs` manages, and the linker
+  treated anything it had not created as an **orphan to delete** — so one routine `link-skills.mjs`
+  run would have silently uninstalled `slops-taste` and flipped it back to `NEEDS-INSTALL` with no
+  explanation. Fixed the same day: ownership is decided by where a link **resolves**, not by its
+  name. A link pointing outside `Blueprints/skills/` reports `FOREIGN` and is left alone.
 
 ### What it does not prove
 
