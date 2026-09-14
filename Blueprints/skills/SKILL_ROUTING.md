@@ -118,7 +118,7 @@ Do not place app implementation work in Layer 1 (Slops Saloon). The division lay
 | `demo-mode-pre-empty-state` | Claude (pattern review), Codex (fixture generation) | `Layer 0` | `active` | Pattern + doctrine for what every Slops product shows before a user has connected real data. Sample dataset, mock/live badge, swap contract, and the "never silently mix demo + real" rule. |
 | `slops-headroom` | Claude (governs invocation), Justin (runs install) | `Layer 0` | `active` | Compress tool outputs, logs, RAG chunks, and large file reads before they hit the LLM. 60-95% token reduction, local-only, MCP-native. Wraps chopratejas/headroom. |
 | `slops-markitdown` | Claude (plans), Codex (runs conversion) | `Layer 0` | `active` | Convert PDF/PPTX/DOCX/XLSX/HTML/audio/images/EPUB → Markdown for LLM consumption. Wraps microsoft/markitdown. Local-only by default; Azure CU and Doc Intelligence forbidden by sovereignty rule. |
-| `slops-taste` | Claude (selects variant + dials), Codex (applies to frontend) | `Layer 0` | `active` | Anti-slop frontend skill. Wraps Leonxlnx/taste-skill — tunable layout/motion/density dials, plus minimalist + soft + brutalist variants. Pairs with slops-design-system-pack and slops-image-prompt. |
+| `slops-taste` | Claude (picks surface, variant + dials), Codex (applies) | `Layer 0` | `active` | Anti-slop UI **generation** for both surfaces, via two routes. **Web/marketing** delegates to `Leonxlnx/taste-skill` (MIT, prose-only, pinned `ccbc15639c97`, vetted 2026-09-14). **Native (iOS SwiftUI + Android Compose)** uses the Omen native half in `SKILL.md` §B — the upstream's own scope line excludes product UI and it carries **zero** SwiftUI/Compose material, so native could not be delegated and is written here against the locked native specs. Dials are set per surface; one set cannot serve both. **Generation, never a verdict** — the verdict is `slops-native-ui-audit` (native) or `slops-ui-ux-audit` (web). |
 | `slops-screenplay-loop` | Claude | `Layer 0` | `active` | Script + beat sheet for animated/explainer content (director → screenwriter → storyboard). Runs before slops-explainer-cut. Harvested from HKUDS/ViMax (concepts). |
 | `slops-explainer-cut` | Claude (plan), Codex (render) | `Layer 0` | `active` | 30-90s Manim "show your work" math videos (Omen/Trade/MVP/ADP); powers the weekly Omen of the Week — "The Almost-Missed". Upstream HarleyCoops/Math-To-Manim + manimce. |
 | `slops-animation-render` | Claude (plan), Codex (render) | `Layer 0` | `active` | Remotion render pipeline (self-hosted KVM1) for brand/social/onboarding motion cuts — not math explainers. Brand palette + sonic spec locked. Upstream calesthio/OpenMontage + remotion. |
@@ -164,6 +164,82 @@ node Blueprints/tools/skill-link/link-skills.mjs --check   # verify, exit 1 on d
 - **Web-only skills carry the scope in their own `description`**, which is what routing reads:
   `slops-ui-ux-audit`, `mobile-first-qa-playbook`, `slops-mobile-smoke`. Making them easier to reach
   on a native task is a regression; the description is the guard.
+
+## Is the tool actually here? (skill-deps)
+
+`link-skills.mjs` makes a skill **reachable**. `check-skill-deps.mjs` makes it **honest** — it
+answers whether the external tool a wrapper fronts is present on this machine.
+
+```bash
+node Blueprints/tools/skill-link/check-skill-deps.mjs            # report
+node Blueprints/tools/skill-link/check-skill-deps.mjs --check    # exit 1 unless all ready
+node Blueprints/tools/skill-link/check-skill-deps.mjs --skill=slops-taste
+node Blueprints/tools/skill-link/check-skill-deps.mjs --json
+```
+
+**Why it exists.** This table tracks `active`/`draft`/`parked` — *permission*. It has never tracked
+*presence*, and neither did `link-skills.mjs`. So a wrapper whose tool was never installed looked
+identical to a working one right up to the moment someone invoked it. On 2026-09-14 `slops-taste`
+was routed at a 30-artboard canvas and could not run; the session had already been planned around it.
+
+**Presence and permission are different questions and are allowed to disagree.** A skill can be
+`READY` (installed) and `parked` (not yet permitted), or `active` and `NEEDS-INSTALL`. Read both.
+
+- Probes are declared per skill in a `requires:` frontmatter block — see `_template/SKILL.md`.
+  `upstream:` alone is not enough: it carries both *the tool this fronts* and *where the ideas came
+  from*. `skill_type` discriminates — `wrapper`/`package` needs a probe, `simple` is provenance.
+- **A `wrapper`/`package` with an upstream and no `requires:` reports `UNDECLARED` and fails
+  `--check`.** An undeclared dependency must never read as ready. The tool will not guess a probe out
+  of prose — it surfaces an install *hint* from Preconditions, labelled unverified, and nothing more.
+  Guessing and reporting `ready` would make this tool the thing it was built to catch.
+- **It never installs.** Installing is a founder action in every wrapper skill and in the template.
+- **It never probes off this machine.** The one network probe kind refuses any non-loopback host, so
+  a dependency check cannot become egress (facts-of-record #17).
+- Registered 2026-09-14. First run: 9 wrappers front an external tool, 8 unmet, 1 ready.
+- **The two tools share `.claude/skills/` and had to be taught to coexist.** `npx skills add`
+  installs third-party skills into the same directory `link-skills.mjs` manages, and the linker
+  treated anything it had not created as an **orphan to delete** — so one routine `link-skills.mjs`
+  run would have silently uninstalled `slops-taste` and flipped it back to `NEEDS-INSTALL` with no
+  explanation. Fixed the same day: ownership is decided by where a link **resolves**, not by its
+  name. A link pointing outside `Blueprints/skills/` reports `FOREIGN` and is left alone.
+
+### It also catches an unroutable skill
+
+The harness parses each `SKILL.md` frontmatter as real YAML; this tool's reader is deliberately
+lenient. When the two disagree, the harness drops the block, the skill loses its `description` — the
+field routing actually reads — and it **silently stops being suggested**, showing only its folder
+name. One unterminated quote does it. That happened during this very session and nothing noticed, so
+the checker now reports structural YAML hazards as `UNREADABLE` with the offending line number.
+
+### All eight wrappers are vetted AND installed (2026-09-14)
+
+**ready 8 · needs-install 1 · undeclared 0.** The one outstanding is `slops-voiceover`, whose
+voicebox host is a different machine — a correct answer, not a gap. Every Python tool runs on a
+pinned CPython 3.12 in an isolated `uv` venv; system Python (3.9.6) is untouched. Versions, exact
+commands, the constraint decisions carried into each install, and functional proof (real MP4s, a
+real DOCX, a real Markdown conversion) are in
+`Blueprints/tools/skill-link/INSTALL-STATE.md`.
+
+Two traps worth knowing before doing this on another machine are recorded there: `uv` without
+`--python` **silently resolved markitdown to a two-year-old alpha** rather than failing the `>=3.10`
+floor, and manim needs `cairo`/`pango`/`pkgconf` installed before pip can build `pycairo`.
+
+### Vetting verdicts
+
+Each carries a `notes/prior-use-review.md` beside its `SKILL.md`: licence, maintenance, egress
+surface, a verdict against facts-of-record #17, and the local deltas. Two adopted and installed
+(`slops-taste`, and `slops-mobile-smoke` cleared); `slops-voiceover` already correct;
+`slops-animation-render` adopted **conditionally** (Remotion is not open source — free only to three
+employees, tied to facts-of-record #15); `slops-markitdown`, `slops-explainer-cut` and
+`compliance-by-template` adopted with corrections; `slops-headroom` narrowed to the library because
+its proxy is a cloud-LLM path #17 forecloses.
+
+### What it does not prove
+
+`READY` means *found*, not *functional*. Every probe is local, so a skill that renders on **KVM1**
+(`slops-explainer-cut`, `slops-animation-render`) may show `NEEDS-INSTALL` here and be irrelevant —
+the tool cannot tell you, and says so rather than guessing. And it answers *is it here*, never
+*should it be here*: adopting an upstream is a separate vetting pass against facts-of-record #17.
 
 ## Analytical Skills
 

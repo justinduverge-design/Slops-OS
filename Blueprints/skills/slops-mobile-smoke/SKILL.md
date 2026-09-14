@@ -7,7 +7,17 @@ layer: 0
 default_agent: Claude (review findings), Codex (extend driver + fixes via loop)
 trigger: "mobile smoke | iPhone smoke | phone-shape smoke | pre-deploy mobile check"
 version: 0.2.0
-upstream: playwright-core@1.49.x (already vendored in slops-saloon/omen/node_modules)
+upstream: playwright-core@1.49.1 (NOT vendored — see Preconditions; the "already vendored" claim was false and was corrected 2026-09-14)
+requires:
+  - name: playwright-core
+    node-module: playwright-core
+    from: slops-saloon/omen
+    install: npm --prefix slops-saloon/omen install --save-dev playwright-core@1.49.1
+    note: Installed 2026-09-14 with --save-dev, so omen/package.json records it and the vendoring claim is finally true.
+  - name: chromium + webkit browser binaries
+    path: ~/Library/Caches/ms-playwright
+    install: npx playwright-core@1.49.1 install chromium webkit
+    note: Downloaded 2026-09-14 — Chromium 131.0.6778.33 and WebKit 18.2. Both proved by launching at 390x844 and running this skill's own 44px touch-target check, which correctly flagged a 30px button.
 owner: Justin
 ---
 
@@ -58,11 +68,29 @@ interactive-element 44px checks. Use the device for the things only a human can 
 ## Preconditions & Dependencies
 
 - **Runtime:** Node.js 24+ (`node --version`).
-- **Package:** `playwright-core` — already in `slops-saloon/omen/node_modules` (vendored).
-  Pinned at the version in `omen/package.json`. No install required.
-- **Browser binary:** Chromium downloaded on first run to `%LOCALAPPDATA%\ms-playwright`.
-  WebKit binary will need a first-run download too — detect and stop with the install command if
-  missing (see Install Boundary below).
+- **Package:** `playwright-core` — **NOT PRESENT. Corrected 2026-09-14.** This line read *"already
+  in `slops-saloon/omen/node_modules` (vendored). Pinned at the version in `omen/package.json`. No
+  install required."* All three clauses were false: it is not in `omen/node_modules`, it is not in
+  `omen/package.json` (neither `dependencies` nor `devDependencies`), and an install **is** required.
+  Found by `check-skill-deps.mjs` on the day that tool was written — a wrapper asserting its own
+  dependency was satisfied is exactly the failure that tool exists to catch, and this file was the
+  first instance of it.
+  Install: `npm --prefix slops-saloon/omen install --save-dev playwright-core@1.49.1`
+  **Use `--save-dev`, not `--no-save`** — an unsaved install reproduces the exact bug above:
+  present on one machine, absent everywhere else, and silently claimed as vendored. Putting it in
+  `package.json` is what makes the claim true.
+  **Vetted 2026-09-14: KEEP. Cleared to install.** An earlier note here said the web app was paused
+  and retiring this might beat readying it. **That was wrong and is withdrawn** — `AGENTS.md` ships
+  "a secondary web app", `frontend/` is live, and what is paused is new *page migrations*, not the
+  app. A live surface with no new pages still regresses under dependency bumps and shared-token
+  changes, which is this skill's whole job. See `notes/prior-use-review.md`.
+  Open: `1.49.1` is 14 minor versions behind current — the pin should be a decision, not an
+  accident of when this skill was written.
+- **Browser binaries:** installed 2026-09-14 — **Chromium 131.0.6778.33 and WebKit 18.2** at
+  `~/Library/Caches/ms-playwright` (macOS; `%LOCALAPPDATA%\ms-playwright` on Windows). Both were
+  proved by launching at 390×844 and running this skill's own touch-target axis, which correctly
+  flagged a 30px button. Re-download with
+  `npx playwright-core@1.49.1 install chromium webkit` on a new machine.
 - **Reachable target:** the dev server or deployed URL must respond before the driver starts. A
   build-only run cannot smoke functional axes (learned by `slops-verify` on 2026-06-08).
 

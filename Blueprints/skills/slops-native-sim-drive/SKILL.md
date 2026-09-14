@@ -8,6 +8,21 @@ default_agent: Local capture is ordinary work on a host that has the toolchain â
 trigger: "sim drive | capture native screenshots | refresh visual evidence | add a screenshot scenario"
 version: 0.3.1
 upstream: Omen's own `scripts/capture-screen-batch.sh` and `scripts/capture-screenshot-scenario.sh` (local), and `.github/workflows/native-visual-evidence.yml` (macos-14 runner, Xcode 16.2, iPhone 16 simulator; Android emulator matrix). Local stack: Xcode command-line tools (simctl, xcodebuild) + Android SDK (emulator, adb, gradle).
+requires:
+  - name: xcrun (simctl)
+    bin: xcrun
+    install: xcode-select --install
+  - name: xcodebuild
+    bin: xcodebuild
+    install: xcode-select --install
+  - name: adb (Android SDK platform-tools)
+    bin: adb
+    optional: true
+    install: Android Studio > SDK Manager > SDK Tools > Android SDK Platform-Tools, then add platform-tools to PATH
+  - name: capture-screen-batch.sh
+    path: slops-saloon/omen/scripts/capture-screen-batch.sh
+  - name: capture-screenshot-scenario.sh
+    path: slops-saloon/omen/scripts/capture-screenshot-scenario.sh
 owner: Justin
 ---
 

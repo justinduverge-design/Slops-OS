@@ -6,7 +6,13 @@ skill_type: wrapper
 layer: 0
 default_agent: Claude (plans), Codex (runs conversion)
 trigger: "convert to markdown | extract from PDF | extract from PPTX | extract from DOCX | markitdown this"
-upstream: microsoft/markitdown@latest
+upstream: microsoft/markitdown (MIT, Microsoft; requires-python >=3.10). Vetted 2026-09-14 — see notes/prior-use-review.md
+requires:
+  - name: markitdown
+    bin: markitdown
+    min_version: 0.1.0
+    install: uv tool install --python 3.12 'markitdown[pdf,docx,pptx,xlsx,outlook]'
+    note: Installed 2026-09-14 as markitdown 0.1.7 in an isolated uv venv on pinned Python 3.12. NOT [all] — that extra ships azure-ai-documentintelligence, azure-ai-contentunderstanding and azure-identity, which this skill forbids; absence verified (ModuleNotFoundError azure). Probe is the CLI, not `import markitdown`, because the uv venv is deliberately invisible to system python3.
 version: 0.1.0
 owner: Justin
 ---
@@ -17,10 +23,21 @@ owner: Justin
 Ingesting a PDF/PPTX/DOCX/XLSX/image/audio file into the build loop or research stream. Replaces ad-hoc copy-paste from Office formats.
 
 ## Scope
-Wrap `markitdown[all]` for local-only conversion. Output goes to `References/research/<source>.md` by default. The wrapper enforces: no Azure CU calls, no Azure Document Intelligence calls, no `llm_client` paid-API passes unless explicitly approved.
+Wrap markitdown's **format extras** (`[pdf,docx,pptx,xlsx,outlook]`) for local-only conversion — never `[all]`, which ships the Azure SDKs banned below. Output goes to `References/research/<source>.md` by default. The wrapper enforces: no Azure CU calls, no Azure Document Intelligence calls, no `llm_client` paid-API passes unless explicitly approved.
 
 ## Preconditions
-- Justin runs: `pip install 'markitdown[all]'` (install boundary).
+- Justin runs: `pip install 'markitdown[pdf,docx,pptx,xlsx,outlook]'` (install boundary).
+- **Corrected 2026-09-14. This read `pip install 'markitdown[all]'`, which installs the exact
+  things this skill forbids.** Upstream defines `all` to include `azure-ai-documentintelligence`,
+  `azure-ai-contentunderstanding` and `azure-identity` — plus `youtube-transcript-api` and
+  `SpeechRecognition`, whose default recognizer is a cloud service. The Scope section below bans
+  Azure CU and Doc Intelligence while the install command put both SDKs on disk. The narrowed
+  extras cover every format this skill claims and make the ban **structural rather than
+  aspirational**: the SDK is not present to be enabled. Only add `audio-transcription` by an
+  explicit decision.
+- **Python floor: >= 3.10.** This workstation's `python3` is 3.9.6, so the install is blocked on a
+  toolchain decision shared with `slops-headroom` and `slops-explainer-cut` (manim, >= 3.11).
+  Decide the interpreter once for all three.
 - Detect: `python3 -c "import markitdown"`; if missing, stop with install command.
 - Codex creates `References/research/` if missing (`mkdir -p References/research`) before the first conversion.
 

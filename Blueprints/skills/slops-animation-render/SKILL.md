@@ -1,11 +1,26 @@
 ---
 name: slops-animation-render
-description: Remotion-based animation render pipeline (React-composed video, self-hosted on KVM1) for brand, marketing, social, and onboarding cuts that are NOT math explainers. Use when Justin asks to render an onboarding intro, social cut, OG-card animation, or brand video. Do not use for math-explainer content (use slops-explainer-cut) or cloud-only render farms.
+description: Remotion-based animation render pipeline (React-composed video, rendered locally) for brand, marketing, social, and onboarding cuts that are NOT math explainers. Use when Justin asks to render an onboarding intro, social cut, OG-card animation, or brand video. Do not use for math-explainer content (use slops-explainer-cut) or cloud-only render farms.
+status: active
 skill_type: package
 layer: 0
 default_agent: Claude (plan), Codex (render)
 trigger: "render the explainer | produce the animated cut | brand video | onboarding animation"
-upstream: calesthio/OpenMontage (concepts), remotion (runtime)
+upstream: calesthio/OpenMontage (concepts, nothing vendored), remotion@4.0.487 (runtime)
+license_note: >
+  Remotion is NOT open source. Custom dual licence: free for individuals and for-profit
+  organizations with UP TO 3 EMPLOYEES; a paid Company License is required above that. We are
+  eligible today under facts-of-record #15 (sole owner, one person). THE ELIGIBILITY IS
+  HEADCOUNT-CONDITIONAL: #15 is void "the moment anyone else works on this company", and Remotion's
+  licence has the same trigger at four employees. Re-deriving #15 MUST re-derive this licence.
+  Remotion 5.0 changes the licence terms — re-read before any major bump. Vetted 2026-09-14,
+  see notes/prior-use-review.md
+requires:
+  - name: remotion
+    node-module: remotion
+    from: slops-saloon/omen/Brand/promos/omen-coming-soon
+    install: npm --prefix slops-saloon/omen/Brand/promos/omen-coming-soon install
+    note: Installed 2026-09-14 (remotion 4.0.487). The only Remotion project in the tree and therefore the project root, which the skill had never named. Renders run here, not on KVM1 — see the render-host note in the body.
 version: 0.1.0
 owner: Justin
 ---
@@ -14,7 +29,18 @@ owner: Justin
 
 ## Purpose
 
-Render non-math animated content — onboarding intros, social cuts, OG-card animations — as React compositions via Remotion, fully self-hosted on KVM1. Output is brand-locked and reviewable before it ships.
+Render non-math animated content — onboarding intros, social cuts, OG-card animations — as React
+compositions via Remotion, rendered **locally on the workstation**. Output is brand-locked and
+reviewable before it ships.
+
+> **Render host corrected 2026-09-14.** This read "fully self-hosted on KVM1", as did
+> `slops-explainer-cut`. **KVM1 is the live app hosting lane** (`AGENT.md` § Infrastructure
+> Boundary) — containers `omen_api` and `omen_cron` serving production. It is not a render farm, and
+> a multi-minute CPU-saturating render on the box serving live traffic risks the production service.
+> The instruction survived because the tool had never been installed, so it was never tested against
+> what KVM1 is. Local rendering is proved: `OmenHypeVertical` rendered here at 1080×1920 h264+aac on
+> 2026-09-14. Project root: `slops-saloon/omen/Brand/promos/omen-coming-soon`, the only Remotion
+> project in the tree.
 
 ## When to Use
 
@@ -22,7 +48,9 @@ Render non-math animated content — onboarding intros, social cuts, OG-card ani
 - Social/marketing cuts (vertical + horizontal).
 - Animated OG cards / share assets.
 
-Do NOT use for: math explainers (`slops-explainer-cut`), or any HyperFrames / cloud-only render farm.
+Do NOT use for: math explainers (`slops-explainer-cut`), or any HyperFrames / cloud-only render
+farm — **including Remotion Lambda**, which is Remotion's own hosted render product and is a
+separate, paid, cloud path. Renders stay on our hardware.
 
 ## Inputs
 
@@ -63,7 +91,7 @@ No bundled audio file — this defines what a sound bed must be; source royalty-
 2. **CompositionSpec** — Remotion `<Composition>` list: dimensions, fps, durationInFrames per cut (vertical 1080×1920, horizontal 1920×1080).
 3. **Build** — Codex writes React compositions using the locked palette/type tokens.
 4. **StaticReview** — Claude checks brand compliance + accessibility (contrast, caption legibility).
-5. **Render** — Codex renders on KVM1 (Remotion renderer).
+5. **Render** — Codex renders locally (Remotion renderer). See the render-host note in § Purpose.
 6. **Review** — Justin reviews; never ship unreviewed.
 7. **Publisher** — hand off the MP4 + credits file (no auto-posting).
 
@@ -76,7 +104,7 @@ No bundled audio file — this defines what a sound bed must be; source royalty-
 
 ## Output Contract
 
-- MP4(s) at the specified dimensions on KVM1.
+- MP4(s) at the specified dimensions, rendered locally.
 - `assets/sound-credits.md` (track, license, source).
 - Note of any copy still needing `slops-ux-copy`.
 

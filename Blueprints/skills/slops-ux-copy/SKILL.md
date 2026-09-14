@@ -22,8 +22,13 @@ it. Generic UX-copy guidance misses it. This skill writes and reviews on-product
 
 ## Copy Anchors (do not reinvent)
 
-- Use the approved lines from `brand-system.md` §2 (e.g. `Less guessing. Better moves.`,
-  `The edge is in what you almost missed.`).
+- Use the approved lines from `brand-system.md` §2: primary `See the result before it happens.`,
+  secondary `The edge is in what you almost missed.`, approved alternate
+  `See the move before the league does.`
+- **Corrected 2026-09-14.** This line cited `Less guessing. Better moves.` as approved. That line was
+  **retired with the Corvus name** and sits in §2's "Do not use" list. The skill that exists to
+  enforce voice was itself carrying a retired anchor — flagged by the 2026-09-13 canvas pass and left
+  unedited for a day as a Layer 0 change.
 - Never use the listed "Do not use" lines (e.g. `Know your move before you make it.`).
 - `Deus pascit corvos.` is lore/wordmark only — not a public marketing line.
 

@@ -5,7 +5,28 @@ skill_type: package
 layer: 0
 default_agent: Claude (plan), Codex (render)
 trigger: "explain the math | Manim cut | show your work video | Omen reasoning video"
-upstream: HarleyCoops/Math-To-Manim (concepts), manimce (runtime)
+upstream: HarleyCoops/Math-To-Manim (concepts, nothing vendored), ManimCommunity/manim (runtime, MIT, requires-python >=3.11). Vetted 2026-09-14 — see notes/prior-use-review.md
+status: active
+requires:
+  - name: manim
+    bin: manim
+    min_version: 0.19.0
+    install: uv tool install --python 3.12 manim
+    note: Installed 2026-09-14 on pinned Python 3.12 (manim 0.21.0). System deps via brew — ffmpeg 9.0.1, plus cairo/pango/pkgconf that pycairo builds against. LaTeX IS installed (TinyTeX) and a real MathTex scene renders. Renders run locally, not on KVM1.
+  - name: ffmpeg
+    bin: ffmpeg
+    install: brew install ffmpeg
+  - name: pkg-config (pycairo build dep)
+    bin: pkg-config
+    install: brew install pkgconf cairo pango
+    note: manim depends on pycairo, which BUILDS FROM SOURCE and needs cairo, pango and pkgconf present first. pip cannot supply them, so a pip-only install line for manim fails with an opaque build error. Declared here so the checker names the cause before the build does.
+  - name: latex (Tex/MathTex scenes)
+    bin: latex
+    install: "sh <(curl -fsSL https://tinytex.yihui.org/install-bin-unix.sh) --no-path  # then: tlmgr option sys_bin ~/.local/bin && tlmgr install standalone preview doublestroke ms setspace rsfs relsize ragged2e fundus-calligra microtype wasysym physics dvisvgm jknapltx wasy cm-super babel-english gnu-freefont mathastext everysel && tlmgr path add"
+    note: TinyTeX (rstudio/tinytex, user-scoped, ~64MB) rather than BasicTeX/MacTeX — the cask installers need root, TinyTeX does not. Installed and proved 2026-09-14 by rendering a real MathTex scene. Without LaTeX, manim renders Text scenes fine and fails every Tex/MathTex scene, which is most of a math-explainer's content.
+  - name: dvisvgm
+    bin: dvisvgm
+    install: comes with TinyTeX; manim uses it to convert LaTeX output to SVG
 version: 0.1.0
 owner: Justin
 ---
@@ -14,7 +35,7 @@ owner: Justin
 
 ## Purpose
 
-Turn one Slops opinion-layer output (an Omen verdict, Trade Analyzer result, MVP Move lineup, or ADP delta) into a short Manim explainer that *shows the work*: the nflverse baseline, the opinion adjustment, and the "edge in what you almost missed." The brand promise — `Less guessing. Better moves.` — is delivered by making the math legible, not by hiding it.
+Turn one Slops opinion-layer output (an Omen verdict, Trade Analyzer result, MVP Move lineup, or ADP delta) into a short Manim explainer that *shows the work*: the nflverse baseline, the opinion adjustment, and the "edge in what you almost missed." The brand promise — `The edge is in what you almost missed.` — is delivered by making the math legible, not by hiding it. (Corrected 2026-09-14: this read `Less guessing. Better moves.`, retired with the Corvus name per `brand-system.md` §2. The replacement is the line this skill's own recurring format, "The Almost-Missed", is already named after.)
 
 ## When to Use
 
@@ -53,9 +74,26 @@ Adapted from the Math-To-Manim agent chain, collapsed to SLOPS stages:
 4. **SceneSpec** — for each beat: what's drawn, what animates, what label/confidence chip shows.
 5. **ManimCode** — Codex writes `manim` (manimce) scene classes from the SceneSpec.
 6. **StaticReview** — Claude checks math correctness + brand compliance before render (cheap gate).
-7. **Render** — Codex renders MP4 on KVM1.
+7. **Render** — render locally on the workstation. See § Render host.
 8. **VideoReview** — Justin reviews; never ship unreviewed.
 9. **Publisher** — hand the MP4 + speaker-notes file to the destination (no auto-posting).
+
+## Render host — corrected 2026-09-14
+
+**Renders run on the workstation, not on KVM1.** This skill previously said *"Codex renders MP4 on
+KVM1"*, and `slops-animation-render` said the same.
+
+`AGENT.md` § Infrastructure Boundary: **KVM1 is the live app hosting lane** — `/opt/omen/deploy/hostinger`,
+containers `omen_api` and `omen_cron`, serving `https://slopssaloon.com/api/health`. It is the
+production API host, not a render farm. Manim and Remotion renders saturate CPU for minutes at a
+time; putting them on the box serving live traffic risks the production service to save a file copy.
+
+Nobody caught it because it was prose that had never been executed — the tools were never installed,
+so the instruction was never tested against what KVM1 actually is.
+
+Local rendering is proved: a `MathTex` scene renders here with TinyTeX (2026-09-14). If a render
+ever genuinely needs more machine than the workstation, that is a **new host decision** for the
+founder, and KVM1 is not the candidate.
 
 ## Brand Lock
 
@@ -74,7 +112,7 @@ Adapted from the Math-To-Manim agent chain, collapsed to SLOPS stages:
 
 ## Output Contract
 
-- One MP4 (30-90s) on KVM1.
+- One MP4 (30-90s), rendered locally.
 - A `speaker-notes.md` (claim, on-screen quantities, sources, what was intentionally cut).
 - A note of any math assumption that needs Justin's confirmation.
 

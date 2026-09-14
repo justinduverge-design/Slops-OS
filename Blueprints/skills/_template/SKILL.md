@@ -28,6 +28,12 @@ default_agent: Claude               # who runs it (matches SKILL_ROUTING "Defaul
 trigger: <none | /command | alias>  # invocation hook; consumed by command-bridge-generator
 version: 0.1.0                       # bump on every behavior change (see Version & Changelog)
 upstream: <none | package@version>  # wrapper skills only: vendored tool + pinned version
+requires:                           # wrapper/package with a real runtime dep: how to PROVE it is here
+  - name: <human label>
+    bin: <executable>               # or: python-module: | node-module: (+ from:) | path: | skill: | http:
+    install: <the exact founder-run command>
+    optional: true                  # omit unless the skill still works without it
+    note: <anything that changes the install decision>
 owner: Justin
 ---
 ```
@@ -40,6 +46,24 @@ Field notes:
 - **default_agent** — Claude for planning/review; Codex for file edits, commands, and verification. This populates the routing table's Default Agent column directly.
 - **trigger** — the slash command or alias, or `none` if routed by description match only. `command-bridge-generator` reads this field to emit the command shim.
 - **version** / **upstream** — keep the wrapped tool's pinned version visible so upstream drift is caught.
+- **requires** — machine-readable probes, read by `Blueprints/tools/skill-link/check-skill-deps.mjs`.
+  **`upstream:` alone is not enough**, because it is overloaded: it carries both *the tool this skill
+  fronts* and *where the ideas came from*. `skill_type` is the discriminator — a `simple` skill citing
+  `Adapted from mattpocock/skills (MIT)` needs nothing installed, while a `wrapper` naming
+  `microsoft/markitdown` needs a probe. **A `wrapper` or `package` with a non-`none` upstream and no
+  `requires:` block reports `UNDECLARED` and fails `--check`.** When the upstream really is only
+  provenance, say so explicitly rather than leaving it blank:
+
+  ```yaml
+  requires:
+    - none: true
+      note: upstream is reference material read at authoring time; nothing is vendored or installed.
+  ```
+
+  Probe kinds: `bin` (on PATH) · `python-module` (importable, optional `python:`) · `node-module`
+  (+ `from:` a package root, relative to L0) · `path` (exists, relative to L0) · `skill` (an
+  installed harness skill, not one of our own linker's symlinks) · `http` (**loopback only** — a
+  non-loopback host is refused, never fetched, so a dependency check can never become egress).
 
 These frontmatter fields map 1:1 onto the columns in `SKILL_ROUTING.md` § "Current SLOPS Skills", so a new skill drops into that table without re-deriving anything.
 
@@ -239,6 +263,13 @@ Set `skill_type: wrapper` when a skill fronts an external runtime tool (a pip/np
 Rules for wrapper skills:
 
 - **Install boundary.** The wrapper never installs the tool. It detects presence and, if missing, stops with the exact command for Justin to run (see Preconditions & Dependencies).
+- **Declare the probe, not just the prose.** Put the detect command in `requires:` as well as in
+  Preconditions. Prose is for the human; `requires:` is what `check-skill-deps.mjs` can act on.
+  A wrapper whose tool is missing looks identical to one that works until someone invokes it and
+  burns a session — declaring the probe is what makes the difference visible in advance.
+- **Never assert a dependency is satisfied.** Say where it comes from and let the probe answer.
+  On 2026-09-14 `slops-mobile-smoke` claimed `playwright-core` was "already vendored… No install
+  required" when it was in neither `node_modules` nor `package.json`.
 - **Pin the version.** Record `upstream: <package>@<version>`. When the tool updates, re-review the wrapper before bumping.
 - **Own the outputs, not the internals.** The wrapper decides where the tool's outputs land in the DBS tree and which layer they belong to. It does not reach into or fork the tool's code.
 - **Least privilege still applies.** A wrapped tool that touches network, secrets, or the product repo inherits the same approval gates as any SLOPS skill.
