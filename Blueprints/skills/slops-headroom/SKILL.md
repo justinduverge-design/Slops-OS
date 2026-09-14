@@ -6,7 +6,7 @@ skill_type: wrapper
 layer: 0
 default_agent: Claude (governs invocation), Justin (runs install)
 trigger: "compress this output | shrink the context | dedupe before LLM | headroom this"
-upstream: chopratejas/headroom@latest
+upstream: headroomlabs-ai/headroom (Apache-2.0). Corrected 2026-09-14 — the project moved from `chopratejas/headroom`, which now only 301-redirects, and no licence was recorded. See notes/prior-use-review.md
 requires:
   - name: headroom (library)
     python-module: headroom
@@ -24,7 +24,18 @@ owner: Justin
 Any time a tool/file/log/RAG result exceeds ~2k tokens before it lands in Claude or Codex context. Especially: graphify outputs, large diff reviews, multi-file Read passes, persisted web-fetch dumps.
 
 ## Scope
-Front the headroom library/proxy/MCP server. Headroom does the work; the wrapper governs: when to compress, what to compress, when to bypass (small inputs), and how to route the lossless-fallback (CCR) when the LLM needs the original.
+Front the headroom **library** only — `compress()` and CCR, which run entirely locally. The wrapper
+governs: when to compress, what to compress, when to bypass (small inputs), and how to route the
+lossless-fallback (CCR) when the LLM needs the original.
+
+> **Narrowed 2026-09-14. `headroom proxy`, `headroom deploy` and the MCP server are OUT OF SCOPE.**
+> This section previously read "library/proxy/MCP server". The proxy exists to sit between an agent
+> and a **cloud LLM** and make that traffic cheaper — upstream's own architecture diagram is
+> `Headroom (local) → LLM provider (Anthropic · OpenAI · Bedrock)`. facts-of-record #17 keeps
+> `AI_PROVIDER=cloud` fail-closed and summarizes beta reports through **local Ollama only**;
+> relaxing that is "a founder budget decision **and** an egress decision about other people's
+> words, never a config change." Standing up a cloud-LLM proxy is the thing #17 most directly
+> forecloses. Headroom is not the problem — what the proxy accelerates is a call we do not make.
 
 ## Preconditions
 - Justin runs: `pip install headroom-ai` AND `headroom mcp install` (install boundary).
@@ -38,7 +49,11 @@ Front the headroom library/proxy/MCP server. Headroom does the work; the wrapper
 - Compressed text + CCR pointer for re-expansion.
 
 ## Does NOT
-- Send data off-machine (verify the local-only claim with a netstat audit on first install).
+- Send data off-machine. **The control is which component you install, not what you observe
+  afterwards.** This line previously said "verify the local-only claim with a netstat audit on first
+  install." That audit would have **passed** — the library makes no calls — while missing the real
+  issue entirely, which is architectural: the proxy is a cloud path *by design*. A soak test tells
+  you what the software did on Tuesday; the licence and the architecture tell you what it is for.
 - Compress small inputs (<2k tokens — overhead exceeds benefit).
 - Replace `clean-up-checkpoint` for session-end summaries.
 

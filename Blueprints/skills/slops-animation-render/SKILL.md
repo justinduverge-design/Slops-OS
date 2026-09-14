@@ -5,7 +5,15 @@ skill_type: package
 layer: 0
 default_agent: Claude (plan), Codex (render)
 trigger: "render the explainer | produce the animated cut | brand video | onboarding animation"
-upstream: calesthio/OpenMontage (concepts), remotion (runtime)
+upstream: calesthio/OpenMontage (concepts, nothing vendored), remotion@4.0.487 (runtime)
+license_note: >
+  Remotion is NOT open source. Custom dual licence: free for individuals and for-profit
+  organizations with UP TO 3 EMPLOYEES; a paid Company License is required above that. We are
+  eligible today under facts-of-record #15 (sole owner, one person). THE ELIGIBILITY IS
+  HEADCOUNT-CONDITIONAL: #15 is void "the moment anyone else works on this company", and Remotion's
+  licence has the same trigger at four employees. Re-deriving #15 MUST re-derive this licence.
+  Remotion 5.0 changes the licence terms — re-read before any major bump. Vetted 2026-09-14,
+  see notes/prior-use-review.md
 requires:
   - name: remotion
     node-module: remotion
@@ -28,7 +36,9 @@ Render non-math animated content — onboarding intros, social cuts, OG-card ani
 - Social/marketing cuts (vertical + horizontal).
 - Animated OG cards / share assets.
 
-Do NOT use for: math explainers (`slops-explainer-cut`), or any HyperFrames / cloud-only render farm.
+Do NOT use for: math explainers (`slops-explainer-cut`), or any HyperFrames / cloud-only render
+farm — **including Remotion Lambda**, which is Remotion's own hosted render product and is a
+separate, paid, cloud path. Renders stay on our hardware.
 
 ## Inputs
 

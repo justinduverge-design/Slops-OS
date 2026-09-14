@@ -5,7 +5,8 @@ skill_type: package
 layer: 0
 default_agent: Claude (plan), Codex (render)
 trigger: "explain the math | Manim cut | show your work video | Omen reasoning video"
-upstream: HarleyCoops/Math-To-Manim (concepts), manimce (runtime)
+upstream: HarleyCoops/Math-To-Manim (concepts, nothing vendored), ManimCommunity/manim (runtime, MIT, requires-python >=3.11). Vetted 2026-09-14 — see notes/prior-use-review.md
+status: active
 requires:
   - name: manim
     bin: manim

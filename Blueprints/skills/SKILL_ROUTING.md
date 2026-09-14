@@ -203,6 +203,24 @@ was routed at a 30-artboard canvas and could not run; the session had already be
   explanation. Fixed the same day: ownership is decided by where a link **resolves**, not by its
   name. A link pointing outside `Blueprints/skills/` reports `FOREIGN` and is left alone.
 
+### It also catches an unroutable skill
+
+The harness parses each `SKILL.md` frontmatter as real YAML; this tool's reader is deliberately
+lenient. When the two disagree, the harness drops the block, the skill loses its `description` — the
+field routing actually reads — and it **silently stops being suggested**, showing only its folder
+name. One unterminated quote does it. That happened during this very session and nothing noticed, so
+the checker now reports structural YAML hazards as `UNREADABLE` with the offending line number.
+
+### All eight wrappers are vetted (2026-09-14)
+
+Each carries a `notes/prior-use-review.md` beside its `SKILL.md`: licence, maintenance, egress
+surface, a verdict against facts-of-record #17, and the local deltas. Two adopted and installed
+(`slops-taste`, and `slops-mobile-smoke` cleared); `slops-voiceover` already correct;
+`slops-animation-render` adopted **conditionally** (Remotion is not open source — free only to three
+employees, tied to facts-of-record #15); `slops-markitdown`, `slops-explainer-cut` and
+`compliance-by-template` adopted with corrections; `slops-headroom` narrowed to the library because
+its proxy is a cloud-LLM path #17 forecloses.
+
 ### What it does not prove
 
 `READY` means *found*, not *functional*. Every probe is local, so a skill that renders on **KVM1**

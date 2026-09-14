@@ -109,6 +109,24 @@ function frontmatter(text) {
   return { fields, requires, raw: body };
 }
 
+/** Structural hazards a lenient line reader survives and a real YAML parser does not. */
+function yamlHazards(raw) {
+  const out = [];
+  raw.split(/\r?\n/).forEach((line, i) => {
+    if (/^\s*#/.test(line) || !line.trim()) return;
+    const m = /^\s*(?:-\s+)?[A-Za-z_][\w-]*\s*:\s*(.*)$/.exec(line);
+    if (!m) return;
+    const v = m[1].trim();
+    if (!v || /^[>|]/.test(v)) return;              // block scalars are fine
+    for (const q of ['"', "'"]) {
+      if (v.startsWith(q) && !(v.endsWith(q) && v.length > 1)) {
+        out.push(`line ${i + 2}: value opens with ${q} and never closes it`);
+      }
+    }
+  });
+  return out;
+}
+
 function kv(line) {
   const m = /^\s*([A-Za-z_][\w-]*)\s*:\s*(.*)$/.exec(line);
   if (!m) return null;
@@ -227,7 +245,23 @@ for (const s of selected) {
   try { text = readFileSync(s.file, 'utf8'); }
   catch { rows.push({ ...meta(s), state: 'unreadable', deps: [], note: 'SKILL.md could not be read' }); continue; }
 
-  const { fields, requires } = frontmatter(text);
+  const { fields, requires, raw: fmRaw } = frontmatter(text);
+
+  // The harness parses this frontmatter as real YAML. THIS reader is line-based and deliberately
+  // lenient, so it will happily read a block the harness rejects — and a rejected block means the
+  // skill loses its `description`, which is what routing reads. It then silently stops being
+  // suggested, showing only its folder name. Same failure class as a missing dependency: fine until
+  // the moment you needed it. (Introduced exactly this way on 2026-09-14 with one unterminated
+  // quote in a `note:`, and this tool did not notice — hence the check.)
+  const malformed = yamlHazards(fmRaw);
+  if (malformed.length || !(fields.description ?? '').trim()) {
+    rows.push({ ...meta(s), state: 'unreadable', deps: [],
+      note: malformed.length
+        ? `frontmatter will not parse as YAML — ${malformed.join('; ')}. Routing reads \`description\` from it, so the skill becomes unroutable.`
+        : 'frontmatter yields no `description` — routing reads that field, so this skill is unroutable.' });
+    continue;
+  }
+
   const upstream = (fields.upstream ?? '').trim();
   const status = (fields.status ?? '').trim() || 'unstated';
   const type = (fields.skill_type ?? '').trim() || 'unstated';

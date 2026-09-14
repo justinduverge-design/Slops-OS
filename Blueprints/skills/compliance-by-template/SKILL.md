@@ -6,7 +6,7 @@ skill_type: wrapper
 layer: 0
 default_agent: Claude (draft), Justin (review), Codex (file writes)
 trigger: "draft ToS | draft privacy policy | DPA | compliance checklist | launch legal pack | NDA"
-upstream: open-agreements@latest
+upstream: open-agreements/open-agreements (Apache-2.0, WITH a NOTICE file whose attribution must propagate into generated documents). Young upstream — created 2026-02-09, 55 stars. Vetted 2026-09-14, see notes/prior-use-review.md
 requires:
   - name: open-agreements templates
     path: References/legal-templates/open-agreements
@@ -27,8 +27,16 @@ A Slops product needs launch-required legal documents and does NOT yet warrant p
 Wrap the `open-agreements/open-agreements` repo (MIT, GitHub) as the canonical SLOPS legal-template source. The skill produces signable DOCX from Common Paper standard forms (employment, IP assignment, NDA, DPA, GDPR/HIPAA/BAA), plus AI-drafted custom paragraphs for product-specific clauses (data collection scope, AI use disclosure, fantasy sports T&Cs). All output is reviewed by Justin and, for paid-tier products, by counsel before public launch.
 
 ## Preconditions
-- Clone `open-agreements` to `References/legal-templates/open-agreements/` (Justin runs the clone — install boundary).
-- `pandoc` and `docx` writer installed on the workstation.
+- Clone `open-agreements` to `References/legal-templates/open-agreements/` (Justin runs the clone — install boundary). Pin a commit: the upstream is seven months old and the template text can move between drafts of the same document.
+- `pandoc` and `docx` writer installed on the workstation (`brew install pandoc`).
+- **Apache-2.0 NOTICE obligation (added 2026-09-14).** Generated documents are derivative works of
+  the templates. Apache-2.0 §4 requires retaining attribution and propagating `NOTICE`. Carry it
+  before anything goes public — this skill's entire output is documents that go public.
+- **Counsel gate (corrected 2026-09-14).** The Scope below gates counsel review on "paid-tier
+  products". Omen is free indefinitely (fact #1), which under that wording removes the gate
+  entirely. **That is the wrong default: free does not mean low-stakes — a Privacy Policy binds
+  regardless of price.** No publicly-binding document ships without counsel or an explicit,
+  recorded founder acceptance of the risk.
 
 ## Required Inputs
 - Product name + product description + entity (LLC) name.

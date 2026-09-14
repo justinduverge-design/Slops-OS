@@ -12,7 +12,7 @@ requires:
   - name: playwright-core
     node-module: playwright-core
     from: slops-saloon/omen
-    install: npm --prefix slops-saloon/omen install --no-save playwright-core@1.49.1
+    install: npm --prefix slops-saloon/omen install --save-dev playwright-core@1.49.1
     note: the skill claims this is already vendored. It is not in omen/node_modules and not in omen/package.json — see the correction in this file's Preconditions.
 owner: Justin
 ---
@@ -71,9 +71,17 @@ interactive-element 44px checks. Use the device for the things only a human can 
   Found by `check-skill-deps.mjs` on the day that tool was written — a wrapper asserting its own
   dependency was satisfied is exactly the failure that tool exists to catch, and this file was the
   first instance of it.
-  Install: `npm --prefix slops-saloon/omen install --no-save playwright-core@1.49.1`
-  **Do not run that install without deciding whether this skill should exist** — it is web-only and
-  the web app is paused under the native pivot. Retiring it may beat readying it. See `X5-VetWrappers`.
+  Install: `npm --prefix slops-saloon/omen install --save-dev playwright-core@1.49.1`
+  **Use `--save-dev`, not `--no-save`** — an unsaved install reproduces the exact bug above:
+  present on one machine, absent everywhere else, and silently claimed as vendored. Putting it in
+  `package.json` is what makes the claim true.
+  **Vetted 2026-09-14: KEEP. Cleared to install.** An earlier note here said the web app was paused
+  and retiring this might beat readying it. **That was wrong and is withdrawn** — `AGENTS.md` ships
+  "a secondary web app", `frontend/` is live, and what is paused is new *page migrations*, not the
+  app. A live surface with no new pages still regresses under dependency bumps and shared-token
+  changes, which is this skill's whole job. See `notes/prior-use-review.md`.
+  Open: `1.49.1` is 14 minor versions behind current — the pin should be a decision, not an
+  accident of when this skill was written.
 - **Browser binary:** Chromium downloaded on first run to `%LOCALAPPDATA%\ms-playwright`.
   WebKit binary will need a first-run download too — detect and stop with the install command if
   missing (see Install Boundary below).
