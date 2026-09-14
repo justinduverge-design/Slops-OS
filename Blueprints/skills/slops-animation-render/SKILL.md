@@ -6,6 +6,12 @@ layer: 0
 default_agent: Claude (plan), Codex (render)
 trigger: "render the explainer | produce the animated cut | brand video | onboarding animation"
 upstream: calesthio/OpenMontage (concepts), remotion (runtime)
+requires:
+  - name: remotion
+    node-module: remotion
+    from: slops-saloon/omen/Brand/promos/omen-coming-soon
+    install: npm --prefix slops-saloon/omen/Brand/promos/omen-coming-soon install
+    note: the only Remotion project in the tree; the skill text names KVM1 as the render host but never names a project root
 version: 0.1.0
 owner: Justin
 ---

@@ -6,6 +6,11 @@ layer: 0
 default_agent: Claude (plan), Codex (render)
 trigger: "explain the math | Manim cut | show your work video | Omen reasoning video"
 upstream: HarleyCoops/Math-To-Manim (concepts), manimce (runtime)
+requires:
+  - name: manim
+    bin: manim
+    install: pip install manim
+    note: manimce also needs a system LaTeX and ffmpeg; renders are specified to run on KVM1, not this workstation
 version: 0.1.0
 owner: Justin
 ---
@@ -14,7 +19,7 @@ owner: Justin
 
 ## Purpose
 
-Turn one Slops opinion-layer output (an Omen verdict, Trade Analyzer result, MVP Move lineup, or ADP delta) into a short Manim explainer that *shows the work*: the nflverse baseline, the opinion adjustment, and the "edge in what you almost missed." The brand promise — `Less guessing. Better moves.` — is delivered by making the math legible, not by hiding it.
+Turn one Slops opinion-layer output (an Omen verdict, Trade Analyzer result, MVP Move lineup, or ADP delta) into a short Manim explainer that *shows the work*: the nflverse baseline, the opinion adjustment, and the "edge in what you almost missed." The brand promise — `The edge is in what you almost missed.` — is delivered by making the math legible, not by hiding it. (Corrected 2026-09-14: this read `Less guessing. Better moves.`, retired with the Corvus name per `brand-system.md` §2. The replacement is the line this skill's own recurring format, "The Almost-Missed", is already named after.)
 
 ## When to Use
 

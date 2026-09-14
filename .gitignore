@@ -29,3 +29,9 @@ Solutions/.codex-artifacts/
 # macOS Finder metadata
 .DS_Store
 **/.DS_Store
+
+# Vendored upstream agent skills, installed by `npx skills add`.
+# Treated like node_modules: reproducible from skills-lock.json, which IS tracked and
+# carries a content hash per skill. Authorship of OUR skills stays in Blueprints/skills/.
+# A fresh clone therefore reports NEEDS-INSTALL from check-skill-deps.mjs, which is correct.
+.agents/

@@ -118,7 +118,7 @@ Do not place app implementation work in Layer 1 (Slops Saloon). The division lay
 | `demo-mode-pre-empty-state` | Claude (pattern review), Codex (fixture generation) | `Layer 0` | `active` | Pattern + doctrine for what every Slops product shows before a user has connected real data. Sample dataset, mock/live badge, swap contract, and the "never silently mix demo + real" rule. |
 | `slops-headroom` | Claude (governs invocation), Justin (runs install) | `Layer 0` | `active` | Compress tool outputs, logs, RAG chunks, and large file reads before they hit the LLM. 60-95% token reduction, local-only, MCP-native. Wraps chopratejas/headroom. |
 | `slops-markitdown` | Claude (plans), Codex (runs conversion) | `Layer 0` | `active` | Convert PDF/PPTX/DOCX/XLSX/HTML/audio/images/EPUB → Markdown for LLM consumption. Wraps microsoft/markitdown. Local-only by default; Azure CU and Doc Intelligence forbidden by sovereignty rule. |
-| `slops-taste` | Claude (selects variant + dials), Codex (applies to frontend) | `Layer 0` | `active` | Anti-slop frontend skill. Wraps Leonxlnx/taste-skill — tunable layout/motion/density dials, plus minimalist + soft + brutalist variants. Pairs with slops-design-system-pack and slops-image-prompt. |
+| `slops-taste` | Claude (picks surface, variant + dials), Codex (applies) | `Layer 0` | `active` | Anti-slop UI **generation** for both surfaces, via two routes. **Web/marketing** delegates to `Leonxlnx/taste-skill` (MIT, prose-only, pinned `ccbc15639c97`, vetted 2026-09-14). **Native (iOS SwiftUI + Android Compose)** uses the Omen native half in `SKILL.md` §B — the upstream's own scope line excludes product UI and it carries **zero** SwiftUI/Compose material, so native could not be delegated and is written here against the locked native specs. Dials are set per surface; one set cannot serve both. **Generation, never a verdict** — the verdict is `slops-native-ui-audit` (native) or `slops-ui-ux-audit` (web). |
 | `slops-screenplay-loop` | Claude | `Layer 0` | `active` | Script + beat sheet for animated/explainer content (director → screenwriter → storyboard). Runs before slops-explainer-cut. Harvested from HKUDS/ViMax (concepts). |
 | `slops-explainer-cut` | Claude (plan), Codex (render) | `Layer 0` | `active` | 30-90s Manim "show your work" math videos (Omen/Trade/MVP/ADP); powers the weekly Omen of the Week — "The Almost-Missed". Upstream HarleyCoops/Math-To-Manim + manimce. |
 | `slops-animation-render` | Claude (plan), Codex (render) | `Layer 0` | `active` | Remotion render pipeline (self-hosted KVM1) for brand/social/onboarding motion cuts — not math explainers. Brand palette + sonic spec locked. Upstream calesthio/OpenMontage + remotion. |
@@ -164,6 +164,45 @@ node Blueprints/tools/skill-link/link-skills.mjs --check   # verify, exit 1 on d
 - **Web-only skills carry the scope in their own `description`**, which is what routing reads:
   `slops-ui-ux-audit`, `mobile-first-qa-playbook`, `slops-mobile-smoke`. Making them easier to reach
   on a native task is a regression; the description is the guard.
+
+## Is the tool actually here? (skill-deps)
+
+`link-skills.mjs` makes a skill **reachable**. `check-skill-deps.mjs` makes it **honest** — it
+answers whether the external tool a wrapper fronts is present on this machine.
+
+```bash
+node Blueprints/tools/skill-link/check-skill-deps.mjs            # report
+node Blueprints/tools/skill-link/check-skill-deps.mjs --check    # exit 1 unless all ready
+node Blueprints/tools/skill-link/check-skill-deps.mjs --skill=slops-taste
+node Blueprints/tools/skill-link/check-skill-deps.mjs --json
+```
+
+**Why it exists.** This table tracks `active`/`draft`/`parked` — *permission*. It has never tracked
+*presence*, and neither did `link-skills.mjs`. So a wrapper whose tool was never installed looked
+identical to a working one right up to the moment someone invoked it. On 2026-09-14 `slops-taste`
+was routed at a 30-artboard canvas and could not run; the session had already been planned around it.
+
+**Presence and permission are different questions and are allowed to disagree.** A skill can be
+`READY` (installed) and `parked` (not yet permitted), or `active` and `NEEDS-INSTALL`. Read both.
+
+- Probes are declared per skill in a `requires:` frontmatter block — see `_template/SKILL.md`.
+  `upstream:` alone is not enough: it carries both *the tool this fronts* and *where the ideas came
+  from*. `skill_type` discriminates — `wrapper`/`package` needs a probe, `simple` is provenance.
+- **A `wrapper`/`package` with an upstream and no `requires:` reports `UNDECLARED` and fails
+  `--check`.** An undeclared dependency must never read as ready. The tool will not guess a probe out
+  of prose — it surfaces an install *hint* from Preconditions, labelled unverified, and nothing more.
+  Guessing and reporting `ready` would make this tool the thing it was built to catch.
+- **It never installs.** Installing is a founder action in every wrapper skill and in the template.
+- **It never probes off this machine.** The one network probe kind refuses any non-loopback host, so
+  a dependency check cannot become egress (facts-of-record #17).
+- Registered 2026-09-14. First run: 9 wrappers front an external tool, 8 unmet, 1 ready.
+
+### What it does not prove
+
+`READY` means *found*, not *functional*. Every probe is local, so a skill that renders on **KVM1**
+(`slops-explainer-cut`, `slops-animation-render`) may show `NEEDS-INSTALL` here and be irrelevant —
+the tool cannot tell you, and says so rather than guessing. And it answers *is it here*, never
+*should it be here*: adopting an upstream is a separate vetting pass against facts-of-record #17.
 
 ## Analytical Skills
 

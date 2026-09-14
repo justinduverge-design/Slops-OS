@@ -7,6 +7,13 @@ layer: 0
 default_agent: Claude (draft), Justin (review), Codex (file writes)
 trigger: "draft ToS | draft privacy policy | DPA | compliance checklist | launch legal pack | NDA"
 upstream: open-agreements@latest
+requires:
+  - name: open-agreements templates
+    path: References/legal-templates/open-agreements
+    install: git clone https://github.com/open-agreements/open-agreements References/legal-templates/open-agreements
+  - name: pandoc
+    bin: pandoc
+    install: brew install pandoc
 version: 0.1.0
 owner: Justin
 ---

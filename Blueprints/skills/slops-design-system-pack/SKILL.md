@@ -7,6 +7,9 @@ layer: 0
 default_agent: Claude (curate), Codex (file writes)
 trigger: "use design system X | match Stripe aesthetic | scaffold UI from DESIGN.md | drop in design system"
 upstream: nexu-io/open-design + VoltAgent/awesome-claude-design (markdown-only, no code)
+requires:
+  - none: true
+    note: upstream is markdown-only reference material read at authoring time; nothing is vendored or installed.
 version: 0.1.0
 owner: Justin
 ---

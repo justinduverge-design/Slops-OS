@@ -7,7 +7,13 @@ layer: 0
 default_agent: Claude (review findings), Codex (extend driver + fixes via loop)
 trigger: "mobile smoke | iPhone smoke | phone-shape smoke | pre-deploy mobile check"
 version: 0.2.0
-upstream: playwright-core@1.49.x (already vendored in slops-saloon/omen/node_modules)
+upstream: playwright-core@1.49.1 (NOT vendored — see Preconditions; the "already vendored" claim was false and was corrected 2026-09-14)
+requires:
+  - name: playwright-core
+    node-module: playwright-core
+    from: slops-saloon/omen
+    install: npm --prefix slops-saloon/omen install --no-save playwright-core@1.49.1
+    note: the skill claims this is already vendored. It is not in omen/node_modules and not in omen/package.json — see the correction in this file's Preconditions.
 owner: Justin
 ---
 
@@ -58,8 +64,16 @@ interactive-element 44px checks. Use the device for the things only a human can 
 ## Preconditions & Dependencies
 
 - **Runtime:** Node.js 24+ (`node --version`).
-- **Package:** `playwright-core` — already in `slops-saloon/omen/node_modules` (vendored).
-  Pinned at the version in `omen/package.json`. No install required.
+- **Package:** `playwright-core` — **NOT PRESENT. Corrected 2026-09-14.** This line read *"already
+  in `slops-saloon/omen/node_modules` (vendored). Pinned at the version in `omen/package.json`. No
+  install required."* All three clauses were false: it is not in `omen/node_modules`, it is not in
+  `omen/package.json` (neither `dependencies` nor `devDependencies`), and an install **is** required.
+  Found by `check-skill-deps.mjs` on the day that tool was written — a wrapper asserting its own
+  dependency was satisfied is exactly the failure that tool exists to catch, and this file was the
+  first instance of it.
+  Install: `npm --prefix slops-saloon/omen install --no-save playwright-core@1.49.1`
+  **Do not run that install without deciding whether this skill should exist** — it is web-only and
+  the web app is paused under the native pivot. Retiring it may beat readying it. See `X5-VetWrappers`.
 - **Browser binary:** Chromium downloaded on first run to `%LOCALAPPDATA%\ms-playwright`.
   WebKit binary will need a first-run download too — detect and stop with the install command if
   missing (see Install Boundary below).

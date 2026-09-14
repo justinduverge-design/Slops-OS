@@ -7,6 +7,11 @@ layer: 0
 default_agent: Claude (plans), Codex (runs conversion)
 trigger: "convert to markdown | extract from PDF | extract from PPTX | extract from DOCX | markitdown this"
 upstream: microsoft/markitdown@latest
+requires:
+  - name: markitdown
+    python-module: markitdown
+    install: pip install 'markitdown[all]'
+    note: needs Python 3.10+; this machine's `python3` is 3.9.6, so the install needs a newer interpreter first
 version: 0.1.0
 owner: Justin
 ---

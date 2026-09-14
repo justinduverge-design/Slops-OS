@@ -7,6 +7,13 @@ layer: 0
 default_agent: Claude (governs invocation), Justin (runs install)
 trigger: "compress this output | shrink the context | dedupe before LLM | headroom this"
 upstream: chopratejas/headroom@latest
+requires:
+  - name: headroom (library)
+    python-module: headroom
+    install: pip install headroom-ai
+  - name: headroom (cli)
+    bin: headroom
+    install: pip install headroom-ai && headroom mcp install
 version: 0.1.0
 owner: Justin
 ---

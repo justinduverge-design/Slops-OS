@@ -8,6 +8,9 @@ default_agent: Claude interviews and drafts; the founder reviews and corrects be
 trigger: "capture intent | write an intent | new idea | intent.md | this research needs to become work"
 version: 0.1.0
 upstream: Anthropic AI-Native SDLC Playbook, "Capture as intent.md" — https://academy.claude.com/courses/ai-native-sdlc-playbook/capture-intent (read at authoring time; not vendored)
+requires:
+  - none: true
+    note: upstream is a published playbook read at authoring time; nothing is vendored or installed.
 owner: Justin
 ---
 
