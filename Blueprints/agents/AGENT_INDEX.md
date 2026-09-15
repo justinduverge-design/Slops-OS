@@ -943,6 +943,28 @@ This is where authority actually lives. It is initialized **empty**.
 schema: active-trust-assignment/v1
 # Empty list = defaults only. No assignment = no authority above runtime default_tier.
 assignments:
+  - assignment_id: ATA-20260914-01
+    runtime: codex
+    session_capability_confirmed: true
+    tier: full-executor
+    scope_task_key: NativeVisualLockImplementation-U1-U3-U4
+    granted_by: founder
+    granted_at: 2026-09-14
+    expires: on-task-close
+    conditions:
+      - "Implement the merged native visual-lock build contracts from omen PR #440, starting with U1 OmenCall and OmenEvidence, then shared destination components, Command/League/Trade, and Ledger as scoped in Direction/current_sprint.md"
+      - "Use design/native-visual-lock-2026-09-13/CONTRACTS.md and Blueprints/specs/design/screen-contracts/ as binding build contracts; preserve the destination experience model: Command as GM desk, Omen as one weekly play or honest no-play, Trade as argument-settler, League as scout room, Ledger as receipts"
+      - "Feature-branch git operations are authorized; main-branch merge remains founder-only unless the founder gives explicit merge approval in-session"
+      - "No Supabase SQL application, production data mutation, deploy, store/TestFlight/Play Console action, secret or provider credential handling, destructive operation, dependency/package upgrade, or unrelated native redesign without separate exact approval"
+      - "Run contract, platform, canvas, token, and diff gates appropriate to each completed destination before close-out"
+    action_level_approvals_required:
+      - destructive
+      - production
+      - db-write
+      - deployment
+      - secrets
+      - store
+
   - assignment_id: ATA-20260825-02
     runtime: codex
     session_capability_confirmed: true
