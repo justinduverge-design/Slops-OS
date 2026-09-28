@@ -1439,6 +1439,30 @@ assignments:
       - deployment
       - secrets
 # Shape for a future founder-issued assignment:
+# Founder-issued assignment recorded 2026-09-24 for the active Omen football-intelligence foundation.
+  - assignment_id: ATA-20260924-FDSI
+    runtime: codex
+    session_capability_confirmed: true
+    tier: full-executor
+    scope_task_key: FootballDataSchemeIntelligence-TuesdayFoundation
+    granted_by: founder
+    granted_at: 2026-09-24
+    expires: 2026-09-29T23:59:59-04:00
+    conditions:
+      - "Design, document, and implement the non-production Tuesday foundation for Omen's modular football-data backend, Scheme DNA v1, System Signal v1, Coaching Tree v1, and the backend adopt/adapt/own reuse audit"
+      - "Use the Valor Ventures Current-State Infrastructure Capability Map and Infrastructure Architecture Baseline as governing compute-placement context"
+      - "Use one real historical vertical proof with deterministic fixtures, resolved-output tests, and honest unavailable/insufficient-data states"
+      - "Parallel research and implementation agents and iterative work loops are authorized within this scope"
+      - "Feature-branch git operations are authorized; main-branch merge remains founder-only"
+      - "No dependency/package change, SQL application, production database mutation, production-host workload change, remote-host mutation, deployment, secrets access, provider-account action, or destructive operation without separate exact approval"
+    action_level_approvals_required:
+      - destructive
+      - production
+      - db-write
+      - deployment
+      - secrets
+      - package-change
+
 #   - assignment_id: ATA-YYYYMMDD-NN
 #     runtime: claude-code            # must exist in runtime-policy/v1
 #     session_capability_confirmed: true   # kickoff-verified; false/absent => assignment void
