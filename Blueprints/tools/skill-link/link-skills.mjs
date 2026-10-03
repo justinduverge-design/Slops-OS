@@ -15,7 +15,7 @@
  *
  * Exit 0 = in sync.  Exit 1 = drift (or, in apply mode, a refusal).  Exit 2 = gate failed.
  */
-import { readdirSync, statSync, lstatSync, existsSync, mkdirSync, symlinkSync, unlinkSync, readlinkSync } from 'node:fs';
+import { readdirSync, statSync, lstatSync, existsSync, mkdirSync, symlinkSync, unlinkSync, readlinkSync, readFileSync } from 'node:fs';
 import { join, resolve, relative, isAbsolute, sep } from 'node:path';
 
 const ARGV = process.argv.slice(2);
@@ -32,6 +32,23 @@ if (!existsSync(SRC)) {
   process.exit(2);
 }
 
+/**
+ * Skills the routing matrix marks `parked` or `retired` are not linked: a linked skill's description
+ * is listed in every session, so an unused skill costs tokens until it is parked. The folder stays;
+ * revive by setting Status to `active` in SKILL_ROUTING.md and re-running this tool.
+ */
+function inactiveSkills() {
+  const f = join(SRC, 'SKILL_ROUTING.md');
+  if (!existsSync(f)) return new Set();
+  const out = new Set();
+  for (const line of readFileSync(f, 'utf8').split('\n')) {
+    const m = line.match(/^\|\s*`([^`]+)`\s*\|[^|]*\|[^|]*\|\s*`?(parked|retired)\b/);
+    if (m) out.add(m[1]);
+  }
+  return out;
+}
+const INACTIVE = inactiveSkills();
+
 /** Skill dirs that are real, invocable skills: a SKILL.md with name+description. */
 function discover(root) {
   if (!existsSync(root)) return [];
@@ -39,6 +56,7 @@ function discover(root) {
     .filter(n => !n.startsWith('_') && !n.startsWith('.'))
     .filter(n => { try { return statSync(join(root, n)).isDirectory(); } catch { return false; } })
     .filter(n => existsSync(join(root, n, 'SKILL.md')))
+    .filter(n => !INACTIVE.has(n))
     .map(n => ({ name: n, dir: join(root, n) }))
     .sort((a, b) => a.name.localeCompare(b.name));
 }
