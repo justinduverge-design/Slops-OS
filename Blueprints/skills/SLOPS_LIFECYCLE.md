@@ -244,3 +244,7 @@ The lifecycle previously started at Frame with research, and research had no req
 state — a conclusion could be reached and filed without ever becoming work. `slops-intent-capture`
 adds that terminal state. The Maintain phase now loops back to it, so a diagnosis re-enters the
 chain as an intent instead of stopping in `Direction/reviews/`.
+
+## New skill — 2026-10-18
+
+- Added `slops-rust-tdd` (proposed), the Rust and cargo extension of `slops-tdd`, for the Omen Rust infrastructure programme (`slops-saloon/omen/Blueprints/specs/infrastructure/omen-rust-infrastructure-plan-v1.md`). Promote to active when the first crate lands.
