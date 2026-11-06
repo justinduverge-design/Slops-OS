@@ -1,5 +1,4 @@
-# SLOPS OS — Claude Code Adapter
-
 @AGENTS.md
 
-The imported `AGENTS.md` is the shared repository bootstrap. Apply only genuinely Claude-specific runtime behavior from the matching identity module.
+Hooks in `.claude/settings.json` block raw merges, pushes to `master`, secret reads and production commands,
+and stop tools once a run budget is spent. Say what a block stopped; don't work around it.
