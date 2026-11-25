@@ -41,3 +41,11 @@
 **Reason:** The O2 pilot demonstrated that task state, change state, and exercise state must remain separate. A governed profile makes authority, provenance, relationships, freshness, and compile snapshot explicit without forcing all Markdown into frontmatter or inventing a parallel DBS tree.
 
 **Impact:** Only pages declaring `metadata_profile: valor-brain/v1` are governed. Existing DBS purpose still selects the physical folder, existing sprint/status doctrine still owns task lifecycle, and ordinary Markdown is unchanged. Mass migration, automatic extraction, Graphify ingestion, production authority, and a new domain-modeling skill remain outside v1.
+
+## 2026-10-20 — Antigravity registered in Runtime Policy; skill-link extended to `.agents/skills`
+
+**Decision:** Register `antigravity` in `Blueprints/agents/AGENT_INDEX.md` §8 (`runtime-policy/v1`) with `default_tier: read-only`, `max_eligible_tier: full-executor`, and `Blueprints/agent-modules/identity-antigravity.md`. Extend `Blueprints/tools/skill-link/link-skills.mjs` so active SLOPS skills are symlinked into `.agents/skills/` alongside `.claude/skills/` in both L0 and Omen (L2), and add `slops-saloon/omen/GEMINI.md` as the L2 auto-loaded adapter.
+
+**Reason:** Antigravity (`agy`) auto-loads `AGENTS.md`/`GEMINI.md` rules and discovers workspace skills from `.agents/skills/`. Previously, `antigravity` fell back to `generic` (`UNREVIEWED`), and `link-skills.mjs` only populated `.claude/skills/`, leaving the 59 L0 skills and 2 Omen local skills unreachable by name in Antigravity and Codex `.agents/skills/` discovery.
+
+**Impact:** Antigravity operates under the same RBAC, capability-confirmation, Active Trust Assignment, and close-out gates as Claude Code and Codex. Existing non-symlink skills in `.agents/skills/` (`npx skills add` packages in L0 and `run-slops-saloon` in L2) are preserved untouched by `link-skills.mjs`.

@@ -1,6 +1,6 @@
 # Kickoff — SLOPS OS root (Layer 0)
 
-Paste this block into any runtime to start a root-layer session. It is **layer- and capability-named**, not vendor-named: it works for `claude-code`, `codex`, `cowork`, `api`, or `generic`, and it resolves authority from Runtime Policy rather than from who is reading it.
+Paste this block into any runtime to start a root-layer session. It is **layer- and capability-named**, not vendor-named: it works for `claude-code`, `codex`, `antigravity`, `cowork`, `api`, or `generic`, and it resolves authority from Runtime Policy rather than from who is reading it.
 
 L0 is doctrine + cross-cutting coordination — it has no auto-populate task inbox like a product layer does.
 
@@ -24,7 +24,7 @@ STEP 0 — CONFIRM SESSION CAPABILITY (do this first, before any read)
   Missing or uncertain capability is treated as ABSENT. Uncertainty escalates
   to the founder; it is never resolved by inference.
   Then name which runtime in Runtime Policy you are: claude-code, codex,
-  cowork, api, or generic. If you are none of them, you are generic.
+  antigravity, cowork, api, or generic. If you are none of them, you are generic.
 
 STEP 0.1 — READ RUNTIME POLICY AND ACTIVE TRUST ASSIGNMENTS
   Read Blueprints/agents/AGENT_INDEX.md, Section 8 (runtime-policy/v1 and
@@ -49,6 +49,7 @@ Read in order before acting:
 2. Your runtime identity module, per Runtime Policy:
    Blueprints/agent-modules/identity-claude-code.md
    Blueprints/agent-modules/identity-codex.md
+   Blueprints/agent-modules/identity-antigravity.md
    Blueprints/agent-modules/identity-cowork.md
    Blueprints/agent-modules/identity-api.md
    Blueprints/agent-modules/identity-generic.md

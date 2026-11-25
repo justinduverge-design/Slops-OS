@@ -836,7 +836,7 @@ Uncertainty at any step escalates to the founder. It is never resolved by infere
 
 - **Action Risk Tiers / action and approval doctrine:** `Blueprints/tools/tool-permissions.md`
 - **Tool index (mirror, not an authority):** `Blueprints/tools/TOOLS_INDEX.md`
-- **Runtime identity modules:** `Blueprints/agent-modules/identity-claude-code.md`, `identity-codex.md`, `identity-cowork.md`, `identity-api.md`, `identity-generic.md`
+- **Runtime identity modules:** `Blueprints/agent-modules/identity-claude-code.md`, `identity-codex.md`, `identity-antigravity.md`, `identity-cowork.md`, `identity-api.md`, `identity-generic.md`
 - **Skill routing matrix (complete skill registry):** `Blueprints/skills/SKILL_ROUTING.md`
 - **Imported agent location:** none — the `_imported\` tree was deleted 2026-08-05 (see Section 4)
 
@@ -859,6 +859,13 @@ runtimes:
       - "no standing branch, commit, or push authority"
   - runtime: codex
     identity_module: Blueprints/agent-modules/identity-codex.md
+    default_tier: read-only
+    max_eligible_tier: full-executor
+    standing_conditions:
+      - "full-executor only via an Active Trust Assignment for one approved task"
+      - "no standing branch, commit, or push authority"
+  - runtime: antigravity
+    identity_module: Blueprints/agent-modules/identity-antigravity.md
     default_tier: read-only
     max_eligible_tier: full-executor
     standing_conditions:
@@ -943,6 +950,55 @@ This is where authority actually lives. It is initialized **empty**.
 schema: active-trust-assignment/v1
 # Empty list = defaults only. No assignment = no authority above runtime default_tier.
 assignments:
+  - assignment_id: ATA-20261004-OMEN-WAREHOUSE
+    runtime: codex
+    session_capability_confirmed: true
+    tier: full-executor
+    scope_task_key: OmenWarehouse-Gate1-Redo13-15-Ingest
+    granted_by: founder
+    granted_at: 2026-10-04
+    expires: on-task-close
+    conditions:
+      - "Create and operate the warehouse that supplies Supabase and Omen, bounded to the founder-provided Gate 1 redo Steps 13 through 15, their verified rollback paths, the existing nflverse ingest jobs, provenance/data-event requirements, and Omen read-path readiness"
+      - "Use a clean isolated worktree based on current origin/main; preserve unrelated and pre-existing worktrees and changes"
+      - "Local file edits, non-destructive terminal execution, tests, builds, feature-branch git operations, read-only production preflight/verification, workflow inspection, and post-apply monitoring are authorized for this task"
+      - "Production schema writes remain one-step-at-a-time: obtain an explicit named approval immediately before each of Steps 13, 14, and 15; never batch approvals or continue after a failed preflight, verification, catalog delta, or monitored-path error"
+      - "Use the Supabase connector only for production SQL; never access or print database passwords, secrets, provider credentials, cookies, tokens, private user data, or unmatched-player guesses"
+      - "Do not touch src/services/decisionBriefV2.js, src/services/decisionContext.js, src/services/systemContracts.js, or src/services/llm.js"
+    action_level_approvals_granted:
+      - production
+    action_level_approvals_required:
+      - db-write-per-step
+      - deployment
+      - destructive
+      - secrets
+      - main-merge
+
+  - assignment_id: ATA-20260928-TBR
+    runtime: codex
+    session_capability_confirmed: true
+    tier: full-executor
+    scope_task_key: TuesdayBetaReadiness-20260929-Steps1-11
+    granted_by: founder
+    granted_at: 2026-09-28
+    expires: on-task-close
+    conditions:
+      - "Complete the founder-approved Tuesday beta-readiness sequence 1 through 11 from a clean isolated worktree based on current origin/main: reconcile the backend containment work, repair season/cache/fail-open defects, verify backend and both native clients, prepare release evidence and next-Tuesday readiness, and stop before archive"
+      - "File edits, non-destructive terminal execution, local tests/builds, feature-branch git operations, commit, push, founder-approved merge to main, production deployment, and post-deploy API health/readiness/version plus authenticated compatibility verification are authorized for this task"
+      - "Do not create, export, upload, submit, assign, or notify any TestFlight/App Store archive or build; the founder will perform the archive step tomorrow"
+      - "Do not expose credentials, cookies, tokens, private user data, or secret values; avoid secrets access and database mutation unless a concrete release dependency is established and separately documented before action"
+      - "Preserve honest unavailable and insufficient-data states; no mock or fabricated provider advice may enter a live route"
+      - "Use the managed tuesday-beta-ready worktree and preserve the pre-existing conflicted checkout without modification"
+    action_level_approvals_granted:
+      - production
+      - deployment
+      - main-merge
+    action_level_approvals_required:
+      - destructive
+      - db-write
+      - secrets
+      - store
+
   - assignment_id: ATA-20260914-01
     runtime: codex
     session_capability_confirmed: true

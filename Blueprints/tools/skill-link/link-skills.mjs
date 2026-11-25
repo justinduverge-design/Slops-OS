@@ -64,21 +64,28 @@ function discover(root) {
 const l0Skills = discover(SRC);
 const l2Skills = discover(join(L2, 'Blueprints', 'skills'));
 
+const HARNESS_DIRS = [
+  join('.claude', 'skills'),
+  join('.agents', 'skills'),
+];
+
 const targets = [];
-if (TARGET === 'ALL' || TARGET === 'L0') targets.push({ id: 'L0', repo: L0, skills: l0Skills });
+if (TARGET === 'ALL' || TARGET === 'L0') {
+  for (const relDest of HARNESS_DIRS) targets.push({ id: 'L0', repo: L0, relDest, skills: l0Skills });
+}
 if ((TARGET === 'ALL' || TARGET === 'L2') && existsSync(L2)) {
   // Omen sees the whole L0 library plus its own two local skills.
-  targets.push({ id: 'L2', repo: L2, skills: [...l0Skills, ...l2Skills] });
+  for (const relDest of HARNESS_DIRS) targets.push({ id: 'L2', repo: L2, relDest, skills: [...l0Skills, ...l2Skills] });
 }
 
 let drift = 0, refused = 0, created = 0, repaired = 0, removed = 0, ok = 0;
 
 for (const t of targets) {
-  const dest = join(t.repo, '.claude', 'skills');
-  console.log(`\n── ${t.id}  ${relative(L0, t.repo) || '.'}  →  .claude/skills  (${t.skills.length} skills)`);
+  const dest = join(t.repo, t.relDest);
+  console.log(`\n── ${t.id}  ${relative(L0, t.repo) || '.'}  →  ${t.relDest.split(sep).join('/')}  (${t.skills.length} skills)`);
 
   if (!existsSync(dest)) {
-    if (CHECK || DRY) { console.log(`   MISSING  .claude/skills does not exist`); drift += t.skills.length; continue; }
+    if (CHECK || DRY) { console.log(`   MISSING  ${t.relDest.split(sep).join('/')} does not exist`); drift += t.skills.length; continue; }
     mkdirSync(dest, { recursive: true });
   }
 
@@ -134,8 +141,8 @@ function ownedByUs(linkDir, link) {
   const cur = safeReadlink(link);
   if (cur === null) return false;
   const target = isAbsolute(cur) ? cur : resolve(linkDir, cur);
-  const src = resolve(SRC);
-  return target === src || target.startsWith(src + sep);
+  const roots = [resolve(SRC), resolve(L2, 'Blueprints', 'skills')];
+  return roots.some(src => target === src || target.startsWith(src + sep));
 }
 function safeReadlink(p) { try { return readlinkSync(p); } catch { return null; } }
 function safeReaddir(p) { try { return readdirSync(p); } catch { return []; } }
