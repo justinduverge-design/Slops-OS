@@ -1,0 +1,1421 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "readme",
+      "community": 6,
+      "norm_label": "readme.md"
+    },
+    {
+      "label": "Slops Saloon Blueprints",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "readme_slops_saloon_blueprints",
+      "community": 6,
+      "norm_label": "slops saloon blueprints"
+    },
+    {
+      "label": "Use This Folder For",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "readme_use_this_folder_for",
+      "community": 6,
+      "norm_label": "use this folder for"
+    },
+    {
+      "label": "Reusable Agent Loop",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "readme_reusable_agent_loop",
+      "community": 6,
+      "norm_label": "reusable agent loop"
+    },
+    {
+      "label": "Do Not Use This Folder For",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L25",
+      "_origin": "ast",
+      "id": "readme_do_not_use_this_folder_for",
+      "community": 6,
+      "norm_label": "do not use this folder for"
+    },
+    {
+      "label": "Current Product Blueprint Path",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L33",
+      "_origin": "ast",
+      "id": "readme_current_product_blueprint_path",
+      "community": 6,
+      "norm_label": "current product blueprint path"
+    },
+    {
+      "label": "2026-06-10-corvus-architecture-pivot.md",
+      "file_type": "document",
+      "source_file": "handoffs/2026-06-10-corvus-architecture-pivot.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "handoffs_2026_06_10_corvus_architecture_pivot",
+      "community": 3,
+      "norm_label": "2026-06-10-corvus-architecture-pivot.md"
+    },
+    {
+      "label": "Slops Saloon Handoff \u2014 Omen Architecture Pivot 2026-06-10",
+      "file_type": "document",
+      "source_file": "handoffs/2026-06-10-corvus-architecture-pivot.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "handoffs_2026_06_10_corvus_architecture_pivot_slops_saloon_handoff_omen_architecture_pivot_2026_06_10",
+      "community": 3,
+      "norm_label": "slops saloon handoff \u2014 omen architecture pivot 2026-06-10"
+    },
+    {
+      "label": "Division Decisions Made",
+      "file_type": "document",
+      "source_file": "handoffs/2026-06-10-corvus-architecture-pivot.md",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "handoffs_2026_06_10_corvus_architecture_pivot_division_decisions_made",
+      "community": 3,
+      "norm_label": "division decisions made"
+    },
+    {
+      "label": "What Routes to Omen",
+      "file_type": "document",
+      "source_file": "handoffs/2026-06-10-corvus-architecture-pivot.md",
+      "source_location": "L18",
+      "_origin": "ast",
+      "id": "handoffs_2026_06_10_corvus_architecture_pivot_what_routes_to_omen",
+      "community": 3,
+      "norm_label": "what routes to omen"
+    },
+    {
+      "label": "Future Product Ideas Parked",
+      "file_type": "document",
+      "source_file": "handoffs/2026-06-10-corvus-architecture-pivot.md",
+      "source_location": "L30",
+      "_origin": "ast",
+      "id": "handoffs_2026_06_10_corvus_architecture_pivot_future_product_ideas_parked",
+      "community": 3,
+      "norm_label": "future product ideas parked"
+    },
+    {
+      "label": "Open Questions",
+      "file_type": "document",
+      "source_file": "handoffs/2026-06-10-corvus-architecture-pivot.md",
+      "source_location": "L36",
+      "_origin": "ast",
+      "id": "handoffs_2026_06_10_corvus_architecture_pivot_open_questions",
+      "community": 3,
+      "norm_label": "open questions"
+    },
+    {
+      "label": "Recommended Next Prompt",
+      "file_type": "document",
+      "source_file": "handoffs/2026-06-10-corvus-architecture-pivot.md",
+      "source_location": "L43",
+      "_origin": "ast",
+      "id": "handoffs_2026_06_10_corvus_architecture_pivot_recommended_next_prompt",
+      "community": 3,
+      "norm_label": "recommended next prompt"
+    },
+    {
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": "handoffs/README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "handoffs_readme",
+      "community": 8,
+      "norm_label": "readme.md"
+    },
+    {
+      "label": "Slops Saloon Handoffs",
+      "file_type": "document",
+      "source_file": "handoffs/README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "handoffs_readme_slops_saloon_handoffs",
+      "community": 8,
+      "norm_label": "slops saloon handoffs"
+    },
+    {
+      "label": "corvus-app-state-2026-05-25.md",
+      "file_type": "document",
+      "source_file": "handoffs/corvus-app-state-2026-05-25.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "handoffs_corvus_app_state_2026_05_25",
+      "community": 1,
+      "norm_label": "corvus-app-state-2026-05-25.md"
+    },
+    {
+      "label": "Omen App State \u2014 Layer 1 Report",
+      "file_type": "document",
+      "source_file": "handoffs/corvus-app-state-2026-05-25.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "handoffs_corvus_app_state_2026_05_25_omen_app_state_layer_1_report",
+      "community": 1,
+      "norm_label": "omen app state \u2014 layer 1 report"
+    },
+    {
+      "label": "What This Is",
+      "file_type": "document",
+      "source_file": "handoffs/corvus-app-state-2026-05-25.md",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "handoffs_corvus_app_state_2026_05_25_what_this_is",
+      "community": 1,
+      "norm_label": "what this is"
+    },
+    {
+      "label": "What Is Working",
+      "file_type": "document",
+      "source_file": "handoffs/corvus-app-state-2026-05-25.md",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "handoffs_corvus_app_state_2026_05_25_what_is_working",
+      "community": 1,
+      "norm_label": "what is working"
+    },
+    {
+      "label": "Backend \u2014 fully implemented",
+      "file_type": "document",
+      "source_file": "handoffs/corvus-app-state-2026-05-25.md",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "handoffs_corvus_app_state_2026_05_25_backend_fully_implemented",
+      "community": 1,
+      "norm_label": "backend \u2014 fully implemented"
+    },
+    {
+      "label": "Frontend \u2014 all routes routed and building",
+      "file_type": "document",
+      "source_file": "handoffs/corvus-app-state-2026-05-25.md",
+      "source_location": "L37",
+      "_origin": "ast",
+      "id": "handoffs_corvus_app_state_2026_05_25_frontend_all_routes_routed_and_building",
+      "community": 1,
+      "norm_label": "frontend \u2014 all routes routed and building"
+    },
+    {
+      "label": "What Is NOT Done",
+      "file_type": "document",
+      "source_file": "handoffs/corvus-app-state-2026-05-25.md",
+      "source_location": "L54",
+      "_origin": "ast",
+      "id": "handoffs_corvus_app_state_2026_05_25_what_is_not_done",
+      "community": 1,
+      "norm_label": "what is not done"
+    },
+    {
+      "label": "Launch blockers",
+      "file_type": "document",
+      "source_file": "handoffs/corvus-app-state-2026-05-25.md",
+      "source_location": "L56",
+      "_origin": "ast",
+      "id": "handoffs_corvus_app_state_2026_05_25_launch_blockers",
+      "community": 1,
+      "norm_label": "launch blockers"
+    },
+    {
+      "label": "Product gaps (post-launch OK, but limit who can get value)",
+      "file_type": "document",
+      "source_file": "handoffs/corvus-app-state-2026-05-25.md",
+      "source_location": "L62",
+      "_origin": "ast",
+      "id": "handoffs_corvus_app_state_2026_05_25_product_gaps_post_launch_ok_but_limit_who_can_get_value",
+      "community": 1,
+      "norm_label": "product gaps (post-launch ok, but limit who can get value)"
+    },
+    {
+      "label": "Frontend loose ends (not blockers, but visible)",
+      "file_type": "document",
+      "source_file": "handoffs/corvus-app-state-2026-05-25.md",
+      "source_location": "L72",
+      "_origin": "ast",
+      "id": "handoffs_corvus_app_state_2026_05_25_frontend_loose_ends_not_blockers_but_visible",
+      "community": 1,
+      "norm_label": "frontend loose ends (not blockers, but visible)"
+    },
+    {
+      "label": "Decisions Locked",
+      "file_type": "document",
+      "source_file": "handoffs/corvus-app-state-2026-05-25.md",
+      "source_location": "L82",
+      "_origin": "ast",
+      "id": "handoffs_corvus_app_state_2026_05_25_decisions_locked",
+      "community": 1,
+      "norm_label": "decisions locked"
+    },
+    {
+      "label": "Recommended Next Action",
+      "file_type": "document",
+      "source_file": "handoffs/corvus-app-state-2026-05-25.md",
+      "source_location": "L92",
+      "_origin": "ast",
+      "id": "handoffs_corvus_app_state_2026_05_25_recommended_next_action",
+      "community": 1,
+      "norm_label": "recommended next action"
+    },
+    {
+      "label": "After Stripe",
+      "file_type": "document",
+      "source_file": "handoffs/corvus-app-state-2026-05-25.md",
+      "source_location": "L107",
+      "_origin": "ast",
+      "id": "handoffs_corvus_app_state_2026_05_25_after_stripe",
+      "community": 1,
+      "norm_label": "after stripe"
+    },
+    {
+      "label": "omen-features-ux-roadmap.md",
+      "file_type": "document",
+      "source_file": "handoffs/omen-features-ux-roadmap.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "handoffs_omen_features_ux_roadmap",
+      "community": 2,
+      "norm_label": "omen-features-ux-roadmap.md"
+    },
+    {
+      "label": "Omen \u2014 Features & UX Roadmap Handoff",
+      "file_type": "document",
+      "source_file": "handoffs/omen-features-ux-roadmap.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "handoffs_omen_features_ux_roadmap_omen_features_ux_roadmap_handoff",
+      "community": 2,
+      "norm_label": "omen \u2014 features & ux roadmap handoff"
+    },
+    {
+      "label": "Rule: UX Before Build",
+      "file_type": "document",
+      "source_file": "handoffs/omen-features-ux-roadmap.md",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "handoffs_omen_features_ux_roadmap_rule_ux_before_build",
+      "community": 2,
+      "norm_label": "rule: ux before build"
+    },
+    {
+      "label": "Three Features from the Original Prototype to Build Into Omen",
+      "file_type": "document",
+      "source_file": "handoffs/omen-features-ux-roadmap.md",
+      "source_location": "L21",
+      "_origin": "ast",
+      "id": "handoffs_omen_features_ux_roadmap_three_features_from_the_original_prototype_to_build_into_omen",
+      "community": 2,
+      "norm_label": "three features from the original prototype to build into omen"
+    },
+    {
+      "label": "1. HITL Feedback Loop (Human-in-the-Loop)",
+      "file_type": "document",
+      "source_file": "handoffs/omen-features-ux-roadmap.md",
+      "source_location": "L27",
+      "_origin": "ast",
+      "id": "handoffs_omen_features_ux_roadmap_1_hitl_feedback_loop_human_in_the_loop",
+      "community": 2,
+      "norm_label": "1. hitl feedback loop (human-in-the-loop)"
+    },
+    {
+      "label": "2. Move History + Effectiveness Tracking",
+      "file_type": "document",
+      "source_file": "handoffs/omen-features-ux-roadmap.md",
+      "source_location": "L42",
+      "_origin": "ast",
+      "id": "handoffs_omen_features_ux_roadmap_2_move_history_effectiveness_tracking",
+      "community": 2,
+      "norm_label": "2. move history + effectiveness tracking"
+    },
+    {
+      "label": "3. League Standings Panel",
+      "file_type": "document",
+      "source_file": "handoffs/omen-features-ux-roadmap.md",
+      "source_location": "L59",
+      "_origin": "ast",
+      "id": "handoffs_omen_features_ux_roadmap_3_league_standings_panel",
+      "community": 2,
+      "norm_label": "3. league standings panel"
+    },
+    {
+      "label": "Implementation Order (when ready)",
+      "file_type": "document",
+      "source_file": "handoffs/omen-features-ux-roadmap.md",
+      "source_location": "L72",
+      "_origin": "ast",
+      "id": "handoffs_omen_features_ux_roadmap_implementation_order_when_ready",
+      "community": 2,
+      "norm_label": "implementation order (when ready)"
+    },
+    {
+      "label": "Account + ConnectLeague \u2014 Pre-Audit Checklist",
+      "file_type": "document",
+      "source_file": "handoffs/omen-features-ux-roadmap.md",
+      "source_location": "L85",
+      "_origin": "ast",
+      "id": "handoffs_omen_features_ux_roadmap_account_connectleague_pre_audit_checklist",
+      "community": 2,
+      "norm_label": "account + connectleague \u2014 pre-audit checklist"
+    },
+    {
+      "label": "Navigation \u2014 2026-05-29",
+      "file_type": "document",
+      "source_file": "handoffs/omen-features-ux-roadmap.md",
+      "source_location": "L105",
+      "_origin": "ast",
+      "id": "handoffs_omen_features_ux_roadmap_navigation_2026_05_29",
+      "community": 2,
+      "norm_label": "navigation \u2014 2026-05-29"
+    },
+    {
+      "label": "Team Theme \u2014 2026-05-29",
+      "file_type": "document",
+      "source_file": "handoffs/omen-features-ux-roadmap.md",
+      "source_location": "L123",
+      "_origin": "ast",
+      "id": "handoffs_omen_features_ux_roadmap_team_theme_2026_05_29",
+      "community": 2,
+      "norm_label": "team theme \u2014 2026-05-29"
+    },
+    {
+      "label": "OAuth Status \u2014 Session 2026-05-28",
+      "file_type": "document",
+      "source_file": "handoffs/omen-features-ux-roadmap.md",
+      "source_location": "L140",
+      "_origin": "ast",
+      "id": "handoffs_omen_features_ux_roadmap_oauth_status_session_2026_05_28",
+      "community": 2,
+      "norm_label": "oauth status \u2014 session 2026-05-28"
+    },
+    {
+      "label": "UX/UI Audit Gaps \u2014 Identified 2026-05-28 \u2014 ALL FIXED",
+      "file_type": "document",
+      "source_file": "handoffs/omen-features-ux-roadmap.md",
+      "source_location": "L152",
+      "_origin": "ast",
+      "id": "handoffs_omen_features_ux_roadmap_ux_ui_audit_gaps_identified_2026_05_28_all_fixed",
+      "community": 5,
+      "norm_label": "ux/ui audit gaps \u2014 identified 2026-05-28 \u2014 all fixed"
+    },
+    {
+      "label": "Landing.jsx",
+      "file_type": "document",
+      "source_file": "handoffs/omen-features-ux-roadmap.md",
+      "source_location": "L156",
+      "_origin": "ast",
+      "id": "handoffs_omen_features_ux_roadmap_landing_jsx",
+      "community": 5,
+      "norm_label": "landing.jsx"
+    },
+    {
+      "label": "Login.jsx",
+      "file_type": "document",
+      "source_file": "handoffs/omen-features-ux-roadmap.md",
+      "source_location": "L162",
+      "_origin": "ast",
+      "id": "handoffs_omen_features_ux_roadmap_login_jsx",
+      "community": 5,
+      "norm_label": "login.jsx"
+    },
+    {
+      "label": "Account.jsx",
+      "file_type": "document",
+      "source_file": "handoffs/omen-features-ux-roadmap.md",
+      "source_location": "L165",
+      "_origin": "ast",
+      "id": "handoffs_omen_features_ux_roadmap_account_jsx",
+      "community": 5,
+      "norm_label": "account.jsx"
+    },
+    {
+      "label": "OmenPage.jsx",
+      "file_type": "document",
+      "source_file": "handoffs/omen-features-ux-roadmap.md",
+      "source_location": "L168",
+      "_origin": "ast",
+      "id": "handoffs_omen_features_ux_roadmap_omenpage_jsx",
+      "community": 5,
+      "norm_label": "omenpage.jsx"
+    },
+    {
+      "label": "All pages",
+      "file_type": "document",
+      "source_file": "handoffs/omen-features-ux-roadmap.md",
+      "source_location": "L172",
+      "_origin": "ast",
+      "id": "handoffs_omen_features_ux_roadmap_all_pages",
+      "community": 5,
+      "norm_label": "all pages"
+    },
+    {
+      "label": "agent-build-loop-template.md",
+      "file_type": "document",
+      "source_file": "prompts/agent-build-loop-template.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "prompts_agent_build_loop_template",
+      "community": 4,
+      "norm_label": "agent-build-loop-template.md"
+    },
+    {
+      "label": "Agent Build Loop Template",
+      "file_type": "document",
+      "source_file": "prompts/agent-build-loop-template.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "prompts_agent_build_loop_template_agent_build_loop_template",
+      "community": 4,
+      "norm_label": "agent build loop template"
+    },
+    {
+      "label": "Purpose",
+      "file_type": "document",
+      "source_file": "prompts/agent-build-loop-template.md",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "prompts_agent_build_loop_template_purpose",
+      "community": 4,
+      "norm_label": "purpose"
+    },
+    {
+      "label": "Product Files To Create",
+      "file_type": "document",
+      "source_file": "prompts/agent-build-loop-template.md",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "prompts_agent_build_loop_template_product_files_to_create",
+      "community": 4,
+      "norm_label": "product files to create"
+    },
+    {
+      "label": "Product Entry Docs To Update",
+      "file_type": "document",
+      "source_file": "prompts/agent-build-loop-template.md",
+      "source_location": "L25",
+      "_origin": "ast",
+      "id": "prompts_agent_build_loop_template_product_entry_docs_to_update",
+      "community": 4,
+      "norm_label": "product entry docs to update"
+    },
+    {
+      "label": "Operating Flow",
+      "file_type": "document",
+      "source_file": "prompts/agent-build-loop-template.md",
+      "source_location": "L35",
+      "_origin": "ast",
+      "id": "prompts_agent_build_loop_template_operating_flow",
+      "community": 4,
+      "norm_label": "operating flow"
+    },
+    {
+      "label": "Current Omen Reference",
+      "file_type": "document",
+      "source_file": "prompts/agent-build-loop-template.md",
+      "source_location": "L42",
+      "_origin": "ast",
+      "id": "prompts_agent_build_loop_template_current_omen_reference",
+      "community": 4,
+      "norm_label": "current omen reference"
+    },
+    {
+      "label": "slops-os-app-template-spec.md",
+      "file_type": "document",
+      "source_file": "specs/slops-os-app-template-spec.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "specs_slops_os_app_template_spec",
+      "community": 0,
+      "norm_label": "slops-os-app-template-spec.md"
+    },
+    {
+      "label": "Slops OS App Template Spec",
+      "file_type": "document",
+      "source_file": "specs/slops-os-app-template-spec.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "specs_slops_os_app_template_spec_slops_os_app_template_spec",
+      "community": 0,
+      "norm_label": "slops os app template spec"
+    },
+    {
+      "label": "Purpose",
+      "file_type": "document",
+      "source_file": "specs/slops-os-app-template-spec.md",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "specs_slops_os_app_template_spec_purpose",
+      "community": 0,
+      "norm_label": "purpose"
+    },
+    {
+      "label": "Template Principles",
+      "file_type": "document",
+      "source_file": "specs/slops-os-app-template-spec.md",
+      "source_location": "L18",
+      "_origin": "ast",
+      "id": "specs_slops_os_app_template_spec_template_principles",
+      "community": 0,
+      "norm_label": "template principles"
+    },
+    {
+      "label": "Route Architecture Pattern",
+      "file_type": "document",
+      "source_file": "specs/slops-os-app-template-spec.md",
+      "source_location": "L29",
+      "_origin": "ast",
+      "id": "specs_slops_os_app_template_spec_route_architecture_pattern",
+      "community": 0,
+      "norm_label": "route architecture pattern"
+    },
+    {
+      "label": "Page Shell Structure",
+      "file_type": "document",
+      "source_file": "specs/slops-os-app-template-spec.md",
+      "source_location": "L52",
+      "_origin": "ast",
+      "id": "specs_slops_os_app_template_spec_page_shell_structure",
+      "community": 0,
+      "norm_label": "page shell structure"
+    },
+    {
+      "label": "Auth Gate Pattern",
+      "file_type": "document",
+      "source_file": "specs/slops-os-app-template-spec.md",
+      "source_location": "L82",
+      "_origin": "ast",
+      "id": "specs_slops_os_app_template_spec_auth_gate_pattern",
+      "community": 7,
+      "norm_label": "auth gate pattern"
+    },
+    {
+      "label": "Soft gate (preferred for free tools)",
+      "file_type": "document",
+      "source_file": "specs/slops-os-app-template-spec.md",
+      "source_location": "L84",
+      "_origin": "ast",
+      "id": "specs_slops_os_app_template_spec_soft_gate_preferred_for_free_tools",
+      "community": 7,
+      "norm_label": "soft gate (preferred for free tools)"
+    },
+    {
+      "label": "Hard gate (for paid / personalized tools)",
+      "file_type": "document",
+      "source_file": "specs/slops-os-app-template-spec.md",
+      "source_location": "L90",
+      "_origin": "ast",
+      "id": "specs_slops_os_app_template_spec_hard_gate_for_paid_personalized_tools",
+      "community": 7,
+      "norm_label": "hard gate (for paid / personalized tools)"
+    },
+    {
+      "label": "Component Primitives (required in every product)",
+      "file_type": "document",
+      "source_file": "specs/slops-os-app-template-spec.md",
+      "source_location": "L98",
+      "_origin": "ast",
+      "id": "specs_slops_os_app_template_spec_component_primitives_required_in_every_product",
+      "community": 0,
+      "norm_label": "component primitives (required in every product)"
+    },
+    {
+      "label": "State Coverage Requirements",
+      "file_type": "document",
+      "source_file": "specs/slops-os-app-template-spec.md",
+      "source_location": "L124",
+      "_origin": "ast",
+      "id": "specs_slops_os_app_template_spec_state_coverage_requirements",
+      "community": 0,
+      "norm_label": "state coverage requirements"
+    },
+    {
+      "label": "Theme System",
+      "file_type": "document",
+      "source_file": "specs/slops-os-app-template-spec.md",
+      "source_location": "L138",
+      "_origin": "ast",
+      "id": "specs_slops_os_app_template_spec_theme_system",
+      "community": 0,
+      "norm_label": "theme system"
+    },
+    {
+      "label": "Semantic token names (product-specific values go in product design system)",
+      "file_type": "document",
+      "source_file": "specs/slops-os-app-template-spec.md",
+      "source_location": "L150",
+      "_origin": "ast",
+      "id": "specs_slops_os_app_template_spec_semantic_token_names_product_specific_values_go_in_product_design_system",
+      "community": 0,
+      "norm_label": "semantic token names (product-specific values go in product design system)"
+    },
+    {
+      "label": "Typography System",
+      "file_type": "document",
+      "source_file": "specs/slops-os-app-template-spec.md",
+      "source_location": "L172",
+      "_origin": "ast",
+      "id": "specs_slops_os_app_template_spec_typography_system",
+      "community": 0,
+      "norm_label": "typography system"
+    },
+    {
+      "label": "Scale (shared across products)",
+      "file_type": "document",
+      "source_file": "specs/slops-os-app-template-spec.md",
+      "source_location": "L180",
+      "_origin": "ast",
+      "id": "specs_slops_os_app_template_spec_scale_shared_across_products",
+      "community": 0,
+      "norm_label": "scale (shared across products)"
+    },
+    {
+      "label": "Spacing Grid",
+      "file_type": "document",
+      "source_file": "specs/slops-os-app-template-spec.md",
+      "source_location": "L196",
+      "_origin": "ast",
+      "id": "specs_slops_os_app_template_spec_spacing_grid",
+      "community": 0,
+      "norm_label": "spacing grid"
+    },
+    {
+      "label": "Border Radius System",
+      "file_type": "document",
+      "source_file": "specs/slops-os-app-template-spec.md",
+      "source_location": "L203",
+      "_origin": "ast",
+      "id": "specs_slops_os_app_template_spec_border_radius_system",
+      "community": 0,
+      "norm_label": "border radius system"
+    },
+    {
+      "label": "Mobile Breakpoints",
+      "file_type": "document",
+      "source_file": "specs/slops-os-app-template-spec.md",
+      "source_location": "L215",
+      "_origin": "ast",
+      "id": "specs_slops_os_app_template_spec_mobile_breakpoints",
+      "community": 0,
+      "norm_label": "mobile breakpoints"
+    },
+    {
+      "label": "Data Transparency Rules",
+      "file_type": "document",
+      "source_file": "specs/slops-os-app-template-spec.md",
+      "source_location": "L227",
+      "_origin": "ast",
+      "id": "specs_slops_os_app_template_spec_data_transparency_rules",
+      "community": 0,
+      "norm_label": "data transparency rules"
+    },
+    {
+      "label": "Handoff Protocol",
+      "file_type": "document",
+      "source_file": "specs/slops-os-app-template-spec.md",
+      "source_location": "L239",
+      "_origin": "ast",
+      "id": "specs_slops_os_app_template_spec_handoff_protocol",
+      "community": 0,
+      "norm_label": "handoff protocol"
+    },
+    {
+      "label": "Future Template Notes",
+      "file_type": "document",
+      "source_file": "specs/slops-os-app-template-spec.md",
+      "source_location": "L248",
+      "_origin": "ast",
+      "id": "specs_slops_os_app_template_spec_future_template_notes",
+      "community": 0,
+      "norm_label": "future template notes"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "readme",
+      "target": "readme_slops_saloon_blueprints",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "readme_slops_saloon_blueprints",
+      "target": "readme_current_product_blueprint_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "readme_slops_saloon_blueprints",
+      "target": "readme_do_not_use_this_folder_for",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "readme_slops_saloon_blueprints",
+      "target": "readme_reusable_agent_loop",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "readme_slops_saloon_blueprints",
+      "target": "readme_use_this_folder_for",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "handoffs/2026-06-10-corvus-architecture-pivot.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "handoffs_2026_06_10_corvus_architecture_pivot",
+      "target": "handoffs_2026_06_10_corvus_architecture_pivot_slops_saloon_handoff_omen_architecture_pivot_2026_06_10",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "handoffs/2026-06-10-corvus-architecture-pivot.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "handoffs_2026_06_10_corvus_architecture_pivot_slops_saloon_handoff_omen_architecture_pivot_2026_06_10",
+      "target": "handoffs_2026_06_10_corvus_architecture_pivot_division_decisions_made",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "handoffs/2026-06-10-corvus-architecture-pivot.md",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "handoffs_2026_06_10_corvus_architecture_pivot_slops_saloon_handoff_omen_architecture_pivot_2026_06_10",
+      "target": "handoffs_2026_06_10_corvus_architecture_pivot_future_product_ideas_parked",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "handoffs/2026-06-10-corvus-architecture-pivot.md",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "handoffs_2026_06_10_corvus_architecture_pivot_slops_saloon_handoff_omen_architecture_pivot_2026_06_10",
+      "target": "handoffs_2026_06_10_corvus_architecture_pivot_open_questions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "handoffs/2026-06-10-corvus-architecture-pivot.md",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "handoffs_2026_06_10_corvus_architecture_pivot_slops_saloon_handoff_omen_architecture_pivot_2026_06_10",
+      "target": "handoffs_2026_06_10_corvus_architecture_pivot_recommended_next_prompt",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "handoffs/2026-06-10-corvus-architecture-pivot.md",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "handoffs_2026_06_10_corvus_architecture_pivot_slops_saloon_handoff_omen_architecture_pivot_2026_06_10",
+      "target": "handoffs_2026_06_10_corvus_architecture_pivot_what_routes_to_omen",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "handoffs/README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "handoffs_readme",
+      "target": "handoffs_readme_slops_saloon_handoffs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "handoffs/corvus-app-state-2026-05-25.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "handoffs_corvus_app_state_2026_05_25",
+      "target": "handoffs_corvus_app_state_2026_05_25_omen_app_state_layer_1_report",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "handoffs/corvus-app-state-2026-05-25.md",
+      "source_location": "L107",
+      "weight": 1.0,
+      "source": "handoffs_corvus_app_state_2026_05_25_omen_app_state_layer_1_report",
+      "target": "handoffs_corvus_app_state_2026_05_25_after_stripe",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "handoffs/corvus-app-state-2026-05-25.md",
+      "source_location": "L82",
+      "weight": 1.0,
+      "source": "handoffs_corvus_app_state_2026_05_25_omen_app_state_layer_1_report",
+      "target": "handoffs_corvus_app_state_2026_05_25_decisions_locked",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "handoffs/corvus-app-state-2026-05-25.md",
+      "source_location": "L92",
+      "weight": 1.0,
+      "source": "handoffs_corvus_app_state_2026_05_25_omen_app_state_layer_1_report",
+      "target": "handoffs_corvus_app_state_2026_05_25_recommended_next_action",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "handoffs/corvus-app-state-2026-05-25.md",
+      "source_location": "L54",
+      "weight": 1.0,
+      "source": "handoffs_corvus_app_state_2026_05_25_omen_app_state_layer_1_report",
+      "target": "handoffs_corvus_app_state_2026_05_25_what_is_not_done",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "handoffs/corvus-app-state-2026-05-25.md",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "handoffs_corvus_app_state_2026_05_25_omen_app_state_layer_1_report",
+      "target": "handoffs_corvus_app_state_2026_05_25_what_is_working",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "handoffs/corvus-app-state-2026-05-25.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "handoffs_corvus_app_state_2026_05_25_omen_app_state_layer_1_report",
+      "target": "handoffs_corvus_app_state_2026_05_25_what_this_is",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "handoffs/corvus-app-state-2026-05-25.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "handoffs_corvus_app_state_2026_05_25_what_is_working",
+      "target": "handoffs_corvus_app_state_2026_05_25_backend_fully_implemented",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "handoffs/corvus-app-state-2026-05-25.md",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "handoffs_corvus_app_state_2026_05_25_what_is_working",
+      "target": "handoffs_corvus_app_state_2026_05_25_frontend_all_routes_routed_and_building",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "handoffs/corvus-app-state-2026-05-25.md",
+      "source_location": "L72",
+      "weight": 1.0,
+      "source": "handoffs_corvus_app_state_2026_05_25_what_is_not_done",
+      "target": "handoffs_corvus_app_state_2026_05_25_frontend_loose_ends_not_blockers_but_visible",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "handoffs/corvus-app-state-2026-05-25.md",
+      "source_location": "L56",
+      "weight": 1.0,
+      "source": "handoffs_corvus_app_state_2026_05_25_what_is_not_done",
+      "target": "handoffs_corvus_app_state_2026_05_25_launch_blockers",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "handoffs/corvus-app-state-2026-05-25.md",
+      "source_location": "L62",
+      "weight": 1.0,
+      "source": "handoffs_corvus_app_state_2026_05_25_what_is_not_done",
+      "target": "handoffs_corvus_app_state_2026_05_25_product_gaps_post_launch_ok_but_limit_who_can_get_value",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "handoffs/omen-features-ux-roadmap.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "handoffs_omen_features_ux_roadmap",
+      "target": "handoffs_omen_features_ux_roadmap_omen_features_ux_roadmap_handoff",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "handoffs/omen-features-ux-roadmap.md",
+      "source_location": "L85",
+      "weight": 1.0,
+      "source": "handoffs_omen_features_ux_roadmap_omen_features_ux_roadmap_handoff",
+      "target": "handoffs_omen_features_ux_roadmap_account_connectleague_pre_audit_checklist",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "handoffs/omen-features-ux-roadmap.md",
+      "source_location": "L72",
+      "weight": 1.0,
+      "source": "handoffs_omen_features_ux_roadmap_omen_features_ux_roadmap_handoff",
+      "target": "handoffs_omen_features_ux_roadmap_implementation_order_when_ready",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "handoffs/omen-features-ux-roadmap.md",
+      "source_location": "L105",
+      "weight": 1.0,
+      "source": "handoffs_omen_features_ux_roadmap_omen_features_ux_roadmap_handoff",
+      "target": "handoffs_omen_features_ux_roadmap_navigation_2026_05_29",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "handoffs/omen-features-ux-roadmap.md",
+      "source_location": "L140",
+      "weight": 1.0,
+      "source": "handoffs_omen_features_ux_roadmap_omen_features_ux_roadmap_handoff",
+      "target": "handoffs_omen_features_ux_roadmap_oauth_status_session_2026_05_28",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "handoffs/omen-features-ux-roadmap.md",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "handoffs_omen_features_ux_roadmap_omen_features_ux_roadmap_handoff",
+      "target": "handoffs_omen_features_ux_roadmap_rule_ux_before_build",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "handoffs/omen-features-ux-roadmap.md",
+      "source_location": "L123",
+      "weight": 1.0,
+      "source": "handoffs_omen_features_ux_roadmap_omen_features_ux_roadmap_handoff",
+      "target": "handoffs_omen_features_ux_roadmap_team_theme_2026_05_29",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "handoffs/omen-features-ux-roadmap.md",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "handoffs_omen_features_ux_roadmap_omen_features_ux_roadmap_handoff",
+      "target": "handoffs_omen_features_ux_roadmap_three_features_from_the_original_prototype_to_build_into_omen",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "handoffs/omen-features-ux-roadmap.md",
+      "source_location": "L152",
+      "weight": 1.0,
+      "source": "handoffs_omen_features_ux_roadmap_omen_features_ux_roadmap_handoff",
+      "target": "handoffs_omen_features_ux_roadmap_ux_ui_audit_gaps_identified_2026_05_28_all_fixed",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "handoffs/omen-features-ux-roadmap.md",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "handoffs_omen_features_ux_roadmap_three_features_from_the_original_prototype_to_build_into_omen",
+      "target": "handoffs_omen_features_ux_roadmap_1_hitl_feedback_loop_human_in_the_loop",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "handoffs/omen-features-ux-roadmap.md",
+      "source_location": "L42",
+      "weight": 1.0,
+      "source": "handoffs_omen_features_ux_roadmap_three_features_from_the_original_prototype_to_build_into_omen",
+      "target": "handoffs_omen_features_ux_roadmap_2_move_history_effectiveness_tracking",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "handoffs/omen-features-ux-roadmap.md",
+      "source_location": "L59",
+      "weight": 1.0,
+      "source": "handoffs_omen_features_ux_roadmap_three_features_from_the_original_prototype_to_build_into_omen",
+      "target": "handoffs_omen_features_ux_roadmap_3_league_standings_panel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "handoffs/omen-features-ux-roadmap.md",
+      "source_location": "L165",
+      "weight": 1.0,
+      "source": "handoffs_omen_features_ux_roadmap_ux_ui_audit_gaps_identified_2026_05_28_all_fixed",
+      "target": "handoffs_omen_features_ux_roadmap_account_jsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "handoffs/omen-features-ux-roadmap.md",
+      "source_location": "L172",
+      "weight": 1.0,
+      "source": "handoffs_omen_features_ux_roadmap_ux_ui_audit_gaps_identified_2026_05_28_all_fixed",
+      "target": "handoffs_omen_features_ux_roadmap_all_pages",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "handoffs/omen-features-ux-roadmap.md",
+      "source_location": "L156",
+      "weight": 1.0,
+      "source": "handoffs_omen_features_ux_roadmap_ux_ui_audit_gaps_identified_2026_05_28_all_fixed",
+      "target": "handoffs_omen_features_ux_roadmap_landing_jsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "handoffs/omen-features-ux-roadmap.md",
+      "source_location": "L162",
+      "weight": 1.0,
+      "source": "handoffs_omen_features_ux_roadmap_ux_ui_audit_gaps_identified_2026_05_28_all_fixed",
+      "target": "handoffs_omen_features_ux_roadmap_login_jsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "handoffs/omen-features-ux-roadmap.md",
+      "source_location": "L168",
+      "weight": 1.0,
+      "source": "handoffs_omen_features_ux_roadmap_ux_ui_audit_gaps_identified_2026_05_28_all_fixed",
+      "target": "handoffs_omen_features_ux_roadmap_omenpage_jsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "prompts/agent-build-loop-template.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "prompts_agent_build_loop_template",
+      "target": "prompts_agent_build_loop_template_agent_build_loop_template",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "prompts/agent-build-loop-template.md",
+      "source_location": "L42",
+      "weight": 1.0,
+      "source": "prompts_agent_build_loop_template_agent_build_loop_template",
+      "target": "prompts_agent_build_loop_template_current_omen_reference",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "prompts/agent-build-loop-template.md",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "prompts_agent_build_loop_template_agent_build_loop_template",
+      "target": "prompts_agent_build_loop_template_operating_flow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "prompts/agent-build-loop-template.md",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "prompts_agent_build_loop_template_agent_build_loop_template",
+      "target": "prompts_agent_build_loop_template_product_entry_docs_to_update",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "prompts/agent-build-loop-template.md",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "prompts_agent_build_loop_template_agent_build_loop_template",
+      "target": "prompts_agent_build_loop_template_product_files_to_create",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "prompts/agent-build-loop-template.md",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "prompts_agent_build_loop_template_agent_build_loop_template",
+      "target": "prompts_agent_build_loop_template_purpose",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/slops-os-app-template-spec.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "specs_slops_os_app_template_spec",
+      "target": "specs_slops_os_app_template_spec_slops_os_app_template_spec",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/slops-os-app-template-spec.md",
+      "source_location": "L82",
+      "weight": 1.0,
+      "source": "specs_slops_os_app_template_spec_slops_os_app_template_spec",
+      "target": "specs_slops_os_app_template_spec_auth_gate_pattern",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/slops-os-app-template-spec.md",
+      "source_location": "L203",
+      "weight": 1.0,
+      "source": "specs_slops_os_app_template_spec_slops_os_app_template_spec",
+      "target": "specs_slops_os_app_template_spec_border_radius_system",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/slops-os-app-template-spec.md",
+      "source_location": "L98",
+      "weight": 1.0,
+      "source": "specs_slops_os_app_template_spec_slops_os_app_template_spec",
+      "target": "specs_slops_os_app_template_spec_component_primitives_required_in_every_product",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/slops-os-app-template-spec.md",
+      "source_location": "L227",
+      "weight": 1.0,
+      "source": "specs_slops_os_app_template_spec_slops_os_app_template_spec",
+      "target": "specs_slops_os_app_template_spec_data_transparency_rules",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/slops-os-app-template-spec.md",
+      "source_location": "L248",
+      "weight": 1.0,
+      "source": "specs_slops_os_app_template_spec_slops_os_app_template_spec",
+      "target": "specs_slops_os_app_template_spec_future_template_notes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/slops-os-app-template-spec.md",
+      "source_location": "L239",
+      "weight": 1.0,
+      "source": "specs_slops_os_app_template_spec_slops_os_app_template_spec",
+      "target": "specs_slops_os_app_template_spec_handoff_protocol",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/slops-os-app-template-spec.md",
+      "source_location": "L215",
+      "weight": 1.0,
+      "source": "specs_slops_os_app_template_spec_slops_os_app_template_spec",
+      "target": "specs_slops_os_app_template_spec_mobile_breakpoints",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/slops-os-app-template-spec.md",
+      "source_location": "L52",
+      "weight": 1.0,
+      "source": "specs_slops_os_app_template_spec_slops_os_app_template_spec",
+      "target": "specs_slops_os_app_template_spec_page_shell_structure",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/slops-os-app-template-spec.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "specs_slops_os_app_template_spec_slops_os_app_template_spec",
+      "target": "specs_slops_os_app_template_spec_purpose",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/slops-os-app-template-spec.md",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "specs_slops_os_app_template_spec_slops_os_app_template_spec",
+      "target": "specs_slops_os_app_template_spec_route_architecture_pattern",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/slops-os-app-template-spec.md",
+      "source_location": "L196",
+      "weight": 1.0,
+      "source": "specs_slops_os_app_template_spec_slops_os_app_template_spec",
+      "target": "specs_slops_os_app_template_spec_spacing_grid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/slops-os-app-template-spec.md",
+      "source_location": "L124",
+      "weight": 1.0,
+      "source": "specs_slops_os_app_template_spec_slops_os_app_template_spec",
+      "target": "specs_slops_os_app_template_spec_state_coverage_requirements",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/slops-os-app-template-spec.md",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "specs_slops_os_app_template_spec_slops_os_app_template_spec",
+      "target": "specs_slops_os_app_template_spec_template_principles",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/slops-os-app-template-spec.md",
+      "source_location": "L138",
+      "weight": 1.0,
+      "source": "specs_slops_os_app_template_spec_slops_os_app_template_spec",
+      "target": "specs_slops_os_app_template_spec_theme_system",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/slops-os-app-template-spec.md",
+      "source_location": "L172",
+      "weight": 1.0,
+      "source": "specs_slops_os_app_template_spec_slops_os_app_template_spec",
+      "target": "specs_slops_os_app_template_spec_typography_system",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/slops-os-app-template-spec.md",
+      "source_location": "L90",
+      "weight": 1.0,
+      "source": "specs_slops_os_app_template_spec_auth_gate_pattern",
+      "target": "specs_slops_os_app_template_spec_hard_gate_for_paid_personalized_tools",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/slops-os-app-template-spec.md",
+      "source_location": "L84",
+      "weight": 1.0,
+      "source": "specs_slops_os_app_template_spec_auth_gate_pattern",
+      "target": "specs_slops_os_app_template_spec_soft_gate_preferred_for_free_tools",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/slops-os-app-template-spec.md",
+      "source_location": "L150",
+      "weight": 1.0,
+      "source": "specs_slops_os_app_template_spec_theme_system",
+      "target": "specs_slops_os_app_template_spec_semantic_token_names_product_specific_values_go_in_product_design_system",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/slops-os-app-template-spec.md",
+      "source_location": "L180",
+      "weight": 1.0,
+      "source": "specs_slops_os_app_template_spec_typography_system",
+      "target": "specs_slops_os_app_template_spec_scale_shared_across_products",
+      "confidence_score": 1.0
+    }
+  ],
+  "hyperedges": [],
+  "built_at_commit": "13483bf7db97409652d5c0d91d7dba5e5edf4a4b"
+}
